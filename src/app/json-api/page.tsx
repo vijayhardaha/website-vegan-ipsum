@@ -3,7 +3,7 @@ import React from "react";
 import PageHeader from "@/components/layout/PageHeader";
 import SectionContainer from "@/components/layout/SectionContainer";
 import CodeBlock from "@/components/ui/CodeBlock";
-import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
+import { generateMetadata as genMeta, getCanonicalUrl, Metadata } from "@/utils/seoUtils";
 
 /**
  * SEO metadata for the JSON API page.
@@ -22,6 +22,9 @@ export const metadata: Metadata = genMeta({
  * @returns {React.JSX.Element} The rendered JsonApiPage component.
  */
 export default function JsonApiPage(): React.JSX.Element {
+  // Base URL for the API
+  const API_BASE_URL = getCanonicalUrl("api");
+
   return (
     <SectionContainer>
       <PageHeader
@@ -52,7 +55,7 @@ export default function JsonApiPage(): React.JSX.Element {
           Base URL
         </h2>
         <p>Use the following base URL to access the Vegan Ipsum API:</p>
-        <CodeBlock language="bash">{`https://veganipsum.vercel.app/api/`}</CodeBlock>
+        <CodeBlock language="bash">{API_BASE_URL}</CodeBlock>
       </section>
 
       <section aria-labelledby="request-methods">
@@ -119,11 +122,11 @@ export default function JsonApiPage(): React.JSX.Element {
         <p>Use the GET method to retrieve data by passing parameters in the URL:</p>
 
         <CodeBlock language="bash">
-          {`GET https://veganipsum.vercel.app/api/?count=2&units=paragraphs&format=plain`}
+          {`GET ${API_BASE_URL}?count=2&units=paragraphs&format=plain`}
         </CodeBlock>
 
         <CodeBlock language="bash">
-          {`curl "https://veganipsum.vercel.app/api/?count=3&units=sentences&format=html"`}
+          {`curl "${API_BASE_URL}?count=3&units=sentences&format=html"`}
         </CodeBlock>
       </section>
 
@@ -133,7 +136,7 @@ export default function JsonApiPage(): React.JSX.Element {
         </h2>
         <p>Use the POST method to send parameters in the JSON body:</p>
         <CodeBlock language="bash">
-          {`curl -X POST "https://veganipsum.vercel.app/api/" \\
+          {`curl -X POST "${API_BASE_URL}" \\
   -H "Content-Type: application/json" \\
   -d '{"count": 5, "units": "sentences", "format": "plain"}'`}
         </CodeBlock>
