@@ -1,0 +1,37 @@
+# This .editorconfig file defines coding style rules for various file types in the project.
+# It ensures consistent formatting across different editors and IDEs.
+
+root=true
+
+# General settings for all files
+[*]
+charset=utf-8
+end_of_line=lf
+indent_style=tab
+indent_size=2
+insert_final_newline=true
+trim_trailing_whitespace=true
+
+# Disable trimming trailing whitespace for text files
+[*.txt]
+trim_trailing_whitespace=false
+
+# Use spaces for indentation in Markdown and YAML files
+[*.{md,yml}]
+indent_style=space
+indent_size=2
+
+# Use tabs for indentation in JSON files
+[*.json]
+indent_style=tab
+indent_size=2
+
+# Use spaces for indentation in JavaScript and TypeScript files
+[*.{js,mjs,cjs,jsx,ts,tsx}]
+indent_style=space
+indent_size=2
+
+# Use spaces for indentation in CSS, SCSS, and LESS files
+[*.{css,scss,less}]
+indent_style=space
+indent_size=2
