@@ -4,7 +4,7 @@ This is the official website for [Vegan Ipsum](https://veganipsum.vercel.app), a
 
 ## 🖥️ Live Website
 
-👉 Visit: [https://veganipsum.vercel.app](https://vegan-ipsum.vercel.app)
+👉 Visit: [https://veganipsum.vercel.app](https://veganipsum.vercel.app)
 
 ## 🐾 Why Vegan Ipsum?
 
