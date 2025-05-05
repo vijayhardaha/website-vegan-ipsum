@@ -81,7 +81,7 @@ export const baseMetadata: BaseMetadataType = {
     description: SEO.description,
     images: [
       {
-        url: "/images/thumbnail.png",
+        url: "/thumbnail.png",
         width: 512,
         height: 512,
       },
@@ -95,7 +95,7 @@ export const baseMetadata: BaseMetadataType = {
     card: "summary_large_image",
     title: SEO.title,
     description: SEO.description,
-    images: ["/images/thumbnail.png"],
+    images: ["/thumbnail.png"],
     creator: "@vijayhardaha",
   },
 };
