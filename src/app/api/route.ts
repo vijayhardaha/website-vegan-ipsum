@@ -32,7 +32,9 @@ function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): Ne
     return NextResponse.json({ text: ipsumText });
   } catch (error) {
     return NextResponse.json(
-      { error: `An unexpected error occurred while generating ipsum text: ${error.message}` },
+      {
+        error: `An unexpected error occurred while generating ipsum text: ${error instanceof Error ? error.message : "Unknown error"}`,
+      },
       { status: 500 }
     );
   }
