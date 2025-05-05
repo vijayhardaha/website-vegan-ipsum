@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-custom-sans);
+  --font-heading: var(--font-custom-heading);
+  --font-mono: var(--font-custom-mono);
+
+  --color-primary: var(--color-primary);
+
+  --base-color-black: #3D3D3D;
+  --base-color-primary: #39B54A;
+
+  --color-background: var(--color-white);
+  --color-foreground: var(--base-color-black);
+
+  --color-card: var(--color-white);
+  --color-card-foreground: var(--base-color-black);
+
+  --color-primary: var(--base-color-primary);
+  --color-primary-foreground: var(--color-white);
+
+  --color-secondary: var(--color-gray-200);
+  --color-secondary-foreground: var(--base-color-black);
+
+  --color-muted: var(--color-gray-100);
+  --color-muted-foreground: var(--color-gray-500);
+
+  --color-destructive: var(--color-red-600);
+
+  --color-border: var(--color-gray-200);
+  --color-input: var(--color-gray-300);
+  --color-ring: var(--color-gray-200);
+}
+
+@layer base{
+  h1,h2,h3,h4{
+    @apply font-heading font-bold tracking-wide uppercase;
+  }
+
+  code:not([style]), kbd:not([style]), samp:not([style]), pre:not([style]){
+    @apply text-xs font-medium bg-muted px-1 text-pink-500 font-mono;
+  }
+}
