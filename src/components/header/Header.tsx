@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -22,6 +22,25 @@ import { Button } from "../ui/button";
 export default function Header(): React.JSX.Element {
   const pathname: string = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  /**
+   * Effect hook to handle clicks outside the menu.
+   * Closes the mobile menu if a click occurs outside of it.
+   * Cleans up the event listener on component unmount.
+   */
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   /**
    * Determines if a given path is the active route.
@@ -46,7 +65,7 @@ export default function Header(): React.JSX.Element {
             />
             <span className="sr-only">Vegan Ipsum</span>
           </Link>
-          <div className="ml-auto">
+          <div className="ml-auto" ref={menuRef}>
             <Button
               size="icon"
               variant="outline"
@@ -78,6 +97,7 @@ export default function Header(): React.JSX.Element {
                       rel={link.external ? "noopener noreferrer" : undefined}
                       aria-label={link.label}
                       aria-current={isActive(link.href) ? "page" : undefined}
+                      onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.label}
                       {link.external && <RiExternalLinkLine />}
