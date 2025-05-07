@@ -32,7 +32,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         subtitle="Generate vegan-themed placeholder text directly in your VSCode editor. Learn how to install and use it efficiently."
       />
 
-      <section aria-labelledby="introduction" role="region" className="mb-10">
+      <section aria-labelledby="introduction">
         <h2 id="introduction" className="mb-2 text-2xl font-semibold">
           Introduction
         </h2>
@@ -54,7 +54,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         </Button>
       </section>
 
-      <section aria-labelledby="installation" className="mb-10">
+      <section aria-labelledby="installation">
         <h2 id="installation" className="mb-2 text-2xl font-semibold">
           Installation
         </h2>
@@ -79,7 +79,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         <CodeBlock language="bash">ext install vegan-ipsum</CodeBlock>
       </section>
 
-      <section aria-labelledby="usage" className="mb-10">
+      <section aria-labelledby="usage">
         <h2 id="usage" className="mb-2 text-2xl font-semibold">
           Usage
         </h2>
@@ -96,7 +96,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section aria-labelledby="features" className="mb-10">
+      <section aria-labelledby="features">
         <h2 id="features" className="mb-2 text-2xl font-semibold">
           Features
         </h2>
@@ -109,7 +109,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section aria-labelledby="support" className="mb-10">
+      <section aria-labelledby="support">
         <h2 id="support" className="mb-2 text-2xl font-semibold">
           Support & Feedback
         </h2>
