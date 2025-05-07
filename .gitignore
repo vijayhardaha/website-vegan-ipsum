@@ -36,6 +36,7 @@ yarn-error.log*
 # vercel
 .vercel
 sitemap**.xml
+robots.txt
 
 # typescript
 *.tsbuildinfo
