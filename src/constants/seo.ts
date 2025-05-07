@@ -27,6 +27,9 @@ export type BaseMetadataType = {
     icon: string;
     apple: string;
   };
+  verification: {
+    google: string;
+  };
   openGraph: {
     title: string;
     description: string;
@@ -75,6 +78,9 @@ export const baseMetadata: BaseMetadataType = {
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  verification: {
+    google: "4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0",
   },
   openGraph: {
     title: SEO.title,
