@@ -166,8 +166,8 @@ export default function JsonApiPage(): React.JSX.Element {
         </CodeBlock>
       </section>
 
-      <section aria-labelledby="error-handling">
-        <h2 id="error-handling" className="mb-1 text-2xl">
+      <section aria-labelledby="status-codes">
+        <h2 id="status-codes" className="mb-1 text-2xl">
           Status Codes
         </h2>
         <ul className="list-disc pl-6 text-sm">
