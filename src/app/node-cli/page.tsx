@@ -31,8 +31,8 @@ export default function NodeCliPage(): React.JSX.Element {
         subtitle="Use our Node.js CLI tool to generate vegan-themed placeholder text directly from your terminal."
       />
 
-      <section aria-labelledby="cli-introduction" role="region">
-        <h2 id="cli-introduction" className="mb-1 text-2xl">
+      <section aria-labelledby="introduction">
+        <h2 id="introduction" className="mb-1 text-2xl">
           Introduction
         </h2>
         <p>
@@ -47,9 +47,7 @@ export default function NodeCliPage(): React.JSX.Element {
           Installation
         </h2>
         <p>Install it globally via npm to use it anywhere from the command line:</p>
-        <CodeBlock language="bash" aria-label="CLI Installation Command">
-          npm install -g vegan-ipsum
-        </CodeBlock>
+        <CodeBlock language="bash">npm install -g vegan-ipsum</CodeBlock>
       </section>
 
       <section aria-labelledby="usage">
@@ -57,7 +55,7 @@ export default function NodeCliPage(): React.JSX.Element {
           Basic Usage
         </h2>
         <p>The syntax is simple. Run the command followed by the number and unit of text:</p>
-        <CodeBlock language="bash" aria-label="More examples">
+        <CodeBlock language="bash">
           {`vegan-ipsum 3 sentences
 vegan-ipsum 1 paragraph
 vegan-ipsum 5 words`}
@@ -79,7 +77,7 @@ vegan-ipsum 5 words`}
             <code>--help</code>: Show all available commands and usage options.
           </li>
         </ul>
-        <CodeBlock language="bash" aria-label="CLI flags examples">
+        <CodeBlock language="bash">
           {`vegan-ipsum 2 paragraphs --format html
 vegan-ipsum 2 paragraphs --copy`}
         </CodeBlock>
