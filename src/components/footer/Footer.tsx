@@ -13,7 +13,7 @@ import { cn } from "@/utils/classNameUtils";
  */
 export default function Footer(): React.JSX.Element {
   return (
-    <footer className="bg-foreground py-6 text-white" role="contentinfo" aria-label="Footer">
+    <footer className="bg-foreground py-6 text-white" aria-label="Footer">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <div className="space-y-3 text-center text-sm">
           <ul className="flex items-center justify-center gap-4 text-sm">
