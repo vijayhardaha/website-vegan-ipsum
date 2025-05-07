@@ -1,5 +1,6 @@
 import React from "react";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Mukta, Geist_Mono, Teko } from "next/font/google";
 
 import Layout from "@/components/layout/Layout";
@@ -57,6 +58,7 @@ export default function RootLayout({
       >
         <Layout>{children}</Layout>
       </body>
+      <GoogleAnalytics gaId="G-XR1TK565WJ" />
     </html>
   );
 }
