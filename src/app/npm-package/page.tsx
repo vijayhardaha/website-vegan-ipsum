@@ -31,8 +31,8 @@ export default function NpmPackagePage(): React.JSX.Element {
         subtitle="Generate vegan-themed placeholder text effortlessly in your JavaScript projects."
       />
 
-      <section aria-labelledby="npm-introduction" role="region" className="mb-10">
-        <h2 id="npm-introduction" className="mb-1 text-2xl">
+      <section aria-labelledby="introduction">
+        <h2 id="introduction" className="mb-1 text-2xl">
           Introduction
         </h2>
         <div className="space-y-4">
@@ -57,19 +57,17 @@ export default function NpmPackagePage(): React.JSX.Element {
         </div>
       </section>
 
-      <section aria-labelledby="installation" className="mb-10">
+      <section aria-labelledby="installation">
         <h2 id="installation" className="mb-1 text-2xl">
           Installation
         </h2>
         <p>
           To install the <code>vegan-ipsum</code> package, run the following command:
         </p>
-        <CodeBlock language="bash" aria-label="NPM Installation Command">
-          npm install vegan-ipsum
-        </CodeBlock>
+        <CodeBlock language="bash">npm install vegan-ipsum</CodeBlock>
       </section>
 
-      <section aria-labelledby="usage" className="mb-10">
+      <section aria-labelledby="usage">
         <h2 id="usage" className="mb-1 text-2xl">
           Usage
         </h2>
@@ -79,7 +77,7 @@ export default function NpmPackagePage(): React.JSX.Element {
               <strong>Using the Class</strong>: Import and instantiate the <code>VeganIpsum</code>{" "}
               class to generate text with custom configurations:
             </p>
-            <CodeBlock language="javascript" aria-label="Class-based usage example">
+            <CodeBlock language="javascript">
               {`import { VeganIpsum } from "vegan-ipsum";
 
 const vegan = new VeganIpsum({
@@ -98,7 +96,7 @@ vegan.generateParagraphs(7);`}
               <strong>Using the Function</strong>: For quick usage, <code>vegan-ipsum</code> also
               supports a functional interface:
             </p>
-            <CodeBlock language="javascript" aria-label="Function-based usage example">
+            <CodeBlock language="javascript">
               {`import { VeganIpsum } from "vegan-ipsum";
 
 VeganIpsum(); // generates one sentence
@@ -119,7 +117,7 @@ VeganIpsum({
         </div>
       </section>
 
-      <section aria-labelledby="cli" className="mb-10">
+      <section aria-labelledby="cli">
         <h2 id="cli" className="mb-1 text-2xl">
           Command Line Interface (CLI)
         </h2>
@@ -127,11 +125,9 @@ VeganIpsum({
           <code>vegan-ipsum</code> comes with a CLI tool to generate vegan text right from your
           terminal:
         </p>
-        <CodeBlock language="bash" aria-label="Global installation command">
-          npm install -g vegan-ipsum
-        </CodeBlock>
+        <CodeBlock language="bash">npm install -g vegan-ipsum</CodeBlock>
         <p className="mt-4 font-bold">Examples:</p>
-        <CodeBlock language="bash" aria-label="CLI usage examples">
+        <CodeBlock language="bash">
           {`vegan-ipsum 2 words
 vegan-ipsum 3 sentences
 vegan-ipsum 1 paragraph
@@ -140,7 +136,7 @@ vegan-ipsum 2 paragraphs --format html`}
         </CodeBlock>
       </section>
 
-      <section aria-labelledby="features" className="mb-10">
+      <section aria-labelledby="features">
         <h2 id="features" className="mb-1 text-2xl">
           Features
         </h2>
@@ -153,7 +149,7 @@ vegan-ipsum 2 paragraphs --format html`}
         </ul>
       </section>
 
-      <section aria-labelledby="more-info" className="mb-10">
+      <section aria-labelledby="more-info">
         <h2 id="more-info" className="mb-1 text-2xl">
           More Info
         </h2>
