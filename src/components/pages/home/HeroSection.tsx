@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
  */
 export default function HeroSection(): React.JSX.Element {
   return (
-    <section aria-labelledby="hero-heading">
+    <div aria-labelledby="hero-heading">
       <h1 id="hero-heading" className="mb-1 text-4xl">
         Vegan Ipsum
       </h1>
@@ -32,6 +32,6 @@ export default function HeroSection(): React.JSX.Element {
           <Link href="/vscode-extension">Get Extension</Link>
         </Button>
       </div>
-    </section>
+    </div>
   );
 }

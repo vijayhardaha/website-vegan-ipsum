@@ -46,10 +46,7 @@ export default function HeroGeneratorSection(): React.JSX.Element {
 
   return (
     <>
-      <section
-        className="grid grid-cols-1 items-start gap-12 md:grid-cols-2"
-        aria-labelledby="hero-section-title"
-      >
+      <section className="grid grid-cols-1 items-start gap-12 md:grid-cols-2">
         {/* Hero Section */}
         <HeroSection />
 
@@ -59,13 +56,10 @@ export default function HeroGeneratorSection(): React.JSX.Element {
 
       {/* Display Form Output */}
       {output && (
-        <section
-          className="bg-muted/85 mt-16 space-y-4 p-6"
-          aria-labelledby="generated-output-title"
-        >
+        <section className="bg-muted/85 mt-16 space-y-4 p-6" aria-labelledby="generated-output">
           <div className="flex items-center justify-between gap-4">
             <div className="space-y-0.5">
-              <h2 id="generated-output-title" className="text-xl font-bold">
+              <h2 id="generated-output" className="text-xl font-bold">
                 Generated Output:
               </h2>
               <p className="text-muted-foreground text-sm">{getOutputSummary(output)}</p>
