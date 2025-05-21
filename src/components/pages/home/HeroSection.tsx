@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
  */
 export default function HeroSection(): React.JSX.Element {
   return (
-    <div aria-labelledby="hero-heading">
+    <div>
       <h1 id="hero-heading" className="mb-1 text-4xl">
         Vegan Ipsum — Ethical, Plant-Based Lorem Ipsum & Placeholder Text for Compassionate Creators
       </h1>

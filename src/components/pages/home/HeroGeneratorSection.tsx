@@ -46,7 +46,11 @@ export default function HeroGeneratorSection(): React.JSX.Element {
 
   return (
     <>
-      <section className="grid grid-cols-1 items-start gap-12 md:grid-cols-2">
+      <section
+        aria-labelledby="hero-heading"
+        role="region"
+        className="grid grid-cols-1 items-start gap-12 md:grid-cols-2"
+      >
         {/* Hero Section */}
         <HeroSection />
 
@@ -56,7 +60,7 @@ export default function HeroGeneratorSection(): React.JSX.Element {
 
       {/* Display Form Output */}
       {output && (
-        <section className="bg-muted/85 mt-16 space-y-4 p-6" aria-labelledby="generated-output">
+        <section aria-labelledby="generated-output" role="region" className="bg-muted/85 mt-16 space-y-4 p-6">
           <div className="flex items-start justify-between gap-4">
             <div className="space-y-0.5">
               <h2 id="generated-output" className="text-xl font-bold">
@@ -75,7 +79,7 @@ export default function HeroGeneratorSection(): React.JSX.Element {
               </Button>
             </div>
           </div>
-          <div className="space-y-4" aria-live="polite">
+          <div className="space-y-4" aria-live="polite" aria-atomic="true">
             {output.split("\n").map((line, index) => (
               <p key={index}>{line}</p>
             ))}
