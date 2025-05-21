@@ -32,8 +32,8 @@ export default function JsonApiPage(): React.JSX.Element {
         subtitle="Fetch vegan-inspired placeholder text for your apps and projects. This API provides paragraphs, sentences, or words in plain or HTML format."
       />
 
-      <section aria-labelledby="introduction" className="mb-8">
-        <h2 id="introduction" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="introduction" role="region">
+        <h2 id="introduction" className="mb-2 text-2xl">
           Introduction
         </h2>
         <div className="space-y-4">
@@ -59,8 +59,8 @@ export default function JsonApiPage(): React.JSX.Element {
         </div>
       </section>
 
-      <section aria-labelledby="base-url" className="mb-8">
-        <h2 id="base-url" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="base-url" role="region">
+        <h2 id="base-url" className="mb-2 text-2xl">
           Base URL
         </h2>
         <p>
@@ -74,8 +74,8 @@ export default function JsonApiPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="request-methods" className="mb-8">
-        <h2 id="request-methods" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="request-methods" role="region">
+        <h2 id="request-methods" className="mb-2 text-2xl">
           Request Methods
         </h2>
         <p>
@@ -96,8 +96,8 @@ export default function JsonApiPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="parameters" className="mb-8">
-        <h2 id="parameters" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="parameters" role="region">
+        <h2 id="parameters" className="mb-2 text-2xl">
           Parameters
         </h2>
         <p>
@@ -149,8 +149,8 @@ export default function JsonApiPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="get-example" className="mb-8">
-        <h2 id="get-example" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="get-example" role="region">
+        <h2 id="get-example" className="mb-2 text-2xl">
           GET Request Example
         </h2>
         <p>Here is an example GET request that retrieves two paragraphs of plain text vegan ipsum:</p>
@@ -161,8 +161,8 @@ export default function JsonApiPage(): React.JSX.Element {
         <CodeBlock language="bash">{`curl "${API_BASE_URL}?count=3&units=sentences&format=html"`}</CodeBlock>
       </section>
 
-      <section aria-labelledby="post-example" className="mb-8">
-        <h2 id="post-example" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="post-example" role="region">
+        <h2 id="post-example" className="mb-2 text-2xl">
           POST Request Example
         </h2>
         <p>
@@ -176,8 +176,8 @@ export default function JsonApiPage(): React.JSX.Element {
         </CodeBlock>
       </section>
 
-      <section aria-labelledby="response" className="mb-8">
-        <h2 id="response" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="response" role="region">
+        <h2 id="response" className="mb-2 text-2xl">
           Response Format
         </h2>
         <p>
@@ -195,8 +195,8 @@ export default function JsonApiPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="error-handling" className="mb-8">
-        <h2 id="error-handling" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="error-handling" role="region">
+        <h2 id="error-handling" className="mb-2 text-2xl">
           Error Handling
         </h2>
         <p>
@@ -214,8 +214,8 @@ export default function JsonApiPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="status-codes" className="mb-8">
-        <h2 id="status-codes" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="status-codes" role="region">
+        <h2 id="status-codes" className="mb-2 text-2xl">
           HTTP Status Codes
         </h2>
         <ul className="list-disc pl-6 text-sm">

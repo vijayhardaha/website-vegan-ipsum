@@ -32,8 +32,8 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         subtitle="Generate vegan-themed placeholder text directly in your VSCode editor. Learn how to install and use it efficiently."
       />
 
-      <section aria-labelledby="introduction" className="mb-8">
-        <h2 id="introduction" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="introduction" role="region">
+        <h2 id="introduction" className="mb-2 text-2xl">
           Introduction
         </h2>
 
@@ -57,15 +57,15 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
             href="https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold"
+            aria-label="Vegan Ipsum VSCode Extension Marketplace page"
           >
             View Extension on Marketplace
           </Link>
         </Button>
       </section>
 
-      <section aria-labelledby="installation" className="mb-8">
-        <h2 id="installation" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="installation" role="region">
+        <h2 id="installation" className="mb-2 text-2xl">
           Installation
         </h2>
 
@@ -93,8 +93,8 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="usage" className="mb-8">
-        <h2 id="usage" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="usage" role="region">
+        <h2 id="usage" className="mb-2 text-2xl">
           Usage
         </h2>
 
@@ -124,8 +124,8 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="features" className="mb-8">
-        <h2 id="features" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="features" role="region">
+        <h2 id="features" className="mb-2 text-2xl">
           Features
         </h2>
 
@@ -142,8 +142,8 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section aria-labelledby="support" className="mb-8">
-        <h2 id="support" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="support" role="region">
+        <h2 id="support" className="mb-2 text-2xl">
           Support & Feedback
         </h2>
 
@@ -154,6 +154,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline"
+            aria-label="Vegan Ipsum VSCode Extension Marketplace page"
           >
             VSCode Marketplace page
           </Link>{" "}

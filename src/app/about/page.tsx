@@ -26,7 +26,7 @@ export default function AboutPage(): React.JSX.Element {
         subtitle="A lightweight, developer-friendly lorem ipsum alternative with a vegan theme. Comes as an API, NPM package, CLI, and VS Code extension."
       />
 
-      <section aria-labelledby="what-is-vegan-ipsum-section" className="mb-8">
+      <section aria-labelledby="what-is-vegan-ipsum-section" role="region">
         <h2 id="what-is-vegan-ipsum-section" className="mb-2 text-2xl">
           What Is Vegan Ipsum?
         </h2>
@@ -51,7 +51,7 @@ export default function AboutPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="background-section" className="mb-8">
+      <section aria-labelledby="background-section" role="region">
         <h2 id="background-section" className="mb-2 text-2xl">
           Background
         </h2>
@@ -63,6 +63,7 @@ export default function AboutPage(): React.JSX.Element {
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
+            aria-label="Ultimate List of Lorem Ipsum Generators"
           >
             loremipsum.io
           </a>
@@ -82,7 +83,7 @@ export default function AboutPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="core-features-section" className="mb-8">
+      <section aria-labelledby="core-features-section" role="region">
         <h2 id="core-features-section" className="mb-2 text-2xl">
           Core Features
         </h2>
@@ -109,7 +110,7 @@ export default function AboutPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section aria-labelledby="customization-section" className="mb-8">
+      <section aria-labelledby="customization-section" role="region">
         <h2 id="customization-section" className="mb-2 text-2xl">
           Customization Options
         </h2>
@@ -138,7 +139,7 @@ export default function AboutPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="technical-overview-section" className="mb-8">
+      <section aria-labelledby="technical-overview-section" role="region">
         <h2 id="technical-overview-section" className="mb-2 text-2xl">
           Technical Overview
         </h2>
@@ -161,7 +162,7 @@ export default function AboutPage(): React.JSX.Element {
         </ul>
       </section>
 
-      <section aria-labelledby="use-cases-section" className="mb-8">
+      <section aria-labelledby="use-cases-section" role="region">
         <h2 id="use-cases-section" className="mb-2 text-2xl">
           Use Cases
         </h2>

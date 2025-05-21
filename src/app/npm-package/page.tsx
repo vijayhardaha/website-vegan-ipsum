@@ -32,16 +32,17 @@ export default function NpmPackagePage(): React.JSX.Element {
       />
 
       <section aria-labelledby="introduction" className="mb-8">
-        <h2 id="introduction" className="mb-2 text-2xl font-semibold">
+        <h2 id="introduction" className="mb-2 text-2xl">
           Introduction
         </h2>
         <div className="space-y-4">
           <p>
             <Link
               href="https://www.npmjs.com/package/vegan-ipsum"
-              className="text-primary font-semibold underline"
+              className="text-primary underline"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Vegan Ipsum NPM package page"
             >
               vegan-ipsum
             </Link>{" "}
@@ -61,7 +62,7 @@ export default function NpmPackagePage(): React.JSX.Element {
       </section>
 
       <section aria-labelledby="installation" className="mb-8">
-        <h2 id="installation" className="mb-2 text-2xl font-semibold">
+        <h2 id="installation" className="mb-2 text-2xl">
           Installation
         </h2>
         <p>
@@ -74,8 +75,8 @@ export default function NpmPackagePage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="usage" className="mb-12">
-        <h2 id="usage" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="usage" role="region">
+        <h2 id="usage" className="mb-2 text-2xl">
           Usage
         </h2>
         <div className="space-y-8">
@@ -139,8 +140,8 @@ console.log(customText);`}
         </div>
       </section>
 
-      <section aria-labelledby="cli" className="mb-12">
-        <h2 id="cli" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="cli" role="region">
+        <h2 id="cli" className="mb-2 text-2xl">
           Command Line Interface (CLI)
         </h2>
         <p>
@@ -163,8 +164,8 @@ vegan-ipsum 2 paragraphs --format html`}
         </p>
       </section>
 
-      <section aria-labelledby="features" className="mb-12">
-        <h2 id="features" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="features" role="region">
+        <h2 id="features" className="mb-2 text-2xl">
           Features
         </h2>
         <ul className="list-disc space-y-2 pl-6">
@@ -177,8 +178,8 @@ vegan-ipsum 2 paragraphs --format html`}
         </ul>
       </section>
 
-      <section aria-labelledby="more-info" className="mb-12">
-        <h2 id="more-info" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="more-info" role="region">
+        <h2 id="more-info" className="mb-2 text-2xl">
           More Information
         </h2>
         <p>
@@ -189,6 +190,7 @@ vegan-ipsum 2 paragraphs --format html`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary font-medium underline"
+            aria-label="Vegan Ipsum NPM package page"
           >
             npm package page
           </Link>

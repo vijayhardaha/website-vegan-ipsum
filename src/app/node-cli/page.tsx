@@ -31,8 +31,8 @@ export default function NodeCliPage(): React.JSX.Element {
         subtitle="Use our Node.js CLI tool to generate vegan-themed placeholder text directly from your terminal."
       />
 
-      <section aria-labelledby="introduction" className="mb-8">
-        <h2 id="introduction" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="introduction" role="region">
+        <h2 id="introduction" className="mb-2 text-2xl">
           Introduction
         </h2>
         <p>
@@ -50,8 +50,8 @@ export default function NodeCliPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="installation" className="mb-8">
-        <h2 id="installation" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="installation" role="region">
+        <h2 id="installation" className="mb-2 text-2xl">
           Installation
         </h2>
         <p>
@@ -65,8 +65,8 @@ export default function NodeCliPage(): React.JSX.Element {
         </p>
       </section>
 
-      <section aria-labelledby="usage" className="mb-8">
-        <h2 id="usage" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="usage" role="region">
+        <h2 id="usage" className="mb-2 text-2xl">
           Basic Usage
         </h2>
         <p>
@@ -84,8 +84,8 @@ vegan-ipsum 5 words`}
         </p>
       </section>
 
-      <section aria-labelledby="options" className="mb-8">
-        <h2 id="options" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="options" role="region">
+        <h2 id="options" className="mb-2 text-2xl">
           Options & Flags
         </h2>
         <p>Enhance your CLI experience by using these helpful options and flags:</p>
@@ -108,8 +108,8 @@ vegan-ipsum 2 paragraphs --copy`}
         </CodeBlock>
       </section>
 
-      <section aria-labelledby="tips" className="mb-8">
-        <h2 id="tips" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="tips" role="region">
+        <h2 id="tips" className="mb-2 text-2xl">
           Tips & Best Practices
         </h2>
         <ul className="list-disc space-y-2 pl-6">
@@ -129,8 +129,8 @@ vegan-ipsum 2 paragraphs --copy`}
         </ul>
       </section>
 
-      <section aria-labelledby="more-info" className="mb-8">
-        <h2 id="more-info" className="mb-2 text-2xl font-semibold">
+      <section aria-labelledby="more-info" role="region">
+        <h2 id="more-info" className="mb-2 text-2xl">
           More Information & Resources
         </h2>
         <p>
@@ -148,6 +148,7 @@ vegan-ipsum 2 paragraphs --copy`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary font-medium underline"
+            aria-label="Vegan Ipsum NPM package page"
           >
             official npm package page
           </Link>{" "}
