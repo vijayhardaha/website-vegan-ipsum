@@ -32,87 +32,123 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         subtitle="Generate vegan-themed placeholder text directly in your VSCode editor. Learn how to install and use it efficiently."
       />
 
-      <section aria-labelledby="introduction">
+      <section aria-labelledby="introduction" className="mb-8">
         <h2 id="introduction" className="mb-2 text-2xl font-semibold">
           Introduction
         </h2>
 
         <p>
-          The Vegan Ipsum VSCode Extension is a lightweight tool for developers who want to quickly insert vegan-themed
-          placeholder text into their code or content files. Whether you’re prototyping, designing, or testing, it
-          brings some fun and meaning to your filler content.
+          The <strong>Vegan Ipsum VSCode Extension</strong> is a lightweight and intuitive tool designed for developers,
+          designers, and content creators who want to quickly insert vegan-themed placeholder text directly within their
+          Visual Studio Code editor.
+        </p>
+        <p>
+          Whether you’re prototyping a website, building a vegan blog, or simply adding ethical and meaningful filler
+          content to mockups and drafts, this extension brings compassion and fun to your development workflow without
+          leaving your editor.
+        </p>
+        <p>
+          This extension seamlessly integrates with VSCode’s Command Palette and supports multiple output formats to
+          suit a variety of use cases.
         </p>
 
-        <Button asChild size="sm" className="mt-2">
+        <Button asChild size="sm" className="mt-4">
           <Link
             href="https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum"
             target="_blank"
             rel="noopener noreferrer"
+            className="font-semibold"
           >
             View Extension on Marketplace
           </Link>
         </Button>
       </section>
 
-      <section aria-labelledby="installation">
+      <section aria-labelledby="installation" className="mb-8">
         <h2 id="installation" className="mb-2 text-2xl font-semibold">
           Installation
         </h2>
 
-        <p>You can install the extension directly from the VSCode Marketplace or using the command palette:</p>
+        <p>You can easily add the Vegan Ipsum extension to your VSCode setup in two ways:</p>
 
         <ol className="mt-2 list-decimal space-y-1 pl-6">
-          <li>Open Visual Studio Code.</li>
-          <li>Navigate to the Extensions panel (Ctrl+Shift+X or Cmd+Shift+X).</li>
+          <li>Open Visual Studio Code on your machine.</li>
           <li>
-            Search for <strong>Vegan Ipsum</strong>.
+            Navigate to the Extensions sidebar panel (use shortcut <code>Ctrl+Shift+X</code> on Windows/Linux or{" "}
+            <code>Cmd+Shift+X</code> on macOS).
           </li>
           <li>
-            Click <strong>Install</strong> to add it to your editor.
+            Type <strong>Vegan Ipsum</strong> into the search bar.
           </li>
+          <li>
+            Click the <strong>Install</strong> button on the Vegan Ipsum extension card.
+          </li>
+          <li>Reload or restart VSCode if prompted to activate the extension.</li>
         </ol>
 
-        <p className="mt-4">Or, use this command in the command palette:</p>
+        <p className="mt-4">Alternatively, install directly using the Command Palette:</p>
         <CodeBlock language="bash">ext install vegan-ipsum</CodeBlock>
+        <p className="text-muted-foreground mt-2 text-sm">
+          This command will trigger installation without navigating away from your editor.
+        </p>
       </section>
 
-      <section aria-labelledby="usage">
+      <section aria-labelledby="usage" className="mb-8">
         <h2 id="usage" className="mb-2 text-2xl font-semibold">
           Usage
         </h2>
 
-        <p>Once installed, generating text is quick and intuitive:</p>
+        <p>Once installed, generating vegan-themed placeholder text is quick and straightforward:</p>
 
         <ul className="mt-2 list-disc space-y-1 pl-6">
-          <li>Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P).</li>
           <li>
-            Search for <strong>Vegan Ipsum</strong>.
+            Open the Command Palette by pressing <code>Ctrl+Shift+P</code> (Windows/Linux) or <code>Cmd+Shift+P</code>{" "}
+            (macOS).
           </li>
-          <li>Select your preferred output option (e.g., sentence, paragraph).</li>
-          <li>The placeholder text is inserted at the current cursor position.</li>
+          <li>
+            Type <strong>Vegan Ipsum</strong> to see available commands.
+          </li>
+          <li>
+            Select the command corresponding to the amount or type of text you want to insert, such as “Insert Vegan
+            Ipsum Sentence” or “Insert Vegan Ipsum Paragraph.”
+          </li>
+          <li>
+            The vegan-themed placeholder text will be automatically inserted at your current cursor position within the
+            active editor window.
+          </li>
         </ul>
+
+        <p className="text-muted-foreground mt-4 text-sm">
+          You can use this in any text-based file type — HTML, Markdown, JSON, JavaScript, or even plain text — making
+          it versatile for many workflows.
+        </p>
       </section>
 
-      <section aria-labelledby="features">
+      <section aria-labelledby="features" className="mb-8">
         <h2 id="features" className="mb-2 text-2xl font-semibold">
           Features
         </h2>
 
-        <ul className="list-disc space-y-1 pl-6">
-          <li>Instant generation of vegan-themed text.</li>
-          <li>Multiple formats: sentence, paragraph, or word count.</li>
-          <li>Simple command-based usage within the VSCode interface.</li>
-          <li>Ideal for ethical dev projects or just adding fun to mockups.</li>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Instant generation of vegan-themed placeholder text without leaving your code editor.</li>
+          <li>Choose from different text units: words, sentences, or paragraphs to match your specific needs.</li>
+          <li>Simple, command-based interface that integrates naturally with VSCode workflows.</li>
+          <li>
+            Supports insertion in any text-based file format — perfect for web development, content writing, and design
+            mockups.
+          </li>
+          <li>Lightweight and fast with no impact on your editor’s performance.</li>
+          <li>Ideal for ethically themed projects or simply to add a meaningful twist to your placeholder content.</li>
         </ul>
       </section>
 
-      <section aria-labelledby="support">
+      <section aria-labelledby="support" className="mb-8">
         <h2 id="support" className="mb-2 text-2xl font-semibold">
           Support & Feedback
         </h2>
 
         <p>
-          Found a bug or have a suggestion? Reach out via the{" "}
+          If you encounter any issues, bugs, or have feature requests, your feedback is invaluable! Please visit the{" "}
           <Link
             href="https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum"
             target="_blank"
@@ -121,7 +157,11 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
           >
             VSCode Marketplace page
           </Link>{" "}
-          or connect on social media. Your feedback helps improve this open-source tool.
+          to submit issues or read community discussions.
+        </p>
+        <p>
+          You can also connect with the developer community on social media or GitHub, where ongoing development and
+          improvements are actively maintained.
         </p>
       </section>
     </SectionContainer>

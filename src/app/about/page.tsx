@@ -26,99 +26,170 @@ export default function AboutPage(): React.JSX.Element {
         subtitle="A lightweight, developer-friendly lorem ipsum alternative with a vegan theme. Comes as an API, NPM package, CLI, and VS Code extension."
       />
 
-      <section aria-labelledby="what-is-vegan-ipsum-section">
-        <h2 id="what-is-vegan-ipsum-section" className="mb-1 text-2xl">
+      <section aria-labelledby="what-is-vegan-ipsum-section" className="mb-8">
+        <h2 id="what-is-vegan-ipsum-section" className="mb-2 text-2xl">
           What Is Vegan Ipsum?
         </h2>
+        <p className="mb-4">
+          Vegan Ipsum is a thoughtfully designed placeholder text generator crafted especially for developers,
+          designers, marketers, and content creators who prioritize ethical, plant-based, and eco-conscious values.
+          Unlike traditional Lorem Ipsum generators, Vegan Ipsum produces filler text infused with vegan-themed words
+          and compassionate language, perfectly tailored for projects centered around sustainability, animal welfare,
+          and green living. This unique approach not only fills your layouts with meaningful content but also reinforces
+          your brand’s commitment to ethical principles and conscious messaging.
+        </p>
+        <p className="mb-4">
+          Whether you’re building a vegan lifestyle blog, an environmentally responsible e-commerce site, or designing
+          apps and presentations that promote cruelty-free products, Vegan Ipsum serves as an ideal placeholder text. It
+          ensures your mockups and wireframes resonate authentically with your audience while avoiding the generic,
+          uninspired filler text that’s so often overused in the design and development industry.
+        </p>
         <p>
-          Vegan Ipsum is a modern, developer-centric placeholder text generator that delivers content themed around
-          plant-based and eco-conscious vocabulary. Whether you're designing a vegan blog, an ethical product website,
-          or just want some fun filler text, Vegan Ipsum is a drop-in replacement for traditional lorem ipsum.
+          Easy to integrate and highly customizable, Vegan Ipsum supports multiple formats and delivery methods — from a
+          web-based interface to REST APIs, command-line tools, and editor extensions — empowering developers to embed
+          plant-based placeholder text into any part of their workflow effortlessly.
         </p>
       </section>
 
-      <section aria-labelledby="background-section">
-        <h2 id="background-section" className="mb-1 text-2xl">
+      <section aria-labelledby="background-section" className="mb-8">
+        <h2 id="background-section" className="mb-2 text-2xl">
           Background
         </h2>
-        <p>
-          One day, while browsing through the list at{" "}
+        <p className="mb-4">
+          The idea behind Vegan Ipsum originated from a desire to fill a niche that traditional Lorem Ipsum generators
+          have overlooked. While browsing{" "}
           <a
             href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 underline"
           >
             loremipsum.io
           </a>
-          , I noticed a trend—people were creating customized versions of lorem ipsum text for their niche communities.
-          Out of curiosity, I searched for a vegan-themed generator, only to discover there wasn't any well-maintained
-          or up-to-date project available. That sparked the idea for Vegan Ipsum.
+          , it became clear that many communities create customized placeholder text to better reflect their unique
+          identities.
+        </p>
+        <p className="mb-4">
+          However, despite the growing popularity of veganism and plant-based lifestyles worldwide, there wasn’t a
+          well-maintained or comprehensive vegan-themed placeholder text generator available. This gap inspired the
+          creation of Vegan Ipsum — a project aimed at providing ethical designers and developers with a fresh,
+          cruelty-free lorem ipsum alternative that speaks to their values.
+        </p>
+        <p>
+          Since its inception, Vegan Ipsum has evolved into a versatile suite of tools designed to empower creators,
+          support sustainable brands, and encourage the use of meaningful, value-driven content in digital products and
+          presentations.
         </p>
       </section>
 
-      <section aria-labelledby="core-features-section">
-        <h2 id="core-features-section" className="mb-1 text-2xl">
+      <section aria-labelledby="core-features-section" className="mb-8">
+        <h2 id="core-features-section" className="mb-2 text-2xl">
           Core Features
         </h2>
-        <ul className="list-disc space-y-2 pl-6">
+        <ul className="list-inside list-disc space-y-3 pl-4">
           <li>
-            <strong>API:</strong> Hosted endpoint to fetch vegan-themed placeholder text dynamically.
+            <strong>API:</strong> A robust RESTful endpoint allows you to dynamically fetch vegan-themed placeholder
+            text for seamless integration with websites, mobile apps, and automation workflows.
           </li>
           <li>
-            <strong>NPM Package:</strong> Install and generate placeholder content inside your JavaScript/TypeScript
-            apps. <code className="bg-muted rounded px-1 py-0.5 text-sm">npm install vegan-ipsum</code>
+            <strong>NPM Package:</strong> Easily install{" "}
+            <code className="bg-muted rounded px-1 py-0.5 text-sm">vegan-ipsum</code> in your JavaScript or TypeScript
+            projects to generate customizable filler text programmatically, perfect for development environments and
+            testing.
           </li>
           <li>
-            <strong>CLI Tool:</strong> Use Vegan Ipsum directly from your terminal to copy placeholder content into your
-            project files.
+            <strong>CLI Tool:</strong> Command-line interface lets developers generate vegan ipsum content directly from
+            their terminal or scripts, speeding up workflow without needing to leave the coding environment.
           </li>
           <li>
-            <strong>VS Code Extension:</strong> Generate vegan placeholder text with a keyboard shortcut inside your
-            editor.
+            <strong>VS Code Extension:</strong> Generate and insert vegan-themed placeholder text into your source files
+            with a simple keyboard shortcut inside the popular Visual Studio Code editor, streamlining the design and
+            coding process.
           </li>
         </ul>
       </section>
 
-      <section aria-labelledby="customization-section">
-        <h2 id="customization-section" className="mb-1 text-2xl">
-          Customization
+      <section aria-labelledby="customization-section" className="mb-8">
+        <h2 id="customization-section" className="mb-2 text-2xl">
+          Customization Options
         </h2>
-        <p>The NPM and API versions of Vegan Ipsum allow full control over the output. You can specify:</p>
-        <ul className="mt-2 list-disc space-y-1 pl-6">
+        <p className="mb-4">
+          Vegan Ipsum is designed with flexibility in mind, allowing users to tailor the output to meet the specific
+          needs of their projects. Whether you want short bursts of text or long paragraphs, you can fine-tune the
+          content with various parameters to fit perfectly within your designs and codebases.
+        </p>
+        <ul className="mt-2 list-inside list-disc space-y-2 pl-4">
           <li>
-            <code>count</code> – Number of items to return (default: 3)
+            <code>count</code> – Specify the number of text units to generate. This can be paragraphs, sentences, or
+            words depending on your preference (default is 3).
           </li>
           <li>
-            <code>units</code> – <code>paragraphs</code> | <code>sentences</code> | <code>words</code>
+            <code>units</code> – Choose the unit type: <code>paragraphs</code>, <code>sentences</code>, or{" "}
+            <code>words</code>.
           </li>
           <li>
-            <code>format</code> – <code>plain</code> | <code>html</code>
+            <code>format</code> – Output format selection between <code>plain</code> text or <code>html</code>, making
+            it easy to embed directly into web projects or raw text files.
           </li>
         </ul>
+        <p className="mt-4">
+          These options provide complete control over your placeholder content, empowering you to maintain brand
+          consistency and keep your design process smooth and meaningful.
+        </p>
       </section>
 
-      <section aria-labelledby="technical-overview-section">
-        <h2 id="technical-overview-section" className="mb-1 text-2xl">
+      <section aria-labelledby="technical-overview-section" className="mb-8">
+        <h2 id="technical-overview-section" className="mb-2 text-2xl">
           Technical Overview
         </h2>
-        <ul className="list-disc space-y-1 pl-6">
-          <li>Written in modern TypeScript.</li>
-          <li>Zero dependencies.</li>
-          <li>Functional programming style.</li>
-          <li>Supports both CommonJS and ESM.</li>
-          <li>Actively maintained with semantic versioning.</li>
+        <ul className="list-inside list-disc space-y-2 pl-4">
+          <li>Written entirely in modern, strongly typed TypeScript to ensure code quality and maintainability.</li>
+          <li>
+            Zero external dependencies, making it lightweight, fast, and easy to audit for security and performance.
+          </li>
+          <li>
+            Employs a functional programming paradigm to produce predictable and pure functions, improving testability.
+          </li>
+          <li>
+            Supports both CommonJS and ECMAScript Modules (ESM) to maximize compatibility across JavaScript
+            environments.
+          </li>
+          <li>
+            Actively maintained with semantic versioning, ensuring new features and bug fixes are delivered promptly.
+          </li>
+          <li>Open-source on GitHub, welcoming community contributions and transparency in development.</li>
         </ul>
       </section>
 
-      <section aria-labelledby="use-cases-section">
-        <h2 id="use-cases-section" className="mb-1 text-2xl">
+      <section aria-labelledby="use-cases-section" className="mb-8">
+        <h2 id="use-cases-section" className="mb-2 text-2xl">
           Use Cases
         </h2>
-        <ul className="list-disc space-y-1 pl-6">
-          <li>Design mockups for vegan and eco-conscious products.</li>
-          <li>Placeholder content for ethical brands and campaigns.</li>
-          <li>Text generation for educational apps and plant-based startups.</li>
-          <li>Fun filler text for blogs, SaaS apps, and personal portfolios.</li>
+        <ul className="list-inside list-disc space-y-2 pl-4">
+          <li>
+            <strong>Design mockups:</strong> Create authentic vegan and eco-conscious product designs and layouts that
+            speak directly to ethical consumers and sustainability advocates.
+          </li>
+          <li>
+            <strong>Branding projects:</strong> Use meaningful filler text in marketing materials, websites, and
+            campaigns that promote plant-based living, animal rights, and environmental stewardship.
+          </li>
+          <li>
+            <strong>Educational apps:</strong> Populate learning platforms and informational tools with contextually
+            relevant placeholder content tailored to veganism, nutrition, and sustainable practices.
+          </li>
+          <li>
+            <strong>Startup prototypes:</strong> Accelerate development of plant-based product MVPs and pitch decks with
+            relevant, aligned placeholder text.
+          </li>
+          <li>
+            <strong>Blogs and portfolios:</strong> Add a touch of personality and ethical alignment to your personal or
+            professional projects with thematic filler content.
+          </li>
+          <li>
+            <strong>Open-source projects:</strong> Enhance your projects by using Vegan Ipsum’s unique placeholder text
+            that reflects conscious values while avoiding the generic “Lorem Ipsum” fallback.
+          </li>
         </ul>
       </section>
     </SectionContainer>

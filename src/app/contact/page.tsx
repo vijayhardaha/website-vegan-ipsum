@@ -77,13 +77,17 @@ export default function ContactPage(): React.JSX.Element {
         subtitle="Connect with the creator of Vegan Ipsum. Find links to the projects, tools, and social media profiles. Reach out for collaboration, feedback, or inquiries. All inquiries are welcome!"
       />
 
-      <section aria-labelledby="projects">
-        <h2 id="projects" className="mb-1 text-2xl">
+      <section aria-labelledby="projects" className="mb-8">
+        <h2 id="projects" className="mb-2 text-2xl font-semibold">
           Vegan Ipsum Projects
         </h2>
         <div className="space-y-4">
-          <p>Here are some key links to explore the Vegan Ipsum projects:</p>
-          <ul className="list-disc space-y-1 pl-6">
+          <p>
+            Explore the various Vegan Ipsum projects that power this ethical, plant-based lorem ipsum generator. Whether
+            you’re interested in the open-source code, API documentation, or developer tools, you’ll find everything you
+            need to get started below:
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
             {projectLinks.map((link, index) => (
               <li key={index}>
                 <Link
@@ -91,23 +95,30 @@ export default function ContactPage(): React.JSX.Element {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary underline hover:opacity-75"
-                  aria-label={`Open ${link.text} in a new tab`}
+                  aria-label={`Open ${link.text} project in a new tab`}
                 >
                   {link.text}
                 </Link>
               </li>
             ))}
           </ul>
+          <p className="text-muted-foreground mt-4 text-sm">
+            All projects are actively maintained and open-source, welcoming contributions from developers and designers
+            passionate about ethical technology and plant-based lifestyles.
+          </p>
         </div>
       </section>
 
-      <section aria-labelledby="author-contact">
-        <h2 id="author-contact" className="mb-1 text-2xl">
+      <section aria-labelledby="author-contact" className="mb-8">
+        <h2 id="author-contact" className="mb-2 text-2xl font-semibold">
           Author Contact Links
         </h2>
         <div className="space-y-4">
-          <p>If you'd like to get in touch with the author, here are the contact links:</p>
-          <ul className="list-disc space-y-1 pl-6">
+          <p>
+            If you want to connect directly with the creator of Vegan Ipsum, collaborate on new features, provide
+            feedback, or discuss potential partnerships, use the following social media and professional links:
+          </p>
+          <ul className="list-disc space-y-2 pl-6">
             {socialLinks.map((link, index) => (
               <li key={index}>
                 <Link
@@ -115,24 +126,33 @@ export default function ContactPage(): React.JSX.Element {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary underline hover:opacity-75"
-                  aria-label={`Open ${link.text} in a new tab`}
+                  aria-label={`Open ${link.text} profile in a new tab`}
                 >
                   {link.text}
                 </Link>
               </li>
             ))}
           </ul>
+          <p className="text-muted-foreground mt-4 text-sm">
+            Whether you’re a fellow developer, designer, content creator, or vegan advocate, all inquiries and
+            conversations are warmly welcomed.
+          </p>
         </div>
       </section>
 
-      <section aria-labelledby="contact-details">
-        <h2 id="contact-details" className="mb-1 text-2xl">
+      <section aria-labelledby="contact-details" className="mb-8">
+        <h2 id="contact-details" className="mb-2 text-2xl font-semibold">
           Additional Contact Details
         </h2>
         <div className="space-y-4">
           <p>
-            If you'd like to reach out for collaboration, feedback, or queries, feel free to contact via the links
-            above. All inquiries are welcome!
+            For business inquiries, collaboration proposals, bug reports, or general feedback about Vegan Ipsum, please
+            don’t hesitate to get in touch. Your input helps improve the project and ensures Vegan Ipsum remains a
+            valuable resource for the ethical design and development community.
+          </p>
+          <p>
+            You can also join the Vegan Ipsum community on various platforms to stay updated on new releases, feature
+            requests, and community discussions.
           </p>
         </div>
       </section>

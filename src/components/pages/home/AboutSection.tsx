@@ -60,7 +60,7 @@ export default function AboutSection(): React.JSX.Element {
   return (
     <>
       <section aria-labelledby="what-is-vegan-ipsum-generator" role="region">
-        <h2 id="what-is-vegan-ipsum-generator" className="text-primary mb-2 text-3xl">
+        <h2 id="what-is-vegan-ipsum-generator" className="mb-2 text-2xl">
           What is Vegan Ipsum Generator?
         </h2>
         <p>
@@ -74,7 +74,7 @@ export default function AboutSection(): React.JSX.Element {
       </section>
 
       <section aria-labelledby="why-vegan-ipsum-generator" role="region">
-        <h2 id="why-vegan-ipsum-generator" className="text-primary mb-2 text-3xl">
+        <h2 id="why-vegan-ipsum-generator" className="mb-2 text-2xl">
           Why Vegan Ipsum Generator?
         </h2>
         <p>
@@ -88,7 +88,7 @@ export default function AboutSection(): React.JSX.Element {
       </section>
 
       <section aria-labelledby="why-we-use-vegan-ipsum-generator" role="region">
-        <h2 id="why-we-use-vegan-ipsum-generator" className="text-primary mb-2 text-3xl">
+        <h2 id="why-we-use-vegan-ipsum-generator" className="mb-2 text-2xl">
           Why We Use Vegan Ipsum Generator?
         </h2>
         <p>
@@ -102,7 +102,7 @@ export default function AboutSection(): React.JSX.Element {
       </section>
 
       <section aria-labelledby="who-can-use-vegan-ipsum-generator" role="region">
-        <h2 id="who-can-use-vegan-ipsum-generator" className="text-primary mb-2 text-3xl">
+        <h2 id="who-can-use-vegan-ipsum-generator" className="mb-2 text-2xl">
           Who Can Use Vegan Ipsum Generator?
         </h2>
         <p className="mb-4">
@@ -129,7 +129,7 @@ export default function AboutSection(): React.JSX.Element {
       </section>
 
       <section aria-labelledby="when-to-use-vegan-ipsum-generator" role="region">
-        <h2 id="when-to-use-vegan-ipsum-generator" className="text-primary mb-2 text-3xl">
+        <h2 id="when-to-use-vegan-ipsum-generator" className="mb-2 text-2xl">
           When to Use Vegan Ipsum Generator?
         </h2>
         <p className="mb-4">
@@ -156,7 +156,7 @@ export default function AboutSection(): React.JSX.Element {
       </section>
 
       <section aria-labelledby="how-you-can-use-vegan-ipsum-generator">
-        <h2 id="how-you-can-use-vegan-ipsum-generator" className="text-primary mb-2 text-3xl">
+        <h2 id="how-you-can-use-vegan-ipsum-generator" className="mb-2 text-2xl">
           How You Can Use Vegan Ipsum Generator?
         </h2>
         <p className="mb-4">
@@ -200,7 +200,7 @@ export default function AboutSection(): React.JSX.Element {
             role="listitem"
             aria-labelledby={`card-heading-${index}`}
           >
-            <div className="text-primary text-4xl">{card.icon}</div>
+            <div className="text-4xl">{card.icon}</div>
             <h3 id={`card-heading-${index}`} className="text-foreground text-lg">
               {card.heading}
             </h3>

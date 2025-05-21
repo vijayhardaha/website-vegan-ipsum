@@ -16,7 +16,7 @@ export default function Footer(): React.JSX.Element {
     <footer className="bg-foreground py-6 text-white" aria-label="Footer">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <div className="space-y-3 text-center text-sm">
-          <ul className="flex items-center justify-center gap-4 text-sm">
+          <ul className="flex items-center justify-center gap-4 text-sm" role="list">
             {FOOTER_NAV_LINKS.map((link: INavLink) => (
               <li key={link.href}>
                 <Link
@@ -39,11 +39,13 @@ export default function Footer(): React.JSX.Element {
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:no-underline"
+              aria-label="Visit Vijay Hardaha's Instagram"
             >
               Vijay Hardaha
             </Link>
             .
           </p>
+
           <p>
             &copy; {new Date().getFullYear()} <span lang="en">Vegan Ipsum</span>. All rights reserved.
           </p>
