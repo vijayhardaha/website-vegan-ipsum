@@ -21,6 +21,7 @@ export type BaseMetadataType = {
   alternates: {
     canonical: string;
   };
+  keywords: string[];
   author: string;
   robots: string;
   icons: {
@@ -56,10 +57,11 @@ export type BaseMetadataType = {
  * An object containing SEO-related constants for the application.
  */
 export const SEO: SEOType = {
-  title: "Vegan Ipsum — Ethical placeholder text for compassionate creators.",
-  description: "Generate random vegan text for your projects with Vegan Ipsum.",
+  title: "Vegan Ipsum – Ethical, Plant-Based Placeholder Text",
+  description:
+    "Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.",
   titlePostfix: "Vegan Ipsum",
-  separator: "—",
+  separator: "-",
 };
 
 /**
@@ -73,6 +75,28 @@ export const baseMetadata: BaseMetadataType = {
   alternates: {
     canonical: getBaseUrl(),
   },
+  keywords: [
+    "vegan lorem ipsum",
+    "vegan placeholder text",
+    "vegan ipsum generator",
+    "cruelty-free placeholder text",
+    "ethical lorem ipsum",
+    "plant-based lorem ipsum",
+    "dummy text for vegan projects",
+    "ethical web design tools",
+    "placeholder text generator",
+    "lorem ipsum alternative",
+    "generate vegan placeholder text online",
+    "best lorem ipsum for ethical designers",
+    "free cruelty-free lorem ipsum tool",
+    "vegan ipsum for web developers",
+    "placeholder text for sustainable brands",
+    "vegan content filler",
+    "ethical UI/UX design",
+    "placeholder copy for eco-friendly websites",
+    "vegan copy generator",
+    "lorem ipsum with meaning",
+  ],
   author: "Vijay Hardaha",
   robots: "index, follow",
   icons: {
