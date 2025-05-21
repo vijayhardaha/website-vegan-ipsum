@@ -7,9 +7,9 @@ import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
  * @type {Metadata}
  */
 export const metadata: Metadata = genMeta({
-  title: "About",
+  title: "About Vegan Ipsum",
   description:
-    "Learn about Vegan Ipsum, a lightweight, developer-friendly lorem ipsum alternative with a vegan theme.",
+    "Discover Vegan Ipsum — a lightweight, developer-friendly, plant-based lorem ipsum alternative for ethical and sustainable projects.",
   slug: "about",
 });
 
@@ -22,7 +22,7 @@ export default function AboutPage(): React.JSX.Element {
   return (
     <SectionContainer>
       <PageHeader
-        title="About"
+        title="About Vegan Ipsum"
         subtitle="A lightweight, developer-friendly lorem ipsum alternative with a vegan theme. Comes as an API, NPM package, CLI, and VS Code extension."
       />
 
@@ -31,10 +31,9 @@ export default function AboutPage(): React.JSX.Element {
           What Is Vegan Ipsum?
         </h2>
         <p>
-          Vegan Ipsum is a modern, developer-centric placeholder text generator that delivers
-          content themed around plant-based and eco-conscious vocabulary. Whether you're designing a
-          vegan blog, an ethical product website, or just want some fun filler text, Vegan Ipsum is
-          a drop-in replacement for traditional lorem ipsum.
+          Vegan Ipsum is a modern, developer-centric placeholder text generator that delivers content themed around
+          plant-based and eco-conscious vocabulary. Whether you're designing a vegan blog, an ethical product website,
+          or just want some fun filler text, Vegan Ipsum is a drop-in replacement for traditional lorem ipsum.
         </p>
       </section>
 
@@ -51,10 +50,9 @@ export default function AboutPage(): React.JSX.Element {
           >
             loremipsum.io
           </a>
-          , I noticed a trend—people were creating customized versions of lorem ipsum text for their
-          niche communities. Out of curiosity, I searched for a vegan-themed generator, only to
-          discover there wasn't any well-maintained or up-to-date project available. That sparked
-          the idea for Vegan Ipsum.
+          , I noticed a trend—people were creating customized versions of lorem ipsum text for their niche communities.
+          Out of curiosity, I searched for a vegan-themed generator, only to discover there wasn't any well-maintained
+          or up-to-date project available. That sparked the idea for Vegan Ipsum.
         </p>
       </section>
 
@@ -64,21 +62,19 @@ export default function AboutPage(): React.JSX.Element {
         </h2>
         <ul className="list-disc space-y-2 pl-6">
           <li>
-            <strong>API:</strong> Hosted endpoint to fetch vegan-themed placeholder text
-            dynamically.
+            <strong>API:</strong> Hosted endpoint to fetch vegan-themed placeholder text dynamically.
           </li>
           <li>
-            <strong>NPM Package:</strong> Install and generate placeholder content inside your
-            JavaScript/TypeScript apps.{" "}
-            <code className="bg-muted rounded px-1 py-0.5 text-sm">npm install vegan-ipsum</code>
+            <strong>NPM Package:</strong> Install and generate placeholder content inside your JavaScript/TypeScript
+            apps. <code className="bg-muted rounded px-1 py-0.5 text-sm">npm install vegan-ipsum</code>
           </li>
           <li>
-            <strong>CLI Tool:</strong> Use Vegan Ipsum directly from your terminal to copy
-            placeholder content into your project files.
+            <strong>CLI Tool:</strong> Use Vegan Ipsum directly from your terminal to copy placeholder content into your
+            project files.
           </li>
           <li>
-            <strong>VS Code Extension:</strong> Generate vegan placeholder text with a keyboard
-            shortcut inside your editor.
+            <strong>VS Code Extension:</strong> Generate vegan placeholder text with a keyboard shortcut inside your
+            editor.
           </li>
         </ul>
       </section>
@@ -87,17 +83,13 @@ export default function AboutPage(): React.JSX.Element {
         <h2 id="customization-section" className="mb-1 text-2xl">
           Customization
         </h2>
-        <p>
-          The NPM and API versions of Vegan Ipsum allow full control over the output. You can
-          specify:
-        </p>
+        <p>The NPM and API versions of Vegan Ipsum allow full control over the output. You can specify:</p>
         <ul className="mt-2 list-disc space-y-1 pl-6">
           <li>
             <code>count</code> – Number of items to return (default: 3)
           </li>
           <li>
-            <code>units</code> – <code>paragraphs</code> | <code>sentences</code> |{" "}
-            <code>words</code>
+            <code>units</code> – <code>paragraphs</code> | <code>sentences</code> | <code>words</code>
           </li>
           <li>
             <code>format</code> – <code>plain</code> | <code>html</code>

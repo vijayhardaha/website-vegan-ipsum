@@ -12,9 +12,9 @@ import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
  * @type {Metadata}
  */
 export const metadata: Metadata = genMeta({
-  title: "Node CLI",
+  title: "Vegan Ipsum Node CLI",
   description:
-    "Learn how to use the Vegan Ipsum Node CLI to generate vegan-themed placeholder text directly from your terminal.",
+    "Generate vegan-themed, plant-based placeholder text right from your terminal with the lightweight Vegan Ipsum Node CLI — perfect for ethical developers and creative coders.",
   slug: "node-cli",
 });
 
@@ -27,7 +27,7 @@ export default function NodeCliPage(): React.JSX.Element {
   return (
     <SectionContainer>
       <PageHeader
-        title="Node CLI"
+        title="Vegan Ipsum Node CLI"
         subtitle="Use our Node.js CLI tool to generate vegan-themed placeholder text directly from your terminal."
       />
 
@@ -36,9 +36,9 @@ export default function NodeCliPage(): React.JSX.Element {
           Introduction
         </h2>
         <p>
-          The Vegan Ipsum CLI is a powerful Node.js command-line utility that generates vegan-themed
-          placeholder text. Ideal for scripting, automation, or simply fun terminal outputs, this
-          tool provides quick and flexible access to ethical ipsum content.
+          The Vegan Ipsum CLI is a powerful Node.js command-line utility that generates vegan-themed placeholder text.
+          Ideal for scripting, automation, or simply fun terminal outputs, this tool provides quick and flexible access
+          to ethical ipsum content.
         </p>
       </section>
 

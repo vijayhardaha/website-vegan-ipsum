@@ -11,9 +11,9 @@ import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
  * @type {Metadata}
  */
 export const metadata: Metadata = genMeta({
-  title: "Contact",
+  title: "Contact Vegan Ipsum",
   description:
-    "Connect with the creator of Vegan Ipsum. Find links to projects, tools, and social media profiles.",
+    "Get in touch with the creator of Vegan Ipsum. Explore related tools, open-source projects, and social media profiles for ethical web development.",
   slug: "contact",
 });
 
@@ -73,7 +73,7 @@ export default function ContactPage(): React.JSX.Element {
   return (
     <SectionContainer>
       <PageHeader
-        title="Contact"
+        title="Contact Vegan Ipsum"
         subtitle="Connect with the creator of Vegan Ipsum. Find links to the projects, tools, and social media profiles. Reach out for collaboration, feedback, or inquiries. All inquiries are welcome!"
       />
 
@@ -131,8 +131,8 @@ export default function ContactPage(): React.JSX.Element {
         </h2>
         <div className="space-y-4">
           <p>
-            If you'd like to reach out for collaboration, feedback, or queries, feel free to contact
-            via the links above. All inquiries are welcome!
+            If you'd like to reach out for collaboration, feedback, or queries, feel free to contact via the links
+            above. All inquiries are welcome!
           </p>
         </div>
       </section>

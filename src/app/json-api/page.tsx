@@ -10,9 +10,9 @@ import { generateMetadata as genMeta, getCanonicalUrl, Metadata } from "@/utils/
  * @type {Metadata}
  */
 export const metadata: Metadata = genMeta({
-  title: "JSON API",
+  title: "Vegan Ipsum JSON API",
   description:
-    "Fetch vegan-inspired placeholder text for your apps and projects using the Vegan Ipsum JSON API.",
+    "Fetch plant-based, cruelty-free placeholder text for your apps, websites, or projects using the lightweight Vegan Ipsum JSON API — perfect for ethical developers.",
   slug: "json-api",
 });
 
@@ -28,7 +28,7 @@ export default function JsonApiPage(): React.JSX.Element {
   return (
     <SectionContainer>
       <PageHeader
-        title="JSON API"
+        title="Vegan Ipsum JSON API"
         subtitle="Fetch vegan-inspired placeholder text for your apps and projects. This API provides paragraphs, sentences, or words in plain or HTML format."
       />
 
@@ -38,14 +38,13 @@ export default function JsonApiPage(): React.JSX.Element {
         </h2>
         <div className="space-y-4">
           <p>
-            The Vegan Ipsum JSON API allows developers to generate placeholder text inspired by
-            vegan themes. Whether you need paragraphs, sentences, or words, this API provides a
-            simple and flexible way to integrate vegan-inspired content into your applications or
-            projects.
+            The Vegan Ipsum JSON API allows developers to generate placeholder text inspired by vegan themes. Whether
+            you need paragraphs, sentences, or words, this API provides a simple and flexible way to integrate
+            vegan-inspired content into your applications or projects.
           </p>
           <p>
-            The API supports various formats, including plain text and HTML, and offers customizable
-            parameters to suit your specific needs.
+            The API supports various formats, including plain text and HTML, and offers customizable parameters to suit
+            your specific needs.
           </p>
         </div>
       </section>
@@ -107,8 +106,8 @@ export default function JsonApiPage(): React.JSX.Element {
               <td className="px-4 py-2">string</td>
               <td className="px-4 py-2">No (default: plain)</td>
               <td className="px-4 py-2">
-                Choose <code>plain</code> or <code>html</code>. If an invalid format is used, it
-                defaults to <code>plain</code>.
+                Choose <code>plain</code> or <code>html</code>. If an invalid format is used, it defaults to{" "}
+                <code>plain</code>.
               </td>
             </tr>
           </tbody>
@@ -121,13 +120,9 @@ export default function JsonApiPage(): React.JSX.Element {
         </h2>
         <p>Use the GET method to retrieve data by passing parameters in the URL:</p>
 
-        <CodeBlock language="bash">
-          {`GET ${API_BASE_URL}?count=2&units=paragraphs&format=plain`}
-        </CodeBlock>
+        <CodeBlock language="bash">{`GET ${API_BASE_URL}?count=2&units=paragraphs&format=plain`}</CodeBlock>
 
-        <CodeBlock language="bash">
-          {`curl "${API_BASE_URL}?count=3&units=sentences&format=html"`}
-        </CodeBlock>
+        <CodeBlock language="bash">{`curl "${API_BASE_URL}?count=3&units=sentences&format=html"`}</CodeBlock>
       </section>
 
       <section aria-labelledby="post-example">

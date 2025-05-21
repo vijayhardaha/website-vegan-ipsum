@@ -13,9 +13,9 @@ import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
  * @type {Metadata}
  */
 export const metadata: Metadata = genMeta({
-  title: "VSCode Extension",
+  title: "Vegan Ipsum VSCode Extension",
   description:
-    "Learn how to install and use the Vegan Ipsum VSCode Extension to generate vegan-themed placeholder text.",
+    "Install and use the Vegan Ipsum VSCode Extension to quickly generate plant-based, vegan-themed placeholder text in your code editor.",
   slug: "vscode-extension",
 });
 
@@ -28,7 +28,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
   return (
     <SectionContainer>
       <PageHeader
-        title="VSCode Extension"
+        title="Vegan Ipsum VSCode Extension"
         subtitle="Generate vegan-themed placeholder text directly in your VSCode editor. Learn how to install and use it efficiently."
       />
 
@@ -38,9 +38,9 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
         </h2>
 
         <p>
-          The Vegan Ipsum VSCode Extension is a lightweight tool for developers who want to quickly
-          insert vegan-themed placeholder text into their code or content files. Whether you’re
-          prototyping, designing, or testing, it brings some fun and meaning to your filler content.
+          The Vegan Ipsum VSCode Extension is a lightweight tool for developers who want to quickly insert vegan-themed
+          placeholder text into their code or content files. Whether you’re prototyping, designing, or testing, it
+          brings some fun and meaning to your filler content.
         </p>
 
         <Button asChild size="sm" className="mt-2">
@@ -59,10 +59,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
           Installation
         </h2>
 
-        <p>
-          You can install the extension directly from the VSCode Marketplace or using the command
-          palette:
-        </p>
+        <p>You can install the extension directly from the VSCode Marketplace or using the command palette:</p>
 
         <ol className="mt-2 list-decimal space-y-1 pl-6">
           <li>Open Visual Studio Code.</li>

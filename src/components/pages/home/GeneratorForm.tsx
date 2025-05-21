@@ -14,9 +14,7 @@ interface GeneratorFormProps {
 }
 
 export default function GeneratorForm({ setOutput }: GeneratorFormProps): React.JSX.Element {
-  const [selectedType, setSelectedType] = useState<"paragraphs" | "sentences" | "words">(
-    "paragraphs"
-  );
+  const [selectedType, setSelectedType] = useState<"paragraphs" | "sentences" | "words">("paragraphs");
   const [amount, setAmount] = useState<string>("3");
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -27,9 +25,7 @@ export default function GeneratorForm({ setOutput }: GeneratorFormProps): React.
   const handleGenerate = async (): Promise<void> => {
     setLoading(true); // Set loading state
     try {
-      const response = await fetch(
-        `/api/?count=${Number(amount)}&units=${selectedType}&format=plain`
-      );
+      const response = await fetch(`/api/?count=${Number(amount)}&units=${selectedType}&format=plain`);
       if (!response.ok) {
         throw new Error("Failed to generate text");
       }
@@ -55,11 +51,7 @@ export default function GeneratorForm({ setOutput }: GeneratorFormProps): React.
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="bg-muted/85 w-full space-y-6 p-6"
-      aria-labelledby="generator-form-title"
-    >
+    <form onSubmit={handleSubmit} className="bg-muted/85 w-full space-y-6 p-6" aria-labelledby="generator-form-title">
       <h2 id="generator-form-title" className="sr-only">
         Vegan Ipsum Generator Form
       </h2>
@@ -83,11 +75,7 @@ export default function GeneratorForm({ setOutput }: GeneratorFormProps): React.
         <span className={cn(labelVariants())} id="generation-type-label">
           What to Generate:
         </span>
-        <div
-          className="flex flex-wrap gap-4"
-          role="radiogroup"
-          aria-labelledby="generation-type-label"
-        >
+        <div className="flex flex-wrap gap-4" role="radiogroup" aria-labelledby="generation-type-label">
           <RadioBox
             checked={selectedType === "paragraphs"}
             onCheckedChange={() => setSelectedType("paragraphs")}

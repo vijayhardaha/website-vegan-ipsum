@@ -24,7 +24,7 @@ export default function HeroGeneratorSection(): React.JSX.Element {
     navigator.clipboard.writeText(output).then(
       () => {
         setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        setTimeout(() => setCopied(false), 1000);
       },
       (err) => {
         console.error("Failed to copy text: ", err);
@@ -57,7 +57,7 @@ export default function HeroGeneratorSection(): React.JSX.Element {
       {/* Display Form Output */}
       {output && (
         <section className="bg-muted/85 mt-16 space-y-4 p-6" aria-labelledby="generated-output">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex items-start justify-between gap-4">
             <div className="space-y-0.5">
               <h2 id="generated-output" className="text-xl font-bold">
                 Generated Output:

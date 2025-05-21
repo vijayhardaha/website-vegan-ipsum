@@ -12,9 +12,9 @@ import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
  * @type {Metadata}
  */
 export const metadata: Metadata = genMeta({
-  title: "NPM Package",
+  title: "Vegan Ipsum NPM Package",
   description:
-    "Generate vegan-themed placeholder text effortlessly in your JavaScript projects using the Vegan Ipsum NPM package.",
+    "Effortlessly generate plant-based, vegan-themed placeholder text in your JavaScript projects with the Vegan Ipsum NPM package — ideal for ethical developers.",
   slug: "npm-package",
 });
 
@@ -27,7 +27,7 @@ export default function NpmPackagePage(): React.JSX.Element {
   return (
     <SectionContainer>
       <PageHeader
-        title="NPM Package"
+        title="Vegan Ipsum NPM Package"
         subtitle="Generate vegan-themed placeholder text effortlessly in your JavaScript projects."
       />
 
@@ -45,14 +45,13 @@ export default function NpmPackagePage(): React.JSX.Element {
             >
               vegan-ipsum
             </Link>{" "}
-            is a lightweight JavaScript library designed to generate vegan-themed placeholder text.
-            Inspired by the popular <code>lorem-ipsum</code> project, this tool is ideal for
-            developers and designers seeking ethically themed dummy text with a compassionate twist.
+            is a lightweight JavaScript library designed to generate vegan-themed placeholder text. Inspired by the
+            popular <code>lorem-ipsum</code> project, this tool is ideal for developers and designers seeking ethically
+            themed dummy text with a compassionate twist.
           </p>
           <p>
-            Whether you're building a vegan blog, an animal rights project, or simply want to
-            replace "lorem ipsum" with meaningful filler, <code>vegan-ipsum</code> is for you.
-            Compatible with Node.js, browsers, and React Native.
+            Whether you're building a vegan blog, an animal rights project, or simply want to replace "lorem ipsum" with
+            meaningful filler, <code>vegan-ipsum</code> is for you. Compatible with Node.js, browsers, and React Native.
           </p>
         </div>
       </section>
@@ -74,8 +73,8 @@ export default function NpmPackagePage(): React.JSX.Element {
         <div className="space-y-6">
           <div>
             <p>
-              <strong>Using the Class</strong>: Import and instantiate the <code>VeganIpsum</code>{" "}
-              class to generate text with custom configurations:
+              <strong>Using the Class</strong>: Import and instantiate the <code>VeganIpsum</code> class to generate
+              text with custom configurations:
             </p>
             <CodeBlock language="javascript">
               {`import { VeganIpsum } from "vegan-ipsum";
@@ -93,8 +92,8 @@ vegan.generateParagraphs(7);`}
 
           <div>
             <p>
-              <strong>Using the Function</strong>: For quick usage, <code>vegan-ipsum</code> also
-              supports a functional interface:
+              <strong>Using the Function</strong>: For quick usage, <code>vegan-ipsum</code> also supports a functional
+              interface:
             </p>
             <CodeBlock language="javascript">
               {`import { VeganIpsum } from "vegan-ipsum";
@@ -122,8 +121,7 @@ VeganIpsum({
           Command Line Interface (CLI)
         </h2>
         <p>
-          <code>vegan-ipsum</code> comes with a CLI tool to generate vegan text right from your
-          terminal:
+          <code>vegan-ipsum</code> comes with a CLI tool to generate vegan text right from your terminal:
         </p>
         <CodeBlock language="bash">npm install -g vegan-ipsum</CodeBlock>
         <p className="mt-4 font-bold">Examples:</p>
