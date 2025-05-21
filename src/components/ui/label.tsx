@@ -26,13 +26,11 @@ const labelVariants = cva(
  * @param {LabelProps} props - Component props
  * @returns {React.JSX.Element} The Label component
  */
-const Label = forwardRef<HTMLLabelElement, LabelProps>(
-  ({ className = "", children, htmlFor, ...props }, ref) => (
-    <label ref={ref} className={cn(labelVariants(), className)} htmlFor={htmlFor} {...props}>
-      {children}
-    </label>
-  )
-);
+const Label = forwardRef<HTMLLabelElement, LabelProps>(({ className = "", children, htmlFor, ...props }, ref) => (
+  <label ref={ref} className={cn(labelVariants(), className)} htmlFor={htmlFor} {...props}>
+    {children}
+  </label>
+));
 
 Label.displayName = "Label";
 

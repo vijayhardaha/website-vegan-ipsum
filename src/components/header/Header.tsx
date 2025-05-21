@@ -55,14 +55,7 @@ export default function Header(): React.JSX.Element {
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <div className="flex items-center justify-between gap-6">
           <Link href="/">
-            <Image
-              src="/logo.svg"
-              alt="Vegan Ipsum Logo"
-              width={391}
-              height={158}
-              priority
-              className="h-14 w-auto"
-            />
+            <Image src="/logo.svg" alt="Vegan Ipsum Logo" width={391} height={158} priority className="h-14 w-auto" />
             <span className="sr-only">Vegan Ipsum</span>
           </Link>
           <div className="ml-auto" ref={menuRef}>
@@ -86,13 +79,9 @@ export default function Header(): React.JSX.Element {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className={cn(
-                        "inline-flex items-center gap-1",
-                        "hover:text-primary hover:underline",
-                        {
-                          "text-primary font-bold underline": isActive(link.href),
-                        }
-                      )}
+                      className={cn("inline-flex items-center gap-1", "hover:text-primary hover:underline", {
+                        "text-primary font-bold underline": isActive(link.href),
+                      })}
                       target={link.external ? "_blank" : "_self"}
                       rel={link.external ? "noopener noreferrer" : undefined}
                       aria-label={link.label}

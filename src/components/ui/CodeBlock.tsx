@@ -20,17 +20,9 @@ interface CodeBlockProps {
  * @param {CodeBlockProps} props - The props for the component.
  * @returns {React.JSX.Element} The CodeBlock component.
  */
-export default function CodeBlock({
-  children,
-  className,
-  ...props
-}: CodeBlockProps): React.JSX.Element {
+export default function CodeBlock({ children, className, ...props }: CodeBlockProps): React.JSX.Element {
   return (
-    <SyntaxHighlighter
-      style={prism}
-      className={clsx("!font-mono !text-sm [&>*]:!font-mono", className)}
-      {...props}
-    >
+    <SyntaxHighlighter style={prism} className={clsx("!font-mono !text-sm [&>*]:!font-mono", className)} {...props}>
       {children}
     </SyntaxHighlighter>
   );

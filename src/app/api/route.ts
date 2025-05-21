@@ -14,10 +14,7 @@ import { LoremUnit } from "vegan-ipsum/types/src/constants/units";
 function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): NextResponse {
   try {
     if (isNaN(count) || count < 1 || count > 100) {
-      return NextResponse.json(
-        { error: "Invalid count. Please provide a number between 1 and 100." },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Invalid count. Please provide a number between 1 and 100." }, { status: 400 });
     }
 
     if (!["paragraphs", "sentences", "words"].includes(units)) {

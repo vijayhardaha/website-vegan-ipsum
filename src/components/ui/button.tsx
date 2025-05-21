@@ -82,11 +82,7 @@ const buttonVariants = cva(
           "bg-background border-primary text-primary",
           "hover:bg-primary hover:border-primary hover:text-primary-foreground",
         ].join(" "),
-        link: [
-          "border-transparent",
-          "text-primary underline-offset-4 !p-0",
-          "hover:underline",
-        ].join(" "),
+        link: ["border-transparent", "text-primary underline-offset-4 !p-0", "hover:underline"].join(" "),
       },
       size: {
         sm: "h-8 gap-1.5 px-4 has-[>svg]:px-3.5",
@@ -121,12 +117,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const validProps = props && typeof props === "object" ? props : {};
 
     return (
-      <Comp
-        data-slot="button"
-        className={cn(buttonVariants({ variant, size, className }))}
-        {...validProps}
-        ref={ref}
-      >
+      <Comp data-slot="button" className={cn(buttonVariants({ variant, size, className }))} {...validProps} ref={ref}>
         {children}
       </Comp>
     );

@@ -21,10 +21,7 @@ export default function Footer(): React.JSX.Element {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={cn(
-                    "inline-flex items-center gap-1",
-                    "hover:text-primary hover:underline"
-                  )}
+                  className={cn("inline-flex items-center gap-1", "hover:text-primary hover:underline")}
                   target={link.external ? "_blank" : "_self"}
                   rel={link.external ? "noopener noreferrer" : undefined}
                   aria-label={link.label}
@@ -48,8 +45,7 @@ export default function Footer(): React.JSX.Element {
             .
           </p>
           <p>
-            &copy; {new Date().getFullYear()} <span lang="en">Vegan Ipsum</span>. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} <span lang="en">Vegan Ipsum</span>. All rights reserved.
           </p>
         </div>
       </div>
