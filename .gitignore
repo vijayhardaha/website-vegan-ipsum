@@ -26,6 +26,7 @@
 # misc
 .DS_Store
 *.pem
+Thumbs.db
 
 # debug
 npm-debug.log*
@@ -44,7 +45,3 @@ robots.txt
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Operating System files.
-.DS_Store
-Thumbs.db
