@@ -12,6 +12,7 @@ import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 interface CodeBlockProps {
 	children: string;
 	className?: string;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	[key: string]: any;
 }
 
