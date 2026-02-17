@@ -8,16 +8,16 @@ import { cn } from "@/utils/classNameUtils";
 
 // Define TypeScript types for the component props
 interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
-  className?: string;
-  children: React.ReactNode;
-  htmlFor: string;
+	className?: string;
+	children: React.ReactNode;
+	htmlFor: string;
 }
 
 /**
  * Styling variants for the Label component
  */
 const labelVariants = cva(
-  "text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 block"
+	"text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 block"
 );
 
 /**
@@ -26,11 +26,13 @@ const labelVariants = cva(
  * @param {LabelProps} props - Component props
  * @returns {React.JSX.Element} The Label component
  */
-const Label = forwardRef<HTMLLabelElement, LabelProps>(({ className = "", children, htmlFor, ...props }, ref) => (
-  <label ref={ref} className={cn(labelVariants(), className)} htmlFor={htmlFor} {...props}>
-    {children}
-  </label>
-));
+const Label = forwardRef<HTMLLabelElement, LabelProps>(
+	({ className = "", children, htmlFor, ...props }, ref) => (
+		<label ref={ref} className={cn(labelVariants(), className)} htmlFor={htmlFor} {...props}>
+			{children}
+		</label>
+	)
+);
 
 Label.displayName = "Label";
 

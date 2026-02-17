@@ -12,15 +12,15 @@ import HeroGeneratorSection from "@/components/pages/home/HeroGeneratorSection";
  * @returns {React.JSX.Element} The rendered homepage.
  */
 function Home(): React.JSX.Element {
-  return (
-    <SectionContainer>
-      <HeroGeneratorSection />
+	return (
+		<SectionContainer>
+			<HeroGeneratorSection />
 
-      <AboutSection />
+			<AboutSection />
 
-      <CallToActionSection />
-    </SectionContainer>
-  );
+			<CallToActionSection />
+		</SectionContainer>
+	);
 }
 
 export default Home;

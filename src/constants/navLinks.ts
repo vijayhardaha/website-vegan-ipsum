@@ -7,9 +7,9 @@
  * @property {boolean} [external] - Indicates if the link is external (optional).
  */
 export type INavLink = {
-  label: string;
-  href: string;
-  external?: boolean;
+	label: string;
+	href: string;
+	external?: boolean;
 };
 
 /**
@@ -17,12 +17,12 @@ export type INavLink = {
  * @type {NavLink[]}
  */
 export const HEADER_NAV_LINKS: INavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "JSON API", href: "/json-api" },
-  { label: "VS Code Extension", href: "/vscode-extension" },
-  { label: "Node Cli", href: "/node-cli" },
-  { label: "NPM Package", href: "/npm-package" },
-  { label: "About", href: "/about" },
+	{ label: "Home", href: "/" },
+	{ label: "JSON API", href: "/json-api" },
+	{ label: "VS Code Extension", href: "/vscode-extension" },
+	{ label: "Node Cli", href: "/node-cli" },
+	{ label: "NPM Package", href: "/npm-package" },
+	{ label: "About", href: "/about" },
 ];
 
 /**
@@ -30,9 +30,9 @@ export const HEADER_NAV_LINKS: INavLink[] = [
  * @type {NavLink[]}
  */
 export const FOOTER_NAV_LINKS: INavLink[] = [
-  { label: "Json API", href: "/json-api" },
-  { label: "Node Cli", href: "/node-cli" },
-  { label: "NPM Package", href: "/npm-package" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+	{ label: "Json API", href: "/json-api" },
+	{ label: "Node Cli", href: "/node-cli" },
+	{ label: "NPM Package", href: "/npm-package" },
+	{ label: "About", href: "/about" },
+	{ label: "Contact", href: "/contact" },
 ];

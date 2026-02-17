@@ -10,9 +10,9 @@ import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
  * Props for the CodeBlock component.
  */
 interface CodeBlockProps {
-  children: string;
-  className?: string;
-  [key: string]: any;
+	children: string;
+	className?: string;
+	[key: string]: any;
 }
 
 /**
@@ -20,10 +20,18 @@ interface CodeBlockProps {
  * @param {CodeBlockProps} props - The props for the component.
  * @returns {React.JSX.Element} The CodeBlock component.
  */
-export default function CodeBlock({ children, className, ...props }: CodeBlockProps): React.JSX.Element {
-  return (
-    <SyntaxHighlighter style={prism} className={clsx("!font-mono !text-sm [&>*]:!font-mono", className)} {...props}>
-      {children}
-    </SyntaxHighlighter>
-  );
+export default function CodeBlock({
+	children,
+	className,
+	...props
+}: CodeBlockProps): React.JSX.Element {
+	return (
+		<SyntaxHighlighter
+			style={prism}
+			className={clsx("!font-mono !text-sm [&>*]:!font-mono", className)}
+			{...props}
+		>
+			{children}
+		</SyntaxHighlighter>
+	);
 }

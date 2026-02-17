@@ -6,8 +6,8 @@ import { cn } from "@/utils/classNameUtils";
  * Props for the SectionContainer component.
  */
 interface SectionContainerProps {
-  children: React.ReactNode;
-  className?: string;
+	children: React.ReactNode;
+	className?: string;
 }
 
 /**
@@ -17,7 +17,7 @@ interface SectionContainerProps {
  * @returns {React.JSX.Element} The rendered container component.
  */
 const SectionContainer: React.FC<SectionContainerProps> = ({ children, className }) => {
-  return <div className={cn("space-y-12", className)}>{children}</div>;
+	return <div className={cn("space-y-12", className)}>{children}</div>;
 };
 
 export default SectionContainer;

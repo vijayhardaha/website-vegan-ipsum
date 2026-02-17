@@ -20,84 +20,97 @@ import { Button } from "../ui/button";
  * @returns {React.JSX.Element} The rendered header component.
  */
 export default function Header(): React.JSX.Element {
-  const pathname: string = usePathname();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+	const pathname: string = usePathname();
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const menuRef = useRef<HTMLDivElement>(null);
 
-  /**
-   * Effect hook to handle clicks outside the menu.
-   * Closes the mobile menu if a click occurs outside of it.
-   * Cleans up the event listener on component unmount.
-   */
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsMobileMenuOpen(false);
-      }
-    };
+	/**
+	 * Effect hook to handle clicks outside the menu.
+	 * Closes the mobile menu if a click occurs outside of it.
+	 * Cleans up the event listener on component unmount.
+	 */
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+				setIsMobileMenuOpen(false);
+			}
+		};
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
 
-  /**
-   * Determines if a given path is the active route.
-   *
-   * @param {string} path - The path to check against the current pathname.
-   * @returns {boolean} `true` if the path matches the current pathname, otherwise `false`.
-   */
-  const isActive = (path: string): boolean => pathname === path;
+	/**
+	 * Determines if a given path is the active route.
+	 *
+	 * @param {string} path - The path to check against the current pathname.
+	 * @returns {boolean} `true` if the path matches the current pathname, otherwise `false`.
+	 */
+	const isActive = (path: string): boolean => pathname === path;
 
-  return (
-    <header className="text-foreground sticky top-0 bg-white py-3 shadow-sm">
-      <div className="mx-auto max-w-5xl px-4 md:px-6">
-        <div className="flex items-center justify-between gap-6">
-          <Link href="/">
-            <Image src="/logo.svg" alt="Vegan Ipsum Logo" width={391} height={158} priority className="h-14 w-auto" />
-            <span className="sr-only">Vegan Ipsum</span>
-          </Link>
-          <div className="ml-auto" ref={menuRef}>
-            <Button
-              size="icon"
-              variant="outline"
-              className="text-2xl md:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            >
-              {isMobileMenuOpen ? <LuX /> : <LuAlignRight />}
-            </Button>
-            <nav
-              aria-label="Main navigation"
-              className={`${
-                isMobileMenuOpen ? "block" : "hidden"
-              } absolute top-full left-0 w-full bg-white shadow-md md:static md:block md:shadow-none`}
-            >
-              <ul className="flex flex-col space-y-4 p-4 text-sm font-bold tracking-wide uppercase md:flex-row md:space-y-0 md:space-x-6 md:p-0">
-                {HEADER_NAV_LINKS.map((link: INavLink) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={cn("inline-flex items-center gap-1", "hover:text-primary hover:underline", {
-                        "text-primary font-bold underline": isActive(link.href),
-                      })}
-                      target={link.external ? "_blank" : "_self"}
-                      rel={link.external ? "noopener noreferrer" : undefined}
-                      aria-label={link.label}
-                      aria-current={isActive(link.href) ? "page" : undefined}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.label}
-                      {link.external && <RiExternalLinkLine />}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+	return (
+		<header className="text-foreground sticky top-0 bg-white py-3 shadow-sm">
+			<div className="mx-auto max-w-5xl px-4 md:px-6">
+				<div className="flex items-center justify-between gap-6">
+					<Link href="/">
+						<Image
+							src="/logo.svg"
+							alt="Vegan Ipsum Logo"
+							width={391}
+							height={158}
+							priority
+							className="h-14 w-auto"
+						/>
+						<span className="sr-only">Vegan Ipsum</span>
+					</Link>
+					<div className="ml-auto" ref={menuRef}>
+						<Button
+							size="icon"
+							variant="outline"
+							className="text-2xl md:hidden"
+							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+							aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+						>
+							{isMobileMenuOpen ? <LuX /> : <LuAlignRight />}
+						</Button>
+						<nav
+							aria-label="Main navigation"
+							className={`${
+								isMobileMenuOpen ? "block" : "hidden"
+							} absolute top-full left-0 w-full bg-white shadow-md md:static md:block md:shadow-none`}
+						>
+							<ul className="flex flex-col space-y-4 p-4 text-sm font-bold tracking-wide uppercase md:flex-row md:space-y-0 md:space-x-6 md:p-0">
+								{HEADER_NAV_LINKS.map((link: INavLink) => (
+									<li key={link.href}>
+										<Link
+											href={link.href}
+											className={cn(
+												"inline-flex items-center gap-1",
+												"hover:text-primary hover:underline",
+												{
+													"text-primary font-bold underline": isActive(
+														link.href
+													),
+												}
+											)}
+											target={link.external ? "_blank" : "_self"}
+											rel={link.external ? "noopener noreferrer" : undefined}
+											aria-label={link.label}
+											aria-current={isActive(link.href) ? "page" : undefined}
+											onClick={() => setIsMobileMenuOpen(false)}
+										>
+											{link.label}
+											{link.external && <RiExternalLinkLine />}
+										</Link>
+									</li>
+								))}
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+	);
 }

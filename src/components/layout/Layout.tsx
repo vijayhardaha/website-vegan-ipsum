@@ -5,17 +5,17 @@ import Header from "@/components/header/Header";
 import Main from "@/components/layout/Main";
 
 interface LayoutProps {
-  children: ReactNode;
+	children: ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="flex min-h-screen flex-col">
+			<Header />
+			<Main>{children}</Main>
+			<Footer />
+		</div>
+	);
 };
 
 export default Layout;

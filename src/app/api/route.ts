@@ -12,29 +12,32 @@ import { LoremUnit } from "vegan-ipsum/types/src/constants/units";
  * @returns {NextResponse} A JSON response containing the generated text.
  */
 function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): NextResponse {
-  try {
-    if (isNaN(count) || count < 1 || count > 100) {
-      return NextResponse.json({ error: "Invalid count. Please provide a number between 1 and 100." }, { status: 400 });
-    }
+	try {
+		if (isNaN(count) || count < 1 || count > 100) {
+			return NextResponse.json(
+				{ error: "Invalid count. Please provide a number between 1 and 100." },
+				{ status: 400 }
+			);
+		}
 
-    if (!["paragraphs", "sentences", "words"].includes(units)) {
-      return NextResponse.json(
-        { error: "Invalid units. Please use 'paragraphs', 'sentences', or 'words'." },
-        { status: 400 }
-      );
-    }
+		if (!["paragraphs", "sentences", "words"].includes(units)) {
+			return NextResponse.json(
+				{ error: "Invalid units. Please use 'paragraphs', 'sentences', or 'words'." },
+				{ status: 400 }
+			);
+		}
 
-    const ipsumText = veganIpsum({ count, units, format });
+		const ipsumText = veganIpsum({ count, units, format });
 
-    return NextResponse.json({ text: ipsumText });
-  } catch (error) {
-    return NextResponse.json(
-      {
-        error: `An unexpected error occurred while generating ipsum text: ${error instanceof Error ? error.message : "Unknown error"}`,
-      },
-      { status: 500 }
-    );
-  }
+		return NextResponse.json({ text: ipsumText });
+	} catch (error) {
+		return NextResponse.json(
+			{
+				error: `An unexpected error occurred while generating ipsum text: ${error instanceof Error ? error.message : "Unknown error"}`,
+			},
+			{ status: 500 }
+		);
+	}
 }
 
 /**
@@ -44,12 +47,12 @@ function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): Ne
  * @returns {Promise<NextResponse>} A JSON response containing the generated text.
  */
 export async function GET(request: Request): Promise<NextResponse> {
-  const { searchParams } = new URL(request.url);
-  const count = parseInt(searchParams.get("count") || "3", 10);
-  const units: LoremUnit = (searchParams.get("units") as LoremUnit) || "paragraphs";
-  const format: LoremFormat = (searchParams.get("format") as LoremFormat) || "plain";
+	const { searchParams } = new URL(request.url);
+	const count = parseInt(searchParams.get("count") || "3", 10);
+	const units: LoremUnit = (searchParams.get("units") as LoremUnit) || "paragraphs";
+	const format: LoremFormat = (searchParams.get("format") as LoremFormat) || "plain";
 
-  return generateIpsum(count, units, format);
+	return generateIpsum(count, units, format);
 }
 
 /**
@@ -59,10 +62,10 @@ export async function GET(request: Request): Promise<NextResponse> {
  * @returns {Promise<NextResponse>} A JSON response containing the generated text.
  */
 export async function POST(request: Request): Promise<NextResponse> {
-  const body = await request.json();
-  const count = parseInt(body.count || "3", 10);
-  const units: LoremUnit = body.units || "paragraphs";
-  const format: LoremFormat = body.format || "plain";
+	const body = await request.json();
+	const count = parseInt(body.count || "3", 10);
+	const units: LoremUnit = body.units || "paragraphs";
+	const format: LoremFormat = body.format || "plain";
 
-  return generateIpsum(count, units, format);
+	return generateIpsum(count, units, format);
 }

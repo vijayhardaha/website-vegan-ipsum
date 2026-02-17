@@ -6,8 +6,8 @@ import React from "react";
  * @property {string} [subtitle] - An optional subtitle providing additional context.
  */
 interface PageHeaderProps {
-  title: string;
-  subtitle?: string;
+	title: string;
+	subtitle?: string;
 }
 
 /**
@@ -17,12 +17,12 @@ interface PageHeaderProps {
  * @returns {React.JSX.Element} The rendered PageHeader component.
  */
 export default function PageHeader({ title, subtitle }: PageHeaderProps): React.JSX.Element {
-  return (
-    <header className="mb-6">
-      <h1 id="page-header-title" className="text-primary mb-1 text-4xl">
-        {title}
-      </h1>
-      {subtitle && <p className="text-muted-foreground text-lg">{subtitle}</p>}
-    </header>
-  );
+	return (
+		<header className="mb-6">
+			<h1 id="page-header-title" className="text-primary mb-1 text-4xl">
+				{title}
+			</h1>
+			{subtitle && <p className="text-muted-foreground text-lg">{subtitle}</p>}
+		</header>
+	);
 }

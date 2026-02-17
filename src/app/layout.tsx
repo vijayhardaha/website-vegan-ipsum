@@ -12,27 +12,27 @@ import "../styles/globals.css";
  * Sans font configuration for a versatile sans-serif font.
  */
 export const customSans = Mukta({
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-custom-sans",
-  subsets: ["latin"],
+	weight: ["400", "500", "600", "700"],
+	variable: "--font-custom-sans",
+	subsets: ["latin"],
 });
 
 /**
  * Mono font configuration for a clean monospace font.
  */
 export const customMono = Geist_Mono({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-custom-mono",
+	weight: ["400", "500", "600", "700"],
+	subsets: ["latin"],
+	variable: "--font-custom-mono",
 });
 
 /**
  * Mono font configuration for a clean monospace font.
  */
 export const customHeading = Teko({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-custom-heading",
+	weight: ["400", "500", "600", "700"],
+	subsets: ["latin"],
+	variable: "--font-custom-heading",
 });
 
 /**
@@ -47,18 +47,18 @@ export const metadata: BaseMetadataType = baseMetadata;
  * @returns The root layout component with global styles and fonts applied.
  */
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${customSans.variable} ${customMono.variable} ${customHeading.variable} text-foreground bg-background font-base font-sans font-normal antialiased`}
-      >
-        <Layout>{children}</Layout>
-      </body>
-      <GoogleAnalytics gaId="G-XR1TK565WJ" />
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body
+				className={`${customSans.variable} ${customMono.variable} ${customHeading.variable} text-foreground bg-background font-base font-sans font-normal antialiased`}
+			>
+				<Layout>{children}</Layout>
+			</body>
+			<GoogleAnalytics gaId="G-XR1TK565WJ" />
+		</html>
+	);
 }

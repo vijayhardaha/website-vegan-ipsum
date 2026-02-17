@@ -4,7 +4,7 @@ import { Tooltip } from "@/components/ui/tooltip";
 
 // Define TypeScript types for the component props
 interface HelpTipProps {
-  text: string;
+	text: string;
 }
 
 /**
@@ -14,7 +14,7 @@ interface HelpTipProps {
  * @returns {React.JSX.Element} The rendered HelpTip component.
  */
 export const HelpTip = ({ text }: HelpTipProps): React.JSX.Element => (
-  <Tooltip text={text} className="!max-w-80">
-    <FiInfo className="text-foreground h-4 w-4 cursor-help" />
-  </Tooltip>
+	<Tooltip text={text} className="!max-w-80">
+		<FiInfo className="text-foreground h-4 w-4 cursor-help" />
+	</Tooltip>
 );
