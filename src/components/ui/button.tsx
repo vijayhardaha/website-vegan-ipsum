@@ -42,8 +42,11 @@ const Slot = forwardRef<HTMLElement, SlotProps>(({ children, ...props }, ref) =>
 				(childOriginalRef as React.RefObject<HTMLElement>).current = childRef;
 			}
 		},
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	} as any); // Use `as any` to bypass TypeScript's type checking for `ref`
 });
+
+Slot.displayName = "Slot";
 
 /**
  * Button component with multiple variants and sizes.
