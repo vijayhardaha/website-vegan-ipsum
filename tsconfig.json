@@ -1,30 +1,36 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "downlevelIteration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ES2024"
-  },
-  "exclude": ["node_modules"],
-  "include": ["**/*.{js,jsx,ts,tsx,mjs,cjs}", "*.config.mjs", "next-env.d.ts", "*.d.ts", ".next/types/**/*.ts"]
+	"compilerOptions": {
+		"allowJs": true, // Allow JavaScript files to be compiled.
+		"baseUrl": ".", // Base directory to resolve non-relative module names.
+		"downlevelIteration": true, // Enable full support for iterables in for..of, spread, and destructuring when targeting ES5 or ES3.
+		"esModuleInterop": true, // Emit __importStar and __importDefault helpers for runtime babel ecosystem compatibility and enable --allowSyntheticDefaultImports for typesystem compatibility.
+		"forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+		"incremental": true, // Enable incremental compilation, which saves information about the project graph from the last compilation to only recompile files that have changed.
+		"isolatedModules": true, // Ensure that each file can be safely transpiled without relying on other imports.
+		"jsx": "preserve", // Keep JSX as part of the output to be further consumed by another transform step (e.g., Babel).
+		"lib": ["dom", "dom.iterable"], // Include library files for DOM and DOM iterable features.
+		"module": "esnext", // Specify the module code generation method. "esnext" allows for the latest ECMAScript module features.
+		"moduleResolution": "node", // Use Node.js module resolution strategy.
+		"noEmit": true, // Do not emit output files; only perform type checking.
+		"paths": {
+			"@/*": ["./src/*"] // Define a path alias for the src directory, allowing imports like "@/components/Button" to resolve to "./src/components/Button".
+		},
+		"plugins": [
+			{
+				"name": "next" // Use the Next.js plugin for TypeScript, which provides additional type checking and features specific to Next.js projects.
+			}
+		],
+		"resolveJsonModule": true, // Allow importing JSON files as modules.
+		"skipLibCheck": true, // Skip type checking of declaration files (.d.ts) to speed up compilation.
+		"strict": true, // Enable all strict type-checking options.
+		"target": "ES2024" // Specify the target JavaScript version for emitted code. "ES2024" allows for the latest ECMAScript features.
+	},
+	"exclude": ["node_modules"], // Exclude the node_modules directory from compilation.
+	"include": [
+		"**/*.{js,jsx,ts,tsx,mjs,cjs}",
+		"*.config.mjs",
+		"next-env.d.ts",
+		"*.d.ts",
+		".next/types/**/*.ts"
+	]
 }
