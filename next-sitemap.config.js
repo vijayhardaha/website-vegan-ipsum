@@ -10,7 +10,10 @@ const config = {
 	robotsTxtOptions: {
 		policies: [{ userAgent: "*", allow: "/" }],
 		transformRobotsTxt: async (_, robotsTxt) => {
-			const withoutHost = robotsTxt.replace(`# Host\nHost: https://veganipsum.vercel.app\n\n`, "");
+			const withoutHost = robotsTxt.replace(
+				`# Host\nHost: https://veganipsum.vercel.app\n\n`,
+				""
+			);
 
 			return withoutHost;
 		},
