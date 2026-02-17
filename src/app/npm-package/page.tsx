@@ -79,7 +79,7 @@ export default function NpmPackagePage(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="usage" role="region">
+			<section aria-labelledby="usage">
 				<h2 id="usage" className="mb-2 text-2xl">
 					Usage
 				</h2>
@@ -148,7 +148,7 @@ console.log(customText);`}
 				</div>
 			</section>
 
-			<section aria-labelledby="cli" role="region">
+			<section aria-labelledby="cli">
 				<h2 id="cli" className="mb-2 text-2xl">
 					Command Line Interface (CLI)
 				</h2>
@@ -173,7 +173,7 @@ vegan-ipsum 2 paragraphs --format html`}
 				</p>
 			</section>
 
-			<section aria-labelledby="features" role="region">
+			<section aria-labelledby="features">
 				<h2 id="features" className="mb-2 text-2xl">
 					Features
 				</h2>
@@ -194,7 +194,7 @@ vegan-ipsum 2 paragraphs --format html`}
 				</ul>
 			</section>
 
-			<section aria-labelledby="more-info" role="region">
+			<section aria-labelledby="more-info">
 				<h2 id="more-info" className="mb-2 text-2xl">
 					More Information
 				</h2>

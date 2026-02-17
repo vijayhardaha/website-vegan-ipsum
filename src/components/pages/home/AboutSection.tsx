@@ -59,7 +59,7 @@ const cardDetails: CardDetail[] = [
 export default function AboutSection(): React.JSX.Element {
 	return (
 		<>
-			<section aria-labelledby="what-is-vegan-ipsum-generator" role="region">
+			<section aria-labelledby="what-is-vegan-ipsum-generator">
 				<h2 id="what-is-vegan-ipsum-generator" className="mb-2 text-2xl">
 					What is Vegan Ipsum Generator?
 				</h2>
@@ -76,7 +76,7 @@ export default function AboutSection(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="why-vegan-ipsum-generator" role="region">
+			<section aria-labelledby="why-vegan-ipsum-generator">
 				<h2 id="why-vegan-ipsum-generator" className="mb-2 text-2xl">
 					Why Vegan Ipsum Generator?
 				</h2>
@@ -93,7 +93,7 @@ export default function AboutSection(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="why-we-use-vegan-ipsum-generator" role="region">
+			<section aria-labelledby="why-we-use-vegan-ipsum-generator">
 				<h2 id="why-we-use-vegan-ipsum-generator" className="mb-2 text-2xl">
 					Why We Use Vegan Ipsum Generator?
 				</h2>
@@ -110,7 +110,7 @@ export default function AboutSection(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="who-can-use-vegan-ipsum-generator" role="region">
+			<section aria-labelledby="who-can-use-vegan-ipsum-generator">
 				<h2 id="who-can-use-vegan-ipsum-generator" className="mb-2 text-2xl">
 					Who Can Use Vegan Ipsum Generator?
 				</h2>
@@ -138,7 +138,7 @@ export default function AboutSection(): React.JSX.Element {
 				</ul>
 			</section>
 
-			<section aria-labelledby="when-to-use-vegan-ipsum-generator" role="region">
+			<section aria-labelledby="when-to-use-vegan-ipsum-generator">
 				<h2 id="when-to-use-vegan-ipsum-generator" className="mb-2 text-2xl">
 					When to Use Vegan Ipsum Generator?
 				</h2>
@@ -205,7 +205,6 @@ export default function AboutSection(): React.JSX.Element {
 
 			<section
 				aria-label="Features and tools offered by Vegan Ipsum"
-				role="region"
 				className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
 			>
 				{cardDetails.map((card, index) => (

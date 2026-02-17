@@ -13,11 +13,7 @@ import { Button } from "@/components/ui/button";
  */
 export default function CallToActionSection(): React.JSX.Element {
 	return (
-		<section
-			aria-labelledby="contact-heading"
-			role="region"
-			className="bg-muted/65 p-6 md:p-8 lg:p-10"
-		>
+		<section aria-labelledby="contact-heading" className="bg-muted/65 p-6 md:p-8 lg:p-10">
 			<div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between md:gap-10">
 				<div className="space-y-2">
 					<h2 id="contact-heading" className="text-2xl">

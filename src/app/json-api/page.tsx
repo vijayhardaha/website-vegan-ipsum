@@ -32,7 +32,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				subtitle="Fetch vegan-inspired placeholder text for your apps and projects. This API provides paragraphs, sentences, or words in plain or HTML format."
 			/>
 
-			<section aria-labelledby="introduction" role="region">
+			<section aria-labelledby="introduction">
 				<h2 id="introduction" className="mb-2 text-2xl">
 					Introduction
 				</h2>
@@ -63,7 +63,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				</div>
 			</section>
 
-			<section aria-labelledby="base-url" role="region">
+			<section aria-labelledby="base-url">
 				<h2 id="base-url" className="mb-2 text-2xl">
 					Base URL
 				</h2>
@@ -78,7 +78,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="request-methods" role="region">
+			<section aria-labelledby="request-methods">
 				<h2 id="request-methods" className="mb-2 text-2xl">
 					Request Methods
 				</h2>
@@ -104,7 +104,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="parameters" role="region">
+			<section aria-labelledby="parameters">
 				<h2 id="parameters" className="mb-2 text-2xl">
 					Parameters
 				</h2>
@@ -160,7 +160,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="get-example" role="region">
+			<section aria-labelledby="get-example">
 				<h2 id="get-example" className="mb-2 text-2xl">
 					GET Request Example
 				</h2>
@@ -175,7 +175,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				<CodeBlock language="bash">{`curl "${API_BASE_URL}?count=3&units=sentences&format=html"`}</CodeBlock>
 			</section>
 
-			<section aria-labelledby="post-example" role="region">
+			<section aria-labelledby="post-example">
 				<h2 id="post-example" className="mb-2 text-2xl">
 					POST Request Example
 				</h2>
@@ -191,7 +191,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				</CodeBlock>
 			</section>
 
-			<section aria-labelledby="response" role="region">
+			<section aria-labelledby="response">
 				<h2 id="response" className="mb-2 text-2xl">
 					Response Format
 				</h2>
@@ -210,7 +210,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="error-handling" role="region">
+			<section aria-labelledby="error-handling">
 				<h2 id="error-handling" className="mb-2 text-2xl">
 					Error Handling
 				</h2>
@@ -230,7 +230,7 @@ export default function JsonApiPage(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="status-codes" role="region">
+			<section aria-labelledby="status-codes">
 				<h2 id="status-codes" className="mb-2 text-2xl">
 					HTTP Status Codes
 				</h2>

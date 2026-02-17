@@ -48,7 +48,6 @@ export default function HeroGeneratorSection(): React.JSX.Element {
 		<>
 			<section
 				aria-labelledby="hero-heading"
-				role="region"
 				className="grid grid-cols-1 items-start gap-12 md:grid-cols-2"
 			>
 				{/* Hero Section */}
@@ -62,7 +61,6 @@ export default function HeroGeneratorSection(): React.JSX.Element {
 			{output && (
 				<section
 					aria-labelledby="generated-output"
-					role="region"
 					className="bg-muted/85 mt-16 space-y-4 p-6"
 				>
 					<div className="flex items-start justify-between gap-4">

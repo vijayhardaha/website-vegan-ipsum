@@ -77,7 +77,7 @@ export default function ContactPage(): React.JSX.Element {
 				subtitle="Connect with the creator of Vegan Ipsum. Find links to the projects, tools, and social media profiles. Reach out for collaboration, feedback, or inquiries. All inquiries are welcome!"
 			/>
 
-			<section aria-labelledby="projects" role="region">
+			<section aria-labelledby="projects">
 				<h2 id="projects" className="mb-2 text-2xl">
 					Vegan Ipsum Projects
 				</h2>
@@ -111,7 +111,7 @@ export default function ContactPage(): React.JSX.Element {
 				</div>
 			</section>
 
-			<section aria-labelledby="author-contact" role="region">
+			<section aria-labelledby="author-contact">
 				<h2 id="author-contact" className="mb-2 text-2xl">
 					Author Contact Links
 				</h2>
@@ -143,7 +143,7 @@ export default function ContactPage(): React.JSX.Element {
 				</div>
 			</section>
 
-			<section aria-labelledby="contact-details" role="region">
+			<section aria-labelledby="contact-details">
 				<h2 id="contact-details" className="mb-2 text-2xl">
 					Additional Contact Details
 				</h2>

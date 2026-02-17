@@ -32,7 +32,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
 				subtitle="Generate vegan-themed placeholder text directly in your VSCode editor. Learn how to install and use it efficiently."
 			/>
 
-			<section aria-labelledby="introduction" role="region">
+			<section aria-labelledby="introduction">
 				<h2 id="introduction" className="mb-2 text-2xl">
 					Introduction
 				</h2>
@@ -66,7 +66,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
 				</Button>
 			</section>
 
-			<section aria-labelledby="installation" role="region">
+			<section aria-labelledby="installation">
 				<h2 id="installation" className="mb-2 text-2xl">
 					Installation
 				</h2>
@@ -98,7 +98,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="usage" role="region">
+			<section aria-labelledby="usage">
 				<h2 id="usage" className="mb-2 text-2xl">
 					Usage
 				</h2>
@@ -133,7 +133,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
 				</p>
 			</section>
 
-			<section aria-labelledby="features" role="region">
+			<section aria-labelledby="features">
 				<h2 id="features" className="mb-2 text-2xl">
 					Features
 				</h2>
@@ -163,7 +163,7 @@ export default function VSCodeExtensionPage(): React.JSX.Element {
 				</ul>
 			</section>
 
-			<section aria-labelledby="support" role="region">
+			<section aria-labelledby="support">
 				<h2 id="support" className="mb-2 text-2xl">
 					Support & Feedback
 				</h2>

@@ -16,7 +16,10 @@ export default function Footer(): React.JSX.Element {
 		<footer className="bg-foreground py-6 text-white" aria-label="Footer">
 			<div className="mx-auto max-w-5xl px-4 md:px-6">
 				<div className="space-y-3 text-center text-sm">
-					<ul className="flex items-center justify-center gap-4 text-sm" role="list">
+					<ul
+						className="flex items-center justify-center gap-4 text-sm"
+						aria-label="Footer navigation links"
+					>
 						{FOOTER_NAV_LINKS.map((link: INavLink) => (
 							<li key={link.href}>
 								<Link
