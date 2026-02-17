@@ -1,29 +1,24 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { fixupPluginRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
-import pluginNext from "@next/eslint-plugin-next";
-import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import { defineConfig, globalIgnores } from "eslint/config";
-import importPlugin from "eslint-plugin-import";
-import jsxA11y from "eslint-plugin-jsx-a11y";
-import prettier from "eslint-plugin-prettier";
-import react from "eslint-plugin-react";
 import globals from "globals";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 const compat = new FlatCompat({
 	baseDirectory: __dirname,
 	recommendedConfig: js.configs.recommended,
-	allConfig: js.configs.all,
 });
 
 export default defineConfig([
 	globalIgnores([
+		"**/.next/",
+		"**/.github/",
 		"**/.git/",
 		"**/node_modules/",
 		"**/build/",
@@ -33,28 +28,21 @@ export default defineConfig([
 		"**/*.log",
 		"**/*.tsbuildinfo",
 	]),
+
 	{ files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"] },
+
+	// all conflicting ESLint formatting rules before Prettier takes over
+	...compat.extends(
+		"next",
+		"next/core-web-vitals",
+		"next/typescript",
+		"plugin:react/recommended",
+		"plugin:jsx-a11y/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended" // ← always last
+	),
+
 	{
-		...compat.extends(
-			"next",
-			"next/core-web-vitals",
-			"next/typescript",
-			"eslint:recommended",
-			"plugin:react/recommended",
-			"plugin:jsx-a11y/recommended",
-			"plugin:@typescript-eslint/recommended",
-			"plugin:prettier/recommended"
-		)[0],
-
-		plugins: {
-			"@next/next": fixupPluginRules(pluginNext),
-			react: fixupPluginRules(react),
-			"jsx-a11y": fixupPluginRules(jsxA11y),
-			"@typescript-eslint": fixupPluginRules(tsPlugin),
-			import: fixupPluginRules(importPlugin),
-			prettier: fixupPluginRules(prettier),
-		},
-
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "module",
@@ -62,11 +50,8 @@ export default defineConfig([
 				...globals.browser,
 				...globals.node,
 			},
-
 			parser: tsParser,
 			parserOptions: {
-				ecmaVersion: "latest",
-				sourceType: "module",
 				ecmaFeatures: {
 					jsx: true,
 				},
@@ -82,8 +67,6 @@ export default defineConfig([
 
 		rules: {
 			"react/react-in-jsx-scope": "off",
-			"prettier/prettier": ["warn", {}, { usePrettierrc: true }],
-
 			"react/no-unknown-property": [
 				"error",
 				{
@@ -91,11 +74,20 @@ export default defineConfig([
 				},
 			],
 
+			"prettier/prettier": "warn",
+
 			"import/order": [
 				"error",
 				{
-					groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
-
+					groups: [
+						"builtin",
+						"external",
+						"internal",
+						"parent",
+						"sibling",
+						"index",
+						"object",
+					],
 					pathGroups: [
 						{
 							pattern: "react",
@@ -108,14 +100,11 @@ export default defineConfig([
 							position: "after",
 						},
 					],
-
 					pathGroupsExcludedImportTypes: ["react"],
-
 					alphabetize: {
 						order: "asc",
 						caseInsensitive: true,
 					},
-
 					"newlines-between": "always",
 					warnOnUnassignedImports: true,
 				},
@@ -125,11 +114,11 @@ export default defineConfig([
 				"error",
 				{
 					vars: "all",
-					varsIgnorePattern: "^_", // Keep ignoring variables starting with "_"
+					varsIgnorePattern: "^_",
 					args: "after-used",
 					argsIgnorePattern: "^_",
 					ignoreRestSiblings: true,
-					caughtErrors: "all", // Ensure caught errors are also checked
+					caughtErrors: "all",
 				},
 			],
 		},
