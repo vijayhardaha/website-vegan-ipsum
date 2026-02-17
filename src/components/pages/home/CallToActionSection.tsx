@@ -20,10 +20,10 @@ export default function CallToActionSection(): React.JSX.Element {
 						Get in Touch
 					</h2>
 					<p>
-						Whether you're a developer, designer, content creator, or a passionate
-						vegan, we’d love to connect. Share your ideas, contribute to the project, or
-						just drop a friendly hello. Feedback and collaboration make this project
-						better.
+						Whether you&apos;re a developer, designer, content creator, or a passionate
+						vegan, we&apos;d love to connect. Share your ideas, contribute to the
+						project, or just drop a friendly hello. Feedback and collaboration make this
+						project better.
 					</p>
 				</div>
 				<Button asChild variant="dark" size="lg" aria-label="Navigate to Contact Us page">

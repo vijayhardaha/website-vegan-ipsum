@@ -53,8 +53,8 @@ export default function NpmPackagePage(): React.JSX.Element {
 					<p>
 						Designed for developers, designers, and content creators, this package
 						allows you to add ethically inspired, plant-based filler text to your
-						projects, whether you're building vegan blogs, environmental websites, or
-						apps promoting compassionate living.
+						projects, whether you&apos;re building vegan blogs, environmental websites,
+						or apps promoting compassionate living.
 					</p>
 					<p>
 						The library supports multiple environments, including Node.js, modern

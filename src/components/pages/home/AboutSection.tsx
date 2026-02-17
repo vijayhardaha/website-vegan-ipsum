@@ -86,7 +86,7 @@ export default function AboutSection(): React.JSX.Element {
 					practices. This innovative tool offers a powerful alternative to generic filler
 					text by incorporating plant-based themes, compassionate language, and
 					vegan-focused content that resonates deeply with conscious audiences. Whether
-					you're looking to subtly promote vegan values, enhance your brand’s ethical
+					you&apos;re looking to subtly promote vegan values, enhance your brand’s ethical
 					storytelling, or create a unique and thoughtful design experience, Vegan Ipsum
 					helps you differentiate your projects while maintaining high professionalism,
 					clarity, and readability.
