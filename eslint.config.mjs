@@ -17,121 +17,121 @@ import globals from "globals";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
+	baseDirectory: __dirname,
+	recommendedConfig: js.configs.recommended,
+	allConfig: js.configs.all,
 });
 
 export default defineConfig([
-  globalIgnores([
-    "**/.git/",
-    "**/node_modules/",
-    "**/build/",
-    "**/dist/",
-    "**/.env",
-    "**/.env.local",
-    "**/*.log",
-    "**/*.tsbuildinfo",
-  ]),
-  { files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"] },
-  {
-    ...compat.extends(
-      "next",
-      "next/core-web-vitals",
-      "next/typescript",
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:jsx-a11y/recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
-    )[0],
+	globalIgnores([
+		"**/.git/",
+		"**/node_modules/",
+		"**/build/",
+		"**/dist/",
+		"**/.env",
+		"**/.env.local",
+		"**/*.log",
+		"**/*.tsbuildinfo",
+	]),
+	{ files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"] },
+	{
+		...compat.extends(
+			"next",
+			"next/core-web-vitals",
+			"next/typescript",
+			"eslint:recommended",
+			"plugin:react/recommended",
+			"plugin:jsx-a11y/recommended",
+			"plugin:@typescript-eslint/recommended",
+			"plugin:prettier/recommended"
+		)[0],
 
-    plugins: {
-      "@next/next": fixupPluginRules(pluginNext),
-      react: fixupPluginRules(react),
-      "jsx-a11y": fixupPluginRules(jsxA11y),
-      "@typescript-eslint": fixupPluginRules(tsPlugin),
-      import: fixupPluginRules(importPlugin),
-      prettier: fixupPluginRules(prettier),
-    },
+		plugins: {
+			"@next/next": fixupPluginRules(pluginNext),
+			react: fixupPluginRules(react),
+			"jsx-a11y": fixupPluginRules(jsxA11y),
+			"@typescript-eslint": fixupPluginRules(tsPlugin),
+			import: fixupPluginRules(importPlugin),
+			prettier: fixupPluginRules(prettier),
+		},
 
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
+		languageOptions: {
+			ecmaVersion: "latest",
+			sourceType: "module",
+			globals: {
+				...globals.browser,
+				...globals.node,
+			},
 
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        ecmaFeatures: {
-          jsx: true,
-        },
-        tsconfigRootDir: __dirname,
-      },
-    },
+			parser: tsParser,
+			parserOptions: {
+				ecmaVersion: "latest",
+				sourceType: "module",
+				ecmaFeatures: {
+					jsx: true,
+				},
+				tsconfigRootDir: __dirname,
+			},
+		},
 
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
+		settings: {
+			react: {
+				version: "detect",
+			},
+		},
 
-    rules: {
-      "react/react-in-jsx-scope": "off",
-      "prettier/prettier": ["warn", {}, { usePrettierrc: true }],
+		rules: {
+			"react/react-in-jsx-scope": "off",
+			"prettier/prettier": ["warn", {}, { usePrettierrc: true }],
 
-      "react/no-unknown-property": [
-        "error",
-        {
-          ignore: ["jsx", "global"],
-        },
-      ],
+			"react/no-unknown-property": [
+				"error",
+				{
+					ignore: ["jsx", "global"],
+				},
+			],
 
-      "import/order": [
-        "error",
-        {
-          groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
+			"import/order": [
+				"error",
+				{
+					groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
 
-          pathGroups: [
-            {
-              pattern: "react",
-              group: "external",
-              position: "before",
-            },
-            {
-              pattern: "@/**",
-              group: "internal",
-              position: "after",
-            },
-          ],
+					pathGroups: [
+						{
+							pattern: "react",
+							group: "external",
+							position: "before",
+						},
+						{
+							pattern: "@/**",
+							group: "internal",
+							position: "after",
+						},
+					],
 
-          pathGroupsExcludedImportTypes: ["react"],
+					pathGroupsExcludedImportTypes: ["react"],
 
-          alphabetize: {
-            order: "asc",
-            caseInsensitive: true,
-          },
+					alphabetize: {
+						order: "asc",
+						caseInsensitive: true,
+					},
 
-          "newlines-between": "always",
-          warnOnUnassignedImports: true,
-        },
-      ],
+					"newlines-between": "always",
+					warnOnUnassignedImports: true,
+				},
+			],
 
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        {
-          vars: "all",
-          varsIgnorePattern: "^_", // Keep ignoring variables starting with "_"
-          args: "after-used",
-          argsIgnorePattern: "^_",
-          ignoreRestSiblings: true,
-          caughtErrors: "all", // Ensure caught errors are also checked
-        },
-      ],
-    },
-  },
+			"@typescript-eslint/no-unused-vars": [
+				"error",
+				{
+					vars: "all",
+					varsIgnorePattern: "^_", // Keep ignoring variables starting with "_"
+					args: "after-used",
+					argsIgnorePattern: "^_",
+					ignoreRestSiblings: true,
+					caughtErrors: "all", // Ensure caught errors are also checked
+				},
+			],
+		},
+	},
 ]);
