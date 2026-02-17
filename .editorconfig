@@ -9,7 +9,7 @@ charset = utf-8
 end_of_line = lf
 # Use tabs for indentation
 indent_style = tab
-# Set indentation size to 2 spaces
+# Set indentation size to 4 tabs
 indent_size = 4
 # Ensure a newline is present at end of files
 insert_final_newline = true
