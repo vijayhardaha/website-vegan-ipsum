@@ -1,20 +1,20 @@
 /**
  * Represents a navigation link.
+ *
  * @property {string} label - The display text for the link.
  * @property {string} href - The URL the link points to.
  * @property {boolean} [external] - Indicates if the link is external (optional).
  */
-export type INavLink = {
+export interface NavLink {
 	label: string;
 	href: string;
-	external?: boolean;
-};
+}
 
 /**
  * Navigation links displayed in the header of the website.
  * @type {NavLink[]}
  */
-export const HEADER_NAV_LINKS: INavLink[] = [
+export const HEADER_NAV_LINKS: NavLink[] = [
 	{ label: "Home", href: "/" },
 	{ label: "JSON API", href: "/json-api" },
 	{ label: "VS Code Extension", href: "/vscode-extension" },
@@ -27,7 +27,7 @@ export const HEADER_NAV_LINKS: INavLink[] = [
  * Navigation links displayed in the footer of the website.
  * @type {NavLink[]}
  */
-export const FOOTER_NAV_LINKS: INavLink[] = [
+export const FOOTER_NAV_LINKS: NavLink[] = [
 	{ label: "Json API", href: "/json-api" },
 	{ label: "Node CLI", href: "/node-cli" },
 	{ label: "NPM Package", href: "/npm-package" },
