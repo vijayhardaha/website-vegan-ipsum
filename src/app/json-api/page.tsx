@@ -12,12 +12,12 @@ import {
 	ErrorHandling,
 	StatusCodes,
 } from "@/components/sections/json-api";
-import { generateMetadata as genMeta } from "@/utils/seoUtils";
+import { buildMetadata } from "@/utils/seoUtils";
 
 /**
  * SEO metadata for the JSON API page.
  */
-export const metadata = genMeta({
+export const metadata = buildMetadata({
 	title: "JSON API",
 	description:
 		"Fetch plant-based, cruelty-free placeholder text for your apps, websites, or projects using the lightweight Vegan Ipsum JSON API — perfect for ethical developers.",

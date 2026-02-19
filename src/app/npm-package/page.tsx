@@ -16,12 +16,12 @@ import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { SmartLink } from "@/components/common/SmartLink";
 import CodeBlock from "@/components/ui/codeblock";
-import { generateMetadata as genMeta } from "@/utils/seoUtils";
+import { buildMetadata } from "@/utils/seoUtils";
 
 /**
  * SEO metadata for the NPM Package page.
  */
-export const metadata = genMeta({
+export const metadata = buildMetadata({
 	title: "NPM Package",
 	description:
 		"Effortlessly generate plant-based, vegan-themed placeholder text in your JavaScript projects with the Vegan Ipsum NPM package - ideal for ethical developers.",
