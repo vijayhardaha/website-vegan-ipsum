@@ -23,13 +23,12 @@ import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { SmartLink } from "@/components/common/SmartLink";
 import { Button } from "@/components/ui/button";
-import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
+import { generateMetadata as genMeta } from "@/utils/seoUtils";
 
 /**
  * SEO metadata for the VS Code Extension page.
- * @type {Metadata}
  */
-export const metadata: Metadata = genMeta({
+export const metadata = genMeta({
 	title: "VS Code Extension",
 	description:
 		"Install and use the Vegan Ipsum VS Code Extension to quickly generate plant-based, vegan-themed placeholder text in your code editor.",

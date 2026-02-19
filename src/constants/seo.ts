@@ -3,17 +3,17 @@ import { getBaseUrl } from "@/utils/seoUtils";
 /**
  * Represents the structure of SEO-related constants.
  */
-type SEOType = {
+interface ISEOConfig {
 	title: string;
 	description: string;
 	titlePostfix: string;
 	separator: string;
-};
+}
 
 /**
  * Represents the structure of the base metadata object.
  */
-export type BaseMetadataType = {
+export interface IDefaultSeoData {
 	title: string;
 	description: string;
 	metadataBase: URL;
@@ -51,12 +51,12 @@ export type BaseMetadataType = {
 		images: string[];
 		creator: string;
 	};
-};
+}
 
 /**
  * An object containing SEO-related constants for the application.
  */
-export const SEO: SEOType = {
+export const SEO: ISEOConfig = {
 	title: "Vegan Ipsum - Ethical, Plant-Based Placeholder Text",
 	description:
 		"Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.",
@@ -65,9 +65,9 @@ export const SEO: SEOType = {
 };
 
 /**
- * The base metadata object used for SEO, Open Graph, and Twitter cards.
+ * The default metadata object used for SEO, Open Graph, and Twitter cards.
  */
-export const baseMetadata: BaseMetadataType = {
+export const defaultSeoData: IDefaultSeoData = {
 	title: SEO.title,
 	description: SEO.description,
 	metadataBase: new URL(getBaseUrl()),

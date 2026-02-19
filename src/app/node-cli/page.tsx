@@ -9,13 +9,12 @@ import SectionContainer from "@/components/common/SectionContainer";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { SmartLink } from "@/components/common/SmartLink";
 import CodeBlock from "@/components/ui/codeblock";
-import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
+import { generateMetadata as genMeta } from "@/utils/seoUtils";
 
 /**
  * SEO metadata for the Node CLI page.
- * @type {Metadata}
  */
-export const metadata: Metadata = genMeta({
+export const metadata = genMeta({
 	title: "Node CLI",
 	description:
 		"Generate vegan-themed, plant-based placeholder text right from your terminal with the lightweight Vegan Ipsum Node CLI — perfect for ethical developers and creative coders.",

@@ -4,7 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Geist_Mono, Playfair_Display } from "next/font/google";
 
 import Layout from "@/components/common/Layout";
-import { baseMetadata, BaseMetadataType } from "@/constants/seo";
+import { defaultSeoData, IDefaultSeoData } from "@/constants/seo";
 
 import "../styles/globals.css";
 
@@ -38,7 +38,7 @@ export const customHeading = Playfair_Display({
 /**
  * Metadata for the application.
  */
-export const metadata: BaseMetadataType = baseMetadata;
+export const metadata: IDefaultSeoData = defaultSeoData;
 
 /**
  * Root layout component that wraps the application.
@@ -50,7 +50,7 @@ export default function RootLayout({
 	children,
 }: Readonly<{
 	children: ReactNode;
-}>) {
+}>): ReactNode {
 	return (
 		<html lang="en">
 			<body

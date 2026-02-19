@@ -1,12 +1,18 @@
-import { baseMetadata, SEO } from "@/constants/seo";
+import { defaultSeoData, SEO } from "@/constants/seo";
 
-export type MetadataParams = {
+/**
+ * Props for generating metadata, including title, description, and slug for URL construction.
+ */
+export interface IMetaProps {
 	title?: string;
 	description?: string;
 	slug?: string;
-};
+}
 
-export interface Metadata {
+/**
+ * Interface representing the structure of metadata used for SEO, Open Graph, and Twitter cards.
+ */
+export interface IMetadata {
 	title: string;
 	description: string;
 
@@ -24,6 +30,37 @@ export interface Metadata {
 		title: string;
 		description: string;
 	};
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnyObject = Record<string, any>;
+
+function deepMerge<T extends AnyObject>(target: T, source: AnyObject): T {
+	const output = { ...target } as AnyObject;
+
+	if (isObject(target) && isObject(source)) {
+		Object.keys(source).forEach((key) => {
+			const targetValue = target[key];
+			const sourceValue = source[key];
+
+			if (Array.isArray(sourceValue)) {
+				// Replace arrays (you can customize this behavior)
+				output[key] = sourceValue;
+			} else if (isObject(sourceValue) && isObject(targetValue)) {
+				// Recursively merge nested objects
+				output[key] = deepMerge(targetValue, sourceValue);
+			} else {
+				// Override primitive values
+				output[key] = sourceValue;
+			}
+		});
+	}
+
+	return output as T;
+}
+
+function isObject(value: AnyObject): value is AnyObject {
+	return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
 /**
@@ -70,31 +107,28 @@ export const generateSeoTitle = (title: string = ""): string => {
 /**
  * Generates a complete metadata object for SEO, Open Graph, and Twitter cards.
  *
- * @param {MetadataParams} params - The parameters object containing title, description, and slug.
- * @returns {Metadata} A metadata object with title, description, canonical URL, and social media metadata.
+ * @param {IMetaProps} params - The parameters object containing title, description, and slug.
+ * @returns {IMetadata} A metadata object with title, description, canonical URL, and social media metadata.
  */
 export const generateMetadata = ({
 	title = "",
 	description = "",
 	slug = "",
-}: MetadataParams): Metadata => {
-	return {
-		...baseMetadata,
+}: IMetaProps): IMetadata => {
+	return deepMerge(defaultSeoData, {
 		title: generateSeoTitle(title),
 		description: description,
 		alternates: {
 			canonical: getCanonicalUrl(slug),
 		},
 		openGraph: {
-			...baseMetadata.openGraph,
 			title: generateSeoTitle(title),
 			description: description,
 			url: getCanonicalUrl(slug),
 		},
 		twitter: {
-			...baseMetadata.twitter,
 			title: generateSeoTitle(title),
 			description: description,
 		},
-	};
+	});
 };

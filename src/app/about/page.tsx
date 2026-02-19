@@ -8,13 +8,12 @@ import {
 	TechnicalOverview,
 	UseCasesSection,
 } from "@/components/sections/about";
-import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
+import { generateMetadata as genMeta } from "@/utils/seoUtils";
 
 /**
  * SEO metadata for the About page.
- * @type {Metadata}
  */
-export const metadata: Metadata = genMeta({
+export const metadata = genMeta({
 	title: "About",
 	description:
 		"Vegan Ipsum is a lightweight, developer-friendly, plant-based lorem ipsum alternative for ethical and sustainable projects.",

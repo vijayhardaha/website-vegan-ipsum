@@ -2,13 +2,12 @@ import { ReactNode } from "react";
 
 import PageHeader from "@/components/common/PageHeader";
 import { Author, Projects } from "@/components/sections/contact";
-import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
+import { generateMetadata as genMeta } from "@/utils/seoUtils";
 
 /**
  * SEO metadata for the Contact page.
- * @type {Metadata}
  */
-export const metadata: Metadata = genMeta({
+export const metadata = genMeta({
 	title: "Contact",
 	description:
 		"Get in touch with the creator of Vegan Ipsum. Explore related tools, open-source projects, and social media profiles for ethical web development.",
