@@ -1,3 +1,4 @@
+export * from "./nav-links";
 /**
  * Represents a navigation link.
  * @property {string} label - The display text for the link.
