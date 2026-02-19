@@ -66,26 +66,25 @@ export interface SiteMetadata {
  * The default metadata object used for SEO, Open Graph, and Twitter cards.
  */
 export const SEO_KEYWORDS = [
+	"vegan ipsum",
+	"veggie ipsum",
+	"vegan ipsum generator",
 	"vegan lorem ipsum",
 	"vegan placeholder text",
-	"vegan ipsum generator",
-	"cruelty-free placeholder text",
-	"ethical lorem ipsum",
-	"plant-based lorem ipsum",
-	"dummy text for vegan projects",
-	"ethical web design tools",
-	"placeholder text generator",
-	"lorem ipsum alternative",
-	"generate vegan placeholder text online",
 	"best lorem ipsum for ethical designers",
+	"cruelty-free placeholder text",
+	"dummy text for vegan projects",
+	"ethical lorem ipsum",
 	"free cruelty-free lorem ipsum tool",
-	"vegan ipsum for web developers",
+	"generate vegan placeholder text online",
+	"lorem ipsum alternative",
 	"placeholder text for sustainable brands",
+	"plant-based lorem ipsum",
 	"vegan content filler",
-	"ethical UI/UX design",
-	"placeholder copy for eco-friendly websites",
 	"vegan copy generator",
-	"lorem ipsum with meaning",
+	"vegan ipsum for web developers",
+	"vegan placeholder text generator",
+	"vegan web design tools",
 ];
 
 /**
