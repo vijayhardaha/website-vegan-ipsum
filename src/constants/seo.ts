@@ -3,7 +3,7 @@ import { getBaseUrl } from "@/utils/seo";
 /**
  * Represents the structure of SEO-related constants.
  */
-interface ISEOConfig {
+interface SEOConfig {
 	title: string;
 	description: string;
 	titlePostfix: string;
@@ -11,9 +11,20 @@ interface ISEOConfig {
 }
 
 /**
+ * An object containing SEO-related constants for the application.
+ */
+export const SEO: SEOConfig = {
+	title: "Vegan Ipsum - Ethical, Plant-Based Placeholder Text",
+	description:
+		"Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.",
+	titlePostfix: "Vegan Ipsum",
+	separator: "-",
+};
+
+/**
  * Represents the structure of the base metadata object.
  */
-export interface IDefaultSeoData {
+export interface SiteMetadata {
 	title: string;
 	description: string;
 	metadataBase: URL;
@@ -54,20 +65,9 @@ export interface IDefaultSeoData {
 }
 
 /**
- * An object containing SEO-related constants for the application.
- */
-export const SEO: ISEOConfig = {
-	title: "Vegan Ipsum - Ethical, Plant-Based Placeholder Text",
-	description:
-		"Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.",
-	titlePostfix: "Vegan Ipsum",
-	separator: "-",
-};
-
-/**
  * The default metadata object used for SEO, Open Graph, and Twitter cards.
  */
-export const defaultSeoData: IDefaultSeoData = {
+export const siteMetadata: SiteMetadata = {
 	title: SEO.title,
 	description: SEO.description,
 	metadataBase: new URL(getBaseUrl()),
