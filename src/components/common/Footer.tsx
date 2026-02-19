@@ -2,7 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 
-import { FOOTER_NAV_LINKS, INavLink } from "@/constants/nav-links";
+import { FOOTER_NAV_LINKS, INavLink } from "@/constants/navlinks";
 import { cn } from "@/utils/classnames";
 
 import { SmartLink } from "./SmartLink";
