@@ -126,7 +126,7 @@ export const SmartLink = ({
 				{...props}
 			>
 				{children}
-				{linkLine && <RiExternalLinkLine className="text-inherit" />}
+				{linkLine && <RiExternalLinkLine className="text-inherit" aria-hidden={true} />}
 			</Link>
 		);
 	}

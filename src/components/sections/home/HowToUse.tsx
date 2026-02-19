@@ -26,7 +26,8 @@ interface ICardItem {
 	text: string;
 	icon: ReactNode;
 	link: string;
-	buttonText: string | ReactNode;
+	ariaLabel: string;
+	buttonText: ReactNode;
 }
 
 /**
@@ -38,9 +39,10 @@ const cardItems: ICardItem[] = [
 		text: "Generate vegan-theme based ipsum text instantly, right here in your browser. No setup needed — just click and copy.",
 		icon: <LiaGlobeSolid />,
 		link: "#generate-vegan-ipsum",
+		ariaLabel: "Use Now",
 		buttonText: (
 			<>
-				Use Now <RiArrowRightLine />
+				Use Now <RiArrowRightLine aria-hidden={true} />
 			</>
 		),
 	},
@@ -49,9 +51,10 @@ const cardItems: ICardItem[] = [
 		text: "Integrate vegan ipsum directly into your apps, scripts, or backend services with our simple HTTP API.",
 		icon: <LiaCloudSolid />,
 		link: "/json-api",
+		ariaLabel: "View Docs",
 		buttonText: (
 			<>
-				View Docs <RiArrowRightLine />
+				View Docs <RiArrowRightLine aria-hidden={true} />
 			</>
 		),
 	},
@@ -60,9 +63,10 @@ const cardItems: ICardItem[] = [
 		text: "Insert compassionate placeholder text without leaving your editor. The fastest way to fill your mockups.",
 		icon: <LiaCodeSolid />,
 		link: "/vscode-extension",
+		ariaLabel: "Get Extension",
 		buttonText: (
 			<>
-				Get Extension <RiArrowRightLine />
+				Get Extension <RiArrowRightLine aria-hidden={true} />
 			</>
 		),
 	},
@@ -71,9 +75,10 @@ const cardItems: ICardItem[] = [
 		text: "Generate vegan ipsum from your terminal on demand. Perfect for scripts, automation, and rapid prototyping.",
 		icon: <LiaTerminalSolid />,
 		link: "/node-cli",
+		ariaLabel: "Get CLI",
 		buttonText: (
 			<>
-				Get CLI <RiArrowRightLine />
+				Get CLI <RiArrowRightLine aria-hidden={true} />
 			</>
 		),
 	},
@@ -82,9 +87,10 @@ const cardItems: ICardItem[] = [
 		text: "Add vegan ipsum generation to any JavaScript or Node.js project with a single install and a clean API.",
 		icon: <LiaNpm />,
 		link: "/npm-package",
+		ariaLabel: "Learn More",
 		buttonText: (
 			<>
-				Learn More <RiArrowRightLine />
+				Learn More <RiArrowRightLine aria-hidden={true} />
 			</>
 		),
 	},
@@ -93,6 +99,7 @@ const cardItems: ICardItem[] = [
 		text: "Vegan Ipsum is free, open, and community-driven. Contribute, fork, or build on top of it — it's all yours.",
 		icon: <LiaGithub />,
 		link: "https://github.com/vijayhardaha/node-vegan-ipsum",
+		ariaLabel: "View on GitHub",
 		buttonText: "View on GitHub",
 	},
 ];
@@ -141,6 +148,7 @@ export default function HowToUse(): ReactNode {
 											href={card.link}
 											scrollOffset={68}
 											className="text-primary inline-flex items-center gap-1 text-sm font-medium no-underline transition-all"
+											aria-label={card.ariaLabel}
 										>
 											{card.buttonText}
 										</SmartLink>
