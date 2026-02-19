@@ -46,11 +46,7 @@ export const metadata: SiteMetadata = SITE_METADATA;
  * @param {ReactNode} children - React children elements to be rendered inside the layout.
  * @returns {ReactNode} The root layout component with global styles and fonts applied.
  */
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: ReactNode;
-}>): ReactNode {
+export default function RootLayout({ children }: { children: ReactNode }): ReactNode {
 	return (
 		<html lang="en">
 			<body
