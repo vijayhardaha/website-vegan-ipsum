@@ -9,28 +9,28 @@ import { SITE_METADATA, SiteMetadata } from "@/constants/seo";
 import "../styles/globals.css";
 
 /**
- * Sans font configuration for a versatile sans-serif font.
+ * Sans font configuration for a clean and modern sans-serif font.
  */
-export const customSans = Inter({
+export const sansFont = Inter({
 	weight: ["400", "500", "600", "700"],
 	variable: "--font-sans",
 	subsets: ["latin"],
 });
 
 /**
- * Mono font configuration for a clean monospace font.
+ * Mono font configuration for a clean monospaced font.
  */
-export const customMono = Geist_Mono({
+export const monoFont = Geist_Mono({
 	weight: ["400", "500", "600", "700"],
 	subsets: ["latin"],
 	variable: "--font-mono",
 });
 
 /**
- * Mono font configuration for a clean monospace font.
+ * Heading font configuration for an elegant serif font.
  */
-export const customHeading = Playfair_Display({
-	weight: ["400", "500", "600", "700", "800"],
+export const headingFont = Playfair_Display({
+	weight: ["400", "500", "600", "700", "800", "900"],
 	subsets: ["latin"],
 	variable: "--font-heading",
 });
@@ -54,7 +54,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${customSans.variable} ${customMono.variable} ${customHeading.variable} text-foreground bg-background font-base font-sans leading-relaxed font-normal antialiased`}
+				className={`${sansFont.variable} ${monoFont.variable} ${headingFont.variable} text-foreground bg-background font-base font-sans leading-relaxed font-normal antialiased`}
 			>
 				<Layout>{children}</Layout>
 			</body>
