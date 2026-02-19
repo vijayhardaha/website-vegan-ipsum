@@ -139,7 +139,7 @@ export default function NpmPackagePage(): React.ReactNode {
 
 						<p>The package supports two usage styles:</p>
 
-						<ul className="list-disc space-y-2 pl-6">
+						<ul className="list-disc space-y-2 pl-8">
 							<li>
 								<strong>Class-based API</strong>: ideal when you need structured,
 								reusable configuration.

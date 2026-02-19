@@ -47,7 +47,7 @@ export default function Benefits(): React.ReactNode {
 
 						<h3 className="text-lg">Key Benefits:</h3>
 
-						<ul className="list-disc space-y-4 pl-6 text-sm">
+						<ul className="list-disc space-y-4 pl-8">
 							{[
 								{
 									title: "Authentic Brand Alignment",

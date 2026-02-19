@@ -23,7 +23,7 @@ export default function CustomizationOptions(): React.ReactNode {
 						short bursts of text or long paragraphs, you can fine-tune the content with
 						various parameters to fit perfectly within your designs and codebases.
 					</p>
-					<ul className="list-inside list-disc space-y-2 pl-4">
+					<ul className="list-disc space-y-2 pl-8">
 						<li>
 							<code>count</code> - Specify the number of text units to generate. This
 							can be paragraphs, sentences, or words depending on your preference

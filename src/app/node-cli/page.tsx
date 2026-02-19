@@ -137,7 +137,7 @@ vegan-ipsum 5 words`}
 							help information.
 						</p>
 
-						<ul className="list-disc space-y-2 pl-6">
+						<ul className="list-disc space-y-2 pl-8">
 							<li>
 								<code>--format html</code> — Outputs generated text wrapped in HTML
 								<code>{" <p> "}</code> tags, making it ready for quick web
@@ -179,7 +179,7 @@ vegan-ipsum 2 paragraphs --copy`}
 
 						<h3 className="mt-8 mb-2 text-lg">Tips & Best Practices:</h3>
 
-						<ul className="list-disc space-y-2 pl-6">
+						<ul className="list-disc space-y-2 pl-8">
 							<li>
 								Integrate the CLI into shell scripts or automation pipelines to
 								dynamically generate placeholder content during builds or testing.
