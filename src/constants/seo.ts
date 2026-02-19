@@ -91,6 +91,7 @@ export const SEO_KEYWORDS = [
  * Google Search Console verification code for the site
  */
 export const GOOGLE_SITE_VERIFICATION = "4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0";
+export const GOOGLE_ANALYTICS_ID = "G-XR1TK565WJ";
 
 /**
  * The main metadata object containing all SEO-related information for the website.

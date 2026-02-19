@@ -4,7 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Geist_Mono, Playfair_Display } from "next/font/google";
 
 import Layout from "@/components/common/Layout";
-import { SITE_METADATA, SiteMetadata } from "@/constants/seo";
+import { GOOGLE_ANALYTICS_ID, SITE_METADATA, SiteMetadata } from "@/constants/seo";
 
 import "../styles/globals.css";
 
@@ -49,12 +49,12 @@ export const metadata: SiteMetadata = SITE_METADATA;
 export default function RootLayout({ children }: { children: ReactNode }): ReactNode {
 	return (
 		<html lang="en">
+			<GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
 			<body
 				className={`${sansFont.variable} ${monoFont.variable} ${headingFont.variable} text-foreground bg-background font-base font-sans leading-relaxed font-normal antialiased`}
 			>
 				<Layout>{children}</Layout>
 			</body>
-			<GoogleAnalytics gaId="G-XR1TK565WJ" />
 		</html>
 	);
 }
