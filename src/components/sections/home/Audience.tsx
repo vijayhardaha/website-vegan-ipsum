@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
@@ -13,7 +13,7 @@ import { SectionHeader } from "@/components/common/SectionHeader";
 interface ICardItem {
 	title: string;
 	text: string;
-	icon: React.ReactElement;
+	icon: ReactNode;
 }
 
 /**
@@ -47,9 +47,9 @@ const cardItems: ICardItem[] = [
  * the benefits for different types of users, including designers, developers,
  * marketers, and conscious builders.
  *
- * @returns {React.ReactNode} The rendered component.
+ * @returns {ReactNode} The rendered component.
  */
-export default function Audience(): React.ReactNode {
+export default function Audience(): ReactNode {
 	return (
 		<Section
 			id="who-can-use"

@@ -1,8 +1,8 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import Image from "next/image";
 
-import { FOOTER_NAV_LINKS, INavLink } from "@/constants/navlinks";
+import { FOOTER_NAV_LINKS, NavLink } from "@/constants/navlinks";
 import { cn } from "@/utils/classnames";
 
 import { SmartLink } from "./SmartLink";
@@ -11,9 +11,9 @@ import { SmartLink } from "./SmartLink";
  * Footer component for the Vegan Ipsum website.
  * Displays navigation links and copyright information.
  *
- * @returns {React.ReactNode} The rendered footer component.
+ * @returns {ReactNode} The rendered footer component.
  */
-export default function Footer(): React.ReactNode {
+export default function Footer(): ReactNode {
 	return (
 		<footer className="bg-primary-solid text-primary-foreground py-6 pt-12" aria-label="Footer">
 			<div className="mx-auto max-w-5xl px-4 md:px-6">
@@ -38,7 +38,7 @@ export default function Footer(): React.ReactNode {
 							className="flex flex-wrap items-center justify-center gap-4"
 							aria-label="Footer navigation links"
 						>
-							{FOOTER_NAV_LINKS.map((link: INavLink) => (
+							{FOOTER_NAV_LINKS.map((link: NavLink) => (
 								<li key={link.href}>
 									<SmartLink
 										href={link.href}

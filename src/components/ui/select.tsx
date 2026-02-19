@@ -1,14 +1,11 @@
-import { cn } from "@/utils/classnames";
+import { ChangeEvent, ReactNode, SelectHTMLAttributes } from "react";
 
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-	className?: string;
-	children?: React.ReactNode;
-}
+import { cn } from "@/utils/classnames";
 
 /**
  * Select dropdown component matching the project's input/textarea styles.
  * @param {InputProps} props - Component props
- * @returns {React.ReactNode} Input component
+ * @returns {ReactNode} Input component
  */
 interface OptionItem {
 	label: string;
@@ -16,7 +13,8 @@ interface OptionItem {
 	disabled?: boolean;
 }
 
-interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+	/** Additional CSS classes for the select element. */
 	className?: string;
 	/** Array of options to render (label/value pairs). If omitted, children are rendered. */
 	options?: OptionItem[];
@@ -24,6 +22,8 @@ interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	value?: string;
 	/** Callback that receives the selected value */
 	onValueChange?: (value: string) => void;
+	/** Optional children (if not using options prop) */
+	children?: ReactNode;
 }
 
 /**
@@ -37,15 +37,15 @@ function Select({
 	onValueChange,
 	children,
 	...props
-}: SelectProps): React.ReactNode {
+}: SelectProps): ReactNode {
 	/**
 	 * Handles changes to the select element, calling the onValueChange callback if provided.
 	 *
-	 * @param {React.ChangeEvent} e - The change event from the select element
+	 * @param {ChangeEvent} e - The change event from the select element
 	 */
-	function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
+	function handleChange(e: ChangeEvent<HTMLSelectElement>) {
 		onValueChange?.(e.target.value);
-		if (props.onChange) props.onChange(e as React.ChangeEvent<HTMLSelectElement>);
+		if (props.onChange) props.onChange(e as ChangeEvent<HTMLSelectElement>);
 	}
 
 	return (

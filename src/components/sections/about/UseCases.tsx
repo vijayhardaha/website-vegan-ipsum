@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import { LiaBriefcaseSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
@@ -7,7 +9,7 @@ import { SectionHeader } from "@/components/common/SectionHeader";
 /**
  * Represents the details of card items used in the component.
  */
-interface ICardItem {
+interface CardItem {
 	title: string;
 	text: string;
 }
@@ -15,7 +17,7 @@ interface ICardItem {
 /**
  * An array of card details used to render the cards in the component.
  */
-const cardItems: ICardItem[] = [
+const cardItems: CardItem[] = [
 	{
 		title: "Design Mockups",
 		text: "Create authentic vegan and eco-conscious product designs that speak directly to ethical consumers and sustainability advocates.",
@@ -42,7 +44,7 @@ const cardItems: ICardItem[] = [
 	},
 ];
 
-export default function UseCases(): React.ReactNode {
+export default function UseCases(): ReactNode {
 	return (
 		<Section
 			id="use-cases"
@@ -62,7 +64,7 @@ export default function UseCases(): React.ReactNode {
 				</SectionHeader>
 
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-					{cardItems.map((card: ICardItem, index: number) => (
+					{cardItems.map((card: CardItem, index: number) => (
 						<div
 							key={index}
 							className="border-border flex gap-4 rounded-2xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"

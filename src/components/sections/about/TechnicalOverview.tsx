@@ -1,10 +1,12 @@
+import { ReactNode } from "react";
+
 import { LiaLaptopCodeSolid, LiaCogsSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
 import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 
-export default function TechnicalOverview(): React.ReactNode {
+export default function TechnicalOverview(): ReactNode {
 	return (
 		<Section
 			id="technical-overview"

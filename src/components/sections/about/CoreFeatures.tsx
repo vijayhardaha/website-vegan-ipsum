@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import Link from "next/link";
 import { LiaPlugSolid } from "react-icons/lia";
 import { LiaCloudSolid, LiaCodeSolid, LiaNpm, LiaTerminalSolid } from "react-icons/lia";
@@ -12,7 +14,7 @@ import { SectionHeader } from "@/components/common/SectionHeader";
 interface ICardItem {
 	title: string;
 	text: string;
-	icon: React.ReactElement;
+	icon: ReactNode;
 	link: string;
 }
 
@@ -46,7 +48,7 @@ const cardItems: ICardItem[] = [
 	},
 ];
 
-export default function CoreFeatures(): React.ReactNode {
+export default function CoreFeatures(): ReactNode {
 	return (
 		<Section id="core-features" aria-label="Core features and technical details of Vegan Ipsum">
 			<Container>

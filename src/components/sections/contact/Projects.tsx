@@ -16,10 +16,10 @@ import { SmartLink } from "@/components/common/SmartLink";
 /**
  * Represents the details of a card displayed in the component.
  */
-interface ICardItem {
+interface CardItem {
 	title: string;
 	text: string;
-	icon: React.ReactElement;
+	icon: ReactNode;
 	link: string;
 	buttonText: string;
 }
@@ -27,7 +27,7 @@ interface ICardItem {
 /**
  * An array of card details used to render the cards in the component.
  */
-const cardItems: ICardItem[] = [
+const cardItems: CardItem[] = [
 	{
 		title: "NPM Package",
 		text: "Install vegan-ipsum via npm and generate plant-based placeholder text programmatically in your JavaScript projects.",
@@ -97,7 +97,7 @@ export default function Projects(): ReactNode {
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cardItems.map((card: ICardItem, index: number) => (
+						{cardItems.map((card: CardItem, index: number) => (
 							<div
 								key={index}
 								className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"

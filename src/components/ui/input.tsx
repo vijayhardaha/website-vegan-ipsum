@@ -1,7 +1,9 @@
+import { InputHTMLAttributes, ReactNode } from "react";
+
 import { cn } from "@/utils/classnames";
 
 // Define TypeScript types for the component props
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	className?: string;
 	type?: string;
 }
@@ -10,9 +12,9 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
  * Input component for text entry, file uploads, and other input types.
  *
  * @param {InputProps} props - Component props
- * @returns {React.ReactNode} Input component
+ * @returns {ReactNode} Input component
  */
-function Input({ className, type = "text", ...props }: InputProps): React.ReactNode {
+function Input({ className, type = "text", ...props }: InputProps): ReactNode {
 	return (
 		<input
 			type={type}

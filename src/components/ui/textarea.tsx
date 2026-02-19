@@ -1,16 +1,18 @@
+import { ReactNode, TextareaHTMLAttributes } from "react";
+
 import { cn } from "@/utils/classnames";
 
 /**
  * Props for the Textarea component
  */
-interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 	className?: string;
 }
 
 /**
  * Textarea component for multi-line text input.
  */
-function Textarea({ className, ...props }: TextareaProps) {
+export function Textarea({ className, ...props }: TextareaProps): ReactNode {
 	return (
 		<textarea
 			data-slot="textarea"
@@ -53,5 +55,3 @@ function Textarea({ className, ...props }: TextareaProps) {
 		/>
 	);
 }
-
-export { Textarea };

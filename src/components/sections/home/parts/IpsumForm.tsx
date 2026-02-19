@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { FormEvent, ReactNode, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,7 +12,7 @@ interface IpsumFormProps {
 	setOutput: (output: string) => void;
 }
 
-export default function IpsumForm({ setOutput }: IpsumFormProps): React.ReactNode {
+export default function IpsumForm({ setOutput }: IpsumFormProps): ReactNode {
 	const [selectedType, setSelectedType] = useState<"paragraphs" | "sentences" | "words">(
 		"paragraphs"
 	);
@@ -56,7 +56,7 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): React.ReactNod
 	 * Prevents default behavior and triggers the text generation process.
 	 * @param event - The form submission event
 	 */
-	const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+	const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
 		event.preventDefault();
 		handleGenerate();
 	};

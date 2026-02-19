@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, ReactNode } from "react";
+import { useEffect, useRef, useState, ReactNode, CSSProperties } from "react";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -10,7 +10,7 @@ import { cn } from "@/utils/classnames";
 /**
  * Props for the CodeBlock component.
  */
-interface ICodeBlockProps {
+interface CodeBlockProps {
 	label: string;
 	children: string;
 	className?: string;
@@ -21,15 +21,15 @@ interface ICodeBlockProps {
 /**
  * Props for the CodeBlock component with custom styles.
  */
-interface IStyle {
-	[key: string]: React.CSSProperties;
+interface StyleProps {
+	[key: string]: CSSProperties;
 }
 
 export const prismCustom = {
 	...style,
 	// override container/pre styles
 	'code[class*="language-"]': {
-		...((style as IStyle)['code[class*="language-"]'] ?? {}),
+		...((style as StyleProps)['code[class*="language-"]'] ?? {}),
 		background: "#1a2318", // code-bg from the design
 		color: "#c8e6b8", // code-text - main text color
 		fontFamily: "var(--font-mono)", // use the monospaced font defined in the design
@@ -38,7 +38,7 @@ export const prismCustom = {
 		margin: "0",
 	},
 	'pre[class*="language-"]': {
-		...((style as IStyle)['pre[class*="language-"]'] ?? {}),
+		...((style as StyleProps)['pre[class*="language-"]'] ?? {}),
 		background: "#1a2318",
 		border: "1px solid #2d4028",
 		borderRadius: "0",
@@ -108,7 +108,7 @@ export const prismCustom = {
 
 /**
  * Reusable component for displaying code blocks with syntax highlighting.
- * @param {ICodeBlockProps} props - The props for the component.
+ * @param {CodeBlockProps} props - The props for the component.
  * @returns {ReactNode} The CodeBlock component.
  */
 export default function CodeBlock({
@@ -116,7 +116,7 @@ export default function CodeBlock({
 	children,
 	className,
 	...props
-}: ICodeBlockProps): ReactNode {
+}: CodeBlockProps): ReactNode {
 	const [copied, setCopied] = useState(false);
 	const timerRef = useRef<number | null>(null);
 

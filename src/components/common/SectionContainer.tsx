@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { cn } from "@/utils/classnames";
 
@@ -6,7 +6,7 @@ import { cn } from "@/utils/classnames";
  * Props for the SectionContainer component.
  */
 interface SectionContainerProps {
-	children: React.ReactNode;
+	children: ReactNode;
 	className?: string;
 }
 
@@ -14,9 +14,9 @@ interface SectionContainerProps {
  * A layout component that wraps its children in a container with consistent spacing.
  *
  * @param {SectionContainerProps} props - The props for the component.
- * @returns {React.ReactNode} The rendered container component.
+ * @returns {ReactNode} The rendered container component.
  */
-const SectionContainer: React.FC<SectionContainerProps> = ({ children, className }) => {
+const SectionContainer = ({ children, className }: SectionContainerProps): ReactNode => {
 	return <div className={cn(className)}>{children}</div>;
 };
 

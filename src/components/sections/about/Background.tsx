@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import { LiaBookSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
@@ -5,7 +7,15 @@ import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { SmartLink } from "@/components/common/SmartLink";
 
-export default function Background(): React.ReactNode {
+/**
+ * Background Component
+ *
+ * This component provides an overview of the background and inspiration behind the Vegan Ipsum project.
+ * It is designed to give users insight into the origin story and motivations that led to the creation of Vegan Ipsum.
+ *
+ * @returns {ReactNode} The rendered component.
+ */
+export default function Background(): ReactNode {
 	return (
 		<Section
 			id="background-and-inspiration"

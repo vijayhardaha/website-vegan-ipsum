@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import Image from "next/image";
 import { LiaLightbulb } from "react-icons/lia";
 
@@ -5,7 +7,7 @@ import Container from "@/components/common/Container";
 import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 
-export default function Introduction(): React.ReactNode {
+export default function Introduction(): ReactNode {
 	return (
 		<Section id="what-is-vegan-ipsum-generator" aria-label="Introduction to Vegan Ipsum">
 			<Container>

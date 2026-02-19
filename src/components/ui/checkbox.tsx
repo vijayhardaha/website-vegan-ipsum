@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, ReactNode } from "react";
+import { useState, ChangeEvent, ReactNode, LabelHTMLAttributes } from "react";
 
 import { LuCheck as CheckIcon } from "react-icons/lu";
 
@@ -9,7 +9,7 @@ import { cn } from "@/utils/classnames";
 /**
  * Props for the Checkbox component.
  */
-interface CheckboxProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
+interface CheckboxProps extends LabelHTMLAttributes<HTMLLabelElement> {
 	/** Additional CSS classes. */
 	className?: string;
 	/** Whether the checkbox is checked. */

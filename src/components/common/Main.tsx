@@ -1,10 +1,18 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
+/**
+ * Props for the Main component.
+ */
 interface MainProps {
 	children: ReactNode;
 }
 
-const Main: React.FC<MainProps> = ({ children }) => {
+/**
+ * This component serves as the main content wrapper for the application.
+ *
+ * @returns {ReactNode} The rendered main content area.
+ */
+const Main = ({ children }: MainProps): ReactNode => {
 	return (
 		<main id="main" className="overflow-hidden">
 			{children}

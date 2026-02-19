@@ -24,7 +24,7 @@ import { SmartLink } from "@/components/common/SmartLink";
 interface ICardItem {
 	title: string;
 	text: string;
-	icon: React.ReactElement;
+	icon: ReactNode;
 	link: string;
 	buttonText: string | ReactNode;
 }

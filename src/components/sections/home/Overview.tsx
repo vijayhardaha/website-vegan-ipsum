@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import Image from "next/image";
 import { LiaLightbulb } from "react-icons/lia";
@@ -11,9 +11,9 @@ import { SectionHeader } from "@/components/common/SectionHeader";
  * This component provides an introduction to the Vegan Ipsum
  * Generator, explaining what it is and its purpose.
  *
- * @returns {React.ReactNode} The rendered component.
+ * @returns {ReactNode} The rendered component.
  */
-export default function Overview(): React.ReactNode {
+export default function Overview(): ReactNode {
 	return (
 		<Section
 			id="what-is-it"

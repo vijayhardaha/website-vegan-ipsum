@@ -14,7 +14,7 @@ interface IContainerProps {
  * A layout component that wraps its children in a container with consistent spacing.
  *
  * @param {IContainerProps} props - The props for the component.
- * @returns {React.ReactElement} The rendered container component.
+ * @returns {ReactNode} The rendered container component.
  */
 const Container = ({ children, className }: IContainerProps): ReactNode => {
 	return (

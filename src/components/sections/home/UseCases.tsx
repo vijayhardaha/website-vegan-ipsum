@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { FcPanorama, FcComboChart, FcProcess, FcBiomass } from "react-icons/fc";
 import { LiaBookOpenSolid } from "react-icons/lia";
@@ -13,7 +13,7 @@ import { SectionHeader } from "@/components/common/SectionHeader";
 interface ICardItem {
 	title: string;
 	text: string;
-	icon: React.ReactElement;
+	icon: ReactNode;
 }
 
 /**
@@ -47,9 +47,9 @@ const cardItems: ICardItem[] = [
  * highlighting how it can be used in design mockups, branding projects,
  * educational apps, startup prototypes, blogs, portfolios, and open-source projects.
  *
- * @returns {React.ReactNode} The rendered component.
+ * @returns {ReactNode} The rendered component.
  */
-export default function UseCases(): React.ReactNode {
+export default function UseCases(): ReactNode {
 	return (
 		<Section id="when-to-use" aria-label="When to Use Vegan Ipsum?">
 			<Container>

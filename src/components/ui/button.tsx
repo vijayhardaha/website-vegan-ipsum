@@ -1,6 +1,15 @@
 "use client";
 
-import React, { forwardRef, isValidElement } from "react";
+import {
+	ButtonHTMLAttributes,
+	forwardRef,
+	HTMLAttributes,
+	isValidElement,
+	ReactElement,
+	ReactNode,
+	Ref,
+	RefObject,
+} from "react";
 import { cloneElement } from "react";
 
 import { cva } from "class-variance-authority";
@@ -11,8 +20,8 @@ import { cn } from "@/utils/classnames";
  * Slot component for polymorphic prop forwarding.
  */
 type SlotProps = {
-	children: React.ReactNode; // Allow any valid ReactNode (string, ReactElement, etc.)
-} & React.HTMLAttributes<HTMLElement>;
+	children: ReactNode; // Allow any valid ReactNode (string, ReactElement, etc.)
+} & HTMLAttributes<HTMLElement>;
 
 const Slot = forwardRef<HTMLElement, SlotProps>(({ children, ...props }, ref) => {
 	if (!isValidElement(children)) {
@@ -29,17 +38,17 @@ const Slot = forwardRef<HTMLElement, SlotProps>(({ children, ...props }, ref) =>
 			if (typeof ref === "function") {
 				ref(childRef);
 			} else if (ref && childRef) {
-				(ref as React.RefObject<HTMLElement>).current = childRef;
+				(ref as RefObject<HTMLElement>).current = childRef;
 			}
 
 			// Handle the child's original ref separately
-			const { ref: childOriginalRef } = children as React.ReactElement & {
-				ref?: React.Ref<HTMLElement>;
+			const { ref: childOriginalRef } = children as ReactElement & {
+				ref?: Ref<HTMLElement>;
 			};
 			if (typeof childOriginalRef === "function") {
 				childOriginalRef(childRef);
 			} else if (childOriginalRef && childRef) {
-				(childOriginalRef as React.RefObject<HTMLElement>).current = childRef;
+				(childOriginalRef as RefObject<HTMLElement>).current = childRef;
 			}
 		},
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -129,8 +138,8 @@ type ButtonProps = {
 		| "link";
 	size?: "md" | "sm" | "lg" | "xl" | "icon";
 	asChild?: boolean;
-	children: React.ReactNode; // Allow any valid ReactNode (string, ReactElement, etc.)
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+	children: ReactNode; // Allow any valid ReactNode (string, ReactElement, etc.)
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 	({ className, variant = "primary", size = "md", asChild = false, children, ...props }, ref) => {

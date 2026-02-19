@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, ReactNode } from "react";
+import { useId, ReactNode, HTMLAttributes } from "react";
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
@@ -12,7 +12,7 @@ import "react-tooltip/dist/react-tooltip.css";
 /**
  * Props for the Tooltip component
  */
-interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
+interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
 	text: string;
 	children: ReactNode;
 	className?: string;
@@ -23,14 +23,14 @@ interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
 /**
  * Tooltip component to display a tooltip with customizable content and styles.
  */
-function Tooltip({
+export function Tooltip({
 	text,
 	children,
 	className,
 	sideOffset = 4,
 	delayDuration = 300,
 	...props
-}: TooltipProps) {
+}: TooltipProps): ReactNode {
 	const tooltipId = useId();
 
 	return (
@@ -58,5 +58,3 @@ function Tooltip({
 		</>
 	);
 }
-
-export { Tooltip };

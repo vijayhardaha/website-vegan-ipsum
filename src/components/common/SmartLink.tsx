@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { ReactNode } from "react";
 import { AnchorHTMLAttributes, MouseEvent } from "react";
 
 import Link from "next/link";
@@ -40,7 +40,7 @@ export interface SmartLinkProps
 	/** Accessible label for the link */
 	"aria-label"?: string;
 	/** Child elements to render inside the link */
-	children: React.ReactNode;
+	children: ReactNode;
 	/** Optional offset for hash links (useful for fixed headers) */
 	scrollOffset?: number;
 	/** Optional click handler */
@@ -66,7 +66,7 @@ export const SmartLink = ({
 	onClick = undefined,
 	linkLine = true,
 	...props
-}: SmartLinkProps) => {
+}: SmartLinkProps): ReactNode => {
 	const linkType = getLinkType(href);
 
 	/**

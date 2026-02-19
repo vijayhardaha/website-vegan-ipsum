@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import Container from "@/components/common/Container";
 import { SmartLink } from "@/components/common/SmartLink";
@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/button";
 /**
  * Hero component for displaying the main introduction and call-to-action buttons.
  *
- * @returns {React.ReactNode} The rendered Hero component.
+ * @returns {ReactNode} The rendered Hero component.
  *
  */
-export default function Hero(): React.ReactNode {
+export default function Hero(): ReactNode {
 	return (
 		<section
 			id="hero"

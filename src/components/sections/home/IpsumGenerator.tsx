@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { ReactNode, useState } from "react";
 
 import { LiaHashtagSolid } from "react-icons/lia";
 
@@ -14,10 +14,10 @@ import { cn } from "@/utils/classnames";
 /**
  * IpsumGenerator component for displaying the main introduction and call-to-action buttons.
  *
- * @returns {React.ReactNode} The rendered IpsumGenerator component.
+ * @returns {ReactNode} The rendered IpsumGenerator component.
  *
  */
-export default function IpsumGenerator(): React.ReactNode {
+export default function IpsumGenerator(): ReactNode {
 	const [output, setOutput] = useState<string>(""); // Stores the generated output
 	const [copied, setCopied] = useState<boolean>(false); // Tracks if the text has been copied
 

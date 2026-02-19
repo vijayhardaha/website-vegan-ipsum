@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import { ReactNode, useState, useEffect, useRef } from "react";
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { LuAlignRight, LuX } from "react-icons/lu";
 
-import { HEADER_NAV_LINKS, INavLink } from "@/constants/navlinks";
+import { HEADER_NAV_LINKS, NavLink } from "@/constants/navlinks";
 import { cn } from "@/utils/classnames";
 
 import { Button } from "../ui/button";
@@ -17,9 +17,9 @@ import { SmartLink } from "./SmartLink";
  * Header component for the website.
  * Displays the website's logo and a navigation menu with links.
  *
- * @returns {React.ReactNode} The rendered header component.
+ * @returns {ReactNode} The rendered header component.
  */
-export default function Header(): React.ReactNode {
+export default function Header(): ReactNode {
 	const pathname: string = usePathname();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const menuRef = useRef<HTMLDivElement>(null);
@@ -82,7 +82,7 @@ export default function Header(): React.ReactNode {
 							} bg-background border-border absolute top-full left-0 w-full border-t shadow-md lg:static lg:block lg:border-none lg:bg-transparent lg:shadow-none`}
 						>
 							<ul className="flex flex-col space-y-4 p-4 md:px-6 lg:flex-row lg:space-y-0 lg:space-x-6 lg:p-0">
-								{HEADER_NAV_LINKS.map((link: INavLink) => (
+								{HEADER_NAV_LINKS.map((link: NavLink) => (
 									<li key={link.href}>
 										<SmartLink
 											href={link.href}

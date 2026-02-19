@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { cn } from "@/utils/classnames";
 
@@ -7,11 +7,11 @@ import { cn } from "@/utils/classnames";
  */
 export interface SectionHeaderProps {
 	/** The tagline text displayed above the heading */
-	tagline?: React.ReactNode | string;
+	tagline?: ReactNode | string;
 	/** The main heading text */
-	heading: React.ReactNode | string;
+	heading: ReactNode | string;
 	/** Optional icon component to display before the tagline */
-	icon?: React.ReactNode;
+	icon?: ReactNode;
 	/** Additional CSS classes for the container */
 	className?: string;
 	/** Additional CSS classes for the tagline */
@@ -19,7 +19,7 @@ export interface SectionHeaderProps {
 	/** Additional CSS classes for the heading */
 	headingClassName?: string;
 	/** Children elements (typically paragraphs) */
-	children: React.ReactNode;
+	children: ReactNode;
 }
 
 /**
@@ -27,6 +27,8 @@ export interface SectionHeaderProps {
  *
  * A reusable section header component with tagline, heading, and content area.
  * Provides consistent styling for section introductions throughout the application.
+ *
+ * @return {ReactNode} The rendered section header component.
  */
 export const SectionHeader = ({
 	tagline,
@@ -36,7 +38,7 @@ export const SectionHeader = ({
 	taglineClassName,
 	headingClassName,
 	children,
-}: SectionHeaderProps) => {
+}: SectionHeaderProps): ReactNode => {
 	return (
 		<div className={cn("", className)}>
 			{tagline && (
