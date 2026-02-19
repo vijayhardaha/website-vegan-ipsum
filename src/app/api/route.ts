@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import { veganIpsum } from "vegan-ipsum";
-import { LoremFormat } from "vegan-ipsum/types/src/constants/formats";
-import { LoremUnit } from "vegan-ipsum/types/src/constants/units";
+
+// Types for query parameters
+type LoremUnit = "paragraphs" | "sentences" | "words";
+type LoremFormat = "plain" | "html";
 
 /**
  * Generates vegan ipsum text based on the provided parameters.
