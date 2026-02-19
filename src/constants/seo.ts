@@ -8,6 +8,7 @@ export const SEO_DESCRIPTION =
 	"Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.";
 export const SEO_TITLE_POSTFIX = "Vegan Ipsum";
 export const SEO_SEPARATOR = "-";
+export const SEO_CANONICAL_URL = getBaseUrl();
 
 /**
  * Shared SEO object (kept for backward compatibility).
@@ -99,10 +100,10 @@ export const GOOGLE_ANALYTICS_ID = "G-XR1TK565WJ";
 export const SITE_METADATA: SiteMetadata = {
 	title: SEO_TITLE,
 	description: SEO_DESCRIPTION,
-	metadataBase: new URL(getBaseUrl()),
+	metadataBase: new URL(SEO_CANONICAL_URL),
 	appleTouchIcon: "/apple-touch-icon.png",
 	alternates: {
-		canonical: getBaseUrl(),
+		canonical: SEO_CANONICAL_URL,
 	},
 	keywords: SEO_KEYWORDS,
 	author: "Vijay Hardaha",
@@ -127,7 +128,7 @@ export const SITE_METADATA: SiteMetadata = {
 		type: "website",
 		siteName: SEO_TITLE,
 		locale: "en_US",
-		url: "https://veganipsum.vercel.app",
+		url: SEO_CANONICAL_URL,
 	},
 	twitter: {
 		card: "summary_large_image",
