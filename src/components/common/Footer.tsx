@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 import { FOOTER_NAV_LINKS, INavLink } from "@/constants/navLinks";
-import { cn } from "@/utils/classNameUtils";
+import { cn } from "@/utils/classname";
 
 import { SmartLink } from "./SmartLink";
 

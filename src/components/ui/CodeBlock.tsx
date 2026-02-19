@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState, ReactNode } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-import { cn } from "@/utils/classNameUtils";
+import { cn } from "@/utils/classname";
 
 /**
  * Props for the CodeBlock component.

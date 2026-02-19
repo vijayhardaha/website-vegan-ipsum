@@ -9,7 +9,7 @@ import SectionContainer from "@/components/common/SectionContainer";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { SmartLink } from "@/components/common/SmartLink";
 import CodeBlock from "@/components/ui/codeblock";
-import { buildMetadata } from "@/utils/seoUtils";
+import { buildMetadata } from "@/utils/seo";
 
 /**
  * SEO metadata for the Node CLI page.

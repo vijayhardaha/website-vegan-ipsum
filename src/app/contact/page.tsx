@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import PageHeader from "@/components/common/PageHeader";
 import { Author, Projects } from "@/components/sections/contact";
-import { buildMetadata } from "@/utils/seoUtils";
+import { buildMetadata } from "@/utils/seo";
 
 /**
  * SEO metadata for the Contact page.

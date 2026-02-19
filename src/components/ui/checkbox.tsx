@@ -4,7 +4,7 @@ import { useState, ChangeEvent, ReactNode } from "react";
 
 import { LuCheck as CheckIcon } from "react-icons/lu";
 
-import { cn } from "@/utils/classNameUtils";
+import { cn } from "@/utils/classname";
 
 /**
  * Props for the Checkbox component.

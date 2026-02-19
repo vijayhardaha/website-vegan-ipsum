@@ -1,5 +1,3 @@
-// src/constants/navLinks.ts
-
 /**
  * Represents a navigation link.
  * @property {string} label - The display text for the link.

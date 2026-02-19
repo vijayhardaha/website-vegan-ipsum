@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import Container from "@/components/common/Container";
 import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
-import { cn } from "@/utils/classNameUtils";
+import { cn } from "@/utils/classname";
 
 /**
  * This component provides an overview of the HTTP status codes returned by the Vegan Ipsum JSON API.

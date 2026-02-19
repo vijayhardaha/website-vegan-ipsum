@@ -1,4 +1,4 @@
-import { getBaseUrl } from "@/utils/seoUtils";
+import { getBaseUrl } from "@/utils/seo";
 
 /**
  * Represents the structure of SEO-related constants.

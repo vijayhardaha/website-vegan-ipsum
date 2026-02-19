@@ -8,7 +8,7 @@ import {
 	TechnicalOverview,
 	UseCasesSection,
 } from "@/components/sections/about";
-import { buildMetadata } from "@/utils/seoUtils";
+import { buildMetadata } from "@/utils/seo";
 
 /**
  * SEO metadata for the About page.

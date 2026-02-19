@@ -4,7 +4,7 @@ import Container from "@/components/common/Container";
 import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import CodeBlock from "@/components/ui/codeblock";
-import { getCanonicalUrl } from "@/utils/seoUtils";
+import { getCanonicalUrl } from "@/utils/seo";
 
 /**
  * This component provides an example of how to make a GET request to the Vegan Ipsum JSON API.

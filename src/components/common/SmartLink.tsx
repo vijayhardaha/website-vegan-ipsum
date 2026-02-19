@@ -6,7 +6,7 @@ import { AnchorHTMLAttributes, MouseEvent } from "react";
 import Link from "next/link";
 import { RiExternalLinkLine } from "react-icons/ri";
 
-import { cn } from "@/utils/classNameUtils";
+import { cn } from "@/utils/classname";
 
 /**
  * Determines the type of link based on the href

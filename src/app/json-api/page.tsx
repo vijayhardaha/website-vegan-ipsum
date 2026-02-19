@@ -12,7 +12,7 @@ import {
 	ErrorHandling,
 	StatusCodes,
 } from "@/components/sections/json-api";
-import { buildMetadata } from "@/utils/seoUtils";
+import { buildMetadata } from "@/utils/seo";
 
 /**
  * SEO metadata for the JSON API page.
