@@ -12,38 +12,6 @@ export interface SeoProps {
 	slug?: string;
 }
 
-/**
- * Interface representing the structure of metadata used for SEO, Open Graph, and Twitter cards.
- *
- * @example
- * const meta: MetaData = {
- *   title: 'Page Title',
- *   description: 'Page description',
- *   alternates: { canonical: 'https://example.com/page' },
- *   openGraph: { title: 'OG Title', description: 'OG Desc', url: 'https://example.com/page' },
- *   twitter: { title: 'Twitter Title', description: 'Twitter Desc' }
- * };
- */
-export interface MetaData {
-	title: string;
-	description: string;
-
-	alternates: {
-		canonical: string;
-	};
-
-	openGraph: {
-		title: string;
-		description: string;
-		url: string;
-	};
-
-	twitter: {
-		title: string;
-		description: string;
-	};
-}
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyObject = Record<string, any>;
 
@@ -170,12 +138,12 @@ const buildSeoTitle = (title: string = ""): string => {
  * @param {string} [params.title=""] - Page title to include in SEO metadata.
  * @param {string} [params.description=""] - Page description for SEO and social cards.
  * @param {string} [params.slug=""] - URL slug to generate the canonical URL.
- * @returns {MetaData} A metadata object suitable for Next.js metadata and social sharing.
+ * @returns A metadata object suitable for Next.js metadata and social sharing.
  *
  * @example
  * const meta = buildMetadata({ title: 'Recipes', description: 'Vegan recipes', slug: 'recipes' });
  */
-export const buildMetadata = ({ title = "", description = "", slug = "" }: SeoProps): MetaData => {
+export const buildMetadata = ({ title = "", description = "", slug = "" }: SeoProps) => {
 	return mergeDeep(SITE_METADATA, {
 		title: buildSeoTitle(title),
 		description: description,
