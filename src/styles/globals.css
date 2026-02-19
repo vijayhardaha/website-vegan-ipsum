@@ -119,7 +119,6 @@
 		@apply font-heading text-primary-solid leading-tight font-black;
 	}
 
-
 	h3,
 	h4 {
 		@apply font-bold;
