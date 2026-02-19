@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import Link from "next/link";
 
@@ -12,7 +12,7 @@ import CodeBlock from "@/components/ui/codeblock";
 import { buildMetadata } from "@/utils/seo";
 
 /**
- * SEO metadata for the Node CLI page.
+ * SEO metadata for the page.
  */
 export const metadata = buildMetadata({
 	title: "Node CLI",
@@ -22,11 +22,11 @@ export const metadata = buildMetadata({
 });
 
 /**
- * The main page for the Vegan Ipsum Node CLI documentation.
+ * This component renders the Node CLI page.
  *
- * @returns {React.ReactNode} The rendered NodeCliPage component.
+ * @returns {ReactNode} The rendered component.
  */
-export default function NodeCliPage(): React.ReactNode {
+export default function NodeCliPage(): ReactNode {
 	return (
 		<SectionContainer>
 			<PageHeader

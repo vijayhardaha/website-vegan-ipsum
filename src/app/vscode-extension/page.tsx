@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import {
 	FcFlashOn,
@@ -26,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import { buildMetadata } from "@/utils/seo";
 
 /**
- * SEO metadata for the VS Code Extension page.
+ * SEO metadata for the page.
  */
 export const metadata = buildMetadata({
 	title: "VS Code Extension",
@@ -36,11 +36,11 @@ export const metadata = buildMetadata({
 });
 
 /**
- * Documentation page for the Vegan Ipsum VS Code Extension.
+ * This component renders the VS Code Extension page.
  *
- * @returns {React.ReactNode} The rendered VS CodeExtensionPage component.
+ * @returns {ReactNode} The rendered component.
  */
-export default function VSCodeExtensionPage(): React.ReactNode {
+export default function VSCodeExtensionPage(): ReactNode {
 	return (
 		<>
 			<PageHeader

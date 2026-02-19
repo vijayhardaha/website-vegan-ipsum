@@ -5,7 +5,7 @@ import { Author, Projects } from "@/components/sections/contact";
 import { buildMetadata } from "@/utils/seo";
 
 /**
- * SEO metadata for the Contact page.
+ * SEO metadata for the page.
  */
 export const metadata = buildMetadata({
 	title: "Contact",
@@ -15,9 +15,9 @@ export const metadata = buildMetadata({
 });
 
 /**
- * The ContactPage component renders the contact page of the Vegan Ipsum website.
+ * This component renders the contact page.
  *
- * @returns {ReactNode} The rendered ContactPage component.
+ * @returns {ReactNode} The rendered component.
  */
 export default function ContactPage(): ReactNode {
 	return (

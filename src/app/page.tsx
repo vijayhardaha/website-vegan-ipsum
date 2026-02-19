@@ -1,9 +1,9 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import {
 	Hero,
-	HowToUse,
 	IpsumGenerator,
+	HowToUse,
 	Overview,
 	Benefits,
 	Audience,
@@ -12,12 +12,11 @@ import {
 } from "@/components/sections/home/";
 
 /**
- * Home page component.
- * Renders the main sections of the homepage.
+ * This component renders the home page.
  *
- * @returns {React.ReactNode} The rendered homepage.
+ * @returns {ReactNode} The rendered component.
  */
-function Home(): React.ReactNode {
+function Home(): ReactNode {
 	return (
 		<div>
 			<Hero />

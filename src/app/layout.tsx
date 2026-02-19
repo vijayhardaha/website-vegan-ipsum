@@ -36,7 +36,7 @@ export const headingFont = Playfair_Display({
 });
 
 /**
- * Metadata for the application.
+ * Global metadata for the application.
  */
 export const metadata: SiteMetadata = SITE_METADATA;
 

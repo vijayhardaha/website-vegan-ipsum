@@ -15,7 +15,7 @@ import {
 import { buildMetadata } from "@/utils/seo";
 
 /**
- * SEO metadata for the JSON API page.
+ * SEO metadata for the page.
  */
 export const metadata = buildMetadata({
 	title: "JSON API",
@@ -25,11 +25,11 @@ export const metadata = buildMetadata({
 });
 
 /**
- * The main page for the Vegan Ipsum JSON API documentation.
+ * This component renders the JSON API page.
  *
- * @returns {ReactNode} The rendered JsonApiPage component.
+ * @returns {ReactNode} The rendered component.
  */
-export default function JsonApiPage(): ReactNode {
+export default function JsonAPIPage(): ReactNode {
 	return (
 		<>
 			<PageHeader

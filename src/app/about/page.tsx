@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import PageHeader from "@/components/common/PageHeader";
 import {
 	Background,
@@ -11,7 +13,7 @@ import {
 import { buildMetadata } from "@/utils/seo";
 
 /**
- * SEO metadata for the About page.
+ * SEO metadata for the page.
  */
 export const metadata = buildMetadata({
 	title: "About",
@@ -21,11 +23,11 @@ export const metadata = buildMetadata({
 });
 
 /**
- * The AboutPage component renders the about page of the Vegan Ipsum website.
+ * This component renders the about page.
  *
- * @returns {React.ReactNode} The rendered AboutPage component.
+ * @returns {ReactNode} The rendered component.
  */
-export default function AboutPage(): React.ReactNode {
+export default function AboutPage(): ReactNode {
 	return (
 		<>
 			<PageHeader

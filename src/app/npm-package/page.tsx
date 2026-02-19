@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import {
 	FcPuzzle,
@@ -29,11 +29,11 @@ export const metadata = buildMetadata({
 });
 
 /**
- * The main page for the Vegan Ipsum NPM Package documentation.
+ * This component renders the NPM Package page.
  *
- * @returns {React.ReactNode} The rendered NpmPackagePage component.
+ * @returns {ReactNode} The rendered component.
  */
-export default function NpmPackagePage(): React.ReactNode {
+export default function NpmPackagePage(): ReactNode {
 	return (
 		<>
 			<PageHeader
