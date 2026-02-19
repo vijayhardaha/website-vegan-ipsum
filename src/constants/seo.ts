@@ -1,24 +1,22 @@
 import { getBaseUrl } from "@/utils/seo";
 
 /**
- * Represents the structure of SEO-related constants.
+ * Primary SEO values used throughout the application.
  */
-interface SEOConfig {
-	title: string;
-	description: string;
-	titlePostfix: string;
-	separator: string;
-}
+export const SEO_TITLE = "Vegan Ipsum - Ethical, Plant-Based Placeholder Text";
+export const SEO_DESCRIPTION =
+	"Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.";
+export const SEO_TITLE_POSTFIX = "Vegan Ipsum";
+export const SEO_SEPARATOR = "-";
 
 /**
- * An object containing SEO-related constants for the application.
+ * Shared SEO object (kept for backward compatibility).
  */
-export const SEO: SEOConfig = {
-	title: "Vegan Ipsum - Ethical, Plant-Based Placeholder Text",
-	description:
-		"Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.",
-	titlePostfix: "Vegan Ipsum",
-	separator: "-",
+export const GLOBAL_SEO = {
+	title: SEO_TITLE,
+	description: SEO_DESCRIPTION,
+	titlePostfix: SEO_TITLE_POSTFIX,
+	separator: SEO_SEPARATOR,
 };
 
 /**
@@ -67,36 +65,46 @@ export interface SiteMetadata {
 /**
  * The default metadata object used for SEO, Open Graph, and Twitter cards.
  */
-export const siteMetadata: SiteMetadata = {
-	title: SEO.title,
-	description: SEO.description,
+export const SEO_KEYWORDS = [
+	"vegan lorem ipsum",
+	"vegan placeholder text",
+	"vegan ipsum generator",
+	"cruelty-free placeholder text",
+	"ethical lorem ipsum",
+	"plant-based lorem ipsum",
+	"dummy text for vegan projects",
+	"ethical web design tools",
+	"placeholder text generator",
+	"lorem ipsum alternative",
+	"generate vegan placeholder text online",
+	"best lorem ipsum for ethical designers",
+	"free cruelty-free lorem ipsum tool",
+	"vegan ipsum for web developers",
+	"placeholder text for sustainable brands",
+	"vegan content filler",
+	"ethical UI/UX design",
+	"placeholder copy for eco-friendly websites",
+	"vegan copy generator",
+	"lorem ipsum with meaning",
+];
+
+/**
+ * Google Search Console verification code for the site
+ */
+export const GOOGLE_SITE_VERIFICATION = "4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0";
+
+/**
+ * The main metadata object containing all SEO-related information for the website.
+ */
+export const SITE_METADATA: SiteMetadata = {
+	title: SEO_TITLE,
+	description: SEO_DESCRIPTION,
 	metadataBase: new URL(getBaseUrl()),
 	appleTouchIcon: "/apple-touch-icon.png",
 	alternates: {
 		canonical: getBaseUrl(),
 	},
-	keywords: [
-		"vegan lorem ipsum",
-		"vegan placeholder text",
-		"vegan ipsum generator",
-		"cruelty-free placeholder text",
-		"ethical lorem ipsum",
-		"plant-based lorem ipsum",
-		"dummy text for vegan projects",
-		"ethical web design tools",
-		"placeholder text generator",
-		"lorem ipsum alternative",
-		"generate vegan placeholder text online",
-		"best lorem ipsum for ethical designers",
-		"free cruelty-free lorem ipsum tool",
-		"vegan ipsum for web developers",
-		"placeholder text for sustainable brands",
-		"vegan content filler",
-		"ethical UI/UX design",
-		"placeholder copy for eco-friendly websites",
-		"vegan copy generator",
-		"lorem ipsum with meaning",
-	],
+	keywords: SEO_KEYWORDS,
 	author: "Vijay Hardaha",
 	robots: "index, follow",
 	icons: {
@@ -104,11 +112,11 @@ export const siteMetadata: SiteMetadata = {
 		apple: "/apple-touch-icon.png",
 	},
 	verification: {
-		google: "4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0",
+		google: GOOGLE_SITE_VERIFICATION,
 	},
 	openGraph: {
-		title: SEO.title,
-		description: SEO.description,
+		title: SEO_TITLE,
+		description: SEO_DESCRIPTION,
 		images: [
 			{
 				url: "/thumbnail.png",
@@ -117,14 +125,14 @@ export const siteMetadata: SiteMetadata = {
 			},
 		],
 		type: "website",
-		siteName: SEO.title,
+		siteName: SEO_TITLE,
 		locale: "en_US",
 		url: "https://veganipsum.vercel.app",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: SEO.title,
-		description: SEO.description,
+		title: SEO_TITLE,
+		description: SEO_DESCRIPTION,
 		images: ["/thumbnail.png"],
 		creator: "@vijayhardaha",
 	},

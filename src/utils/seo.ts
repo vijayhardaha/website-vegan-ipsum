@@ -1,4 +1,4 @@
-import { siteMetadata, SEO } from "@/constants/seo";
+import { SITE_METADATA, SEO_TITLE, SEO_SEPARATOR, SEO_TITLE_POSTFIX } from "@/constants/seo";
 
 /**
  * Props for generating metadata, including title, description, and slug for URL construction.
@@ -159,8 +159,8 @@ export const getCanonicalUrl = (slug: string = ""): string => {
  * buildSeoTitle('About') // -> 'About - Vegan Ipsum'
  */
 const buildSeoTitle = (title: string = ""): string => {
-	if (!title) return SEO.title;
-	return [title, SEO.separator, SEO.titlePostfix].join(" ");
+	if (!title) return SEO_TITLE;
+	return [title, SEO_SEPARATOR, SEO_TITLE_POSTFIX].join(" ");
 };
 
 /**
@@ -176,7 +176,7 @@ const buildSeoTitle = (title: string = ""): string => {
  * const meta = buildMetadata({ title: 'Recipes', description: 'Vegan recipes', slug: 'recipes' });
  */
 export const buildMetadata = ({ title = "", description = "", slug = "" }: SeoProps): MetaData => {
-	return mergeDeep(siteMetadata, {
+	return mergeDeep(SITE_METADATA, {
 		title: buildSeoTitle(title),
 		description: description,
 		alternates: {
