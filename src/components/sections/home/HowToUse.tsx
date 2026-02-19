@@ -119,7 +119,7 @@ export default function HowToUse(): ReactNode {
 						and start generating compassionate content in seconds.
 					</p>
 
-					<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 						{cardItems.map((card: ICardItem, index: number) => (
 							<div
 								key={index}

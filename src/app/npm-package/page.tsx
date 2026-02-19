@@ -248,7 +248,6 @@ console.log(customText);`}
 						heading="Features"
 						tagline="Why Choose Vegan Ipsum?"
 						icon={<LiaSketch className="h-4 w-4" />}
-						className="mb-12"
 					>
 						<p>
 							Vegan Ipsum is designed to be simple, fast, and flexible. Whether
@@ -256,7 +255,7 @@ console.log(customText);`}
 							you clean, customizable placeholder text without unnecessary complexity.
 						</p>
 
-						<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+						<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 							{[
 								{
 									icon: <FcPuzzle />,

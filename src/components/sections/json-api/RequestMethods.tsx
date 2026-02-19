@@ -28,7 +28,7 @@ export default function RequestMethods(): ReactNode {
 						structure and support all available parameters.
 					</p>
 
-					<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 						<div className="border-border rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
 							<div className="mb-3 flex items-center gap-3">
 								<span className="bg-primary-muted text-primary-dark rounded-lg px-3 py-1 font-mono text-sm font-bold">

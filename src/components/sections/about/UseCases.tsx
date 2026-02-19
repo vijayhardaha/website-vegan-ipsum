@@ -54,7 +54,6 @@ export default function UseCases(): React.ReactNode {
 					heading="Use Cases"
 					tagline="Applications"
 					icon={<LiaBriefcaseSolid className="h-4 w-4" />}
-					className="mb-12"
 				>
 					<p>
 						From design mockups to educational apps, Vegan Ipsum fits seamlessly into
@@ -62,7 +61,7 @@ export default function UseCases(): React.ReactNode {
 					</p>
 				</SectionHeader>
 
-				<div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 					{cardItems.map((card: ICardItem, index: number) => (
 						<div
 							key={index}

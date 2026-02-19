@@ -96,7 +96,7 @@ export default function IpsumGenerator(): React.ReactNode {
 										<h2 id="generated-text" className="text-xl font-bold">
 											Generated Text:
 										</h2>
-										<p className="text-muted-foreground max-w-[220px] text-xs sm:max-w-lg">
+										<p className="text-muted-foreground max-w-[220px] text-sm sm:max-w-lg">
 											{getOutputSummary(output)}
 										</p>
 									</div>
@@ -115,9 +115,10 @@ export default function IpsumGenerator(): React.ReactNode {
 										</Button>
 									</div>
 								</div>
+
 								<div
 									className={cn(
-										"bg-input/20 border-border space-y-4 rounded-xl border p-4 text-sm",
+										"bg-input/20 border-border space-y-4 rounded-2xl border p-6",
 										calculateParagraphs(output) > 4 &&
 											"max-h-96 overflow-y-auto"
 									)}

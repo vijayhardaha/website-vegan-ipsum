@@ -124,7 +124,7 @@ export default function VSCodeExtensionPage(): React.ReactNode {
 							two ways:
 						</p>
 
-						<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+						<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 							<div className="border-border rounded-2xl border bg-white p-6 md:p-8">
 								<div className="mb-6 flex items-center gap-3">
 									<div className="border-border bg-secondary-muted/50 text-secondary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border text-2xl">
@@ -213,7 +213,7 @@ export default function VSCodeExtensionPage(): React.ReactNode {
 							straightforward.
 						</p>
 
-						<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+						<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 							{[
 								{
 									heading: "Open Command Palette",
@@ -292,7 +292,7 @@ export default function VSCodeExtensionPage(): React.ReactNode {
 							must-have tool for developers and designers:
 						</p>
 
-						<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+						<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 							{[
 								{
 									icon: <FcFlashOn />,

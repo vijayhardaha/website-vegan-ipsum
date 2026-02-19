@@ -61,7 +61,6 @@ export default function Audience(): React.ReactNode {
 					heading="Who Can Use Vegan Ipsum?"
 					tagline="Who It's For"
 					icon={<LiaUserFriendsSolid className="h-4 w-4" />}
-					className="mb-12"
 					headingClassName="text-primary-foreground"
 					taglineClassName="text-primary-muted/70"
 				>
@@ -70,7 +69,7 @@ export default function Audience(): React.ReactNode {
 						wireframe to the final build.
 					</p>
 
-					<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 						{cardItems.map((card: ICardItem, index: number) => (
 							<div
 								key={index}

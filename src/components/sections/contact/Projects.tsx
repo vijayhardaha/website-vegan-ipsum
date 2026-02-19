@@ -88,7 +88,6 @@ export default function Projects(): ReactNode {
 					heading="Vegan Ipsum Projects"
 					tagline="Open Source"
 					icon={<LiaCubeSolid className="h-4 w-4" />}
-					className="mb-12"
 				>
 					<p>
 						Explore the various Vegan Ipsum projects that power this ethical,
@@ -96,36 +95,36 @@ export default function Projects(): ReactNode {
 						open-source, welcoming contributions from developers and designers
 						passionate about ethical technology.
 					</p>
-				</SectionHeader>
 
-				<div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-					{cardItems.map((card: ICardItem, index: number) => (
-						<div
-							key={index}
-							className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
-						>
-							<div className="flex items-start gap-4">
-								<div className="bg-primary-muted text-primary inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
-									{card.icon}
-								</div>
-								<div>
-									<h3 className="text-primary-solid mb-2 text-lg">
-										{card.title}
-									</h3>
-									<p className="text-foreground/80 mb-2 text-sm leading-relaxed">
-										{card.text}
-									</p>
-									<SmartLink
-										href={card.link}
-										className="text-primary inline-flex items-center gap-1 text-sm font-medium no-underline transition-all"
-									>
-										{card.buttonText}
-									</SmartLink>
+					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+						{cardItems.map((card: ICardItem, index: number) => (
+							<div
+								key={index}
+								className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
+							>
+								<div className="flex items-start gap-4">
+									<div className="bg-primary-muted text-primary inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
+										{card.icon}
+									</div>
+									<div>
+										<h3 className="text-primary-solid mb-2 text-lg">
+											{card.title}
+										</h3>
+										<p className="text-foreground/80 mb-2 text-sm leading-relaxed">
+											{card.text}
+										</p>
+										<SmartLink
+											href={card.link}
+											className="text-primary inline-flex items-center gap-1 text-sm font-medium no-underline transition-all"
+										>
+											{card.buttonText}
+										</SmartLink>
+									</div>
 								</div>
 							</div>
-						</div>
-					))}
-				</div>
+						))}
+					</div>
+				</SectionHeader>
 			</Container>
 		</Section>
 	);

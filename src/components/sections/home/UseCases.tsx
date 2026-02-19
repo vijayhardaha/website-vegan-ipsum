@@ -57,32 +57,31 @@ export default function UseCases(): React.ReactNode {
 					heading="When to Use Vegan Ipsum?"
 					tagline="Using It"
 					icon={<LiaBookOpenSolid className="h-4 w-4" />}
-					className="mb-12"
 				>
 					<p>
 						Vegan Ipsum is perfect for designers, developers, and content creators who
 						want to add a compassionate touch to their projects.
 					</p>
-				</SectionHeader>
 
-				<div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-					{cardItems.map((card: ICardItem, index: number) => (
-						<div
-							key={index}
-							className="border-border relative flex gap-4 overflow-hidden rounded-2xl border bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"
-						>
-							<span className="bg-secondary-100/70 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
-								{card.icon}
-							</span>
-							<div>
-								<h3 className="text-primary-solid mb-1 text-lg font-bold">
-									{card.title}
-								</h3>
-								<p className="text-sm leading-relaxed">{card.text}</p>
+					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+						{cardItems.map((card: ICardItem, index: number) => (
+							<div
+								key={index}
+								className="border-border relative flex gap-4 overflow-hidden rounded-2xl border bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"
+							>
+								<span className="bg-secondary-100/70 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
+									{card.icon}
+								</span>
+								<div>
+									<h3 className="text-primary-solid mb-1 text-lg font-bold">
+										{card.title}
+									</h3>
+									<p className="text-sm leading-relaxed">{card.text}</p>
+								</div>
 							</div>
-						</div>
-					))}
-				</div>
+						))}
+					</div>
+				</SectionHeader>
 			</Container>
 		</Section>
 	);

@@ -54,14 +54,13 @@ export default function CoreFeatures(): React.ReactNode {
 					heading="Core Features"
 					tagline="Tools"
 					icon={<LiaPlugSolid className="h-4 w-4" />}
-					className="mb-12"
 				>
 					<p>
 						Vegan Ipsum offers multiple integration methods to fit seamlessly into your
 						workflow.
 					</p>
 
-					<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 						{cardItems.map((card: ICardItem, index: number) => (
 							<Link
 								href={card.link}

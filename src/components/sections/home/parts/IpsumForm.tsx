@@ -29,17 +29,20 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): React.ReactNod
 			const response = await fetch(
 				`/api/?count=${Number(amount)}&units=${selectedType}&format=plain`
 			);
+
 			if (!response.ok) {
 				throw new Error("Failed to generate text");
 			}
+
 			const data: { text: string } = await response.json();
+
 			setOutput(data.text);
 		} catch (error) {
 			console.error(error);
 			const errorMessage = "Error generating text. Please try again.";
 			setOutput(errorMessage);
 		} finally {
-			setLoading(false); // Reset loading state
+			setLoading(false);
 		}
 	};
 
@@ -119,7 +122,7 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): React.ReactNod
 				className="md:mt-6"
 				size="lg"
 			>
-				Generate Ipsum
+				{loading ? "Please Wait..." : "Generate Ipsum"}
 			</Button>
 		</form>
 	);

@@ -54,7 +54,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${customSans.variable} ${customMono.variable} ${customHeading.variable} text-foreground bg-background font-base font-sans font-normal antialiased`}
+				className={`${customSans.variable} ${customMono.variable} ${customHeading.variable} text-foreground bg-background font-base font-sans leading-relaxed font-normal antialiased`}
 			>
 				<Layout>{children}</Layout>
 			</body>

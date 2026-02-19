@@ -68,7 +68,6 @@ export default function Author(): ReactNode {
 					heading="Author Contact Links"
 					tagline="Get In Touch"
 					icon={<LiaUser className="h-4 w-4" />}
-					className="mb-12"
 				>
 					<p>
 						Connect directly with the creator of Vegan Ipsum, collaborate on new
@@ -76,33 +75,35 @@ export default function Author(): ReactNode {
 						you&apos;re a fellow developer, designer, content creator, or vegan
 						advocate, all inquiries are warmly welcomed.
 					</p>
+
+					<div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+						{socialLinks.map((social: SocialLink, index) => (
+							<SmartLink
+								key={index}
+								href={social.link}
+								linkLine={false}
+								className="border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-2xl border bg-gradient-to-br p-6 text-center no-underline transition-all hover:-translate-y-1 hover:no-underline"
+							>
+								<div className="text-secondary-dark mb-2 text-3xl">
+									{social.icon}
+								</div>
+								<h3 className="text-primary-solid font-sans text-sm font-bold">
+									{social.platform}
+								</h3>
+								<p className="text-secondary-dark inline-flex items-center gap-0.5 text-sm">
+									{social.handle} <RiExternalLinkLine />
+								</p>
+							</SmartLink>
+						))}
+					</div>
+
+					<p>
+						For business inquiries, collaboration proposals, bug reports, or general
+						feedback about Vegan Ipsum, please don&apos;t hesitate to get in touch. Your
+						input helps improve the project and ensures Vegan Ipsum remains a valuable
+						resource for the ethical design and development community.
+					</p>
 				</SectionHeader>
-
-				<div className="mb-12 grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
-					{socialLinks.map((social: SocialLink, index) => (
-						<SmartLink
-							key={index}
-							href={social.link}
-							linkLine={false}
-							className="group border-border from-secondary-200/10 via-secondary-200/20 to-secondary-200/50 flex flex-col items-center rounded-2xl border bg-gradient-to-br p-6 text-center no-underline transition-all hover:-translate-y-1 hover:no-underline"
-						>
-							<div className="text-secondary-dark mb-2 text-3xl">{social.icon}</div>
-							<h3 className="text-primary-solid mb-1 font-sans text-sm font-bold">
-								{social.platform}
-							</h3>
-							<p className="text-secondary-dark inline-flex items-center gap-0.5 text-xs">
-								{social.handle} <RiExternalLinkLine />
-							</p>
-						</SmartLink>
-					))}
-				</div>
-
-				<p>
-					For business inquiries, collaboration proposals, bug reports, or general
-					feedback about Vegan Ipsum, please don&apos;t hesitate to get in touch. Your
-					input helps improve the project and ensures Vegan Ipsum remains a valuable
-					resource for the ethical design and development community.
-				</p>
 			</Container>
 		</Section>
 	);
