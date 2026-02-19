@@ -4,7 +4,7 @@ import { useId, ReactNode } from "react";
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 // eslint-disable-next-line import/order
 import "react-tooltip/dist/react-tooltip.css";

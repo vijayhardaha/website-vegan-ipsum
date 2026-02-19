@@ -5,7 +5,7 @@ import { cloneElement } from "react";
 
 import { cva } from "class-variance-authority";
 
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 /**
  * Slot component for polymorphic prop forwarding.

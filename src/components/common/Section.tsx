@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 /**
  * Props for the Section component

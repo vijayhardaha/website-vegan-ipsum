@@ -1,4 +1,4 @@
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 // Define TypeScript types for the component props
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {

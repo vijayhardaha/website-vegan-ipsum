@@ -9,7 +9,7 @@ import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import GeneratorForm from "@/components/sections/home/parts/IpsumForm";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 /**
  * IpsumGenerator component for displaying the main introduction and call-to-action buttons.

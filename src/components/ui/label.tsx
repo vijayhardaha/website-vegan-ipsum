@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 
 import { cva } from "class-variance-authority";
 
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 // Define TypeScript types for the component props
 interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {

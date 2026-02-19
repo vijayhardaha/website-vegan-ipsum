@@ -4,7 +4,7 @@ import { useState, ChangeEvent, ReactNode } from "react";
 
 import { LuCheck as CheckIcon } from "react-icons/lu";
 
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 /**
  * Props for the RadioBox component

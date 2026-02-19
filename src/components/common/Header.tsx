@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { LuAlignRight, LuX } from "react-icons/lu";
 
 import { HEADER_NAV_LINKS, INavLink } from "@/constants/navLinks";
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 import { Button } from "../ui/button";
 

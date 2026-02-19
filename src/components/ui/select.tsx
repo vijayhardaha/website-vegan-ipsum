@@ -1,4 +1,4 @@
-import { cn } from "@/utils/classname";
+import { cn } from "@/utils/classnames";
 
 interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
 	className?: string;
