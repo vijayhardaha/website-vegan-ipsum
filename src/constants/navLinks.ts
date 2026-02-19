@@ -20,7 +20,7 @@ export const HEADER_NAV_LINKS: INavLink[] = [
 	{ label: "Home", href: "/" },
 	{ label: "JSON API", href: "/json-api" },
 	{ label: "VS Code Extension", href: "/vscode-extension" },
-	{ label: "Node Cli", href: "/node-cli" },
+	{ label: "Node CLI", href: "/node-cli" },
 	{ label: "NPM Package", href: "/npm-package" },
 	{ label: "About", href: "/about" },
 ];
@@ -31,7 +31,7 @@ export const HEADER_NAV_LINKS: INavLink[] = [
  */
 export const FOOTER_NAV_LINKS: INavLink[] = [
 	{ label: "Json API", href: "/json-api" },
-	{ label: "Node Cli", href: "/node-cli" },
+	{ label: "Node CLI", href: "/node-cli" },
 	{ label: "NPM Package", href: "/npm-package" },
 	{ label: "About", href: "/about" },
 	{ label: "Contact", href: "/contact" },

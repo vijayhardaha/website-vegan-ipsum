@@ -1,9 +1,9 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Mukta, Geist_Mono, Teko } from "next/font/google";
+import { Inter, Geist_Mono, Playfair_Display } from "next/font/google";
 
-import Layout from "@/components/layout/Layout";
+import Layout from "@/components/common/Layout";
 import { baseMetadata, BaseMetadataType } from "@/constants/seo";
 
 import "../styles/globals.css";
@@ -11,9 +11,9 @@ import "../styles/globals.css";
 /**
  * Sans font configuration for a versatile sans-serif font.
  */
-export const customSans = Mukta({
+export const customSans = Inter({
 	weight: ["400", "500", "600", "700"],
-	variable: "--font-custom-sans",
+	variable: "--font-sans",
 	subsets: ["latin"],
 });
 
@@ -23,16 +23,16 @@ export const customSans = Mukta({
 export const customMono = Geist_Mono({
 	weight: ["400", "500", "600", "700"],
 	subsets: ["latin"],
-	variable: "--font-custom-mono",
+	variable: "--font-mono",
 });
 
 /**
  * Mono font configuration for a clean monospace font.
  */
-export const customHeading = Teko({
-	weight: ["400", "500", "600", "700"],
+export const customHeading = Playfair_Display({
+	weight: ["400", "500", "600", "700", "800"],
 	subsets: ["latin"],
-	variable: "--font-custom-heading",
+	variable: "--font-heading",
 });
 
 /**
@@ -43,13 +43,13 @@ export const metadata: BaseMetadataType = baseMetadata;
 /**
  * Root layout component that wraps the application.
  *
- * @param children - React children elements to be rendered inside the layout.
- * @returns The root layout component with global styles and fonts applied.
+ * @param {ReactNode} children - React children elements to be rendered inside the layout.
+ * @returns {ReactNode} The root layout component with global styles and fonts applied.
  */
 export default function RootLayout({
 	children,
 }: Readonly<{
-	children: React.ReactNode;
+	children: ReactNode;
 }>) {
 	return (
 		<html lang="en">

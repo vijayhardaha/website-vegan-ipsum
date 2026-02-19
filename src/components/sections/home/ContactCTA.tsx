@@ -1,0 +1,60 @@
+import { ReactNode } from "react";
+
+import Link from "next/link";
+import { LiaHandshake } from "react-icons/lia";
+import { RiArrowRightLine } from "react-icons/ri";
+
+import Container from "@/components/common/Container";
+import { Section } from "@/components/common/Section";
+import { SectionHeader } from "@/components/common/SectionHeader";
+import { Button } from "@/components/ui/button";
+
+/**
+ * This component renders a call-to-action section
+ * encouraging users to connect with the team for questions,
+ * contributions, or feedback.
+ *
+ * @returns {ReactNode} The rendered component.
+ */
+export default function ContactCTA(): ReactNode {
+	return (
+		<Section
+			aria-label="Section encouraging users to get in touch for questions, contributions, or feedback"
+			className="bg-secondary-muted py-20"
+		>
+			<Container>
+				<SectionHeader
+					heading={
+						<>
+							Let&apos;s build something{" "}
+							<span className="text-primary">meaningful together</span>
+						</>
+					}
+					tagline="Get in Touch"
+					icon={<LiaHandshake className="h-4 w-4" />}
+					className="mx-auto max-w-xl text-center"
+					headingClassName="mx-auto max-w-lg"
+				>
+					<p className="mb-8">
+						We&apos;re building more than a tool, we&apos;re creating a community of
+						conscious creators. Whether you want to contribute code, suggest features,
+						share feedback, or simply connect with like-minded builders, your voice
+						matters here. Let&apos;s make ethical design the standard, not the
+						exception.
+					</p>
+
+					<Button
+						asChild
+						variant="primary"
+						size="lg"
+						aria-label="Navigate to Contact Us page"
+					>
+						<Link href="/contact">
+							Contact <RiArrowRightLine />
+						</Link>
+					</Button>
+				</SectionHeader>
+			</Container>
+		</Section>
+	);
+}

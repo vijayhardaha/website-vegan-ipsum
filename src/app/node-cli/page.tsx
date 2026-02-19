@@ -2,9 +2,13 @@ import React from "react";
 
 import Link from "next/link";
 
-import PageHeader from "@/components/layout/PageHeader";
-import SectionContainer from "@/components/layout/SectionContainer";
-import CodeBlock from "@/components/ui/CodeBlock";
+import Container from "@/components/common/Container";
+import PageHeader from "@/components/common/PageHeader";
+import { Section } from "@/components/common/Section";
+import SectionContainer from "@/components/common/SectionContainer";
+import { SectionHeader } from "@/components/common/SectionHeader";
+import { SmartLink } from "@/components/common/SmartLink";
+import CodeBlock from "@/components/ui/codeblock";
 import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
 
 /**
@@ -12,7 +16,7 @@ import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
  * @type {Metadata}
  */
 export const metadata: Metadata = genMeta({
-	title: "Vegan Ipsum Node CLI",
+	title: "Node CLI",
 	description:
 		"Generate vegan-themed, plant-based placeholder text right from your terminal with the lightweight Vegan Ipsum Node CLI — perfect for ethical developers and creative coders.",
 	slug: "node-cli",
@@ -21,156 +25,223 @@ export const metadata: Metadata = genMeta({
 /**
  * The main page for the Vegan Ipsum Node CLI documentation.
  *
- * @returns {React.JSX.Element} The rendered NodeCliPage component.
+ * @returns {React.ReactNode} The rendered NodeCliPage component.
  */
-export default function NodeCliPage(): React.JSX.Element {
+export default function NodeCliPage(): React.ReactNode {
 	return (
 		<SectionContainer>
 			<PageHeader
-				title="Vegan Ipsum Node CLI"
-				subtitle="Use our Node.js CLI tool to generate vegan-themed placeholder text directly from your terminal."
+				title={
+					<>
+						Vegan Ipsum <span className="text-primary">Node CLI</span>
+					</>
+				}
+				description="Generate vegan-themed, plant-based placeholder text right from your terminal with the lightweight Vegan Ipsum Node CLI - perfect for ethical developers and creative coders."
+				tagline="Lightweight &bull; Terminal-Based &bull; Perfect for Scripting"
 			/>
 
-			<section aria-labelledby="introduction">
-				<h2 id="introduction" className="mb-2 text-2xl">
-					Introduction
-				</h2>
-				<p>
-					The Vegan Ipsum CLI is a lightweight and versatile command-line tool built on
-					Node.js that allows developers, designers, and content creators to generate
-					vegan-themed placeholder text directly in the terminal.
-				</p>
-				<p>
-					Whether you’re working on plant-based blogs, eco-friendly websites, or
-					sustainable product prototypes, this tool offers a quick and fun way to add
-					meaningful, ethical placeholder content during development and testing phases.
-				</p>
-				<p>
-					It’s ideal for scripting, automation, continuous integration workflows, or just
-					spicing up your terminal with delicious vegan ipsum whenever you need it.
-				</p>
-			</section>
+			<Section
+				id="introduction"
+				aria-label="Introduction to the Vegan Ipsum Node CLI"
+				className="pt-8 md:pt-10"
+			>
+				<Container>
+					<SectionHeader heading="Introduction">
+						<p>
+							The Vegan Ipsum CLI is a lightweight and versatile command-line tool
+							built on Node.js that allows developers, designers, and content creators
+							to generate vegan-themed placeholder text directly in the terminal.
+						</p>
+						<p>
+							Whether you&apos;re working on plant-based blogs, eco-friendly websites,
+							or sustainable product prototypes, this tool offers a quick and fun way
+							to add meaningful, ethical placeholder content during development and
+							testing phases.
+						</p>
+						<p>
+							It&apos;s ideal for scripting, automation, continuous integration
+							workflows, or just spicing up your terminal with delicious vegan ipsum
+							whenever you need it.
+						</p>
+					</SectionHeader>
+				</Container>
+			</Section>
 
-			<section aria-labelledby="installation">
-				<h2 id="installation" className="mb-2 text-2xl">
-					Installation
-				</h2>
-				<p>
-					To get started, install the Vegan Ipsum CLI globally using <code>npm</code>.
-					This will make the command available across your system, so you can run it from
-					any directory in your terminal.
-				</p>
-				<CodeBlock language="bash">npm install -g vegan-ipsum</CodeBlock>
-				<p className="text-muted-foreground mt-2 text-sm">
-					Make sure you have <code>Node.js</code> and <code>npm</code> installed on your
-					system before running the installation.
-				</p>
-			</section>
+			<Section
+				id="installation"
+				aria-label="Installation instructions for the Vegan Ipsum Node CLI"
+				className="bg-secondary-muted"
+			>
+				<Container>
+					<SectionHeader heading="Installation">
+						<p className="mb-8">
+							Install the Vegan Ipsum CLI globally to make the{" "}
+							<code>vegan-ipsum</code> command available from any directory in your
+							terminal.
+						</p>
 
-			<section aria-labelledby="usage">
-				<h2 id="usage" className="mb-2 text-2xl">
-					Basic Usage
-				</h2>
-				<p>
-					The command syntax is simple and intuitive. Use the <code>vegan-ipsum</code>{" "}
-					command followed by the number of text units you want to generate and the unit
-					type:
-				</p>
-				<CodeBlock language="bash">
-					{`vegan-ipsum 3 sentences
+						<CodeBlock label="Global Install (npm)" language="bash">
+							npm install -g vegan-ipsum
+						</CodeBlock>
+
+						<p>
+							Ensure that <code>Node.js</code> and <code>npm</code> are installed on
+							your system before running the command.
+						</p>
+
+						<p>After installation, verify that everything is working correctly:</p>
+
+						<CodeBlock label="Verify Installation" language="bash">
+							vegan-ipsum --help
+						</CodeBlock>
+					</SectionHeader>
+				</Container>
+			</Section>
+
+			<Section id="usage" aria-label="Basic usage instructions for the Vegan Ipsum Node CLI">
+				<Container>
+					<SectionHeader heading="Basic Usage">
+						<p className="mb-8">
+							The CLI uses a simple and intuitive command structure. Provide the
+							number of text units followed by the unit type you want to generate.
+						</p>
+
+						<CodeBlock label="Generate Text Examples" language="bash">
+							{`vegan-ipsum 3 sentences
 vegan-ipsum 1 paragraph
 vegan-ipsum 5 words`}
-				</CodeBlock>
-				<p className="mt-2">
-					By default, the CLI outputs plain text paragraphs. You can customize the units
-					and format with flags as described below.
-				</p>
-			</section>
+						</CodeBlock>
 
-			<section aria-labelledby="options">
-				<h2 id="options" className="mb-2 text-2xl">
-					Options & Flags
-				</h2>
-				<p>Enhance your CLI experience by using these helpful options and flags:</p>
-				<ul className="list-disc space-y-2 pl-6">
-					<li>
-						<code>--format html</code>: Outputs vegan ipsum wrapped in HTML paragraph
-						tags, ideal for quick web prototyping.
-					</li>
-					<li>
-						<code>--copy</code>: Automatically copies the generated text to your system
-						clipboard for easy pasting.
-					</li>
-					<li>
-						<code>--help</code>: Displays detailed usage instructions and all available
-						commands and options.
-					</li>
-				</ul>
-				<p className="mt-4">Examples:</p>
-				<CodeBlock language="bash">
-					{`vegan-ipsum 2 paragraphs --format html
+						<p>
+							By default, the CLI outputs plain text. You can further customize the
+							output using optional flags for format and structure.
+						</p>
+
+						<p>
+							Supported units: <code>words</code>, <code>sentences</code>, and{" "}
+							<code>paragraphs</code>.
+						</p>
+					</SectionHeader>
+				</Container>
+			</Section>
+
+			<Section
+				id="options"
+				aria-label="Available CLI options and flags for the Vegan Ipsum Node CLI"
+				className="bg-secondary-muted"
+			>
+				<Container>
+					<SectionHeader heading="Options & Flags">
+						<p>
+							Enhance your CLI experience with the following optional flags. These
+							allow you to customize output format, workflow convenience, and access
+							help information.
+						</p>
+
+						<ul className="list-disc space-y-2 pl-6">
+							<li>
+								<code>--format html</code> — Outputs generated text wrapped in HTML
+								<code>{" <p> "}</code> tags, making it ready for quick web
+								prototyping or markup testing.
+							</li>
+
+							<li>
+								<code>--copy</code> — Automatically copies the generated text to
+								your system clipboard for immediate pasting.
+							</li>
+
+							<li>
+								<code>--help</code> — Displays detailed usage instructions along
+								with all available commands and options.
+							</li>
+						</ul>
+
+						<h3 className="mt-8 mb-2 text-lg">Examples:</h3>
+
+						<CodeBlock label="CLI Examples" language="bash">
+							{`vegan-ipsum 2 paragraphs --format html
 vegan-ipsum 2 paragraphs --copy`}
-				</CodeBlock>
-			</section>
+						</CodeBlock>
+					</SectionHeader>
+				</Container>
+			</Section>
 
-			<section aria-labelledby="tips">
-				<h2 id="tips" className="mb-2 text-2xl">
-					Tips & Best Practices
-				</h2>
-				<ul className="list-disc space-y-2 pl-6">
-					<li>
-						Incorporate the CLI into shell scripts or automation pipelines to generate
-						placeholder content dynamically during builds.
-					</li>
-					<li>
-						Use the <code>--copy</code> flag in combination with clipboard managers to
-						streamline copy-paste workflows.
-					</li>
-					<li>
-						Combine with other command-line utilities such as <code>grep</code>,{" "}
-						<code>awk</code>, or <code>sed</code> for advanced text processing.
-					</li>
-					<li>
-						Try running the command with varying counts for creative, randomized text
-						output every time.
-					</li>
-					<li>
-						Use the HTML output format for rapid prototyping of web pages without extra
-						markup work.
-					</li>
-				</ul>
-			</section>
+			<Section
+				id="resources"
+				aria-label="Tips, best practices, and additional resources for the Vegan Ipsum Node CLI"
+			>
+				<Container>
+					<SectionHeader heading="Tips, Best Practices & Resources">
+						<p>
+							Get the most out of the Vegan Ipsum CLI by incorporating it into your
+							workflow efficiently and exploring additional resources for deeper
+							integration.
+						</p>
 
-			<section aria-labelledby="more-info">
-				<h2 id="more-info" className="mb-2 text-2xl">
-					More Information & Resources
-				</h2>
-				<p>
-					For developers looking to integrate vegan ipsum text programmatically or
-					customize the generator further, check out the{" "}
-					<Link href="/npm-package" className="text-primary font-medium underline">
-						Vegan Ipsum NPM Package
-					</Link>{" "}
-					documentation, which provides comprehensive API details and usage examples.
-				</p>
-				<p>
-					You can also visit the{" "}
-					<Link
-						href="https://www.npmjs.com/package/vegan-ipsum"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-primary font-medium underline"
-						aria-label="Vegan Ipsum NPM package page"
-					>
-						official npm package page
-					</Link>{" "}
-					for installation stats, version history, and community reviews.
-				</p>
-				<p>
-					For bug reports, feature requests, or contributing, visit our GitHub repository
-					linked from the npm page.
-				</p>
-			</section>
+						<h3 className="mt-8 mb-2 text-lg">Tips & Best Practices:</h3>
+
+						<ul className="list-disc space-y-2 pl-6">
+							<li>
+								Integrate the CLI into shell scripts or automation pipelines to
+								dynamically generate placeholder content during builds or testing.
+							</li>
+
+							<li>
+								Use the <code>--copy</code> flag alongside clipboard managers to
+								streamline quick copy-paste workflows.
+							</li>
+
+							<li>
+								Combine with command-line tools like <code>grep</code>,{" "}
+								<code>awk</code>, or <code>sed</code> for advanced text filtering
+								and processing.
+							</li>
+
+							<li>
+								Experiment with different counts and units to produce varied,
+								randomized output for mockups and demos.
+							</li>
+
+							<li>
+								Use the <code>--format html</code> option for rapid web prototyping
+								without manually adding markup.
+							</li>
+						</ul>
+
+						<h3 className="mt-8 mb-2 text-lg">Additional Resources:</h3>
+
+						<p>
+							If you want to integrate vegan ipsum programmatically or customize the
+							generator further, explore the{" "}
+							<Link
+								href="/npm-package"
+								className="text-primary font-medium underline"
+							>
+								Vegan Ipsum NPM Package
+							</Link>{" "}
+							documentation for detailed API references and usage examples.
+						</p>
+
+						<p>
+							You can also visit the{" "}
+							<SmartLink
+								href="https://www.npmjs.com/package/vegan-ipsum"
+								className="text-primary underline"
+								aria-label="Official Vegan Ipsum NPM package page"
+							>
+								official npm package page
+							</SmartLink>{" "}
+							to view installation statistics, version history, and community
+							feedback.
+						</p>
+
+						<p>
+							For bug reports, feature requests, or contributions, visit the GitHub
+							repository linked on the npm page.
+						</p>
+					</SectionHeader>
+				</Container>
+			</Section>
 		</SectionContainer>
 	);
 }

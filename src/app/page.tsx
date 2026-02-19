@@ -1,25 +1,41 @@
 import React from "react";
 
-import SectionContainer from "@/components/layout/SectionContainer";
-import AboutSection from "@/components/pages/home/AboutSection";
-import CallToActionSection from "@/components/pages/home/CallToActionSection";
-import HeroGeneratorSection from "@/components/pages/home/HeroGeneratorSection";
+import {
+	Hero,
+	HowToUse,
+	IpsumGenerator,
+	Overview,
+	Benefits,
+	Audience,
+	UseCases,
+	ContactCTA,
+} from "@/components/sections/home/";
 
 /**
  * Home page component.
  * Renders the main sections of the homepage.
  *
- * @returns {React.JSX.Element} The rendered homepage.
+ * @returns {React.ReactNode} The rendered homepage.
  */
-function Home(): React.JSX.Element {
+function Home(): React.ReactNode {
 	return (
-		<SectionContainer>
-			<HeroGeneratorSection />
+		<div>
+			<Hero />
 
-			<AboutSection />
+			<IpsumGenerator />
 
-			<CallToActionSection />
-		</SectionContainer>
+			<HowToUse />
+
+			<Overview />
+
+			<Benefits />
+
+			<Audience />
+
+			<UseCases />
+
+			<ContactCTA />
+		</div>
 	);
 }
 

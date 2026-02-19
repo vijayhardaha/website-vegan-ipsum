@@ -14,10 +14,10 @@ interface SectionContainerProps {
  * A layout component that wraps its children in a container with consistent spacing.
  *
  * @param {SectionContainerProps} props - The props for the component.
- * @returns {React.JSX.Element} The rendered container component.
+ * @returns {React.ReactNode} The rendered container component.
  */
 const SectionContainer: React.FC<SectionContainerProps> = ({ children, className }) => {
-	return <div className={cn("space-y-12", className)}>{children}</div>;
+	return <div className={cn(className)}>{children}</div>;
 };
 
 export default SectionContainer;

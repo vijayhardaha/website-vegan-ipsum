@@ -57,7 +57,7 @@ export type BaseMetadataType = {
  * An object containing SEO-related constants for the application.
  */
 export const SEO: SEOType = {
-	title: "Vegan Ipsum – Ethical, Plant-Based Placeholder Text",
+	title: "Vegan Ipsum - Ethical, Plant-Based Placeholder Text",
 	description:
 		"Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.",
 	titlePostfix: "Vegan Ipsum",

@@ -53,48 +53,57 @@ Slot.displayName = "Slot";
  */
 const buttonVariants = cva(
 	[
-		"inline-flex items-center justify-center gap-2",
-		"whitespace-nowrap shrink-0",
-		"text-xs font-bold leading-none tracking-[0.75px]",
-		"outline-none border uppercase",
+		"inline-flex items-center justify-center gap-1",
+		"whitespace-nowrap shrink-0 border",
+		"text-sm font-semibold leading-none rounded-lg",
 		"cursor-pointer disabled:pointer-events-none disabled:opacity-50",
-		"[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
-		"focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-		"aria-invalid:border-destructive aria-invalid:ring-destructive/20",
-		"transition-all active:translate-y-0.25",
+		"focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+		"transition-colors no-underline hover:no-underline",
 	],
 	{
 		variants: {
 			variant: {
 				primary: [
 					"bg-primary border-primary text-primary-foreground",
-					"hover:bg-primary/85 hover:text-primary-foreground",
-					"focus-visible:ring-foreground/20",
+					"hover:bg-primary/80 hover:border-primary/80 hover:text-primary-foreground",
+					"focus:ring-primary-muted",
 				].join(" "),
-				light: [
+				"primary-outline": [
+					"bg-transparent border-primary text-primary",
+					"hover:bg-primary/80 hover:border-primary/80 hover:text-primary-foreground",
+					"focus:ring-primary-muted",
+				].join(" "),
+				secondary: [
 					"bg-secondary border-secondary text-secondary-foreground",
-					"hover:bg-secondary-foreground hover:border-secondary-foreground hover:text-background",
-					"focus-visible:ring-secondary-foreground/10",
+					"hover:bg-secondary/60 hover:border-secondary/60 hover:text-secondary-foreground",
+					"focus:ring-secondary/50",
 				].join(" "),
-				dark: [
-					"bg-secondary-foreground border-secondary-foreground text-background",
-					"hover:bg-primary hover:border-primary hover:text-primary-foreground",
-					"focus-visible:ring-background-foreground/10",
+				"secondary-outline": [
+					"bg-transparent border-secondary text-secondary",
+					"hover:bg-secondary/60 hover:border-secondary/60 hover:text-secondary-foreground",
+					"focus:ring-secondary/50",
 				].join(" "),
-				outline: [
-					"bg-background border-primary text-primary",
-					"hover:bg-primary hover:border-primary hover:text-primary-foreground",
+				white: [
+					"bg-white border-white text-secondary-dark",
+					"hover:bg-white/80 hover:border-white/80 hover:text-secondary-dark",
+					"focus:ring-secondary/50",
+				].join(" "),
+				"white-outline": [
+					"bg-transparent border-white text-white",
+					"hover:bg-white hover:border-white hover:text-secondary-dark",
+					"focus:ring-secondary/50",
 				].join(" "),
 				link: [
-					"border-transparent",
-					"text-primary underline-offset-4 !p-0",
-					"hover:underline",
+					"border-none",
+					"text-primary underline-offset-3 !p-0",
+					"hover:underline focus:ring-0",
 				].join(" "),
 			},
 			size: {
-				sm: "h-8 gap-1.5 px-4 has-[>svg]:px-3.5",
-				md: "h-10 px-6 py-2 has-[>svg]:px-5",
-				lg: "h-12 px-8 has-[>svg]:px-7",
+				sm: "h-8 gap-1.5 px-4 text-xs",
+				md: "h-10 px-6 py-2 text-xs",
+				lg: "h-12 px-8",
+				xl: "h-14 px-10 text-base border-2",
 				icon: "size-10 p-1 active:translate-y-0",
 			},
 		},
@@ -110,8 +119,15 @@ const buttonVariants = cva(
  */
 type ButtonProps = {
 	className?: string;
-	variant?: "primary" | "outline" | "light" | "link" | "dark";
-	size?: "md" | "sm" | "lg" | "icon";
+	variant?:
+		| "primary"
+		| "primary-outline"
+		| "secondary"
+		| "secondary-outline"
+		| "white"
+		| "white-outline"
+		| "link";
+	size?: "md" | "sm" | "lg" | "xl" | "icon";
 	asChild?: boolean;
 	children: React.ReactNode; // Allow any valid ReactNode (string, ReactElement, etc.)
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -127,8 +143,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 			<Comp
 				data-slot="button"
 				className={cn(buttonVariants({ variant, size, className }))}
-				{...validProps}
 				ref={ref}
+				{...validProps}
 			>
 				{children}
 			</Comp>

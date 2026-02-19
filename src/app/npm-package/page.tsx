@@ -1,10 +1,21 @@
 import React from "react";
 
-import Link from "next/link";
+import {
+	FcPuzzle,
+	FcWorkflow,
+	FcSettings,
+	FcGlobe,
+	FcCommandLine,
+	FcBiomass,
+} from "react-icons/fc";
+import { LiaSketch } from "react-icons/lia";
 
-import PageHeader from "@/components/layout/PageHeader";
-import SectionContainer from "@/components/layout/SectionContainer";
-import CodeBlock from "@/components/ui/CodeBlock";
+import Container from "@/components/common/Container";
+import PageHeader from "@/components/common/PageHeader";
+import { Section } from "@/components/common/Section";
+import { SectionHeader } from "@/components/common/SectionHeader";
+import { SmartLink } from "@/components/common/SmartLink";
+import CodeBlock from "@/components/ui/codeblock";
 import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
 
 /**
@@ -12,85 +23,142 @@ import { generateMetadata as genMeta, Metadata } from "@/utils/seoUtils";
  * @type {Metadata}
  */
 export const metadata: Metadata = genMeta({
-	title: "Vegan Ipsum NPM Package",
+	title: "NPM Package",
 	description:
-		"Effortlessly generate plant-based, vegan-themed placeholder text in your JavaScript projects with the Vegan Ipsum NPM package — ideal for ethical developers.",
+		"Effortlessly generate plant-based, vegan-themed placeholder text in your JavaScript projects with the Vegan Ipsum NPM package - ideal for ethical developers.",
 	slug: "npm-package",
 });
 
 /**
  * The main page for the Vegan Ipsum NPM Package documentation.
  *
- * @returns {React.JSX.Element} The rendered NpmPackagePage component.
+ * @returns {React.ReactNode} The rendered NpmPackagePage component.
  */
-export default function NpmPackagePage(): React.JSX.Element {
+export default function NpmPackagePage(): React.ReactNode {
 	return (
-		<SectionContainer>
+		<>
 			<PageHeader
-				title="Vegan Ipsum NPM Package"
-				subtitle="Generate vegan-themed placeholder text effortlessly in your JavaScript projects."
+				title={
+					<>
+						Vegan Ipsum <span className="text-primary">NPM Package</span>
+					</>
+				}
+				description="Generate vegan-themed placeholder text effortlessly in your JavaScript projects."
+				tagline="Lightweight &bull; Developer-Friendly &bull; ESM & CommonJS Support"
 			/>
 
-			<section aria-labelledby="introduction" className="mb-8">
-				<h2 id="introduction" className="mb-2 text-2xl">
-					Introduction
-				</h2>
-				<div className="space-y-4">
-					<p>
-						<Link
-							href="https://www.npmjs.com/package/vegan-ipsum"
-							className="text-primary underline"
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label="Vegan Ipsum NPM package page"
-						>
-							vegan-ipsum
-						</Link>{" "}
-						is a lightweight and flexible JavaScript library for generating vegan-themed
-						placeholder text, providing a meaningful alternative to traditional{" "}
-						<code>lorem-ipsum</code> dummy text.
-					</p>
-					<p>
-						Designed for developers, designers, and content creators, this package
-						allows you to add ethically inspired, plant-based filler text to your
-						projects, whether you&apos;re building vegan blogs, environmental websites,
-						or apps promoting compassionate living.
-					</p>
-					<p>
-						The library supports multiple environments, including Node.js, modern
-						browsers, and React Native, making it versatile and easy to integrate in a
-						variety of JavaScript workflows.
-					</p>
-				</div>
-			</section>
-
-			<section aria-labelledby="installation" className="mb-8">
-				<h2 id="installation" className="mb-2 text-2xl">
-					Installation
-				</h2>
-				<p>
-					To add <code>vegan-ipsum</code> to your project, use the following npm command.
-					It installs the package locally to your project directory:
-				</p>
-				<CodeBlock language="bash">npm install vegan-ipsum</CodeBlock>
-				<p className="text-muted-foreground mt-2 text-sm">
-					You can also use <code>yarn add vegan-ipsum</code> if you prefer Yarn as your
-					package manager.
-				</p>
-			</section>
-
-			<section aria-labelledby="usage">
-				<h2 id="usage" className="mb-2 text-2xl">
-					Usage
-				</h2>
-				<div className="space-y-8">
-					<div>
+			<Section
+				id="introduction"
+				aria-label="Introduction to the Vegan Ipsum NPM Package"
+				className="pt-8 md:pt-10"
+			>
+				<Container>
+					<SectionHeader heading="Introduction">
 						<p>
-							<strong>Class-based usage:</strong> Import the <code>VeganIpsum</code>{" "}
-							class and create an instance to generate placeholder text with custom
-							configuration for sentence and paragraph lengths.
+							<SmartLink
+								href="https://www.npmjs.com/package/vegan-ipsum"
+								className="text-primary underline"
+								aria-label="Vegan Ipsum NPM package page"
+							>
+								vegan-ipsum
+							</SmartLink>{" "}
+							is a lightweight and flexible JavaScript library for generating
+							vegan-themed placeholder text, providing a meaningful alternative to
+							traditional <code>lorem-ipsum</code> dummy text.
 						</p>
-						<CodeBlock language="javascript">
+
+						<p>
+							Designed for developers, designers, and content creators, this package
+							allows you to add ethically inspired, plant-based filler text to your
+							projects, whether you&apos;re building vegan blogs, environmental
+							websites, or apps promoting compassionate living.
+						</p>
+
+						<p>
+							The library supports multiple environments, including Node.js, modern
+							browsers, and React Native, making it versatile and easy to integrate in
+							a variety of JavaScript workflows.
+						</p>
+					</SectionHeader>
+				</Container>
+			</Section>
+
+			<Section
+				id="installation"
+				aria-label="Installation instructions for the Vegan Ipsum NPM package"
+				className="bg-secondary-muted"
+			>
+				<Container>
+					<SectionHeader heading="Installation">
+						<p>
+							Install <code>vegan-ipsum</code> using your preferred package manager.
+							You can install it locally (recommended for most projects) or globally
+							if you want to use it as a CLI tool.
+						</p>
+
+						<h3 className="mt-8 mb-2 text-lg">Local Installation</h3>
+						<p>
+							Adds <code>vegan-ipsum</code> to your project&apos;s dependencies.
+						</p>
+
+						<CodeBlock label="npm" language="bash">
+							npm install vegan-ipsum
+						</CodeBlock>
+
+						<CodeBlock label="Yarn" language="bash">
+							yarn add vegan-ipsum
+						</CodeBlock>
+
+						<CodeBlock label="pnpm" language="bash">
+							pnpm add vegan-ipsum
+						</CodeBlock>
+
+						<h3 className="mt-12 mb-2 text-lg">Global Installation</h3>
+						<p>
+							Installs the package globally so you can use it from the command line
+							anywhere on your system.
+						</p>
+
+						<CodeBlock label="npm (global)" language="bash">
+							npm install -g vegan-ipsum
+						</CodeBlock>
+					</SectionHeader>
+				</Container>
+			</Section>
+
+			<Section
+				id="usage"
+				aria-label="Usage instructions and examples for the Vegan Ipsum NPM package"
+			>
+				<Container>
+					<SectionHeader heading="Usage">
+						<p>
+							After installation, you can import <code>vegan-ipsum</code> into your
+							JavaScript or TypeScript project to generate plant-based placeholder
+							text programmatically.
+						</p>
+
+						<p>The package supports two usage styles:</p>
+
+						<ul className="list-disc space-y-2 pl-6">
+							<li>
+								<strong>Class-based API</strong>: ideal when you need structured,
+								reusable configuration.
+							</li>
+							<li>
+								<strong>Functional API</strong>: perfect for quick, inline text
+								generation.
+							</li>
+						</ul>
+
+						<h3 className="mt-8 mb-2 text-lg">Class-Based Usage:</h3>
+						<p>
+							Import the <code>VeganIpsum</code> class and create an instance with
+							configuration options. This gives you fine-grained control over sentence
+							length, paragraph structure, and output style.
+						</p>
+
+						<CodeBlock label="Javascript - Class-Based Usage" language="javascript">
 							{`import { VeganIpsum } from "vegan-ipsum";
 
 const vegan = new VeganIpsum({
@@ -107,25 +175,26 @@ console.log(vegan.generateSentences(5));
 // Generate seven paragraphs
 console.log(vegan.generateParagraphs(7));`}
 						</CodeBlock>
-						<p className="text-muted-foreground mt-2 text-sm">
-							This approach gives you fine-grained control over text structure and
-							output style.
-						</p>
-					</div>
 
-					<div>
 						<p>
-							<strong>Functional interface:</strong> For quick and simple needs, use
-							the default exported function to generate vegan ipsum text with
-							customizable options passed as an object.
+							Use this approach when you need consistent formatting across multiple
+							calls or want full control over how the text is structured.
 						</p>
-						<CodeBlock language="javascript">
+
+						<h3 className="mt-8 mb-2 text-lg">Functional Usage:</h3>
+						<p>
+							For quick and simple use cases, call the default exported function. It
+							generates text immediately and accepts an options object for
+							customization.
+						</p>
+
+						<CodeBlock label="Javascript - Functional Usage" language="javascript">
 							{`import { VeganIpsum } from "vegan-ipsum";
 
 // Generates one sentence by default
 const sentence = VeganIpsum();
 
-// Generates 1 plain text sentence with custom bounds and units
+// Generates custom text with advanced options
 const customText = VeganIpsum({
   count: 1,
   format: "plain",        // "plain" or "html"
@@ -134,89 +203,115 @@ const customText = VeganIpsum({
   sentenceLowerBound: 5,
   sentenceUpperBound: 15,
   random: Math.random,
-  suffix: "\\n",
   units: "sentences",     // "words", "sentences", or "paragraphs"
 });
 
 console.log(customText);`}
 						</CodeBlock>
-						<p className="text-muted-foreground mt-2 text-sm">
-							This functional form is perfect for quick inline text generation or
-							one-off calls.
+
+						<p>
+							This form is best for one-off calls, CLI usage, or situations where you
+							don&apos;t need to maintain a reusable instance.
 						</p>
-					</div>
-				</div>
-			</section>
 
-			<section aria-labelledby="cli">
-				<h2 id="cli" className="mb-2 text-2xl">
-					Command Line Interface (CLI)
-				</h2>
-				<p>
-					Along with the JavaScript API, <code>vegan-ipsum</code> includes a handy CLI
-					tool that allows you to generate vegan placeholder text directly from your
-					terminal or shell scripts.
-				</p>
-				<p>Install the CLI globally with npm:</p>
-				<CodeBlock language="bash">npm install -g vegan-ipsum</CodeBlock>
-				<p className="mt-4 font-bold">CLI Usage Examples:</p>
-				<CodeBlock language="bash">
-					{`vegan-ipsum 2 words
-vegan-ipsum 3 sentences
-vegan-ipsum 1 paragraph
-vegan-ipsum 2 paragraphs --copy
-vegan-ipsum 2 paragraphs --format html`}
-				</CodeBlock>
-				<p className="mt-2">
-					Use the <code>--copy</code> flag to automatically copy output to your clipboard
-					or <code>--format html</code> to generate HTML formatted paragraphs.
-				</p>
-			</section>
+						<h3 className="mt-8 mb-2 text-lg">Learn More:</h3>
 
-			<section aria-labelledby="features">
-				<h2 id="features" className="mb-2 text-2xl">
-					Features
-				</h2>
-				<ul className="list-disc space-y-2 pl-6">
-					<li>Extremely lightweight with zero dependencies for fast performance.</li>
-					<li>
-						Supports both CommonJS and ES Module import styles for broad compatibility.
-					</li>
-					<li>Fully customizable output parameters for tailored text generation.</li>
-					<li>
-						Compatible across Node.js, browser environments, and React Native
-						applications.
-					</li>
-					<li>Includes a user-friendly CLI for quick terminal-based text generation.</li>
-					<li>
-						Ethically themed text that supports vegan and plant-based content projects.
-					</li>
-				</ul>
-			</section>
+						<p>
+							For complete API documentation, advanced configuration options, and
+							contribution guidelines, visit the official{" "}
+							<SmartLink
+								href="https://www.npmjs.com/package/vegan-ipsum"
+								className="text-primary underline"
+								aria-label="Vegan Ipsum NPM package page"
+							>
+								npm package page
+							</SmartLink>
+							.
+						</p>
 
-			<section aria-labelledby="more-info">
-				<h2 id="more-info" className="mb-2 text-2xl">
-					More Information
-				</h2>
-				<p>
-					For detailed API documentation, advanced configuration options, and contribution
-					guidelines, visit the official{" "}
-					<Link
-						href="https://www.npmjs.com/package/vegan-ipsum"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-primary font-medium underline"
-						aria-label="Vegan Ipsum NPM package page"
+						<p>
+							You can also explore the GitHub repository linked from the npm page to
+							review the source code, report issues, request features, or submit pull
+							requests.
+						</p>
+					</SectionHeader>
+				</Container>
+			</Section>
+
+			<Section
+				id="features"
+				aria-label="Features of the Vegan Ipsum NPM Package"
+				className="bg-secondary-muted"
+			>
+				<Container>
+					<SectionHeader
+						heading="Features"
+						tagline="Why Choose Vegan Ipsum?"
+						icon={<LiaSketch className="h-4 w-4" />}
+						className="mb-12"
 					>
-						npm package page
-					</Link>
-					.
-				</p>
-				<p>
-					You can also check the GitHub repository linked on the npm page for source code,
-					issue tracking, and to submit pull requests.
-				</p>
-			</section>
-		</SectionContainer>
+						<p>
+							Vegan Ipsum is designed to be simple, fast, and flexible. Whether
+							you&apos;re building web apps, Node.js services, or CLI tools, it gives
+							you clean, customizable placeholder text without unnecessary complexity.
+						</p>
+
+						<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+							{[
+								{
+									icon: <FcPuzzle />,
+									heading: "Zero Dependencies",
+									content:
+										"Extremely lightweight and dependency-free, keeping your bundle size small and your project fast.",
+								},
+								{
+									icon: <FcWorkflow />,
+									heading: "CommonJS & ES Module Support",
+									content:
+										"Works seamlessly with both require() and import syntax, making it compatible with modern and legacy setups.",
+								},
+								{
+									icon: <FcSettings />,
+									heading: "Fully Customizable Output",
+									content:
+										"Control sentence length, paragraph size, formatting style, and output type to match your exact content needs.",
+								},
+								{
+									icon: <FcGlobe />,
+									heading: "Runs Everywhere",
+									content:
+										"Compatible with Node.js, browsers, and React Native, so you can generate text in virtually any JavaScript environment.",
+								},
+								{
+									icon: <FcCommandLine />,
+									heading: "Built-in CLI Support",
+									content:
+										"Generate vegan placeholder text directly from your terminal with a simple and intuitive command-line interface.",
+								},
+								{
+									icon: <FcBiomass />,
+									heading: "Ethically Themed Content",
+									content:
+										"Perfect for plant-based, sustainable, and ethical projects that want placeholder text aligned with their values.",
+								},
+							].map((feature, index) => (
+								<div
+									key={index}
+									className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
+								>
+									<h3 className="mb-2 flex items-center gap-2 text-lg">
+										<span className="relative top-0.5 text-xl">
+											{feature.icon}
+										</span>{" "}
+										{feature.heading}
+									</h3>
+									<p className="text-sm leading-relaxed">{feature.content}</p>
+								</div>
+							))}
+						</div>
+					</SectionHeader>
+				</Container>
+			</Section>
+		</>
 	);
 }
