@@ -7,7 +7,7 @@
 		"forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
 		"incremental": true, // Enable incremental compilation, which saves information about the project graph from the last compilation to only recompile files that have changed.
 		"isolatedModules": true, // Ensure that each file can be safely transpiled without relying on other imports.
-		"jsx": "preserve", // Keep JSX as part of the output to be further consumed by another transform step (e.g., Babel).
+		"jsx": "react-jsx", // Keep JSX as part of the output to be further consumed by another transform step (e.g., Babel).
 		"lib": ["dom", "dom.iterable"], // Include library files for DOM and DOM iterable features.
 		"module": "esnext", // Specify the module code generation method. "esnext" allows for the latest ECMAScript module features.
 		"moduleResolution": "node", // Use Node.js module resolution strategy.
@@ -31,6 +31,7 @@
 		"*.config.mjs",
 		"next-env.d.ts",
 		"*.d.ts",
-		".next/types/**/*.ts"
+		".next/types/**/*.ts",
+		".next/dev/types/**/*.ts"
 	]
 }
