@@ -7,7 +7,7 @@ import Container from "./Container";
  * @property {string} title - The main title of the page.
  * @property {string} [subtitle] - An optional subtitle providing additional context.
  */
-interface IPageHeaderProps {
+interface PageHeaderProps {
 	title: string | ReactElement;
 	description?: string | ReactElement;
 	tagline?: string | ReactElement;
@@ -17,7 +17,7 @@ interface IPageHeaderProps {
 /**
  * A reusable page header component that displays a title and an optional subtitle.
  *
- * @param {IPageHeaderProps} props - The props for the component.
+ * @param {PageHeaderProps} props - The props for the component.
  * @returns {ReactNode} The rendered PageHeader component.
  */
 export default function PageHeader({
@@ -25,7 +25,7 @@ export default function PageHeader({
 	description,
 	tagline,
 	children,
-}: IPageHeaderProps): ReactNode {
+}: PageHeaderProps): ReactNode {
 	return (
 		<section className="relative py-16 pb-6 md:py-24 md:pb-10">
 			<div className="pointer-events-none absolute top-[-120px] right-[8%] h-[450px] w-[450px] rounded-full bg-[#d4edcc] opacity-36 blur-[80px]"></div>
