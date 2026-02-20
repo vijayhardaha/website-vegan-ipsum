@@ -11,7 +11,7 @@ import { cn } from "@/utils/classnames";
 
 import { Button } from "../ui/button";
 
-import { SmartLink } from "./SmartLink";
+import SmartLink from "./SmartLink";
 
 /**
  * Header component for the website.

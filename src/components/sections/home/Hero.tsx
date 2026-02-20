@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import Container from "@/components/common/Container";
-import { SmartLink } from "@/components/common/SmartLink";
+import SmartLink from "@/components/common/SmartLink";
 import { Button } from "@/components/ui/button";
 
 /**

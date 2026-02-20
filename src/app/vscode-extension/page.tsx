@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { Metadata } from "next";
 
 import PageHeader from "@/components/common/PageHeader";
-import { SmartLink } from "@/components/common/SmartLink";
+import SmartLink from "@/components/common/SmartLink";
 import {
 	Features,
 	Installation,

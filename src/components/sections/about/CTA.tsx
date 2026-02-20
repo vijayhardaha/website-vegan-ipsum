@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import Container from "@/components/common/Container";
 import { Section } from "@/components/common/Section";
-import { SmartLink } from "@/components/common/SmartLink";
+import SmartLink from "@/components/common/SmartLink";
 import { Button } from "@/components/ui/button";
 
 export default function CTA(): ReactNode {

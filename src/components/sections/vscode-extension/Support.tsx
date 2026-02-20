@@ -5,7 +5,7 @@ import { LiaBugSolid } from "react-icons/lia";
 import Container from "@/components/common/Container";
 import { Section } from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
-import { SmartLink } from "@/components/common/SmartLink";
+import SmartLink from "@/components/common/SmartLink";
 
 /**
  * This component renders the support section of the VS Code Extension page.

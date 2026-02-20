@@ -31,7 +31,7 @@ const scrollToElement = (elementId: string): void => {
 /**
  * Props for the SmartLink component
  */
-export interface SmartLinkProps extends Omit<
+interface SmartLinkProps extends Omit<
 	AnchorHTMLAttributes<HTMLAnchorElement>,
 	"href" | "target" | "rel"
 > {
@@ -59,7 +59,7 @@ export interface SmartLinkProps extends Omit<
  * - Internal links (/path) without external attributes
  * - External links (https://...) with proper security attributes
  */
-export const SmartLink = ({
+const SmartLink = ({
 	href,
 	className,
 	"aria-label": ariaLabel,
@@ -146,3 +146,5 @@ export const SmartLink = ({
 		</Link>
 	);
 };
+
+export default SmartLink;
