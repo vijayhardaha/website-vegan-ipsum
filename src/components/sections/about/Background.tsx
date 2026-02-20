@@ -4,7 +4,7 @@ import { LiaBookSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
-import { SectionHeader } from "@/components/common/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 import SmartLink from "@/components/common/SmartLink";
 
 /**

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
-import { SectionHeader } from "@/components/common/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 
 /**
  * This component outlines the HTTP request methods supported by the Vegan Ipsum JSON API.

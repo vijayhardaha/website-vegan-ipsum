@@ -6,7 +6,7 @@ import { LiaHashtagSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
-import { SectionHeader } from "@/components/common/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 import GeneratorForm from "@/components/sections/home/parts/IpsumForm";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/utils/classnames";

@@ -4,7 +4,7 @@ import { LiaBriefcaseSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
-import { SectionHeader } from "@/components/common/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 
 /**
  * Represents the details of card items used in the component.

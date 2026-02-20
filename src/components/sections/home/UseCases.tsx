@@ -5,7 +5,7 @@ import { LiaBookOpenSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
-import { SectionHeader } from "@/components/common/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 
 /**
  * Represents the details of a card displayed in the component.

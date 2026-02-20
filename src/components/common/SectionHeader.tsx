@@ -30,7 +30,7 @@ export interface SectionHeaderProps {
  *
  * @return {ReactNode} The rendered section header component.
  */
-export const SectionHeader = ({
+const SectionHeader = ({
 	tagline,
 	heading,
 	icon = undefined,
@@ -56,3 +56,5 @@ export const SectionHeader = ({
 		</div>
 	);
 };
+
+export default SectionHeader;

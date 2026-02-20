@@ -4,7 +4,7 @@ import { LiaLightbulbSolid, LiaSearchSolid, LiaKeyboardSolid } from "react-icons
 
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
-import { SectionHeader } from "@/components/common/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 
 /**
  * This component renders the installation section for the VS Code Extension page.

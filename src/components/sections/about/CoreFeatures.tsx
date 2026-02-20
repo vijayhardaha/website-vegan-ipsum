@@ -6,7 +6,7 @@ import { LiaCloudSolid, LiaCodeSolid, LiaNpm, LiaTerminalSolid } from "react-ico
 
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
-import { SectionHeader } from "@/components/common/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 
 /**
  * Represents the details of a card item used in the  component.
