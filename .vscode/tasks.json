@@ -1,0 +1,61 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "npm: dev",
+			"type": "npm",
+			"script": "dev",
+			"presentation": { "reveal": "always" }
+		},
+		{
+			"label": "npm: build",
+			"type": "npm",
+			"script": "build",
+			"group": { "kind": "build", "isDefault": true },
+			"presentation": { "reveal": "always" }
+		},
+		{
+			"label": "npm: start",
+			"type": "npm",
+			"script": "start",
+			"presentation": { "reveal": "always" }
+		},
+		{
+			"label": "npm: lint:check",
+			"type": "npm",
+			"script": "lint:check",
+			"presentation": { "reveal": "always" }
+		},
+		{
+			"label": "npm: lint:fix",
+			"type": "npm",
+			"script": "lint:fix",
+			"presentation": { "reveal": "always" }
+		},
+		{
+			"label": "npm: postbuild",
+			"type": "npm",
+			"script": "postbuild",
+			"presentation": { "reveal": "always" }
+		},
+		{
+			"label": "npm: preindexnow",
+			"type": "npm",
+			"script": "preindexnow",
+			"presentation": { "reveal": "always" }
+		},
+		{
+			"label": "npm: indexnow",
+			"type": "npm",
+			"script": "indexnow",
+			"presentation": { "reveal": "always" }
+		},
+		{
+			"label": "npm: typecheck",
+			"type": "npm",
+			"script": "typecheck",
+			"presentation": { "reveal": "always" },
+			"problemMatcher": ["$tsc"]
+		}
+	]
+}
