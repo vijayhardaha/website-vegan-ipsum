@@ -18,10 +18,12 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  * A reusable semantic section wrapper that accepts className and children.
  * All other HTML section attributes can be passed and will be spread onto the element.
  */
-export const Section = ({ children, className, ...props }: SectionProps) => {
+const Section = ({ children, className, ...props }: SectionProps) => {
 	return (
 		<section className={cn("relative py-16 md:py-20", className)} {...props}>
 			{children}
 		</section>
 	);
 };
+
+export default Section;

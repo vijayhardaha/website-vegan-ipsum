@@ -5,7 +5,7 @@ import { LiaHandshake } from "react-icons/lia";
 import { RiArrowRightLine } from "react-icons/ri";
 
 import Container from "@/components/common/Container";
-import { Section } from "@/components/common/Section";
+import Section from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import { Button } from "@/components/ui/button";
 

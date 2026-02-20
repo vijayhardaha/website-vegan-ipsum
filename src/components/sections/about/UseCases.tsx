@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { LiaBriefcaseSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
-import { Section } from "@/components/common/Section";
+import Section from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 
 /**

@@ -4,7 +4,7 @@ import { LiaUserFriendsSolid } from "react-icons/lia";
 import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
 
 import Container from "@/components/common/Container";
-import { Section } from "@/components/common/Section";
+import Section from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 
 /**

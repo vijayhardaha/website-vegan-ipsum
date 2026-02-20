@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { LiaLightbulbSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
-import { Section } from "@/components/common/Section";
+import Section from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 
 /**

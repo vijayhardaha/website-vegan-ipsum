@@ -4,7 +4,7 @@ import { FcPanorama, FcComboChart, FcProcess, FcBiomass } from "react-icons/fc";
 import { LiaBookOpenSolid } from "react-icons/lia";
 
 import Container from "@/components/common/Container";
-import { Section } from "@/components/common/Section";
+import Section from "@/components/common/Section";
 import { SectionHeader } from "@/components/common/SectionHeader";
 
 /**

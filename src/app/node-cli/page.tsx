@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Container from "@/components/common/Container";
 import PageHeader from "@/components/common/PageHeader";
-import { Section } from "@/components/common/Section";
+import Section from "@/components/common/Section";
 import SectionContainer from "@/components/common/SectionContainer";
 import { SectionHeader } from "@/components/common/SectionHeader";
 import SmartLink from "@/components/common/SmartLink";
