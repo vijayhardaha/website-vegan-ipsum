@@ -31,8 +31,10 @@ const scrollToElement = (elementId: string): void => {
 /**
  * Props for the SmartLink component
  */
-export interface SmartLinkProps
-	extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "target" | "rel"> {
+export interface SmartLinkProps extends Omit<
+	AnchorHTMLAttributes<HTMLAnchorElement>,
+	"href" | "target" | "rel"
+> {
 	/** The destination URL or hash anchor */
 	href: string;
 	/** Additional CSS classes */
