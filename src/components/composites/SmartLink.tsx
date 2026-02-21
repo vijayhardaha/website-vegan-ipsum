@@ -1,7 +1,8 @@
 "use client";
 
 import { ReactNode } from "react";
-import { AnchorHTMLAttributes, MouseEvent } from "react";
+import { MouseEvent } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
 import Link from "next/link";
 import { RiExternalLinkLine } from "react-icons/ri";
@@ -33,22 +34,11 @@ const scrollToElement = (elementId: string): void => {
 /**
  * Props for the SmartLink component
  */
-interface SmartLinkProps extends Omit<
-	AnchorHTMLAttributes<HTMLAnchorElement>,
-	"href" | "target" | "rel"
-> {
+interface SmartLinkProps extends Omit<ComponentPropsWithoutRef<typeof Link>, "href"> {
 	/** The destination URL or hash anchor */
 	href: string;
-	/** Additional CSS classes */
-	className?: string;
-	/** Accessible label for the link */
-	"aria-label"?: string;
-	/** Child elements to render inside the link */
-	children: ReactNode;
 	/** Optional offset for hash links (useful for fixed headers) */
 	scrollOffset?: number;
-	/** Optional click handler */
-	onClick?: (e: MouseEvent<HTMLAnchorElement>) => void | undefined;
 	/* Optional prop to control external link icon display */
 	linkLine?: boolean;
 }
