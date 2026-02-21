@@ -23,49 +23,6 @@ export const GLOBAL_SEO = {
 };
 
 /**
- * Represents the structure of the base metadata object.
- */
-export interface SiteMetadata {
-	title: string;
-	description: string;
-	metadataBase: URL;
-	appleTouchIcon: string;
-	alternates: {
-		canonical: string;
-	};
-	keywords: string[];
-	author: string;
-	robots: string;
-	icons: {
-		icon: string;
-		apple: string;
-	};
-	verification: {
-		google: string;
-	};
-	openGraph: {
-		title: string;
-		description: string;
-		images: {
-			url: string;
-			width: number;
-			height: number;
-		}[];
-		type: string;
-		siteName: string;
-		locale: string;
-		url: string;
-	};
-	twitter: {
-		card: string;
-		title: string;
-		description: string;
-		images: string[];
-		creator: string;
-	};
-}
-
-/**
  * The default metadata object used for SEO, Open Graph, and Twitter cards.
  */
 export const SEO_KEYWORDS = [
