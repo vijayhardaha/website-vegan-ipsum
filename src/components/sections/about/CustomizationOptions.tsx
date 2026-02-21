@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 
 import { LiaCogSolid } from "react-icons/lia";
 
-import Container from "@/components/primitives/Container";
-import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
+import Section from "@/components/layout/Section";
+import Container from "@/components/primitives/Container";
 
 export default function CustomizationOptions(): ReactNode {
 	return (

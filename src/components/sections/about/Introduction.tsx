@@ -3,9 +3,9 @@ import { ReactNode } from "react";
 import Image from "next/image";
 import { LiaLightbulb } from "react-icons/lia";
 
-import Container from "@/components/primitives/Container";
-import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
+import Section from "@/components/layout/Section";
+import Container from "@/components/primitives/Container";
 
 export default function Introduction(): ReactNode {
 	return (

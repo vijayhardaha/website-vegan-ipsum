@@ -13,10 +13,10 @@ import {
 } from "react-icons/lia";
 import { RiArrowRightLine } from "react-icons/ri";
 
-import Container from "@/components/primitives/Container";
-import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
+import Section from "@/components/layout/Section";
+import Container from "@/components/primitives/Container";
 
 /**
  * Represents the details of a card displayed in the component.

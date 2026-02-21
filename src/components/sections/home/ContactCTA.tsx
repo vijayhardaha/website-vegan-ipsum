@@ -4,10 +4,10 @@ import Link from "next/link";
 import { LiaHandshake } from "react-icons/lia";
 import { RiArrowRightLine } from "react-icons/ri";
 
-import Container from "@/components/primitives/Container";
-import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
+import Section from "@/components/layout/Section";
 import Button from "@/components/primitives/Button";
+import Container from "@/components/primitives/Container";
 
 /**
  * This component renders a call-to-action section

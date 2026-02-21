@@ -4,6 +4,7 @@ import { Metadata } from "next";
 
 import PageHeader from "@/components/composites/PageHeader";
 import SmartLink from "@/components/composites/SmartLink";
+import Button from "@/components/primitives/Button";
 import {
 	Introduction,
 	Installation,
@@ -11,7 +12,6 @@ import {
 	Features,
 	Support,
 } from "@/components/sections/vscode-extension";
-import Button from "@/components/primitives/Button";
 import { buildMetadata } from "@/utils/seo";
 
 /**

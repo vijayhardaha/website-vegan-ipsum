@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 
 import { LiaInfoCircleSolid } from "react-icons/lia";
 
-import Container from "@/components/primitives/Container";
-import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
+import Section from "@/components/layout/Section";
 import CodeBlock from "@/components/primitives/CodeBlock";
+import Container from "@/components/primitives/Container";
 
 /**
  * This component describes the error handling mechanism of the Vegan Ipsum JSON API.

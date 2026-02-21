@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-import Container from "@/components/primitives/Container";
-import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
+import Section from "@/components/layout/Section";
 import CodeBlock from "@/components/primitives/CodeBlock";
+import Container from "@/components/primitives/Container";
 
 /**
  * This component renders the installation section for the Node CLI page.
