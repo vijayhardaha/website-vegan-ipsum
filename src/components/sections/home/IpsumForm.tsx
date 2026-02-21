@@ -2,10 +2,10 @@
 
 import { FormEvent, ReactNode, useEffect, useState } from "react";
 
-import Button from "@/components/primitives/button";
-import Input from "@/components/primitives/input";
-import Label from "@/components/primitives/label";
-import Select from "@/components/primitives/select";
+import Button from "@/components/primitives/Button";
+import Input from "@/components/primitives/Input";
+import Label from "@/components/primitives/Label";
+import Select from "@/components/primitives/Select";
 
 /**
  * Props for the IpsumForm component.

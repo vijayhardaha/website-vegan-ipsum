@@ -7,7 +7,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 import Container from "@/components/composites/Container";
 import Section from "@/components/composites/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
-import Button from "@/components/primitives/button";
+import Button from "@/components/primitives/Button";
 
 /**
  * This component renders a call-to-action section

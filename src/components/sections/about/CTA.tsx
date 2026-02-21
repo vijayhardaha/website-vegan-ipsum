@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import Container from "@/components/composites/Container";
 import Section from "@/components/composites/Section";
 import SmartLink from "@/components/composites/SmartLink";
-import Button from "@/components/primitives/button";
+import Button from "@/components/primitives/Button";
 
 export default function CTA(): ReactNode {
 	return (

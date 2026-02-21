@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import Container from "@/components/composites/Container";
 import SmartLink from "@/components/composites/SmartLink";
-import Button from "@/components/primitives/button";
+import Button from "@/components/primitives/Button";
 
 /**
  * Hero component for displaying the main introduction and call-to-action buttons.

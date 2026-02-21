@@ -4,7 +4,7 @@ import Container from "@/components/composites/Container";
 import Section from "@/components/composites/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
-import CodeBlock from "@/components/primitives/codeblock";
+import CodeBlock from "@/components/primitives/CodeBlock";
 
 /**
  * This component renders the usage section for the NPM Package page.
