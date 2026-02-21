@@ -6,12 +6,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { LuAlignRight, LuX } from "react-icons/lu";
 
+import SmartLink from "@/components/composites/SmartLink";
+import Button from "@/components/primitives/Button";
 import { HEADER_NAV_LINKS, NavLink } from "@/constants/navlinks";
 import { cn } from "@/utils/classnames";
-
-import Button from "../primitives/Button";
-
-import SmartLink from "./SmartLink";
 
 /**
  * Header component for the website.

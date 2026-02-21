@@ -2,10 +2,9 @@ import { ReactNode } from "react";
 
 import Image from "next/image";
 
+import SmartLink from "@/components/composites/SmartLink";
 import { FOOTER_NAV_LINKS, NavLink } from "@/constants/navlinks";
 import { cn } from "@/utils/classnames";
-
-import SmartLink from "./SmartLink";
 
 /**
  * Footer component for the Vegan Ipsum website.
