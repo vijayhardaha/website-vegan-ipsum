@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX, ReactNode } from "react";
 
 import Icon from "@/components/primitives/Icon";
 import { IconName } from "@/constants/icons";
@@ -9,9 +9,9 @@ import { cn } from "@/utils/classnames";
  */
 export interface SectionHeaderProps {
 	/** The tagline text displayed above the heading */
-	tagline?: ReactNode | string;
+	tagline?: ReactNode;
 	/** The main heading text */
-	heading: ReactNode | string;
+	heading: ReactNode;
 	/** Optional icon component to display before the tagline */
 	icon?: IconName;
 	/** Additional CSS classes for the container */
@@ -30,7 +30,7 @@ export interface SectionHeaderProps {
  * It is designed to provide a consistent layout and styling for section introductions throughout the application.
  *
  * @param {SectionHeaderProps} props - The properties for the SectionHeader component.
- * @return {ReactNode} The rendered section header component.
+ * @return {JSX.Element} The rendered section header component.
  */
 export default function SectionHeader({
 	tagline,
@@ -40,7 +40,7 @@ export default function SectionHeader({
 	taglineClassName,
 	headingClassName,
 	children,
-}: SectionHeaderProps): ReactNode {
+}: SectionHeaderProps): JSX.Element {
 	return (
 		<div className={cn("", className)}>
 			{tagline && (
@@ -53,7 +53,9 @@ export default function SectionHeader({
 					{icon && <Icon name={icon as IconName} size={4} />} {tagline}
 				</p>
 			)}
+
 			<h2 className={cn("mb-4 text-3xl md:text-4xl", headingClassName)}>{heading}</h2>
+
 			<div className="space-y-4 md:space-y-6">{children}</div>
 		</div>
 	);

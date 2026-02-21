@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import type { JSX, SVGProps } from "react";
 
 import { IconName, ICONS } from "@/constants/icons";
 import { cn } from "@/utils/classnames";
@@ -42,9 +42,14 @@ const sizeClasses = {
  * Icon component for rendering SVG icons based on the provided name.
  *
  * @param {IconProps} props - The properties for the Icon component, including the name of the icon and additional SVG props.
- * @returns The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Icon({ name, className, size = undefined, ...props }: IconProps) {
+export default function Icon({
+	name,
+	className,
+	size = undefined,
+	...props
+}: IconProps): JSX.Element {
 	const Component = ICONS[name];
 
 	const numericSize = size ? Number(size) : undefined;

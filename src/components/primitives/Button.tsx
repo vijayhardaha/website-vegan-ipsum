@@ -1,12 +1,12 @@
 "use client";
 
+import type { JSX, ReactNode } from "react";
 import {
 	ButtonHTMLAttributes,
 	forwardRef,
 	HTMLAttributes,
 	isValidElement,
 	ReactElement,
-	ReactNode,
 	Ref,
 	RefObject,
 } from "react";
@@ -165,7 +165,10 @@ type ButtonProps = {
  * @returns A styled button element or a child component with forwarded props and refs.
  */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-	({ className, variant = "primary", size = "md", asChild = false, children, ...props }, ref) => {
+	(
+		{ className, variant = "primary", size = "md", asChild = false, children, ...props },
+		ref
+	): JSX.Element => {
 		const Comp = asChild ? Slot : "button";
 
 		// Ensure props is an object before spreading

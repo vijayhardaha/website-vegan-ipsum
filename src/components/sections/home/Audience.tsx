@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -46,9 +46,9 @@ const cards: Card[] = [
  * the benefits for different types of users, including designers, developers,
  * marketers, and conscious builders.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Audience(): ReactNode {
+export default function Audience(): JSX.Element {
 	return (
 		<Section
 			id="who-can-use"

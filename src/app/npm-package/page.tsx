@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import { Metadata } from "next";
 
@@ -19,9 +19,9 @@ export const metadata: Metadata = buildMetadata({
 /**
  * This component renders the NPM Package page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function NpmPackagePage(): ReactNode {
+export default function NpmPackagePage(): JSX.Element {
 	return (
 		<>
 			<PageHeader

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -10,9 +10,9 @@ import Icon from "@/components/primitives/Icon";
  * project, highlighting its key technical features, design principles,
  * and implementation details.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function TechnicalOverview(): ReactNode {
+export default function TechnicalOverview(): JSX.Element {
 	return (
 		<Section
 			id="technical-overview"

@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from "react";
+import type { HTMLAttributes, JSX, ReactNode } from "react";
 
 import { cn } from "@/utils/classnames";
 
@@ -13,12 +13,13 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
 }
 
 /**
- * Section Component
+ * This component serves as a section wrapper for the application,
+ * providing consistent spacing and styling for different sections of the page.
  *
- * A reusable semantic section wrapper that accepts className and children.
- * All other HTML section attributes can be passed and will be spread onto the element.
+ * @param {SectionProps} props - The properties for the Section component, including children and className.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Section({ children, className, ...props }: SectionProps) {
+export default function Section({ children, className, ...props }: SectionProps): JSX.Element {
 	return (
 		<section className={cn("relative py-16 md:py-20", className)} {...props}>
 			{children}

@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, ReactNode, useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+import type { JSX } from "react";
 
 import Button from "@/components/primitives/Button";
 import Input from "@/components/primitives/Input";
@@ -18,9 +19,9 @@ interface IpsumFormProps {
  * IpsumForm component for generating vegan ipsum text based on user input.
  *
  * @param {IpsumFormProps} props - The props for the component, including a function to set the generated output.
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function IpsumForm({ setOutput }: IpsumFormProps): ReactNode {
+export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
 	const [selectedType, setSelectedType] = useState<"paragraphs" | "sentences" | "words">(
 		"paragraphs"
 	);

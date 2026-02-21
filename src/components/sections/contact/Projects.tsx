@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
@@ -76,9 +76,9 @@ const cards: Card[] = [
  * It provides an overview of the open-source projects that power
  * the Vegan Ipsum generator and encourages contributions from the community.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Projects(): ReactNode {
+export default function Projects(): JSX.Element {
 	return (
 		<Section id="projects" aria-label="Projects and tools related to Vegan Ipsum">
 			<Container>

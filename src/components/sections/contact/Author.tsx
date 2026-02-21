@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
@@ -52,9 +52,9 @@ const socialLinks: SocialLink[] = [
  * This component displays the author information and contact
  * details for the Vegan Ipsum project.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Author(): ReactNode {
+export default function Author(): JSX.Element {
 	return (
 		<Section
 			id="author"

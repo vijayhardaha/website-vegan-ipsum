@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -8,9 +8,9 @@ import Icon from "@/components/primitives/Icon";
 /**
  * This component renders the installation section for the VS Code Extension page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Installation(): ReactNode {
+export default function Installation(): JSX.Element {
 	return (
 		<Section
 			id="installation"

@@ -1,6 +1,5 @@
-"use client";
-
-import { forwardRef, LabelHTMLAttributes, ReactNode } from "react";
+import { forwardRef, ReactNode } from "react";
+import type { JSX, LabelHTMLAttributes } from "react";
 
 import { cva } from "class-variance-authority";
 
@@ -25,11 +24,11 @@ const labelVariants = cva(
 /**
  * Label component for form elements with accessibility features
  *
- * @param {LabelProps} props - Component props
- * @returns {ReactNode} The Label component
+ * @param {LabelProps} props - The properties for the Label component, including className, children, and htmlFor.
+ * @returns {JSX.Element} The rendered component.
  */
 const Label = forwardRef<HTMLLabelElement, LabelProps>(
-	({ className = "", children, htmlFor, ...props }, ref): ReactNode => (
+	({ className = "", children, htmlFor, ...props }, ref): JSX.Element => (
 		<label ref={ref} className={cn(labelVariants(), className)} htmlFor={htmlFor} {...props}>
 			{children}
 		</label>

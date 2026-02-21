@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import Image from "next/image";
 
@@ -10,9 +10,9 @@ import Container from "@/components/primitives/Container";
  * This component provides an introduction to the Vegan Ipsum
  * Generator, explaining what it is and its purpose.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Benefits(): ReactNode {
+export default function Benefits(): JSX.Element {
 	return (
 		<Section
 			id="why-choose-it"

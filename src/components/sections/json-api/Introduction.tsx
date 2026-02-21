@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -7,9 +7,9 @@ import Container from "@/components/primitives/Container";
 /**
  * This component serves as the introduction section for the Vegan Ipsum JSON API documentation.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Introduction(): ReactNode {
+export default function Introduction(): JSX.Element {
 	return (
 		<Section
 			id="introduction"

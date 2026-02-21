@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
@@ -8,9 +8,9 @@ import Container from "@/components/primitives/Container";
 /**
  * This component renders the installation section for the Node CLI page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Resources(): ReactNode {
+export default function Resources(): JSX.Element {
 	return (
 		<Section
 			id="resources"

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -54,9 +54,9 @@ const cards: Card[] = [
  * various projects and contexts to provide meaningful,
  * ethical placeholder text.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function UseCases(): ReactNode {
+export default function UseCases(): JSX.Element {
 	return (
 		<Section
 			id="use-cases"

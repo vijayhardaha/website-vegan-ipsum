@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -9,9 +9,9 @@ import Icon from "@/components/primitives/Icon";
 /**
  * This component describes the error handling mechanism of the Vegan Ipsum JSON API.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function ErrorHandling(): ReactNode {
+export default function ErrorHandling(): JSX.Element {
 	return (
 		<Section id="error-handling" aria-label="Error handling for the Vegan Ipsum JSON API">
 			<Container>

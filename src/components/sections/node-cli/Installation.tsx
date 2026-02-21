@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -8,9 +8,9 @@ import Container from "@/components/primitives/Container";
 /**
  * This component renders the installation section for the Node CLI page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Installation(): ReactNode {
+export default function Installation(): JSX.Element {
 	return (
 		<Section
 			id="installation"

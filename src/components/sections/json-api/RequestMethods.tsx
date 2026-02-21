@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -7,9 +7,9 @@ import Container from "@/components/primitives/Container";
 /**
  * This component outlines the HTTP request methods supported by the Vegan Ipsum JSON API.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function RequestMethods(): ReactNode {
+export default function RequestMethods(): JSX.Element {
 	return (
 		<Section
 			id="request-methods"

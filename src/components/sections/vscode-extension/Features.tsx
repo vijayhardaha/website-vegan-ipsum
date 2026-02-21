@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -57,9 +57,9 @@ const cards: Card[] = [
 /**
  * This component renders the features section for the VS Code Extension page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Features(): ReactNode {
+export default function Features(): JSX.Element {
 	return (
 		<Section
 			id="features"

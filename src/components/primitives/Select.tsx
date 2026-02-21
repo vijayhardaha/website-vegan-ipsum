@@ -1,4 +1,5 @@
-import { ChangeEvent, ReactNode, SelectHTMLAttributes } from "react";
+import { ChangeEvent } from "react";
+import type { JSX, ReactNode, SelectHTMLAttributes } from "react";
 
 import { cn } from "@/utils/classnames";
 
@@ -39,7 +40,7 @@ export default function Select({
 	onValueChange,
 	children,
 	...props
-}: SelectProps): ReactNode {
+}: SelectProps): JSX.Element {
 	/**
 	 * Handles changes to the select element, calling the onValueChange callback if provided.
 	 *

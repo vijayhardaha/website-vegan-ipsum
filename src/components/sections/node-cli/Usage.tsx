@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -8,9 +8,9 @@ import Container from "@/components/primitives/Container";
 /**
  * This component renders the usage section for the Node CLI page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Usage(): ReactNode {
+export default function Usage(): JSX.Element {
 	return (
 		<Section id="usage" aria-label="Basic usage instructions for the Vegan Ipsum Node CLI">
 			<Container>

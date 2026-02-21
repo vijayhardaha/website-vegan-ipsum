@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import { Metadata } from "next";
 
@@ -19,9 +19,9 @@ export const metadata: Metadata = buildMetadata({
 /**
  * This component renders the contact page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function ContactPage(): ReactNode {
+export default function ContactPage(): JSX.Element {
 	return (
 		<>
 			<PageHeader

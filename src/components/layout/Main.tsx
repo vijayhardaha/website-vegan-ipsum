@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX, ReactNode } from "react";
 
 /**
  * Props for the Main component.
@@ -10,9 +10,9 @@ interface MainProps {
 /**
  * This component serves as the main content wrapper for the application.
  *
- * @returns {ReactNode} The rendered main content area.
+ * @returns {JSX.Element} The rendered main content area.
  */
-export default function Main({ children }: MainProps): ReactNode {
+export default function Main({ children }: MainProps): JSX.Element {
 	return (
 		<main id="main" className="overflow-hidden">
 			{children}

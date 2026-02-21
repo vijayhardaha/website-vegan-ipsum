@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX, ReactNode } from "react";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
@@ -45,9 +45,9 @@ export const metadata: Metadata = SITE_METADATA;
  * Root layout component that wraps the application.
  *
  * @param {ReactNode} children - React children elements to be rendered inside the layout.
- * @returns {ReactNode} The root layout component with global styles and fonts applied.
+ * @returns {JSX.Element} The root layout component with global styles and fonts applied.
  */
-export default function RootLayout({ children }: { children: ReactNode }): ReactNode {
+export default function RootLayout({ children }: { children: ReactNode }): JSX.Element {
 	return (
 		<html lang="en">
 			<GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />

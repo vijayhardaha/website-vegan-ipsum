@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode, useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import type { JSX } from "react";
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -15,9 +16,9 @@ import { cn } from "@/utils/classnames";
  * Header component for the website.
  * Displays the website's logo and a navigation menu with links.
  *
- * @returns {ReactNode} The rendered header component.
+ * @returns {JSX.Element} The rendered header component.
  */
-export default function Header(): ReactNode {
+export default function Header(): JSX.Element {
 	const pathname: string = usePathname();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const menuRef = useRef<HTMLDivElement>(null);

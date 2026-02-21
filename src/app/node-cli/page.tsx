@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import { Metadata } from "next";
 
@@ -25,9 +25,9 @@ export const metadata: Metadata = buildMetadata({
 /**
  * This component renders the Node CLI page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function NodeCliPage(): ReactNode {
+export default function NodeCliPage(): JSX.Element {
 	return (
 		<>
 			<PageHeader

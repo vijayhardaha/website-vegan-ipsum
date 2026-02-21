@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX, ReactNode } from "react";
 
 import Footer from "@/components/composites/Footer";
 import Header from "@/components/composites/Header";
@@ -16,9 +16,9 @@ interface LayoutProps {
  * structure with a header, main content area, and footer.
  *
  * @param {ReactNode} children - React children elements to be rendered.
- * @returns	{ReactNode} The rendered layout component with header, main content, and footer.
+ * @returns	{JSX.Element} The rendered layout component with header, main content, and footer.
  */
-export default function Layout({ children }: LayoutProps): ReactNode {
+export default function Layout({ children }: LayoutProps): JSX.Element {
 	return (
 		<div className="flex min-h-screen flex-col">
 			<Header />

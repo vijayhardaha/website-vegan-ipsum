@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -8,9 +8,9 @@ import Icon from "@/components/primitives/Icon";
 /**
  * This component renders the "Parameters" section of the Vegan Ipsum JSON API documentation.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Parameters(): ReactNode {
+export default function Parameters(): JSX.Element {
 	return (
 		<Section id="parameters" aria-label="Parameters for customizing Vegan Ipsum output">
 			<Container>

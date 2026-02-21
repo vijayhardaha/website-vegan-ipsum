@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import Link from "next/link";
 
@@ -13,9 +13,9 @@ import Icon from "@/components/primitives/Icon";
  * encouraging users to connect with the team for questions,
  * contributions, or feedback.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function ContactCTA(): ReactNode {
+export default function ContactCTA(): JSX.Element {
 	return (
 		<Section
 			aria-label="Section encouraging users to get in touch for questions, contributions, or feedback"

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -8,9 +8,9 @@ import { cn } from "@/utils/classnames";
 /**
  * This component provides an overview of the HTTP status codes returned by the Vegan Ipsum JSON API.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function StatusCodes(): ReactNode {
+export default function StatusCodes(): JSX.Element {
 	return (
 		<Section
 			id="status-codes"

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import {
 	Hero,
@@ -14,9 +14,9 @@ import {
 /**
  * This component renders the home page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-function Home(): ReactNode {
+function Home(): JSX.Element {
 	return (
 		<div>
 			<Hero />

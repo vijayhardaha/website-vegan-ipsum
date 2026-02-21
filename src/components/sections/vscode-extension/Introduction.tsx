@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -7,9 +7,9 @@ import Container from "@/components/primitives/Container";
 /**
  * This component renders the introduction section for the VS Code Extension page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Introduction(): ReactNode {
+export default function Introduction(): JSX.Element {
 	return (
 		<Section id="introduction" aria-label="Introduction to the Vegan Ipsum VS Code Extension">
 			<Container>

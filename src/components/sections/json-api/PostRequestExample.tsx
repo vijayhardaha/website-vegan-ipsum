@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -9,9 +9,9 @@ import { getCanonicalUrl } from "@/utils/seo";
 /**
  * This component provides an example of how to make a POST request to the Vegan Ipsum JSON API.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function PostRequestExample(): ReactNode {
+export default function PostRequestExample(): JSX.Element {
 	// Base URL for the API
 	const API_BASE_URL = getCanonicalUrl("api");
 	return (

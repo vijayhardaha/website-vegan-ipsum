@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import { Metadata } from "next";
 
@@ -27,9 +27,9 @@ export const metadata: Metadata = buildMetadata({
 /**
  * This component renders the VS Code Extension page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function VSCodeExtensionPage(): ReactNode {
+export default function VSCodeExtensionPage(): JSX.Element {
 	return (
 		<>
 			<PageHeader

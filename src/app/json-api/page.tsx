@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import { Metadata } from "next";
 
@@ -29,9 +29,9 @@ export const metadata: Metadata = buildMetadata({
 /**
  * This component renders the JSON API page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function JsonAPIPage(): ReactNode {
+export default function JsonAPIPage(): JSX.Element {
 	return (
 		<>
 			<PageHeader

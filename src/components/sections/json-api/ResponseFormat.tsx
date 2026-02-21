@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -8,9 +8,9 @@ import Container from "@/components/primitives/Container";
 /**
  * This component describes the response format of the Vegan Ipsum JSON API.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function ResponseFormat(): ReactNode {
+export default function ResponseFormat(): JSX.Element {
 	return (
 		<Section
 			id="response-format"

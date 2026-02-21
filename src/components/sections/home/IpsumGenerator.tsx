@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { useState } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -12,10 +13,9 @@ import { cn } from "@/utils/classnames";
 /**
  * IpsumGenerator component for displaying the main introduction and call-to-action buttons.
  *
- * @returns {ReactNode} The rendered IpsumGenerator component.
- *
+ * @returns {JSX.Element} The rendered IpsumGenerator component.
  */
-export default function IpsumGenerator(): ReactNode {
+export default function IpsumGenerator(): JSX.Element {
 	const [output, setOutput] = useState<string>(""); // Stores the generated output
 	const [copied, setCopied] = useState<boolean>(false); // Tracks if the text has been copied
 

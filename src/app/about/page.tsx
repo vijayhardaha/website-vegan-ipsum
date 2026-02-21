@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import PageHeader from "@/components/composites/PageHeader";
 import {
@@ -25,9 +25,9 @@ export const metadata = buildMetadata({
 /**
  * This component renders the about page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function AboutPage(): ReactNode {
+export default function AboutPage(): JSX.Element {
 	return (
 		<>
 			<PageHeader

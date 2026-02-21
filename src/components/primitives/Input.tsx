@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import type { InputHTMLAttributes, JSX } from "react";
 
 import { cn } from "@/utils/classnames";
 
@@ -14,9 +14,9 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  * Input component for text entry, file uploads, and other input types.
  *
  * @param {InputProps} props - Component props
- * @returns {ReactNode} Input component
+ * @returns {JSX.Element} Input component
  */
-export default function Input({ className, type = "text", ...props }: InputProps): ReactNode {
+export default function Input({ className, type = "text", ...props }: InputProps): JSX.Element {
 	return (
 		<input
 			type={type}

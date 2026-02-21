@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import Image from "next/image";
 
@@ -10,9 +10,9 @@ import { cn } from "@/utils/classnames";
  * Footer component for the Vegan Ipsum website.
  * Displays navigation links and copyright information.
  *
- * @returns {ReactNode} The rendered footer component.
+ * @returns {JSX.Element} The rendered footer component.
  */
-export default function Footer(): ReactNode {
+export default function Footer(): JSX.Element {
 	return (
 		<footer className="bg-primary-solid text-primary-foreground py-6 pt-12" aria-label="Footer">
 			<div className="mx-auto max-w-5xl px-4 md:px-6">

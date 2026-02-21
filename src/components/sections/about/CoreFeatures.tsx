@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import Link from "next/link";
 
@@ -57,9 +57,9 @@ const cards: Card[] = [
  * Vegan Ipsum project, showcasing the various tools and integration methods
  * available to users.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function CoreFeatures(): ReactNode {
+export default function CoreFeatures(): JSX.Element {
 	return (
 		<Section id="core-features" aria-label="Core features and technical details of Vegan Ipsum">
 			<Container>

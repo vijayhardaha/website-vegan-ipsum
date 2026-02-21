@@ -1,4 +1,4 @@
-import { ReactNode, ReactElement } from "react";
+import type { ReactNode, JSX } from "react";
 
 import Container from "@/components/primitives/Container";
 
@@ -9,9 +9,9 @@ import Container from "@/components/primitives/Container";
  * @property {string} [subtitle] - An optional subtitle providing additional context.
  */
 interface PageHeaderProps {
-	title: string | ReactElement;
-	description?: string | ReactElement;
-	tagline?: string | ReactElement;
+	title: ReactNode;
+	description?: string;
+	tagline?: ReactNode;
 	children?: ReactNode;
 }
 
@@ -19,14 +19,14 @@ interface PageHeaderProps {
  * A reusable page header component that displays a title and an optional subtitle.
  *
  * @param {PageHeaderProps} props - The props for the component.
- * @returns {ReactNode} The rendered PageHeader component.
+ * @returns {JSX.Element} The rendered PageHeader component.
  */
 export default function PageHeader({
 	title,
 	description,
 	tagline,
 	children,
-}: PageHeaderProps): ReactNode {
+}: PageHeaderProps): JSX.Element {
 	return (
 		<section className="relative py-16 pb-6 md:py-24 md:pb-10">
 			<div className="pointer-events-none absolute top-[-120px] right-[8%] h-[450px] w-[450px] rounded-full bg-[#d4edcc] opacity-36 blur-[80px]"></div>
@@ -41,6 +41,7 @@ export default function PageHeader({
 					<h1 className="text-primary-solid mb-5 text-4xl md:text-6xl">{title}</h1>
 
 					<p className="max-w-2xl text-lg leading-relaxed md:text-xl">{description}</p>
+
 					{children}
 				</div>
 			</Container>

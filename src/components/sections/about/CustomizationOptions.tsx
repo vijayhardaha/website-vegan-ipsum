@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -9,9 +9,9 @@ import Container from "@/components/primitives/Container";
  * Vegan Ipsum project, providing users with information on how to configure the
  * output of the placeholder text to suit their specific needs and preferences.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function CustomizationOptions(): ReactNode {
+export default function CustomizationOptions(): JSX.Element {
 	return (
 		<Section
 			id="customization-options"

@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState, ReactNode, CSSProperties } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { JSX, CSSProperties } from "react";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -116,15 +117,16 @@ const canUseClipboard =
 
 /**
  * Reusable component for displaying code blocks with syntax highlighting.
+ *
  * @param {CodeBlockProps} props - The props for the component.
- * @returns {ReactNode} The CodeBlock component.
+ * @returns {JSX.Element} The CodeBlock component.
  */
 export default function CodeBlock({
 	label,
 	children,
 	className,
 	...props
-}: CodeBlockProps): ReactNode {
+}: CodeBlockProps): JSX.Element {
 	const [copied, setCopied] = useState(false);
 	const timerRef = useRef<number | null>(null);
 

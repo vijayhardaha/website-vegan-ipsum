@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
@@ -10,9 +10,9 @@ import Container from "@/components/primitives/Container";
  * Vegan Ipsum website, encouraging users to get started with the
  * project and explore its various tools and resources.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function CTA(): ReactNode {
+export default function CTA(): JSX.Element {
 	return (
 		<Section id="ready-to-get-started">
 			<Container>

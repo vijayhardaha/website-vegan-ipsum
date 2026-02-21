@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
@@ -10,9 +10,9 @@ import Container from "@/components/primitives/Container";
  * of the Vegan Ipsum website, providing users with insights into
  * the origin story of the project and its motivation.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Background(): ReactNode {
+export default function Background(): JSX.Element {
 	return (
 		<Section
 			id="background-and-inspiration"

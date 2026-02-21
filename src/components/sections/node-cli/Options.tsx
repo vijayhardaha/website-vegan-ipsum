@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
@@ -8,9 +8,9 @@ import Container from "@/components/primitives/Container";
 /**
  * This component renders the options and flags section for the Node CLI page.
  *
- * @returns {ReactNode} The rendered component.
+ * @returns {JSX.Element} The rendered component.
  */
-export default function Options(): ReactNode {
+export default function Options(): JSX.Element {
 	return (
 		<Section
 			id="options"
