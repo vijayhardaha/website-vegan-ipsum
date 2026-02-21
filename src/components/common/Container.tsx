@@ -5,7 +5,7 @@ import { cn } from "@/utils/classnames";
 /**
  * Props for the Container component.
  */
-interface Container {
+interface ContainerProps {
 	children: ReactNode;
 	className?: string;
 }
@@ -13,10 +13,10 @@ interface Container {
 /**
  * A layout component that wraps its children in a container with consistent spacing.
  *
- * @param {Container} props - The props for the component.
+ * @param {ContainerProps} props - The props for the component.
  * @returns {ReactNode} The rendered container component.
  */
-export default function Container({ children, className }: Container): ReactNode {
+export default function Container({ children, className }: ContainerProps): ReactNode {
 	return (
 		<div className={cn("relative mx-auto max-w-5xl px-4 md:px-6", className)}>{children}</div>
 	);

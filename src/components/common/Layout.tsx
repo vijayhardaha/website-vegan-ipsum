@@ -7,7 +7,7 @@ import Main from "@/components/common/Main";
 /**
  * Props for the Layout component.
  */
-interface ILayoutProps {
+interface LayoutProps {
 	children: ReactNode;
 }
 
@@ -18,7 +18,7 @@ interface ILayoutProps {
  * @param {ReactNode} children - React children elements to be rendered.
  * @returns	{ReactNode} The rendered layout component with header, main content, and footer.
  */
-export default function Layout({ children }: ILayoutProps): ReactNode {
+export default function Layout({ children }: LayoutProps): ReactNode {
 	return (
 		<div className="flex min-h-screen flex-col">
 			<Header />
