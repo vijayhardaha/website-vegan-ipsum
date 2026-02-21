@@ -59,7 +59,7 @@ interface SmartLinkProps extends Omit<
  * - Internal links (/path) without external attributes
  * - External links (https://...) with proper security attributes
  */
-const SmartLink = ({
+export default function SmartLink({
 	href,
 	className,
 	"aria-label": ariaLabel,
@@ -68,7 +68,7 @@ const SmartLink = ({
 	onClick = undefined,
 	linkLine = true,
 	...props
-}: SmartLinkProps): ReactNode => {
+}: SmartLinkProps): ReactNode {
 	const linkType = getLinkType(href);
 
 	/**
@@ -145,6 +145,4 @@ const SmartLink = ({
 			{children}
 		</Link>
 	);
-};
-
-export default SmartLink;
+}

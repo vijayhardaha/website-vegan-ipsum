@@ -18,7 +18,7 @@ interface ILayoutProps {
  * @param {ReactNode} children - React children elements to be rendered.
  * @returns	{ReactNode} The rendered layout component with header, main content, and footer.
  */
-const Layout = ({ children }: ILayoutProps): ReactNode => {
+export default function Layout({ children }: ILayoutProps): ReactNode {
 	return (
 		<div className="flex min-h-screen flex-col">
 			<Header />
@@ -26,6 +26,4 @@ const Layout = ({ children }: ILayoutProps): ReactNode => {
 			<Footer />
 		</div>
 	);
-};
-
-export default Layout;
+}

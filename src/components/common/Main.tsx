@@ -12,12 +12,10 @@ interface MainProps {
  *
  * @returns {ReactNode} The rendered main content area.
  */
-const Main = ({ children }: MainProps): ReactNode => {
+export default function Main({ children }: MainProps): ReactNode {
 	return (
 		<main id="main" className="overflow-hidden">
 			{children}
 		</main>
 	);
-};
-
-export default Main;
+}
