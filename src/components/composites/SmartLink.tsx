@@ -1,8 +1,7 @@
 "use client";
 
-import { ReactNode } from "react";
 import { MouseEvent } from "react";
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef, JSX } from "react";
 
 import Link from "next/link";
 import { RiExternalLinkLine } from "react-icons/ri";
@@ -60,7 +59,7 @@ export default function SmartLink({
 	onClick = undefined,
 	linkLine = true,
 	...props
-}: SmartLinkProps): ReactNode {
+}: SmartLinkProps): JSX.Element {
 	const linkType = getLinkType(href);
 
 	/**
