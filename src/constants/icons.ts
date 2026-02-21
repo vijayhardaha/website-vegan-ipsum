@@ -1,8 +1,15 @@
 import {
+	LiaCloudSolid,
+	LiaCodeSolid,
+	LiaGithub,
+	LiaGlobeSolid,
 	LiaHandshake,
 	LiaHashtagSolid,
+	LiaNpm,
 	LiaStarOfLifeSolid,
+	LiaTerminalSolid,
 	LiaUserFriendsSolid,
+	LiaWhmcs,
 } from "react-icons/lia";
 import { RiArrowRightLine } from "react-icons/ri";
 import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
@@ -27,4 +34,11 @@ export const ICONS = {
 	star: LiaStarOfLifeSolid,
 	arrowRight: RiArrowRightLine,
 	handShake: LiaHandshake,
+	gears: LiaWhmcs,
+	globe: LiaGlobeSolid,
+	cloud: LiaCloudSolid,
+	code2: LiaCodeSolid,
+	terminal: LiaTerminalSolid,
+	npm: LiaNpm,
+	github: LiaGithub,
 } as const;
