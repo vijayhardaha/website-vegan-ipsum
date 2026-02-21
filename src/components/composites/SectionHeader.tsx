@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import Icon from "@/components/primitives/Icon";
+import { IconName } from "@/constants/icons";
 import { cn } from "@/utils/classnames";
 
 /**
@@ -11,7 +13,7 @@ export interface SectionHeaderProps {
 	/** The main heading text */
 	heading: ReactNode | string;
 	/** Optional icon component to display before the tagline */
-	icon?: ReactNode;
+	icon?: IconName;
 	/** Additional CSS classes for the container */
 	className?: string;
 	/** Additional CSS classes for the tagline */
@@ -48,7 +50,7 @@ export default function SectionHeader({
 						taglineClassName
 					)}
 				>
-					{icon} {tagline}
+					{icon && <Icon name={icon as IconName} size={4} />} {tagline}
 				</p>
 			)}
 			<h2 className={cn("mb-4 text-3xl md:text-4xl", headingClassName)}>{heading}</h2>
