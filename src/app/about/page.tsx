@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 
 import PageHeader from "@/components/common/PageHeader";
 import {
+	Introduction,
 	Background,
 	CoreFeatures,
-	CTASection,
 	CustomizationOptions,
-	Introduction,
 	TechnicalOverview,
-	UseCasesSection,
+	UseCases,
+	CTASection,
 } from "@/components/sections/about";
 import { buildMetadata } from "@/utils/seo";
 
@@ -50,7 +50,7 @@ export default function AboutPage(): ReactNode {
 
 			<TechnicalOverview />
 
-			<UseCasesSection />
+			<UseCases />
 
 			<CTASection />
 		</>

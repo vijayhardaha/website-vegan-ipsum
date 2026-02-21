@@ -4,7 +4,7 @@ import CTASection from "@/components/sections/about/CTA";
 import CustomizationOptions from "@/components/sections/about/CustomizationOptions";
 import Introduction from "@/components/sections/about/Introduction";
 import TechnicalOverview from "@/components/sections/about/TechnicalOverview";
-import UseCasesSection from "@/components/sections/about/UseCases";
+import UseCases from "@/components/sections/about/UseCases";
 
 export {
 	Background,
@@ -13,5 +13,5 @@ export {
 	CustomizationOptions,
 	Introduction,
 	TechnicalOverview,
-	UseCasesSection,
+	UseCases,
 };
