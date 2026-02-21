@@ -7,4 +7,4 @@ import IpsumGenerator from "@/components/sections/home/IpsumGenerator";
 import Overview from "@/components/sections/home/Overview";
 import UseCases from "@/components/sections/home/UseCases";
 
-export { ContactCTA, Hero, HowToUse, IpsumGenerator, Overview, UseCases, Audience, Benefits };
+export { Hero, IpsumGenerator, Overview, HowToUse, Benefits, Audience, UseCases, ContactCTA };

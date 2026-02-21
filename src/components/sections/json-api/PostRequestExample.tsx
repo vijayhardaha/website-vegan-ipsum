@@ -8,10 +8,6 @@ import { getCanonicalUrl } from "@/utils/seo";
 
 /**
  * This component provides an example of how to make a POST request to the Vegan Ipsum JSON API.
- * It demonstrates how to send parameters as a JSON body, which is ideal for programmatic API calls
- * from backend services or frontend applications. The section includes examples for making POST
- * requests using cURL and JavaScript's fetch API, helping developers understand how to interact
- * with the API effectively.
  *
  * @returns {ReactNode} The rendered component.
  */

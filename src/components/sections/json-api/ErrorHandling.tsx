@@ -8,10 +8,6 @@ import Icon from "@/components/primitives/Icon";
 
 /**
  * This component describes the error handling mechanism of the Vegan Ipsum JSON API.
- * It explains how the API responds to invalid requests, such as those with parameters
- * outside the allowed ranges.
- * The section includes an example of a JSON error response with a 400 Bad Request status,
- * along with a helpful message to guide developers in correcting their requests.
  *
  * @returns {ReactNode} The rendered component.
  */

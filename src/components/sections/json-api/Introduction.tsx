@@ -6,9 +6,6 @@ import Container from "@/components/primitives/Container";
 
 /**
  * This component serves as the introduction section for the Vegan Ipsum JSON API documentation.
- * It provides an overview of what the API is, its purpose, and its key features.
- * The section is designed to give developers a clear understanding of how the API
- * can be used to generate vegan-themed placeholder text for their projects.
  *
  * @returns {ReactNode} The rendered component.
  */

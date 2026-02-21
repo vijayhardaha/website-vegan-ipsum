@@ -7,10 +7,8 @@ import Icon from "@/components/primitives/Icon";
 
 /**
  * This component renders the "Parameters" section of the Vegan Ipsum JSON API documentation.
- * It provides a detailed table of the available query parameters for customizing the output
- * of the API, along with a helpful tip for users.
  *
- * @returns {ReactNode} The renedered component.
+ * @returns {ReactNode} The rendered component.
  */
 export default function Parameters(): ReactNode {
 	return (

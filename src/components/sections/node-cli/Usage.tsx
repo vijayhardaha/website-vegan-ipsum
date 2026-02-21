@@ -5,6 +5,11 @@ import Section from "@/components/layout/Section";
 import CodeBlock from "@/components/primitives/CodeBlock";
 import Container from "@/components/primitives/Container";
 
+/**
+ * This component renders the usage section for the Node CLI page.
+ *
+ * @returns {ReactNode} The rendered component.
+ */
 export default function Usage(): ReactNode {
 	return (
 		<Section id="usage" aria-label="Basic usage instructions for the Vegan Ipsum Node CLI">

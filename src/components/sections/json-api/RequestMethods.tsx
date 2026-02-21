@@ -6,10 +6,6 @@ import Container from "@/components/primitives/Container";
 
 /**
  * This component outlines the HTTP request methods supported by the Vegan Ipsum JSON API.
- * It explains the two primary methods, GET and POST, and how they can be used to
- * send parameters for generating vegan-themed placeholder text.
- * The section is designed to help developers understand the different
- * ways to interact with the API based on their specific use cases.
  *
  * @returns {ReactNode} The rendered component.
  */

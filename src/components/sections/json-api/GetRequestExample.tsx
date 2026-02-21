@@ -8,9 +8,6 @@ import { getCanonicalUrl } from "@/utils/seo";
 
 /**
  * This component provides an example of how to make a GET request to the Vegan Ipsum JSON API.
- * It demonstrates how to use query parameters to customize the output and includes examples
- * for making requests from a browser, using cURL, and with JavaScript's fetch API.
- * This section is designed to help developers understand how to interact with the API effectively.
  *
  * @returns {ReactNode} The rendered component.
  */

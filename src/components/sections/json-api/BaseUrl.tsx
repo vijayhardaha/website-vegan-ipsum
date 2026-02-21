@@ -8,9 +8,6 @@ import { getCanonicalUrl } from "@/utils/seo";
 
 /**
  * This component serves as the base URL section for the Vegan Ipsum JSON API documentation.
- * It provides developers with the root endpoint for accessing the API, along with a brief
- * explanation of its importance and usage. This section is crucial for guiding users on how
- * to construct their API requests correctly.
  *
  * @returns {ReactNode} The rendered component.
  */

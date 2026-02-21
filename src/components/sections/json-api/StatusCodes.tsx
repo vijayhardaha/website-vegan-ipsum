@@ -7,9 +7,6 @@ import { cn } from "@/utils/classnames";
 
 /**
  * This component provides an overview of the HTTP status codes returned by the Vegan Ipsum JSON API.
- * It explains the meaning of common status codes such as 200 OK, 400 Bad Request, 404 Not Found,
- * and 500 Internal Server Error. Each status code is accompanied by a description to help
- * developers understand the outcome of their API requests and how to troubleshoot issues.
  *
  * @returns {ReactNode} The rendered component.
  */

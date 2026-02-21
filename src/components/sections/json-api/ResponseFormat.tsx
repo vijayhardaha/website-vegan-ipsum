@@ -7,10 +7,6 @@ import Container from "@/components/primitives/Container";
 
 /**
  * This component describes the response format of the Vegan Ipsum JSON API.
- * It explains the structure of a successful API response, which includes a
- * JSON object with a "text" property containing the generated vegan ipsum content.
- * The section also provides an example of the JSON response, demonstrating how
- * the output respects the requested parameters for unit count, unit type, and format.
  *
  * @returns {ReactNode} The rendered component.
  */

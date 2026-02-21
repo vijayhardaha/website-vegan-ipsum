@@ -8,7 +8,6 @@ import Container from "@/components/primitives/Container";
  * Hero component for displaying the main introduction and call-to-action buttons.
  *
  * @returns {ReactNode} The rendered Hero component.
- *
  */
 export default function Hero(): ReactNode {
 	return (
