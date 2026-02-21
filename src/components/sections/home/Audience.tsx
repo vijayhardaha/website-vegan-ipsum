@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
 
-import { LiaUserFriendsSolid } from "react-icons/lia";
-import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
+import { IconName } from "@/constants/icons";
 
 /**
  * Represents the details of a card displayed in the component.
@@ -13,7 +12,7 @@ import Container from "@/components/primitives/Container";
 interface Card {
 	title: string;
 	text: string;
-	icon: ReactNode;
+	icon: IconName;
 }
 
 /**
@@ -23,22 +22,22 @@ const cards: Card[] = [
 	{
 		title: "Designers & UI/UX",
 		text: "Craft plant-based brand experiences that feel authentic from the very first mockup or wireframe.",
-		icon: <VscSymbolColor />,
+		icon: "paint",
 	},
 	{
 		title: "Developers",
 		text: "Use the API, CLI, or NPM package to automate vegan-themed filler text in your builds and prototypes.",
-		icon: <VscCode />,
+		icon: "code",
 	},
 	{
 		title: "Marketers & Creators",
 		text: "Promote veganism and sustainability through every detail, even your placeholder content matters.",
-		icon: <VscMerge />,
+		icon: "merge",
 	},
 	{
 		title: "Conscious Builders",
 		text: "Anyone who wants their tools to reflect their ethics from open-source projects to client work.",
-		icon: <VscTools />,
+		icon: "tools",
 	},
 ];
 
@@ -60,7 +59,7 @@ export default function Audience(): ReactNode {
 				<SectionHeader
 					heading="Who Can Use Vegan Ipsum?"
 					tagline="Who It's For"
-					icon={<LiaUserFriendsSolid className="h-4 w-4" />}
+					icon={<Icon name="users" size={4} />}
 					headingClassName="text-primary-foreground"
 					taglineClassName="text-primary-muted/70"
 				>
@@ -76,7 +75,7 @@ export default function Audience(): ReactNode {
 								className="border-primary-muted/20 bg-primary-muted/10 hover:bg-primary-muted/20 relative flex items-start gap-4 rounded-2xl border p-6 backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"
 							>
 								<span className="text-primary-foreground mb-4 block flex-shrink-0 text-4xl">
-									{card.icon}
+									<Icon name={card.icon} />
 								</span>
 								<div>
 									<h3 className="text-primary-foreground mb-2 text-lg font-bold">
