@@ -1,5 +1,4 @@
-import { LiaHashtagSolid } from "react-icons/lia";
-import { LiaHomeSolid } from "react-icons/lia";
+import { LiaHashtagSolid, LiaUserFriendsSolid } from "react-icons/lia";
 
 /**
  * Defines the available icon names and their corresponding React components.
@@ -12,6 +11,6 @@ export type IconName = keyof typeof ICONS;
  * This allows for easy retrieval and usage of icons based on their names.
  */
 export const ICONS = {
+	users: LiaUserFriendsSolid,
 	hashtag: LiaHashtagSolid,
-	home: LiaHomeSolid,
 } as const;
