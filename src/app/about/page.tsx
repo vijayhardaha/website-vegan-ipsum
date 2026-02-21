@@ -8,7 +8,7 @@ import {
 	CustomizationOptions,
 	TechnicalOverview,
 	UseCases,
-	CTASection,
+	CTA,
 } from "@/components/sections/about";
 import { buildMetadata } from "@/utils/seo";
 
@@ -52,7 +52,7 @@ export default function AboutPage(): ReactNode {
 
 			<UseCases />
 
-			<CTASection />
+			<CTA />
 		</>
 	);
 }
