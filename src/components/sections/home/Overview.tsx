@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
 import Image from "next/image";
-import { LiaLightbulb } from "react-icons/lia";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
  * This component provides an introduction to the Vegan Ipsum
@@ -34,7 +34,7 @@ export default function Overview(): ReactNode {
 					<SectionHeader
 						heading="What is Vegan Ipsum Generator?"
 						tagline="What is it"
-						icon={<LiaLightbulb className="h-4 w-4" />}
+						icon={<Icon name="lightBulb" size={4} />}
 					>
 						<p>
 							The Vegan Ipsum Generator is a powerful, free, and plant-based
