@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import { Metadata } from "next";
+
 import PageHeader from "@/components/common/PageHeader";
 import {
 	Introduction,
@@ -17,7 +19,7 @@ import { buildMetadata } from "@/utils/seo";
 /**
  * SEO metadata for the page.
  */
-export const metadata = buildMetadata({
+export const metadata: Metadata = buildMetadata({
 	title: "JSON API",
 	description:
 		"Fetch plant-based, cruelty-free placeholder text for your apps, websites, or projects using the lightweight Vegan Ipsum JSON API — perfect for ethical developers.",
