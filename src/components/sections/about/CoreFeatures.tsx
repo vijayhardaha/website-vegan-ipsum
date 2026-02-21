@@ -14,7 +14,7 @@ import { IconName } from "@/constants/icons";
 interface Card {
 	title: string;
 	href: string;
-	icon: string;
+	icon: IconName;
 	content: string;
 }
 
@@ -79,7 +79,7 @@ export default function CoreFeatures(): JSX.Element {
 							>
 								<div className="flex items-start gap-4">
 									<div className="bg-primary-muted text-primary inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
-										<Icon name={card.icon as IconName} />
+										<Icon name={card.icon} />
 									</div>
 									<div>
 										<h3 className="text-primary-solid mb-2 text-xl">

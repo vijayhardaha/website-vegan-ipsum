@@ -12,7 +12,7 @@ import { IconName } from "@/constants/icons";
 interface Card {
 	title: string;
 	text: string;
-	icon: string;
+	icon: IconName;
 }
 
 /**
@@ -63,13 +63,13 @@ export default function UseCases(): JSX.Element {
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cards.map((card: Card, index: number) => (
+						{cards.map((card, index: number) => (
 							<div
 								key={index}
 								className="border-border relative flex gap-4 overflow-hidden rounded-2xl border bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"
 							>
 								<span className="bg-secondary-100/70 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
-									<Icon name={card.icon as IconName} />
+									<Icon name={card.icon} />
 								</span>
 								<div>
 									<h3 className="text-primary-solid mb-1 text-lg font-bold">
