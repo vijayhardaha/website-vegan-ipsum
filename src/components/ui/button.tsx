@@ -23,6 +23,15 @@ type SlotProps = {
 	children: ReactNode; // Allow any valid ReactNode (string, ReactElement, etc.)
 } & HTMLAttributes<HTMLElement>;
 
+/**
+ * The Slot component is a polymorphic wrapper that forwards props and refs to its child element.
+ * It ensures that the child element is a valid React element and properly handles refs.
+ *
+ * @param children - The child element to which props and refs will be forwarded.
+ * @param props - Additional props to be forwarded to the child element.
+ * @param ref - A ref that will be forwarded to the child element.
+ * @returns A cloned React element with forwarded props and refs, or null if the child is not a valid React element.
+ */
 const Slot = forwardRef<HTMLElement, SlotProps>(({ children, ...props }, ref) => {
 	if (!isValidElement(children)) {
 		return null;
@@ -55,6 +64,7 @@ const Slot = forwardRef<HTMLElement, SlotProps>(({ children, ...props }, ref) =>
 	} as any); // Use `as any` to bypass TypeScript's type checking for `ref`
 });
 
+// Set the display name for the Slot component. This is useful for debugging and React DevTools.
 Slot.displayName = "Slot";
 
 /**
@@ -141,6 +151,19 @@ type ButtonProps = {
 	children: ReactNode; // Allow any valid ReactNode (string, ReactElement, etc.)
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
+/**
+ * The Button component is a versatile button element that supports multiple variants and sizes.
+ * It can also render as a different component using the `asChild` prop.
+ *
+ * @param className - Additional class names to apply to the button.
+ * @param variant - The visual style of the button (e.g., "primary", "secondary").
+ * @param size - The size of the button (e.g., "sm", "md", "lg").
+ * @param asChild - If true, renders the button as a child component using the Slot component.
+ * @param children - The content inside the button, which can be any valid ReactNode.
+ * @param props - Additional props to be passed to the button element.
+ * @param ref - A ref that will be forwarded to the button element.
+ * @returns A styled button element or a child component with forwarded props and refs.
+ */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 	({ className, variant = "primary", size = "md", asChild = false, children, ...props }, ref) => {
 		const Comp = asChild ? Slot : "button";
@@ -161,6 +184,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 	}
 );
 
-Button.displayName = "Button"; // Set the display name for the Button component
+// Set the display name for the Button component. This is useful for debugging and React DevTools.
+Button.displayName = "Button";
 
 export { Button, buttonVariants };
