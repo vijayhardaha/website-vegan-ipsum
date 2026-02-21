@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
 import SectionHeader from "@/components/common/SectionHeader";
-import CodeBlock from "@/components/ui/codeblock";
+import CodeBlock from "@/components/primitives/codeblock";
 
 export default function Usage(): ReactNode {
 	return (

@@ -8,7 +8,7 @@ import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
 import SectionHeader from "@/components/common/SectionHeader";
 import IpsumForm from "@/components/sections/home/IpsumForm";
-import Button from "@/components/ui/button";
+import Button from "@/components/primitives/button";
 import { cn } from "@/utils/classnames";
 
 /**

@@ -9,7 +9,7 @@ import { LuAlignRight, LuX } from "react-icons/lu";
 import { HEADER_NAV_LINKS, NavLink } from "@/constants/navlinks";
 import { cn } from "@/utils/classnames";
 
-import Button from "../ui/button";
+import Button from "../primitives/button";
 
 import SmartLink from "./SmartLink";
 

@@ -11,7 +11,7 @@ import {
 	Features,
 	Support,
 } from "@/components/sections/vscode-extension";
-import Button from "@/components/ui/button";
+import Button from "@/components/primitives/button";
 import { buildMetadata } from "@/utils/seo";
 
 /**
