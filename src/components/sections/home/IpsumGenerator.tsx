@@ -2,12 +2,11 @@
 
 import { ReactNode, useState } from "react";
 
-import { LiaHashtagSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Button from "@/components/primitives/Button";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 import IpsumForm from "@/components/sections/home/IpsumForm";
 import { cn } from "@/utils/classnames";
 
@@ -77,7 +76,7 @@ export default function IpsumGenerator(): ReactNode {
 						</>
 					}
 					tagline="The Tool"
-					icon={<LiaHashtagSolid className="h-4 w-4" />}
+					icon={<Icon name="hashtag" size={4} />}
 				>
 					<p>
 						Instantly create plant-based placeholder text tailored to your project
