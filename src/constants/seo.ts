@@ -107,8 +107,11 @@ export const SITE_METADATA: Metadata = {
 		canonical: SEO_CANONICAL_URL,
 	},
 	keywords: SEO_KEYWORDS,
-	author: "Vijay Hardaha",
+	applicationName: SEO_TITLE_POSTFIX,
+	authors: [{ name: "Vijay Hardaha", url: "https://instagram.com/vegan.vijay" }],
+	publisher: "Vijay Hardaha",
 	robots: "index, follow",
+	category: "Web Development Tools",
 	icons: {
 		icon: "/favicon.ico",
 		apple: "/apple-touch-icon.png",
