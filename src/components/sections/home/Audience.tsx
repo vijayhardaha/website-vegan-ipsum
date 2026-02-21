@@ -10,7 +10,7 @@ import Container from "@/components/primitives/Container";
 /**
  * Represents the details of a card displayed in the component.
  */
-interface ICardItem {
+interface Card {
 	title: string;
 	text: string;
 	icon: ReactNode;
@@ -19,7 +19,7 @@ interface ICardItem {
 /**
  * An array of card details used to render the cards in the component.
  */
-const cardItems: ICardItem[] = [
+const cards: Card[] = [
 	{
 		title: "Designers & UI/UX",
 		text: "Craft plant-based brand experiences that feel authentic from the very first mockup or wireframe.",
@@ -70,7 +70,7 @@ export default function Audience(): ReactNode {
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cardItems.map((card: ICardItem, index: number) => (
+						{cards.map((card: Card, index: number) => (
 							<div
 								key={index}
 								className="border-primary-muted/20 bg-primary-muted/10 hover:bg-primary-muted/20 relative flex items-start gap-4 rounded-2xl border p-6 backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"
