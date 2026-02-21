@@ -13,6 +13,9 @@ interface OptionItem {
 	disabled?: boolean;
 }
 
+/**
+ * Props for the Select component, extending standard select attributes and adding custom options and value handling.
+ */
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
 	/** Additional CSS classes for the select element. */
 	className?: string;
