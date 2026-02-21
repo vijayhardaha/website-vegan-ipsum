@@ -22,22 +22,22 @@ const cards: Card[] = [
 	{
 		title: "Design Mockups & Wire frames",
 		text: "When building vegan, plant-based, or ethical brand mockups and prototypes that need thematically relevant filler content.",
-		icon: "panorama",
+		icon: "fcPanorama",
 	},
 	{
 		title: "Presentations & Portfolios",
 		text: "When you need clean, non-disruptive, and thematically relevant filler content for marketing materials and pitches.",
-		icon: "comboChart",
+		icon: "fcChart",
 	},
 	{
 		title: "Development Workflows",
 		text: "When integrating via API, CLI, or VS Code extension to automate fast, ethical placeholder text generation.",
-		icon: "process",
+		icon: "fcProcess",
 	},
 	{
 		title: "Sustainability Projects",
 		text: "When building projects focused on eco-friendly initiatives, compassionate living, and conscious digital experiences.",
-		icon: "biomass",
+		icon: "fcBiomass",
 	},
 ];
 

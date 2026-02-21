@@ -1,7 +1,5 @@
 import { ReactNode } from "react";
 
-import { LiaLightbulbSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
@@ -15,11 +13,7 @@ export default function Introduction(): ReactNode {
 	return (
 		<Section id="introduction" aria-label="Introduction to the Vegan Ipsum VS Code Extension">
 			<Container>
-				<SectionHeader
-					heading="Introduction"
-					tagline="Overview"
-					icon={<LiaLightbulbSolid className="h-4 w-4" />}
-				>
+				<SectionHeader heading="Introduction" tagline="Overview" icon="lightBulb">
 					<p>
 						The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight and
 						intuitive tool designed for developers, designers, and content creators who

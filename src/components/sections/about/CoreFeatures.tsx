@@ -46,7 +46,7 @@ const cards: Card[] = [
 	{
 		title: "VS Code Extension",
 		href: "/vscode-extension",
-		icon: "code2",
+		icon: "code",
 		content:
 			"Generate and insert vegan-themed placeholder text into your source files with a simple keyboard shortcut inside Visual Studio Code, streamlining the design and coding process.",
 	},

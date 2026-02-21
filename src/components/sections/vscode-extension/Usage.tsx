@@ -1,10 +1,9 @@
 import { ReactNode } from "react";
 
-import { LiaLightbulbSolid, LiaRocketSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
  * This component renders the usage section for the VS Code Extension page.
@@ -15,11 +14,7 @@ export default function Usage(): ReactNode {
 	return (
 		<Section id="usage" aria-label="Usage instructions for the Vegan Ipsum VS Code Extension">
 			<Container>
-				<SectionHeader
-					heading="Usage"
-					tagline="How to use"
-					icon={<LiaRocketSolid className="h-4 w-4" />}
-				>
+				<SectionHeader heading="Usage" tagline="How to use" icon="rocket">
 					<p>
 						Once installed, generating vegan-themed placeholder text is quick and
 						straightforward.
@@ -72,7 +67,7 @@ export default function Usage(): ReactNode {
 
 					<div className="bg-primary-muted border-primary/40 text-primary-dark flex items-start gap-3 rounded-2xl border px-5 py-4">
 						<span className="flex-shrink-0 text-2xl">
-							<LiaLightbulbSolid />
+							<Icon name="lightBulb" />
 						</span>
 						<p>
 							<strong>Pro Tip:</strong> You can use this in any text-based file type

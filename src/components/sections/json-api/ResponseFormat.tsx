@@ -12,7 +12,7 @@ import Container from "@/components/primitives/Container";
  * The section also provides an example of the JSON response, demonstrating how
  * the output respects the requested parameters for unit count, unit type, and format.
  *
- * @returns {ReactNode} The renedered component.
+ * @returns {ReactNode} The rendered component.
  */
 export default function ResponseFormat(): ReactNode {
 	return (

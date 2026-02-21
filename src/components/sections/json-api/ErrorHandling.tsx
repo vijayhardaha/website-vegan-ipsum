@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
 
-import { LiaInfoCircleSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import CodeBlock from "@/components/primitives/CodeBlock";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
  * This component describes the error handling mechanism of the Vegan Ipsum JSON API.
@@ -14,7 +13,7 @@ import Container from "@/components/primitives/Container";
  * The section includes an example of a JSON error response with a 400 Bad Request status,
  * along with a helpful message to guide developers in correcting their requests.
  *
- * @returns {ReactNode} The renedred component.
+ * @returns {ReactNode} The rendered component.
  */
 export default function ErrorHandling(): ReactNode {
 	return (
@@ -35,7 +34,7 @@ export default function ErrorHandling(): ReactNode {
 
 					<div className="bg-primary-muted border-primary/40 text-primary-dark flex items-start gap-3 rounded-2xl border px-5 py-4">
 						<span className="flex-shrink-0 text-2xl">
-							<LiaInfoCircleSolid />
+							<Icon name="infoCircle" />
 						</span>
 						<p>
 							Always validate your input parameters before sending requests to ensure

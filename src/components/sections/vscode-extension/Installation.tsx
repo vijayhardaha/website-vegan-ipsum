@@ -1,10 +1,9 @@
 import { ReactNode } from "react";
 
-import { LiaLightbulbSolid, LiaSearchSolid, LiaKeyboardSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
  * This component renders the installation section for the VS Code Extension page.
@@ -19,11 +18,7 @@ export default function Installation(): ReactNode {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader
-					heading="Installation"
-					tagline="Setup Guide"
-					icon={<LiaKeyboardSolid className="h-4 w-4" />}
-				>
+				<SectionHeader heading="Installation" tagline="Setup Guide" icon="keyboard">
 					<p>
 						You can easily add the Vegan Ipsum extension to your VS Code setup in two
 						ways:
@@ -33,7 +28,7 @@ export default function Installation(): ReactNode {
 						<div className="border-border rounded-2xl border bg-white p-6 md:p-8">
 							<div className="mb-6 flex items-center gap-3">
 								<div className="border-border bg-secondary-muted/50 text-secondary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border text-2xl">
-									<LiaSearchSolid />
+									<Icon name="search" />
 								</div>
 								<div>
 									<h3 className="mb-1 text-lg">
@@ -70,7 +65,7 @@ export default function Installation(): ReactNode {
 						<div className="border-border from-secondary-100 to-secondary-200 rounded-3xl border bg-gradient-to-br p-8">
 							<div className="text-secondary mb-6 flex items-center gap-3">
 								<div className="border-secondary/40 bg-secondary/20 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border text-2xl">
-									<LiaKeyboardSolid />
+									<Icon name="keyboard" />
 								</div>
 								<div>
 									<h3 className="text-secondary-solid mb-1 text-lg">
@@ -90,7 +85,7 @@ export default function Installation(): ReactNode {
 							</div>
 							<div className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5 flex items-start gap-2 rounded-xl border px-4 py-3">
 								<span className="flex-shrink-0 text-2xl">
-									<LiaLightbulbSolid />
+									<Icon name="lightBulb" />
 								</span>
 								<p className="text-sm leading-relaxed">
 									This command triggers installation without navigating away from

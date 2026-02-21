@@ -45,7 +45,7 @@ const cards: Card[] = [
 	{
 		title: "VS Code Extension",
 		text: "Insert compassionate placeholder text without leaving your editor. The fastest way to fill your mockups.",
-		icon: "code2",
+		icon: "code",
 		link: "/vscode-extension",
 		ariaLabel: "Get Extension",
 		buttonText: "Get Extension",

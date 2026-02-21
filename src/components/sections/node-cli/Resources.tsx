@@ -10,7 +10,7 @@ import Container from "@/components/primitives/Container";
  *
  * @returns {ReactNode} The rendered component.
  */
-export default function Reseources(): ReactNode {
+export default function Resources(): ReactNode {
 	return (
 		<Section
 			id="resources"

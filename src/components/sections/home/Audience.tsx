@@ -22,22 +22,22 @@ const cards: Card[] = [
 	{
 		title: "Designers & UI/UX",
 		text: "Craft plant-based brand experiences that feel authentic from the very first mockup or wireframe.",
-		icon: "paint",
+		icon: "vPaint",
 	},
 	{
 		title: "Developers",
 		text: "Use the API, CLI, or NPM package to automate vegan-themed filler text in your builds and prototypes.",
-		icon: "code",
+		icon: "vCode",
 	},
 	{
 		title: "Marketers & Creators",
 		text: "Promote veganism and sustainability through every detail, even your placeholder content matters.",
-		icon: "merge",
+		icon: "vMerge",
 	},
 	{
 		title: "Conscious Builders",
 		text: "Anyone who wants their tools to reflect their ethics from open-source projects to client work.",
-		icon: "tools",
+		icon: "vTools",
 	},
 ];
 

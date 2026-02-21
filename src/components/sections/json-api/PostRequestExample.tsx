@@ -13,7 +13,7 @@ import { getCanonicalUrl } from "@/utils/seo";
  * requests using cURL and JavaScript's fetch API, helping developers understand how to interact
  * with the API effectively.
  *
- * @returns {ReactNode} The renedered component.
+ * @returns {ReactNode} The rendered component.
  */
 export default function PostRequestExample(): ReactNode {
 	// Base URL for the API

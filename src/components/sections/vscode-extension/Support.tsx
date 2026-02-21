@@ -1,7 +1,5 @@
 import { ReactNode } from "react";
 
-import { LiaBugSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
@@ -19,11 +17,7 @@ export default function Support(): ReactNode {
 			aroia-label="Support and feedback for the Vegan Ipsum VS Code Extension"
 		>
 			<Container>
-				<SectionHeader
-					heading="Support & Feedback"
-					tagline="Found a bug"
-					icon={<LiaBugSolid className="h-4 w-4" />}
-				>
+				<SectionHeader heading="Support & Feedback" tagline="Found a bug" icon="bug">
 					<p>
 						As an independently developed extension, I rely heavily on user feedback to
 						squash bugs and prioritize updates. If something isn&apos;t working as
