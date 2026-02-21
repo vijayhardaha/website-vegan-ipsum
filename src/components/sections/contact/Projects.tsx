@@ -4,13 +4,15 @@ import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
+import { IconName } from "@/constants/icons";
 
 /**
  * Represents the details of a card displayed in the component.
  */
 interface Card {
 	title: string;
-	icon: string;
+	icon: IconName;
 	link: string;
 	buttonText: string;
 	content: string;
@@ -96,10 +98,11 @@ export default function Projects(): JSX.Element {
 								key={index}
 								className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
 							>
-								<div className="flex items-start gap-4">{card.icon}</div>
-
-								<div>
+								<div className="flex items-start gap-4">
 									<div className="bg-primary-muted content-primary content-3xl inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl">
+										<Icon name={card.icon} />
+									</div>
+									<div>
 										<h3 className="content-primary-solid content-lg mb-2">
 											{card.title}
 										</h3>

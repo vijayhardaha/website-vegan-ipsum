@@ -11,7 +11,7 @@ import { IconName } from "@/constants/icons";
  * Represents a link with an href and display text.
  */
 type SocialLink = {
-	icon: string;
+	icon: IconName;
 	href: string;
 	platform: string;
 	handle: string;
@@ -23,25 +23,25 @@ type SocialLink = {
  */
 const socialLinks: SocialLink[] = [
 	{
-		icon: "FaGithub",
+		icon: "faGithub",
 		href: "https://github.com/vijayhardaha",
 		platform: "GitHub",
 		handle: "@vijayhardaha",
 	},
 	{
-		icon: "FaInstagram",
+		icon: "faInstagram",
 		href: "https://instagram.com/vegan.vijay",
 		platform: "Instagram",
 		handle: "@vegan.vijay",
 	},
 	{
-		icon: "FaXTwitter",
+		icon: "faXTwitter",
 		href: "https://x.com/vijayhardaha",
 		platform: "X (formerly Twitter)",
 		handle: "@vijayhardaha",
 	},
 	{
-		icon: "FaBriefcase",
+		icon: "faBriefcase",
 		href: "https://pph.me/vijayhardaha",
 		platform: "PeoplePerHour",
 		handle: "@vijayhardaha",
@@ -71,7 +71,7 @@ export default function Author(): JSX.Element {
 					</p>
 
 					<div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-						{socialLinks.map((social: SocialLink, index) => (
+						{socialLinks.map((social, index) => (
 							<SmartLink
 								key={index}
 								href={social.href}
@@ -80,7 +80,7 @@ export default function Author(): JSX.Element {
 								className="border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-2xl border bg-gradient-to-br p-6 text-center no-underline transition-all hover:-translate-y-1 hover:no-underline"
 							>
 								<div className="text-secondary-dark mb-2 text-3xl">
-									<Icon name={social.icon as IconName} />
+									<Icon name={social.icon} />
 								</div>
 								<h3 className="text-primary-solid font-sans text-sm font-bold">
 									{social.platform}
