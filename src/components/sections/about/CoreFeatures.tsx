@@ -4,8 +4,8 @@ import Link from "next/link";
 import { LiaPlugSolid } from "react-icons/lia";
 import { LiaCloudSolid, LiaCodeSolid, LiaNpm, LiaTerminalSolid } from "react-icons/lia";
 
-import Container from "@/components/composites/Container";
-import Section from "@/components/composites/Section";
+import Container from "@/components/primitives/Container";
+import Section from "@/components/primitives/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
 
 /**

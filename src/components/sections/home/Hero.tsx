@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import Container from "@/components/composites/Container";
+import Container from "@/components/primitives/Container";
 import SmartLink from "@/components/composites/SmartLink";
 import Button from "@/components/primitives/Button";
 

@@ -3,8 +3,8 @@ import { ReactNode } from "react";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
 
-import Container from "@/components/composites/Container";
-import Section from "@/components/composites/Section";
+import Container from "@/components/primitives/Container";
+import Section from "@/components/primitives/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
 
 /**

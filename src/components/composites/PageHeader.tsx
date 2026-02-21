@@ -1,6 +1,6 @@
 import { ReactNode, ReactElement } from "react";
 
-import Container from "./Container";
+import Container from "../primitives/Container";
 
 /**
  * Props for the PageHeader component.

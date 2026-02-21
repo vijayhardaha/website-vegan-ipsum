@@ -4,8 +4,8 @@ import { FaXTwitter, FaGithub, FaInstagram, FaBriefcase } from "react-icons/fa6"
 import { LiaUser } from "react-icons/lia";
 import { RiExternalLinkLine } from "react-icons/ri";
 
-import Container from "@/components/composites/Container";
-import Section from "@/components/composites/Section";
+import Container from "@/components/primitives/Container";
+import Section from "@/components/primitives/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
 
