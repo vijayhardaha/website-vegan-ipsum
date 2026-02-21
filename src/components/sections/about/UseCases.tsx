@@ -1,49 +1,62 @@
 import { ReactNode } from "react";
 
-import { LiaBriefcaseSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
  * Represents the details of card items used in the component.
  */
-interface CardItem {
+interface Card {
 	title: string;
-	text: string;
+	content: string;
 }
 
 /**
  * An array of card details used to render the cards in the component.
  */
-const cardItems: CardItem[] = [
+const cards: Card[] = [
 	{
 		title: "Design Mockups",
-		text: "Create authentic vegan and eco-conscious product designs that speak directly to ethical consumers and sustainability advocates.",
+		content:
+			"Create authentic vegan and eco-conscious product designs that speak directly to ethical consumers and sustainability advocates.",
 	},
 	{
 		title: "Branding Projects",
-		text: "Use meaningful filler text in marketing materials and campaigns that promote plant-based living and environmental stewardship.",
+		content:
+			"Use meaningful filler text in marketing materials and campaigns that promote plant-based living and environmental stewardship.",
 	},
 	{
 		title: "Educational Apps",
-		text: "Populate learning platforms with contextually relevant placeholder content tailored to veganism, nutrition, and sustainable practices.",
+		content:
+			"Populate learning platforms with contextually relevant placeholder content tailored to veganism, nutrition, and sustainable practices.",
 	},
 	{
 		title: "Startup Prototypes",
-		text: "Accelerate development of plant-based product MVPs and pitch decks with relevant, aligned placeholder text.",
+		content:
+			"Accelerate development of plant-based product MVPs and pitch decks with relevant, aligned placeholder text.",
 	},
 	{
 		title: "Blogs & Portfolios",
-		text: "Add personality and ethical alignment to personal or professional projects with thematic filler content.",
+		content:
+			"Add personality and ethical alignment to personal or professional projects with thematic filler content.",
 	},
 	{
 		title: "Open Source Projects",
-		text: "Enhance projects with unique placeholder text that reflects conscious values while avoiding generic lorem ipsum.",
+		content:
+			"Enhance projects with unique placeholder text that reflects conscious values while avoiding generic lorem ipsum.",
 	},
 ];
 
+/**
+ * This component represents the use cases and applications of the
+ * Vegan Ipsum Generator, showcasing how it can be integrated into
+ * various projects and contexts to provide meaningful,
+ * ethical placeholder text.
+ *
+ * @returns {ReactNode} The rendered component.
+ */
 export default function UseCases(): ReactNode {
 	return (
 		<Section
@@ -55,7 +68,7 @@ export default function UseCases(): ReactNode {
 				<SectionHeader
 					heading="Use Cases"
 					tagline="Applications"
-					icon={<LiaBriefcaseSolid className="h-4 w-4" />}
+					icon={<Icon name="briefCase" size={4} />}
 				>
 					<p>
 						From design mockups to educational apps, Vegan Ipsum fits seamlessly into
@@ -64,7 +77,7 @@ export default function UseCases(): ReactNode {
 				</SectionHeader>
 
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-					{cardItems.map((card: CardItem, index: number) => (
+					{cards.map((card: Card, index: number) => (
 						<div
 							key={index}
 							className="border-border flex gap-4 rounded-2xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
@@ -73,7 +86,7 @@ export default function UseCases(): ReactNode {
 								<h3 className="text-primary-solid mb-1 text-xl font-bold">
 									{card.title}
 								</h3>
-								<p className="text-sm leading-relaxed">{card.text}</p>
+								<p className="text-sm leading-relaxed">{card.content}</p>
 							</div>
 						</div>
 					))}

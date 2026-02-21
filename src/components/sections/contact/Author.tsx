@@ -1,20 +1,18 @@
 import { ReactNode } from "react";
 
-import { FaXTwitter, FaGithub, FaInstagram, FaBriefcase } from "react-icons/fa6";
-import { LiaUser } from "react-icons/lia";
-import { RiExternalLinkLine } from "react-icons/ri";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
+import { IconName } from "@/constants/icons";
 
 /**
  * Represents a link with an href and display text.
  */
 type SocialLink = {
-	icon: ReactNode;
-	link: string;
+	icon: string;
+	href: string;
 	platform: string;
 	handle: string;
 };
@@ -25,26 +23,26 @@ type SocialLink = {
  */
 const socialLinks: SocialLink[] = [
 	{
-		icon: <FaGithub />,
-		link: "https://github.com/vijayhardaha",
+		icon: "FaGithub",
+		href: "https://github.com/vijayhardaha",
 		platform: "GitHub",
 		handle: "@vijayhardaha",
 	},
 	{
-		icon: <FaInstagram />,
-		link: "https://instagram.com/vegan.vijay",
+		icon: "FaInstagram",
+		href: "https://instagram.com/vegan.vijay",
 		platform: "Instagram",
 		handle: "@vegan.vijay",
 	},
 	{
-		icon: <FaXTwitter />,
-		link: "https://x.com/vijayhardaha",
+		icon: "FaXTwitter",
+		href: "https://x.com/vijayhardaha",
 		platform: "X (formerly Twitter)",
 		handle: "@vijayhardaha",
 	},
 	{
-		icon: <FaBriefcase />,
-		link: "https://pph.me/vijayhardaha",
+		icon: "FaBriefcase",
+		href: "https://pph.me/vijayhardaha",
 		platform: "PeoplePerHour",
 		handle: "@vijayhardaha",
 	},
@@ -67,7 +65,7 @@ export default function Author(): ReactNode {
 				<SectionHeader
 					heading="Author Contact Links"
 					tagline="Get In Touch"
-					icon={<LiaUser className="h-4 w-4" />}
+					icon={<Icon name="user" size={4} />}
 				>
 					<p>
 						Connect directly with the creator of Vegan Ipsum, collaborate on new
@@ -80,18 +78,19 @@ export default function Author(): ReactNode {
 						{socialLinks.map((social: SocialLink, index) => (
 							<SmartLink
 								key={index}
-								href={social.link}
+								href={social.href}
 								linkLine={false}
+								aria-label={`Contact the author on ${social.platform}`}
 								className="border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-2xl border bg-gradient-to-br p-6 text-center no-underline transition-all hover:-translate-y-1 hover:no-underline"
 							>
 								<div className="text-secondary-dark mb-2 text-3xl">
-									{social.icon}
+									<Icon name={social.icon as IconName} />
 								</div>
 								<h3 className="text-primary-solid font-sans text-sm font-bold">
 									{social.platform}
 								</h3>
 								<p className="text-secondary-dark inline-flex items-center gap-0.5 text-sm">
-									{social.handle} <RiExternalLinkLine />
+									{social.handle} <Icon name="externalLink" />
 								</p>
 							</SmartLink>
 						))}

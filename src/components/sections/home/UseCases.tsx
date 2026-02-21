@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
 
-import { FcPanorama, FcComboChart, FcProcess, FcBiomass } from "react-icons/fc";
-import { LiaBookOpenSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
+import { IconName } from "@/constants/icons";
 
 /**
  * Represents the details of a card displayed in the component.
@@ -13,7 +12,7 @@ import Container from "@/components/primitives/Container";
 interface ICardItem {
 	title: string;
 	text: string;
-	icon: ReactNode;
+	icon: string;
 }
 
 /**
@@ -21,24 +20,24 @@ interface ICardItem {
  */
 const cardItems: ICardItem[] = [
 	{
-		title: "Design Mockups & Wireframes",
+		title: "Design Mockups & Wire frames",
 		text: "When building vegan, plant-based, or ethical brand mockups and prototypes that need thematically relevant filler content.",
-		icon: <FcPanorama />,
+		icon: "panorama",
 	},
 	{
 		title: "Presentations & Portfolios",
 		text: "When you need clean, non-disruptive, and thematically relevant filler content for marketing materials and pitches.",
-		icon: <FcComboChart />,
+		icon: "comboChart",
 	},
 	{
 		title: "Development Workflows",
 		text: "When integrating via API, CLI, or VS Code extension to automate fast, ethical placeholder text generation.",
-		icon: <FcProcess />,
+		icon: "process",
 	},
 	{
 		title: "Sustainability Projects",
 		text: "When building projects focused on eco-friendly initiatives, compassionate living, and conscious digital experiences.",
-		icon: <FcBiomass />,
+		icon: "biomass",
 	},
 ];
 
@@ -56,7 +55,7 @@ export default function UseCases(): ReactNode {
 				<SectionHeader
 					heading="When to Use Vegan Ipsum?"
 					tagline="Using It"
-					icon={<LiaBookOpenSolid className="h-4 w-4" />}
+					icon={<Icon name="bookOpen" size={4} />}
 				>
 					<p>
 						Vegan Ipsum is perfect for designers, developers, and content creators who
@@ -70,7 +69,7 @@ export default function UseCases(): ReactNode {
 								className="border-border relative flex gap-4 overflow-hidden rounded-2xl border bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"
 							>
 								<span className="bg-secondary-100/70 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
-									{card.icon}
+									<Icon name={card.icon as IconName} />
 								</span>
 								<div>
 									<h3 className="text-primary-solid mb-1 text-lg font-bold">

@@ -5,6 +5,13 @@ import Section from "@/components/layout/Section";
 import Button from "@/components/primitives/Button";
 import Container from "@/components/primitives/Container";
 
+/**
+ * This component represents the call-to-action (CTA) section of the
+ * Vegan Ipsum website, encouraging users to get started with the
+ * project and explore its various tools and resources.
+ *
+ * @returns {ReactNode} The rendered component.
+ */
 export default function CTA(): ReactNode {
 	return (
 		<Section id="ready-to-get-started">

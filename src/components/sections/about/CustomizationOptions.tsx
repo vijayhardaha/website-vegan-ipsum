@@ -1,11 +1,17 @@
 import { ReactNode } from "react";
 
-import { LiaCogSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
+/**
+ * This component represents the customization options and technical details of the
+ * Vegan Ipsum project, providing users with information on how to configure the
+ * output of the placeholder text to suit their specific needs and preferences.
+ *
+ * @returns {ReactNode} The rendered component.
+ */
 export default function CustomizationOptions(): ReactNode {
 	return (
 		<Section
@@ -17,7 +23,7 @@ export default function CustomizationOptions(): ReactNode {
 				<SectionHeader
 					heading="Customization Options"
 					tagline="Configuration"
-					icon={<LiaCogSolid className="h-4 w-4" />}
+					icon={<Icon name="cog" size={4} />}
 				>
 					<p>
 						Vegan Ipsum is designed with flexibility in mind, allowing users to tailor

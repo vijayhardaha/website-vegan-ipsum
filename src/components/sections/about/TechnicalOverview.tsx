@@ -1,11 +1,17 @@
 import { ReactNode } from "react";
 
-import { LiaLaptopCodeSolid, LiaCogsSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
+/**
+ * This component provides a technical overview of the Vegan Ipsum
+ * project, highlighting its key technical features, design principles,
+ * and implementation details.
+ *
+ * @returns {ReactNode} The rendered component.
+ */
 export default function TechnicalOverview(): ReactNode {
 	return (
 		<Section
@@ -17,7 +23,7 @@ export default function TechnicalOverview(): ReactNode {
 					<SectionHeader
 						heading="Technical Overview"
 						tagline="Under the hood"
-						icon={<LiaLaptopCodeSolid className="h-4 w-4" />}
+						icon={<Icon name="laptop" size={4} />}
 					>
 						<p>
 							Built with modern web standards and best practices, ensuring
@@ -65,7 +71,7 @@ export default function TechnicalOverview(): ReactNode {
 					<div className="content-center">
 						<div className="border-border from-secondary-100 to-secondary-200 rounded-3xl border bg-gradient-to-br p-10 text-center shadow-2xl">
 							<div className="text-secondary-solid mb-6 flex justify-center text-8xl">
-								<LiaCogsSolid />
+								<Icon name="cogs" />
 							</div>
 							<div className="space-y-3">
 								{[

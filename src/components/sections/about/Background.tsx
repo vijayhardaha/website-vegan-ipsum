@@ -1,17 +1,15 @@
 import { ReactNode } from "react";
 
-import { LiaBookSolid } from "react-icons/lia";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
- * Background Component
- *
- * This component provides an overview of the background and inspiration behind the Vegan Ipsum project.
- * It is designed to give users insight into the origin story and motivations that led to the creation of Vegan Ipsum.
+ * This component represents the background and inspiration section
+ * of the Vegan Ipsum website, providing users with insights into
+ * the origin story of the project and its motivation.
  *
  * @returns {ReactNode} The rendered component.
  */
@@ -26,7 +24,7 @@ export default function Background(): ReactNode {
 				<SectionHeader
 					heading="Background and Inspiration"
 					tagline="Origin Story"
-					icon={<LiaBookSolid className="h-4 w-4" />}
+					icon={<Icon name="book" size={4} />}
 				>
 					<p>
 						The idea behind Vegan Ipsum originated from a desire to fill a niche that
