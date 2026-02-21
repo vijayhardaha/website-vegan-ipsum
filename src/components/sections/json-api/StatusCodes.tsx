@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-import Container from "@/components/common/Container";
-import Section from "@/components/common/Section";
-import SectionHeader from "@/components/common/SectionHeader";
+import Container from "@/components/composites/Container";
+import Section from "@/components/composites/Section";
+import SectionHeader from "@/components/composites/SectionHeader";
 import { cn } from "@/utils/classnames";
 
 /**

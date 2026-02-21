@@ -10,9 +10,9 @@ import {
 } from "react-icons/fc";
 import { LiaSketch } from "react-icons/lia";
 
-import Container from "@/components/common/Container";
-import Section from "@/components/common/Section";
-import SectionHeader from "@/components/common/SectionHeader";
+import Container from "@/components/composites/Container";
+import Section from "@/components/composites/Section";
+import SectionHeader from "@/components/composites/SectionHeader";
 
 /**
  * This component renders the features section for the NPM Package page.

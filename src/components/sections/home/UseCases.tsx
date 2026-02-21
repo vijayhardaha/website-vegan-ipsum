@@ -3,9 +3,9 @@ import { ReactNode } from "react";
 import { FcPanorama, FcComboChart, FcProcess, FcBiomass } from "react-icons/fc";
 import { LiaBookOpenSolid } from "react-icons/lia";
 
-import Container from "@/components/common/Container";
-import Section from "@/components/common/Section";
-import SectionHeader from "@/components/common/SectionHeader";
+import Container from "@/components/composites/Container";
+import Section from "@/components/composites/Section";
+import SectionHeader from "@/components/composites/SectionHeader";
 
 /**
  * Represents the details of a card displayed in the component.
