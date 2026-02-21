@@ -1,4 +1,5 @@
 import { LiaHashtagSolid, LiaUserFriendsSolid } from "react-icons/lia";
+import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
 
 /**
  * Defines the available icon names and their corresponding React components.
@@ -13,4 +14,8 @@ export type IconName = keyof typeof ICONS;
 export const ICONS = {
 	users: LiaUserFriendsSolid,
 	hashtag: LiaHashtagSolid,
+	paint: VscSymbolColor,
+	code: VscCode,
+	merge: VscMerge,
+	tools: VscTools,
 } as const;
