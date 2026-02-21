@@ -7,7 +7,7 @@ import { LiaHashtagSolid } from "react-icons/lia";
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
 import SectionHeader from "@/components/common/SectionHeader";
-import GeneratorForm from "@/components/sections/home/parts/IpsumForm";
+import IpsumForm from "@/components/sections/home/IpsumForm";
 import Button from "@/components/ui/button";
 import { cn } from "@/utils/classnames";
 
@@ -86,7 +86,7 @@ export default function IpsumGenerator(): ReactNode {
 
 					<div className="border-border mt-8 rounded-2xl border bg-white p-5 md:p-7">
 						{/* Generator Form */}
-						<GeneratorForm setOutput={setOutput} />
+						<IpsumForm setOutput={setOutput} />
 
 						{/* Display Form Output */}
 						{output && (
