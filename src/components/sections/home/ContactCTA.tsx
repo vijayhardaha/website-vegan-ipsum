@@ -1,13 +1,12 @@
 import { ReactNode } from "react";
 
 import Link from "next/link";
-import { LiaHandshake } from "react-icons/lia";
-import { RiArrowRightLine } from "react-icons/ri";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Button from "@/components/primitives/Button";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
  * This component renders a call-to-action section
@@ -31,7 +30,7 @@ export default function ContactCTA(): ReactNode {
 						</>
 					}
 					tagline="Get in Touch"
-					icon={<LiaHandshake className="h-4 w-4" />}
+					icon={<Icon name="handShake" size={4} />}
 					className="mx-auto max-w-xl text-center"
 					headingClassName="mx-auto max-w-lg"
 				>
@@ -50,7 +49,7 @@ export default function ContactCTA(): ReactNode {
 						aria-label="Navigate to Contact Us page"
 					>
 						<Link href="/contact">
-							Contact <RiArrowRightLine />
+							Contact <Icon name="arrowRight" />
 						</Link>
 					</Button>
 				</SectionHeader>
