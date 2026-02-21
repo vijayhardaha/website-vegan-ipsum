@@ -2,6 +2,10 @@
 
 @layer base {
 	:root {
+
+		--white: #ffffff;
+		--black: #000000;
+
 		--primary-50: #f0f8ed;
 		--primary-100: #ddf0d7;
 		--primary-200: #bde2b4;
@@ -31,13 +35,13 @@
 		--foreground: var(--primary-800);
 
 		--primary: var(--primary-500);
-		--primary-foreground: var(--color-white);
+		--primary-foreground: var(--white);
 		--primary-muted: var(--primary-100);
 		--primary-dark: var(--primary-600);
 		--primary-solid: var(--primary-700);
 
 		--secondary: var(--secondary-500);
-		--secondary-foreground: var(--color-white);
+		--secondary-foreground: var(--white);
 		--secondary-muted: var(--secondary-100);
 		--secondary-dark: var(--secondary-600);
 		--secondary-solid: var(--secondary-700);
