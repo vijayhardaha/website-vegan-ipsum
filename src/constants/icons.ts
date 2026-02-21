@@ -1,18 +1,30 @@
+import { FaXTwitter, FaGithub, FaInstagram, FaBriefcase } from "react-icons/fa6";
+import { FcPanorama, FcComboChart, FcProcess, FcBiomass } from "react-icons/fc";
 import {
+	LiaBoltSolid,
+	LiaBookOpenSolid,
+	LiaBookSolid,
+	LiaBriefcaseSolid,
 	LiaCloudSolid,
 	LiaCodeSolid,
+	LiaCogSolid,
+	LiaCogsSolid,
+	LiaCubeSolid,
 	LiaGithub,
 	LiaGlobeSolid,
 	LiaHandshake,
 	LiaHashtagSolid,
+	LiaLaptopCodeSolid,
 	LiaLightbulb,
 	LiaNpm,
+	LiaPlugSolid,
 	LiaStarOfLifeSolid,
 	LiaTerminalSolid,
+	LiaUser,
 	LiaUserFriendsSolid,
 	LiaWhmcs,
 } from "react-icons/lia";
-import { RiArrowRightLine } from "react-icons/ri";
+import { RiArrowRightLine, RiExternalLinkLine } from "react-icons/ri";
 import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
 
 /**
@@ -26,21 +38,44 @@ export type IconName = keyof typeof ICONS;
  * This allows for easy retrieval and usage of icons based on their names.
  */
 export const ICONS = {
-	arrowRight: RiArrowRightLine,
+	biomass: FcBiomass,
+	comboChart: FcComboChart,
+	panorama: FcPanorama,
+	process: FcProcess,
+
+	bolt: LiaBoltSolid,
+	book: LiaBookSolid,
+	bookOpen: LiaBookOpenSolid,
+	briefCase: LiaBriefcaseSolid,
 	cloud: LiaCloudSolid,
-	code: VscCode,
 	code2: LiaCodeSolid,
+	cog: LiaCogSolid,
+	cogs: LiaCogsSolid,
+	cube: LiaCubeSolid,
 	gears: LiaWhmcs,
 	github: LiaGithub,
 	globe: LiaGlobeSolid,
 	handShake: LiaHandshake,
 	hashtag: LiaHashtagSolid,
+	laptop: LiaLaptopCodeSolid,
 	lightBulb: LiaLightbulb,
-	merge: VscMerge,
 	npm: LiaNpm,
-	paint: VscSymbolColor,
+	plug: LiaPlugSolid,
 	star: LiaStarOfLifeSolid,
 	terminal: LiaTerminalSolid,
-	tools: VscTools,
+	user: LiaUser,
 	users: LiaUserFriendsSolid,
+
+	arrowRight: RiArrowRightLine,
+	externalLink: RiExternalLinkLine,
+
+	faGithub: FaGithub,
+	faInstagram: FaInstagram,
+	faXTwitter: FaXTwitter,
+	faBriefcase: FaBriefcase,
+
+	code: VscCode,
+	merge: VscMerge,
+	paint: VscSymbolColor,
+	tools: VscTools,
 } as const;
