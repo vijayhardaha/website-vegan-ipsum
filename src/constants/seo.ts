@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import { getBaseUrl } from "@/utils/seo";
 
 /**
@@ -97,11 +99,10 @@ export const GOOGLE_ANALYTICS_ID = "G-XR1TK565WJ";
 /**
  * The main metadata object containing all SEO-related information for the website.
  */
-export const SITE_METADATA: SiteMetadata = {
+export const SITE_METADATA: Metadata = {
 	title: SEO_TITLE,
 	description: SEO_DESCRIPTION,
 	metadataBase: new URL(SEO_CANONICAL_URL),
-	appleTouchIcon: "/apple-touch-icon.png",
 	alternates: {
 		canonical: SEO_CANONICAL_URL,
 	},
