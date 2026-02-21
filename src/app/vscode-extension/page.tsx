@@ -5,11 +5,11 @@ import { Metadata } from "next";
 import PageHeader from "@/components/common/PageHeader";
 import SmartLink from "@/components/common/SmartLink";
 import {
-	Features,
-	Installation,
 	Introduction,
-	Support,
+	Installation,
 	Usage,
+	Features,
+	Support,
 } from "@/components/sections/vscode-extension";
 import { Button } from "@/components/ui/button";
 import { buildMetadata } from "@/utils/seo";
