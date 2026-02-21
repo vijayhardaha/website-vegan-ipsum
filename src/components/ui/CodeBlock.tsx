@@ -25,6 +25,10 @@ interface StyleProps {
 	[key: string]: CSSProperties;
 }
 
+/**
+ * Custom Prism style that overrides the default styles for code blocks and tokens.
+ * This style is designed to match the design specifications for the code blocks in the project.
+ */
 export const prismCustom = {
 	...style,
 	// override container/pre styles
@@ -103,9 +107,6 @@ export const prismCustom = {
 	"token.inserted": { color: "#86efac" },
 };
 
-// Copy handler will be implemented using React state inside the component
-// so we can avoid direct DOM manipulation and clean up timers on unmount.
-
 /**
  * Reusable component for displaying code blocks with syntax highlighting.
  * @param {CodeBlockProps} props - The props for the component.
@@ -120,6 +121,9 @@ export default function CodeBlock({
 	const [copied, setCopied] = useState(false);
 	const timerRef = useRef<number | null>(null);
 
+	/**
+	 * Cleanup function to clear the timer when the component unmounts to prevent memory leaks.
+	 */
 	useEffect(() => {
 		return () => {
 			if (timerRef.current) {
@@ -128,6 +132,10 @@ export default function CodeBlock({
 		};
 	}, []);
 
+	/**
+	 * Handles copying the code block content to the clipboard and provides user feedback.
+	 * @param text 	- The text content to be copied to the clipboard.
+	 */
 	const handleCopy = (text: string): void => {
 		navigator.clipboard.writeText(text).then(
 			() => {
