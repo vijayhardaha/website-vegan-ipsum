@@ -25,11 +25,11 @@ export interface SectionHeaderProps {
 }
 
 /**
- * SectionHeader Component
  *
- * A reusable section header component with tagline, heading, and content area.
- * Provides consistent styling for section introductions throughout the application.
+ * This component renders a section header with an optional tagline, heading, and content area.
+ * It is designed to provide a consistent layout and styling for section introductions throughout the application.
  *
+ * @param {SectionHeaderProps} props - The properties for the SectionHeader component.
  * @return {ReactNode} The rendered section header component.
  */
 export default function SectionHeader({

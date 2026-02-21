@@ -4,6 +4,7 @@ import Container from "@/components/primitives/Container";
 
 /**
  * Props for the PageHeader component.
+ *
  * @property {string} title - The main title of the page.
  * @property {string} [subtitle] - An optional subtitle providing additional context.
  */

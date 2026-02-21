@@ -9,8 +9,9 @@ import { RiExternalLinkLine } from "react-icons/ri";
 import { cn } from "@/utils/classnames";
 
 /**
- * Determines the type of link based on the href
- * @param href - The link destination
+ * Determines the type of link based on the href.
+ *
+ * @param {string} href - The link destination
  * @returns The link type: 'hash', 'internal', or 'external'
  */
 const getLinkType = (href: string): "hash" | "internal" | "external" => {
@@ -21,7 +22,8 @@ const getLinkType = (href: string): "hash" | "internal" | "external" => {
 
 /**
  * Smoothly scrolls to an element with the given ID
- * @param elementId - The ID of the target element (without the # symbol)
+ *
+ * @param {string} elementId - The ID of the target element (without the # symbol)
  */
 const scrollToElement = (elementId: string): void => {
 	const element = document.getElementById(elementId);
