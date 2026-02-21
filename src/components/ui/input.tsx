@@ -2,7 +2,9 @@ import { InputHTMLAttributes, ReactNode } from "react";
 
 import { cn } from "@/utils/classnames";
 
-// Define TypeScript types for the component props
+/**
+ * Props for the Input component.
+ */
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	className?: string;
 	type?: string;
@@ -14,7 +16,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  * @param {InputProps} props - Component props
  * @returns {ReactNode} Input component
  */
-function Input({ className, type = "text", ...props }: InputProps): ReactNode {
+export default function Input({ className, type = "text", ...props }: InputProps): ReactNode {
 	return (
 		<input
 			type={type}
@@ -54,5 +56,3 @@ function Input({ className, type = "text", ...props }: InputProps): ReactNode {
 		/>
 	);
 }
-
-export { Input };

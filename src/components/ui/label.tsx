@@ -6,7 +6,9 @@ import { cva } from "class-variance-authority";
 
 import { cn } from "@/utils/classnames";
 
-// Define TypeScript types for the component props
+/**
+ * Props for the Label component.
+ */
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
 	className?: string;
 	children: ReactNode;
@@ -36,4 +38,4 @@ const Label = forwardRef<HTMLLabelElement, LabelProps>(
 
 Label.displayName = "Label";
 
-export { Label, labelVariants };
+export default Label;

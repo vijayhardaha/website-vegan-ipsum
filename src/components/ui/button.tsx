@@ -61,7 +61,7 @@ const Slot = forwardRef<HTMLElement, SlotProps>(({ children, ...props }, ref) =>
 			}
 		},
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	} as any); // Use `as any` to bypass TypeScript's type checking for `ref`
+	} as any);
 });
 
 // Set the display name for the Slot component. This is useful for debugging and React DevTools.
@@ -187,4 +187,5 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 // Set the display name for the Button component. This is useful for debugging and React DevTools.
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+export { buttonVariants };
+export default Button;

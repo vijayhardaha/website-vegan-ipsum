@@ -3,11 +3,10 @@ import { ChangeEvent, ReactNode, SelectHTMLAttributes } from "react";
 import { cn } from "@/utils/classnames";
 
 /**
- * Select dropdown component matching the project's input/textarea styles.
- * @param {InputProps} props - Component props
- * @returns {ReactNode} Input component
+ * Defines the shape of an option item for the Select component,
+ * including a label, value, and optional disabled state.
  */
-interface OptionItem {
+interface Options {
 	label: string;
 	value: string;
 	disabled?: boolean;
@@ -20,7 +19,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
 	/** Additional CSS classes for the select element. */
 	className?: string;
 	/** Array of options to render (label/value pairs). If omitted, children are rendered. */
-	options?: OptionItem[];
+	options?: Options[];
 	/** Controlled selected value */
 	value?: string;
 	/** Callback that receives the selected value */
@@ -33,7 +32,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
  * Select dropdown component matching the project's input/textarea styles.
  * Accepts an `options` array of `{ label, value }` and a controlled `value`.
  */
-function Select({
+export default function Select({
 	className,
 	options,
 	value,
@@ -95,5 +94,3 @@ function Select({
 		</select>
 	);
 }
-
-export { Select };
