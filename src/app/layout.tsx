@@ -4,7 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Metadata } from "next";
 import { Inter, Geist_Mono, Playfair_Display } from "next/font/google";
 
-import Layout from "@/components/composites/Layout";
+import Layout from "@/components/layout/Layout";
 import { GOOGLE_ANALYTICS_ID, SITE_METADATA } from "@/constants/seo";
 
 import "../styles/globals.css";

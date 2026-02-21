@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import Container from "@/components/primitives/Container";
-import Section from "@/components/primitives/Section";
+import Section from "@/components/layout/Section";
 import SmartLink from "@/components/composites/SmartLink";
 import Button from "@/components/primitives/Button";
 

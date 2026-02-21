@@ -11,7 +11,7 @@ import {
 import { LiaSketch } from "react-icons/lia";
 
 import Container from "@/components/primitives/Container";
-import Section from "@/components/primitives/Section";
+import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
 
 /**

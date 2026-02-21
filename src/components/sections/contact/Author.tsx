@@ -5,7 +5,7 @@ import { LiaUser } from "react-icons/lia";
 import { RiExternalLinkLine } from "react-icons/ri";
 
 import Container from "@/components/primitives/Container";
-import Section from "@/components/primitives/Section";
+import Section from "@/components/layout/Section";
 import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
 

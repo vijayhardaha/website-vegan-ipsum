@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import Footer from "@/components/composites/Footer";
 import Header from "@/components/composites/Header";
-import Main from "@/components/composites/Main";
+import Main from "@/components/layout/Main";
 
 /**
  * Props for the Layout component.
