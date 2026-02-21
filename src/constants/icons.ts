@@ -1,4 +1,10 @@
-import { LiaHashtagSolid, LiaStarOfLifeSolid, LiaUserFriendsSolid } from "react-icons/lia";
+import {
+	LiaHandshake,
+	LiaHashtagSolid,
+	LiaStarOfLifeSolid,
+	LiaUserFriendsSolid,
+} from "react-icons/lia";
+import { RiArrowRightLine } from "react-icons/ri";
 import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
 
 /**
@@ -19,4 +25,6 @@ export const ICONS = {
 	merge: VscMerge,
 	tools: VscTools,
 	star: LiaStarOfLifeSolid,
+	arrowRight: RiArrowRightLine,
+	handShake: LiaHandshake,
 } as const;
