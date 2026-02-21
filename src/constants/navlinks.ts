@@ -1,9 +1,9 @@
 /**
- * Represents a navigation link.
+ * Defines the structure of a navigation link and the arrays of
+ * links for the header and footer of the website.
  *
  * @property {string} label - The display text for the link.
  * @property {string} href - The URL the link points to.
- * @property {boolean} [external] - Indicates if the link is external (optional).
  */
 export interface NavLink {
 	label: string;
@@ -12,6 +12,7 @@ export interface NavLink {
 
 /**
  * Navigation links displayed in the header of the website.
+ *
  * @type {NavLink[]}
  */
 export const HEADER_NAV_LINKS: NavLink[] = [
@@ -25,6 +26,7 @@ export const HEADER_NAV_LINKS: NavLink[] = [
 
 /**
  * Navigation links displayed in the footer of the website.
+ *
  * @type {NavLink[]}
  */
 export const FOOTER_NAV_LINKS: NavLink[] = [
