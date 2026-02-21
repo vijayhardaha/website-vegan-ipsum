@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import { Metadata } from "next";
+
 import PageHeader from "@/components/common/PageHeader";
 import { Author, Projects } from "@/components/sections/contact";
 import { buildMetadata } from "@/utils/seo";
@@ -7,7 +9,7 @@ import { buildMetadata } from "@/utils/seo";
 /**
  * SEO metadata for the page.
  */
-export const metadata = buildMetadata({
+export const metadata: Metadata = buildMetadata({
 	title: "Contact",
 	description:
 		"Get in touch with the creator of Vegan Ipsum. Explore related tools, open-source projects, and social media profiles for ethical web development.",
