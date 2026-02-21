@@ -69,7 +69,7 @@ export default function Audience(): JSX.Element {
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cards.map((card: Card, index: number) => (
+						{cards.map((card, index: number) => (
 							<div
 								key={index}
 								className="border-primary-muted/20 bg-primary-muted/10 hover:bg-primary-muted/20 relative flex items-start gap-4 rounded-2xl border p-6 backdrop-blur-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"

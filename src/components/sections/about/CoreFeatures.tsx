@@ -70,7 +70,7 @@ export default function CoreFeatures(): JSX.Element {
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cards.map((card: Card, index: number) => (
+						{cards.map((card, index: number) => (
 							<Link
 								key={index}
 								href={card.href}

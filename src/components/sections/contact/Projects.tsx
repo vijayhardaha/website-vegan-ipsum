@@ -93,7 +93,7 @@ export default function Projects(): JSX.Element {
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cards.map((card: Card, index: number) => (
+						{cards.map((card, index: number) => (
 							<div
 								key={index}
 								className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
