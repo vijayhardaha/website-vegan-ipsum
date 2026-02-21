@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import PageHeader from "@/components/common/PageHeader";
+import PageHeader from "@/components/composites/PageHeader";
 import {
 	Introduction,
 	Background,

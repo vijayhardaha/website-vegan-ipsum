@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-import Footer from "@/components/common/Footer";
-import Header from "@/components/common/Header";
-import Main from "@/components/common/Main";
+import Footer from "@/components/composites/Footer";
+import Header from "@/components/composites/Header";
+import Main from "@/components/composites/Main";
 
 /**
  * Props for the Layout component.

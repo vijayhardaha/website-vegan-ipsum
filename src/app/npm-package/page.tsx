@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import { Metadata } from "next";
 
-import PageHeader from "@/components/common/PageHeader";
+import PageHeader from "@/components/composites/PageHeader";
 import { Introduction, Installation, Usage, Features } from "@/components/sections/npm-package";
 import { buildMetadata } from "@/utils/seo";
 

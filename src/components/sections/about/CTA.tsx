@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-import Container from "@/components/common/Container";
-import Section from "@/components/common/Section";
-import SmartLink from "@/components/common/SmartLink";
+import Container from "@/components/composites/Container";
+import Section from "@/components/composites/Section";
+import SmartLink from "@/components/composites/SmartLink";
 import Button from "@/components/primitives/button";
 
 export default function CTA(): ReactNode {

@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 
 import { LiaBookSolid } from "react-icons/lia";
 
-import Container from "@/components/common/Container";
-import Section from "@/components/common/Section";
-import SectionHeader from "@/components/common/SectionHeader";
-import SmartLink from "@/components/common/SmartLink";
+import Container from "@/components/composites/Container";
+import Section from "@/components/composites/Section";
+import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 
 /**
  * Background Component

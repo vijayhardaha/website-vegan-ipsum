@@ -4,9 +4,9 @@ import Link from "next/link";
 import { LiaPlugSolid } from "react-icons/lia";
 import { LiaCloudSolid, LiaCodeSolid, LiaNpm, LiaTerminalSolid } from "react-icons/lia";
 
-import Container from "@/components/common/Container";
-import Section from "@/components/common/Section";
-import SectionHeader from "@/components/common/SectionHeader";
+import Container from "@/components/composites/Container";
+import Section from "@/components/composites/Section";
+import SectionHeader from "@/components/composites/SectionHeader";
 
 /**
  * Represents the details of a card item used in the  component.
