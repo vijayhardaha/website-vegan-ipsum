@@ -4,7 +4,6 @@ import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
 
 /**
  * This component represents the background and inspiration section
@@ -24,7 +23,7 @@ export default function Background(): ReactNode {
 				<SectionHeader
 					heading="Background and Inspiration"
 					tagline="Origin Story"
-					icon={<Icon name="book" size={4} />}
+					icon="book"
 				>
 					<p>
 						The idea behind Vegan Ipsum originated from a desire to fill a niche that

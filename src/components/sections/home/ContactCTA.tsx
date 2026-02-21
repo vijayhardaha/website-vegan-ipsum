@@ -30,7 +30,7 @@ export default function ContactCTA(): ReactNode {
 						</>
 					}
 					tagline="Get in Touch"
-					icon={<Icon name="handShake" size={4} />}
+					icon="handShake"
 					className="mx-auto max-w-xl text-center"
 					headingClassName="mx-auto max-w-lg"
 				>

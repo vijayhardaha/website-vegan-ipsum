@@ -3,7 +3,6 @@ import { ReactNode } from "react";
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
 
 /**
  * Represents the details of card items used in the component.
@@ -65,11 +64,7 @@ export default function UseCases(): ReactNode {
 			aria-label="Use cases and applications of Vegan Ipsum"
 		>
 			<Container>
-				<SectionHeader
-					heading="Use Cases"
-					tagline="Applications"
-					icon={<Icon name="briefCase" size={4} />}
-				>
+				<SectionHeader heading="Use Cases" tagline="Applications" icon="briefCase">
 					<p>
 						From design mockups to educational apps, Vegan Ipsum fits seamlessly into
 						ethical and eco-conscious projects.

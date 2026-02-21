@@ -5,7 +5,6 @@ import Image from "next/image";
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
 
 /**
  * This component provides an introduction to the Vegan Ipsum
@@ -34,7 +33,7 @@ export default function Benefits(): ReactNode {
 					<SectionHeader
 						heading="Why Choose Vegan Ipsum Generator?"
 						tagline="The Why"
-						icon={<Icon name="star" size={4} />}
+						icon="star"
 					>
 						<p>
 							The Vegan Ipsum Generator provides a meaningful alternative to generic

@@ -63,11 +63,7 @@ export default function CoreFeatures(): ReactNode {
 	return (
 		<Section id="core-features" aria-label="Core features and technical details of Vegan Ipsum">
 			<Container>
-				<SectionHeader
-					heading="Core Features"
-					tagline="Tools"
-					icon={<Icon name="plug" size={4} />}
-				>
+				<SectionHeader heading="Core Features" tagline="Tools" icon="plug">
 					<p>
 						Vegan Ipsum offers multiple integration methods to fit seamlessly into your
 						workflow.

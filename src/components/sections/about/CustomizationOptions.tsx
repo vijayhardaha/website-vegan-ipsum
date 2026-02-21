@@ -3,7 +3,6 @@ import { ReactNode } from "react";
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
 
 /**
  * This component represents the customization options and technical details of the
@@ -20,11 +19,7 @@ export default function CustomizationOptions(): ReactNode {
 			aria-label="Customization options and technical details of Vegan Ipsum"
 		>
 			<Container>
-				<SectionHeader
-					heading="Customization Options"
-					tagline="Configuration"
-					icon={<Icon name="cog" size={4} />}
-				>
+				<SectionHeader heading="Customization Options" tagline="Configuration" icon="cog">
 					<p>
 						Vegan Ipsum is designed with flexibility in mind, allowing users to tailor
 						the output to meet the specific needs of their projects. Whether you want

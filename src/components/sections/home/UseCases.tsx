@@ -9,7 +9,7 @@ import { IconName } from "@/constants/icons";
 /**
  * Represents the details of a card displayed in the component.
  */
-interface ICardItem {
+interface Card {
 	title: string;
 	text: string;
 	icon: string;
@@ -18,7 +18,7 @@ interface ICardItem {
 /**
  * An array of card details used to render the cards in the component.
  */
-const cardItems: ICardItem[] = [
+const cards: Card[] = [
 	{
 		title: "Design Mockups & Wire frames",
 		text: "When building vegan, plant-based, or ethical brand mockups and prototypes that need thematically relevant filler content.",
@@ -55,7 +55,7 @@ export default function UseCases(): ReactNode {
 				<SectionHeader
 					heading="When to Use Vegan Ipsum?"
 					tagline="Using It"
-					icon={<Icon name="bookOpen" size={4} />}
+					icon="bookOpen"
 				>
 					<p>
 						Vegan Ipsum is perfect for designers, developers, and content creators who
@@ -63,7 +63,7 @@ export default function UseCases(): ReactNode {
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cardItems.map((card: ICardItem, index: number) => (
+						{cards.map((card: Card, index: number) => (
 							<div
 								key={index}
 								className="border-border relative flex gap-4 overflow-hidden rounded-2xl border bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"

@@ -89,11 +89,7 @@ export default function HowToUse(): ReactNode {
 	return (
 		<Section id="how-to-use" aria-label="How to Use Vegan Ipsum" className="bg-secondary-muted">
 			<Container>
-				<SectionHeader
-					heading="Use It Your Way"
-					tagline="How to Use"
-					icon={<Icon name="gears" size={4} />}
-				>
+				<SectionHeader heading="Use It Your Way" tagline="How to Use" icon="gears">
 					<p>
 						Instantly create plant-based placeholder text tailored to your project
 						needs. Whether you prefer a simple web interface, a powerful API, or

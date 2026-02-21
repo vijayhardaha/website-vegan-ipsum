@@ -23,7 +23,7 @@ export default function TechnicalOverview(): ReactNode {
 					<SectionHeader
 						heading="Technical Overview"
 						tagline="Under the hood"
-						icon={<Icon name="laptop" size={4} />}
+						icon="laptop"
 					>
 						<p>
 							Built with modern web standards and best practices, ensuring

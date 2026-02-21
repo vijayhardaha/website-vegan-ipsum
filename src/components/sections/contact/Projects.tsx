@@ -4,7 +4,6 @@ import SectionHeader from "@/components/composites/SectionHeader";
 import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
 
 /**
  * Represents the details of a card displayed in the component.
@@ -83,11 +82,7 @@ export default function Projects(): ReactNode {
 	return (
 		<Section id="projects" aria-label="Projects and tools related to Vegan Ipsum">
 			<Container>
-				<SectionHeader
-					heading="Vegan Ipsum Projects"
-					tagline="Open Source"
-					icon={<Icon name="cube" size={4} />}
-				>
+				<SectionHeader heading="Vegan Ipsum Projects" tagline="Open Source" icon="cube">
 					<p>
 						Explore the various Vegan Ipsum projects that power this ethical,
 						plant-based lorem ipsum generator. All projects are actively maintained and

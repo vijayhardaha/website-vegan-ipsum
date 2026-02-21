@@ -62,11 +62,7 @@ export default function Author(): ReactNode {
 			aria-label="Author information and contact details for Vegan Ipsum"
 		>
 			<Container>
-				<SectionHeader
-					heading="Author Contact Links"
-					tagline="Get In Touch"
-					icon={<Icon name="user" size={4} />}
-				>
+				<SectionHeader heading="Author Contact Links" tagline="Get In Touch" icon="user">
 					<p>
 						Connect directly with the creator of Vegan Ipsum, collaborate on new
 						features, provide feedback, or discuss potential partnerships. Whether

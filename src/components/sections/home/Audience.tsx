@@ -59,7 +59,7 @@ export default function Audience(): ReactNode {
 				<SectionHeader
 					heading="Who Can Use Vegan Ipsum?"
 					tagline="Who It's For"
-					icon={<Icon name="users" size={4} />}
+					icon="users"
 					headingClassName="text-primary-foreground"
 					taglineClassName="text-primary-muted/70"
 				>
