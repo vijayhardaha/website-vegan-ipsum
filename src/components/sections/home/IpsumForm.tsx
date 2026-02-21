@@ -7,11 +7,19 @@ import Input from "@/components/ui/input";
 import Label from "@/components/ui/label";
 import Select from "@/components/ui/select";
 
+/**
+ * Props for the IpsumForm component.
+ */
 interface IpsumFormProps {
-	/** Callback to set the generated output text */
 	setOutput: (output: string) => void;
 }
 
+/**
+ * IpsumForm component for generating vegan ipsum text based on user input.
+ *
+ * @param {IpsumFormProps} props - The props for the component, including a function to set the generated output.
+ * @returns {ReactNode} The rendered component.
+ */
 export default function IpsumForm({ setOutput }: IpsumFormProps): ReactNode {
 	const [selectedType, setSelectedType] = useState<"paragraphs" | "sentences" | "words">(
 		"paragraphs"
