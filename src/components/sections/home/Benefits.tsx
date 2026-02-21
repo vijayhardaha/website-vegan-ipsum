@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
 import Image from "next/image";
-import { LiaStarOfLifeSolid } from "react-icons/lia";
 
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
  * This component provides an introduction to the Vegan Ipsum
@@ -34,7 +34,7 @@ export default function Benefits(): ReactNode {
 					<SectionHeader
 						heading="Why Choose Vegan Ipsum Generator?"
 						tagline="The Why"
-						icon={<LiaStarOfLifeSolid className="h-4 w-4" />}
+						icon={<Icon name="star" size={4} />}
 					>
 						<p>
 							The Vegan Ipsum Generator provides a meaningful alternative to generic
