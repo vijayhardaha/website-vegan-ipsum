@@ -6,7 +6,7 @@ import PageHeader from "@/components/composites/PageHeader";
 import { Introduction, Installation, Usage, Features } from "@/components/sections/npm-package";
 import { buildMetadata } from "@/utils/meta";
 
-const seoTitle = "NPM Package: Programmatic Ethical Text Library for Developers";
+const seoTitle = "vegan-ipsum NPM Package - Ethical Lorem Ipsum Library";
 const seoDescription =
 	"Integrate ethical, plant-based placeholder text into your JavaScript projects. The Vegan Ipsum NPM package is a lightweight, zero-dependency library for conscious developers. Install it now!";
 

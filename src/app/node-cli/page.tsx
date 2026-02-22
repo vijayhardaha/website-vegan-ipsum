@@ -12,7 +12,7 @@ import {
 } from "@/components/sections/node-cli";
 import { buildMetadata } from "@/utils/meta";
 
-const seoTitle = "Node CLI: Generate Ethical Text via Terminal";
+const seoTitle = "Vegan Ipsum CLI - Generate Ethical Placeholder Text in Terminal";
 const seoDescription =
 	"Generate plant-based placeholder text from your terminal with the Vegan Ipsum Node CLI. An ethical, lightweight tool for developers and creative coders.";
 const pageTitle = (

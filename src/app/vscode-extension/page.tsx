@@ -14,7 +14,7 @@ import {
 } from "@/components/sections/vscode-extension";
 import { buildMetadata } from "@/utils/meta";
 
-const seoTitle = "VS Code Extension: Ethical Editor Tool for Developers";
+const seoTitle = "Vegan Ipsum VS Code Extension - Ethical Placeholder Text in Editor";
 const seoDescription =
 	"Generate ethical, plant-based placeholder text directly in your editor. Install the Vegan Ipsum extension for VS Code to create cruelty-free mockups without leaving your code.";
 

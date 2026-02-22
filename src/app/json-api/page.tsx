@@ -16,7 +16,7 @@ import {
 } from "@/components/sections/json-api";
 import { buildMetadata } from "@/utils/meta";
 
-const seoTitle = "JSON API: Fetch Ethical Placeholder Text via API";
+const seoTitle = "Vegan Ipsum API - Free JSON Placeholder Text API";
 const seoDescription =
 	"Access the Vegan Ipsum REST API to fetch ethical, plant-based placeholder text for your web apps. High-performance JSON endpoints for conscious developers.";
 const pageTitle = (

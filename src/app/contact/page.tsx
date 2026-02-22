@@ -6,7 +6,7 @@ import PageHeader from "@/components/composites/PageHeader";
 import { Author, Projects } from "@/components/sections/contact";
 import { buildMetadata } from "@/utils/meta";
 
-const seoTitle = "Connect & Collaborate: Author Profile & Project Links";
+const seoTitle = "Contact Vegan Ipsum - Author Profile, GitHub & Project Links";
 const seoDescription =
 	"Meet the creator of Vegan Ipsum and explore the ecosystem behind Vegan Ipsum. Find our GitHub, social links, and ways to collaborate on ethical developer tools.";
 const pageTitle = (

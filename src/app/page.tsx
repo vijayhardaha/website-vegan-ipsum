@@ -14,7 +14,7 @@ import {
 } from "@/components/sections/home/";
 import { buildMetadata } from "@/utils/meta";
 
-const seoTitle = "Vegan Ipsum: Ethical & Plant-Based Placeholder Text Tool";
+const seoTitle = "Vegan Ipsum - Ethical & Plant-Based Lorem Ipsum Generator";
 const seoDescription =
 	"Generate ethical, plant-based placeholder text with Vegan Ipsum. The perfect Lorem Ipsum alternative for vegans and conscious designers. Try it for free!";
 
