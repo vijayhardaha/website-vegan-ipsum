@@ -23,7 +23,7 @@ export default function Introduction(): JSX.Element {
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
 							className="text-primary underline"
-							aria-label="Vegan Ipsum NPM package page"
+							aria-label="View Vegan Ipsum package on npm"
 						>
 							vegan-ipsum
 						</SmartLink>{" "}

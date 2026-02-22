@@ -108,7 +108,7 @@ console.log(customText);`}
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
 							className="text-primary underline"
-							aria-label="Vegan Ipsum NPM package page"
+							aria-label="View vegan ipsum package on npm"
 						>
 							npm package page
 						</SmartLink>
@@ -116,8 +116,15 @@ console.log(customText);`}
 					</p>
 
 					<p>
-						You can also explore the GitHub repository linked from the npm page to
-						review the source code, report issues, request features, or submit pull
+						You can also explore the <code>node-vegan-ipsum</code>{" "}
+						<SmartLink
+							href="https://github.com/vijayhardaha/node-vegan-ipsum"
+							className="text-primary underline"
+							aria-label="View vegan ipsum npm package source code on github"
+						>
+							GitHub repository
+						</SmartLink>{" "}
+						to review the source code, report issues, request features, or submit pull
 						requests.
 					</p>
 				</SectionHeader>
