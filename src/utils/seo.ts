@@ -28,19 +28,43 @@ export const getBaseUrl = (): string => {
 };
 
 /**
- * Construct a canonical URL by combining the base URL with an optional slug.
+ * Normalizes a slug for canonical usage.
  *
- * Leading slashes on the provided slug are removed so the result contains exactly one
- * slash between the base URL and the slug.
+ * - Removes leading and trailing slashes
+ * - Returns empty string for root
  *
- * @param {string} [slug] - Optional path segment to append to the base URL.
+ * @param {string} [slug=""] - The input path or slug.
+ * @returns {string} A clean relative path without leading slash.
+ *
+ * @example
+ * safeCanonical("about")      // "about"
+ * safeCanonical("/about")     // "about"
+ * safeCanonical("/about/")    // "about"
+ * safeCanonical("")           // ""
+ * safeCanonical("/")          // ""
+ */
+export const safeCanonical = (slug: string = ""): string => {
+	return slug.trim().replace(/^\/+/, "").replace(/\/+$/, "");
+};
+
+/**
+ * Generates a fully qualified canonical URL.
+ *
+ * Combines the application's base URL with a normalized slug.
+ * Leading and trailing slashes in the slug are handled safely.
+ * If no slug is provided, the base URL is returned.
+ *
+ * @param {string} [slug=""] - Optional path segment to append to the base URL.
  * @returns {string} The canonical absolute URL.
  *
  * @example
  * // Assuming getBaseUrl() returns "https://example.com"
- * getCanonicalUrl('about') // -> "https://example.com/about"
- * getCanonicalUrl('/about') // -> "https://example.com/about"
+ * getCanonicalUrl("about") 	// → "https://example.com/about"
+ * getCanonicalUrl("/about") 	// → "https://example.com/about"
+ * getCanonicalUrl("/about/") 	// → "https://example.com/about"
+ * getCanonicalUrl("") 			// → "https://example.com"
+ * getCanonicalUrl("/") 		// → "https://example.com"
  */
 export const getCanonicalUrl = (slug: string = ""): string => {
-	return `${getBaseUrl()}/${slug.replace(/^\//, "")}`;
+	return [getBaseUrl(), safeCanonical(slug)].filter(Boolean).join("/");
 };
