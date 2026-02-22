@@ -123,7 +123,7 @@ const buttonVariants = cva(
 				md: "h-10 px-6 py-2 text-xs",
 				lg: "h-12 px-8",
 				xl: "h-14 px-10 text-base border-2",
-				icon: "size-10 p-1 active:translate-y-0",
+				icon: "size-10 p-1",
 			},
 		},
 		defaultVariants: {
