@@ -99,20 +99,20 @@ export default function Projects(): JSX.Element {
 								className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
 							>
 								<div className="flex items-start gap-4">
-									<div className="bg-primary-muted content-primary content-3xl inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl">
+									<div className="bg-primary-muted text-primary inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
 										<Icon name={card.icon} />
 									</div>
 									<div>
-										<h3 className="content-primary-solid content-lg mb-2">
+										<h3 className="text-primary-solid mb-2 text-lg">
 											{card.title}
 										</h3>
 
-										<p className="content-foreground/80 content-sm mb-2 leading-relaxed">
+										<p className="text-foreground/80 mb-2 text-sm leading-relaxed">
 											{card.content}
 										</p>
 
 										<SmartLink
-											className="content-primary content-sm inline-flex items-center gap-1 font-medium no-underline transition-all"
+											className="text-primary inline-flex items-center gap-1 text-sm font-medium no-underline transition-all"
 											href={card.link}
 										>
 											{card.buttonText}

@@ -21,7 +21,7 @@ export default function Benefits(): JSX.Element {
 		>
 			<Container>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-					<div className="content-end md:order-2">
+					<div className="text-end md:order-2">
 						<Image
 							src="/multiple-questions.svg"
 							alt="Men looking at multiple questions, representing the benefits of using Vegan Ipsum Generator"

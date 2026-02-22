@@ -68,7 +68,7 @@ export default function TechnicalOverview(): JSX.Element {
 							))}
 						</ul>
 					</SectionHeader>
-					<div className="content-center">
+					<div className="text-center">
 						<div className="border-border from-secondary-100 to-secondary-200 rounded-3xl border bg-gradient-to-br p-10 text-center shadow-2xl">
 							<div className="text-secondary-solid mb-6 flex justify-center text-8xl">
 								<Icon name="cogs" />
