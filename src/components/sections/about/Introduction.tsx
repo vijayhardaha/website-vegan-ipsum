@@ -15,7 +15,7 @@ import Container from "@/components/primitives/Container";
  */
 export default function Introduction(): JSX.Element {
 	return (
-		<Section id="what-is-vegan-ipsum-generator" aria-label="Introduction to Vegan Ipsum">
+		<Section id="what-is-vegan-ipsum" aria-label="Introduction to Vegan Ipsum">
 			<Container>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 					<div className="md:order-2">
@@ -28,7 +28,7 @@ export default function Introduction(): JSX.Element {
 						/>
 					</div>
 					<SectionHeader
-						heading="What is Vegan Ipsum Generator?"
+						heading="What is Vegan Ipsum?"
 						tagline="What is it?"
 						icon="lightBulb"
 					>
