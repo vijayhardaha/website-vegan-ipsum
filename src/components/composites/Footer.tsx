@@ -22,6 +22,7 @@ export default function Footer(): JSX.Element {
 							href="/"
 							aria-label="Navigate to homepage"
 							className="text-xl font-black"
+							hoverEffect={false}
 						>
 							<Image
 								src="/logo-white.svg"
@@ -42,10 +43,8 @@ export default function Footer(): JSX.Element {
 									<SmartLink
 										href={link.href}
 										aria-label={link.label}
-										className={cn(
-											"inline-flex items-center gap-1",
-											"hover:text-primary-muted hover:underline"
-										)}
+										className={cn("hover:text-primary-muted")}
+										hoverEffect={false}
 									>
 										{link.label}
 									</SmartLink>
@@ -59,8 +58,7 @@ export default function Footer(): JSX.Element {
 						by{" "}
 						<SmartLink
 							href="https://instagram.com/vegan.vijay"
-							aria-label="Visit Vijay Hardaha's Instagram profile"
-							className="underline"
+							aria-label="Visit vijay hardaha's instagram profile"
 						>
 							Vijay Hardaha
 						</SmartLink>

@@ -53,7 +53,7 @@ export default function Header(): JSX.Element {
 		<header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
 			<div className="mx-auto max-w-5xl px-4 md:px-6">
 				<div className="flex items-center justify-between gap-6">
-					<SmartLink href="/" aria-label="Navigate to homepage">
+					<SmartLink href="/" aria-label="Navigate to homepage" hoverEffect={false}>
 						<Image
 							src="/logo.svg"
 							alt="Vegan Ipsum Logo"
@@ -86,8 +86,8 @@ export default function Header(): JSX.Element {
 										<SmartLink
 											href={link.href}
 											className={cn(
-												"inline-flex items-center gap-1 text-sm font-semibold decoration-2 underline-offset-2 transition-all",
-												"hover:text-primary",
+												"inline-flex items-center gap-1 text-sm font-semibold no-underline decoration-2 underline-offset-2 transition-all",
+												"hover:text-primary hover:underline",
 												{
 													"text-primary underline": isActive(link.href),
 												}
@@ -95,6 +95,7 @@ export default function Header(): JSX.Element {
 											aria-label={link.label}
 											aria-current={isActive(link.href) ? "page" : undefined}
 											onClick={() => setIsMobileMenuOpen(false)}
+											hoverEffect={false}
 										>
 											{link.label}
 										</SmartLink>
