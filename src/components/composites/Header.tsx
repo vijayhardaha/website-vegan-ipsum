@@ -57,10 +57,10 @@ export default function Header(): JSX.Element {
 						<Image
 							src="/logo.svg"
 							alt="Vegan Ipsum Logo"
-							width={391}
-							height={158}
+							width={213}
+							height={32}
 							priority
-							className="h-auto w-[180px] py-2"
+							className="h-auto w-[220px] py-2"
 						/>
 						<span className="sr-only">Vegan Ipsum</span>
 					</SmartLink>

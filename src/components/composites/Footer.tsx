@@ -26,10 +26,10 @@ export default function Footer(): JSX.Element {
 							<Image
 								src="/logo-white.svg"
 								alt="Vegan Ipsum Logo"
-								width={391}
-								height={158}
+								width={213}
+								height={32}
 								priority
-								className="h-auto w-[150px]"
+								className="h-auto w-[180px]"
 							/>
 							<span className="sr-only">Vegan Ipsum</span>
 						</SmartLink>
