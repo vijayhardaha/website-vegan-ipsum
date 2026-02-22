@@ -67,11 +67,18 @@ export const SITE_METADATA: Metadata = {
 	applicationName: SEO_TITLE_POSTFIX,
 	authors: [{ name: "Vijay Hardaha", url: "https://instagram.com/vegan.vijay" }],
 	publisher: "Vijay Hardaha",
-	robots: "index, follow",
+	robots: {
+		index: true,
+		follow: true,
+	},
 	category: "Web Development Tools",
 	icons: {
-		icon: "/favicon.ico",
-		apple: "/apple-touch-icon.png",
+		icon: [
+			{ url: "/icon.svg", type: "image/svg+xml" },
+			{ url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
+			{ url: "/favicon.ico" },
+		],
+		apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
 	},
 	verification: {
 		google: GOOGLE_SITE_VERIFICATION,
