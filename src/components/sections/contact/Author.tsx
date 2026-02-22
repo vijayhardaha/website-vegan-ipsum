@@ -86,7 +86,7 @@ export default function Author(): JSX.Element {
 									{social.platform}
 								</h3>
 								<p className="text-secondary-dark inline-flex items-center gap-0.5 text-sm">
-									{social.handle} <Icon name="externalLink" />
+									{social.handle} <Icon name="arrowOutward" />
 								</p>
 							</SmartLink>
 						))}
