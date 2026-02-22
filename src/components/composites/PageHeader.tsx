@@ -40,7 +40,7 @@ export default function PageHeader({
 
 					<h1 className="text-primary-solid mb-5 text-4xl md:text-6xl">{title}</h1>
 
-					<p className="max-w-2xl text-lg leading-relaxed md:text-xl">{description}</p>
+					<p className="text-lg leading-relaxed md:text-xl">{description}</p>
 
 					{children}
 				</div>
