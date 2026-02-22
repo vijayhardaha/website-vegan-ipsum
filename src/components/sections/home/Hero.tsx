@@ -4,6 +4,7 @@ import PageTags from "@/components/composites/PageTags";
 import SmartLink from "@/components/composites/SmartLink";
 import Button from "@/components/primitives/Button";
 import Container from "@/components/primitives/Container";
+import Icon from "@/components/primitives/Icon";
 
 /**
  * Hero component for displaying the main introduction and call-to-action buttons.
@@ -62,7 +63,7 @@ export default function Hero(): JSX.Element {
 						className="hover:no-underline"
 					>
 						<SmartLink href="#how-to-use" scrollOffset={68}>
-							Explore Tools &rarr;
+							Explore Tools <Icon name="arrowRight" />
 						</SmartLink>
 					</Button>
 				</div>
