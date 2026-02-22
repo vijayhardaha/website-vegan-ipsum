@@ -18,11 +18,13 @@ export default function PageTags({
 	center?: boolean;
 }): JSX.Element {
 	return (
-		<div className={cn("mb-6 flex items-center gap-2", center ? "justify-center" : "")}>
+		<div
+			className={cn("mb-6 flex flex-wrap items-center gap-3", center ? "justify-center" : "")}
+		>
 			{tags.map((tag: string, index: number) => (
 				<span
 					key={index}
-					className="border-border inline-flex items-center rounded-md border bg-white px-3 py-1.5 text-xs font-bold shadow-sm"
+					className="border-primary/30 inline-flex items-center rounded-md border bg-white px-3 py-1.5 text-xs font-bold shadow-sm"
 				>
 					{tag}
 				</span>
