@@ -21,7 +21,8 @@ export default function Hero(): JSX.Element {
 			<div className="pointer-events-none absolute bottom-[-80px] left-[-80px] h-[350px] w-[350px] rounded-full bg-[#c8e6b8] opacity-36 blur-[60px]"></div>
 			<Container>
 				<div className="border-primary-muted text-primary-solid mb-6 inline-flex items-center rounded-lg border bg-white px-4 py-2 text-xs font-bold shadow-sm">
-					🌱 Free &amp; Open Source
+					Ethical & Cruelty-Free &bull; Plant-Based Variety &bull; Developer Focused
+					&bull; 100% Free
 				</div>
 				<h1 className="text-primary-solid mb-5 text-5xl leading-tight font-bold md:text-6xl">
 					Ethical Placeholder Text for a{" "}
