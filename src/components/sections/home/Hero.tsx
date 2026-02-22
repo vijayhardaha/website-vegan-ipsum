@@ -1,5 +1,6 @@
 import type { JSX } from "react";
 
+import PageTags from "@/components/composites/PageTags";
 import SmartLink from "@/components/composites/SmartLink";
 import Button from "@/components/primitives/Button";
 import Container from "@/components/primitives/Container";
@@ -20,18 +21,26 @@ export default function Hero(): JSX.Element {
 			<div className="pointer-events-none absolute top-[30%] left-[10%] h-[300px] w-[300px] rounded-full bg-[#7bbf6a] opacity-36 blur-[60px]"></div>
 			<div className="pointer-events-none absolute bottom-[-80px] left-[-80px] h-[350px] w-[350px] rounded-full bg-[#c8e6b8] opacity-36 blur-[60px]"></div>
 			<Container>
-				<div className="border-primary-muted text-primary-solid mb-6 inline-flex items-center rounded-lg border bg-white px-4 py-2 text-xs font-bold shadow-sm">
-					Ethical & Cruelty-Free &bull; Plant-Based Variety &bull; Developer Focused
-					&bull; 100% Free
-				</div>
+				<PageTags
+					tags={[
+						"🌱 Ethical & Cruelty-Free",
+						"🥗 Plant-Based Variety",
+						"💻 Developer Focused",
+						"🎁 100% Free",
+					]}
+					center={true}
+				/>
+
 				<h1 className="text-primary-solid mb-5 text-5xl leading-tight font-bold md:text-6xl">
 					Ethical Placeholder Text for a{" "}
 					<span className="text-primary">Better World</span>
 				</h1>
+
 				<p className="mx-auto mb-9 max-w-2xl text-lg leading-relaxed">
 					Generate cruelty-free, plant-based placeholder text for your design and
 					development work. Ethical alternatives for compassionate creators.
 				</p>
+
 				<div className="flex flex-wrap justify-center gap-3.5">
 					<Button
 						asChild
@@ -44,6 +53,7 @@ export default function Hero(): JSX.Element {
 							Generate Ipsum
 						</SmartLink>
 					</Button>
+
 					<Button
 						asChild
 						aria-label="Explore Tools"

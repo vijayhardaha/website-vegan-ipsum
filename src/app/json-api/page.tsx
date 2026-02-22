@@ -26,8 +26,12 @@ const pageTitle = (
 );
 const pageDescription =
 	"Build dynamic, cruelty-free mockups with our lightweight REST API. Integrate plant-based placeholder text directly into your frontend or backend applications via simple JSON endpoints. This API provides paragraphs, sentences, or words in plain or HTML format.";
-
-const pageTagline = "Lightning Fast Response • Public Access • No Authentication Required";
+const pageTags = [
+	"🔓 No Auth Required",
+	"🔁 GET & POST",
+	"🧾 JSON Responses",
+	"📝 Plain & HTML Formats",
+];
 
 /**
  * SEO metadata for the page.
@@ -46,23 +50,7 @@ export const metadata: Metadata = buildMetadata({
 export default function JsonAPIPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline}>
-				<div className="mt-6 flex flex-wrap gap-3">
-					{[
-						"🔓 No Auth Required",
-						"⚡ GET & POST",
-						"🌿 JSON Responses",
-						"📄 Plain & HTML Formats",
-					].map((feature, index) => (
-						<span
-							key={index}
-							className="border-border inline-flex items-center gap-1.5 rounded-md border bg-white px-3 py-1.5 text-xs font-bold shadow-sm"
-						>
-							{feature}
-						</span>
-					))}
-				</div>
-			</PageHeader>
+			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
 			<Introduction />
 

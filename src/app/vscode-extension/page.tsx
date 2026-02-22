@@ -25,7 +25,7 @@ const pageTitle = (
 );
 const pageDescription =
 	"Stop switching tabs to copy-paste. Bring the Vegan Ipsum library directly into your workflow with our lightweight VS Code extension. Learn how to install and use it efficiently without leaving your workspace.";
-const pageTagline = "Instant Commands • Lightweight • MIT Licensed";
+const pageTags = ["⚡ Instant Commands", "🪶 Lightweight", "📜 MIT Licensed"];
 
 /**
  * SEO metadata for the page.
@@ -44,7 +44,7 @@ export const metadata: Metadata = buildMetadata({
 export default function VSCodeExtensionPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline}>
+			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags}>
 				<div className="mt-8 flex flex-wrap items-center gap-4">
 					<Button asChild size="lg" variant="primary">
 						<SmartLink

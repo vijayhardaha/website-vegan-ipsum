@@ -17,7 +17,12 @@ const pageTitle = (
 );
 const pageDescription =
 	"Build with purpose. Use the Vegan Ipsum NPM package to programmatically generate cruelty-free filler text for your your next project in seconds. Learn how to install and use it in your projects with our comprehensive guide.";
-const pageTagline = "Zero Dependencies • TypeScript Ready • ESM & CJS Support • Ultra Lightweight";
+const pageTags = [
+	"🚫 Zero Dependencies",
+	"🟦 TypeScript Ready",
+	"📦 ESM & CJS Support",
+	"⚡ Ultra Lightweight",
+];
 
 /**
  * SEO metadata for the page.
@@ -36,7 +41,7 @@ export const metadata: Metadata = buildMetadata({
 export default function NpmPackagePage(): JSX.Element {
 	return (
 		<>
-			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline} />
+			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
 			<Introduction />
 

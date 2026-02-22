@@ -1,5 +1,6 @@
 import type { ReactNode, JSX } from "react";
 
+import PageTags from "@/components/composites/PageTags";
 import Container from "@/components/primitives/Container";
 
 /**
@@ -11,7 +12,7 @@ import Container from "@/components/primitives/Container";
 interface PageHeaderProps {
 	title: ReactNode;
 	description?: string;
-	tagline?: ReactNode;
+	tags?: string[];
 	children?: ReactNode;
 }
 
@@ -24,7 +25,7 @@ interface PageHeaderProps {
 export default function PageHeader({
 	title,
 	description,
-	tagline,
+	tags,
 	children,
 }: PageHeaderProps): JSX.Element {
 	return (
@@ -34,9 +35,7 @@ export default function PageHeader({
 
 			<Container>
 				<div className="relative">
-					<div className="bg-primary-muted border-primary/40 text-primary-dark mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-bold">
-						{tagline}
-					</div>
+					{tags && <PageTags tags={tags} />}
 
 					<h1 className="text-primary-solid mb-5 text-4xl md:text-6xl">{title}</h1>
 

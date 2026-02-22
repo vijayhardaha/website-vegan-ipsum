@@ -17,6 +17,7 @@ import { buildMetadata } from "@/utils/meta";
 const seoTitle = "About: The Mission Behind Ethical Placeholder Text";
 const seoDescription =
 	"Discover the story of Vegan Ipsum. Learn why we created a plant-based, cruelty-free alternative to traditional Lorem Ipsum for conscious designers and developers.";
+
 const pageTitle = (
 	<>
 		The Mission Behind <span className="text-primary">Vegan Ipsum</span>
@@ -24,8 +25,12 @@ const pageTitle = (
 );
 const pageDescription =
 	"We believe every part of the design process can reflect our values. Vegan Ipsum was built to replace outdated Latin with ethical, plant-based content that inspires conscious creation.";
-
-const pageTagline = "Ethical Mission • Open Source • Driven by Values • Made for Creators";
+const pageTags = [
+	"🌿 Ethical Mission",
+	"💻 Open Source",
+	"🧭 Driven by Values",
+	"🚀 Made for Creators",
+];
 
 /**
  * SEO metadata for the page.
@@ -44,7 +49,7 @@ export const metadata: Metadata = buildMetadata({
 export default function AboutPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline} />
+			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
 			<Introduction />
 

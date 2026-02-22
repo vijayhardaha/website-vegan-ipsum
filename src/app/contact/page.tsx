@@ -16,7 +16,7 @@ const pageTitle = (
 );
 const pageDescription =
 	"Vegan Ipsum is a labor of love for the ethical community. Explore our project links, contribute to the source code, or reach out to the author behind the plant-based filler text. Discover how you can get involved in building a more conscious web.";
-const pageTagline = "GitHub Resources • Follow the Creator • Open Source Collaboration";
+const pageTags = ["📦 GitHub Resources", "👤 Follow the Creator", "🤝 Open Source Collaboration"];
 
 /**
  * SEO metadata for the page.
@@ -35,7 +35,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ContactPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline} />
+			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
 			<Projects />
 

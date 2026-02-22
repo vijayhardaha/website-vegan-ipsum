@@ -22,8 +22,12 @@ const pageTitle = (
 );
 const pageDescription =
 	"Speed up your workflow with the Vegan Ipsum Node CLI. Access cruelty-free, plant-based filler text instantly without ever leaving your shell—perfect for scripting, piping, and rapid prototyping.";
-const pageTagline =
-	"Instant Command Access • Pipe-Friendly Output • Global npm Install • No Configuration Required";
+const pageTags = [
+	"⚡ Instant Command Access",
+	"🔗 Pipe-Friendly Output",
+	"📦 Global npm Install",
+	"⚙️ No Configuration Required",
+];
 
 /**
  * SEO metadata for the page.
@@ -42,7 +46,7 @@ export const metadata: Metadata = buildMetadata({
 export default function NodeCliPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline} />
+			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
 			<Introduction />
 
