@@ -1,25 +1,31 @@
 import { Metadata } from "next";
 
-import { getBaseUrl } from "@/utils/seo";
-
 /**
- * Primary SEO values used throughout the application.
+ * Site-wide configuration values for SEO and metadata.
  */
-export const SEO_TITLE = "Vegan Ipsum - Ethical, Plant-Based Placeholder Text";
-export const SEO_DESCRIPTION =
-	"Generate free, plant-based vegan lorem ipsum for ethical web design and development projects. A cruelty-free placeholder text generator for compassionate creatives, sustainable brands, and eco-conscious developers.";
-export const SEO_TITLE_POSTFIX = "Vegan Ipsum";
-export const SEO_SEPARATOR = "-";
-export const SEO_CANONICAL_URL = getBaseUrl();
-
-/**
- * Shared SEO object (kept for backward compatibility).
- */
-export const GLOBAL_SEO = {
-	title: SEO_TITLE,
-	description: SEO_DESCRIPTION,
-	titlePostfix: SEO_TITLE_POSTFIX,
-	separator: SEO_SEPARATOR,
+export const SITE_CONFIG = {
+	name: "Vegan Ipsum",
+	title: "Vegan Ipsum: Ethical & Plant-Based Placeholder Text Tool",
+	url: "https://veganipsum.vercel.app/",
+	description:
+		"Generate ethical, plant-based placeholder text with Vegan Ipsum. The perfect Lorem Ipsum alternative for vegans and conscious designers. Try it for free!",
+	category: "Web Development Tools",
+	creator: {
+		name: "Vijay Hardaha",
+		jobTitle: "Developer",
+		handle: "@vijayhardaha",
+		urls: {
+			pph: "https://pph.me/vijayhardaha",
+			github: "https://github.com/vijayhardaha",
+			instagram: "https://instagram.com/vegan.vijay",
+			facebook: "https://facebook.com/vegan.vijay",
+			linkedin: "https://linkedin.com/in/vijayhardaha",
+			wordpress: "https://profiles.wordpress.org/vijayhardaha/",
+			devto: "https://dev.to/vijayhardaha",
+			stactoverflow: "https://stackoverflow.com/users/11848895/vijay-hardaha",
+			codewars: "https://www.codewars.com/users/vijayhardaha",
+		},
+	},
 };
 
 /**
@@ -54,24 +60,27 @@ export const GOOGLE_SITE_VERIFICATION = "4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_
 export const GOOGLE_ANALYTICS_ID = "G-XR1TK565WJ";
 
 /**
+ * Title and description used for SEO, Open Graph, and Twitter cards.
+ */
+const titleAndDescription = {
+	title: SITE_CONFIG.title,
+	description: SITE_CONFIG.description,
+};
+
+/**
  * The main metadata object containing all SEO-related information for the website.
  */
 export const SITE_METADATA: Metadata = {
-	title: SEO_TITLE,
-	description: SEO_DESCRIPTION,
-	metadataBase: new URL(SEO_CANONICAL_URL),
-	alternates: {
-		canonical: SEO_CANONICAL_URL,
-	},
+	...titleAndDescription,
 	keywords: SEO_KEYWORDS,
-	applicationName: SEO_TITLE_POSTFIX,
-	authors: [{ name: "Vijay Hardaha", url: "https://instagram.com/vegan.vijay" }],
-	publisher: "Vijay Hardaha",
+	applicationName: SITE_CONFIG.name,
+	authors: [{ name: SITE_CONFIG.creator.name, url: "https://instagram.com/vegan.vijay" }],
+	publisher: SITE_CONFIG.creator.name,
 	robots: {
 		index: true,
 		follow: true,
 	},
-	category: "Web Development Tools",
+	category: SITE_CONFIG.category,
 	icons: {
 		icon: [
 			{ url: "/icon.svg", type: "image/svg+xml" },
@@ -84,8 +93,7 @@ export const SITE_METADATA: Metadata = {
 		google: GOOGLE_SITE_VERIFICATION,
 	},
 	openGraph: {
-		title: SEO_TITLE,
-		description: SEO_DESCRIPTION,
+		...titleAndDescription,
 		images: [
 			{
 				url: "/thumbnail.png",
@@ -94,15 +102,13 @@ export const SITE_METADATA: Metadata = {
 			},
 		],
 		type: "website",
-		siteName: SEO_TITLE,
+		siteName: SITE_CONFIG.name,
 		locale: "en_US",
-		url: SEO_CANONICAL_URL,
 	},
 	twitter: {
+		...titleAndDescription,
 		card: "summary_large_image",
-		title: SEO_TITLE,
-		description: SEO_DESCRIPTION,
 		images: ["/thumbnail.png"],
-		creator: "@vijayhardaha",
+		creator: SITE_CONFIG.creator.handle,
 	},
 };
