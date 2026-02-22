@@ -4,16 +4,28 @@ import { Metadata } from "next";
 
 import PageHeader from "@/components/composites/PageHeader";
 import { Introduction, Installation, Usage, Features } from "@/components/sections/npm-package";
-import { buildMetadata } from "@/utils/seo";
+import { buildMetadata } from "@/utils/meta";
+
+const seoTitle = "NPM Package: Programmatic Ethical Text Library for Developers";
+const seoDescription =
+	"Integrate ethical, plant-based placeholder text into your JavaScript projects. The Vegan Ipsum NPM package is a lightweight, zero-dependency library for conscious developers. Install it now!";
+
+const pageTitle = (
+	<>
+		Vegan Ipsum <span className="text-primary">NPM Package</span>
+	</>
+);
+const pageDescription =
+	"Build with purpose. Use the Vegan Ipsum NPM package to programmatically generate cruelty-free filler text for your your next project in seconds. Learn how to install and use it in your projects with our comprehensive guide.";
+const pageTagline = "Zero Dependencies • TypeScript Ready • ESM & CJS Support • Ultra Lightweight";
 
 /**
- * SEO metadata for the NPM Package page.
+ * SEO metadata for the page.
  */
 export const metadata: Metadata = buildMetadata({
-	title: "NPM Package",
-	description:
-		"Effortlessly generate plant-based, vegan-themed placeholder text in your JavaScript projects with the Vegan Ipsum NPM package - ideal for ethical developers.",
-	slug: "npm-package",
+	seoTitle,
+	seoDescription,
+	pageSlug: "npm-package",
 });
 
 /**
@@ -24,15 +36,7 @@ export const metadata: Metadata = buildMetadata({
 export default function NpmPackagePage(): JSX.Element {
 	return (
 		<>
-			<PageHeader
-				title={
-					<>
-						Vegan Ipsum <span className="text-primary">NPM Package</span>
-					</>
-				}
-				description="Generate vegan-themed placeholder text effortlessly in your JavaScript projects."
-				tagline="Lightweight &bull; Developer-Friendly &bull; ESM & CommonJS Support"
-			/>
+			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline} />
 
 			<Introduction />
 

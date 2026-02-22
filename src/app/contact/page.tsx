@@ -4,16 +4,27 @@ import { Metadata } from "next";
 
 import PageHeader from "@/components/composites/PageHeader";
 import { Author, Projects } from "@/components/sections/contact";
-import { buildMetadata } from "@/utils/seo";
+import { buildMetadata } from "@/utils/meta";
+
+const seoTitle = "Connect & Collaborate: Author Profile & Project Links";
+const seoDescription =
+	"Meet the creator of Vegan Ipsum and explore the ecosystem behind Vegan Ipsum. Find our GitHub, social links, and ways to collaborate on ethical developer tools.";
+const pageTitle = (
+	<>
+		Connect with the Creator of a <span className="text-primary">Vegan Ipsum Ecosystem</span>
+	</>
+);
+const pageDescription =
+	"Vegan Ipsum is a labor of love for the ethical community. Explore our project links, contribute to the source code, or reach out to the author behind the plant-based filler text. Discover how you can get involved in building a more conscious web.";
+const pageTagline = "GitHub Resources • Follow the Creator • Open Source Collaboration";
 
 /**
  * SEO metadata for the page.
  */
 export const metadata: Metadata = buildMetadata({
-	title: "Contact",
-	description:
-		"Get in touch with the creator of Vegan Ipsum. Explore related tools, open-source projects, and social media profiles for ethical web development.",
-	slug: "contact",
+	seoTitle,
+	seoDescription,
+	pageSlug: "contact",
 });
 
 /**
@@ -24,15 +35,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ContactPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader
-				title={
-					<>
-						Contact <span className="text-primary">Vegan Ipsum</span>
-					</>
-				}
-				description="Connect with the creator of Vegan Ipsum. Find links to projects, tools, and social media profiles. Reach out for collaboration, feedback, or inquiries. All inquiries are welcome!"
-				tagline="Let's Connect!"
-			/>
+			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline} />
 
 			<Projects />
 

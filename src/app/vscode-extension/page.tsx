@@ -12,16 +12,28 @@ import {
 	Features,
 	Support,
 } from "@/components/sections/vscode-extension";
-import { buildMetadata } from "@/utils/seo";
+import { buildMetadata } from "@/utils/meta";
+
+const seoTitle = "VS Code Extension: Ethical Editor Tool for Developers";
+const seoDescription =
+	"Generate ethical, plant-based placeholder text directly in your editor. Install the Vegan Ipsum extension for VS Code to create cruelty-free mockups without leaving your code.";
+
+const pageTitle = (
+	<>
+		Vegan Ipsum for <span className="text-primary">VS Code</span>
+	</>
+);
+const pageDescription =
+	"Stop switching tabs to copy-paste. Bring the Vegan Ipsum library directly into your workflow with our lightweight VS Code extension. Learn how to install and use it efficiently without leaving your workspace.";
+const pageTagline = "Instant Commands • Lightweight • MIT Licensed";
 
 /**
  * SEO metadata for the page.
  */
 export const metadata: Metadata = buildMetadata({
-	title: "VS Code Extension",
-	description:
-		"Install and use the Vegan Ipsum VS Code Extension to quickly generate plant-based, vegan-themed placeholder text in your code editor.",
-	slug: "vscode-extension",
+	seoTitle,
+	seoDescription,
+	pageSlug: "vscode-extension",
 });
 
 /**
@@ -32,15 +44,7 @@ export const metadata: Metadata = buildMetadata({
 export default function VSCodeExtensionPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader
-				title={
-					<>
-						Vegan Ipsum <span className="text-primary">VS Code Extension</span>
-					</>
-				}
-				description="Generate vegan-themed placeholder text directly in your VSCode editor. Learn how to install and use it efficiently without leaving your workspace."
-				tagline="Editor &bull; Extension &bull; Open Source"
-			>
+			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline}>
 				<div className="mt-8 flex flex-wrap items-center gap-4">
 					<Button asChild size="lg" variant="primary">
 						<SmartLink

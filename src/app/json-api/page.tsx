@@ -14,16 +14,28 @@ import {
 	ErrorHandling,
 	StatusCodes,
 } from "@/components/sections/json-api";
-import { buildMetadata } from "@/utils/seo";
+import { buildMetadata } from "@/utils/meta";
+
+const seoTitle = "JSON API: Fetch Ethical Placeholder Text via API";
+const seoDescription =
+	"Access the Vegan Ipsum REST API to fetch ethical, plant-based placeholder text for your web apps. High-performance JSON endpoints for conscious developers.";
+const pageTitle = (
+	<>
+		Fetch Ethical placeholder text via the <span className="text-primary">Vegan Ipsum API</span>
+	</>
+);
+const pageDescription =
+	"Build dynamic, cruelty-free mockups with our lightweight REST API. Integrate plant-based placeholder text directly into your frontend or backend applications via simple JSON endpoints. This API provides paragraphs, sentences, or words in plain or HTML format.";
+
+const pageTagline = "Lightning Fast Response • Public Access • No Authentication Required";
 
 /**
  * SEO metadata for the page.
  */
 export const metadata: Metadata = buildMetadata({
-	title: "JSON API",
-	description:
-		"Fetch plant-based, cruelty-free placeholder text for your apps, websites, or projects using the lightweight Vegan Ipsum JSON API — perfect for ethical developers.",
-	slug: "json-api",
+	seoTitle,
+	seoDescription,
+	pageSlug: "json-api",
 });
 
 /**
@@ -34,21 +46,13 @@ export const metadata: Metadata = buildMetadata({
 export default function JsonAPIPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader
-				title={
-					<>
-						Vegan Ipsum <span className="text-primary">JSON API</span>
-					</>
-				}
-				description="Fetch vegan-inspired placeholder text for your apps and projects. This API provides paragraphs, sentences, or words in plain or HTML format."
-				tagline="REST API &bull; v1"
-			>
+			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline}>
 				<div className="mt-6 flex flex-wrap gap-3">
 					{[
-						"🔓 No auth required",
+						"🔓 No Auth Required",
 						"⚡ GET & POST",
-						"🌿 JSON responses",
-						"📄 Plain & HTML formats",
+						"🌿 JSON Responses",
+						"📄 Plain & HTML Formats",
 					].map((feature, index) => (
 						<span
 							key={index}

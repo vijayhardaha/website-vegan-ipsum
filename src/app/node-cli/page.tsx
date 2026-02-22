@@ -10,16 +10,28 @@ import {
 	Options,
 	Resources,
 } from "@/components/sections/node-cli";
-import { buildMetadata } from "@/utils/seo";
+import { buildMetadata } from "@/utils/meta";
+
+const seoTitle = "Node CLI: Generate Ethical Text via Terminal";
+const seoDescription =
+	"Generate plant-based placeholder text from your terminal with the Vegan Ipsum Node CLI. An ethical, lightweight tool for developers and creative coders.";
+const pageTitle = (
+	<>
+		Vegan Ipsum <span className="text-primary">Node CLI</span>
+	</>
+);
+const pageDescription =
+	"Speed up your workflow with the Vegan Ipsum Node CLI. Access cruelty-free, plant-based filler text instantly without ever leaving your shell—perfect for scripting, piping, and rapid prototyping.";
+const pageTagline =
+	"Instant Command Access • Pipe-Friendly Output • Global npm Install • No Configuration Required";
 
 /**
  * SEO metadata for the page.
  */
 export const metadata: Metadata = buildMetadata({
-	title: "Node CLI",
-	description:
-		"Generate vegan-themed, plant-based placeholder text right from your terminal with the lightweight Vegan Ipsum Node CLI — perfect for ethical developers and creative coders.",
-	slug: "node-cli",
+	seoTitle,
+	seoDescription,
+	pageSlug: "node-cli",
 });
 
 /**
@@ -30,15 +42,7 @@ export const metadata: Metadata = buildMetadata({
 export default function NodeCliPage(): JSX.Element {
 	return (
 		<>
-			<PageHeader
-				title={
-					<>
-						Vegan Ipsum <span className="text-primary">Node CLI</span>
-					</>
-				}
-				description="Generate vegan-themed, plant-based placeholder text right from your terminal with the lightweight Vegan Ipsum Node CLI - perfect for ethical developers and creative coders."
-				tagline="Lightweight &bull; Terminal-Based &bull; Perfect for Scripting"
-			/>
+			<PageHeader title={pageTitle} description={pageDescription} tagline={pageTagline} />
 
 			<Introduction />
 
