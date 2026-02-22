@@ -40,6 +40,8 @@ interface SmartLinkProps extends Omit<ComponentPropsWithoutRef<typeof Link>, "hr
 	scrollOffset?: number;
 	/* Optional prop to control external link icon display */
 	linkLine?: boolean;
+	/* Optional prop to control hover effect */
+	hoverEffect?: boolean;
 }
 
 /**
@@ -58,6 +60,7 @@ export default function SmartLink({
 	scrollOffset,
 	onClick = undefined,
 	linkLine = true,
+	hoverEffect = true,
 	...props
 }: SmartLinkProps): JSX.Element {
 	const linkType = getLinkType(href);
@@ -90,16 +93,22 @@ export default function SmartLink({
 		onClick?.(e);
 	};
 
+	const hoverEffectClasses: string[] = hoverEffect
+		? [
+				"relative inline-block",
+				"after:absolute after:left-0 after:bottom-0",
+				"after:h-full after:w-full",
+				"after:origin-bottom after:scale-y-0",
+				"after:bg-primary-muted",
+				"after:transition-transform after:duration-300",
+				"hover:after:scale-y-100",
+				"after:-z-10",
+			]
+		: [];
+
 	const linkClasses = [
-		"underline-offset-2 relative inline-block underline",
-		"hover:no-underline",
-		"after:absolute after:left-0 after:bottom-0",
-		"after:h-full after:w-full",
-		"after:origin-bottom after:scale-y-0",
-		"after:bg-primary-muted",
-		"after:transition-transform after:duration-300",
-		"hover:after:scale-y-100",
-		"after:-z-10",
+		"underline-offset-2 underline hover:no-underline transition-all duration-300",
+		...hoverEffectClasses,
 	];
 
 	// Hash link with smooth scroll
