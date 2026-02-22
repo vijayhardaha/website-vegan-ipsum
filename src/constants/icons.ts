@@ -46,7 +46,7 @@ import {
 	LiaUserFriendsSolid,
 	LiaWhmcs,
 } from "react-icons/lia";
-import { RiArrowRightLine, RiExternalLinkLine } from "react-icons/ri";
+import { MdOutlineArrowForward, MdOutlineArrowOutward } from "react-icons/md";
 import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
 
 /**
@@ -89,8 +89,8 @@ export const ICONS = {
 	user: LiaUser,
 	users: LiaUserFriendsSolid,
 
-	arrowRight: RiArrowRightLine,
-	externalLink: RiExternalLinkLine,
+	arrowRight: MdOutlineArrowForward,
+	arrowOutward: MdOutlineArrowOutward,
 
 	faBriefcase: FaBriefcase,
 	faGithub: FaGithub,
