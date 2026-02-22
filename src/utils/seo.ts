@@ -22,9 +22,9 @@ export const getBaseUrl = (): string => {
 		process.env.VERCEL_URL ||
 		`http://localhost:${process.env.PORT || 3000}`;
 
-	return url.startsWith("http://") || url.startsWith("https://")
-		? url.replace(/\/$/, "")
-		: `https://${url.replace(/\/$/, "")}`;
+	const cleaned = url.trim().replace(/\/+$/, "");
+
+	return /^https?:\/\//i.test(cleaned) ? cleaned : `https://${cleaned}`;
 };
 
 /**
