@@ -107,7 +107,7 @@ export default function SmartLink({
 		: [];
 
 	const linkClasses = [
-		"underline-offset-2 underline hover:no-underline transition-all duration-300",
+		"underline-offset-2 underline hover:no-underline transition-all duration-300 decoration-[1.5px]",
 		...hoverEffectClasses,
 	];
 
