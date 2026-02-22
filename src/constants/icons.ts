@@ -3,18 +3,18 @@ import {
 	FcBiomass,
 	FcComboChart,
 	FcCommandLine,
+	FcElectronics,
+	FcFlashOn,
 	FcGlobe,
+	FcNook,
 	FcPanorama,
 	FcProcess,
 	FcPuzzle,
-	FcSettings,
-	FcWorkflow,
-	FcFlashOn,
-	FcTodoList,
-	FcElectronics,
-	FcNook,
-	FcSportsMode,
 	FcReading,
+	FcSettings,
+	FcSportsMode,
+	FcTodoList,
+	FcWorkflow,
 } from "react-icons/fc";
 import {
 	LiaBoltSolid,
@@ -36,6 +36,8 @@ import {
 	LiaLaptopCodeSolid,
 	LiaLightbulb,
 	LiaNpm,
+	LiaPaletteSolid,
+	LiaPeopleCarrySolid,
 	LiaPlugSolid,
 	LiaRocketSolid,
 	LiaSearchSolid,
@@ -44,16 +46,10 @@ import {
 	LiaTerminalSolid,
 	LiaUser,
 	LiaUserFriendsSolid,
+	LiaUserTieSolid,
 	LiaWhmcs,
 } from "react-icons/lia";
-import {
-	MdOutlineArrowForward,
-	MdOutlineArrowOutward,
-	MdOutlineCode,
-	MdOutlineHandyman,
-	MdOutlineMerge,
-	MdOutlinePalette,
-} from "react-icons/md";
+import { MdOutlineArrowForward, MdOutlineArrowOutward } from "react-icons/md";
 
 /**
  * Defines the available icon names and their corresponding React components.
@@ -86,6 +82,8 @@ export const ICONS = {
 	laptop: LiaLaptopCodeSolid,
 	lightBulb: LiaLightbulb,
 	npm: LiaNpm,
+	palette: LiaPaletteSolid,
+	peopleCarry: LiaPeopleCarrySolid,
 	plug: LiaPlugSolid,
 	rocket: LiaRocketSolid,
 	search: LiaSearchSolid,
@@ -94,6 +92,7 @@ export const ICONS = {
 	terminal: LiaTerminalSolid,
 	user: LiaUser,
 	users: LiaUserFriendsSolid,
+	userTie: LiaUserTieSolid,
 
 	arrowRight: MdOutlineArrowForward,
 	arrowOutward: MdOutlineArrowOutward,
@@ -118,9 +117,4 @@ export const ICONS = {
 	fcSettings: FcSettings,
 	fcTodo: FcTodoList,
 	fcWorkflow: FcWorkflow,
-
-	mdCode: MdOutlineCode,
-	mdMerge: MdOutlineMerge,
-	mdPaint: MdOutlinePalette,
-	mdTools: MdOutlineHandyman,
 } as const;
