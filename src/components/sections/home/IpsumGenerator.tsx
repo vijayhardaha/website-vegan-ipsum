@@ -88,7 +88,7 @@ export default function IpsumGenerator(): JSX.Element {
 
 						{/* Display Form Output */}
 						{output && (
-							<div className="mt-8 space-y-4">
+							<div className="mt-8 space-y-4" data-nosnippet>
 								<div className="flex items-start justify-between gap-12">
 									<div className="space-y-0.5">
 										<h2 id="generated-text" className="text-xl font-bold">
