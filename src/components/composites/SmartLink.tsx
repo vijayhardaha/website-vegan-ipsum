@@ -4,8 +4,8 @@ import { MouseEvent } from "react";
 import type { ComponentPropsWithoutRef, JSX } from "react";
 
 import Link from "next/link";
-import { RiExternalLinkLine } from "react-icons/ri";
 
+import Icon from "@/components/primitives/Icon";
 import { cn } from "@/utils/classnames";
 
 /**
@@ -90,6 +90,18 @@ export default function SmartLink({
 		onClick?.(e);
 	};
 
+	const linkClasses = [
+		"underline-offset-2 relative inline-block underline",
+		"hover:no-underline",
+		"after:absolute after:left-0 after:bottom-0",
+		"after:h-full after:w-full",
+		"after:origin-bottom after:scale-y-0",
+		"after:bg-primary-muted",
+		"after:transition-transform after:duration-300",
+		"hover:after:scale-y-100",
+		"after:-z-10",
+	];
+
 	// Hash link with smooth scroll
 	if (linkType === "hash") {
 		return (
@@ -97,7 +109,7 @@ export default function SmartLink({
 				href={href}
 				scroll={false}
 				onClick={handleHashClick}
-				className={cn("hover:underline", className)}
+				className={cn(linkClasses, className)}
 				aria-label={ariaLabel}
 				{...props}
 			>
@@ -113,13 +125,15 @@ export default function SmartLink({
 				href={href}
 				target="_blank"
 				rel="noopener noreferrer"
-				className={cn("inline-flex items-center gap-1 hover:underline", className)}
+				className={cn(linkClasses, "inline-flex items-center gap-0.5", className)}
 				aria-label={ariaLabel}
 				onClick={onClick}
 				{...props}
 			>
 				{children}
-				{linkLine && <RiExternalLinkLine className="text-inherit" aria-hidden={true} />}
+				{linkLine && (
+					<Icon name="arrowOutward" className="relative top-0.25 text-inherit" />
+				)}
 			</Link>
 		);
 	}
@@ -128,7 +142,7 @@ export default function SmartLink({
 	return (
 		<Link
 			href={href}
-			className={cn("hover:underline", className)}
+			className={cn(linkClasses, className)}
 			aria-label={ariaLabel}
 			onClick={onClick}
 			{...props}
