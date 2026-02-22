@@ -46,8 +46,14 @@ import {
 	LiaUserFriendsSolid,
 	LiaWhmcs,
 } from "react-icons/lia";
-import { MdOutlineArrowForward, MdOutlineArrowOutward } from "react-icons/md";
-import { VscSymbolColor, VscCode, VscTools, VscMerge } from "react-icons/vsc";
+import {
+	MdOutlineArrowForward,
+	MdOutlineArrowOutward,
+	MdOutlineCode,
+	MdOutlineHandyman,
+	MdOutlineMerge,
+	MdOutlinePalette,
+} from "react-icons/md";
 
 /**
  * Defines the available icon names and their corresponding React components.
@@ -113,8 +119,8 @@ export const ICONS = {
 	fcTodo: FcTodoList,
 	fcWorkflow: FcWorkflow,
 
-	vCode: VscCode,
-	vMerge: VscMerge,
-	vPaint: VscSymbolColor,
-	vTools: VscTools,
+	mdCode: MdOutlineCode,
+	mdMerge: MdOutlineMerge,
+	mdPaint: MdOutlinePalette,
+	mdTools: MdOutlineHandyman,
 } as const;
