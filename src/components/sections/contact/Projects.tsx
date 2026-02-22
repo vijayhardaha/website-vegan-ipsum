@@ -15,6 +15,7 @@ interface Card {
 	icon: IconName;
 	link: string;
 	buttonText: string;
+	ariaLabel: string;
 	content: string;
 }
 
@@ -27,14 +28,16 @@ const cards: Card[] = [
 		icon: "cube",
 		link: "https://www.npmjs.com/package/vegan-ipsum",
 		buttonText: "View on NPM",
+		ariaLabel: "View vegan-ipsum package on npm",
 		content:
 			"Install vegan-ipsum via npm and generate plant-based placeholder content programmatically in your JavaScript projects.",
 	},
 	{
-		title: "Node.js Repository",
+		title: "NPM Package Repository",
 		icon: "laptop",
 		link: "https://github.com/vijayhardaha/node-vegan-ipsum",
 		buttonText: "View on GitHub",
+		ariaLabel: "View vegan-ipsum package source code on GitHub",
 		content:
 			"Browse the source code for the Node.js implementation of Vegan Ipsum, contribute, or fork the project.",
 	},
@@ -43,6 +46,7 @@ const cards: Card[] = [
 		icon: "plug",
 		link: "https://marketplace.visualstudio.com/items/?itemName=vijayhardaha.vegan-ipsum",
 		buttonText: "View Extension",
+		ariaLabel: "View vegan-ipsum extension on VS Code Marketplace",
 		content:
 			"Install the Vegan Ipsum extension for Visual Studio Code and generate placeholder content directly in your editor.",
 	},
@@ -51,6 +55,7 @@ const cards: Card[] = [
 		icon: "laptop",
 		link: "https://github.com/vijayhardaha/vscode-vegan-ipsum",
 		buttonText: "View on GitHub",
+		ariaLabel: "View vegan-ipsum VS Code extension source code on GitHub",
 		content:
 			"Explore the source code for the VS Code extension, report issues, or contribute improvements.",
 	},
@@ -59,6 +64,7 @@ const cards: Card[] = [
 		icon: "globe",
 		link: "https://github.com/vijayhardaha/website-vegan-ipsum",
 		buttonText: "View on GitHub",
+		ariaLabel: "View vegan ipsum website source code on GitHub",
 		content:
 			"Check out the source code for the Vegan Ipsum website, suggest features, or submit pull requests.",
 	},
@@ -67,6 +73,7 @@ const cards: Card[] = [
 		icon: "bolt",
 		link: "https://github.com/vijayhardaha/website-vegan-ipsum",
 		buttonText: "View on GitHub",
+		ariaLabel: "View vegan ipsum API source code on GitHub",
 		content:
 			"Browse the API source code, understand the implementation, or contribute to its development.",
 	},
@@ -114,6 +121,7 @@ export default function Projects(): JSX.Element {
 										<SmartLink
 											className="text-primary inline-flex items-center gap-1 text-sm font-medium no-underline transition-all"
 											href={card.link}
+											aria-label={card.ariaLabel}
 										>
 											{card.buttonText}
 										</SmartLink>
