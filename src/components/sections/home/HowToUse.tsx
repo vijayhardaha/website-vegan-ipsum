@@ -101,7 +101,7 @@ export default function HowToUse(): JSX.Element {
 						{cards.map((card, index: number) => (
 							<div
 								key={index}
-								className="border-border relative overflow-hidden rounded-2xl border bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg md:p-8"
+								className="border-border relative overflow-hidden rounded-2xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
 							>
 								<div className="flex items-start gap-4">
 									<div className="bg-primary-muted text-primary mb-5 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
@@ -118,7 +118,7 @@ export default function HowToUse(): JSX.Element {
 										<SmartLink
 											href={card.link}
 											scrollOffset={68}
-											className="text-primary inline-flex items-center gap-1 text-sm font-medium no-underline transition-all"
+											className="text-primary inline-flex items-center gap-0.5 text-sm font-medium"
 											aria-label={card.ariaLabel}
 										>
 											{card.buttonText}

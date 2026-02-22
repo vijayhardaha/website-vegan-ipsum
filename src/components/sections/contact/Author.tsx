@@ -77,7 +77,7 @@ export default function Author(): JSX.Element {
 								href={social.href}
 								linkLine={false}
 								aria-label={`Contact the author on ${social.platform}`}
-								className="border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-2xl border bg-gradient-to-br p-6 text-center no-underline transition-all hover:-translate-y-1 hover:no-underline"
+								className="group border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-2xl border bg-gradient-to-br p-6 text-center no-underline shadow-md transition-all hover:shadow-lg"
 							>
 								<div className="text-secondary-dark mb-2 text-3xl">
 									<Icon name={social.icon} />
@@ -85,7 +85,7 @@ export default function Author(): JSX.Element {
 								<h3 className="text-primary-solid font-sans text-sm font-bold">
 									{social.platform}
 								</h3>
-								<p className="text-secondary-dark inline-flex items-center gap-0.5 text-sm">
+								<p className="text-secondary-dark inline-flex items-center gap-0.5 text-sm group-hover:underline">
 									{social.handle} <Icon name="arrowOutward" />
 								</p>
 							</SmartLink>

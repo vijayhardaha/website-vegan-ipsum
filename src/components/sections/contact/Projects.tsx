@@ -119,7 +119,7 @@ export default function Projects(): JSX.Element {
 										</p>
 
 										<SmartLink
-											className="text-primary inline-flex items-center gap-1 text-sm font-medium no-underline transition-all"
+											className="text-primary inline-flex items-center text-sm font-medium"
 											href={card.link}
 											aria-label={card.ariaLabel}
 										>
