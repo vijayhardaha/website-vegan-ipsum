@@ -1,5 +1,5 @@
 import { SITE_METADATA, SITE_CONFIG } from "@/constants/seo";
-import { getBaseUrl, getCanonicalUrl } from "@/utils/seo";
+import { getBaseUrl, safeCanonical } from "@/utils/seo";
 
 /**
  * Props for generating metadata, including title, description, and slug for URL construction.
@@ -107,7 +107,7 @@ export const buildMetadata = ({
 	postfix = true,
 }: SeoProps) => {
 	const title = buildSeoTitle(seoTitle, postfix);
-	const canonical = getCanonicalUrl(pageSlug);
+	const canonical = safeCanonical(pageSlug);
 
 	const titleAndDescription = {
 		title,
