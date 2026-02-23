@@ -133,22 +133,19 @@ export default function SmartLink({
 				href={href}
 				target="_blank"
 				rel="noopener noreferrer"
-				className={cn(...hoverEffectClasses, className)}
+				className={cn(
+					linkClasses,
+					"relative z-10 inline-flex items-center gap-0.5",
+					className
+				)}
 				aria-label={ariaLabel}
 				onClick={onClick}
 				{...props}
 			>
-				<span
-					className={cn(
-						"relative z-10 inline-flex items-center gap-0.5",
-						defaultLinkClasses
-					)}
-				>
-					{children}
-					{linkLine && (
-						<Icon name="arrowOutward" className="relative top-0.25 text-inherit" />
-					)}
-				</span>
+				{children}
+				{linkLine && (
+					<Icon name="arrowOutward" className="relative top-0.25 text-inherit" />
+				)}
 			</Link>
 		);
 	}
