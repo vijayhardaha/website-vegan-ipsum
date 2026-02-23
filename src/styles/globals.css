@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "tailwindcss-corner-shape/presets/squircle";
 
 @layer base {
 	:root {
@@ -137,7 +138,7 @@
 	}
 
 	.table-container {
-		@apply border-border overflow-hidden rounded-2xl border bg-white shadow-sm;
+		@apply border-border overflow-hidden rounded-3xl border bg-white shadow-sm;
 	}
 
 	.table {
