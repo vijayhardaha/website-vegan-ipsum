@@ -45,7 +45,7 @@ export default function Hero(): JSX.Element {
 				<div className="flex flex-wrap justify-center gap-3.5">
 					<Button
 						asChild
-						aria-label="Generate Vegan Ipsum"
+						aria-label="Navigate to Generate Vegan Ipsum section"
 						variant="primary"
 						size="xl"
 						className="hover:no-underline"
@@ -57,13 +57,13 @@ export default function Hero(): JSX.Element {
 
 					<Button
 						asChild
-						aria-label="Explore Tools"
+						aria-label="Navigate to Methods section"
 						variant="primary-outline"
 						size="xl"
 						className="hover:no-underline"
 					>
-						<SmartLink href="#how-to-use" scrollOffset={68}>
-							Explore Tools <Icon name="arrowRight" />
+						<SmartLink href="#methods" scrollOffset={68}>
+							Explore Methods <Icon name="arrowRight" />
 						</SmartLink>
 					</Button>
 				</div>
