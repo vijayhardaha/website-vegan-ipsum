@@ -28,7 +28,7 @@ const cards: Card[] = [
 		icon: "cube",
 		link: "https://www.npmjs.com/package/vegan-ipsum",
 		buttonText: "View on NPM",
-		ariaLabel: "View vegan-ipsum package on npm",
+		ariaLabel: "View vegan-ipsum package on npm library",
 		content:
 			"Install vegan-ipsum via npm and generate plant-based placeholder content programmatically in your JavaScript projects.",
 	},
