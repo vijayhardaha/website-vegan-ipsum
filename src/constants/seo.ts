@@ -5,15 +5,18 @@ import { Metadata } from "next";
  */
 export const SITE_CONFIG = {
 	name: "Vegan Ipsum",
-	title: "Vegan Ipsum: Ethical & Plant-Based Placeholder Text Tool",
-	url: "https://veganipsum.vercel.app/",
+	title: "Vegan Ipsum - Ethical & Plant-Based Lorem Ipsum Generator",
+	url: "https://veganipsum.vercel.app",
 	description:
 		"Generate ethical, plant-based placeholder text with Vegan Ipsum. The perfect Lorem Ipsum alternative for vegans and conscious designers. Try it for free!",
 	category: "Web Development Tools",
 	creator: {
 		name: "Vijay Hardaha",
-		jobTitle: "Developer",
+		description:
+			"Full-Stack Web Developer and full-time freelancer specializing in modern web applications and custom digital solutions. Experienced in WordPress and WooCommerce development, building high-performance websites and scalable e-commerce platforms.",
+		jobTitle: "Full-Stack Web Developer",
 		handle: "@vijayhardaha",
+		handles: ["@vijayhardaha", "@vegan.vijay"],
 		urls: {
 			pph: "https://pph.me/vijayhardaha",
 			github: "https://github.com/vijayhardaha",
