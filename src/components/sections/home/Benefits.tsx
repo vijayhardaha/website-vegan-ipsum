@@ -1,7 +1,5 @@
 import type { JSX } from "react";
 
-import Image from "next/image";
-
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
@@ -20,67 +18,55 @@ export default function Benefits(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-					<div className="text-end md:order-2">
-						<Image
-							src="/multiple-questions.svg"
-							alt="Men looking at multiple questions, representing the benefits of using Vegan Ipsum Generator"
-							width={643}
-							height={800}
-							priority
-						/>
-					</div>
-					<SectionHeader
-						heading="Why Choose Vegan Ipsum Generator?"
-						tagline="Benefits"
-						icon="checkCircle"
-					>
-						<p>
-							The Vegan Ipsum Generator provides a meaningful alternative to generic
-							placeholder text by authentically reflecting ethical, cruelty-free, and
-							sustainable design principles. This innovative tool helps elevate your
-							projects with plant-based themes and compassionate language that
-							resonates with conscious audiences while maintaining professionalism and
-							clarity.
-						</p>
+				<SectionHeader
+					heading="Why Choose Vegan Ipsum?"
+					tagline="Benefits"
+					icon="checkCircle"
+				>
+					<p>
+						The Vegan Ipsum Generator provides a meaningful alternative to generic
+						placeholder text by authentically reflecting ethical, cruelty-free, and
+						sustainable design principles. This innovative tool helps elevate your
+						projects with plant-based themes and compassionate language that resonates
+						with conscious audiences while maintaining professionalism and clarity.
+					</p>
 
-						<h3 className="text-lg">Key Benefits:</h3>
+					<h3 className="text-lg">Key Benefits:</h3>
 
-						<ul className="list-disc space-y-4 pl-8">
-							{[
-								{
-									title: "Authentic Brand Alignment",
-									text: "Ensures your placeholder text reflects your commitment to vegan values and ethical practices from the earliest design stages",
-								},
-								{
-									title: "Enhanced Storytelling",
-									text: "Delivers carefully crafted content centered around sustainability, veganism, and ethical living that engages like-minded audiences",
-								},
-								{
-									title: "Meaningful Differentiation",
-									text: "Replaces overused default filler text with fresh, mission-aligned alternatives that make your projects stand out",
-								},
-								{
-									title: "Professional Quality",
-									text: "Maintains high readability and design standards while subtly promoting compassionate messaging",
-								},
-								{
-									title: "Audience Connection",
-									text: "Helps attract and inspire eco-conscious communities by incorporating plant-based themes throughout your digital and creative projects",
-								},
-							].map((list, index) => (
-								<li key={index} className="mb-4">
-									<span>
-										<strong className="text-primary-dark font-bold">
-											{list.title}
-										</strong>
-										: {list.text}
-									</span>
-								</li>
-							))}
-						</ul>
-					</SectionHeader>
-				</div>
+					<ul className="list-disc space-y-4 pl-8">
+						{[
+							{
+								title: "Authentic Brand Alignment",
+								text: "Ensures your placeholder text reflects your vegan values and ethical commitment from the earliest design stages.",
+							},
+							{
+								title: "Enhanced Storytelling",
+								text: "Provides sustainability-focused content that resonates with vegan and ethically minded audiences.",
+							},
+							{
+								title: "Meaningful Differentiation",
+								text: "Replaces generic filler text with mission-aligned alternatives that help your projects stand out.",
+							},
+							{
+								title: "Professional Quality",
+								text: "Maintains strong readability and design standards while promoting compassionate messaging.",
+							},
+							{
+								title: "Audience Connection",
+								text: "Engages eco-conscious communities through consistent plant-based themes in your projects.",
+							},
+						].map((list, index) => (
+							<li key={index} className="mb-4">
+								<span>
+									<strong className="text-primary-dark font-bold">
+										{list.title}
+									</strong>
+									: {list.text}
+								</span>
+							</li>
+						))}
+					</ul>
+				</SectionHeader>
 			</Container>
 		</Section>
 	);
