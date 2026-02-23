@@ -18,10 +18,19 @@ export default function Installation(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Installation">
+				<SectionHeader
+					heading={
+						<>
+							CLI <span className="text-primary">Installation</span>
+						</>
+					}
+					tagline="Global Setup"
+					icon="download"
+				>
 					<p className="mb-8">
 						Install the Vegan Ipsum CLI globally to make the <code>vegan-ipsum</code>{" "}
-						command available from any directory in your terminal.
+						command available from any directory in your terminal, ensuring plant-based
+						placeholder text is always just a keystroke away.
 					</p>
 
 					<CodeBlock label="Global Install (npm)" language="bash">

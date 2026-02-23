@@ -17,7 +17,15 @@ export default function Resources(): JSX.Element {
 			aria-label="Tips, best practices, and additional resources for the Vegan Ipsum Node CLI"
 		>
 			<Container>
-				<SectionHeader heading="Tips, Best Practices & Resources">
+				<SectionHeader
+					heading={
+						<>
+							Tips, Best Practices & <span className="text-primary">Resources</span>
+						</>
+					}
+					tagline="Workflow Optimization"
+					icon="lightBulb"
+				>
 					<p>
 						Get the most out of the Vegan Ipsum CLI by incorporating it into your
 						workflow efficiently and exploring additional resources for deeper
@@ -58,10 +66,7 @@ export default function Resources(): JSX.Element {
 					<p>
 						If you want to integrate vegan ipsum programmatically or customize the
 						generator further, explore the{" "}
-						<SmartLink
-							href="/npm-package"
-							className="text-primary font-medium underline"
-						>
+						<SmartLink href="/npm-package" className="text-primary">
 							Vegan Ipsum NPM Package
 						</SmartLink>{" "}
 						documentation for detailed API references and usage examples.
@@ -71,7 +76,7 @@ export default function Resources(): JSX.Element {
 						You can also visit the{" "}
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
-							className="text-primary underline"
+							className="text-primary"
 							aria-label="Official Vegan Ipsum NPM package page"
 						>
 							official npm package page

@@ -18,11 +18,19 @@ export default function ResponseFormat(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Response Format">
+				<SectionHeader
+					heading={
+						<>
+							Response <span className="text-primary">Format</span>
+						</>
+					}
+					tagline="JSON Output"
+					icon="fileCode"
+				>
 					<p className="mb-8">
 						A successful API call returns a JSON object with a <code>text</code>{" "}
 						property containing your generated vegan ipsum content, ready for immediate
-						use.
+						use in your plant-based and ethical projects.
 					</p>
 
 					<CodeBlock label="JSON Response · 200 OK" language="json">

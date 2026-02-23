@@ -28,9 +28,13 @@ export default function Introduction(): JSX.Element {
 						/>
 					</div>
 					<SectionHeader
-						heading="What is Vegan Ipsum?"
-						tagline="What is it?"
-						icon="lightBulb"
+						heading={
+							<>
+								A Thoughtful <span className="text-primary">Introduction</span>
+							</>
+						}
+						tagline="Identity"
+						icon="idCard"
 					>
 						<p>
 							Vegan Ipsum is a thoughtfully designed placeholder text generator

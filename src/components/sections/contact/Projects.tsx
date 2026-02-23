@@ -43,7 +43,7 @@ const cards: Card[] = [
 	},
 	{
 		title: "VS Code Extension",
-		icon: "plug",
+		icon: "laptop",
 		link: "https://marketplace.visualstudio.com/items/?itemName=vijayhardaha.vegan-ipsum",
 		buttonText: "View Extension",
 		ariaLabel: "View vegan-ipsum extension on VS Code Marketplace",
@@ -91,7 +91,15 @@ export default function Projects(): JSX.Element {
 	return (
 		<Section id="projects" aria-label="Projects and tools related to Vegan Ipsum">
 			<Container>
-				<SectionHeader heading="Vegan Ipsum Projects" tagline="Open Source" icon="cube">
+				<SectionHeader
+					heading={
+						<>
+							Vegan Ipsum <span className="text-primary">Ecosystem/Projects</span>
+						</>
+					}
+					tagline="Open Source & Tooling"
+					icon="cube"
+				>
 					<p>
 						Explore the various Vegan Ipsum projects that power this ethical,
 						plant-based lorem ipsum generator. All projects are actively maintained and

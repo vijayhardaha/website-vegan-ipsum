@@ -32,8 +32,8 @@ export default function Benefits(): JSX.Element {
 					</div>
 					<SectionHeader
 						heading="Why Choose Vegan Ipsum Generator?"
-						tagline="The Why"
-						icon="star"
+						tagline="Benefits"
+						icon="checkCircle"
 					>
 						<p>
 							The Vegan Ipsum Generator provides a meaningful alternative to generic

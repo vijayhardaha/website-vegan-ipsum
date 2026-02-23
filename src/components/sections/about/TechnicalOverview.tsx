@@ -21,9 +21,13 @@ export default function TechnicalOverview(): JSX.Element {
 			<Container>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 					<SectionHeader
-						heading="Technical Overview"
-						tagline="Under the hood"
-						icon="laptop"
+						heading={
+							<>
+								Technical <span className="text-primary">Overview</span>
+							</>
+						}
+						tagline="Architecture"
+						icon="cogs"
 					>
 						<p>
 							Built with modern web standards and best practices, ensuring

@@ -18,7 +18,15 @@ export default function Installation(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Installation">
+				<SectionHeader
+					heading={
+						<>
+							Library <span className="text-primary">Installation</span>
+						</>
+					}
+					tagline="Package Management"
+					icon="download"
+				>
 					<p>
 						Install <code>vegan-ipsum</code> using your preferred package manager. You
 						can install it locally (recommended for most projects) or globally if you

@@ -18,10 +18,19 @@ export default function Installation(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Installation" tagline="Setup Guide" icon="keyboard">
+				<SectionHeader
+					heading={
+						<>
+							Extension <span className="text-primary">Setup Guide</span>
+						</>
+					}
+					tagline="Installation"
+					icon="download"
+				>
 					<p>
 						You can easily add the Vegan Ipsum extension to your VS Code setup in two
-						ways:
+						ways: via the built-in Marketplace search or by using the quick-install
+						command in your terminal.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

@@ -14,10 +14,19 @@ export default function Usage(): JSX.Element {
 	return (
 		<Section id="usage" aria-label="Usage instructions for the Vegan Ipsum VS Code Extension">
 			<Container>
-				<SectionHeader heading="Usage" tagline="How to use" icon="rocket">
+				<SectionHeader
+					heading={
+						<>
+							How to <span className="text-primary">Use</span>
+						</>
+					}
+					tagline="Usage"
+					icon="keyboard"
+				>
 					<p>
 						Once installed, generating vegan-themed placeholder text is quick and
-						straightforward.
+						straightforward. You can trigger the generator directly from your command
+						palette or using custom keyboard shortcuts.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

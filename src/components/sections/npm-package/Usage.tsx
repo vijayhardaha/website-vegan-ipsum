@@ -18,7 +18,15 @@ export default function Usage(): JSX.Element {
 			aria-label="Usage instructions and examples for the Vegan Ipsum NPM package"
 		>
 			<Container>
-				<SectionHeader heading="Usage">
+				<SectionHeader
+					heading={
+						<>
+							Library <span className="text-primary">Usage</span>
+						</>
+					}
+					tagline="Programmatic Generation"
+					icon="code"
+				>
 					<p>
 						After installation, you can import <code>vegan-ipsum</code> into your
 						JavaScript or TypeScript project to generate plant-based placeholder text

@@ -13,7 +13,15 @@ export default function Introduction(): JSX.Element {
 	return (
 		<Section id="introduction" aria-label="Introduction to the Vegan Ipsum VS Code Extension">
 			<Container>
-				<SectionHeader heading="Introduction" tagline="Overview" icon="lightBulb">
+				<SectionHeader
+					heading={
+						<>
+							Vegan Ipsum <span className="text-primary">VS Code Extension</span>
+						</>
+					}
+					tagline="Overview"
+					icon="externalLink"
+				>
 					<p>
 						The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight and
 						intuitive tool designed for developers, designers, and content creators who

@@ -20,10 +20,20 @@ export default function PostRequestExample(): JSX.Element {
 			aria-label="POST request example for the Vegan Ipsum JSON API"
 		>
 			<Container>
-				<SectionHeader heading="POST Request Example" className="mb-6">
+				<SectionHeader
+					heading={
+						<>
+							POST Request <span className="text-primary">Example</span>
+						</>
+					}
+					tagline="JSON Body"
+					icon="code"
+				>
 					<p className="mb-8">
 						Send parameters as a JSON body — ideal for programmatic API calls from
-						backend services or frontend applications.
+						backend services or frontend applications where query strings might become
+						cluttered. Here are examples of how to structure your POST requests to
+						retrieve specific counts and formats of plant-based placeholder text.
 					</p>
 
 					<CodeBlock label="cURL" language="bash">{`curl -X POST "${API_BASE_URL}" \\

@@ -74,12 +74,13 @@ export default function IpsumGenerator(): JSX.Element {
 							Generate <span className="text-primary">Vegan Ipsum</span>
 						</>
 					}
-					tagline="The Tool"
-					icon="hashtag"
+					tagline="Generator"
+					icon="leaf"
 				>
 					<p>
-						Instantly create plant-based placeholder text tailored to your project
-						needs.
+						Instantly create custom, plant-based placeholder text for your mockups.
+						Choose your preferred length and format to keep your design projects fresh
+						and ethical.
 					</p>
 
 					<div className="border-border mt-8 rounded-2xl border bg-white p-5 md:p-7">

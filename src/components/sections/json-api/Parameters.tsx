@@ -14,10 +14,19 @@ export default function Parameters(): JSX.Element {
 	return (
 		<Section id="parameters" aria-label="Parameters for customizing Vegan Ipsum output">
 			<Container>
-				<SectionHeader heading="Parameters">
+				<SectionHeader
+					heading={
+						<>
+							Query <span className="text-primary">Parameters</span>
+						</>
+					}
+					tagline="Customization"
+					icon="sliders"
+				>
 					<p>
 						Customize the output using the following parameters. These give you full
-						control over the amount, type, and format of placeholder text.
+						control over the amount, type, and format of placeholder text to perfectly
+						fit your UI layout.
 					</p>
 
 					<div className="table-container mt-8">

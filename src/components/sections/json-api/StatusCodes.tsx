@@ -18,7 +18,15 @@ export default function StatusCodes(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="HTTP Status Codes">
+				<SectionHeader
+					heading={
+						<>
+							HTTP Status <span className="text-primary">Codes</span>
+						</>
+					}
+					tagline="Status Codes"
+					icon="checkCircle"
+				>
 					<p className="mb-8">
 						The API uses standard HTTP status codes to indicate the success or failure
 						of your requests. Here are the most common codes you may encounter:

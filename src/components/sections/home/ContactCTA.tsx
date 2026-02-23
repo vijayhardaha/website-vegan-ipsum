@@ -29,7 +29,7 @@ export default function ContactCTA(): JSX.Element {
 							<span className="text-primary">meaningful together</span>
 						</>
 					}
-					tagline="Get in Touch"
+					tagline="Contact"
 					icon="handShake"
 					className="mx-auto max-w-xl text-center"
 					headingClassName="mx-auto max-w-lg"

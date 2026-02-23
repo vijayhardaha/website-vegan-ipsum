@@ -67,10 +67,19 @@ export default function Features(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Features" tagline="Capabilities" icon="sketch">
+				<SectionHeader
+					heading={
+						<>
+							Extension <span className="text-primary">Capabilities</span>
+						</>
+					}
+					tagline="Features"
+					icon="award"
+				>
 					<p>
 						Some of the key features that make the Vegan Ipsum VS Code Extension a
-						must-have tool for developers and designers:
+						must-have tool for developers and designers who value speed and plant-based
+						inspiration.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

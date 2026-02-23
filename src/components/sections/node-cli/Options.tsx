@@ -18,7 +18,15 @@ export default function Options(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Options & Flags">
+				<SectionHeader
+					heading={
+						<>
+							Options & <span className="text-primary">Flags</span>
+						</>
+					}
+					tagline="CLI Parameters"
+					icon="toggleOn"
+				>
 					<p>
 						Enhance your CLI experience with the following optional flags. These allow
 						you to customize output format, workflow convenience, and access help

@@ -17,7 +17,15 @@ export default function RequestMethods(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Request Methods">
+				<SectionHeader
+					heading={
+						<>
+							Request <span className="text-primary">Methods</span>
+						</>
+					}
+					tagline="HTTP Protocol"
+					icon="exchange"
+				>
 					<p>
 						The Vegan Ipsum API supports the following HTTP request methods to fetch
 						your vegan-themed placeholder text. Both return the same JSON response

@@ -70,7 +70,15 @@ export default function Features(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Features" tagline="Why Choose Vegan Ipsum?" icon="sketch">
+				<SectionHeader
+					heading={
+						<>
+							Why Choose <span className="text-primary">Vegan Ipsum?</span>
+						</>
+					}
+					tagline="Features"
+					icon="award"
+				>
 					<p>
 						Vegan Ipsum is designed to be simple, fast, and flexible. Whether
 						you&apos;re building web apps, Node.js services, or CLI tools, it gives you

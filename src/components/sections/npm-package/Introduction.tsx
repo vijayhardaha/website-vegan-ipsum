@@ -18,7 +18,15 @@ export default function Introduction(): JSX.Element {
 			className="pt-8 md:pt-10"
 		>
 			<Container>
-				<SectionHeader heading="Introduction">
+				<SectionHeader
+					heading={
+						<>
+							Vegan Ipsum <span className="text-primary">JavaScript Library</span>
+						</>
+					}
+					tagline="Introduction"
+					icon="jsSquare"
+				>
 					<p>
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"

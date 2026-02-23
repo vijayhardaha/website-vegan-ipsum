@@ -32,8 +32,8 @@ export default function Overview(): JSX.Element {
 					</div>
 					<SectionHeader
 						heading="What is Vegan Ipsum Generator?"
-						tagline="What is it"
-						icon="lightBulb"
+						tagline="Overview"
+						icon="questionCircle"
 					>
 						<p>
 							The Vegan Ipsum Generator is a powerful, free, and plant-based

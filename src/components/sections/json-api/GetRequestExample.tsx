@@ -22,9 +22,19 @@ export default function GetRequestExample(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="GET Request Example" className="mb-6">
+				<SectionHeader
+					heading={
+						<>
+							GET Request <span className="text-primary">Example</span>
+						</>
+					}
+					tagline="Query Strings"
+					icon="terminal"
+				>
 					<p className="mb-8">
-						Send parameters as query strings on the URL. Here are a few examples:
+						Send parameters as query strings on the URL. Here are a few examples of how
+						to fetch specific counts and formats of plant-based placeholder text
+						directly through the endpoint.
 					</p>
 
 					<CodeBlock label="Browser / URL" language="bash">

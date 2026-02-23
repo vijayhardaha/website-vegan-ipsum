@@ -17,7 +17,15 @@ export default function Introduction(): JSX.Element {
 			className="pt-8 md:pt-10"
 		>
 			<Container>
-				<SectionHeader heading="Introduction">
+				<SectionHeader
+					heading={
+						<>
+							Vegan Ipsum <span className="text-primary">CLI</span>
+						</>
+					}
+					tagline="Introduction"
+					icon="terminal"
+				>
 					<p>
 						The Vegan Ipsum CLI is a lightweight and versatile command-line tool built
 						on Node.js that allows developers, designers, and content creators to

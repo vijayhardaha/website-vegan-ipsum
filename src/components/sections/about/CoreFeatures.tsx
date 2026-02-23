@@ -63,10 +63,20 @@ export default function CoreFeatures(): JSX.Element {
 	return (
 		<Section id="core-features" aria-label="Core features and technical details of Vegan Ipsum">
 			<Container>
-				<SectionHeader heading="Core Features" tagline="Tools" icon="plug">
+				<SectionHeader
+					heading={
+						<>
+							Core <span className="text-primary">Features</span>
+						</>
+					}
+					tagline="Ecosystem"
+					icon="cube"
+				>
 					<p>
 						Vegan Ipsum offers multiple integration methods to fit seamlessly into your
-						workflow.
+						workflow. Explore our suite of plant-based developer tools. From a robust
+						JSON API to our VS Code extension, integrate Vegan Ipsum seamlessly into
+						your unique workflow.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

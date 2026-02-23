@@ -17,7 +17,15 @@ export default function Introduction(): JSX.Element {
 			className="py-8 md:py-10"
 		>
 			<Container>
-				<SectionHeader heading="Introduction">
+				<SectionHeader
+					heading={
+						<>
+							Vegan Ipsum <span className="text-primary">JSON API</span>
+						</>
+					}
+					tagline="Introduction"
+					icon="cloud"
+				>
 					<p>
 						The Vegan Ipsum JSON API is a powerful and easy-to-use web service designed
 						to help developers seamlessly integrate vegan-themed placeholder text into

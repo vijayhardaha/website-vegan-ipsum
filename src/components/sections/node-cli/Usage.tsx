@@ -14,7 +14,15 @@ export default function Usage(): JSX.Element {
 	return (
 		<Section id="usage" aria-label="Basic usage instructions for the Vegan Ipsum Node CLI">
 			<Container>
-				<SectionHeader heading="Basic Usage">
+				<SectionHeader
+					heading={
+						<>
+							Basic <span className="text-primary">Usage</span>
+						</>
+					}
+					tagline="Command Structure"
+					icon="laptop"
+				>
 					<p className="mb-8">
 						The CLI uses a simple and intuitive command structure. Provide the number of
 						text units followed by the unit type you want to generate.

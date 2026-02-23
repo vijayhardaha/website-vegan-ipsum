@@ -15,7 +15,15 @@ export default function ErrorHandling(): JSX.Element {
 	return (
 		<Section id="error-handling" aria-label="Error handling for the Vegan Ipsum JSON API">
 			<Container>
-				<SectionHeader heading="Error Handling">
+				<SectionHeader
+					heading={
+						<>
+							Error <span className="text-primary">Handling</span>
+						</>
+					}
+					tagline="Bad Request"
+					icon="exclamation"
+				>
 					<p className="mb-8">
 						If your request contains invalid parameters or values outside the allowed
 						ranges, the API returns a <code>400 Bad Request</code> status with a helpful

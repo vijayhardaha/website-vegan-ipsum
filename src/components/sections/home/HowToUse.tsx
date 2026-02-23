@@ -89,7 +89,7 @@ export default function HowToUse(): JSX.Element {
 	return (
 		<Section id="how-to-use" aria-label="How to Use Vegan Ipsum" className="bg-secondary-muted">
 			<Container>
-				<SectionHeader heading="Use It Your Way" tagline="How to Use" icon="gears">
+				<SectionHeader heading="Use It Your Way" tagline="Methods" icon="route">
 					<p>
 						Instantly create plant-based placeholder text tailored to your project
 						needs. Whether you prefer a simple web interface, a powerful API, or

@@ -19,7 +19,15 @@ export default function CustomizationOptions(): JSX.Element {
 			aria-label="Customization options and technical details of Vegan Ipsum"
 		>
 			<Container>
-				<SectionHeader heading="Customization Options" tagline="Configuration" icon="cog">
+				<SectionHeader
+					heading={
+						<>
+							Customization <span className="text-primary">Options</span>
+						</>
+					}
+					tagline="Settings"
+					icon="sliders"
+				>
 					<p>
 						Vegan Ipsum is designed with flexibility in mind, allowing users to tailor
 						the output to meet the specific needs of their projects. Whether you want

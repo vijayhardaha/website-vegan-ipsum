@@ -64,7 +64,15 @@ export default function UseCases(): JSX.Element {
 			aria-label="Use cases and applications of Vegan Ipsum"
 		>
 			<Container>
-				<SectionHeader heading="Use Cases" tagline="Applications" icon="briefCase">
+				<SectionHeader
+					heading={
+						<>
+							Explore Real-World <span className="text-primary">Use Cases</span>
+						</>
+					}
+					tagline="Practicality"
+					icon="laptop"
+				>
 					<p>
 						From design mockups to educational apps, Vegan Ipsum fits seamlessly into
 						ethical and eco-conscious projects.

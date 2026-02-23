@@ -54,12 +54,13 @@ export default function UseCases(): JSX.Element {
 			<Container>
 				<SectionHeader
 					heading="When to Use Vegan Ipsum?"
-					tagline="Using It"
-					icon="bookOpen"
+					tagline="Use Cases"
+					icon="calendarCheck"
 				>
 					<p>
-						Vegan Ipsum is perfect for designers, developers, and content creators who
-						want to add a compassionate touch to their projects.
+						Vegan Ipsum is perfect for your wire frames, mockups, and live prototypes.
+						Use it whenever you need placeholder text that reflects a compassionate and
+						ethical design approach.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

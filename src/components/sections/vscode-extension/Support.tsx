@@ -17,21 +17,27 @@ export default function Support(): JSX.Element {
 			aroia-label="Support and feedback for the Vegan Ipsum VS Code Extension"
 		>
 			<Container>
-				<SectionHeader heading="Support & Feedback" tagline="Found a bug" icon="bug">
+				<SectionHeader
+					heading={
+						<>
+							Support & <span className="text-primary">Feedback</span>
+						</>
+					}
+					tagline="Found a Bug?"
+					icon="bug"
+				>
 					<p>
 						As an independently developed extension, I rely heavily on user feedback to
 						squash bugs and prioritize updates. If something isn&apos;t working as
 						expected or if you have a feature request please let me know by submitting
-						an issue on{" "}
+						an issue on our{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/vscode-vegan-ipsum/issues"
 							className="text-primary"
 							aria-label="Vegan Ipsum VS Code Extension GitHub Issues Page"
 						>
-							GitHub Issues Page
-						</SmartLink>{" "}
-						. I don&apos;t have a social media presence for this project, so GitHub is
-						the best and only way to get in touch!
+							GitHub Page
+						</SmartLink>
 					</p>
 					<p></p>
 				</SectionHeader>

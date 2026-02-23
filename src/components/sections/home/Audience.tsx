@@ -58,14 +58,15 @@ export default function Audience(): JSX.Element {
 			<Container>
 				<SectionHeader
 					heading="Who Can Use Vegan Ipsum?"
-					tagline="Who It's For"
+					tagline="Audience"
 					icon="users"
 					headingClassName="text-primary-foreground"
 					taglineClassName="text-primary-muted/70"
 				>
 					<p>
-						Built for anyone who wants their work to reflect their values from the first
-						wireframe to the final build.
+						Perfect for designers, developers, and creators who want their work to
+						reflect ethical values. Build your projects with content that aligns with a
+						sustainable lifestyle.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

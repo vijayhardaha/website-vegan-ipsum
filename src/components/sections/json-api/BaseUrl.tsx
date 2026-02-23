@@ -22,7 +22,15 @@ export default function BaseUrl(): JSX.Element {
 			className="pt-8 md:pt-10"
 		>
 			<Container>
-				<SectionHeader heading="Base URL">
+				<SectionHeader
+					heading={
+						<>
+							API <span className="text-primary">Base URL</span>
+						</>
+					}
+					tagline="Root Endpoint"
+					icon="link"
+				>
 					<p className="mb-8">
 						All endpoints are relative to the following root. HTTPS is strongly
 						recommended for security and data integrity.
