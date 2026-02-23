@@ -6,12 +6,12 @@ import JsonLd from "@/components/composites/JsonLd";
 import {
 	Hero,
 	IpsumGenerator,
-	HowToUse,
+	Methods,
 	Overview,
 	Benefits,
 	Audience,
 	UseCases,
-	ContactCTA,
+	Contact,
 } from "@/components/sections/home/";
 import { SITE_CONFIG } from "@/constants/seo";
 import { buildMetadata } from "@/utils/meta";
@@ -47,7 +47,7 @@ function Home(): JSX.Element {
 
 			<IpsumGenerator />
 
-			<HowToUse />
+			<Methods />
 
 			<Overview />
 
@@ -57,7 +57,7 @@ function Home(): JSX.Element {
 
 			<UseCases />
 
-			<ContactCTA />
+			<Contact />
 		</>
 	);
 }

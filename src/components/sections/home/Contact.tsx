@@ -15,7 +15,7 @@ import Icon from "@/components/primitives/Icon";
  *
  * @returns {JSX.Element} The rendered component.
  */
-export default function ContactCTA(): JSX.Element {
+export default function Contact(): JSX.Element {
 	return (
 		<Section
 			aria-label="Section encouraging users to get in touch for questions, contributions, or feedback"

@@ -85,9 +85,13 @@ const cards: Card[] = [
  *
  * @returns {JSX.Element} The rendered component.
  */
-export default function HowToUse(): JSX.Element {
+export default function Methods(): JSX.Element {
 	return (
-		<Section id="how-to-use" aria-label="How to Use Vegan Ipsum" className="bg-secondary-muted">
+		<Section
+			id="methods"
+			aria-label="Methods to Use Vegan Ipsum"
+			className="bg-secondary-muted"
+		>
 			<Container>
 				<SectionHeader heading="Use It Your Way" tagline="Methods" icon="route">
 					<p>
