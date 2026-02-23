@@ -1,49 +1,97 @@
-# 🌱 Vegan Ipsum Website
+# 🌱 Vegan Ipsum — Official Website
 
-This is the official website for [Vegan Ipsum](https://veganipsum.vercel.app), a compassionate alternative to lorem ipsum text generators. It provides vegan-themed placeholder text along with tools like a CLI, API, and VS Code extension.
+Vegan Ipsum is a compassion-forward placeholder text generator built for designers, developers, and teams who prefer plant-based, ethical sample content.
 
-## 🖥️ Live Website
+This repository contains the **official website** for the Vegan Ipsum ecosystem. It provides a web interface, API access, and links to related developer tools including the npm package, CLI, and editor extension.
 
-👉 Visit: [https://veganipsum.vercel.app](https://veganipsum.vercel.app)
+🔗 **Live Website**: https://veganipsum.vercel.app
 
-## 🐾 Why Vegan Ipsum?
+## ⚡ Quick Links
 
-Because placeholder text can reflect values. Use vegan ipsum to subtly promote compassion while designing.
+| Page              | Link                                           |
+| :---------------- | :--------------------------------------------- |
+| Home              | https://veganipsum.vercel.app                  |
+| JSON API          | https://veganipsum.vercel.app/json-api         |
+| Node CLI          | https://veganipsum.vercel.app/node-cli         |
+| NPM Package       | https://veganipsum.vercel.app/npm-package      |
+| VS Code Extension | https://veganipsum.vercel.app/vscode-extension |
+| About             | https://veganipsum.vercel.app/about            |
+| Contact           | https://veganipsum.vercel.app/contact          |
 
----
+## ✨ What This Website Provides
 
-## 📦 Related Projects
+The website acts as the central directory for all Vegan Ipsum tools and integrations.
 
-| Tool                  | Description                                     | Links                                                                                                                                                       |
-| --------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **NPM Package**       | Node.js package for generating vegan ipsum text | [npm](https://www.npmjs.com/package/vegan-ipsum) • [GitHub](https://github.com/vijayhardaha/node-vegan-ipsum)                                               |
-| **API**               | REST API to fetch vegan ipsum text              | [GitHub](https://github.com/vijayhardaha/vegan-ipsum-api)                                                                                                   |
-| **VS Code Extension** | Insert vegan ipsum directly in your editor      | [Marketplace](https://marketplace.visualstudio.com/items/?itemName=vijayhardaha.vegan-ipsum) • [GitHub](https://github.com/vijayhardaha/vscode-vegan-ipsum) |
+### 🖥 Interactive Generator
 
-## 🚀 Tech Stack
+- Clean, accessible UI
+- Adjustable length and structure
+- Copy-ready vegan-themed placeholder text
+- Suitable for wireframes, mockups, and prototypes
 
-- **Next.js** – React framework for static and dynamic web apps
-- **Tailwind CSS v4** – Utility-first CSS framework
-- **TypeScript** – Strongly typed JS
+### 🔌 JSON API
 
-## 🧑‍💻 Local Development
+- Fetch Vegan Ipsum programmatically
+- REST-based implementation
+- Ideal for apps, automation, and custom tooling
 
-Clone the repo and run the dev server:
+## 🌍 Ecosystem & Related Tools
 
-```bash
-git clone https://github.com/vijayhardaha/website-vegan-ipsum.git
-cd website-vegan-ipsum
-npm install
-npm dev
-```
+### ⚡ REST API
 
-Then visit [http://localhost:3000](http://localhost:3000) in your browser.
+_Standalone API implementation for high-performance programmatic text generation._
 
-## ✨ Author
+- **Endpoint Docs:** [JSON API Reference](https://veganipsum.vercel.app/json-api)
 
-**Vijay Hardaha**
-🔗 [GitHub](https://github.com/vijayhardaha) | [Instagram](https://instagram.com/vegan.vijay) | [X](https://x.com/vijayhardaha) | [PeoplePerHour](https://pph.me/vijayhardaha)
+### 📦 NPM Package & CLI
+
+[![NPM Version](https://img.shields.io/npm/v/vegan-ipsum?color=red&style=flat-square)](https://www.npmjs.com/package/vegan-ipsum)
+[![NPM Downloads](https://img.shields.io/npm/dm/vegan-ipsum?style=flat-square)](https://www.npmjs.com/package/vegan-ipsum)
+
+_A lightweight Node utility for generating Vegan Ipsum in JavaScript and Node.js environments._
+
+- **Registry:** [npmjs.com/package/vegan-ipsum](https://www.npmjs.com/package/vegan-ipsum)
+- **Source:** [GitHub Repository](https://github.com/vijayhardaha/node-vegan-ipsum)
+- **Guide:** [Full Documentation](https://veganipsum.vercel.app/npm-package)
+
+### 🧑‍💻 VS Code Extension
+
+_Enhance your workflow by inserting Vegan Ipsum directly inside your editor._
+
+- **Marketplace:** [Visual Studio Marketplace](https://marketplace.visualstudio.com/items/?itemName=vijayhardaha.vegan-ipsum)
+- **Source:** [Extension Source Code](https://github.com/vijayhardaha/vscode-vegan-ipsum)
+- **Usage:** [Extension Documentation](https://veganipsum.vercel.app/vscode-extension)
+
+## 🚀 Why Use Vegan Ipsum?
+
+> **The ethical alternative to standard placeholder text.**
+> While traditional _Lorem Ipsum_ is neutral, it doesn't always align with modern, plant-based, or conscious branding.
+
+### ✨ Core Benefits
+
+| Feature                  | Description                                                             |
+| :----------------------- | :---------------------------------------------------------------------- |
+| 🌱 **Ethical Branding**  | Content that aligns with compassion-focused and plant-based values.     |
+| 🧑‍🎨 **Conscious Design**  | Meaningful text that resonates with eco-conscious brands and designers. |
+| ⚡ **Dev-First Tooling** | Lightweight, high-performance tools built for modern workflows.         |
+| 🔌 **Seamless Workflow** | Integrated via **VS Code**, **CLI**, **NPM**, or a **REST API**.        |
+
+### 🎯 Ideal For:
+
+- **Ethical Startups:** Build a consistent brand voice from the mockup stage.
+- **Vegan Brands:** Use industry-relevant terminology instead of "Latin" filler.
+- **Sustainability Teams:** Align your internal tools with your environmental mission.
+- **Creative Designers:** Create more immersive and relevant plant-based product previews.
+
+## 👤 Author Information
+
+| Platform        | Profile Link                                         |
+| :-------------- | :--------------------------------------------------- |
+| **GitHub**      | [@vijayhardaha](https://github.com/vijayhardaha)     |
+| **Twitter / X** | [@vijayhardaha](https://twitter.com/vijayhardaha)    |
+| **Instagram**   | [@vegan.vijay](https://instagram.com/vegan.vijay)    |
+| **Hire Me**     | [PeoplePerHour Profile](https://pph.me/vijayhardaha) |
 
 ## 📄 License
 
-[MIT](LICENSE)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
