@@ -106,10 +106,9 @@ export default function SmartLink({
 			]
 		: [];
 
-	const linkClasses = [
-		"underline-offset-2 underline decoration-transparent hover:decoration-current transition-all duration-300 decoration-[1.5px]",
-		...hoverEffectClasses,
-	];
+	const defaultLinkClasses =
+		"underline-offset-2 underline decoration-transparent hover:decoration-current transition-all duration-300 decoration-[1.5px]";
+	const linkClasses = [defaultLinkClasses, ...hoverEffectClasses];
 
 	// Hash link with smooth scroll
 	if (linkType === "hash") {
@@ -134,15 +133,22 @@ export default function SmartLink({
 				href={href}
 				target="_blank"
 				rel="noopener noreferrer"
-				className={cn(linkClasses, "inline-flex items-center gap-0.5", className)}
+				className={cn(...hoverEffectClasses, className)}
 				aria-label={ariaLabel}
 				onClick={onClick}
 				{...props}
 			>
-				{children}
-				{linkLine && (
-					<Icon name="arrowOutward" className="relative top-0.25 text-inherit" />
-				)}
+				<span
+					className={cn(
+						"relative z-10 inline-flex items-center gap-0.5",
+						defaultLinkClasses
+					)}
+				>
+					{children}
+					{linkLine && (
+						<Icon name="arrowOutward" className="relative top-0.25 text-inherit" />
+					)}
+				</span>
 			</Link>
 		);
 	}
