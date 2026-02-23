@@ -118,8 +118,9 @@ export default function HowToUse(): JSX.Element {
 										<SmartLink
 											href={card.link}
 											scrollOffset={68}
-											className="text-primary inline-flex items-center gap-0.5 text-sm font-medium"
+											className="text-primary relative inline-flex items-center gap-0.5 text-sm font-medium"
 											aria-label={card.ariaLabel}
+											hoverEffect={false}
 										>
 											{card.buttonText}
 											{card?.buttonIcon && <Icon name="arrowRight" />}
