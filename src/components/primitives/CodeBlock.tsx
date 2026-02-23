@@ -109,11 +109,10 @@ export const prismCustom = {
 };
 
 /**
- * Check if the Clipboard API is available and the context is secure (HTTPS).
- * This is necessary for the copy functionality to work properly.
+ * Clipboard availability will be detected on the client after mount.
+ * Avoid checking `navigator`/`window` at module scope to prevent
+ * server/client render mismatches during hydration.
  */
-const canUseClipboard =
-	typeof navigator !== "undefined" && !!navigator.clipboard && window.isSecureContext;
 
 /**
  * Reusable component for displaying code blocks with syntax highlighting.
@@ -128,12 +127,19 @@ export default function CodeBlock({
 	...props
 }: CodeBlockProps): JSX.Element {
 	const [copied, setCopied] = useState(false);
+	// Detect clipboard availability on the client only to avoid hydration mismatches.
+	const [canUseClipboard, setCanUseClipboard] = useState(false);
 	const timerRef = useRef<number | null>(null);
 
 	/**
 	 * Cleanup function to clear the timer when the component unmounts to prevent memory leaks.
 	 */
 	useEffect(() => {
+		// Set clipboard availability after mount (client-side).
+		setCanUseClipboard(
+			typeof navigator !== "undefined" && !!navigator.clipboard && window.isSecureContext
+		);
+
 		return () => {
 			if (timerRef.current) {
 				window.clearTimeout(timerRef.current);
