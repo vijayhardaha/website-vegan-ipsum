@@ -53,44 +53,48 @@ function readSitemap(filePath) {
  * @param {object} spinner - ora spinner instance.
  * @returns {Promise<void>}
  */
+/**
+ * Notify IndexNow with a list of URLs.
+ *
+ * @param {string[]} urls - List of URLs to notify.
+ * @param {import('ora').Ora} spinner - CLI spinner instance.
+ */
+/**
+ * Notify IndexNow with a list of URLs.
+ *
+ * @param {string[]} urls - List of URLs to notify.
+ * @param {import('ora').Ora} spinner - CLI spinner instance.
+ */
 async function notifyIndexNow(urls, spinner) {
 	if (!Array.isArray(urls) || urls.length === 0) {
-		spinner.warn("No URLs to notify IndexNow.");
+		spinner.warn("No URLs provided for IndexNow submission.");
 		return;
 	}
 
-	for (const url of urls) {
-		let res;
-		try {
-			res = await fetch("https://api.indexnow.org/indexnow", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({
-					host: new URL(siteUrl).host,
-					key,
-					keyLocation,
-					urlList: [url],
-				}),
-			});
-		} catch (err) {
-			spinner.fail(`❌ Network error while submitting ${url} to IndexNow: ${err}`);
-			console.log(`Status for ${url}: Failed (Network error)`);
-			continue;
+	spinner.start(`Submitting ${urls.length} URL(s) to IndexNow...`);
+
+	try {
+		const res = await fetch("https://api.indexnow.org/indexnow", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+				host: new URL(siteUrl).host,
+				key,
+				keyLocation,
+				urlList: urls,
+			}),
+		});
+
+		if (!res.ok) {
+			const errorText = await res.text().catch(() => "Unknown error");
+			throw new Error(`HTTP ${res.status} ${res.statusText}: ${errorText}`);
 		}
 
-		if (res && res.ok) {
-			spinner.succeed(`Status for ${url}: ✅ Success`);
-		} else {
-			let errorText = "";
-			try {
-				errorText = res ? await res.text() : "No response";
-			} catch (e) {
-				errorText = e instanceof Error ? e.message : "Unknown error";
-			}
-			spinner.fail(`Status for ${url}: Failed (${errorText})`);
-			console.error(`❌ Submission failed for ${url}:`, errorText);
-		}
-		spinner.start("Processing next URL...");
+		spinner.succeed(`Successfully submitted ${urls.length} URL(s) to IndexNow.`);
+	} catch (err) {
+		const errorMessage = err instanceof Error ? err.message : "Unknown error";
+
+		spinner.fail(`IndexNow submission failed for ${urls.length} URL(s): ${errorMessage}`);
 	}
 }
 
