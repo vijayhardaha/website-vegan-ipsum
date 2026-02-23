@@ -80,7 +80,7 @@ export default function Installation(): JSX.Element {
 							<div className="rounded-xl border border-slate-700 bg-slate-950 p-5 font-mono text-sm">
 								<div className="text-primary-muted flex items-center gap-2">
 									<span className="text-amber-500">&gt;</span>
-									<span>ext install vegan-ipsum</span>
+									<span>ext install vijayhardaha.vegan-ipsum</span>
 								</div>
 							</div>
 							<div className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5 flex items-start gap-2 rounded-xl border px-4 py-3">
