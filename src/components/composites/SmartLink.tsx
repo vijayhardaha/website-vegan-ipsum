@@ -133,11 +133,7 @@ export default function SmartLink({
 				href={href}
 				target="_blank"
 				rel="noopener noreferrer"
-				className={cn(
-					linkClasses,
-					"relative z-10 inline-flex items-center gap-0.5",
-					className
-				)}
+				className={cn(linkClasses, "relative inline-flex items-center gap-0.5", className)}
 				aria-label={ariaLabel}
 				onClick={onClick}
 				{...props}
