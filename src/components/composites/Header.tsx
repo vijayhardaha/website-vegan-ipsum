@@ -80,16 +80,17 @@ export default function Header(): JSX.Element {
 								isMobileMenuOpen ? "block" : "hidden"
 							} bg-background border-border absolute top-full left-0 w-full border-t shadow-md lg:static lg:block lg:border-none lg:bg-transparent lg:shadow-none`}
 						>
-							<ul className="flex flex-col space-y-4 p-4 md:px-6 lg:flex-row lg:space-y-0 lg:space-x-6 lg:p-0">
+							<ul className="flex flex-col space-y-4 p-4 md:px-6 lg:flex-row lg:space-y-0 lg:space-x-5 lg:p-0">
 								{HEADER_NAV_LINKS.map((link: NavLink) => (
 									<li key={link.href}>
 										<SmartLink
 											href={link.href}
 											className={cn(
-												"inline-flex items-center gap-1 text-sm font-semibold no-underline decoration-2 underline-offset-2 transition-all",
-												"hover:text-primary hover:underline",
+												"inline-flex items-center text-sm font-semibold",
+												"hover:text-primary",
 												{
-													"text-primary underline": isActive(link.href),
+													"text-primary font-bold decoration-current":
+														isActive(link.href),
 												}
 											)}
 											aria-label={link.label}
