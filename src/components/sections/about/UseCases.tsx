@@ -71,7 +71,7 @@ export default function UseCases(): JSX.Element {
 					</p>
 				</SectionHeader>
 
-				<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+				<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 					{cards.map((card, index: number) => (
 						<div
 							key={index}
