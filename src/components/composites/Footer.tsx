@@ -59,6 +59,7 @@ export default function Footer(): JSX.Element {
 						<SmartLink
 							href="https://instagram.com/vegan.vijay"
 							aria-label="Visit vijay hardaha's instagram profile"
+							hoverEffect={false}
 						>
 							Vijay Hardaha
 						</SmartLink>
