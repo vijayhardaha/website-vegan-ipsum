@@ -118,7 +118,7 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
 						onValueChange={(value) =>
 							setSelectedType(value as "paragraphs" | "sentences" | "words")
 						}
-						aria-label="Select type of text to generate"
+						aria-label="Select the type of units to generate (paragraphs, sentences, or words)"
 						required
 					/>
 				</div>
@@ -126,7 +126,7 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
 
 			<Button
 				type="submit"
-				aria-label="Generate Vegan Ipsum"
+				aria-label="Generate Vegan Ipsum Text"
 				disabled={loading}
 				className="md:mt-6"
 				size="lg"
