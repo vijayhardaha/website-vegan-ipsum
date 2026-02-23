@@ -2,6 +2,7 @@ import type { JSX } from "react";
 
 import { Metadata } from "next";
 
+import JsonLd from "@/components/composites/JsonLd";
 import PageHeader from "@/components/composites/PageHeader";
 import {
 	Introduction,
@@ -13,9 +14,10 @@ import {
 	CTA,
 } from "@/components/sections/about";
 import { buildMetadata } from "@/utils/meta";
+import { generateMasterSchema } from "@/utils/schema";
 
-const seoTitle = "About Vegan Ipsum - The Mission Behind Ethical Placeholder Text Generator";
-const seoDescription =
+const title = "About Vegan Ipsum - The Mission Behind Ethical Placeholder Text Generator";
+const description =
 	"Discover the story of Vegan Ipsum. Learn why we created a plant-based, cruelty-free alternative to traditional Lorem Ipsum for conscious designers and developers.";
 
 const pageTitle = (
@@ -32,13 +34,19 @@ const pageTags = [
 	"🚀 Made for Creators",
 ];
 
-/**
- * SEO metadata for the page.
- */
-export const metadata: Metadata = buildMetadata({
-	seoTitle,
-	seoDescription,
-	pageSlug: "about",
+// Path for the page, used for metadata and schema generation
+const path = "/about";
+
+// SEO metadata for the page.
+export const metadata: Metadata = buildMetadata({ title, description, path });
+
+// Schema.org structured data.
+const schemaData = generateMasterSchema({
+	title,
+	description,
+	path,
+	pageType: "AboutPage",
+	breadcrumbs: [{ name: "About Vegan Ipsum", path: path }],
 });
 
 /**
@@ -49,6 +57,8 @@ export const metadata: Metadata = buildMetadata({
 export default function AboutPage(): JSX.Element {
 	return (
 		<>
+			<JsonLd data={schemaData} />
+
 			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
 			<Introduction />

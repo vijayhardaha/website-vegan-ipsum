@@ -2,6 +2,7 @@ import type { JSX } from "react";
 
 import { Metadata } from "next";
 
+import JsonLd from "@/components/composites/JsonLd";
 import {
 	Hero,
 	IpsumGenerator,
@@ -12,20 +13,24 @@ import {
 	UseCases,
 	ContactCTA,
 } from "@/components/sections/home/";
+import { SITE_CONFIG } from "@/constants/seo";
 import { buildMetadata } from "@/utils/meta";
+import { generateMasterSchema } from "@/utils/schema";
 
-const seoTitle = "Vegan Ipsum - Ethical & Plant-Based Lorem Ipsum Generator";
-const seoDescription =
-	"Generate ethical, plant-based placeholder text with Vegan Ipsum. The perfect Lorem Ipsum alternative for vegans and conscious designers. Try it for free!";
+const title = SITE_CONFIG.title;
+const description = SITE_CONFIG.description;
 
-/**
- * SEO metadata for the page.
- */
-export const metadata: Metadata = buildMetadata({
-	seoTitle,
-	seoDescription,
-	pageSlug: "/",
-	postfix: false,
+// Path for the page, used for metadata and schema generation
+const path = "/";
+
+// SEO metadata for the page.
+export const metadata: Metadata = buildMetadata({ title, description, path });
+
+// Schema.org structured data.
+const schemaData = generateMasterSchema({
+	title,
+	description,
+	path,
 });
 
 /**
@@ -35,7 +40,9 @@ export const metadata: Metadata = buildMetadata({
  */
 function Home(): JSX.Element {
 	return (
-		<div>
+		<>
+			<JsonLd data={schemaData} />
+
 			<Hero />
 
 			<IpsumGenerator />
@@ -51,7 +58,7 @@ function Home(): JSX.Element {
 			<UseCases />
 
 			<ContactCTA />
-		</div>
+		</>
 	);
 }
 

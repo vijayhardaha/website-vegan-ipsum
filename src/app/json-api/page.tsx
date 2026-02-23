@@ -2,6 +2,7 @@ import type { JSX } from "react";
 
 import { Metadata } from "next";
 
+import JsonLd from "@/components/composites/JsonLd";
 import PageHeader from "@/components/composites/PageHeader";
 import {
 	Introduction,
@@ -15,9 +16,10 @@ import {
 	StatusCodes,
 } from "@/components/sections/json-api";
 import { buildMetadata } from "@/utils/meta";
+import { generateMasterSchema } from "@/utils/schema";
 
-const seoTitle = "Vegan Ipsum API - Free JSON Placeholder Text API";
-const seoDescription =
+const title = "Vegan Ipsum API - Free JSON Placeholder Text API";
+const description =
 	"Access the Vegan Ipsum REST API to fetch ethical, plant-based placeholder text for your web apps. High-performance JSON endpoints for conscious developers.";
 const pageTitle = (
 	<>
@@ -33,13 +35,27 @@ const pageTags = [
 	"📝 Plain & HTML Formats",
 ];
 
-/**
- * SEO metadata for the page.
- */
-export const metadata: Metadata = buildMetadata({
-	seoTitle,
-	seoDescription,
-	pageSlug: "json-api",
+// Path for the page, used for metadata and schema generation
+const path = "/json-api";
+
+// SEO metadata for the page.
+export const metadata: Metadata = buildMetadata({ title, description, path });
+
+// Schema.org structured data.
+const schemaData = generateMasterSchema({
+	title,
+	description,
+	path,
+	pageType: "Software",
+	isApp: true, // This ensures it uses WebApplication schema
+	breadcrumbs: [{ name: "Vegan Ipsum JSON API", path: path }],
+	softwareConfig: {
+		applicationCategory: "DeveloperApplication",
+		applicationSubCategory: "API",
+		requirements: "HTTP Client, Internet Access",
+		price: "0",
+		version: "1.0.0",
+	},
 });
 
 /**
@@ -50,6 +66,8 @@ export const metadata: Metadata = buildMetadata({
 export default function JsonAPIPage(): JSX.Element {
 	return (
 		<>
+			<JsonLd data={schemaData} />
+
 			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
 			<Introduction />

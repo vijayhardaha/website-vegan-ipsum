@@ -2,12 +2,14 @@ import type { JSX } from "react";
 
 import { Metadata } from "next";
 
+import JsonLd from "@/components/composites/JsonLd";
 import PageHeader from "@/components/composites/PageHeader";
 import { Introduction, Installation, Usage, Features } from "@/components/sections/npm-package";
 import { buildMetadata } from "@/utils/meta";
+import { generateMasterSchema } from "@/utils/schema";
 
-const seoTitle = "vegan-ipsum NPM Package - Ethical Lorem Ipsum Library";
-const seoDescription =
+const title = "vegan-ipsum NPM Package - Ethical Lorem Ipsum Library";
+const description =
 	"Integrate ethical, plant-based placeholder text into your JavaScript projects. The Vegan Ipsum NPM package is a lightweight, zero-dependency library for conscious developers. Install it now!";
 
 const pageTitle = (
@@ -24,13 +26,41 @@ const pageTags = [
 	"⚡ Ultra Lightweight",
 ];
 
-/**
- * SEO metadata for the page.
- */
-export const metadata: Metadata = buildMetadata({
-	seoTitle,
-	seoDescription,
-	pageSlug: "npm-package",
+// Path for the page, used for metadata and schema generation
+const path = "/npm-package";
+
+// SEO metadata for the page.
+export const metadata: Metadata = buildMetadata({ title, description, path });
+
+// Schema.org structured data.
+const schemaData = generateMasterSchema({
+	title,
+	description,
+	path,
+	pageType: "Software",
+	breadcrumbs: [{ name: "Vegan Ipsum NPM Package", path: path }],
+	softwareConfig: {
+		version: "1.0.4",
+		repositoryUrl: "https://github.com/vijayhardaha/node-vegan-ipsum",
+		installUrl: "https://www.npmjs.com/package/vegan-ipsum",
+		programmingLanguage: "TypeScript",
+		runtimePlatform: "Node.js",
+		keywords: [
+			"vegan-ipsum",
+			"lorem-ipsum",
+			"placeholder-text",
+			"plant-based",
+			"ethical-design",
+			"cruelty-free",
+			"lorem-ipsum-generator",
+			"dummy-text",
+			"developer-tools",
+			"filler-text",
+			"node-js",
+			"typescript",
+			"npm-package",
+		],
+	},
 });
 
 /**
@@ -41,6 +71,8 @@ export const metadata: Metadata = buildMetadata({
 export default function NpmPackagePage(): JSX.Element {
 	return (
 		<>
+			<JsonLd data={schemaData} />
+
 			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
 			<Introduction />
