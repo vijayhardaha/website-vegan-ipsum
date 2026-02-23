@@ -71,14 +71,18 @@ export default function Header(): JSX.Element {
 							className="text-2xl lg:hidden"
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 							aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+							aria-expanded={isMobileMenuOpen}
+							aria-controls="main-menu"
 						>
 							{isMobileMenuOpen ? <LuX /> : <LuAlignRight />}
 						</Button>
 						<nav
+							id="main-menu"
 							aria-label="Main navigation"
-							className={`${
+							className={cn(
+								"bg-background border-border absolute top-full left-0 w-full border-t shadow-md lg:static lg:block lg:border-none lg:bg-transparent lg:shadow-none",
 								isMobileMenuOpen ? "block" : "hidden"
-							} bg-background border-border absolute top-full left-0 w-full border-t shadow-md lg:static lg:block lg:border-none lg:bg-transparent lg:shadow-none`}
+							)}
 						>
 							<ul className="flex flex-col space-y-4 p-4 md:px-6 lg:flex-row lg:space-y-0 lg:space-x-5 lg:p-0">
 								{HEADER_NAV_LINKS.map((link: NavLink) => (
