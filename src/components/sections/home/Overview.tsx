@@ -15,7 +15,7 @@ import Container from "@/components/primitives/Container";
 export default function Overview(): JSX.Element {
 	return (
 		<Section
-			id="what-is-it"
+			id="overview"
 			aria-label="Section explaining what the Vegan Ipsum Generator is and its features"
 			className="py-20"
 		>
@@ -27,11 +27,10 @@ export default function Overview(): JSX.Element {
 							alt="Men welcoming you to Vegan Ipsum Generator"
 							width={613}
 							height={701}
-							priority
 						/>
 					</div>
 					<SectionHeader
-						heading="What is Vegan Ipsum Generator?"
+						heading="What is Vegan Ipsum?"
 						tagline="Overview"
 						icon="questionCircle"
 					>
