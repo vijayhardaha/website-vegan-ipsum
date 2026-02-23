@@ -19,7 +19,6 @@ import {
 import {
 	LiaAwardSolid,
 	LiaBoltSolid,
-	LiaBriefcaseSolid,
 	LiaBugSolid,
 	LiaCalendarCheckSolid,
 	LiaCheckCircleSolid,
@@ -48,7 +47,6 @@ import {
 	LiaPaletteSolid,
 	LiaPeopleCarrySolid,
 	LiaQuestionCircleSolid,
-	LiaQuestionSolid,
 	LiaRouteSolid,
 	LiaSearchSolid,
 	LiaSlidersHSolid,
@@ -71,8 +69,8 @@ export type IconName = keyof typeof ICONS;
  * This allows for easy retrieval and usage of icons based on their names.
  */
 export const ICONS = {
+	award: LiaAwardSolid,
 	bolt: LiaBoltSolid,
-	briefCase: LiaBriefcaseSolid,
 	bug: LiaBugSolid,
 	calendarCheck: LiaCalendarCheckSolid,
 	checkCircle: LiaCheckCircleSolid,
@@ -91,6 +89,7 @@ export const ICONS = {
 	history: LiaHistorySolid,
 	idCard: LiaIdCardSolid,
 	infoCircle: LiaInfoCircleSolid,
+	jsSquare: LiaJsSquare,
 	keyboard: LiaKeyboardSolid,
 	laptop: LiaLaptopCodeSolid,
 	leaf: LiaLeafSolid,
@@ -99,18 +98,15 @@ export const ICONS = {
 	npm: LiaNpm,
 	palette: LiaPaletteSolid,
 	peopleCarry: LiaPeopleCarrySolid,
-	question: LiaQuestionSolid,
 	questionCircle: LiaQuestionCircleSolid,
 	route: LiaRouteSolid,
 	search: LiaSearchSolid,
 	sliders: LiaSlidersHSolid,
 	terminal: LiaTerminalSolid,
+	toggleOn: LiaToggleOnSolid,
 	user: LiaUserSolid,
 	users: LiaUsersSolid,
 	userTie: LiaUserTieSolid,
-	toggleOn: LiaToggleOnSolid,
-	jsSquare: LiaJsSquare,
-	award: LiaAwardSolid,
 
 	arrowRight: MdOutlineArrowForward,
 	arrowOutward: MdOutlineArrowOutward,
