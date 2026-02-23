@@ -4,7 +4,7 @@ import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import CodeBlock from "@/components/primitives/CodeBlock";
 import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
+import InfoBox from "@/components/primitives/InfoBox";
 
 /**
  * This component describes the error handling mechanism of the Vegan Ipsum JSON API.
@@ -36,15 +36,10 @@ export default function ErrorHandling(): JSX.Element {
 }`}
 					</CodeBlock>
 
-					<div className="bg-primary-muted border-primary/40 text-primary-dark flex items-start gap-3 rounded-2xl border px-5 py-4">
-						<span className="flex-shrink-0 text-2xl">
-							<Icon name="infoCircle" />
-						</span>
-						<p>
-							Always validate your input parameters before sending requests to ensure
-							smooth and predictable API usage.
-						</p>
-					</div>
+					<InfoBox>
+						Always validate your input parameters before sending requests to ensure
+						smooth and predictable API usage.
+					</InfoBox>
 				</SectionHeader>
 			</Container>
 		</Section>
