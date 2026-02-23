@@ -89,7 +89,7 @@ export default function Features(): JSX.Element {
 						{cards.map((feature, index) => (
 							<div
 								key={index}
-								className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
+								className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
 							>
 								<h3 className="mb-2 flex items-center gap-2 text-lg">
 									<span className="relative top-0.5 text-xl">

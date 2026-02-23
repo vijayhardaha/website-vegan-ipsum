@@ -67,9 +67,9 @@ export default function UseCases(): JSX.Element {
 						{cards.map((card, index: number) => (
 							<div
 								key={index}
-								className="border-border relative flex gap-4 overflow-hidden rounded-2xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
+								className="border-border relative flex gap-4 overflow-hidden rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
 							>
-								<span className="bg-secondary-100/70 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl text-3xl">
+								<span className="bg-secondary-100/70 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-3xl text-3xl">
 									<Icon name={card.icon} />
 								</span>
 								<div>

@@ -28,7 +28,7 @@ export default function Input({ className, type = "text", ...props }: InputProps
 				"flex h-12 w-full min-w-0 px-3 py-1",
 
 				// Font and text
-				"rounded-lg text-base",
+				"rounded-3xl text-base",
 
 				// Typography
 				"placeholder:text-muted-foreground/50 file:text-foreground",

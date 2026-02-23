@@ -33,9 +33,9 @@ export default function RequestMethods(): JSX.Element {
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						<div className="border-border rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+						<div className="border-border rounded-3xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
 							<div className="mb-3 flex items-center gap-3">
-								<span className="bg-primary-muted text-primary-dark rounded-lg px-3 py-1 font-mono text-sm font-bold">
+								<span className="bg-primary-muted text-primary-dark rounded-2xl px-3 py-1 font-mono text-sm font-bold">
 									GET
 								</span>
 								<h3 className="text-lg">Query Parameters</h3>
@@ -46,9 +46,9 @@ export default function RequestMethods(): JSX.Element {
 							</p>
 						</div>
 
-						<div className="border-border rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+						<div className="border-border rounded-3xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
 							<div className="mb-3 flex items-center gap-3">
-								<span className="bg-secondary-muted text-secondary-dark rounded-lg px-3 py-1 font-mono text-sm font-bold">
+								<span className="bg-secondary-muted text-secondary-dark rounded-2xl px-3 py-1 font-mono text-sm font-bold">
 									POST
 								</span>
 								<h3 className="text-lg">JSON Body</h3>

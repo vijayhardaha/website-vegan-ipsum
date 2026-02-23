@@ -24,7 +24,7 @@ export default function PageTags({
 			{tags.map((tag: string, index: number) => (
 				<span
 					key={index}
-					className="border-primary/30 inline-flex items-center rounded-md border bg-white px-3 py-1.5 text-xs font-bold shadow-sm"
+					className="border-primary/30 inline-flex items-center rounded-2xl border bg-white px-3 py-1.5 text-xs font-bold shadow-sm"
 				>
 					{tag}
 				</span>

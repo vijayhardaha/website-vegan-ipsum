@@ -59,7 +59,7 @@ export default function Select({
 				"flex h-12 w-full min-w-0 px-3 py-1 pr-8",
 
 				// Font and text
-				"rounded-lg text-base",
+				"rounded-3xl text-base",
 
 				// Placeholder & colors
 				"placeholder:text-muted-foreground/50",

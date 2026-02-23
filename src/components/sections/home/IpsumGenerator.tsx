@@ -83,7 +83,7 @@ export default function IpsumGenerator(): JSX.Element {
 						and ethical.
 					</p>
 
-					<div className="border-border mt-8 rounded-2xl border bg-white p-5 md:p-7">
+					<div className="border-border mt-8 rounded-3xl border bg-white p-5 md:p-7">
 						{/* Generator Form */}
 						<IpsumForm setOutput={setOutput} />
 
@@ -117,7 +117,7 @@ export default function IpsumGenerator(): JSX.Element {
 
 								<div
 									className={cn(
-										"bg-input/20 border-border space-y-4 rounded-2xl border p-6",
+										"bg-input/20 border-border space-y-4 rounded-3xl border p-6",
 										calculateParagraphs(output) > 4 &&
 											"max-h-96 overflow-y-auto"
 									)}

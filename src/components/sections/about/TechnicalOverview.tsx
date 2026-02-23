@@ -85,7 +85,7 @@ export default function TechnicalOverview(): JSX.Element {
 								].map((item, index) => (
 									<div
 										key={index}
-										className="bg-secondary/15 border-secondary/15 rounded-2xl border px-4 py-3 backdrop-blur-md"
+										className="bg-secondary/15 border-secondary/15 rounded-3xl border px-4 py-3 backdrop-blur-md"
 									>
 										<p className="text-secondary mb-1.5 text-sm">
 											{item.text1}

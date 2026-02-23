@@ -174,7 +174,7 @@ export default function CodeBlock({
 	};
 
 	return (
-		<div className="relative overflow-hidden rounded-xl">
+		<div className="relative overflow-hidden rounded-3xl">
 			<div className="flex items-center justify-between bg-[#243020] px-5 py-2.5">
 				<span className="font-mono text-xs font-semibold text-[#6a9960]">{label}</span>
 
@@ -183,7 +183,7 @@ export default function CodeBlock({
 					<button
 						onClick={() => handleCopy(children)}
 						className={cn(
-							"cursor-pointer rounded-lg border border-white/12 bg-white/8 px-3 py-1 font-mono text-xs font-semibold text-[#6a9960] transition-all",
+							"cursor-pointer rounded-2xl border border-white/12 bg-white/8 px-3 py-1 font-mono text-xs font-semibold text-[#6a9960] transition-all",
 							copied && "ok"
 						)}
 						aria-pressed={copied}

@@ -83,7 +83,7 @@ export default function UseCases(): JSX.Element {
 					{cards.map((card, index: number) => (
 						<div
 							key={index}
-							className="border-border flex gap-4 rounded-2xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
+							className="border-border flex gap-4 rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
 						>
 							<div>
 								<h3 className="text-primary-solid mb-1 text-xl font-bold">

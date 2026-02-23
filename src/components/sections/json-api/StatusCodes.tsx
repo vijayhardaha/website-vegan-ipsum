@@ -65,11 +65,11 @@ export default function StatusCodes(): JSX.Element {
 						].map((code, index) => (
 							<li
 								key={index}
-								className="border-border flex items-start gap-4 rounded-2xl border bg-white p-4 transition-transform hover:translate-x-1"
+								className="border-border flex items-start gap-4 rounded-3xl border bg-white p-4 transition-transform hover:translate-x-1"
 							>
 								<span
 									className={cn(
-										"inline-flex min-h-12 min-w-14 items-center justify-center rounded-xl px-0 py-1 text-center text-sm font-bold",
+										"inline-flex min-h-12 min-w-14 items-center justify-center rounded-3xl px-0 py-1 text-center text-sm font-bold",
 										code.class
 									)}
 								>

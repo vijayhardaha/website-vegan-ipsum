@@ -26,7 +26,7 @@ export default function InfoBox({ children, className = "" }: InfoBoxProps): JSX
 	return (
 		<div
 			className={cn(
-				"bg-primary-muted border-primary/40 text-primary-dark flex items-start gap-2 rounded-xl border px-4 py-3 text-sm leading-relaxed",
+				"bg-primary-muted border-primary/40 text-primary-dark flex items-start gap-2 rounded-3xl border px-4 py-3 text-sm leading-relaxed",
 				className
 			)}
 		>
