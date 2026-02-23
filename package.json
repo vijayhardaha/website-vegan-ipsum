@@ -25,6 +25,7 @@
 		"react-syntax-highlighter": "^16.1.0",
 		"tailwind-merge": "^3.5.0",
 		"tailwindcss": "^4",
+		"tailwindcss-corner-shape": "^1.4.6",
 		"vegan-ipsum": "^1.0.4"
 	},
 	"devDependencies": {
