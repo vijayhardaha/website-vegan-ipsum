@@ -29,7 +29,6 @@ export default function Footer(): JSX.Element {
 								alt="Vegan Ipsum Logo"
 								width={213}
 								height={32}
-								priority
 								className="h-auto w-[180px]"
 							/>
 							<span className="sr-only">Vegan Ipsum</span>

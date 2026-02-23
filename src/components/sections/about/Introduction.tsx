@@ -24,7 +24,6 @@ export default function Introduction(): JSX.Element {
 							alt="Men welcoming you to Vegan Ipsum Generator"
 							width={613}
 							height={701}
-							priority
 						/>
 					</div>
 					<SectionHeader
