@@ -8,9 +8,9 @@ import { getBaseUrl, safeCanonical } from "@/utils/seo";
  * const params: SeoProps = { title: 'About', description: 'About page', slug: 'about' };
  */
 export interface SeoProps {
-	seoTitle: string;
-	seoDescription: string;
-	pageSlug?: string;
+	title: string;
+	description: string;
+	path?: string;
 	postfix?: boolean;
 }
 
@@ -92,26 +92,25 @@ const buildSeoTitle = (title: string = "", postfix: boolean): string => {
  * Generate a complete metadata object for SEO, Open Graph, and Twitter cards.
  *
  * @param {SeoProps} params - The parameters object containing optional title, description and slug.
- * @param {string} [params.seoTitle=""] - Page title to include in SEO metadata.
- * @param {string} [params.seoDescription=""] - Page description for SEO and social cards.
- * @param {string} [params.pageSlug=""] - URL slug to generate the canonical URL.
+ * @param {string} [params.title=""] - Page title to include in SEO metadata.
+ * @param {string} [params.description=""] - Page description for SEO and social cards.
+ * @param {string} [params.path=""] - URL slug to generate the canonical URL.
  * @returns A metadata object suitable for Next.js metadata and social sharing.
  *
  * @example
  * const meta = buildMetadata({ title: 'Recipes', description: 'Vegan recipes', slug: 'recipes' });
  */
 export const buildMetadata = ({
-	seoTitle = "",
-	seoDescription = "",
-	pageSlug = "",
+	title = "",
+	description = "",
+	path = "",
 	postfix = false,
 }: SeoProps) => {
-	const title = buildSeoTitle(seoTitle, postfix);
-	const canonical = safeCanonical(pageSlug);
+	const canonical = safeCanonical(path);
 
 	const titleAndDescription = {
-		title,
-		description: seoDescription || SITE_CONFIG.description,
+		title: buildSeoTitle(title, postfix),
+		description: description || SITE_CONFIG.description,
 	};
 
 	const newMetadata = mergeDeep(SITE_METADATA, {
