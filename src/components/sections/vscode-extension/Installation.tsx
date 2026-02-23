@@ -4,6 +4,7 @@ import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 import Icon from "@/components/primitives/Icon";
+import InfoBox from "@/components/primitives/InfoBox";
 
 /**
  * This component renders the installation section for the VS Code Extension page.
@@ -71,6 +72,7 @@ export default function Installation(): JSX.Element {
 								))}
 							</ol>
 						</div>
+
 						<div className="border-border from-secondary-100 to-secondary-200 rounded-3xl border bg-gradient-to-br p-8">
 							<div className="text-secondary mb-6 flex items-center gap-3">
 								<div className="border-secondary/40 bg-secondary/20 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border text-2xl">
@@ -83,24 +85,22 @@ export default function Installation(): JSX.Element {
 									<p className="text-sm">Quick install via command</p>
 								</div>
 							</div>
+
 							<p className="mb-4 text-sm leading-relaxed">
 								Open Command Palette and run:
 							</p>
+
 							<div className="rounded-xl border border-slate-700 bg-slate-950 p-5 font-mono text-sm">
 								<div className="text-primary-muted flex items-center gap-2">
 									<span className="text-amber-500">&gt;</span>
 									<span>ext install vijayhardaha.vegan-ipsum</span>
 								</div>
 							</div>
-							<div className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5 flex items-start gap-2 rounded-xl border px-4 py-3">
-								<span className="flex-shrink-0 text-2xl">
-									<Icon name="lightBulb" />
-								</span>
-								<p className="text-sm leading-relaxed">
-									This command triggers installation without navigating away from
-									your editor.
-								</p>
-							</div>
+
+							<InfoBox className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5">
+								This command triggers installation without navigating away from your
+								editor.
+							</InfoBox>
 						</div>
 					</div>
 				</SectionHeader>

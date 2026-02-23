@@ -3,7 +3,7 @@ import type { JSX } from "react";
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
+import InfoBox from "@/components/primitives/InfoBox";
 
 /**
  * This component renders the "Parameters" section of the Vegan Ipsum JSON API documentation.
@@ -93,16 +93,10 @@ export default function Parameters(): JSX.Element {
 						</table>
 					</div>
 
-					<div className="bg-primary-muted border-primary/40 text-primary-dark flex items-start gap-3 rounded-2xl border px-5 py-4">
-						<span className="flex-shrink-0 text-2xl">
-							<Icon name="lightBulb" />
-						</span>
-						<p>
-							<strong>Tip:</strong> Use <code>format=html</code> when injecting
-							content directly into web pages to preserve paragraph and sentence
-							structure without extra processing.
-						</p>
-					</div>
+					<InfoBox>
+						Use <code>format=html</code> when injecting content directly into web pages
+						to preserve paragraph and sentence structure without extra processing.
+					</InfoBox>
 				</SectionHeader>
 			</Container>
 		</Section>

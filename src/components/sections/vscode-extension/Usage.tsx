@@ -3,7 +3,7 @@ import type { JSX } from "react";
 import SectionHeader from "@/components/composites/SectionHeader";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
+import InfoBox from "@/components/primitives/InfoBox";
 
 /**
  * This component renders the usage section for the VS Code Extension page.
@@ -74,16 +74,10 @@ export default function Usage(): JSX.Element {
 						))}
 					</div>
 
-					<div className="bg-primary-muted border-primary/40 text-primary-dark flex items-start gap-3 rounded-2xl border px-5 py-4">
-						<span className="flex-shrink-0 text-2xl">
-							<Icon name="lightBulb" />
-						</span>
-						<p>
-							<strong>Pro Tip:</strong> You can use this in any text-based file type
-							(HTML, Markdown, JSON, JavaScript), or even plain text, making it
-							versatile for many workflows.
-						</p>
-					</div>
+					<InfoBox>
+						You can use this in any text-based file type (HTML, Markdown, JSON,
+						JavaScript), or even plain text, making it versatile for many workflows.
+					</InfoBox>
 				</SectionHeader>
 			</Container>
 		</Section>
