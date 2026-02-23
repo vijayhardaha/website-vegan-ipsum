@@ -63,7 +63,7 @@ export default function IpsumGenerator(): JSX.Element {
 	 * @returns {string} The summary message.
 	 */
 	const getOutputSummary = (text: string): string =>
-		`Generated ${calculateParagraphs(text)} paragraphs, ${calculateWords(text)} words, ${calculateBytes(text)} bytes of text.`;
+		`${calculateParagraphs(text)} paragraphs • ${calculateWords(text)} words • ${calculateBytes(text)} bytes`;
 
 	return (
 		<Section id="generate-vegan-ipsum" aria-label="Online Vegan Ipsum Generator Tool">
@@ -83,7 +83,7 @@ export default function IpsumGenerator(): JSX.Element {
 						and ethical.
 					</p>
 
-					<div className="border-border mt-8 rounded-3xl border bg-white p-5 md:p-7">
+					<div className="border-border mt-8 rounded-3xl border bg-white p-6 md:p-8">
 						{/* Generator Form */}
 						<IpsumForm setOutput={setOutput} />
 
@@ -92,10 +92,10 @@ export default function IpsumGenerator(): JSX.Element {
 							<div className="mt-8 space-y-4" data-nosnippet>
 								<div className="flex items-start justify-between gap-12">
 									<div className="space-y-0.5">
-										<h2 id="generated-text" className="text-xl font-bold">
-											Generated Text:
+										<h2 id="output" className="mb-1 text-xl font-bold">
+											Output:
 										</h2>
-										<p className="text-muted-foreground max-w-[220px] text-sm sm:max-w-lg">
+										<p className="text-muted-foreground text-xs font-semibold">
 											{getOutputSummary(output)}
 										</p>
 									</div>
@@ -104,6 +104,7 @@ export default function IpsumGenerator(): JSX.Element {
 											size="sm"
 											variant="secondary"
 											onClick={handleCopyToClipboard}
+											className="min-w-[80px]"
 											aria-label={
 												copied
 													? "Text copied to clipboard"
