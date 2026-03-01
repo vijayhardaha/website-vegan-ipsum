@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { SubmitEvent, useCallback, useEffect, useRef, useState } from "react";
 import type { JSX } from "react";
 
 import Button from "@/components/primitives/Button";
@@ -16,47 +16,83 @@ interface IpsumFormProps {
 }
 
 /**
+ * Type definition for the different types of units that can be generated (paragraphs, sentences, or words).
+ */
+type LoremType = "paragraphs" | "sentences" | "words";
+
+/**
  * IpsumForm component for generating vegan ipsum text based on user input.
  *
  * @param {IpsumFormProps} props - The props for the component, including a function to set the generated output.
  * @returns {JSX.Element} The rendered component.
  */
 export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
-	const [selectedType, setSelectedType] = useState<"paragraphs" | "sentences" | "words">(
-		"paragraphs"
-	);
+	const [selectedType, setSelectedType] = useState<LoremType>("paragraphs");
 	const [amount, setAmount] = useState<string>("3");
 	const [loading, setLoading] = useState<boolean>(false);
+
+	// Ref to store the AbortController across renders
+	const abortControllerRef = useRef<AbortController | null>(null);
 
 	/**
 	 * Handles the generation of vegan ipsum text by making an API call.
 	 * Updates the output or sets an error message in case of failure.
 	 */
-	const handleGenerate = async (): Promise<void> => {
-		setLoading(true); // Set loading state
-		try {
-			const response = await fetch(
-				`/api/?count=${Number(amount)}&units=${selectedType}&format=plain`
-			);
-
-			if (!response.ok) {
-				throw new Error("Failed to generate text");
+	const handleGenerate = useCallback(
+		async (type: LoremType, amount: string): Promise<void> => {
+			if (abortControllerRef.current) {
+				abortControllerRef.current.abort(); // Abort any ongoing request
 			}
 
-			const data: { text: string } = await response.json();
+			const controller = new AbortController();
+			abortControllerRef.current = controller;
+			const signal = controller.signal;
 
-			setOutput(data.text);
-		} catch (error) {
-			console.error(error);
-			const errorMessage = "Error generating text. Please try again.";
-			setOutput(errorMessage);
-		} finally {
-			setLoading(false);
-		}
-	};
+			setLoading(true); // Set loading state
+
+			try {
+				const response = await fetch(
+					`/api?count=${Number(amount)}&units=${type}&format=plain`,
+					{ signal }
+				);
+
+				if (!response.ok) {
+					throw new Error("Failed to generate text");
+				}
+
+				const data: { text: string } = await response.json();
+
+				// Only update state if this specific request wasn't aborted
+				if (!signal.aborted) {
+					setOutput(data.text);
+				}
+			} catch (error) {
+				if (error instanceof Error && error.name === "AbortError") {
+					console.log("Request successfully stopped by user");
+					setOutput("Request cancelled."); // Optional: Show cancellation message
+					return;
+				}
+
+				console.error(error);
+				setOutput("Error generating text. Please try again.");
+			} finally {
+				setLoading(false);
+			}
+		},
+		[setOutput, setLoading]
+	);
 
 	useEffect(() => {
-		handleGenerate(); // Generate text on initial load
+		// Call once on mount to generate initial ipsum.
+		void handleGenerate(selectedType, amount);
+
+		// 6. CLEANUP FUNCTION
+		// This runs when the component unmounts.
+		return () => {
+			abortControllerRef.current?.abort(); // Abort any ongoing request when the component unmounts
+			abortControllerRef.current = null; // Clear the ref to prevent memory leaks
+			console.log("Component unmounted, ongoing request aborted if any.");
+		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
@@ -65,9 +101,9 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
 	 * Prevents default behavior and triggers the text generation process.
 	 * @param event - The form submission event
 	 */
-	const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
+	const handleSubmit = (event: SubmitEvent<HTMLFormElement>): void => {
 		event.preventDefault();
-		handleGenerate();
+		handleGenerate(selectedType, amount);
 	};
 
 	return (
