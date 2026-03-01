@@ -11,7 +11,8 @@
 		"postbuild": "next-sitemap",
 		"preindexnow": "next-sitemap",
 		"indexnow": "node ./scripts/indexnow.mjs",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"@next/third-parties": "^16.1.6",
