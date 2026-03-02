@@ -15,12 +15,12 @@ export default function Hero(): JSX.Element {
 	return (
 		<section
 			id="hero"
-			className="from-background via-secondary-muted/15 to-primary-100/60 relative flex items-center justify-center bg-gradient-to-br py-24 text-center md:min-h-[calc(100vh-68px)]"
+			className="from-background via-secondary-muted/15 to-primary-100/60 relative flex items-center justify-center bg-linear-to-br py-24 text-center md:min-h-[calc(100vh-68px)]"
 			aria-label="Section introducing the Vegan Ipsum Generator with a headline, description, and call-to-action buttons"
 		>
-			<div className="pointer-events-none absolute top-[-100px] right-[-100px] h-[500px] w-[500px] rounded-full bg-[#d4edcc] opacity-64 blur-[60px]"></div>
-			<div className="pointer-events-none absolute top-[30%] left-[10%] h-[300px] w-[300px] rounded-full bg-[#7bbf6a] opacity-36 blur-[60px]"></div>
-			<div className="pointer-events-none absolute bottom-[-80px] left-[-80px] h-[350px] w-[350px] rounded-full bg-[#c8e6b8] opacity-36 blur-[60px]"></div>
+			<div className="pointer-events-none absolute -top-25 -right-25 h-125 w-125 rounded-full bg-[#d4edcc] opacity-64 blur-[60px]"></div>
+			<div className="pointer-events-none absolute top-[30%] left-[10%] h-75 w-75 rounded-full bg-[#7bbf6a] opacity-36 blur-[60px]"></div>
+			<div className="pointer-events-none absolute -bottom-20 -left-20 h-87.5 w-87.5 rounded-full bg-[#c8e6b8] opacity-36 blur-[60px]"></div>
 			<Container>
 				<PageTags
 					tags={[

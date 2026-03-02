@@ -37,7 +37,7 @@ export default function Installation(): JSX.Element {
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
 						<div className="border-border rounded-2xl border bg-white p-6 md:p-8">
 							<div className="mb-6 flex items-center gap-3">
-								<div className="border-border bg-secondary-muted/50 text-secondary flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border text-2xl">
+								<div className="border-border bg-secondary-muted/50 text-secondary flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border text-2xl">
 									<Icon name="search" />
 								</div>
 								<div>
@@ -64,7 +64,7 @@ export default function Installation(): JSX.Element {
 									<>Reload VSCode if prompted</>,
 								].map((step, index) => (
 									<li key={index} className="flex items-baseline gap-3">
-										<span className="bg-secondary-muted text-secondary-dark inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-semibold">
+										<span className="bg-secondary-muted text-secondary-dark inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">
 											{index + 1}
 										</span>
 										<span>{step}</span>
@@ -73,9 +73,9 @@ export default function Installation(): JSX.Element {
 							</ol>
 						</div>
 
-						<div className="border-border from-secondary-100 to-secondary-200 rounded-3xl border bg-gradient-to-br p-8">
+						<div className="border-border from-secondary-100 to-secondary-200 rounded-3xl border bg-linear-to-br p-8">
 							<div className="text-secondary mb-6 flex items-center gap-3">
-								<div className="border-secondary/40 bg-secondary/20 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border text-2xl">
+								<div className="border-secondary/40 bg-secondary/20 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border text-2xl">
 									<Icon name="keyboard" />
 								</div>
 								<div>

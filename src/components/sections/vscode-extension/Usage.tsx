@@ -63,7 +63,7 @@ export default function Usage(): JSX.Element {
 								key={index}
 								className="border-border flex items-start gap-4 rounded-2xl border bg-white p-7 shadow-md"
 							>
-								<div className="bg-primary-muted/80 text-primary-dark border-green-mid mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl text-lg font-bold">
+								<div className="bg-primary-muted/80 text-primary-dark border-green-mid mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-bold">
 									{index + 1}
 								</div>
 								<div>

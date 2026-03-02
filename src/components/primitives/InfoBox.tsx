@@ -30,7 +30,7 @@ export default function InfoBox({ children, className = "" }: InfoBoxProps): JSX
 				className
 			)}
 		>
-			<span className="relative top-0.25 flex-shrink-0 text-xl">
+			<span className="relative top-0.25 shrink-0 text-xl">
 				<Icon name="infoCircle" />
 			</span>
 

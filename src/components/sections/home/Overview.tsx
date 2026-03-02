@@ -49,21 +49,21 @@ export default function Overview(): JSX.Element {
 
 						<ul className="space-y-4">
 							<li className="flex items-start gap-2">
-								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
 									&#10003;
 								</div>
 								<span>Plant-based themes woven into every sentence</span>
 							</li>
 
 							<li className="flex items-start gap-2">
-								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
 									&#10003;
 								</div>
 								<span>Resonates with eco-conscious brands and audiences</span>
 							</li>
 
 							<li className="flex items-start gap-2">
-								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
 									&#10003;
 								</div>
 								<span>
@@ -87,7 +87,7 @@ export default function Overview(): JSX.Element {
 							</li>
 
 							<li className="flex items-start gap-2">
-								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
 									&#10003;
 								</div>
 								<span>Fully open source, free forever</span>

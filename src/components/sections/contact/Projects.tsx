@@ -114,7 +114,7 @@ export default function Projects(): JSX.Element {
 								className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
 							>
 								<div className="flex items-start gap-4">
-									<div className="bg-primary-muted text-primary inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-3xl text-3xl">
+									<div className="bg-primary-muted text-primary inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
 										<Icon name={card.icon} />
 									</div>
 									<div>

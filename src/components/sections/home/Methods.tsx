@@ -108,7 +108,7 @@ export default function Methods(): JSX.Element {
 								className="border-border relative overflow-hidden rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
 							>
 								<div className="flex items-start gap-4">
-									<div className="bg-primary-muted text-primary mb-5 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-3xl text-3xl">
+									<div className="bg-primary-muted text-primary mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
 										<Icon name={card.icon} />
 									</div>
 									<div>
@@ -124,7 +124,7 @@ export default function Methods(): JSX.Element {
 											scrollOffset={68}
 											className="text-primary relative inline-flex items-center gap-0.5 text-sm font-medium"
 											aria-label={card.ariaLabel}
-											hoverEffect={false}
+											hoverEffect="border"
 										>
 											{card.buttonText}
 											{card?.buttonIcon && <Icon name="arrowRight" />}

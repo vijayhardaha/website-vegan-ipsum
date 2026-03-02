@@ -64,7 +64,7 @@ export default function TechnicalOverview(): JSX.Element {
 								</>,
 							].map((feature, index) => (
 								<li key={index} className="flex items-start gap-2">
-									<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+									<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
 										&#10003;
 									</div>
 									<span>{feature}</span>

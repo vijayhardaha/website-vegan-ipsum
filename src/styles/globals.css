@@ -133,7 +133,7 @@
 	kbd:not([style]),
 	samp:not([style]),
 	pre:not([style]) {
-		@apply bg-secondary-200/50 rounded-sm px-1 py-0.25 font-mono font-medium text-amber-600;
+		@apply bg-secondary-200/50 rounded-sm px-1 py-px font-mono font-medium text-amber-600;
 		font-size: 0.875em;
 	}
 

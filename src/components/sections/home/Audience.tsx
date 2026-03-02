@@ -75,7 +75,7 @@ export default function Audience(): JSX.Element {
 								key={index}
 								className="border-primary-muted/20 bg-primary-muted/10 hover:bg-primary-muted/20 relative flex items-start gap-4 rounded-3xl border p-6 backdrop-blur-md transition-all hover:shadow-lg md:p-8"
 							>
-								<span className="text-primary-foreground mb-4 block flex-shrink-0 text-4xl">
+								<span className="text-primary-foreground mb-4 block shrink-0 text-4xl">
 									<Icon name={card.icon} />
 								</span>
 								<div>

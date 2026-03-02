@@ -16,7 +16,7 @@ export default function CTA(): JSX.Element {
 	return (
 		<Section id="ready-to-get-started">
 			<Container>
-				<div className="from-secondary-100 to-secondary-200 relative overflow-hidden rounded-3xl bg-gradient-to-br p-12 text-center md:p-16">
+				<div className="from-secondary-100 to-secondary-200 relative overflow-hidden rounded-3xl bg-linear-to-br p-12 text-center md:p-16">
 					<div className="relative z-10">
 						<h2 className="text-secondary-solid mb-4 text-3xl md:text-4xl">
 							Ready to Get Started?

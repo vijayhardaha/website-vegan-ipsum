@@ -30,8 +30,8 @@ export default function PageHeader({
 }: PageHeaderProps): JSX.Element {
 	return (
 		<section className="relative py-16 pb-6 md:py-24 md:pb-10">
-			<div className="pointer-events-none absolute top-[-120px] right-[8%] h-[450px] w-[450px] rounded-full bg-[#d4edcc] opacity-36 blur-[80px]"></div>
-			<div className="pointer-events-none absolute bottom-[50px] left-[6%] h-[380px] w-[380px] rounded-full bg-[#c8e6b8] opacity-36 blur-[80px]"></div>
+			<div className="pointer-events-none absolute -top-30 right-[8%] h-112.5 w-112.5 rounded-full bg-[#d4edcc] opacity-36 blur-[80px]"></div>
+			<div className="pointer-events-none absolute bottom-12.5 left-[6%] h-95 w-95 rounded-full bg-[#c8e6b8] opacity-36 blur-[80px]"></div>
 
 			<Container>
 				<div className="relative">
