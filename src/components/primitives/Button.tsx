@@ -32,37 +32,43 @@ type SlotProps = {
  * @param ref - A ref that will be forwarded to the child element.
  * @returns A cloned React element with forwarded props and refs, or null if the child is not a valid React element.
  */
-const Slot = forwardRef<HTMLElement, SlotProps>(({ children, ...props }, ref) => {
-	if (!isValidElement(children)) {
-		return null;
+const Slot = forwardRef<HTMLElement, SlotProps>(
+	({ children, ...props }, ref) => {
+		if (!isValidElement(children)) {
+			return null;
+		}
+
+		// Ensure children.props is always an object before spreading
+		const childProps =
+			children.props && typeof children.props === "object"
+				? children.props
+				: {};
+
+		return cloneElement(children, {
+			...props,
+			...childProps, // Spread props and ensure children.props is valid
+			ref: (childRef: HTMLElement | null) => {
+				if (typeof ref === "function") {
+					ref(childRef);
+				} else if (ref && childRef) {
+					(ref as RefObject<HTMLElement>).current = childRef;
+				}
+
+				// Handle the child's original ref separately
+				const { ref: childOriginalRef } = children as ReactElement & {
+					ref?: Ref<HTMLElement>;
+				};
+				if (typeof childOriginalRef === "function") {
+					childOriginalRef(childRef);
+				} else if (childOriginalRef && childRef) {
+					(childOriginalRef as RefObject<HTMLElement>).current =
+						childRef;
+				}
+			},
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		} as any);
 	}
-
-	// Ensure children.props is always an object before spreading
-	const childProps = children.props && typeof children.props === "object" ? children.props : {};
-
-	return cloneElement(children, {
-		...props,
-		...childProps, // Spread props and ensure children.props is valid
-		ref: (childRef: HTMLElement | null) => {
-			if (typeof ref === "function") {
-				ref(childRef);
-			} else if (ref && childRef) {
-				(ref as RefObject<HTMLElement>).current = childRef;
-			}
-
-			// Handle the child's original ref separately
-			const { ref: childOriginalRef } = children as ReactElement & {
-				ref?: Ref<HTMLElement>;
-			};
-			if (typeof childOriginalRef === "function") {
-				childOriginalRef(childRef);
-			} else if (childOriginalRef && childRef) {
-				(childOriginalRef as RefObject<HTMLElement>).current = childRef;
-			}
-		},
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	} as any);
-});
+);
 
 // Set the display name for the Slot component. This is useful for debugging and React DevTools.
 Slot.displayName = "Slot";
@@ -126,10 +132,7 @@ const buttonVariants = cva(
 				icon: "size-10 p-1",
 			},
 		},
-		defaultVariants: {
-			variant: "primary",
-			size: "md",
-		},
+		defaultVariants: { variant: "primary", size: "md" },
 	}
 );
 
@@ -166,7 +169,14 @@ type ButtonProps = {
  */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 	(
-		{ className, variant = "primary", size = "md", asChild = false, children, ...props },
+		{
+			className,
+			variant = "primary",
+			size = "md",
+			asChild = false,
+			children,
+			...props
+		},
 		ref
 	): JSX.Element => {
 		const Comp = asChild ? Slot : "button";

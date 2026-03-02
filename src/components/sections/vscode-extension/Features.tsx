@@ -34,17 +34,20 @@ const cards: Card[] = [
 	{
 		icon: "fcElectronics",
 		heading: "Command Palette Integration",
-		content: "Simple, command-based interface that integrates naturally with VSCode workflows.",
+		content:
+			"Simple, command-based interface that integrates naturally with VSCode workflows.",
 	},
 	{
 		icon: "fcNook",
 		heading: "Universal File Support",
-		content: "Works in any text-based file format: HTML, CSS, JS, Markdown, JSON, and more.",
+		content:
+			"Works in any text-based file format: HTML, CSS, JS, Markdown, JSON, and more.",
 	},
 	{
 		icon: "fcRun",
 		heading: "Lightweight & Fast",
-		content: "Minimal footprint with no impact on your editor's performance or startup time.",
+		content:
+			"Minimal footprint with no impact on your editor's performance or startup time.",
 	},
 	{
 		icon: "fcReading",
@@ -70,16 +73,18 @@ export default function Features(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Extension <span className="text-primary">Capabilities</span>
+							Extension{" "}
+							<span className="text-primary">Capabilities</span>
 						</>
 					}
 					tagline="Features"
 					icon="award"
 				>
 					<p>
-						The <strong>Vegan Ipsum VS Code Extension</strong> offers a robust set of
-						features designed to streamline your workflow. Here is why it is an
-						essential tool for developers and designers who value efficiency and
+						The <strong>Vegan Ipsum VS Code Extension</strong>{" "}
+						offers a robust set of features designed to streamline
+						your workflow. Here is why it is an essential tool for
+						developers and designers who value efficiency and
 						plant-based inspiration:
 					</p>
 
@@ -95,7 +100,9 @@ export default function Features(): JSX.Element {
 									</span>{" "}
 									{step.heading}
 								</h3>
-								<p className="text-sm leading-relaxed">{step.content}</p>
+								<p className="text-sm leading-relaxed">
+									{step.content}
+								</p>
 							</div>
 						))}
 					</div>

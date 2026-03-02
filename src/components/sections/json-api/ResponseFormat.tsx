@@ -22,7 +22,8 @@ export default function ResponseFormat(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Response <span className="text-primary">Format</span>
+							Response{" "}
+							<span className="text-primary">Format</span>
 						</>
 					}
 					tagline="JSON Output"
@@ -36,9 +37,10 @@ export default function ResponseFormat(): JSX.Element {
 						>
 							JSON
 						</SmartLink>{" "}
-						object containing a single <code>text</code> property. This string holds
-						your generated vegan ipsum content, formatted exactly as requested and ready
-						for immediate integration.
+						object containing a single <code>text</code> property.
+						This string holds your generated vegan ipsum content,
+						formatted exactly as requested and ready for immediate
+						integration.
 					</p>
 
 					<CodeBlock label="JSON Response · 200 OK" language="json">
@@ -48,10 +50,11 @@ export default function ResponseFormat(): JSX.Element {
 					</CodeBlock>
 
 					<p>
-						The response strictly adheres to the parameters defined in your request,
-						including the
-						<code>count</code>, <code>units</code>, and <code>format</code>, ensuring
-						the output fits seamlessly into your application&apos;s layout.
+						The response strictly adheres to the parameters defined
+						in your request, including the
+						<code>count</code>, <code>units</code>, and{" "}
+						<code>format</code>, ensuring the output fits seamlessly
+						into your application&apos;s layout.
 					</p>
 				</SectionHeader>
 			</Container>

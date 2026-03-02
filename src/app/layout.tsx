@@ -47,7 +47,11 @@ export const metadata: Metadata = SITE_METADATA;
  * @param {ReactNode} children - React children elements to be rendered inside the layout.
  * @returns {JSX.Element} The root layout component with global styles and fonts applied.
  */
-export default function RootLayout({ children }: { children: ReactNode }): JSX.Element {
+export default function RootLayout({
+	children,
+}: {
+	children: ReactNode;
+}): JSX.Element {
 	return (
 		<html lang="en">
 			<GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />

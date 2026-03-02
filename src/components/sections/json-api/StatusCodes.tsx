@@ -22,7 +22,8 @@ export default function StatusCodes(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							HTTP Status <span className="text-primary">Codes</span>
+							HTTP Status{" "}
+							<span className="text-primary">Codes</span>
 						</>
 					}
 					tagline="Status Codes"
@@ -36,8 +37,9 @@ export default function StatusCodes(): JSX.Element {
 						>
 							HTTP status codes
 						</SmartLink>{" "}
-						to indicate the result of a request. Below are the most common codes you may
-						encounter when interacting with the endpoint:
+						to indicate the result of a request. Below are the most
+						common codes you may encounter when interacting with the
+						endpoint:
 					</p>
 
 					<ul className="space-y-4">
@@ -87,7 +89,9 @@ export default function StatusCodes(): JSX.Element {
 									<p className="text-primary-solid mb-0.5 text-base font-bold">
 										{code.status}
 									</p>
-									<p className="text-sm leading-relaxed">{code.description}</p>
+									<p className="text-sm leading-relaxed">
+										{code.description}
+									</p>
 								</div>
 							</li>
 						))}

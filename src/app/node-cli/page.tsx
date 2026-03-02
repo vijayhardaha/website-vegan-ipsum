@@ -81,7 +81,11 @@ export default function NodeCliPage(): JSX.Element {
 		<>
 			<JsonLd data={schemaData} />
 
-			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+			<PageHeader
+				title={pageTitle}
+				description={pageDescription}
+				tags={pageTags}
+			/>
 
 			<Introduction />
 

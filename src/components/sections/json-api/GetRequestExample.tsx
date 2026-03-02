@@ -25,17 +25,19 @@ export default function GetRequestExample(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							GET Request <span className="text-primary">Example</span>
+							GET Request{" "}
+							<span className="text-primary">Example</span>
 						</>
 					}
 					tagline="Query Strings"
 					icon="terminal"
 				>
 					<p className="mb-8">
-						When using <code>GET</code> requests, parameters are appended to the URL as
-						query strings. The following examples demonstrate how to fetch specific
-						amounts and formats of plant-based placeholder text using standard tools and
-						libraries.
+						When using <code>GET</code> requests, parameters are
+						appended to the URL as query strings. The following
+						examples demonstrate how to fetch specific amounts and
+						formats of plant-based placeholder text using standard
+						tools and libraries.
 					</p>
 
 					<CodeBlock label="Browser / URL" language="bash">

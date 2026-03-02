@@ -16,7 +16,10 @@ import Container from "@/components/primitives/Container";
  */
 export default function Introduction(): JSX.Element {
 	return (
-		<Section id="what-is-vegan-ipsum" aria-label="Introduction to Vegan Ipsum">
+		<Section
+			id="what-is-vegan-ipsum"
+			aria-label="Introduction to Vegan Ipsum"
+		>
 			<Container>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 					<div className="md:order-2">
@@ -30,16 +33,21 @@ export default function Introduction(): JSX.Element {
 					<SectionHeader
 						heading={
 							<>
-								A Thoughtful <span className="text-primary">Introduction</span>
+								A Thoughtful{" "}
+								<span className="text-primary">
+									Introduction
+								</span>
 							</>
 						}
 						tagline="Identity"
 						icon="idCard"
 					>
 						<p>
-							Vegan Ipsum is a specialized placeholder text generator crafted for
-							developers, designers, marketers, and content creators who prioritize
-							ethical, plant-based, and eco-conscious values in their work.
+							Vegan Ipsum is a specialized placeholder text
+							generator crafted for developers, designers,
+							marketers, and content creators who prioritize
+							ethical, plant-based, and eco-conscious values in
+							their work.
 						</p>
 						<p>
 							Unlike traditional{" "}
@@ -49,17 +57,25 @@ export default function Introduction(): JSX.Element {
 							>
 								Lorem Ipsum
 							</SmartLink>{" "}
-							generators, Vegan Ipsum produces filler text infused with vegan-themed
-							vocabulary and compassionate language. It is perfectly tailored for
-							projects centered around sustainability, animal welfare, and green
-							living.
+							generators, Vegan Ipsum produces filler text infused
+							with vegan-themed vocabulary and compassionate
+							language. It is perfectly tailored for projects
+							centered around sustainability, animal welfare, and
+							green living.
 						</p>
 						<p>
-							Easy to integrate and highly customizable, Vegan Ipsum supports multiple
-							formats and delivery methods, from a web-based interface to{" "}
+							Easy to integrate and highly customizable, Vegan
+							Ipsum supports multiple formats and delivery
+							methods, from a web-based interface to{" "}
 							<SmartLink href="/json-api">REST APIs</SmartLink>,{" "}
-							<SmartLink href="/node-cli">command-line tools</SmartLink>, and{" "}
-							<SmartLink href="/vscode-extension">editor extensions</SmartLink>.
+							<SmartLink href="/node-cli">
+								command-line tools
+							</SmartLink>
+							, and{" "}
+							<SmartLink href="/vscode-extension">
+								editor extensions
+							</SmartLink>
+							.
 						</p>
 					</SectionHeader>
 				</div>

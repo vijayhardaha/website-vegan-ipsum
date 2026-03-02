@@ -38,9 +38,9 @@ export default function Hero(): JSX.Element {
 				</h1>
 
 				<p className="mx-auto mb-9 max-w-2xl text-lg leading-relaxed">
-					Generate cruelty-free, plant-based placeholder text for your design and
-					development projects. The ethical alternative to standard filler text for
-					compassionate creators.
+					Generate cruelty-free, plant-based placeholder text for your
+					design and development projects. The ethical alternative to
+					standard filler text for compassionate creators.
 				</p>
 
 				<div className="flex flex-wrap justify-center gap-3.5">
@@ -51,7 +51,10 @@ export default function Hero(): JSX.Element {
 						size="xl"
 						className="hover:no-underline"
 					>
-						<SmartLink href="#generate-vegan-ipsum" scrollOffset={68}>
+						<SmartLink
+							href="#generate-vegan-ipsum"
+							scrollOffset={68}
+						>
 							Generate Ipsum
 						</SmartLink>
 					</Button>

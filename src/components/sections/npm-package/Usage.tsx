@@ -28,7 +28,8 @@ export default function Usage(): JSX.Element {
 					icon="code"
 				>
 					<p>
-						After installation, you can import <code>vegan-ipsum</code> into your{" "}
+						After installation, you can import{" "}
+						<code>vegan-ipsum</code> into your{" "}
 						<SmartLink
 							href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 							aria-label="Learn more about JavaScript"
@@ -42,30 +43,35 @@ export default function Usage(): JSX.Element {
 						>
 							TypeScript
 						</SmartLink>{" "}
-						project to generate plant-based placeholder text programmatically.
+						project to generate plant-based placeholder text
+						programmatically.
 					</p>
 
 					<p>The package supports two usage styles:</p>
 
 					<ul className="list-disc space-y-2 pl-8">
 						<li>
-							<strong>Class-based API</strong>: ideal when you need structured,
-							reusable configuration.
+							<strong>Class-based API</strong>: ideal when you
+							need structured, reusable configuration.
 						</li>
 						<li>
-							<strong>Functional API</strong>: perfect for quick, inline text
-							generation.
+							<strong>Functional API</strong>: perfect for quick,
+							inline text generation.
 						</li>
 					</ul>
 
 					<h3 className="mt-8 mb-2 text-lg">Class-Based Usage:</h3>
 					<p>
-						Import the <code>VeganIpsum</code> class and create an instance with
-						configuration options. This gives you fine-grained control over sentence
-						length, paragraph structure, and output style.
+						Import the <code>VeganIpsum</code> class and create an
+						instance with configuration options. This gives you
+						fine-grained control over sentence length, paragraph
+						structure, and output style.
 					</p>
 
-					<CodeBlock label="Javascript - Class-Based Usage" language="javascript">
+					<CodeBlock
+						label="Javascript - Class-Based Usage"
+						language="javascript"
+					>
 						{`import { VeganIpsum } from "vegan-ipsum";
 
 const vegan = new VeganIpsum({
@@ -84,17 +90,22 @@ console.log(vegan.generateParagraphs(7));`}
 					</CodeBlock>
 
 					<p>
-						Use this approach when you need consistent formatting across multiple calls
-						or want full control over how the text is structured.
+						Use this approach when you need consistent formatting
+						across multiple calls or want full control over how the
+						text is structured.
 					</p>
 
 					<h3 className="mt-8 mb-2 text-lg">Functional Usage:</h3>
 					<p>
-						For quick and simple use cases, call the default exported function. It
-						generates text immediately and accepts an options object for customization.
+						For quick and simple use cases, call the default
+						exported function. It generates text immediately and
+						accepts an options object for customization.
 					</p>
 
-					<CodeBlock label="Javascript - Functional Usage" language="javascript">
+					<CodeBlock
+						label="Javascript - Functional Usage"
+						language="javascript"
+					>
 						{`import { VeganIpsum } from "vegan-ipsum";
 
 // Generates one sentence by default
@@ -116,22 +127,26 @@ console.log(customText);`}
 					</CodeBlock>
 
 					<p>
-						This form is best for one-off calls, CLI usage, or situations where you
-						don&apos;t need to maintain a reusable instance.
+						This form is best for one-off calls, CLI usage, or
+						situations where you don&apos;t need to maintain a
+						reusable instance.
 					</p>
 
-					<h3 className="mt-8 mb-2 text-lg">Resources & Documentation</h3>
+					<h3 className="mt-8 mb-2 text-lg">
+						Resources & Documentation
+					</h3>
 
 					<p>
-						For comprehensive API documentation and advanced configuration options,
-						visit the official{" "}
+						For comprehensive API documentation and advanced
+						configuration options, visit the official{" "}
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
 							aria-label="View vegan-ipsum package details on npm"
 						>
 							vegan-ipsum npm package page
 						</SmartLink>
-						. If you are new to open source, we recommend reading the{" "}
+						. If you are new to open source, we recommend reading
+						the{" "}
 						<SmartLink
 							href="https://opensource.guide/how-to-contribute/"
 							aria-label="Learn about contributing to open source projects"
@@ -149,8 +164,8 @@ console.log(customText);`}
 						>
 							GitHub repository
 						</SmartLink>{" "}
-						to inspect the source code. If you encounter any bugs or have suggestions
-						for improvements, please{" "}
+						to inspect the source code. If you encounter any bugs or
+						have suggestions for improvements, please{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/node-vegan-ipsum/issues/new"
 							aria-label="Report an issue or bug"

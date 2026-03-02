@@ -64,9 +64,10 @@ export default function Audience(): JSX.Element {
 					taglineClassName="text-primary-muted/70"
 				>
 					<p>
-						Vegan Ipsum is ideal for designers, developers, and content creators who
-						want their work to reflect ethical values. Build your projects with
-						placeholder text that aligns with a sustainable and compassionate lifestyle.
+						Vegan Ipsum is ideal for designers, developers, and
+						content creators who want their work to reflect ethical
+						values. Build your projects with placeholder text that
+						aligns with a sustainable and compassionate lifestyle.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -82,7 +83,9 @@ export default function Audience(): JSX.Element {
 									<h3 className="text-primary-foreground mb-2 text-lg font-bold">
 										{card.title}
 									</h3>
-									<p className="text-sm leading-relaxed">{card.text}</p>
+									<p className="text-sm leading-relaxed">
+										{card.text}
+									</p>
 								</div>
 							</div>
 						))}

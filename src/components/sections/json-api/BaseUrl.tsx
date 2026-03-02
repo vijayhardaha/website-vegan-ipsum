@@ -33,8 +33,8 @@ export default function BaseUrl(): JSX.Element {
 					icon="link"
 				>
 					<p className="mb-8">
-						All API endpoints are relative to the following base URL. We strongly
-						recommend using{" "}
+						All API endpoints are relative to the following base
+						URL. We strongly recommend using{" "}
 						<SmartLink
 							href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security"
 							aria-label="Learn about HTTPS and Transport Layer Security"

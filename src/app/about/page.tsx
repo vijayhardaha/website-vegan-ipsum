@@ -16,7 +16,8 @@ import {
 import { buildMetadata } from "@/utils/meta";
 import { generateMasterSchema } from "@/utils/schema";
 
-const title = "About Vegan Ipsum - Mission Behind the Ethical Placeholder Generator";
+const title =
+	"About Vegan Ipsum - Mission Behind the Ethical Placeholder Generator";
 const description =
 	"Discover the story of Vegan Ipsum. Learn why we created a plant-based, cruelty-free alternative to traditional Lorem Ipsum for conscious designers and developers.";
 
@@ -59,7 +60,11 @@ export default function AboutPage(): JSX.Element {
 		<>
 			<JsonLd data={schemaData} />
 
-			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+			<PageHeader
+				title={pageTitle}
+				description={pageDescription}
+				tags={pageTags}
+			/>
 
 			<Introduction />
 

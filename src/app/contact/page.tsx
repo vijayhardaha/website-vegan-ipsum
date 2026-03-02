@@ -14,12 +14,17 @@ const description =
 
 const pageTitle = (
 	<>
-		Connect with the Creator of a <span className="text-primary">Vegan Ipsum Ecosystem</span>
+		Connect with the Creator of a{" "}
+		<span className="text-primary">Vegan Ipsum Ecosystem</span>
 	</>
 );
 const pageDescription =
 	"Vegan Ipsum is a labor of love for the ethical community. Explore our project links, contribute to the source code, or reach out to the author behind the plant-based filler text. Discover how you can get involved in building a more conscious web.";
-const pageTags = ["📦 GitHub Resources", "👤 Follow the Creator", "🤝 Open Source Collaboration"];
+const pageTags = [
+	"📦 GitHub Resources",
+	"👤 Follow the Creator",
+	"🤝 Open Source Collaboration",
+];
 
 // Path for the page, used for metadata and schema generation
 const path = "/contact";
@@ -46,7 +51,11 @@ export default function ContactPage(): JSX.Element {
 		<>
 			<JsonLd data={schemaData} />
 
-			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+			<PageHeader
+				title={pageTitle}
+				description={pageDescription}
+				tags={pageTags}
+			/>
 
 			<Projects />
 

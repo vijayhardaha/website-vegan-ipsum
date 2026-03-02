@@ -47,15 +47,18 @@ const schemaData = generateMasterSchema({
 		type: "SoftwareApplication",
 		applicationCategory: "DeveloperApplication",
 		applicationSubCategory: "IDE Extension",
-		downloadUrl: "https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum",
-		installUrl: "https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum",
+		downloadUrl:
+			"https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum",
+		installUrl:
+			"https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum",
 		requirements: "Visual Studio Code v1.80.0 or higher",
 		price: "0.00",
 		version: "1.0.1",
 		linkSource: true,
 		sourceCodeConfigs: {
 			name: "Vegan Ipsum VS Code Extension Source Code",
-			codeRepository: "https://github.com/vijayhardaha/vscode-vegan-ipsum",
+			codeRepository:
+				"https://github.com/vijayhardaha/vscode-vegan-ipsum",
 			programmingLanguage: "JavaScript",
 		},
 	},
@@ -71,7 +74,11 @@ export default function VSCodeExtensionPage(): JSX.Element {
 		<>
 			<JsonLd data={schemaData} />
 
-			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags}>
+			<PageHeader
+				title={pageTitle}
+				description={pageDescription}
+				tags={pageTags}
+			>
 				<div className="mt-8 flex flex-wrap items-center gap-4">
 					<Button asChild size="lg" variant="primary">
 						<SmartLink

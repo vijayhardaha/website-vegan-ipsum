@@ -4,7 +4,12 @@ import { Metadata } from "next";
 
 import JsonLd from "@/components/composites/JsonLd";
 import PageHeader from "@/components/composites/PageHeader";
-import { Introduction, Installation, Usage, Features } from "@/components/sections/npm-package";
+import {
+	Introduction,
+	Installation,
+	Usage,
+	Features,
+} from "@/components/sections/npm-package";
 import { buildMetadata } from "@/utils/meta";
 import { generateMasterSchema } from "@/utils/schema";
 
@@ -73,7 +78,11 @@ export default function NpmPackagePage(): JSX.Element {
 		<>
 			<JsonLd data={schemaData} />
 
-			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+			<PageHeader
+				title={pageTitle}
+				description={pageDescription}
+				tags={pageTags}
+			/>
 
 			<Introduction />
 

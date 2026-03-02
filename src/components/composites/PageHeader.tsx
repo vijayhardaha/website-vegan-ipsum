@@ -37,9 +37,13 @@ export default function PageHeader({
 				<div className="relative">
 					{tags && <PageTags tags={tags} />}
 
-					<h1 className="text-primary-solid mb-5 text-4xl md:text-6xl">{title}</h1>
+					<h1 className="text-primary-solid mb-5 text-4xl md:text-6xl">
+						{title}
+					</h1>
 
-					<p className="text-lg leading-relaxed md:text-xl">{description}</p>
+					<p className="text-lg leading-relaxed md:text-xl">
+						{description}
+					</p>
 
 					{children}
 				</div>

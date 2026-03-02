@@ -29,7 +29,12 @@ const labelVariants = cva(
  */
 const Label = forwardRef<HTMLLabelElement, LabelProps>(
 	({ className = "", children, htmlFor, ...props }, ref): JSX.Element => (
-		<label ref={ref} className={cn(labelVariants(), className)} htmlFor={htmlFor} {...props}>
+		<label
+			ref={ref}
+			className={cn(labelVariants(), className)}
+			htmlFor={htmlFor}
+			{...props}
+		>
 			{children}
 		</label>
 	)

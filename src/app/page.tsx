@@ -27,11 +27,7 @@ const path = "/";
 export const metadata: Metadata = buildMetadata({ title, description, path });
 
 // Schema.org structured data.
-const schemaData = generateMasterSchema({
-	title,
-	description,
-	path,
-});
+const schemaData = generateMasterSchema({ title, description, path });
 
 /**
  * This component renders the home page.

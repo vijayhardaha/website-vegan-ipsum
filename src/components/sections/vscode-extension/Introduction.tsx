@@ -12,21 +12,28 @@ import Container from "@/components/primitives/Container";
  */
 export default function Introduction(): JSX.Element {
 	return (
-		<Section id="introduction" aria-label="Introduction to the Vegan Ipsum VS Code Extension">
+		<Section
+			id="introduction"
+			aria-label="Introduction to the Vegan Ipsum VS Code Extension"
+		>
 			<Container>
 				<SectionHeader
 					heading={
 						<>
-							Vegan Ipsum <span className="text-primary">VS Code Extension</span>
+							Vegan Ipsum{" "}
+							<span className="text-primary">
+								VS Code Extension
+							</span>
 						</>
 					}
 					tagline="Overview"
 					icon="externalLink"
 				>
 					<p>
-						The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight,
-						productivity-focused tool designed for developers and designers. It enables
-						you to insert vegan-themed placeholder text directly into your{" "}
+						The <strong>Vegan Ipsum VS Code Extension</strong> is a
+						lightweight, productivity-focused tool designed for
+						developers and designers. It enables you to insert
+						vegan-themed placeholder text directly into your{" "}
 						<SmartLink
 							href="https://code.visualstudio.com/"
 							aria-label="Visit Visual Studio Code official website"
@@ -37,10 +44,11 @@ export default function Introduction(): JSX.Element {
 					</p>
 
 					<p>
-						Whether you are prototyping web layouts, building vegan blogs, or creating
-						sustainable product mockups, this extension provides meaningful filler
-						content instantly. It serves as a cruelty-free alternative to standard dummy
-						text generators, right inside your{" "}
+						Whether you are prototyping web layouts, building vegan
+						blogs, or creating sustainable product mockups, this
+						extension provides meaningful filler content instantly.
+						It serves as a cruelty-free alternative to standard
+						dummy text generators, right inside your{" "}
 						<SmartLink
 							href="https://en.wikipedia.org/wiki/Integrated_development_environment"
 							aria-label="Learn about Integrated Development Environments"
@@ -58,8 +66,8 @@ export default function Introduction(): JSX.Element {
 						>
 							Command Palette
 						</SmartLink>{" "}
-						and supports multiple output formats, such as plain text and HTML, to suit
-						various development requirements.
+						and supports multiple output formats, such as plain text
+						and HTML, to suit various development requirements.
 					</p>
 				</SectionHeader>
 			</Container>

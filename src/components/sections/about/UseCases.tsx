@@ -67,15 +67,17 @@ export default function UseCases(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Explore Real-World <span className="text-primary">Use Cases</span>
+							Explore Real-World{" "}
+							<span className="text-primary">Use Cases</span>
 						</>
 					}
 					tagline="Practicality"
 					icon="laptop"
 				>
 					<p>
-						From design mockups to educational applications, Vegan Ipsum integrates
-						seamlessly into a wide range of ethical and eco-conscious projects.
+						From design mockups to educational applications, Vegan
+						Ipsum integrates seamlessly into a wide range of ethical
+						and eco-conscious projects.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -88,7 +90,9 @@ export default function UseCases(): JSX.Element {
 									<h3 className="text-primary-solid mb-1 text-xl font-bold">
 										{card.title}
 									</h3>
-									<p className="text-sm leading-relaxed">{card.content}</p>
+									<p className="text-sm leading-relaxed">
+										{card.content}
+									</p>
 								</div>
 							</div>
 						))}

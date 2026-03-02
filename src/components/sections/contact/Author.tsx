@@ -71,10 +71,11 @@ export default function Author(): JSX.Element {
 					icon="user"
 				>
 					<p>
-						Connect directly with the creator of Vegan Ipsum to collaborate on new
-						features, provide feedback, or discuss potential partnerships. Whether you
-						are a developer, designer, content creator, or sustainability advocate, all
-						inquiries are welcome.
+						Connect directly with the creator of Vegan Ipsum to
+						collaborate on new features, provide feedback, or
+						discuss potential partnerships. Whether you are a
+						developer, designer, content creator, or sustainability
+						advocate, all inquiries are welcome.
 					</p>
 
 					<div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
@@ -103,9 +104,10 @@ export default function Author(): JSX.Element {
 					</div>
 
 					<p>
-						For business inquiries, collaboration proposals, bug reports, or general
-						feedback, please reach out via the channels above. Your input helps improve
-						the project and ensures Vegan Ipsum remains a valuable resource for the
+						For business inquiries, collaboration proposals, bug
+						reports, or general feedback, please reach out via the
+						channels above. Your input helps improve the project and
+						ensures Vegan Ipsum remains a valuable resource for the
 						ethical design and development community.
 					</p>
 				</SectionHeader>

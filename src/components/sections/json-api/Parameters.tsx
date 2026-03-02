@@ -12,21 +12,26 @@ import InfoBox from "@/components/primitives/InfoBox";
  */
 export default function Parameters(): JSX.Element {
 	return (
-		<Section id="parameters" aria-label="Parameters for customizing Vegan Ipsum output">
+		<Section
+			id="parameters"
+			aria-label="Parameters for customizing Vegan Ipsum output"
+		>
 			<Container>
 				<SectionHeader
 					heading={
 						<>
-							Query <span className="text-primary">Parameters</span>
+							Query{" "}
+							<span className="text-primary">Parameters</span>
 						</>
 					}
 					tagline="Customization"
 					icon="sliders"
 				>
 					<p>
-						Customize the API output using the following request parameters. These
-						options provide full control over the volume, unit type, and format of the
-						generated placeholder text to perfectly fit your UI layout.
+						Customize the API output using the following request
+						parameters. These options provide full control over the
+						volume, unit type, and format of the generated
+						placeholder text to perfectly fit your UI layout.
 					</p>
 
 					<div className="table-container mt-8">
@@ -53,8 +58,9 @@ export default function Parameters(): JSX.Element {
 										<code>3</code>
 									</td>
 									<td>
-										The number of units to generate. Accepts an integer between{" "}
-										<code>1</code> and <code>100</code>.
+										The number of units to generate. Accepts
+										an integer between <code>1</code> and{" "}
+										<code>100</code>.
 									</td>
 								</tr>
 								<tr>
@@ -69,8 +75,9 @@ export default function Parameters(): JSX.Element {
 										<code>paragraphs</code>
 									</td>
 									<td>
-										The type of text unit. Accepted values are{" "}
-										<code>paragraphs</code>, <code>sentences</code>, or{" "}
+										The type of text unit. Accepted values
+										are <code>paragraphs</code>,{" "}
+										<code>sentences</code>, or{" "}
 										<code>words</code>.
 									</td>
 								</tr>
@@ -86,9 +93,10 @@ export default function Parameters(): JSX.Element {
 										<code>plain</code>
 									</td>
 									<td>
-										The output format. Use <code>plain</code> for raw text
-										strings or <code>html</code> to wrap paragraphs in{" "}
-										<code>&lt;p&gt;</code> tags.
+										The output format. Use{" "}
+										<code>plain</code> for raw text strings
+										or <code>html</code> to wrap paragraphs
+										in <code>&lt;p&gt;</code> tags.
 									</td>
 								</tr>
 							</tbody>
@@ -96,8 +104,9 @@ export default function Parameters(): JSX.Element {
 					</div>
 
 					<InfoBox>
-						Use the <code>format=html</code> parameter when injecting content directly
-						into web pages. This preserves the intended paragraph structure without
+						Use the <code>format=html</code> parameter when
+						injecting content directly into web pages. This
+						preserves the intended paragraph structure without
 						requiring additional processing on the client side.
 					</InfoBox>
 				</SectionHeader>

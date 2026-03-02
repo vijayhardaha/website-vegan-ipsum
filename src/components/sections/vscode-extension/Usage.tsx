@@ -13,7 +13,10 @@ import InfoBox from "@/components/primitives/InfoBox";
  */
 export default function Usage(): JSX.Element {
 	return (
-		<Section id="usage" aria-label="Usage instructions for the Vegan Ipsum VS Code Extension">
+		<Section
+			id="usage"
+			aria-label="Usage instructions for the Vegan Ipsum VS Code Extension"
+		>
 			<Container>
 				<SectionHeader
 					heading={
@@ -25,15 +28,17 @@ export default function Usage(): JSX.Element {
 					icon="keyboard"
 				>
 					<p>
-						Once installed, generating vegan-themed placeholder text is an efficient
-						process. You can trigger the generator directly from the{" "}
+						Once installed, generating vegan-themed placeholder text
+						is an efficient process. You can trigger the generator
+						directly from the{" "}
 						<SmartLink
 							href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
 							aria-label="Learn how to use the Command Palette"
 						>
 							Command Palette
 						</SmartLink>{" "}
-						or assign custom keyboard shortcuts for even faster access.
+						or assign custom keyboard shortcuts for even faster
+						access.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -42,28 +47,39 @@ export default function Usage(): JSX.Element {
 								heading: "Open Command Palette",
 								content: (
 									<>
-										Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>{" "}
-										(Win/Linux) or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>{" "}
-										(macOS)
+										Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+
+										<kbd>P</kbd> (Win/Linux) or{" "}
+										<kbd>Cmd</kbd>+<kbd>Shift</kbd>+
+										<kbd>P</kbd> (macOS)
 									</>
 								),
 							},
 							{
 								heading: "Search Vegan Ipsum",
-								content: <>Type to see all available commands for the extension</>,
+								content: (
+									<>
+										Type to see all available commands for
+										the extension
+									</>
+								),
 							},
 							{
 								heading: "Select Command",
 								content: (
 									<>
-										Choose paragraph, sentence, or word command based on your
-										needs
+										Choose paragraph, sentence, or word
+										command based on your needs
 									</>
 								),
 							},
 							{
 								heading: "Text Inserted!",
-								content: <>Vegan ipsum appears at your cursor position instantly</>,
+								content: (
+									<>
+										Vegan ipsum appears at your cursor
+										position instantly
+									</>
+								),
 							},
 						].map((step, index) => (
 							<div
@@ -74,15 +90,20 @@ export default function Usage(): JSX.Element {
 									{index + 1}
 								</div>
 								<div>
-									<h3 className="mb-2 text-lg">{step.heading}</h3>
-									<p className="text-sm leading-relaxed">{step.content}</p>
+									<h3 className="mb-2 text-lg">
+										{step.heading}
+									</h3>
+									<p className="text-sm leading-relaxed">
+										{step.content}
+									</p>
 								</div>
 							</div>
 						))}
 					</div>
 
 					<InfoBox>
-						This extension works across various text-based file types, including{" "}
+						This extension works across various text-based file
+						types, including{" "}
 						<SmartLink
 							href="https://developer.mozilla.org/en-US/docs/Web/HTML"
 							aria-label="Learn more about HTML"
@@ -110,7 +131,8 @@ export default function Usage(): JSX.Element {
 						>
 							JSON
 						</SmartLink>
-						, making it a versatile tool for diverse development workflows.
+						, making it a versatile tool for diverse development
+						workflows.
 					</InfoBox>
 				</SectionHeader>
 			</Container>

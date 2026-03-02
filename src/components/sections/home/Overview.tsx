@@ -36,10 +36,11 @@ export default function Overview(): JSX.Element {
 						icon="questionCircle"
 					>
 						<p>
-							The Vegan Ipsum Generator is a powerful, free tool designed for ethical
-							web designers, developers, and content creators. It produces plant-based
-							placeholder text for projects that prioritize cruelty-free and
-							sustainable values.
+							The Vegan Ipsum Generator is a powerful, free tool
+							designed for ethical web designers, developers, and
+							content creators. It produces plant-based
+							placeholder text for projects that prioritize
+							cruelty-free and sustainable values.
 						</p>
 
 						<p>
@@ -50,9 +51,10 @@ export default function Overview(): JSX.Element {
 							>
 								Lorem Ipsum
 							</SmartLink>{" "}
-							generators, this tool creates vegan-themed filler text that resonates
-							with eco-conscious branding, making it ideal for websites, apps,
-							presentations, and prototypes.
+							generators, this tool creates vegan-themed filler
+							text that resonates with eco-conscious branding,
+							making it ideal for websites, apps, presentations,
+							and prototypes.
 						</p>
 
 						<ul className="space-y-4">
@@ -61,7 +63,8 @@ export default function Overview(): JSX.Element {
 									&#10003;
 								</div>
 								<span>
-									Plant-based vocabulary woven into every generated sentence
+									Plant-based vocabulary woven into every
+									generated sentence
 								</span>
 							</li>
 
@@ -70,7 +73,8 @@ export default function Overview(): JSX.Element {
 									&#10003;
 								</div>
 								<span>
-									Resonates with sustainability-focused brands and audiences
+									Resonates with sustainability-focused brands
+									and audiences
 								</span>
 							</li>
 
@@ -82,7 +86,10 @@ export default function Overview(): JSX.Element {
 									Seamlessly integrates via{" "}
 									<SmartLink href="/json-api">API</SmartLink>,{" "}
 									<SmartLink href="/node-cli">CLI</SmartLink>,{" "}
-									<SmartLink href="/npm-package">NPM Package</SmartLink>, and{" "}
+									<SmartLink href="/npm-package">
+										NPM Package
+									</SmartLink>
+									, and{" "}
 									<SmartLink href="/vscode-extension">
 										VS Code Extension
 									</SmartLink>

@@ -16,8 +16,15 @@ interface ContainerProps {
  * @param {ContainerProps} props - The props for the component.
  * @returns {JSX.Element} The rendered container component.
  */
-export default function Container({ children, className }: ContainerProps): JSX.Element {
+export default function Container({
+	children,
+	className,
+}: ContainerProps): JSX.Element {
 	return (
-		<div className={cn("relative mx-auto max-w-5xl px-4 md:px-6", className)}>{children}</div>
+		<div
+			className={cn("relative mx-auto max-w-5xl px-4 md:px-6", className)}
+		>
+			{children}
+		</div>
 	);
 }

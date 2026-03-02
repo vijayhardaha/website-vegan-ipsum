@@ -89,21 +89,28 @@ const cards: Card[] = [
  */
 export default function Projects(): JSX.Element {
 	return (
-		<Section id="projects" aria-label="Projects and tools related to Vegan Ipsum">
+		<Section
+			id="projects"
+			aria-label="Projects and tools related to Vegan Ipsum"
+		>
 			<Container>
 				<SectionHeader
 					heading={
 						<>
-							Vegan Ipsum <span className="text-primary">Ecosystem/Projects</span>
+							Vegan Ipsum{" "}
+							<span className="text-primary">
+								Ecosystem/Projects
+							</span>
 						</>
 					}
 					tagline="Open Source & Tooling"
 					icon="cube"
 				>
 					<p>
-						Explore the ecosystem of Vegan Ipsum projects that power this ethical,
-						plant-based placeholder text generator. All repositories are actively
-						maintained and open-source, welcoming contributions from developers and
+						Explore the ecosystem of Vegan Ipsum projects that power
+						this ethical, plant-based placeholder text generator.
+						All repositories are actively maintained and
+						open-source, welcoming contributions from developers and
 						designers passionate about ethical technology.
 					</p>
 

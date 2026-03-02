@@ -29,7 +29,11 @@ function readSitemap(filePath) {
 				if (err) return reject(err);
 
 				// Validate XML structure
-				if (!result || !result.urlset || !Array.isArray(result.urlset.url)) {
+				if (
+					!result
+					|| !result.urlset
+					|| !Array.isArray(result.urlset.url)
+				) {
 					return reject(new Error("Invalid sitemap XML structure."));
 				}
 
@@ -87,14 +91,21 @@ async function notifyIndexNow(urls, spinner) {
 
 		if (!res.ok) {
 			const errorText = await res.text().catch(() => "Unknown error");
-			throw new Error(`HTTP ${res.status} ${res.statusText}: ${errorText}`);
+			throw new Error(
+				`HTTP ${res.status} ${res.statusText}: ${errorText}`
+			);
 		}
 
-		spinner.succeed(`Successfully submitted ${urls.length} URL(s) to IndexNow.`);
+		spinner.succeed(
+			`Successfully submitted ${urls.length} URL(s) to IndexNow.`
+		);
 	} catch (err) {
-		const errorMessage = err instanceof Error ? err.message : "Unknown error";
+		const errorMessage =
+			err instanceof Error ? err.message : "Unknown error";
 
-		spinner.fail(`IndexNow submission failed for ${urls.length} URL(s): ${errorMessage}`);
+		spinner.fail(
+			`IndexNow submission failed for ${urls.length} URL(s): ${errorMessage}`
+		);
 	}
 }
 

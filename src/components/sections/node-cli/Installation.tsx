@@ -22,16 +22,18 @@ export default function Installation(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							CLI <span className="text-primary">Installation</span>
+							CLI{" "}
+							<span className="text-primary">Installation</span>
 						</>
 					}
 					tagline="Global Setup"
 					icon="download"
 				>
 					<p className="mb-8">
-						Install <code>vegan-ipsum</code> globally to access the command-line
-						interface from any directory. This ensures that generating plant-based
-						placeholder text is always just a few keystrokes away.
+						Install <code>vegan-ipsum</code> globally to access the
+						command-line interface from any directory. This ensures
+						that generating plant-based placeholder text is always
+						just a few keystrokes away.
 					</p>
 
 					<CodeBlock label="Global Install (npm)" language="bash">
@@ -40,7 +42,10 @@ export default function Installation(): JSX.Element {
 
 					<p>
 						Before proceeding, ensure you have{" "}
-						<SmartLink href="https://nodejs.org/" aria-label="Download Node.js">
+						<SmartLink
+							href="https://nodejs.org/"
+							aria-label="Download Node.js"
+						>
 							Node.js
 						</SmartLink>{" "}
 						and{" "}
@@ -54,8 +59,8 @@ export default function Installation(): JSX.Element {
 					</p>
 
 					<p>
-						After the installation is complete, verify that the package is accessible in
-						your{" "}
+						After the installation is complete, verify that the
+						package is accessible in your{" "}
 						<SmartLink
 							href="https://en.wikipedia.org/wiki/PATH_(variable)"
 							aria-label="Learn about the PATH environment variable"

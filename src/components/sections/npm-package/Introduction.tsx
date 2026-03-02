@@ -21,7 +21,10 @@ export default function Introduction(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Vegan Ipsum <span className="text-primary">JavaScript Library</span>
+							Vegan Ipsum{" "}
+							<span className="text-primary">
+								JavaScript Library
+							</span>
 						</>
 					}
 					tagline="Introduction"
@@ -34,9 +37,9 @@ export default function Introduction(): JSX.Element {
 						>
 							<code>vegan-ipsum</code>
 						</SmartLink>{" "}
-						is a lightweight, zero-dependency JavaScript library for generating unique,
-						vegan-themed placeholder text. It serves as a cruelty-free alternative to
-						traditional{" "}
+						is a lightweight, zero-dependency JavaScript library for
+						generating unique, vegan-themed placeholder text. It
+						serves as a cruelty-free alternative to traditional{" "}
 						<SmartLink
 							href="https://www.lipsum.com/"
 							aria-label="Visit Lorem Ipsum website"
@@ -47,10 +50,11 @@ export default function Introduction(): JSX.Element {
 					</p>
 
 					<p>
-						Designed for developers, designers, and content creators, this package
-						allows you to integrate ethically inspired, plant-based dummy text into your
-						projects. It is an excellent choice for building vegan blogs, sustainability
-						platforms, or{" "}
+						Designed for developers, designers, and content
+						creators, this package allows you to integrate ethically
+						inspired, plant-based dummy text into your projects. It
+						is an excellent choice for building vegan blogs,
+						sustainability platforms, or{" "}
 						<SmartLink
 							href="https://react.dev/"
 							aria-label="Visit React official website"
@@ -61,7 +65,8 @@ export default function Introduction(): JSX.Element {
 					</p>
 
 					<p>
-						The library is environment-agnostic and fully compatible with{" "}
+						The library is environment-agnostic and fully compatible
+						with{" "}
 						<SmartLink
 							href="https://nodejs.org/"
 							aria-label="Visit Node.js official website"

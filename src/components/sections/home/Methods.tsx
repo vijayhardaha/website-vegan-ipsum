@@ -93,10 +93,15 @@ export default function Methods(): JSX.Element {
 			className="bg-secondary-muted"
 		>
 			<Container>
-				<SectionHeader heading="Use It Your Way" tagline="Methods" icon="route">
+				<SectionHeader
+					heading="Use It Your Way"
+					tagline="Methods"
+					icon="route"
+				>
 					<p>
-						Instantly generate plant-based placeholder text tailored to your project
-						requirements. Whether you prefer a simple web interface, a robust{" "}
+						Instantly generate plant-based placeholder text tailored
+						to your project requirements. Whether you prefer a
+						simple web interface, a robust{" "}
 						<SmartLink
 							href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
 							aria-label="Learn about HTTP requests"
@@ -110,7 +115,8 @@ export default function Methods(): JSX.Element {
 						>
 							Visual Studio Code
 						</SmartLink>{" "}
-						Extension, Vegan Ipsum offers a flexible solution for every workflow.
+						Extension, Vegan Ipsum offers a flexible solution for
+						every workflow.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -139,7 +145,9 @@ export default function Methods(): JSX.Element {
 											hoverEffect="border"
 										>
 											{card.buttonText}
-											{card?.buttonIcon && <Icon name="arrowRight" />}
+											{card?.buttonIcon && (
+												<Icon name="arrowRight" />
+											)}
 										</SmartLink>
 									</div>
 								</div>

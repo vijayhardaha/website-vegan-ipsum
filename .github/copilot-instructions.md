@@ -206,7 +206,11 @@ interface ButtonProps {
 	onClick?: () => void;
 }
 
-export function Button({ children, variant = "primary", onClick }: ButtonProps) {
+export function Button({
+	children,
+	variant = "primary",
+	onClick,
+}: ButtonProps) {
 	return (
 		<button
 			className={cn(

@@ -23,7 +23,8 @@ export default function Installation(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Extension <span className="text-primary">Setup Guide</span>
+							Extension{" "}
+							<span className="text-primary">Setup Guide</span>
 						</>
 					}
 					tagline="Installation"
@@ -44,8 +45,9 @@ export default function Installation(): JSX.Element {
 						>
 							Visual Studio Code
 						</SmartLink>{" "}
-						setup in two ways: via the built-in Marketplace search or by using the
-						command-line interface for a quick installation.
+						setup in two ways: via the built-in Marketplace search
+						or by using the command-line interface for a quick
+						installation.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -58,15 +60,20 @@ export default function Installation(): JSX.Element {
 									<h3 className="mb-1 text-lg">
 										Method 1: Extensions Marketplace
 									</h3>
-									<p className="text-sm">Install via the VS Code UI</p>
+									<p className="text-sm">
+										Install via the VS Code UI
+									</p>
 								</div>
 							</div>
 							<ol className="space-y-3 text-sm leading-relaxed">
 								{[
-									<>Open Visual Studio Code on your machine</>,
+									<>
+										Open Visual Studio Code on your machine
+									</>,
 									<>
 										Navigate to Extensions sidebar (
-										<kbd className="kbd">Ctrl+Shift+X</kbd> or{" "}
+										<kbd className="kbd">Ctrl+Shift+X</kbd>{" "}
+										or{" "}
 										<kbd className="kbd">Cmd+Shift+X</kbd>)
 									</>,
 									<>
@@ -77,7 +84,10 @@ export default function Installation(): JSX.Element {
 									</>,
 									<>Reload VS Code if prompted</>,
 								].map((step, index) => (
-									<li key={index} className="flex items-baseline gap-3">
+									<li
+										key={index}
+										className="flex items-baseline gap-3"
+									>
 										<span className="bg-secondary-muted text-secondary-dark inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">
 											{index + 1}
 										</span>
@@ -96,7 +106,9 @@ export default function Installation(): JSX.Element {
 									<h3 className="text-secondary-solid mb-1 text-lg">
 										Method 2: Command Palette
 									</h3>
-									<p className="text-sm">Quick install via command</p>
+									<p className="text-sm">
+										Quick install via command
+									</p>
 								</div>
 							</div>
 
@@ -115,12 +127,15 @@ export default function Installation(): JSX.Element {
 							<div className="rounded-xl border border-slate-700 bg-slate-950 p-5 font-mono text-sm">
 								<div className="text-primary-muted flex items-center gap-2">
 									<span className="text-amber-500">&gt;</span>
-									<span>ext install vijayhardaha.vegan-ipsum</span>
+									<span>
+										ext install vijayhardaha.vegan-ipsum
+									</span>
 								</div>
 							</div>
 
 							<InfoBox className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5">
-								This command triggers installation directly from the{" "}
+								This command triggers installation directly from
+								the{" "}
 								<SmartLink
 									href="https://marketplace.visualstudio.com/"
 									aria-label="Visit the Visual Studio Marketplace"

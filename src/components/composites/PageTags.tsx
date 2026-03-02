@@ -19,7 +19,10 @@ export default function PageTags({
 }): JSX.Element {
 	return (
 		<div
-			className={cn("mb-6 flex flex-wrap items-center gap-3", center ? "justify-center" : "")}
+			className={cn(
+				"mb-6 flex flex-wrap items-center gap-3",
+				center ? "justify-center" : ""
+			)}
 		>
 			{tags.map((tag: string, index: number) => (
 				<span

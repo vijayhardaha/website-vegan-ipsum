@@ -56,7 +56,8 @@ export default function IpsumGenerator(): JSX.Element {
 	 * @param {string} text - The generated output text.
 	 * @returns The byte size of the text.
 	 */
-	const calculateBytes = (text: string): number => new TextEncoder().encode(text).length;
+	const calculateBytes = (text: string): number =>
+		new TextEncoder().encode(text).length;
 
 	/**
 	 * Calculates the summary of the generated output.
@@ -67,20 +68,25 @@ export default function IpsumGenerator(): JSX.Element {
 		`${calculateParagraphs(text)} paragraphs • ${calculateWords(text)} words • ${calculateBytes(text)} bytes`;
 
 	return (
-		<Section id="generate-vegan-ipsum" aria-label="Online Vegan Ipsum Generator Tool">
+		<Section
+			id="generate-vegan-ipsum"
+			aria-label="Online Vegan Ipsum Generator Tool"
+		>
 			<Container>
 				<SectionHeader
 					heading={
 						<>
-							Generate <span className="text-primary">Vegan Ipsum</span>
+							Generate{" "}
+							<span className="text-primary">Vegan Ipsum</span>
 						</>
 					}
 					tagline="Generator"
 					icon="leaf"
 				>
 					<p>
-						Instantly generate custom, plant-based placeholder text for your mockups and
-						prototypes. Choose your preferred length and format to keep your{" "}
+						Instantly generate custom, plant-based placeholder text
+						for your mockups and prototypes. Choose your preferred
+						length and format to keep your{" "}
 						<SmartLink
 							href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
 							aria-label="Learn about HTML for web design"
@@ -99,7 +105,10 @@ export default function IpsumGenerator(): JSX.Element {
 							<div className="mt-8 space-y-4" data-nosnippet>
 								<div className="flex items-start justify-between gap-12">
 									<div className="space-y-0.5">
-										<h2 id="output" className="mb-1 text-xl font-bold">
+										<h2
+											id="output"
+											className="mb-1 text-xl font-bold"
+										>
 											Output:
 										</h2>
 										<p className="text-muted-foreground text-xs font-semibold">
@@ -126,8 +135,8 @@ export default function IpsumGenerator(): JSX.Element {
 								<div
 									className={cn(
 										"bg-input/20 border-border space-y-4 rounded-3xl border p-6",
-										calculateParagraphs(output) > 4 &&
-											"max-h-96 overflow-y-auto"
+										calculateParagraphs(output) > 4
+											&& "max-h-96 overflow-y-auto"
 									)}
 									aria-live="polite"
 									aria-atomic="true"

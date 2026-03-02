@@ -24,7 +24,8 @@ const description =
 
 const pageTitle = (
 	<>
-		Fetch Ethical placeholder text via the <span className="text-primary">Vegan Ipsum API</span>
+		Fetch Ethical placeholder text via the{" "}
+		<span className="text-primary">Vegan Ipsum API</span>
 	</>
 );
 const pageDescription =
@@ -69,7 +70,11 @@ export default function JsonAPIPage(): JSX.Element {
 		<>
 			<JsonLd data={schemaData} />
 
-			<PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+			<PageHeader
+				title={pageTitle}
+				description={pageDescription}
+				tags={pageTags}
+			/>
 
 			<Introduction />
 

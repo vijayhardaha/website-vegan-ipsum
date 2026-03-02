@@ -25,7 +25,8 @@ export const SITE_CONFIG = {
 			linkedin: "https://linkedin.com/in/vijayhardaha",
 			wordpress: "https://profiles.wordpress.org/vijayhardaha/",
 			devto: "https://dev.to/vijayhardaha",
-			stactoverflow: "https://stackoverflow.com/users/11848895/vijay-hardaha",
+			stactoverflow:
+				"https://stackoverflow.com/users/11848895/vijay-hardaha",
 			codewars: "https://www.codewars.com/users/vijayhardaha",
 		},
 	},
@@ -59,7 +60,8 @@ export const SEO_KEYWORDS = [
 /**
  * Google Search Console verification code for the site
  */
-export const GOOGLE_SITE_VERIFICATION = "4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0";
+export const GOOGLE_SITE_VERIFICATION =
+	"4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0";
 export const GOOGLE_ANALYTICS_ID = "G-XR1TK565WJ";
 
 /**
@@ -77,12 +79,14 @@ export const SITE_METADATA: Metadata = {
 	...titleAndDescription,
 	keywords: SEO_KEYWORDS,
 	applicationName: SITE_CONFIG.name,
-	authors: [{ name: SITE_CONFIG.creator.name, url: "https://instagram.com/vegan.vijay" }],
+	authors: [
+		{
+			name: SITE_CONFIG.creator.name,
+			url: "https://instagram.com/vegan.vijay",
+		},
+	],
 	publisher: SITE_CONFIG.creator.name,
-	robots: {
-		index: true,
-		follow: true,
-	},
+	robots: { index: true, follow: true },
 	category: SITE_CONFIG.category,
 	icons: {
 		icon: [
@@ -92,18 +96,10 @@ export const SITE_METADATA: Metadata = {
 		],
 		apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
 	},
-	verification: {
-		google: GOOGLE_SITE_VERIFICATION,
-	},
+	verification: { google: GOOGLE_SITE_VERIFICATION },
 	openGraph: {
 		...titleAndDescription,
-		images: [
-			{
-				url: "/thumbnail.png",
-				width: 512,
-				height: 512,
-			},
-		],
+		images: [{ url: "/thumbnail.png", width: 512, height: 512 }],
 		type: "website",
 		siteName: SITE_CONFIG.name,
 		locale: "en_US",

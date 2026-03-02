@@ -21,7 +21,8 @@ export default function RequestMethods(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Request <span className="text-primary">Methods</span>
+							Request{" "}
+							<span className="text-primary">Methods</span>
 						</>
 					}
 					tagline="HTTP Protocol"
@@ -35,9 +36,10 @@ export default function RequestMethods(): JSX.Element {
 						>
 							HTTP request methods
 						</SmartLink>{" "}
-						to fetch vegan-themed placeholder text. Both <code>GET</code> and{" "}
-						<code>POST</code> requests return the same JSON response structure and
-						accept identical parameters.
+						to fetch vegan-themed placeholder text. Both{" "}
+						<code>GET</code> and <code>POST</code> requests return
+						the same JSON response structure and accept identical
+						parameters.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -49,10 +51,14 @@ export default function RequestMethods(): JSX.Element {
 								<h3 className="text-lg">Query Parameters</h3>
 							</div>
 							<p className="text-sm leading-relaxed">
-								Send parameters as query strings appended to the URL. This method is
-								ideal for quick requests and can be easily tested via a browser
-								address bar or command-line tools like{" "}
-								<SmartLink href="https://curl.se/" aria-label="Visit curl website">
+								Send parameters as query strings appended to the
+								URL. This method is ideal for quick requests and
+								can be easily tested via a browser address bar
+								or command-line tools like{" "}
+								<SmartLink
+									href="https://curl.se/"
+									aria-label="Visit curl website"
+								>
 									cURL
 								</SmartLink>
 								.
@@ -67,9 +73,10 @@ export default function RequestMethods(): JSX.Element {
 								<h3 className="text-lg">JSON Body</h3>
 							</div>
 							<p className="text-sm leading-relaxed">
-								Send parameters as a JSON object in the request body. Use this
-								method for complex queries or when integrating securely within
-								client-server applications.
+								Send parameters as a JSON object in the request
+								body. Use this method for complex queries or
+								when integrating securely within client-server
+								applications.
 							</p>
 						</div>
 					</div>

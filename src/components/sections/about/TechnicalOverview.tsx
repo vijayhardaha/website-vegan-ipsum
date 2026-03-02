@@ -24,15 +24,17 @@ export default function TechnicalOverview(): JSX.Element {
 					<SectionHeader
 						heading={
 							<>
-								Technical <span className="text-primary">Overview</span>
+								Technical{" "}
+								<span className="text-primary">Overview</span>
 							</>
 						}
 						tagline="Architecture"
 						icon="cogs"
 					>
 						<p>
-							Built with modern web standards and best practices to ensure
-							reliability, performance, and long-term maintainability.
+							Built with modern web standards and best practices
+							to ensure reliability, performance, and long-term
+							maintainability.
 						</p>
 						<ul className="space-y-4 text-sm">
 							{[
@@ -47,14 +49,16 @@ export default function TechnicalOverview(): JSX.Element {
 									to ensure code quality and maintainability.
 								</>,
 								<>
-									<strong>Zero external dependencies</strong>, making it
-									lightweight, fast, and easy to audit for security and
-									performance.
+									<strong>Zero external dependencies</strong>,
+									making it lightweight, fast, and easy to
+									audit for security and performance.
 								</>,
 								<>
-									Employs <strong>functional programming</strong> principles to
-									produce predictable and pure functions, improving testability
-									and reliability.
+									Employs{" "}
+									<strong>functional programming</strong>{" "}
+									principles to produce predictable and pure
+									functions, improving testability and
+									reliability.
 								</>,
 								<>
 									Supports both{" "}
@@ -69,20 +73,29 @@ export default function TechnicalOverview(): JSX.Element {
 										href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
 										aria-label="Learn about ECMAScript Modules"
 									>
-										<strong>ECMAScript Modules (ESM)</strong>
+										<strong>
+											ECMAScript Modules (ESM)
+										</strong>
 									</SmartLink>{" "}
-									to maximize compatibility across JavaScript environments.
+									to maximize compatibility across JavaScript
+									environments.
 								</>,
 								<>
-									Actively maintained with <strong>semantic versioning</strong>,
-									ensuring new features and bug fixes are delivered predictably.
+									Actively maintained with{" "}
+									<strong>semantic versioning</strong>,
+									ensuring new features and bug fixes are
+									delivered predictably.
 								</>,
 								<>
-									<strong>Open-source on GitHub</strong>, welcoming community
-									contributions and ensuring transparency in development.
+									<strong>Open-source on GitHub</strong>,
+									welcoming community contributions and
+									ensuring transparency in development.
 								</>,
 							].map((feature, index) => (
-								<li key={index} className="flex items-start gap-2">
+								<li
+									key={index}
+									className="flex items-start gap-2"
+								>
 									<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
 										&#10003;
 									</div>
@@ -99,7 +112,10 @@ export default function TechnicalOverview(): JSX.Element {
 							<div className="space-y-3">
 								{[
 									{ text1: "Language", text2: "TypeScript" },
-									{ text1: "Module Support", text2: "CommonJS + ESM" },
+									{
+										text1: "Module Support",
+										text2: "CommonJS + ESM",
+									},
 									{ text1: "Dependencies", text2: "Zero" },
 								].map((item, index) => (
 									<div

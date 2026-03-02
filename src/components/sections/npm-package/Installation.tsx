@@ -22,7 +22,8 @@ export default function Installation(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Library <span className="text-primary">Installation</span>
+							Library{" "}
+							<span className="text-primary">Installation</span>
 						</>
 					}
 					tagline="Package Management"
@@ -36,8 +37,9 @@ export default function Installation(): JSX.Element {
 						>
 							package manager
 						</SmartLink>
-						. A local installation is recommended for application development, while a
-						global installation allows you to utilize the library as a{" "}
+						. A local installation is recommended for application
+						development, while a global installation allows you to
+						utilize the library as a{" "}
 						<SmartLink
 							href="https://en.wikipedia.org/wiki/Command-line_interface"
 							aria-label="Learn more about command-line interfaces"
@@ -49,7 +51,8 @@ export default function Installation(): JSX.Element {
 
 					<h3 className="mt-8 mb-2 text-lg">Local Installation</h3>
 					<p>
-						Adds <code>vegan-ipsum</code> to your project&apos;s dependencies.
+						Adds <code>vegan-ipsum</code> to your project&apos;s
+						dependencies.
 					</p>
 
 					<CodeBlock label="npm" language="bash">
@@ -66,8 +69,8 @@ export default function Installation(): JSX.Element {
 
 					<h3 className="mt-12 mb-2 text-lg">Global Installation</h3>
 					<p>
-						Installs the package globally so you can use it from the command line
-						anywhere on your system.
+						Installs the package globally so you can use it from the
+						command line anywhere on your system.
 					</p>
 
 					<CodeBlock label="npm (global)" language="bash">

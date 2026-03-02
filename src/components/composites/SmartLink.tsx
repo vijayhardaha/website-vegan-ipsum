@@ -33,7 +33,10 @@ const scrollToElement = (elementId: string): void => {
 /**
  * Props for the SmartLink component
  */
-interface SmartLinkProps extends Omit<ComponentPropsWithoutRef<typeof Link>, "href"> {
+interface SmartLinkProps extends Omit<
+	ComponentPropsWithoutRef<typeof Link>,
+	"href"
+> {
 	/** The destination URL or hash anchor */
 	href: string;
 	/** Optional offset for hash links (useful for fixed headers) */
@@ -66,7 +69,11 @@ export default function SmartLink({
 	const linkType = getLinkType(href);
 
 	// Dev-time accessibility warning for external links without an accessible name
-	if (process.env.NODE_ENV !== "production" && linkType === "external" && !ariaLabel) {
+	if (
+		process.env.NODE_ENV !== "production"
+		&& linkType === "external"
+		&& !ariaLabel
+	) {
 		console.warn(
 			`[SmartLink] External link '${href}' does not have an accessible name (aria-label). Provide an aria-label or visible link text.`
 		);
@@ -84,12 +91,10 @@ export default function SmartLink({
 			const element = document.getElementById(elementId);
 			if (element) {
 				const elementPosition = element.getBoundingClientRect().top;
-				const offsetPosition = elementPosition + window.pageYOffset - scrollOffset;
+				const offsetPosition =
+					elementPosition + window.pageYOffset - scrollOffset;
 
-				window.scrollTo({
-					top: offsetPosition,
-					behavior: "smooth",
-				});
+				window.scrollTo({ top: offsetPosition, behavior: "smooth" });
 			}
 		} else {
 			// Default smooth scroll
@@ -137,7 +142,12 @@ export default function SmartLink({
 		hoverTextClass = "";
 	}
 
-	const linkClasses = [...baseClasses, defaultLinkClasses, ...effectClasses, hoverTextClass];
+	const linkClasses = [
+		...baseClasses,
+		defaultLinkClasses,
+		...effectClasses,
+		hoverTextClass,
+	];
 
 	// Hash link with smooth scroll
 	if (linkType === "hash") {
@@ -162,13 +172,22 @@ export default function SmartLink({
 				href={href}
 				target="_blank"
 				rel="noopener noreferrer"
-				className={cn(linkClasses, "relative inline-flex items-center gap-px", className)}
+				className={cn(
+					linkClasses,
+					"relative inline-flex items-center gap-px",
+					className
+				)}
 				aria-label={ariaLabel}
 				onClick={onClick}
 				{...props}
 			>
 				<span className="leading-tight">{children}</span>
-				{linkLine && <Icon name="arrowOutward" className="relative top-px text-inherit" />}
+				{linkLine && (
+					<Icon
+						name="arrowOutward"
+						className="relative top-px text-inherit"
+					/>
+				)}
 			</Link>
 		);
 	}

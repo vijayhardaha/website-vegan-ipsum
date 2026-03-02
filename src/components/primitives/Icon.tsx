@@ -54,7 +54,15 @@ export default function Icon({
 
 	const numericSize = size ? Number(size) : undefined;
 
-	const sizeClass = numericSize ? sizeClasses[numericSize as keyof typeof sizeClasses] : "";
+	const sizeClass = numericSize
+		? sizeClasses[numericSize as keyof typeof sizeClasses]
+		: "";
 
-	return <Component className={cn(sizeClass, className)} aria-hidden={true} {...props} />;
+	return (
+		<Component
+			className={cn(sizeClass, className)}
+			aria-hidden={true}
+			{...props}
+		/>
+	);
 }

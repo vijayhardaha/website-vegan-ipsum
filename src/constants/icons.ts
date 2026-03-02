@@ -1,4 +1,9 @@
-import { FaXTwitter, FaGithub, FaInstagram, FaBriefcase } from "react-icons/fa6";
+import {
+	FaXTwitter,
+	FaGithub,
+	FaInstagram,
+	FaBriefcase,
+} from "react-icons/fa6";
 import {
 	FcBiomass,
 	FcComboChart,

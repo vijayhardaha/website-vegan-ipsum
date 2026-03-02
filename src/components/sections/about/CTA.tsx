@@ -22,18 +22,27 @@ export default function CTA(): JSX.Element {
 							Ready to Get Started?
 						</h2>
 						<p className="mx-auto mb-8 max-w-xl leading-relaxed">
-							Start using Vegan Ipsum today and bring ethical, plant-based placeholder
-							text to your projects. Choose the integration method that best fits your
+							Start using Vegan Ipsum today and bring ethical,
+							plant-based placeholder text to your projects.
+							Choose the integration method that best fits your
 							development workflow.
 						</p>
 						<div className="flex flex-wrap justify-center gap-3">
 							<Button asChild variant="white" size="md">
-								<SmartLink href="/json-api">Try the API</SmartLink>
+								<SmartLink href="/json-api">
+									Try the API
+								</SmartLink>
 							</Button>
 							<Button asChild variant="secondary" size="md">
-								<SmartLink href="/npm-package">NPM Package</SmartLink>
+								<SmartLink href="/npm-package">
+									NPM Package
+								</SmartLink>
 							</Button>
-							<Button asChild variant="secondary-outline" size="md">
+							<Button
+								asChild
+								variant="secondary-outline"
+								size="md"
+							>
 								<SmartLink href="https://github.com/vijayhardaha/node-vegan-ipsum">
 									View on GitHub
 								</SmartLink>

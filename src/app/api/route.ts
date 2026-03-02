@@ -13,18 +13,26 @@ type LoremFormat = "plain" | "html";
  * @param {LoremFormat} format - The format of the output ('plain' or 'html').
  * @returns {NextResponse} A JSON response containing the generated text.
  */
-function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): NextResponse {
+function generateIpsum(
+	count: number,
+	units: LoremUnit,
+	format: LoremFormat
+): NextResponse {
 	try {
 		if (isNaN(count) || count < 1 || count > 100) {
 			return NextResponse.json(
-				{ error: "Invalid count. Please provide a number between 1 and 100." },
+				{
+					error: "Invalid count. Please provide a number between 1 and 100.",
+				},
 				{ status: 400 }
 			);
 		}
 
 		if (!["paragraphs", "sentences", "words"].includes(units)) {
 			return NextResponse.json(
-				{ error: "Invalid units. Please use 'paragraphs', 'sentences', or 'words'." },
+				{
+					error: "Invalid units. Please use 'paragraphs', 'sentences', or 'words'.",
+				},
 				{ status: 400 }
 			);
 		}
@@ -51,8 +59,10 @@ function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): Ne
 export async function GET(request: Request): Promise<NextResponse> {
 	const { searchParams } = new URL(request.url);
 	const count = parseInt(searchParams.get("count") || "3", 10);
-	const units: LoremUnit = (searchParams.get("units") as LoremUnit) || "paragraphs";
-	const format: LoremFormat = (searchParams.get("format") as LoremFormat) || "plain";
+	const units: LoremUnit =
+		(searchParams.get("units") as LoremUnit) || "paragraphs";
+	const format: LoremFormat =
+		(searchParams.get("format") as LoremFormat) || "plain";
 
 	return generateIpsum(count, units, format);
 }

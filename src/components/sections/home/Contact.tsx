@@ -26,7 +26,9 @@ export default function Contact(): JSX.Element {
 					heading={
 						<>
 							Let&apos;s build something{" "}
-							<span className="text-primary">meaningful together</span>
+							<span className="text-primary">
+								meaningful together
+							</span>
 						</>
 					}
 					tagline="Contact"
@@ -35,10 +37,12 @@ export default function Contact(): JSX.Element {
 					headingClassName="mx-auto max-w-lg"
 				>
 					<p className="mb-8">
-						We are building more than just a tool; we are cultivating a community of
-						conscious creators. Whether you want to contribute code, suggest features,
-						or connect with like-minded builders, your voice matters. Join us in making
-						ethical design the standard, not the exception.
+						We are building more than just a tool; we are
+						cultivating a community of conscious creators. Whether
+						you want to contribute code, suggest features, or
+						connect with like-minded builders, your voice matters.
+						Join us in making ethical design the standard, not the
+						exception.
 					</p>
 
 					<Button

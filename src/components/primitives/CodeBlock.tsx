@@ -146,7 +146,9 @@ export default function CodeBlock({
 	 */
 	const handleCopy = async (text: string): Promise<void> => {
 		const canUseClipboard =
-			typeof navigator !== "undefined" && !!navigator.clipboard && window.isSecureContext;
+			typeof navigator !== "undefined"
+			&& !!navigator.clipboard
+			&& window.isSecureContext;
 
 		// Check if the Clipboard API is available before attempting to copy. If not, log a warning and exit the function.
 		if (!canUseClipboard) {
@@ -172,7 +174,9 @@ export default function CodeBlock({
 	return (
 		<div className="relative overflow-hidden rounded-3xl">
 			<div className="flex items-center justify-between bg-[#243020] px-5 py-2.5">
-				<span className="font-mono text-xs font-semibold text-[#6a9960]">{label}</span>
+				<span className="font-mono text-xs font-semibold text-[#6a9960]">
+					{label}
+				</span>
 
 				<button
 					onClick={() => handleCopy(children)}
@@ -185,7 +189,11 @@ export default function CodeBlock({
 					{copied ? "Copied!" : "Copy"}
 				</button>
 			</div>
-			<SyntaxHighlighter style={prismCustom} className={cn("", className)} {...props}>
+			<SyntaxHighlighter
+				style={prismCustom}
+				className={cn("", className)}
+				{...props}
+			>
 				{children}
 			</SyntaxHighlighter>
 		</div>

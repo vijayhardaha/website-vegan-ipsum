@@ -19,9 +19,16 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  * @param {SectionProps} props - The properties for the Section component, including children and className.
  * @returns {JSX.Element} The rendered component.
  */
-export default function Section({ children, className, ...props }: SectionProps): JSX.Element {
+export default function Section({
+	children,
+	className,
+	...props
+}: SectionProps): JSX.Element {
 	return (
-		<section className={cn("relative py-16 md:py-20", className)} {...props}>
+		<section
+			className={cn("relative py-16 md:py-20", className)}
+			{...props}
+		>
 			{children}
 		</section>
 	);

@@ -2,7 +2,10 @@ import { SITE_CONFIG } from "@/constants/seo";
 import { getCanonicalUrl } from "@/utils/seo";
 
 // Utility types and functions for building Schema.org structured data across the site.
-type AnyObject = Record<string, boolean | number | string | string[] | number | object | object[]>;
+type AnyObject = Record<
+	string,
+	boolean | number | string | string[] | number | object | object[]
+>;
 
 /**
  * Build a Schema.org `Person` entity describing the site creator.
@@ -258,7 +261,9 @@ export function webAppSchema({
 		description: description,
 		url: canonicalUrl,
 		applicationCategory: applicationCategory,
-		...(applicationSubCategory && { applicationSubCategory: applicationSubCategory }),
+		...(applicationSubCategory && {
+			applicationSubCategory: applicationSubCategory,
+		}),
 		operatingSystem: operatingSystem,
 		softwareVersion: version,
 		// Validates if it's free or paid
@@ -428,7 +433,9 @@ interface MasterSchemaOptions {
  * @param {MasterSchemaOptions} options Configuration describing the page.
  * @returns {Array<AnyObject>} An array of schema objects suitable for JSON-LD injection.
  */
-export function generateMasterSchema(options: MasterSchemaOptions): Array<AnyObject> {
+export function generateMasterSchema(
+	options: MasterSchemaOptions
+): Array<AnyObject> {
 	const {
 		title,
 		description,
@@ -451,7 +458,9 @@ export function generateMasterSchema(options: MasterSchemaOptions): Array<AnyObj
 	if (pageType === "AboutPage" || pageType === "ContactPage")
 		mainEntityId = `${rootUrl}#organization`;
 	if (pageType === "Software") {
-		mainEntityId = isApp ? `${canonicalUrl}#app` : `${canonicalUrl}#sourcecode`;
+		mainEntityId = isApp
+			? `${canonicalUrl}#app`
+			: `${canonicalUrl}#sourcecode`;
 	}
 
 	const fullBreadcrumbs = isHome
@@ -480,7 +489,12 @@ export function generateMasterSchema(options: MasterSchemaOptions): Array<AnyObj
 		...(pageType === "Software"
 			? [
 					isApp
-						? webAppSchema({ name: title, description, path, ...softwareConfig })
+						? webAppSchema({
+								name: title,
+								description,
+								path,
+								...softwareConfig,
+							})
 						: softwareSourceCodeSchema({
 								name: title,
 								description,
@@ -490,10 +504,10 @@ export function generateMasterSchema(options: MasterSchemaOptions): Array<AnyObj
 				]
 			: []),
 
-		...(pageType === "Software" &&
-		isApp &&
-		softwareConfig?.type === "SoftwareApplication" &&
-		softwareConfig?.sourceCodeConfigs
+		...(pageType === "Software"
+		&& isApp
+		&& softwareConfig?.type === "SoftwareApplication"
+		&& softwareConfig?.sourceCodeConfigs
 			? [
 					{
 						"@type": "SoftwareSourceCode",

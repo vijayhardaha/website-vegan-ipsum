@@ -13,7 +13,10 @@ import { FOOTER_NAV_LINKS, NavLink } from "@/constants/navlinks";
  */
 export default function Footer(): JSX.Element {
 	return (
-		<footer className="bg-primary-solid text-primary-foreground py-6 pt-12" aria-label="Footer">
+		<footer
+			className="bg-primary-solid text-primary-foreground py-6 pt-12"
+			aria-label="Footer"
+		>
 			<div className="mx-auto max-w-5xl px-4 md:px-6">
 				<div className="space-y-6 text-xs leading-relaxed font-medium">
 					<div className="flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -52,8 +55,8 @@ export default function Footer(): JSX.Element {
 					</div>
 
 					<p className="border-border/30 border-t pt-6 text-center md:text-left">
-						&copy; 2025-{new Date().getFullYear()} Vegan Ipsum. Crafted with compassion
-						by{" "}
+						&copy; 2025-{new Date().getFullYear()} Vegan Ipsum.
+						Crafted with compassion by{" "}
 						<SmartLink
 							href="https://instagram.com/vegan.vijay"
 							aria-label="Visit vijay hardaha's instagram profile"

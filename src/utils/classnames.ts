@@ -15,7 +15,13 @@ import { twMerge } from "tailwind-merge";
  * // -> 'px-4 text-gray-500 md:text-black' (after twMerge resolves conflicts)
  */
 export function cn(
-	...inputs: (string | string[] | boolean | undefined | { [key: string]: boolean })[]
+	...inputs: (
+		| string
+		| string[]
+		| boolean
+		| undefined
+		| { [key: string]: boolean }
+	)[]
 ): string {
 	return twMerge(clsx(inputs));
 }

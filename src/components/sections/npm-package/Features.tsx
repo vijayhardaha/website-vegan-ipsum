@@ -74,15 +74,16 @@ export default function Features(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Why Choose <span className="text-primary">Vegan Ipsum?</span>
+							Why Choose{" "}
+							<span className="text-primary">Vegan Ipsum?</span>
 						</>
 					}
 					tagline="Features"
 					icon="award"
 				>
 					<p>
-						Vegan Ipsum is designed to be simple, fast, and flexible. Whether
-						you&apos;re building web apps,{" "}
+						Vegan Ipsum is designed to be simple, fast, and
+						flexible. Whether you&apos;re building web apps,{" "}
 						<SmartLink
 							href="https://nodejs.org/"
 							aria-label="Visit Node.js official website"
@@ -96,8 +97,8 @@ export default function Features(): JSX.Element {
 						>
 							CLI
 						</SmartLink>{" "}
-						tools, it gives you clean, customizable placeholder text without unnecessary
-						complexity.
+						tools, it gives you clean, customizable placeholder text
+						without unnecessary complexity.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -112,7 +113,9 @@ export default function Features(): JSX.Element {
 									</span>{" "}
 									{feature.heading}
 								</h3>
-								<p className="text-sm leading-relaxed">{feature.content}</p>
+								<p className="text-sm leading-relaxed">
+									{feature.content}
+								</p>
 							</div>
 						))}
 					</div>

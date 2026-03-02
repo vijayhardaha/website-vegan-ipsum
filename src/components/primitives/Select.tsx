@@ -87,7 +87,11 @@ export default function Select({
 		>
 			{options
 				? options.map((opt) => (
-						<option key={opt.value} value={opt.value} disabled={opt.disabled}>
+						<option
+							key={opt.value}
+							value={opt.value}
+							disabled={opt.disabled}
+						>
 							{opt.label}
 						</option>
 					))

@@ -61,7 +61,10 @@ const mergeDeep = <T extends AnyObject>(target: T, source: AnyObject): T => {
 
 			if (Array.isArray(sourceValue)) {
 				output[key] = sourceValue;
-			} else if (isPlainObject(sourceValue) && isPlainObject(targetValue)) {
+			} else if (
+				isPlainObject(sourceValue)
+				&& isPlainObject(targetValue)
+			) {
 				output[key] = mergeDeep(targetValue, sourceValue);
 			} else {
 				output[key] = sourceValue;
@@ -116,16 +119,9 @@ export const buildMetadata = ({
 	const newMetadata = mergeDeep(SITE_METADATA, {
 		...titleAndDescription,
 		metadataBase: new URL(getBaseUrl()),
-		alternates: {
-			canonical: canonical,
-		},
-		openGraph: {
-			...titleAndDescription,
-			url: canonical,
-		},
-		twitter: {
-			...titleAndDescription,
-		},
+		alternates: { canonical: canonical },
+		openGraph: { ...titleAndDescription, url: canonical },
+		twitter: { ...titleAndDescription },
 	});
 
 	return newMetadata;

@@ -12,7 +12,10 @@ import Container from "@/components/primitives/Container";
  */
 export default function Usage(): JSX.Element {
 	return (
-		<Section id="usage" aria-label="Basic usage instructions for the Vegan Ipsum Node CLI">
+		<Section
+			id="usage"
+			aria-label="Basic usage instructions for the Vegan Ipsum Node CLI"
+		>
 			<Container>
 				<SectionHeader
 					heading={
@@ -24,9 +27,9 @@ export default function Usage(): JSX.Element {
 					icon="laptop"
 				>
 					<p className="mb-8">
-						The CLI features an intuitive syntax for rapid text generation. Simply
-						specify the desired quantity followed by the unit type to generate content
-						instantly.
+						The CLI features an intuitive syntax for rapid text
+						generation. Simply specify the desired quantity followed
+						by the unit type to generate content instantly.
 					</p>
 
 					<CodeBlock label="Generate Text Examples" language="bash">
@@ -36,14 +39,16 @@ vegan-ipsum 5 words`}
 					</CodeBlock>
 
 					<p>
-						By default, the tool outputs plain text suitable for terminal display or
-						piping to other files. You can further customize the structure and format
-						using optional command-line flags.
+						By default, the tool outputs plain text suitable for
+						terminal display or piping to other files. You can
+						further customize the structure and format using
+						optional command-line flags.
 					</p>
 
 					<p>
-						The library supports three primary units for generation: <code>words</code>,{" "}
-						<code>sentences</code>, and <code>paragraphs</code>.
+						The library supports three primary units for generation:{" "}
+						<code>words</code>, <code>sentences</code>, and{" "}
+						<code>paragraphs</code>.
 					</p>
 				</SectionHeader>
 			</Container>

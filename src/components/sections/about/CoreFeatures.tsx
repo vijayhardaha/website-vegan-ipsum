@@ -62,7 +62,10 @@ const cards: Card[] = [
  */
 export default function CoreFeatures(): JSX.Element {
 	return (
-		<Section id="core-features" aria-label="Core features and technical details of Vegan Ipsum">
+		<Section
+			id="core-features"
+			aria-label="Core features and technical details of Vegan Ipsum"
+		>
 			<Container>
 				<SectionHeader
 					heading={
@@ -74,12 +77,18 @@ export default function CoreFeatures(): JSX.Element {
 					icon="cube"
 				>
 					<p>
-						Vegan Ipsum offers multiple integration methods designed to fit seamlessly
-						into your development workflow. Explore our suite of plant-based developer
-						tools from a robust <SmartLink href="/json-api">JSON API</SmartLink> and{" "}
-						<SmartLink href="/npm-package">NPM package</SmartLink> to our{" "}
-						<SmartLink href="/vscode-extension">VS Code extension</SmartLink> and choose
-						the solution that best suits your project requirements.
+						Vegan Ipsum offers multiple integration methods designed
+						to fit seamlessly into your development workflow.
+						Explore our suite of plant-based developer tools from a
+						robust <SmartLink href="/json-api">JSON API</SmartLink>{" "}
+						and{" "}
+						<SmartLink href="/npm-package">NPM package</SmartLink>{" "}
+						to our{" "}
+						<SmartLink href="/vscode-extension">
+							VS Code extension
+						</SmartLink>{" "}
+						and choose the solution that best suits your project
+						requirements.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

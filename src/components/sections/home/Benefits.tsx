@@ -24,11 +24,13 @@ export default function Benefits(): JSX.Element {
 					icon="checkCircle"
 				>
 					<p>
-						The Vegan Ipsum Generator provides a purposeful alternative to generic
-						filler text by reflecting ethical, cruelty-free, and sustainable design
-						principles. This tool elevates your projects with plant-based themes and
-						compassionate language that resonates with conscious audiences while
-						maintaining professional readability and clarity.
+						The Vegan Ipsum Generator provides a purposeful
+						alternative to generic filler text by reflecting
+						ethical, cruelty-free, and sustainable design
+						principles. This tool elevates your projects with
+						plant-based themes and compassionate language that
+						resonates with conscious audiences while maintaining
+						professional readability and clarity.
 					</p>
 
 					<h3 className="text-lg">Key Benefits:</h3>

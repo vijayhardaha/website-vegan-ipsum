@@ -24,7 +24,8 @@ export default function PostRequestExample(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							POST Request <span className="text-primary">Example</span>
+							POST Request{" "}
+							<span className="text-primary">Example</span>
 						</>
 					}
 					tagline="JSON Body"
@@ -38,12 +39,16 @@ export default function PostRequestExample(): JSX.Element {
 						>
 							JSON
 						</SmartLink>{" "}
-						object in the request body. This method is ideal for programmatic API calls
-						from backend services or frontend applications where query strings might
-						become cluttered or exceed URL length limits.
+						object in the request body. This method is ideal for
+						programmatic API calls from backend services or frontend
+						applications where query strings might become cluttered
+						or exceed URL length limits.
 					</p>
 
-					<CodeBlock label="cURL" language="bash">{`curl -X POST "${API_BASE_URL}" \\
+					<CodeBlock
+						label="cURL"
+						language="bash"
+					>{`curl -X POST "${API_BASE_URL}" \\
   -H "Content-Type: application/json" \\
   -d '{"count": 5, "units": "sentences", "format": "plain"}'`}</CodeBlock>
 

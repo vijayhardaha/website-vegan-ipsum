@@ -7,4 +7,13 @@ import Methods from "@/components/sections/home/Methods";
 import Overview from "@/components/sections/home/Overview";
 import UseCases from "@/components/sections/home/UseCases";
 
-export { Hero, IpsumGenerator, Methods, Overview, Benefits, Audience, UseCases, Contact };
+export {
+	Hero,
+	IpsumGenerator,
+	Methods,
+	Overview,
+	Benefits,
+	Audience,
+	UseCases,
+	Contact,
+};

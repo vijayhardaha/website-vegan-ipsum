@@ -152,7 +152,9 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
 							{ label: "Words", value: "words" },
 						]}
 						onValueChange={(value) =>
-							setSelectedType(value as "paragraphs" | "sentences" | "words")
+							setSelectedType(
+								value as "paragraphs" | "sentences" | "words"
+							)
 						}
 						aria-label="Select the type of units to generate (paragraphs, sentences, or words)"
 						required

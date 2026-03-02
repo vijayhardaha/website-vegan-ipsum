@@ -31,7 +31,10 @@ export default function Header(): JSX.Element {
 	 */
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
-			if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+			if (
+				menuRef.current
+				&& !menuRef.current.contains(event.target as Node)
+			) {
 				setIsMobileMenuOpen(false);
 			}
 		};
@@ -68,7 +71,11 @@ export default function Header(): JSX.Element {
 		<header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
 			<div className="mx-auto max-w-5xl px-4 md:px-6">
 				<div className="flex items-center justify-between gap-6">
-					<SmartLink href="/" aria-label="Navigate to homepage" hoverEffect="none">
+					<SmartLink
+						href="/"
+						aria-label="Navigate to homepage"
+						hoverEffect="none"
+					>
 						<Image
 							src="/logo.svg"
 							alt="Vegan Ipsum Logo"
@@ -85,8 +92,12 @@ export default function Header(): JSX.Element {
 							variant="primary-outline"
 							className="text-2xl lg:hidden"
 							ref={toggleButtonRef}
-							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-							aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+							onClick={() =>
+								setIsMobileMenuOpen(!isMobileMenuOpen)
+							}
+							aria-label={
+								isMobileMenuOpen ? "Close menu" : "Open menu"
+							}
 							aria-expanded={isMobileMenuOpen}
 							aria-controls="main-menu"
 						>
@@ -114,8 +125,14 @@ export default function Header(): JSX.Element {
 												}
 											)}
 											aria-label={link.label}
-											aria-current={isActive(link.href) ? "page" : undefined}
-											onClick={() => setIsMobileMenuOpen(false)}
+											aria-current={
+												isActive(link.href)
+													? "page"
+													: undefined
+											}
+											onClick={() =>
+												setIsMobileMenuOpen(false)
+											}
 											hoverEffect="border"
 										>
 											{link.label}

@@ -23,7 +23,10 @@ export interface InfoBoxProps {
  * @param {InfoBoxProps} props - Component properties
  * @returns {JSX.Element} - The rendered component
  */
-export default function InfoBox({ children, className = "" }: InfoBoxProps): JSX.Element {
+export default function InfoBox({
+	children,
+	className = "",
+}: InfoBoxProps): JSX.Element {
 	return (
 		<div
 			className={cn(

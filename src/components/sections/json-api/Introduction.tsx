@@ -21,21 +21,25 @@ export default function Introduction(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Vegan Ipsum <span className="text-primary">JSON API</span>
+							Vegan Ipsum{" "}
+							<span className="text-primary">JSON API</span>
 						</>
 					}
 					tagline="Introduction"
 					icon="cloud"
 				>
 					<p>
-						The <strong>Vegan Ipsum JSON API</strong> is a high-performance web service
-						designed to help developers seamlessly integrate vegan-themed placeholder
-						text into their applications, websites, and digital projects.
+						The <strong>Vegan Ipsum JSON API</strong> is a
+						high-performance web service designed to help developers
+						seamlessly integrate vegan-themed placeholder text into
+						their applications, websites, and digital projects.
 					</p>
 					<p>
-						Whether you need multiple paragraphs for blog mockups, a few sentences for
-						UI prototypes, or single words to fill form inputs, this API offers flexible
-						parameters to customize the generated content to your exact requirements.
+						Whether you need multiple paragraphs for blog mockups, a
+						few sentences for UI prototypes, or single words to fill
+						form inputs, this API offers flexible parameters to
+						customize the generated content to your exact
+						requirements.
 					</p>
 					<p>
 						The API returns content in both{" "}
@@ -46,8 +50,8 @@ export default function Introduction(): JSX.Element {
 						<SmartLink href="/json-api#response-format">
 							<code>HTML</code>
 						</SmartLink>{" "}
-						formats, making it ready for immediate insertion into web pages or
-						templates. It supports standard{" "}
+						formats, making it ready for immediate insertion into
+						web pages or templates. It supports standard{" "}
 						<SmartLink href="/json-api#get-request-example">
 							<code>GET</code>
 						</SmartLink>{" "}

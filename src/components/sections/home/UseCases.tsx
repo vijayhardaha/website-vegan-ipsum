@@ -58,9 +58,10 @@ export default function UseCases(): JSX.Element {
 					icon="calendarCheck"
 				>
 					<p>
-						Vegan Ipsum is the ideal filler text for wireframes, mockups, and live
-						prototypes. Use it whenever you need placeholder content that reflects a
-						compassionate and ethical design approach.
+						Vegan Ipsum is the ideal filler text for wireframes,
+						mockups, and live prototypes. Use it whenever you need
+						placeholder content that reflects a compassionate and
+						ethical design approach.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -76,7 +77,9 @@ export default function UseCases(): JSX.Element {
 									<h3 className="text-primary-solid mb-1 text-lg font-bold">
 										{card.title}
 									</h3>
-									<p className="text-sm leading-relaxed">{card.text}</p>
+									<p className="text-sm leading-relaxed">
+										{card.text}
+									</p>
 								</div>
 							</div>
 						))}

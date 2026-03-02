@@ -21,31 +21,34 @@ export default function Introduction(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Vegan Ipsum <span className="text-primary">CLI</span>
+							Vegan Ipsum{" "}
+							<span className="text-primary">CLI</span>
 						</>
 					}
 					tagline="Introduction"
 					icon="terminal"
 				>
 					<p>
-						The <strong>Vegan Ipsum CLI</strong> is a lightweight command-line utility
-						built on{" "}
+						The <strong>Vegan Ipsum CLI</strong> is a lightweight
+						command-line utility built on{" "}
 						<SmartLink
 							href="https://nodejs.org/"
 							aria-label="Visit Node.js official website"
 						>
 							Node.js
 						</SmartLink>
-						. It enables developers and designers to generate vegan-themed placeholder
-						text directly within the terminal , providing a fast, programmatic
-						alternative to graphical generators.
+						. It enables developers and designers to generate
+						vegan-themed placeholder text directly within the
+						terminal , providing a fast, programmatic alternative to
+						graphical generators.
 					</p>
 
 					<p>
-						This tool is perfect for building eco-friendly websites, vegan blogs, or
-						sustainable product prototypes. It eliminates the need for context switching
-						by allowing you to insert ethical, plant-based filler content instantly
-						during development and testing phases.
+						This tool is perfect for building eco-friendly websites,
+						vegan blogs, or sustainable product prototypes. It
+						eliminates the need for context switching by allowing
+						you to insert ethical, plant-based filler content
+						instantly during development and testing phases.
 					</p>
 
 					<p>
@@ -56,9 +59,10 @@ export default function Introduction(): JSX.Element {
 						>
 							continuous integration
 						</SmartLink>{" "}
-						workflows and scripting. Whether you are automating content generation or
-						simply need quick dummy text, it integrates seamlessly into your existing
-						development pipeline.
+						workflows and scripting. Whether you are automating
+						content generation or simply need quick dummy text, it
+						integrates seamlessly into your existing development
+						pipeline.
 					</p>
 				</SectionHeader>
 			</Container>

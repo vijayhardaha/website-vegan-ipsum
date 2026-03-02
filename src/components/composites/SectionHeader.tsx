@@ -50,11 +50,14 @@ export default function SectionHeader({
 						taglineClassName
 					)}
 				>
-					{icon && <Icon name={icon as IconName} size={4} />} {tagline}
+					{icon && <Icon name={icon as IconName} size={4} />}{" "}
+					{tagline}
 				</p>
 			)}
 
-			<h2 className={cn("mb-4 text-3xl md:text-4xl", headingClassName)}>{heading}</h2>
+			<h2 className={cn("mb-4 text-3xl md:text-4xl", headingClassName)}>
+				{heading}
+			</h2>
 
 			<div className="space-y-4 md:space-y-6">{children}</div>
 		</div>

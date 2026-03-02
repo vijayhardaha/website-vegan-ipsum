@@ -20,16 +20,18 @@ export default function Support(): JSX.Element {
 				<SectionHeader
 					heading={
 						<>
-							Support & <span className="text-primary">Feedback</span>
+							Support &{" "}
+							<span className="text-primary">Feedback</span>
 						</>
 					}
 					tagline="Found a Bug?"
 					icon="bug"
 				>
 					<p>
-						As an independently developed extension, user feedback is vital for
-						prioritizing updates and resolving bugs. If you encounter any issues or have
-						suggestions for new features, please help improve the tool by submitting an
+						As an independently developed extension, user feedback
+						is vital for prioritizing updates and resolving bugs. If
+						you encounter any issues or have suggestions for new
+						features, please help improve the tool by submitting an
 						issue on the{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/vscode-vegan-ipsum/issues"
