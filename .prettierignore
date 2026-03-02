@@ -1,4 +1,52 @@
-.git
+# =============================================================================
+# PRETTIER IGNORE RULES
+# =============================================================================
+# Purpose: Excludes generated, dependency, and static asset paths from Prettier
+# to reduce noise and speed up formatting workflows.
+# Docs: https://prettier.io/docs/ignore
+# QUICK TIP:
+#   - Check what Prettier sees: `npx prettier --check .`
+#   - Fix all files: `npx prettier --write .`
+# ==============================================================================
+
+# ==============================================================================
+# 🧱 PROJECT & BUILD ARTIFACTS
+# ==============================================================================
+# We never want to format external dependencies or compiled code
+node_modules/
 .next
-node_modules
+dist/
+coverage/
+assets/
+build
+out
+
+# ==============================================================================
+# 🖼️ STATIC ASSETS & PUBLIC DATA
+# ==============================================================================
+# Public assets (images, fonts, robots.txt) often don't need formatting
 public/
+vendor/
+
+# ==============================================================================
+# ⚙️ SYSTEM & VERSION CONTROL
+# ==============================================================================
+# Let Git manage its own internal metadata
+.git
+.svn
+.hg
+.github/*.yml
+
+# ==============================================================================
+# 📄 MISCELLANEOUS
+# ==============================================================================
+# Ignore lockfiles to prevent manual merge conflicts
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.husky/_
+.husky/*.log
+*.log
+
+# Ignore minified files which are intentionally unreadable
+*.min.*

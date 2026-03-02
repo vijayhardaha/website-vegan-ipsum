@@ -1,38 +1,53 @@
-# Root EditorConfig file to maintain consistent coding style across editors and IDEs
+# ==============================================================================
+# EDITORCONFIG STYLE RULES
+# ==============================================================================
+# Purpose: Standardizes editor behavior (indentation, line endings, whitespace)
+# across local development and CI environments.
+# Docs: https://editorconfig.org/
+# ==============================================================================
+
+# ==========================================
+# PROJECT SCOPE
+# ==========================================
+# Mark this file as the top-level EditorConfig so parent configs are ignored
 root = true
 
-# Default settings for all files
+# ==========================================
+# GLOBAL DEFAULTS
+# ==========================================
 [*]
-# Set character encoding to UTF-8
+# Use UTF-8 encoding for consistent cross-platform text rendering
 charset = utf-8
-# Use LF (Unix-style) for line endings
+# Use Unix-style line endings to avoid platform-specific diffs
 end_of_line = lf
-# Use tabs for indentation
+# Use tabs as the project-wide indentation strategy
 indent_style = tab
-# Set indentation size to 4 tabs
+# Set default indentation width to four
 indent_size = 4
-# Ensure a newline is present at end of files
+# Ensure every file ends with a newline for POSIX compatibility
 insert_final_newline = true
-# Remove trailing whitespace
+# Remove trailing spaces to keep diffs clean
 trim_trailing_whitespace = true
 
-# Override for text files (preserve trailing whitespace)
+# ==========================================
+# TEXT FILE OVERRIDES
+# ==========================================
 [*.txt]
+# Keep trailing spaces in plain text where manual alignment may be intentional
 trim_trailing_whitespace = false
+# Do not force final newline in plain text notes or generated text assets
 insert_final_newline = false
 
-# Override for Markdown, YAML files
+# ==========================================
+# MARKDOWN & YAML OVERRIDES
+# ==========================================
 [*.{md,yml}]
+# Use a narrower indentation width for content-centric files
 indent_size = 2
 
-# Override for JSON files (use tabs but keep indent size as 2)
+# ==========================================
+# JSON OVERRIDES
+# ==========================================
 [*.json]
+# Use effective two-space indentation behavior for JSON editors
 indent_size = 2
-
-# Override for JavaScript, TypeScript, and JSX/TSX files
-[*.{js,mjs,cjs,jsx,ts,tsx}]
-indent_size = 4
-
-# Override for CSS, SCSS files
-[*.{css,scss}]
-indent_size = 4

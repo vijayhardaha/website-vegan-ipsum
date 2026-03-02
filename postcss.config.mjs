@@ -1,7 +1,15 @@
-// PostCSS configuration object
-const config = {
-	plugins: ["@tailwindcss/postcss"], // Specifies the PostCSS plugins to be used, including Tailwind CSS
-};
+/**
+ * ==============================================================================
+ * POSTCSS CONFIGURATION
+ * ==============================================================================
+ * Purpose: Registers PostCSS plugins used by the styling pipeline.
+ * Docs: https://github.com/postcss/postcss/blob/main/docs/config.md
+ * ==============================================================================
+ */
 
-// Export the configuration object for use by PostCSS
+// --- Plugin Pipeline ---
+// Register Tailwind CSS PostCSS integration for utility class processing.
+const config = { plugins: ["@tailwindcss/postcss"] };
+
+// Export configuration for PostCSS consumers.
 export default config;

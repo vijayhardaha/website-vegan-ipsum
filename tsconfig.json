@@ -1,31 +1,61 @@
 {
+	// ==============================================================================
+	// TYPESCRIPT PROJECT CONFIGURATION
+	// ==============================================================================
+	// Purpose: Defines TypeScript compiler behavior, module resolution, and project
+	// inclusion patterns for the Next.js application.
+	// Docs: https://www.typescriptlang.org/tsconfig
+	// ==============================================================================
+
+	// --- Compiler Behavior ---
 	"compilerOptions": {
-		"allowJs": true, // Allow JavaScript files to be compiled.
-		"baseUrl": ".", // Base directory to resolve non-relative module names.
-		"downlevelIteration": true, // Enable full support for iterables in for..of, spread, and destructuring when targeting ES5 or ES3.
-		"esModuleInterop": true, // Emit __importStar and __importDefault helpers for runtime babel ecosystem compatibility and enable --allowSyntheticDefaultImports for typesystem compatibility.
-		"forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
-		"incremental": true, // Enable incremental compilation, which saves information about the project graph from the last compilation to only recompile files that have changed.
-		"isolatedModules": true, // Ensure that each file can be safely transpiled without relying on other imports.
-		"jsx": "react-jsx", // Keep JSX as part of the output to be further consumed by another transform step (e.g., Babel).
-		"lib": ["dom", "dom.iterable"], // Include library files for DOM and DOM iterable features.
-		"module": "esnext", // Specify the module code generation method. "esnext" allows for the latest ECMAScript module features.
-		"moduleResolution": "node", // Use Node.js module resolution strategy.
-		"noEmit": true, // Do not emit output files; only perform type checking.
-		"paths": {
-			"@/*": ["./src/*"] // Define a path alias for the src directory, allowing imports like "@/components/Button" to resolve to "./src/components/Button".
-		},
-		"plugins": [
-			{
-				"name": "next" // Use the Next.js plugin for TypeScript, which provides additional type checking and features specific to Next.js projects.
-			}
-		],
-		"resolveJsonModule": true, // Allow importing JSON files as modules.
-		"skipLibCheck": true, // Skip type checking of declaration files (.d.ts) to speed up compilation.
-		"strict": true, // Enable all strict type-checking options.
-		"target": "ES2024" // Specify the target JavaScript version for emitted code. "ES2024" allows for the latest ECMAScript features.
+		// Allow JavaScript files to participate in type-checking and project graph.
+		"allowJs": true,
+		// Resolve non-relative imports from the repository root.
+		"baseUrl": ".",
+		// Ensure iterable semantics remain correct when transpiling lower targets.
+		"downlevelIteration": true,
+		// Improve CommonJS interop behavior for broader package compatibility.
+		"esModuleInterop": true,
+		// Prevent path casing mismatches across case-sensitive file systems.
+		"forceConsistentCasingInFileNames": true,
+		// Reuse project graph metadata for faster subsequent type-checks.
+		"incremental": true,
+		// Keep each file independently transpilation-safe for toolchain compatibility.
+		"isolatedModules": true,
+		// Use React automatic JSX runtime.
+		"jsx": "react-jsx",
+		// Include DOM and iterable typings for browser runtime APIs.
+		"lib": ["dom", "dom.iterable"],
+		// Emit modern ECMAScript module syntax for bundler optimization.
+		"module": "esnext",
+		// Use Node.js module resolution behavior.
+		"moduleResolution": "node",
+		// Disable JS output; this project relies on Next.js build pipeline.
+		"noEmit": true,
+
+		// --- Import Aliasing ---
+		// Define @/* alias to simplify imports from src.
+		"paths": { "@/*": ["./src/*"] },
+
+		// --- Framework Integration ---
+		// Enable Next.js TypeScript plugin enhancements.
+		"plugins": [{ "name": "next" }],
+
+		// Allow importing JSON content as modules.
+		"resolveJsonModule": true,
+		// Skip .d.ts checking to improve build and editor performance.
+		"skipLibCheck": true,
+		// Enable full strict type-checking mode.
+		"strict": true,
+		// Target modern JavaScript runtime features.
+		"target": "ES2024"
 	},
-	"exclude": ["node_modules"], // Exclude the node_modules directory from compilation.
+
+	// --- Project Scope ---
+	// Exclude dependency directories from project compilation context.
+	"exclude": ["node_modules"],
+	// Include source, configuration, type declarations, and generated Next.js types.
 	"include": [
 		"**/*.{js,jsx,ts,tsx,mjs,cjs}",
 		"*.config.mjs",

@@ -1,9 +1,19 @@
 {
+	// ==============================================================================
+	// JAVASCRIPT LANGUAGE SERVICE CONFIG
+	// ==============================================================================
+	// Purpose: Improves editor intelligence for JavaScript tooling and alias
+	// resolution in this Next.js project.
+	// Docs: https://code.visualstudio.com/docs/languages/jsconfig
+	// ==============================================================================
+
+	// --- Compiler & Editor Intelligence ---
 	"compilerOptions": {
+		// Allow importing JSON files as typed modules in JS tooling.
 		"resolveJsonModule": true,
+		// Use React automatic JSX transform behavior.
 		"jsx": "react-jsx",
-		"paths": {
-			"@/*": ["./src/*"]
-		}
+		// Map @/* imports to the src directory for consistent absolute imports.
+		"paths": { "@/*": ["./src/*"] }
 	}
 }

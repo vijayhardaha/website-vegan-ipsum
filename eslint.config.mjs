@@ -1,3 +1,13 @@
+/**
+ * ==============================================================================
+ * ESLINT FLAT CONFIG
+ * ==============================================================================
+ * Purpose: Defines linting rules and parser behavior for Next.js, React, and
+ * TypeScript to keep code quality and consistency across the repository.
+ * Docs: https://eslint.org/docs/latest/use/configure/configuration-files-new
+ * ==============================================================================
+ */
+
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -16,6 +26,8 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
+	// --- Global Ignore Paths ---
+	// Exclude generated files, build outputs, and environment artifacts.
 	globalIgnores([
 		"**/.next/",
 		"**/.github/",
@@ -29,9 +41,12 @@ export default defineConfig([
 		"**/*.tsbuildinfo",
 	]),
 
+	// --- File Matching Scope ---
+	// Restrict linting to JavaScript and TypeScript source files.
 	{ files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"] },
 
-	// all conflicting ESLint formatting rules before Prettier takes over
+	// --- Framework & Plugin Presets ---
+	// Keep Prettier last so formatting conflicts are disabled correctly.
 	...compat.extends(
 		"next",
 		"next/core-web-vitals",
@@ -43,39 +58,35 @@ export default defineConfig([
 	),
 
 	{
+		// --- Language & Parser Options ---
 		languageOptions: {
 			ecmaVersion: "latest",
 			sourceType: "module",
-			globals: {
-				...globals.browser,
-				...globals.node,
-			},
+			globals: { ...globals.browser, ...globals.node },
 			parser: tsParser,
 			parserOptions: {
-				ecmaFeatures: {
-					jsx: true,
-				},
+				ecmaFeatures: { jsx: true },
 				tsconfigRootDir: __dirname,
 			},
 		},
 
-		settings: {
-			react: {
-				version: "detect",
-			},
-		},
+		// --- Shared Plugin Settings ---
+		settings: { react: { version: "detect" } },
 
+		// --- Project Rule Overrides ---
 		rules: {
+			// React 17+ JSX transform does not require React in scope.
 			"react/react-in-jsx-scope": "off",
+			// Allow SVG and global attributes used by the current project setup.
 			"react/no-unknown-property": [
 				"error",
-				{
-					ignore: ["jsx", "global"],
-				},
+				{ ignore: ["jsx", "global"] },
 			],
 
+			// Surface formatting issues as warnings through ESLint.
 			"prettier/prettier": "warn",
 
+			// Enforce deterministic import grouping and ordering.
 			"import/order": [
 				"error",
 				{
@@ -101,15 +112,13 @@ export default defineConfig([
 						},
 					],
 					pathGroupsExcludedImportTypes: ["react"],
-					alphabetize: {
-						order: "asc",
-						caseInsensitive: true,
-					},
+					alphabetize: { order: "asc", caseInsensitive: true },
 					"newlines-between": "always",
 					warnOnUnassignedImports: true,
 				},
 			],
 
+			// Require cleanup of unused values while allowing underscore-prefixed intent.
 			"@typescript-eslint/no-unused-vars": [
 				"error",
 				{

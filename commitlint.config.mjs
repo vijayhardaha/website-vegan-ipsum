@@ -1,33 +1,28 @@
 /**
- * ###############################################################################
- * _____ ____  __  __ __  __ _____ _______ _      _____ _   _ _______
- * / ____/ __ \|  \/  |  \/  |_   _|__   __| |    |_   _| \ | |__   __|
- * | |   | |  | | \  / | \  / | | |    | |  | |      | | |  \| |  | |
- * | |   | |  | | |\/| | |\/| | | |    | |  | |      | | | . ` |  | |
- * | |___| |__| | |  | | |  | |_| |_   | |  | |____ _| |_| |\  |  | |
- * \_____\____/|_|  |_|_|  |_|_____|  |_|  |______|_____|_| \_|  |_|
- * * GIT COMMIT ENFORCER
- * ###############################################################################
- * PURPOSE:
- * Enforces Conventional Commits (feat:, fix:, chore:) to ensure the
- * project history remains readable and compatible with automated changelogs.
- * ###############################################################################
+ * ==============================================================================
+ * COMMITLINT CONFIGURATION
+ * ==============================================================================
+ * Purpose: Validates commit messages against Conventional Commit rules to keep
+ * history readable and automation-friendly (release notes, changelog tooling).
+ * Docs: https://commitlint.js.org/
+ * ==============================================================================
  */
 
 /** @type {import('@commitlint/types').UserConfig} */
 const config = {
 	// --- Base Ruleset ---
+	// Extend the standard Conventional Commits preset
 	extends: ["@commitlint/config-conventional"],
 
-	// --- Strict Standards ---
+	// --- Commit Message Constraints ---
 	rules: {
-		// Enforce a concise header to keep 'git log --oneline' clean
+		// Keep commit headers concise for readable one-line history output
 		"header-max-length": [2, "always", 50],
 
-		// Ensure the body doesn't wrap awkwardly in terminal views
+		// Keep body lines terminal-friendly and easy to scan in reviews
 		"body-max-line-length": [2, "always", 72],
 
-		// Maintain a clean, lowercase style for the subject line
+		// Enforce lowercase subjects for consistent style across contributors
 		"subject-case": [2, "always", ["lower-case"]],
 	},
 };
