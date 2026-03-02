@@ -35,7 +35,7 @@ export default function Options(): JSX.Element {
 					</p>
 					<ul className="list-disc space-y-2 pl-8">
 						<li>
-							<code>--format html</code> - Wraps the generated output in HTML{" "}
+							<code>--format html</code>: Wraps the generated output in HTML{" "}
 							<SmartLink
 								href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"
 								aria-label="Learn more about the HTML paragraph tag on MDN"
@@ -46,13 +46,13 @@ export default function Options(): JSX.Element {
 						</li>
 
 						<li>
-							<code>--copy</code> - Automatically sends the generated text to your
+							<code>--copy</code>: Automatically sends the generated text to your
 							system clipboard, streamlining your workflow by eliminating manual
 							copying.
 						</li>
 
 						<li>
-							<code>--help</code> - Displays comprehensive usage instructions and a
+							<code>--help</code>: Displays comprehensive usage instructions and a
 							complete list of available commands.
 						</li>
 					</ul>
