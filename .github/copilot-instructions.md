@@ -4,7 +4,7 @@ You are an expert Senior Developer in a Next.js 16 environment. Your role is to 
 
 ## Tech Stack & Versions
 
-- **Framework:** Next.js 16 (tested with ^16.1.6) — App Router
+- **Framework:** Next.js 16 (tested with ^16.1.6) - App Router
 - **Language:** TypeScript (Strict mode enabled, TypeScript ^5)
 - **React:** React 19 (installed version ^19.2.4)
 - **Styling:** Tailwind CSS (v4) with PostCSS integration
@@ -16,10 +16,10 @@ You are an expert Senior Developer in a Next.js 16 environment. Your role is to 
 
 The repository follows a Feature-Sliced Design adapted for the Next.js App Router. Confirmed layout and conventions:
 
-- `app/`: Routing and layouts (App Router) only — pages and route handlers live here.
-- `app/api/` (or `src/app/api/`): API route handlers and route.ts files for HTTP endpoints — keep server-side route handlers here and use `NextResponse`/route handlers for API logic.
+- `app/`: Routing and layouts (App Router) only - pages and route handlers live here.
+- `app/api/` (or `src/app/api/`): API route handlers and route.ts files for HTTP endpoints - keep server-side route handlers here and use `NextResponse`/route handlers for API logic.
 - `src/components/`: Reusable UI primitives and composite components.
-    - `primitives/`: UI primitives (shadcn-style) — avoid editing shared primitives unless necessary.
+    - `primitives/`: UI primitives (shadcn-style) - avoid editing shared primitives unless necessary.
     - `composites/` and `sections/`: Higher-level composed UI and page sections.
     - **Links:** Use the `SmartLink` component for internal and external links to standardize behavior, SEO attributes, and accessibility (e.g., `target`/`rel` handling and `aria` labels).
 - `src/lib/`: Utilities and configuration helpers (e.g., `lib/utils.ts`).
@@ -190,7 +190,7 @@ export async function getPostById(id: string): Promise<BlogPost | null> {
 ## Node / Tooling Versions
 
 - **Node:** Recommend Node 18+ for local/dev; include `.nvmrc` or `engines` in `package.json` if desired.
-- **Package manager:** Project contains a `pnpm-lock.yaml` — prefer `pnpm` for reproducible installs.
+- **Package manager:** Project contains a `pnpm-lock.yaml` - prefer `pnpm` for reproducible installs.
 
 ## Examples
 
