@@ -47,7 +47,7 @@ export default function TechnicalOverview(): JSX.Element {
 									to ensure code quality and maintainability.
 								</>,
 								<>
-									<strong>Zero external dependencies</strong> — making it
+									<strong>Zero external dependencies</strong>, making it
 									lightweight, fast, and easy to audit for security and
 									performance.
 								</>,

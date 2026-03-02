@@ -40,8 +40,8 @@ interface SmartLinkProps extends Omit<ComponentPropsWithoutRef<typeof Link>, "hr
 	scrollOffset?: number;
 	/* Optional prop to control external link icon display */
 	linkLine?: boolean;
-	/* Optional prop to control hover effect style: 'none' | 'border' | 'bg' */
-	hoverEffect?: "none" | "border" | "bg";
+	/* Optional prop to control hover effect style: 'none' | 'border' | 'background' */
+	hoverEffect?: "none" | "border" | "background";
 }
 
 /**
@@ -60,7 +60,7 @@ export default function SmartLink({
 	scrollOffset,
 	onClick = undefined,
 	linkLine = true,
-	hoverEffect = "bg",
+	hoverEffect = "background",
 	...props
 }: SmartLinkProps): JSX.Element {
 	const linkType = getLinkType(href);
@@ -106,7 +106,7 @@ export default function SmartLink({
 	let defaultLinkClasses = "";
 	let hoverTextClass = "";
 
-	if (hoverEffect === "bg") {
+	if (hoverEffect === "background") {
 		// default bottom border plus black overlay filling from bottom to top on hover
 		defaultLinkClasses = "border-b-2 border-current";
 		effectClasses = [
@@ -131,7 +131,7 @@ export default function SmartLink({
 		];
 		hoverTextClass = "";
 	} else {
-		// 'none' — no decorative effect
+		// 'none' - no decorative effect
 		defaultLinkClasses = "";
 		effectClasses = [];
 		hoverTextClass = "";

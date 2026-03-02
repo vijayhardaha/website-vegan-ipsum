@@ -26,7 +26,7 @@ interface Card {
 const cards: Card[] = [
 	{
 		title: "Web Interface",
-		text: "Generate vegan-themed placeholder text instantly in your browser. No installation or setup required—just click and copy.",
+		text: "Generate vegan-themed placeholder text instantly in your browser. No installation or setup required, just click and copy.",
 		icon: "globe",
 		link: "#generate-vegan-ipsum",
 		ariaLabel: "Use the Vegan Ipsum web interface",

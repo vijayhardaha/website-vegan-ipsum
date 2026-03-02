@@ -23,7 +23,7 @@ const cards: Card[] = [
 		icon: "fcFlash",
 		heading: "Instant Generation",
 		content:
-			"Generate placeholder text without leaving your code editor — no context switching required.",
+			"Generate placeholder text without leaving your code editor, no context switching required.",
 	},
 	{
 		icon: "fcTodo",
@@ -39,7 +39,7 @@ const cards: Card[] = [
 	{
 		icon: "fcNook",
 		heading: "Universal File Support",
-		content: "Works in any text-based file format — HTML, CSS, JS, Markdown, JSON, and more.",
+		content: "Works in any text-based file format: HTML, CSS, JS, Markdown, JSON, and more.",
 	},
 	{
 		icon: "fcRun",

@@ -48,11 +48,11 @@ export default function Background(): JSX.Element {
 						for the ethical design community.
 					</p>
 					<p>
-						This gap inspired the creation of Vegan Ipsum — a project designed to
-						provide ethical developers and designers with a cruelty-free alternative
-						that aligns with their values. Since its launch, Vegan Ipsum has evolved
-						into a versatile suite of tools, empowering creators to build sustainable
-						brands with meaningful, value-driven content.
+						This gap inspired the creation of Vegan Ipsum, a project designed to provide
+						ethical developers and designers with a cruelty-free alternative that aligns
+						with their values. Since its launch, Vegan Ipsum has evolved into a
+						versatile suite of tools, empowering creators to build sustainable brands
+						with meaningful, value-driven content.
 					</p>
 				</SectionHeader>
 			</Container>

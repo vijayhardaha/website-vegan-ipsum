@@ -24,7 +24,7 @@ const pageTitle = (
 	</>
 );
 const pageDescription =
-	"Speed up your workflow with the Vegan Ipsum Node CLI. Access cruelty-free, plant-based filler text instantly without ever leaving your shell—perfect for scripting, piping, and rapid prototyping.";
+	"Speed up your workflow with the Vegan Ipsum Node CLI. Access cruelty-free, plant-based filler text instantly without ever leaving your shell, perfect for scripting, piping, and rapid prototyping.";
 const pageTags = [
 	"⚡ Instant Command Access",
 	"🔗 Pipe-Friendly Output",
