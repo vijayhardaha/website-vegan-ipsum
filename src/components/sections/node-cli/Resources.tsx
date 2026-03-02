@@ -96,9 +96,7 @@ export default function Resources(): JSX.Element {
 
 					<p>
 						For programmatic usage, refer to the{" "}
-						<SmartLink href="/npm-package" className="text-primary">
-							Vegan Ipsum NPM Package
-						</SmartLink>{" "}
+						<SmartLink href="/npm-package">Vegan Ipsum NPM Package</SmartLink>{" "}
 						documentation for detailed API references and implementation examples.
 					</p>
 
@@ -106,7 +104,6 @@ export default function Resources(): JSX.Element {
 						You can also visit the{" "}
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
-							className="text-primary"
 							aria-label="View vegan-ipsum package statistics and history on npm"
 						>
 							official npm package page
@@ -119,7 +116,6 @@ export default function Resources(): JSX.Element {
 						To contribute to the project or report issues, please visit the{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/node-vegan-ipsum"
-							className="text-primary"
 							aria-label="Visit the vegan-ipsum GitHub repository"
 						>
 							GitHub repository
