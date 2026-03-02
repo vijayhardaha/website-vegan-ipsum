@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 
@@ -37,10 +38,20 @@ export default function Introduction(): JSX.Element {
 						options to customize the generated content to your exact needs.
 					</p>
 					<p>
-						The API returns content in both plain <code>plain</code> text and{" "}
-						<code>HTML</code> formats, making it easy to insert directly into web pages,
-						emails, or apps without additional formatting. It supports both simple GET
-						requests and more complex POST requests with JSON payloads.
+						The API returns content in both{" "}
+						<SmartLink href="/json-api#response-format">
+							<code>plain</code>
+						</SmartLink>
+						text and{" "}
+						<SmartLink href="/json-api#response-format">
+							<code>HTML</code>
+						</SmartLink>{" "}
+						formats, making it easy to insert directly into web pages, emails, or apps
+						without additional formatting. It supports both simple{" "}
+						<SmartLink href="/json-api#get-request-example">GET requests</SmartLink> and
+						more complex{" "}
+						<SmartLink href="/json-api#post-request-example">POST requests</SmartLink>{" "}
+						with JSON payloads.
 					</p>
 				</SectionHeader>
 			</Container>
