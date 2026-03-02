@@ -3,6 +3,7 @@ import type { JSX } from "react";
 import Image from "next/image";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 
@@ -48,8 +49,10 @@ export default function Introduction(): JSX.Element {
 						</p>
 						<p>
 							Easy to integrate and highly customizable, Vegan Ipsum supports multiple
-							formats and delivery methods — from a web-based interface to REST APIs,
-							command-line tools, and editor extensions.
+							formats and delivery methods — from a web-based interface to{" "}
+							<SmartLink href="/json-api">REST APIs</SmartLink>,{" "}
+							<SmartLink href="/node-cli">command-line tools</SmartLink>, and{" "}
+							<SmartLink href="/vscode-extension">editor extensions</SmartLink>.
 						</p>
 					</SectionHeader>
 				</div>
