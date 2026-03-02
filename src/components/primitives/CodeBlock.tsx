@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import type { JSX, CSSProperties } from "react";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -127,19 +127,12 @@ export default function CodeBlock({
 	...props
 }: CodeBlockProps): JSX.Element {
 	const [copied, setCopied] = useState(false);
-	// Detect clipboard availability on the client only to avoid hydration mismatches.
-	const [canUseClipboard, setCanUseClipboard] = useState(false);
 	const timerRef = useRef<number | null>(null);
 
 	/**
 	 * Cleanup function to clear the timer when the component unmounts to prevent memory leaks.
 	 */
-	useEffect(() => {
-		// Set clipboard availability after mount (client-side).
-		setCanUseClipboard(
-			typeof navigator !== "undefined" && !!navigator.clipboard && window.isSecureContext
-		);
-
+	useLayoutEffect(() => {
 		return () => {
 			if (timerRef.current) {
 				window.clearTimeout(timerRef.current);
@@ -152,6 +145,9 @@ export default function CodeBlock({
 	 * @param text 	- The text content to be copied to the clipboard.
 	 */
 	const handleCopy = async (text: string): Promise<void> => {
+		const canUseClipboard =
+			typeof navigator !== "undefined" && !!navigator.clipboard && window.isSecureContext;
+
 		// Check if the Clipboard API is available before attempting to copy. If not, log a warning and exit the function.
 		if (!canUseClipboard) {
 			console.warn("Clipboard API not supported in this environment.");
@@ -178,19 +174,16 @@ export default function CodeBlock({
 			<div className="flex items-center justify-between bg-[#243020] px-5 py-2.5">
 				<span className="font-mono text-xs font-semibold text-[#6a9960]">{label}</span>
 
-				{/* Only enable button when clipboard features is available. */}
-				{canUseClipboard && (
-					<button
-						onClick={() => handleCopy(children)}
-						className={cn(
-							"cursor-pointer rounded-2xl border border-white/12 bg-white/8 px-3 py-1 font-mono text-xs font-semibold text-[#6a9960] transition-all",
-							copied && "ok"
-						)}
-						aria-pressed={copied}
-					>
-						{copied ? "Copied!" : "Copy"}
-					</button>
-				)}
+				<button
+					onClick={() => handleCopy(children)}
+					className={cn(
+						"cursor-pointer rounded-2xl border border-white/12 bg-white/8 px-3 py-1 font-mono text-xs font-semibold text-[#6a9960] transition-all",
+						copied && "ok"
+					)}
+					aria-pressed={copied}
+				>
+					{copied ? "Copied!" : "Copy"}
+				</button>
 			</div>
 			<SyntaxHighlighter style={prismCustom} className={cn("", className)} {...props}>
 				{children}
