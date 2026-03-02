@@ -52,8 +52,8 @@ export default function Input({
 				"transition-[color,box-shadow] outline-none",
 
 				// Data output
-				"data-[output]:outline-none data-[output]:focus:ring-0 data-[output]:focus:outline-none",
-				"data-[output]:focus:border-input",
+				"data-output:outline-none data-output:focus:ring-0 data-output:focus:outline-none",
+				"data-output:focus:border-input",
 				className
 			)}
 			{...props}
