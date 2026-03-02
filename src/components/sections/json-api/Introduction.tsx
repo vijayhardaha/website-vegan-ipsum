@@ -41,7 +41,7 @@ export default function Introduction(): JSX.Element {
 						The API returns content in both{" "}
 						<SmartLink href="/json-api#response-format">
 							<code>plain</code>
-						</SmartLink>
+						</SmartLink>{" "}
 						text and{" "}
 						<SmartLink href="/json-api#response-format">
 							<code>HTML</code>

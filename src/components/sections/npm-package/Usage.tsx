@@ -115,7 +115,6 @@ console.log(customText);`}
 						contribution guidelines, visit the official{" "}
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
-							className="text-primary underline"
 							aria-label="View vegan ipsum package on npm"
 						>
 							npm package page
@@ -124,16 +123,36 @@ console.log(customText);`}
 					</p>
 
 					<p>
-						You can also explore the <code>node-vegan-ipsum</code>{" "}
+						You can also explore the <code>node-vegan-ipsum</code> GitHub repository to
+						review the{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/node-vegan-ipsum"
-							className="text-primary underline"
-							aria-label="View vegan ipsum npm package source code on github"
+							aria-label="View vegan ipsum source code on GitHub"
 						>
-							GitHub repository
-						</SmartLink>{" "}
-						to review the source code, report issues, request features, or submit pull
-						requests.
+							source code
+						</SmartLink>
+						,{" "}
+						<SmartLink
+							href="https://github.com/vijayhardaha/node-vegan-ipsum/issues/new"
+							aria-label="Report issues with the vegan ipsum package on GitHub"
+						>
+							report issues
+						</SmartLink>
+						,{" "}
+						<SmartLink
+							href="https://github.com/vijayhardaha/node-vegan-ipsum/issues"
+							aria-label="Request features for the vegan ipsum package on GitHub"
+						>
+							request features
+						</SmartLink>
+						, or submit{" "}
+						<SmartLink
+							href="https://github.com/vijayhardaha/node-vegan-ipsum/pulls"
+							aria-label="Submit pull requests for the vegan ipsum package on GitHub"
+						>
+							pull requests
+						</SmartLink>
+						.
 					</p>
 				</SectionHeader>
 			</Container>

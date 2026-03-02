@@ -67,22 +67,10 @@ export default function Overview(): JSX.Element {
 									&#10003;
 								</div>
 								<span>
-									Works across{" "}
-									<SmartLink href="/json-api" className="underline">
-										API
-									</SmartLink>
-									,{" "}
-									<SmartLink href="/node-cli" className="underline">
-										CLI
-									</SmartLink>
-									,{" "}
-									<SmartLink href="/npm-package" className="underline">
-										NPM
-									</SmartLink>
-									, and{" "}
-									<SmartLink href="/vscode-extension" className="underline">
-										VS Code
-									</SmartLink>
+									Works across <SmartLink href="/json-api">API</SmartLink>,{" "}
+									<SmartLink href="/node-cli">CLI</SmartLink>,{" "}
+									<SmartLink href="/npm-package">NPM</SmartLink>, and{" "}
+									<SmartLink href="/vscode-extension">VS Code</SmartLink>
 								</span>
 							</li>
 
