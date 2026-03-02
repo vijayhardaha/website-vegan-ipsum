@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 import Icon from "@/components/primitives/Icon";
@@ -30,15 +31,20 @@ export default function TechnicalOverview(): JSX.Element {
 						icon="cogs"
 					>
 						<p>
-							Built with modern web standards and best practices, ensuring
-							reliability, performance, and maintainability.
+							Built with modern web standards and best practices to ensure
+							reliability, performance, and long-term maintainability.
 						</p>
 						<ul className="space-y-4 text-sm">
 							{[
 								<>
 									Written entirely in modern, strongly typed{" "}
-									<strong>TypeScript</strong> to ensure code quality and
-									maintainability.
+									<SmartLink
+										href="https://www.typescriptlang.org/"
+										aria-label="Visit TypeScript official website"
+									>
+										<strong>TypeScript</strong>
+									</SmartLink>{" "}
+									to ensure code quality and maintainability.
 								</>,
 								<>
 									<strong>Zero external dependencies</strong> — making it
@@ -46,21 +52,34 @@ export default function TechnicalOverview(): JSX.Element {
 									performance.
 								</>,
 								<>
-									Employs <strong>functional programming</strong> paradigm to
-									produce predictable and pure functions, improving testability.
+									Employs <strong>functional programming</strong> principles to
+									produce predictable and pure functions, improving testability
+									and reliability.
 								</>,
 								<>
 									Supports both{" "}
-									<strong>CommonJS and ECMAScript Modules (ESM)</strong> to
-									maximize compatibility across JavaScript environments.
+									<SmartLink
+										href="https://nodejs.org/api/modules.html#modules-commonjs-modules"
+										aria-label="Learn about CommonJS modules"
+									>
+										<strong>CommonJS</strong>
+									</SmartLink>{" "}
+									and{" "}
+									<SmartLink
+										href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
+										aria-label="Learn about ECMAScript Modules"
+									>
+										<strong>ECMAScript Modules (ESM)</strong>
+									</SmartLink>{" "}
+									to maximize compatibility across JavaScript environments.
 								</>,
 								<>
 									Actively maintained with <strong>semantic versioning</strong>,
-									ensuring new features and bug fixes are delivered promptly.
+									ensuring new features and bug fixes are delivered predictably.
 								</>,
 								<>
 									<strong>Open-source on GitHub</strong>, welcoming community
-									contributions and transparency in development.
+									contributions and ensuring transparency in development.
 								</>,
 							].map((feature, index) => (
 								<li key={index} className="flex items-start gap-2">
@@ -73,7 +92,7 @@ export default function TechnicalOverview(): JSX.Element {
 						</ul>
 					</SectionHeader>
 					<div className="text-center">
-						<div className="border-border from-secondary-100 to-secondary-200 rounded-3xl border bg-gradient-to-br p-10 text-center shadow-2xl">
+						<div className="border-border from-secondary-100 to-secondary-200 rounded-3xl border bg-linear-to-br p-10 text-center shadow-2xl">
 							<div className="text-secondary-solid mb-6 flex justify-center text-8xl">
 								<Icon name="cogs" />
 							</div>

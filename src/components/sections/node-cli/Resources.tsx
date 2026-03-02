@@ -27,49 +27,79 @@ export default function Resources(): JSX.Element {
 					icon="lightBulb"
 				>
 					<p>
-						Get the most out of the Vegan Ipsum CLI by incorporating it into your
-						workflow efficiently and exploring additional resources for deeper
-						integration.
+						Optimize your development workflow by leveraging the full potential of the
+						Vegan Ipsum CLI. The strategies below will help you integrate the tool
+						efficiently for automation and prototyping.
 					</p>
 
 					<h3 className="mt-8 mb-2 text-lg">Tips & Best Practices:</h3>
 
 					<ul className="list-disc space-y-2 pl-8">
 						<li>
-							Integrate the CLI into shell scripts or automation pipelines to
-							dynamically generate placeholder content during builds or testing.
+							<strong>Automate Workflows:</strong> Integrate the CLI into shell
+							scripts or{" "}
+							<SmartLink
+								href="https://docs.github.com/en/actions"
+								aria-label="Learn about GitHub Actions automation"
+							>
+								CI/CD pipelines
+							</SmartLink>{" "}
+							to dynamically generate placeholder content during build processes.
 						</li>
 
 						<li>
-							Use the <code>--copy</code> flag alongside clipboard managers to
-							streamline quick copy-paste workflows.
+							<strong>Efficiency:</strong> Use the <code>--copy</code> flag in
+							conjunction with system clipboard managers to create a seamless,
+							single-command copy-paste workflow.
 						</li>
 
 						<li>
-							Combine with command-line tools like <code>grep</code>, <code>awk</code>
-							, or <code>sed</code> for advanced text filtering and processing.
+							<strong>Advanced Processing:</strong> Pipe output directly into standard
+							Unix tools like{" "}
+							<SmartLink
+								href="https://www.gnu.org/software/grep/"
+								aria-label="Visit GNU Grep documentation"
+							>
+								<code>grep</code>
+							</SmartLink>
+							,{" "}
+							<SmartLink
+								href="https://www.gnu.org/software/gawk/manual/"
+								aria-label="Visit GNU Awk documentation"
+							>
+								<code>awk</code>
+							</SmartLink>
+							, or{" "}
+							<SmartLink
+								href="https://www.gnu.org/software/sed/manual/"
+								aria-label="Visit GNU Sed documentation"
+							>
+								<code>sed</code>
+							</SmartLink>{" "}
+							for custom text filtering and manipulation.
 						</li>
 
 						<li>
-							Experiment with different counts and units to produce varied, randomized
-							output for mockups and demos.
+							<strong>Mock Data Variety:</strong> Experiment with varying counts and
+							units to produce randomized, realistic content for UI mockups and client
+							demonstrations.
 						</li>
 
 						<li>
-							Use the <code>--format html</code> option for rapid web prototyping
-							without manually adding markup.
+							<strong>Rapid Prototyping:</strong> Utilize the{" "}
+							<code>--format html</code> flag to generate semantic markup instantly,
+							speeding up the initial stages of web development.
 						</li>
 					</ul>
 
 					<h3 className="mt-8 mb-2 text-lg">Additional Resources:</h3>
 
 					<p>
-						If you want to integrate vegan ipsum programmatically or customize the
-						generator further, explore the{" "}
+						For programmatic usage, refer to the{" "}
 						<SmartLink href="/npm-package" className="text-primary">
 							Vegan Ipsum NPM Package
 						</SmartLink>{" "}
-						documentation for detailed API references and usage examples.
+						documentation for detailed API references and implementation examples.
 					</p>
 
 					<p>
@@ -77,16 +107,24 @@ export default function Resources(): JSX.Element {
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
 							className="text-primary"
-							aria-label="Official Vegan Ipsum NPM package page"
+							aria-label="View vegan-ipsum package statistics and history on npm"
 						>
 							official npm package page
 						</SmartLink>{" "}
-						to view installation statistics, version history, and community feedback.
+						to analyze download statistics, review version history, and assess community
+						feedback.
 					</p>
 
 					<p>
-						For bug reports, feature requests, or contributions, visit the GitHub
-						repository linked on the npm page.
+						To contribute to the project or report issues, please visit the{" "}
+						<SmartLink
+							href="https://github.com/vijayhardaha/node-vegan-ipsum"
+							className="text-primary"
+							aria-label="Visit the vegan-ipsum GitHub repository"
+						>
+							GitHub repository
+						</SmartLink>{" "}
+						to submit pull requests or open new issues.
 					</p>
 				</SectionHeader>
 			</Container>

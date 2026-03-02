@@ -35,21 +35,20 @@ export default function Contact(): JSX.Element {
 					headingClassName="mx-auto max-w-lg"
 				>
 					<p className="mb-8">
-						We&apos;re building more than a tool, we&apos;re creating a community of
+						We are building more than just a tool; we are cultivating a community of
 						conscious creators. Whether you want to contribute code, suggest features,
-						share feedback, or simply connect with like-minded builders, your voice
-						matters here. Let&apos;s make ethical design the standard, not the
-						exception.
+						or connect with like-minded builders, your voice matters. Join us in making
+						ethical design the standard, not the exception.
 					</p>
 
 					<Button
 						asChild
 						variant="primary"
 						size="lg"
-						aria-label="Navigate to Contact Us page"
+						aria-label="Navigate to the Contact page"
 					>
 						<Link href="/contact">
-							Contact <Icon name="arrowRight" />
+							Contact Us <Icon name="arrowRight" />
 						</Link>
 					</Button>
 				</SectionHeader>

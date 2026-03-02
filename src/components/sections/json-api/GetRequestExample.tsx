@@ -32,9 +32,10 @@ export default function GetRequestExample(): JSX.Element {
 					icon="terminal"
 				>
 					<p className="mb-8">
-						Send parameters as query strings on the URL. Here are a few examples of how
-						to fetch specific counts and formats of plant-based placeholder text
-						directly through the endpoint.
+						When using <code>GET</code> requests, parameters are appended to the URL as
+						query strings. The following examples demonstrate how to fetch specific
+						amounts and formats of plant-based placeholder text using standard tools and
+						libraries.
 					</p>
 
 					<CodeBlock label="Browser / URL" language="bash">

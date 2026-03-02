@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import CodeBlock from "@/components/primitives/CodeBlock";
 import Container from "@/components/primitives/Container";
@@ -28,9 +29,9 @@ export default function Installation(): JSX.Element {
 					icon="download"
 				>
 					<p className="mb-8">
-						Install the Vegan Ipsum CLI globally to make the <code>vegan-ipsum</code>{" "}
-						command available from any directory in your terminal, ensuring plant-based
-						placeholder text is always just a keystroke away.
+						Install <code>vegan-ipsum</code> globally to access the command-line
+						interface from any directory. This ensures that generating plant-based
+						placeholder text is always just a few keystrokes away.
 					</p>
 
 					<CodeBlock label="Global Install (npm)" language="bash">
@@ -38,11 +39,31 @@ export default function Installation(): JSX.Element {
 					</CodeBlock>
 
 					<p>
-						Ensure that <code>Node.js</code> and <code>npm</code> are installed on your
-						system before running the command.
+						Before proceeding, ensure you have{" "}
+						<SmartLink href="https://nodejs.org/" aria-label="Download Node.js">
+							Node.js
+						</SmartLink>{" "}
+						and{" "}
+						<SmartLink
+							href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
+							aria-label="Learn about npm package manager"
+						>
+							npm
+						</SmartLink>{" "}
+						installed on your system.
 					</p>
 
-					<p>After installation, verify that everything is working correctly:</p>
+					<p>
+						After the installation is complete, verify that the package is accessible in
+						your{" "}
+						<SmartLink
+							href="https://en.wikipedia.org/wiki/PATH_(variable)"
+							aria-label="Learn about the PATH environment variable"
+						>
+							PATH
+						</SmartLink>{" "}
+						by running the help command:
+					</p>
 
 					<CodeBlock label="Verify Installation" language="bash">
 						vegan-ipsum --help

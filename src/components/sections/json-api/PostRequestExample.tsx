@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import CodeBlock from "@/components/primitives/CodeBlock";
 import Container from "@/components/primitives/Container";
@@ -30,10 +31,16 @@ export default function PostRequestExample(): JSX.Element {
 					icon="code"
 				>
 					<p className="mb-8">
-						Send parameters as a JSON body — ideal for programmatic API calls from
-						backend services or frontend applications where query strings might become
-						cluttered. Here are examples of how to structure your POST requests to
-						retrieve specific counts and formats of plant-based placeholder text.
+						For <code>POST</code> requests, send parameters as a{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
+							aria-label="Learn about JSON format"
+						>
+							JSON
+						</SmartLink>{" "}
+						object in the request body. This method is ideal for programmatic API calls
+						from backend services or frontend applications where query strings might
+						become cluttered or exceed URL length limits.
 					</p>
 
 					<CodeBlock label="cURL" language="bash">{`curl -X POST "${API_BASE_URL}" \\

@@ -10,7 +10,7 @@ import { generateMasterSchema } from "@/utils/schema";
 
 const title = "vegan-ipsum NPM Package - Ethical Lorem Ipsum Library";
 const description =
-	"Integrate ethical, plant-based placeholder text into your JavaScript projects. The Vegan Ipsum NPM package is a lightweight, zero-dependency library for conscious developers. Install it now!";
+	"Integrate plant-based placeholder text into JS projects. A lightweight, zero-dependency NPM library for ethical developers. Install now.";
 
 const pageTitle = (
 	<>

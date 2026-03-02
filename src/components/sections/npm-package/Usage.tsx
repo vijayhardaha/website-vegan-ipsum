@@ -28,9 +28,21 @@ export default function Usage(): JSX.Element {
 					icon="code"
 				>
 					<p>
-						After installation, you can import <code>vegan-ipsum</code> into your
-						JavaScript or TypeScript project to generate plant-based placeholder text
-						programmatically.
+						After installation, you can import <code>vegan-ipsum</code> into your{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+							aria-label="Learn more about JavaScript"
+						>
+							JavaScript
+						</SmartLink>{" "}
+						or{" "}
+						<SmartLink
+							href="https://www.typescriptlang.org/docs/"
+							aria-label="Learn more about TypeScript"
+						>
+							TypeScript
+						</SmartLink>{" "}
+						project to generate plant-based placeholder text programmatically.
 					</p>
 
 					<p>The package supports two usage styles:</p>
@@ -108,51 +120,58 @@ console.log(customText);`}
 						don&apos;t need to maintain a reusable instance.
 					</p>
 
-					<h3 className="mt-8 mb-2 text-lg">Learn More:</h3>
+					<h3 className="mt-8 mb-2 text-lg">Resources & Documentation</h3>
 
 					<p>
-						For complete API documentation, advanced configuration options, and
-						contribution guidelines, visit the official{" "}
+						For comprehensive API documentation and advanced configuration options,
+						visit the official{" "}
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
-							aria-label="View vegan ipsum package on npm"
+							aria-label="View vegan-ipsum package details on npm"
 						>
-							npm package page
+							vegan-ipsum npm package page
 						</SmartLink>
-						.
+						. If you are new to open source, we recommend reading the{" "}
+						<SmartLink
+							href="https://opensource.guide/how-to-contribute/"
+							aria-label="Learn about contributing to open source projects"
+						>
+							contribution guidelines
+						</SmartLink>{" "}
+						before getting started.
 					</p>
 
 					<p>
-						You can also explore the <code>node-vegan-ipsum</code> GitHub repository to
-						review the{" "}
+						Developers are encouraged to explore the{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/node-vegan-ipsum"
-							aria-label="View vegan ipsum source code on GitHub"
+							aria-label="View node-vegan-ipsum source code on GitHub"
 						>
-							source code
-						</SmartLink>
-						,{" "}
+							GitHub repository
+						</SmartLink>{" "}
+						to inspect the source code. If you encounter any bugs or have suggestions
+						for improvements, please{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/node-vegan-ipsum/issues/new"
-							aria-label="Report issues with the vegan ipsum package on GitHub"
+							aria-label="Report an issue or bug"
 						>
-							report issues
-						</SmartLink>
-						,{" "}
+							report an issue
+						</SmartLink>{" "}
+						or{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/node-vegan-ipsum/issues"
-							aria-label="Request features for the vegan ipsum package on GitHub"
+							aria-label="Request a new feature"
 						>
-							request features
+							request a feature
 						</SmartLink>
-						, or submit{" "}
+						. Community contributions via{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/node-vegan-ipsum/pulls"
-							aria-label="Submit pull requests for the vegan ipsum package on GitHub"
+							aria-label="Submit a pull request"
 						>
 							pull requests
-						</SmartLink>
-						.
+						</SmartLink>{" "}
+						are also welcome.
 					</p>
 				</SectionHeader>
 			</Container>

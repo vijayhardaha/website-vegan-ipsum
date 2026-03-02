@@ -1,7 +1,6 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
-import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 import Icon from "@/components/primitives/Icon";
@@ -72,39 +71,42 @@ export default function Author(): JSX.Element {
 					icon="user"
 				>
 					<p>
-						Connect directly with the creator of Vegan Ipsum, collaborate on new
-						features, provide feedback, or discuss potential partnerships. Whether
-						you&apos;re a fellow developer, designer, content creator, or vegan
-						advocate, all inquiries are warmly welcomed.
+						Connect directly with the creator of Vegan Ipsum to collaborate on new
+						features, provide feedback, or discuss potential partnerships. Whether you
+						are a developer, designer, content creator, or sustainability advocate, all
+						inquiries are welcome.
 					</p>
 
 					<div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
 						{socialLinks.map((social, index) => (
-							<SmartLink
+							<a
 								key={index}
 								href={social.href}
-								linkLine={false}
+								target="_blank"
+								rel="noopener noreferrer"
 								aria-label={`Contact the author on ${social.platform}`}
-								className="group border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-3xl border bg-gradient-to-br p-6 text-center no-underline shadow-md transition-all hover:shadow-lg"
+								className="group border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-3xl border bg-linear-to-br p-6 text-center shadow-md transition-all hover:shadow-lg"
 							>
-								<div className="text-secondary-dark mb-2 text-3xl">
+								<div className="text-secondary-dark mb-2 text-center text-3xl">
 									<Icon name={social.icon} />
 								</div>
+
 								<h3 className="text-primary-solid font-sans text-sm font-bold">
 									{social.platform}
 								</h3>
-								<p className="text-secondary-dark inline-flex items-center gap-0.5 text-sm group-hover:underline">
+
+								<p className="text-secondary-dark group-hover:border-secondary-dark mt-2 inline-flex items-center gap-0.5 border-b-2 border-transparent text-sm">
 									{social.handle} <Icon name="arrowOutward" />
 								</p>
-							</SmartLink>
+							</a>
 						))}
 					</div>
 
 					<p>
 						For business inquiries, collaboration proposals, bug reports, or general
-						feedback about Vegan Ipsum, please don&apos;t hesitate to get in touch. Your
-						input helps improve the project and ensures Vegan Ipsum remains a valuable
-						resource for the ethical design and development community.
+						feedback, please reach out via the channels above. Your input helps improve
+						the project and ensures Vegan Ipsum remains a valuable resource for the
+						ethical design and development community.
 					</p>
 				</SectionHeader>
 			</Container>

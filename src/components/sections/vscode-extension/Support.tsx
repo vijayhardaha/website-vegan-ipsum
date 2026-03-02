@@ -27,19 +27,18 @@ export default function Support(): JSX.Element {
 					icon="bug"
 				>
 					<p>
-						As an independently developed extension, I rely heavily on user feedback to
-						squash bugs and prioritize updates. If something isn&apos;t working as
-						expected or if you have a feature request please let me know by submitting
-						an issue on our{" "}
+						As an independently developed extension, user feedback is vital for
+						prioritizing updates and resolving bugs. If you encounter any issues or have
+						suggestions for new features, please help improve the tool by submitting an
+						issue on the{" "}
 						<SmartLink
 							href="https://github.com/vijayhardaha/vscode-vegan-ipsum/issues"
-							className="text-primary"
 							aria-label="Vegan Ipsum VS Code Extension GitHub Issues Page"
 						>
-							GitHub Page
+							GitHub repository
 						</SmartLink>
+						.
 					</p>
-					<p></p>
 				</SectionHeader>
 			</Container>
 		</Section>

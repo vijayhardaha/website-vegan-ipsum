@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 import InfoBox from "@/components/primitives/InfoBox";
@@ -24,9 +25,15 @@ export default function Usage(): JSX.Element {
 					icon="keyboard"
 				>
 					<p>
-						Once installed, generating vegan-themed placeholder text is quick and
-						straightforward. You can trigger the generator directly from your command
-						palette or using custom keyboard shortcuts.
+						Once installed, generating vegan-themed placeholder text is an efficient
+						process. You can trigger the generator directly from the{" "}
+						<SmartLink
+							href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
+							aria-label="Learn how to use the Command Palette"
+						>
+							Command Palette
+						</SmartLink>{" "}
+						or assign custom keyboard shortcuts for even faster access.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -75,8 +82,35 @@ export default function Usage(): JSX.Element {
 					</div>
 
 					<InfoBox>
-						You can use this in any text-based file type (HTML, Markdown, JSON,
-						JavaScript), or even plain text, making it versatile for many workflows.
+						This extension works across various text-based file types, including{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+							aria-label="Learn more about HTML"
+						>
+							HTML
+						</SmartLink>
+						,{" "}
+						<SmartLink
+							href="https://www.markdownguide.org/"
+							aria-label="Learn more about Markdown"
+						>
+							Markdown
+						</SmartLink>
+						,{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
+							aria-label="Learn more about JavaScript"
+						>
+							JavaScript
+						</SmartLink>
+						, and{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Glossary/JSON"
+							aria-label="Learn more about JSON"
+						>
+							JSON
+						</SmartLink>
+						, making it a versatile tool for diverse development workflows.
 					</InfoBox>
 				</SectionHeader>
 			</Container>

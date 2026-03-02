@@ -74,26 +74,26 @@ export default function UseCases(): JSX.Element {
 					icon="laptop"
 				>
 					<p>
-						From design mockups to educational apps, Vegan Ipsum fits seamlessly into
-						ethical and eco-conscious projects.
+						From design mockups to educational applications, Vegan Ipsum integrates
+						seamlessly into a wide range of ethical and eco-conscious projects.
 					</p>
-				</SectionHeader>
 
-				<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-					{cards.map((card, index: number) => (
-						<div
-							key={index}
-							className="border-border flex gap-4 rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
-						>
-							<div>
-								<h3 className="text-primary-solid mb-1 text-xl font-bold">
-									{card.title}
-								</h3>
-								<p className="text-sm leading-relaxed">{card.content}</p>
+					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+						{cards.map((card, index: number) => (
+							<div
+								key={index}
+								className="border-border flex gap-4 rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
+							>
+								<div>
+									<h3 className="text-primary-solid mb-1 text-xl font-bold">
+										{card.title}
+									</h3>
+									<p className="text-sm leading-relaxed">{card.content}</p>
+								</div>
 							</div>
-						</div>
-					))}
-				</div>
+						))}
+					</div>
+				</SectionHeader>
 			</Container>
 		</Section>
 	);

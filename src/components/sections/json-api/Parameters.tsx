@@ -24,9 +24,9 @@ export default function Parameters(): JSX.Element {
 					icon="sliders"
 				>
 					<p>
-						Customize the output using the following parameters. These give you full
-						control over the amount, type, and format of placeholder text to perfectly
-						fit your UI layout.
+						Customize the API output using the following request parameters. These
+						options provide full control over the volume, unit type, and format of the
+						generated placeholder text to perfectly fit your UI layout.
 					</p>
 
 					<div className="table-container mt-8">
@@ -53,8 +53,8 @@ export default function Parameters(): JSX.Element {
 										<code>3</code>
 									</td>
 									<td>
-										How many units to generate. Valid range:
-										<code>1</code>-<code>100</code>.
+										The number of units to generate. Accepts an integer between{" "}
+										<code>1</code> and <code>100</code>.
 									</td>
 								</tr>
 								<tr>
@@ -69,8 +69,9 @@ export default function Parameters(): JSX.Element {
 										<code>paragraphs</code>
 									</td>
 									<td>
-										Type of text unit. Accepts <code>paragraphs</code>,{" "}
-										<code>sentences</code>, or <code>words</code>.
+										The type of text unit. Accepted values are{" "}
+										<code>paragraphs</code>, <code>sentences</code>, or{" "}
+										<code>words</code>.
 									</td>
 								</tr>
 								<tr>
@@ -85,8 +86,9 @@ export default function Parameters(): JSX.Element {
 										<code>plain</code>
 									</td>
 									<td>
-										Output format. Use <code>plain</code> for raw text or{" "}
-										<code>html</code> for formatted HTML output.
+										The output format. Use <code>plain</code> for raw text
+										strings or <code>html</code> to wrap paragraphs in{" "}
+										<code>&lt;p&gt;</code> tags.
 									</td>
 								</tr>
 							</tbody>
@@ -94,8 +96,9 @@ export default function Parameters(): JSX.Element {
 					</div>
 
 					<InfoBox>
-						Use <code>format=html</code> when injecting content directly into web pages
-						to preserve paragraph and sentence structure without extra processing.
+						Use the <code>format=html</code> parameter when injecting content directly
+						into web pages. This preserves the intended paragraph structure without
+						requiring additional processing on the client side.
 					</InfoBox>
 				</SectionHeader>
 			</Container>

@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import CodeBlock from "@/components/primitives/CodeBlock";
 import Container from "@/components/primitives/Container";
@@ -28,9 +29,16 @@ export default function ResponseFormat(): JSX.Element {
 					icon="fileCode"
 				>
 					<p className="mb-8">
-						A successful API call returns a JSON object with a <code>text</code>{" "}
-						property containing your generated vegan ipsum content, ready for immediate
-						use in your plant-based and ethical projects.
+						A successful API request returns a{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
+							aria-label="Learn about JSON"
+						>
+							JSON
+						</SmartLink>{" "}
+						object containing a single <code>text</code> property. This string holds
+						your generated vegan ipsum content, formatted exactly as requested and ready
+						for immediate integration.
 					</p>
 
 					<CodeBlock label="JSON Response · 200 OK" language="json">
@@ -40,8 +48,10 @@ export default function ResponseFormat(): JSX.Element {
 					</CodeBlock>
 
 					<p>
-						The text string respects your requested unit count, unit type, and format —
-						ready for immediate use in your projects.
+						The response strictly adheres to the parameters defined in your request,
+						including the
+						<code>count</code>, <code>units</code>, and <code>format</code>, ensuring
+						the output fits seamlessly into your application&apos;s layout.
 					</p>
 				</SectionHeader>
 			</Container>

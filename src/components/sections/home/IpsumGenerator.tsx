@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Button from "@/components/primitives/Button";
 import Container from "@/components/primitives/Container";
@@ -78,9 +79,15 @@ export default function IpsumGenerator(): JSX.Element {
 					icon="leaf"
 				>
 					<p>
-						Instantly create custom, plant-based placeholder text for your mockups.
-						Choose your preferred length and format to keep your design projects fresh
-						and ethical.
+						Instantly generate custom, plant-based placeholder text for your mockups and
+						prototypes. Choose your preferred length and format to keep your{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
+							aria-label="Learn about HTML for web design"
+						>
+							web design
+						</SmartLink>{" "}
+						projects fresh, ethical, and meaningful.
 					</p>
 
 					<div className="border-border mt-8 rounded-3xl border bg-white p-6 md:p-8">
@@ -104,7 +111,7 @@ export default function IpsumGenerator(): JSX.Element {
 											size="sm"
 											variant="secondary"
 											onClick={handleCopyToClipboard}
-											className="min-w-[80px]"
+											className="min-w-20"
 											aria-label={
 												copied
 													? "Text copied to clipboard"

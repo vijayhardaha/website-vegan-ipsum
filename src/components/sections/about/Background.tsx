@@ -30,30 +30,29 @@ export default function Background(): JSX.Element {
 					icon="history"
 				>
 					<p>
-						The idea behind Vegan Ipsum originated from a desire to fill a niche that
-						traditional Lorem Ipsum generators have overlooked. While browsing{" "}
+						The concept for Vegan Ipsum emerged from a desire to fill a niche that
+						traditional Lorem Ipsum generators had long overlooked. While exploring
+						resources like{" "}
 						<SmartLink
 							href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/"
-							className="text-primary hover:text-primary-dark font-semibold"
 							aria-label="Ultimate List of Lorem Ipsum Generators"
 						>
 							loremipsum.io
 						</SmartLink>
-						, it became clear that many communities create customized placeholder text
-						to better reflect their unique identities.
+						, it became evident that many specialized communities had developed custom
+						placeholder text to better reflect their unique identities.
 					</p>
 					<p>
-						However, despite the growing popularity of veganism and plant-based
-						lifestyles worldwide, there wasn&apos;t a well-maintained or comprehensive
-						vegan-themed placeholder text generator available.
+						However, despite the global rise of veganism and plant-based lifestyles,
+						there was a lack of a dedicated, well-maintained placeholder text generator
+						for the ethical design community.
 					</p>
 					<p>
-						This gap inspired the creation of Vegan Ipsum — a project aimed at providing
-						ethical designers and developers with a fresh, cruelty-free lorem ipsum
-						alternative that speaks to their values. Since its inception, Vegan Ipsum
-						has evolved into a versatile suite of tools designed to empower creators,
-						support sustainable brands, and encourage the use of meaningful,
-						value-driven content.
+						This gap inspired the creation of Vegan Ipsum — a project designed to
+						provide ethical developers and designers with a cruelty-free alternative
+						that aligns with their values. Since its launch, Vegan Ipsum has evolved
+						into a versatile suite of tools, empowering creators to build sustainable
+						brands with meaningful, value-driven content.
 					</p>
 				</SectionHeader>
 			</Container>

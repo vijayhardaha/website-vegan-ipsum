@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 
@@ -23,20 +24,42 @@ export default function Introduction(): JSX.Element {
 					icon="externalLink"
 				>
 					<p>
-						The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight and
-						intuitive tool designed for developers, designers, and content creators who
-						want to quickly insert vegan-themed placeholder text directly within their
-						Visual Studio Code editor.
+						The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight,
+						productivity-focused tool designed for developers and designers. It enables
+						you to insert vegan-themed placeholder text directly into your{" "}
+						<SmartLink
+							href="https://code.visualstudio.com/"
+							aria-label="Visit Visual Studio Code official website"
+						>
+							Visual Studio Code
+						</SmartLink>{" "}
+						editor without interrupting your workflow.
 					</p>
+
 					<p>
-						Whether you&apos;re prototyping a website, building a vegan blog, or simply
-						adding ethical and meaningful filler content to mockups and drafts, this
-						extension brings compassion and fun to your development workflow without
-						leaving your editor.
+						Whether you are prototyping web layouts, building vegan blogs, or creating
+						sustainable product mockups, this extension provides meaningful filler
+						content instantly. It serves as a cruelty-free alternative to standard dummy
+						text generators, right inside your{" "}
+						<SmartLink
+							href="https://en.wikipedia.org/wiki/Integrated_development_environment"
+							aria-label="Learn about Integrated Development Environments"
+						>
+							IDE
+						</SmartLink>
+						.
 					</p>
+
 					<p>
-						This extension seamlessly integrates with VS Code&apos;s Command Palette and
-						supports multiple output formats to suit a variety of use cases.
+						The extension integrates seamlessly with the{" "}
+						<SmartLink
+							href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
+							aria-label="Learn how to use the VS Code Command Palette"
+						>
+							Command Palette
+						</SmartLink>{" "}
+						and supports multiple output formats, such as plain text and HTML, to suit
+						various development requirements.
 					</p>
 				</SectionHeader>
 			</Container>

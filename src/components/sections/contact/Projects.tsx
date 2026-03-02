@@ -101,10 +101,10 @@ export default function Projects(): JSX.Element {
 					icon="cube"
 				>
 					<p>
-						Explore the various Vegan Ipsum projects that power this ethical,
-						plant-based lorem ipsum generator. All projects are actively maintained and
-						open-source, welcoming contributions from developers and designers
-						passionate about ethical technology.
+						Explore the ecosystem of Vegan Ipsum projects that power this ethical,
+						plant-based placeholder text generator. All repositories are actively
+						maintained and open-source, welcoming contributions from developers and
+						designers passionate about ethical technology.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -127,9 +127,10 @@ export default function Projects(): JSX.Element {
 										</p>
 
 										<SmartLink
-											className="text-primary inline-flex items-center text-sm font-medium"
+											className="text-primary text-sm font-medium"
 											href={card.link}
 											aria-label={card.ariaLabel}
+											hoverEffect="border"
 										>
 											{card.buttonText}
 										</SmartLink>

@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 import { cn } from "@/utils/classnames";
@@ -28,8 +29,15 @@ export default function StatusCodes(): JSX.Element {
 					icon="checkCircle"
 				>
 					<p className="mb-8">
-						The API uses standard HTTP status codes to indicate the success or failure
-						of your requests. Here are the most common codes you may encounter:
+						The API utilizes standard{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+							aria-label="Learn about HTTP status codes"
+						>
+							HTTP status codes
+						</SmartLink>{" "}
+						to indicate the result of a request. Below are the most common codes you may
+						encounter when interacting with the endpoint:
 					</p>
 
 					<ul className="space-y-4">

@@ -77,9 +77,10 @@ export default function Features(): JSX.Element {
 					icon="award"
 				>
 					<p>
-						Some of the key features that make the Vegan Ipsum VS Code Extension a
-						must-have tool for developers and designers who value speed and plant-based
-						inspiration.
+						The <strong>Vegan Ipsum VS Code Extension</strong> offers a robust set of
+						features designed to streamline your workflow. Here is why it is an
+						essential tool for developers and designers who value efficiency and
+						plant-based inspiration:
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

@@ -30,26 +30,59 @@ export default function Introduction(): JSX.Element {
 					<p>
 						<SmartLink
 							href="https://www.npmjs.com/package/vegan-ipsum"
-							aria-label="View Vegan Ipsum package on npm"
+							aria-label="View vegan-ipsum package details on npm"
 						>
-							vegan-ipsum
+							<code>vegan-ipsum</code>
 						</SmartLink>{" "}
-						is a lightweight and flexible JavaScript library for generating vegan-themed
-						placeholder text, providing a meaningful alternative to traditional{" "}
-						<code>lorem-ipsum</code> dummy text.
+						is a lightweight, zero-dependency JavaScript library for generating unique,
+						vegan-themed placeholder text. It serves as a cruelty-free alternative to
+						traditional{" "}
+						<SmartLink
+							href="https://www.lipsum.com/"
+							aria-label="Visit Lorem Ipsum website"
+						>
+							Lorem Ipsum
+						</SmartLink>
+						, offering distinctive filler content for your layouts.
 					</p>
 
 					<p>
 						Designed for developers, designers, and content creators, this package
-						allows you to add ethically inspired, plant-based filler text to your
-						projects, whether you&apos;re building vegan blogs, environmental websites,
-						or apps promoting compassionate living.
+						allows you to integrate ethically inspired, plant-based dummy text into your
+						projects. It is an excellent choice for building vegan blogs, sustainability
+						platforms, or{" "}
+						<SmartLink
+							href="https://react.dev/"
+							aria-label="Visit React official website"
+						>
+							React
+						</SmartLink>{" "}
+						applications promoting compassionate living.
 					</p>
 
 					<p>
-						The library supports multiple environments, including Node.js, modern
-						browsers, and React Native, making it versatile and easy to integrate in a
-						variety of JavaScript workflows.
+						The library is environment-agnostic and fully compatible with{" "}
+						<SmartLink
+							href="https://nodejs.org/"
+							aria-label="Visit Node.js official website"
+						>
+							Node.js
+						</SmartLink>
+						, modern browsers, and{" "}
+						<SmartLink
+							href="https://reactnative.dev/"
+							aria-label="Visit React Native official documentation"
+						>
+							React Native
+						</SmartLink>
+						, ensuring seamless integration across diverse{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+							aria-label="Visit JavaScript documentation on MDN"
+						>
+							JavaScript
+						</SmartLink>{" "}
+						ecosystems.
 					</p>
 				</SectionHeader>
 			</Container>

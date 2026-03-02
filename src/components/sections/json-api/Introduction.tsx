@@ -28,14 +28,14 @@ export default function Introduction(): JSX.Element {
 					icon="cloud"
 				>
 					<p>
-						The Vegan Ipsum JSON API is a powerful and easy-to-use web service designed
-						to help developers seamlessly integrate vegan-themed placeholder text into
-						their applications, websites, and digital projects.
+						The <strong>Vegan Ipsum JSON API</strong> is a high-performance web service
+						designed to help developers seamlessly integrate vegan-themed placeholder
+						text into their applications, websites, and digital projects.
 					</p>
 					<p>
 						Whether you need multiple paragraphs for blog mockups, a few sentences for
 						UI prototypes, or single words to fill form inputs, this API offers flexible
-						options to customize the generated content to your exact needs.
+						parameters to customize the generated content to your exact requirements.
 					</p>
 					<p>
 						The API returns content in both{" "}
@@ -46,12 +46,23 @@ export default function Introduction(): JSX.Element {
 						<SmartLink href="/json-api#response-format">
 							<code>HTML</code>
 						</SmartLink>{" "}
-						formats, making it easy to insert directly into web pages, emails, or apps
-						without additional formatting. It supports both simple{" "}
-						<SmartLink href="/json-api#get-request-example">GET requests</SmartLink> and
-						more complex{" "}
-						<SmartLink href="/json-api#post-request-example">POST requests</SmartLink>{" "}
-						with JSON payloads.
+						formats, making it ready for immediate insertion into web pages or
+						templates. It supports standard{" "}
+						<SmartLink href="/json-api#get-request-example">
+							<code>GET</code>
+						</SmartLink>{" "}
+						requests for simple retrieval and{" "}
+						<SmartLink href="/json-api#post-request-example">
+							<code>POST</code>
+						</SmartLink>{" "}
+						requests for more complex payloads via{" "}
+						<SmartLink
+							href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
+							aria-label="Learn about JSON format"
+						>
+							JSON
+						</SmartLink>
+						.
 					</p>
 				</SectionHeader>
 			</Container>

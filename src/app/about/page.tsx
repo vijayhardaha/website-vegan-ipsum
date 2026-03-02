@@ -16,7 +16,7 @@ import {
 import { buildMetadata } from "@/utils/meta";
 import { generateMasterSchema } from "@/utils/schema";
 
-const title = "About Vegan Ipsum - The Mission Behind Ethical Placeholder Text Generator";
+const title = "About Vegan Ipsum - Mission Behind the Ethical Placeholder Generator";
 const description =
 	"Discover the story of Vegan Ipsum. Learn why we created a plant-based, cruelty-free alternative to traditional Lorem Ipsum for conscious designers and developers.";
 

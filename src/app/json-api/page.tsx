@@ -20,7 +20,8 @@ import { generateMasterSchema } from "@/utils/schema";
 
 const title = "Vegan Ipsum API - Free JSON Placeholder Text API";
 const description =
-	"Access the Vegan Ipsum REST API to fetch ethical, plant-based placeholder text for your web apps. High-performance JSON endpoints for conscious developers.";
+	"Access the Vegan Ipsum REST API to fetch ethical, plant-based placeholder text. High-performance JSON endpoints for conscious developers.";
+
 const pageTitle = (
 	<>
 		Fetch Ethical placeholder text via the <span className="text-primary">Vegan Ipsum API</span>

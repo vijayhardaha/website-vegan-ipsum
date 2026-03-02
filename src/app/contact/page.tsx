@@ -8,9 +8,10 @@ import { Author, Projects } from "@/components/sections/contact";
 import { buildMetadata } from "@/utils/meta";
 import { generateMasterSchema } from "@/utils/schema";
 
-const title = "Contact Vegan Ipsum - Author Profile, GitHub & Project Links";
+const title = "Contact Vegan Ipsum - Creator Profile, GitHub & Project Links";
 const description =
-	"Meet the creator of Vegan Ipsum and explore the ecosystem behind Vegan Ipsum. Find our GitHub, social links, and ways to collaborate on ethical developer tools.";
+	"Connect with the creator of Vegan Ipsum and explore Vegan Ipsum ecosystem. Find GitHub, social links, and collaboration opportunities for ethical developer tools.";
+
 const pageTitle = (
 	<>
 		Connect with the Creator of a <span className="text-primary">Vegan Ipsum Ecosystem</span>

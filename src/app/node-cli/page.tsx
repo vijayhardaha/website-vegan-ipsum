@@ -16,7 +16,8 @@ import { generateMasterSchema } from "@/utils/schema";
 
 const title = "Vegan Ipsum CLI - Generate Ethical Placeholder Text in Terminal";
 const description =
-	"Generate plant-based placeholder text from your terminal with the Vegan Ipsum Node CLI. An ethical, lightweight tool for developers and creative coders.";
+	"Generate plant-based placeholder text from your terminal with the Vegan Ipsum Node CLI. A lightweight, ethical tool for developers.";
+
 const pageTitle = (
 	<>
 		Vegan Ipsum <span className="text-primary">Node CLI</span>

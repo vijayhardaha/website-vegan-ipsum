@@ -39,13 +39,14 @@ export default function Hero(): JSX.Element {
 
 				<p className="mx-auto mb-9 max-w-2xl text-lg leading-relaxed">
 					Generate cruelty-free, plant-based placeholder text for your design and
-					development work. Ethical alternatives for compassionate creators.
+					development projects. The ethical alternative to standard filler text for
+					compassionate creators.
 				</p>
 
 				<div className="flex flex-wrap justify-center gap-3.5">
 					<Button
 						asChild
-						aria-label="Navigate to Generate Vegan Ipsum section"
+						aria-label="Navigate to the Vegan Ipsum Generator tool"
 						variant="primary"
 						size="xl"
 						className="hover:no-underline"
@@ -57,7 +58,7 @@ export default function Hero(): JSX.Element {
 
 					<Button
 						asChild
-						aria-label="Navigate to Methods section"
+						aria-label="View available integration methods"
 						variant="primary-outline"
 						size="xl"
 						className="hover:no-underline"

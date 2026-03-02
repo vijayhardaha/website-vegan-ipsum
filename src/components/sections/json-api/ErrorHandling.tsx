@@ -25,9 +25,10 @@ export default function ErrorHandling(): JSX.Element {
 					icon="exclamation"
 				>
 					<p className="mb-8">
-						If your request contains invalid parameters or values outside the allowed
-						ranges, the API returns a <code>400 Bad Request</code> status with a helpful
-						error message.
+						If a request contains invalid parameters or values outside the allowed
+						ranges, the API returns a <code>400 Bad Request</code> status code. The
+						response body includes a descriptive error message to help you debug the
+						issue efficiently.
 					</p>
 
 					<CodeBlock label="JSON Error Response · 400 Bad Request" language="json">
@@ -37,8 +38,8 @@ export default function ErrorHandling(): JSX.Element {
 					</CodeBlock>
 
 					<InfoBox>
-						Always validate your input parameters before sending requests to ensure
-						smooth and predictable API usage.
+						Implement client-side validation for your input parameters before sending
+						requests to ensure smooth API usage and prevent unnecessary errors.
 					</InfoBox>
 				</SectionHeader>
 			</Container>

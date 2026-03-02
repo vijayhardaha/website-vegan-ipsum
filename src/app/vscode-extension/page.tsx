@@ -16,9 +16,9 @@ import {
 import { buildMetadata } from "@/utils/meta";
 import { generateMasterSchema } from "@/utils/schema";
 
-const title = "Vegan Ipsum VS Code Extension - Ethical Placeholder Text in Editor";
+const title = "Vegan Ipsum VS Code Extension - Ethical Placeholder Text";
 const description =
-	"Generate ethical, plant-based placeholder text directly in your editor. Install the Vegan Ipsum extension for VS Code to create cruelty-free mockups without leaving your code.";
+	"Generate plant-based placeholder text directly in your editor. Install the Vegan Ipsum extension for VS Code to create cruelty-free mockups effortlessly.";
 
 const pageTitle = (
 	<>

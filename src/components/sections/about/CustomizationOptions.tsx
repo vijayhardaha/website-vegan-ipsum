@@ -30,30 +30,29 @@ export default function CustomizationOptions(): JSX.Element {
 				>
 					<p>
 						Vegan Ipsum is designed with flexibility in mind, allowing users to tailor
-						the output to meet the specific needs of their projects. Whether you want
-						short bursts of text or long paragraphs, you can fine-tune the content with
-						various parameters to fit perfectly within your designs and codebases.
+						the output to meet the specific needs of their projects. Whether you need
+						short bursts of text or long paragraphs, you can fine-tune the content using
+						the following parameters:
 					</p>
 					<ul className="list-disc space-y-2 pl-8">
 						<li>
-							<code>count</code> - Specify the number of text units to generate. This
-							can be paragraphs, sentences, or words depending on your preference
-							(default is 3).
+							<code>count</code>: Specify the number of text units to generate.
+							Accepts an integer between <code>1</code> and <code>100</code> (default
+							is <code>3</code>).
 						</li>
 						<li>
-							<code>units</code> - Choose the unit type: <code>paragraphs</code>,{" "}
-							<code>sentences</code>, or <code>words</code>.
+							<code>units</code>: Define the type of text unit. Choose between{" "}
+							<code>paragraphs</code>, <code>sentences</code>, or <code>words</code>.
 						</li>
 						<li>
-							<code>format</code> - Output format selection between <code>plain</code>{" "}
-							text or <code>html</code>, making it easy to embed directly into web
-							projects or raw text files.
+							<code>format</code>: Select the output format. Use <code>plain</code>{" "}
+							for raw text strings or <code>html</code> to wrap content in paragraph
+							tags for direct web embedding.
 						</li>
 					</ul>
 					<p>
-						These options provide complete control over your placeholder content,
-						empowering you to maintain brand consistency and keep your design process
-						smooth and meaningful.
+						These options provide granular control over your placeholder content,
+						ensuring brand consistency and a smooth, efficient design process.
 					</p>
 				</SectionHeader>
 			</Container>

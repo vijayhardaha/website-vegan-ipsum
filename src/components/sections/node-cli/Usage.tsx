@@ -24,8 +24,9 @@ export default function Usage(): JSX.Element {
 					icon="laptop"
 				>
 					<p className="mb-8">
-						The CLI uses a simple and intuitive command structure. Provide the number of
-						text units followed by the unit type you want to generate.
+						The CLI features an intuitive syntax for rapid text generation. Simply
+						specify the desired quantity followed by the unit type to generate content
+						instantly.
 					</p>
 
 					<CodeBlock label="Generate Text Examples" language="bash">
@@ -35,13 +36,14 @@ vegan-ipsum 5 words`}
 					</CodeBlock>
 
 					<p>
-						By default, the CLI outputs plain text. You can further customize the output
-						using optional flags for format and structure.
+						By default, the tool outputs plain text suitable for terminal display or
+						piping to other files. You can further customize the structure and format
+						using optional command-line flags.
 					</p>
 
 					<p>
-						Supported units: <code>words</code>, <code>sentences</code>, and{" "}
-						<code>paragraphs</code>.
+						The library supports three primary units for generation: <code>words</code>,{" "}
+						<code>sentences</code>, and <code>paragraphs</code>.
 					</p>
 				</SectionHeader>
 			</Container>

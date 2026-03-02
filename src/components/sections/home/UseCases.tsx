@@ -58,9 +58,9 @@ export default function UseCases(): JSX.Element {
 					icon="calendarCheck"
 				>
 					<p>
-						Vegan Ipsum is perfect for your wire frames, mockups, and live prototypes.
-						Use it whenever you need placeholder text that reflects a compassionate and
-						ethical design approach.
+						Vegan Ipsum is the ideal filler text for wireframes, mockups, and live
+						prototypes. Use it whenever you need placeholder content that reflects a
+						compassionate and ethical design approach.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

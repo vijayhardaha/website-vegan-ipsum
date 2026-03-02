@@ -37,19 +37,26 @@ export default function Introduction(): JSX.Element {
 						icon="idCard"
 					>
 						<p>
-							Vegan Ipsum is a thoughtfully designed placeholder text generator
-							crafted especially for developers, designers, marketers, and content
-							creators who prioritize ethical, plant-based, and eco-conscious values.
+							Vegan Ipsum is a specialized placeholder text generator crafted for
+							developers, designers, marketers, and content creators who prioritize
+							ethical, plant-based, and eco-conscious values in their work.
 						</p>
 						<p>
-							Unlike traditional Lorem Ipsum generators, Vegan Ipsum produces filler
-							text infused with vegan-themed words and compassionate language,
-							perfectly tailored for projects centered around sustainability, animal
-							welfare, and green living.
+							Unlike traditional{" "}
+							<SmartLink
+								href="https://www.lipsum.com/"
+								aria-label="Visit standard Lorem Ipsum website"
+							>
+								Lorem Ipsum
+							</SmartLink>{" "}
+							generators, Vegan Ipsum produces filler text infused with vegan-themed
+							vocabulary and compassionate language. It is perfectly tailored for
+							projects centered around sustainability, animal welfare, and green
+							living.
 						</p>
 						<p>
 							Easy to integrate and highly customizable, Vegan Ipsum supports multiple
-							formats and delivery methods — from a web-based interface to{" "}
+							formats and delivery methods, from a web-based interface to{" "}
 							<SmartLink href="/json-api">REST APIs</SmartLink>,{" "}
 							<SmartLink href="/node-cli">command-line tools</SmartLink>, and{" "}
 							<SmartLink href="/vscode-extension">editor extensions</SmartLink>.

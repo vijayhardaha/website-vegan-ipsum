@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 import Icon from "@/components/primitives/Icon";
@@ -29,9 +30,22 @@ export default function Installation(): JSX.Element {
 					icon="download"
 				>
 					<p>
-						You can easily add the Vegan Ipsum extension to your VS Code setup in two
-						ways: via the built-in Marketplace search or by using the quick-install
-						command in your terminal.
+						You can integrate the{" "}
+						<SmartLink
+							href="https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum"
+							aria-label="View Vegan Ipsum extension details on the Visual Studio Marketplace"
+						>
+							Vegan Ipsum VS Code extension
+						</SmartLink>{" "}
+						into your{" "}
+						<SmartLink
+							href="https://code.visualstudio.com/"
+							aria-label="Download Visual Studio Code"
+						>
+							Visual Studio Code
+						</SmartLink>{" "}
+						setup in two ways: via the built-in Marketplace search or by using the
+						command-line interface for a quick installation.
 					</p>
 
 					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -44,7 +58,7 @@ export default function Installation(): JSX.Element {
 									<h3 className="mb-1 text-lg">
 										Method 1: Extensions Marketplace
 									</h3>
-									<p className="text-sm">Install via the VSCode UI</p>
+									<p className="text-sm">Install via the VS Code UI</p>
 								</div>
 							</div>
 							<ol className="space-y-3 text-sm leading-relaxed">
@@ -61,7 +75,7 @@ export default function Installation(): JSX.Element {
 									<>
 										Click <strong>Install</strong> button
 									</>,
-									<>Reload VSCode if prompted</>,
+									<>Reload VS Code if prompted</>,
 								].map((step, index) => (
 									<li key={index} className="flex items-baseline gap-3">
 										<span className="bg-secondary-muted text-secondary-dark inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">
@@ -87,7 +101,15 @@ export default function Installation(): JSX.Element {
 							</div>
 
 							<p className="mb-4 text-sm leading-relaxed">
-								Open Command Palette and run:
+								Open the{" "}
+								<SmartLink
+									href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
+									aria-label="Learn how to use the Command Palette"
+								>
+									Command Palette
+								</SmartLink>{" "}
+								(<kbd className="kbd">Ctrl+Shift+P</kbd> or{" "}
+								<kbd className="kbd">Cmd+Shift+P</kbd>) and run:
 							</p>
 
 							<div className="rounded-xl border border-slate-700 bg-slate-950 p-5 font-mono text-sm">
@@ -98,8 +120,14 @@ export default function Installation(): JSX.Element {
 							</div>
 
 							<InfoBox className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5">
-								This command triggers installation without navigating away from your
-								editor.
+								This command triggers installation directly from the{" "}
+								<SmartLink
+									href="https://marketplace.visualstudio.com/"
+									aria-label="Visit the Visual Studio Marketplace"
+								>
+									VS Code Marketplace
+								</SmartLink>{" "}
+								without navigating away from your editor.
 							</InfoBox>
 						</div>
 					</div>
