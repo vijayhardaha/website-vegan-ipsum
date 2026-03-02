@@ -22,6 +22,7 @@ export default function Header(): JSX.Element {
 	const pathname: string = usePathname();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const menuRef = useRef<HTMLDivElement>(null);
+	const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
 	/**
 	 * Effect hook to handle clicks outside the menu.
@@ -41,6 +42,20 @@ export default function Header(): JSX.Element {
 		};
 	}, []);
 
+	// Manage focus when mobile menu opens/closes to improve keyboard UX
+	useEffect(() => {
+		if (isMobileMenuOpen) {
+			// Focus the first focusable element inside the menu (if any)
+			const firstFocusable = menuRef.current?.querySelector(
+				"a, button, input, select, textarea, [tabindex]:not([tabindex='-1'])"
+			) as HTMLElement | null;
+			firstFocusable?.focus();
+		} else {
+			// Return focus to the toggle button when the menu closes
+			toggleButtonRef.current?.focus();
+		}
+	}, [isMobileMenuOpen]);
+
 	/**
 	 * Determines if a given path is the active route.
 	 *
@@ -53,14 +68,14 @@ export default function Header(): JSX.Element {
 		<header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
 			<div className="mx-auto max-w-5xl px-4 md:px-6">
 				<div className="flex items-center justify-between gap-6">
-					<SmartLink href="/" aria-label="Navigate to homepage" hoverEffect={false}>
+					<SmartLink href="/" aria-label="Navigate to homepage" hoverEffect="none">
 						<Image
 							src="/logo.svg"
 							alt="Vegan Ipsum Logo"
 							width={213}
 							height={32}
 							priority
-							className="h-auto w-[220px] py-2"
+							className="h-auto w-55 py-2"
 						/>
 						<span className="sr-only">Vegan Ipsum</span>
 					</SmartLink>
@@ -69,6 +84,7 @@ export default function Header(): JSX.Element {
 							size="icon"
 							variant="primary-outline"
 							className="text-2xl lg:hidden"
+							ref={toggleButtonRef}
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 							aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
 							aria-expanded={isMobileMenuOpen}
@@ -100,7 +116,7 @@ export default function Header(): JSX.Element {
 											aria-label={link.label}
 											aria-current={isActive(link.href) ? "page" : undefined}
 											onClick={() => setIsMobileMenuOpen(false)}
-											hoverEffect={false}
+											hoverEffect="border"
 										>
 											{link.label}
 										</SmartLink>
