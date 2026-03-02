@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import SmartLink from "@/components/composites/SmartLink";
 import { FOOTER_NAV_LINKS, NavLink } from "@/constants/navlinks";
-import { cn } from "@/utils/classnames";
 
 /**
  * Footer component for the Vegan Ipsum website.
@@ -42,7 +41,7 @@ export default function Footer(): JSX.Element {
 									<SmartLink
 										href={link.href}
 										aria-label={link.label}
-										className={cn("hover:text-primary-muted")}
+										className="after:-bottom-1"
 										hoverEffect="border"
 									>
 										{link.label}
@@ -58,6 +57,7 @@ export default function Footer(): JSX.Element {
 						<SmartLink
 							href="https://instagram.com/vegan.vijay"
 							aria-label="Visit vijay hardaha's instagram profile"
+							className="after:-bottom-1"
 							hoverEffect="border"
 						>
 							Vijay Hardaha
