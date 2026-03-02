@@ -22,14 +22,14 @@ export default function Footer(): JSX.Element {
 							href="/"
 							aria-label="Navigate to homepage"
 							className="text-xl font-black"
-							hoverEffect={false}
+							hoverEffect="none"
 						>
 							<Image
 								src="/logo-white.svg"
 								alt="Vegan Ipsum Logo"
 								width={213}
 								height={32}
-								className="h-auto w-[180px]"
+								className="h-auto w-45"
 							/>
 							<span className="sr-only">Vegan Ipsum</span>
 						</SmartLink>
@@ -43,7 +43,7 @@ export default function Footer(): JSX.Element {
 										href={link.href}
 										aria-label={link.label}
 										className={cn("hover:text-primary-muted")}
-										hoverEffect={false}
+										hoverEffect="border"
 									>
 										{link.label}
 									</SmartLink>
@@ -58,7 +58,7 @@ export default function Footer(): JSX.Element {
 						<SmartLink
 							href="https://instagram.com/vegan.vijay"
 							aria-label="Visit vijay hardaha's instagram profile"
-							hoverEffect={false}
+							hoverEffect="border"
 						>
 							Vijay Hardaha
 						</SmartLink>
