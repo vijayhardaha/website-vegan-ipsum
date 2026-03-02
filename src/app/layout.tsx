@@ -54,6 +54,12 @@ export default function RootLayout({ children }: { children: ReactNode }): JSX.E
 			<body
 				className={`${sansFont.variable} ${monoFont.variable} ${headingFont.variable} text-foreground bg-background font-base font-sans leading-relaxed font-normal antialiased`}
 			>
+				<a
+					href="#main"
+					className="bg-primary sr-only absolute top-4 left-4 z-50 rounded-md px-3 py-2 text-sm font-medium text-white focus:not-sr-only"
+				>
+					Skip to content
+				</a>
 				<Layout>{children}</Layout>
 			</body>
 		</html>
