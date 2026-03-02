@@ -3,6 +3,7 @@ import type { JSX } from "react";
 import Image from "next/image";
 
 import SectionHeader from "@/components/composites/SectionHeader";
+import SmartLink from "@/components/composites/SmartLink";
 import Section from "@/components/layout/Section";
 import Container from "@/components/primitives/Container";
 
@@ -47,19 +48,50 @@ export default function Overview(): JSX.Element {
 						</p>
 
 						<ul className="space-y-4">
-							{[
-								"Plant-based themes woven into every sentence",
-								"Resonates with eco-conscious brands and audiences",
-								"Works across API, CLI, NPM, and VS Code",
-								"Fully open source, free forever",
-							].map((feature, index) => (
-								<li key={index} className="flex items-start gap-2">
-									<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
-										&#10003;
-									</div>
-									<span>{feature}</span>
-								</li>
-							))}
+							<li className="flex items-start gap-2">
+								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+									&#10003;
+								</div>
+								<span>Plant-based themes woven into every sentence</span>
+							</li>
+
+							<li className="flex items-start gap-2">
+								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+									&#10003;
+								</div>
+								<span>Resonates with eco-conscious brands and audiences</span>
+							</li>
+
+							<li className="flex items-start gap-2">
+								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+									&#10003;
+								</div>
+								<span>
+									Works across{" "}
+									<SmartLink href="/json-api" className="underline">
+										API
+									</SmartLink>
+									,{" "}
+									<SmartLink href="/node-cli" className="underline">
+										CLI
+									</SmartLink>
+									,{" "}
+									<SmartLink href="/npm-package" className="underline">
+										NPM
+									</SmartLink>
+									, and{" "}
+									<SmartLink href="/vscode-extension" className="underline">
+										VS Code
+									</SmartLink>
+								</span>
+							</li>
+
+							<li className="flex items-start gap-2">
+								<div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold">
+									&#10003;
+								</div>
+								<span>Fully open source, free forever</span>
+							</li>
 						</ul>
 					</SectionHeader>
 				</div>
