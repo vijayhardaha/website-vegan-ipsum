@@ -101,7 +101,7 @@ export default function SmartLink({
 	};
 
 	// Build classes based on hoverEffect union: 'none' | 'border' | 'bg' (default 'bg')
-	const baseClasses = ["relative inline-block", "transition-colors duration-200"];
+	const baseClasses = ["relative", "transition-colors duration-200"];
 	let effectClasses: string[] = [];
 	let defaultLinkClasses = "";
 	let hoverTextClass = "";
@@ -112,7 +112,7 @@ export default function SmartLink({
 		effectClasses = [
 			"after:absolute after:left-0 after:bottom-0 after:h-full after:w-full",
 			"after:origin-bottom after:scale-y-0",
-			"after:bg-muted",
+			"after:bg-secondary-muted",
 			"after:transition-transform after:duration-300",
 			"hover:after:scale-y-100",
 			"after:-z-10",
@@ -122,7 +122,7 @@ export default function SmartLink({
 		// no default border; show left-to-right border animation on hover
 		defaultLinkClasses = "";
 		effectClasses = [
-			"after:absolute after:left-0 after:bottom-0",
+			"after:absolute after:left-0 after:-bottom-0",
 			"after:block after:h-0.5 after:w-full",
 			"after:origin-left after:scale-x-0",
 			"after:bg-current",
@@ -162,12 +162,12 @@ export default function SmartLink({
 				href={href}
 				target="_blank"
 				rel="noopener noreferrer"
-				className={cn(linkClasses, "relative inline-flex items-center gap-0.5", className)}
+				className={cn(linkClasses, "relative inline-flex items-center gap-px", className)}
 				aria-label={ariaLabel}
 				onClick={onClick}
 				{...props}
 			>
-				{children}
+				<span className="leading-tight">{children}</span>
 				{linkLine && <Icon name="arrowOutward" className="relative top-px text-inherit" />}
 			</Link>
 		);
