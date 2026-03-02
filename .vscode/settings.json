@@ -19,9 +19,7 @@
 	// SAVE-TIME CODE ACTIONS
 	// ==========================================
 	// Run ESLint auto-fixes only when explicitly requested on save.
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
-	},
+	"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
 
 	// ==========================================
 	// ESLINT LANGUAGE SCOPE
