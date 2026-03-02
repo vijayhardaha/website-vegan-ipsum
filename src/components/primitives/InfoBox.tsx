@@ -1,6 +1,7 @@
 import type { JSX, ReactNode } from "react";
 
-import Icon from "@/components/primitives/Icon";
+import { RiFileList2Line } from "react-icons/ri";
+
 import { cn } from "@/utils/classnames";
 
 /**
@@ -26,13 +27,13 @@ export default function InfoBox({ children, className = "" }: InfoBoxProps): JSX
 	return (
 		<div
 			className={cn(
-				"bg-primary-muted border-primary/40 text-primary-dark flex items-start gap-2 rounded-3xl border px-4 py-3 text-sm leading-relaxed",
+				"bg-primary-muted border-primary/40 text-primary-dark rounded-3xl border p-6 leading-relaxed",
 				className
 			)}
 		>
-			<span className="relative top-0.25 shrink-0 text-xl">
-				<Icon name="infoCircle" />
-			</span>
+			<div className="relative mb-4 flex items-center gap-2 text-2xl font-bold">
+				<RiFileList2Line /> <span className="text-xl">Note</span>
+			</div>
 
 			<p>{children}</p>
 		</div>
