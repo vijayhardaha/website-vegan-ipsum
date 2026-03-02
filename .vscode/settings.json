@@ -4,18 +4,6 @@
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "explicit"
 	},
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact"
-	],
-	"cSpell.words": [
-		"vijayhardaha",
-		"Vijay",
-		"Hardaha",
-		"codewars",
-		"stactoverflow",
-		"devto",
-	]
+	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"cSpell.words": ["vijayhardaha", "Vijay", "Hardaha", "codewars", "stactoverflow", "devto"]
 }
