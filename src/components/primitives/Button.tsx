@@ -1,69 +1,12 @@
 'use client';
 
-import type { JSX, ReactNode } from 'react';
-import {
-  forwardRef,
-  isValidElement,
-  type ButtonHTMLAttributes,
-  type HTMLAttributes,
-  type ReactElement,
-  type Ref,
-  type RefObject,
-} from 'react';
-import { cloneElement } from 'react';
+import type { JSX, ReactNode, ButtonHTMLAttributes } from 'react';
+import { forwardRef } from 'react';
 
+import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
 
 import { cn } from '@/utils/classnames';
-
-/**
- * Slot component for polymorphic prop forwarding.
- */
-type SlotProps = {
-  children: ReactNode; // Allow any valid ReactNode (string, ReactElement, etc.)
-} & HTMLAttributes<HTMLElement>;
-
-/**
- * The Slot component is a polymorphic wrapper that forwards props and refs to its child element.
- * It ensures that the child element is a valid React element and properly handles refs.
- *
- * @param children - The child element to which props and refs will be forwarded.
- * @param props - Additional props to be forwarded to the child element.
- * @param ref - A ref that will be forwarded to the child element.
- * @returns A cloned React element with forwarded props and refs, or null if the child is not a valid React element.
- */
-const Slot = forwardRef<HTMLElement, SlotProps>(({ children, ...props }, ref) => {
-  if (!isValidElement(children)) {
-    return null;
-  }
-
-  // Ensure children.props is always an object before spreading
-  const childProps = children.props && typeof children.props === 'object' ? children.props : {};
-
-  return cloneElement(children, {
-    ...props,
-    ...childProps, // Spread props and ensure children.props is valid
-    ref: (childRef: HTMLElement | null) => {
-      if (typeof ref === 'function') {
-        ref(childRef);
-      } else if (ref && childRef) {
-        (ref as RefObject<HTMLElement>).current = childRef;
-      }
-
-      // Handle the child's original ref separately
-      const { ref: childOriginalRef } = children as ReactElement & { ref?: Ref<HTMLElement> };
-      if (typeof childOriginalRef === 'function') {
-        childOriginalRef(childRef);
-      } else if (childOriginalRef && childRef) {
-        (childOriginalRef as RefObject<HTMLElement>).current = childRef;
-      }
-    },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } as any);
-});
-
-// Set the display name for the Slot component. This is useful for debugging and React DevTools.
-Slot.displayName = 'Slot';
 
 /**
  * Button component with multiple variants and sizes.
@@ -152,11 +95,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', asChild = false, children, ...props }, ref): JSX.Element => {
     const Comp = asChild ? Slot : 'button';
 
-    // Ensure props is an object before spreading
-    const validProps = props && typeof props === 'object' ? props : {};
-
     return (
-      <Comp data-slot="button" className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...validProps}>
+      <Comp data-slot="button" className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
         {children}
       </Comp>
     );
