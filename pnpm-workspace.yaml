@@ -1,4 +1,0 @@
-onlyBuiltDependencies:
-  - sharp
-  - tailwindcss-corner-shape
-  - unrs-resolver
