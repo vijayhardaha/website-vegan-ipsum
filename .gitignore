@@ -1,99 +1,102 @@
-# ==============================================================================
-# GIT IGNORE RULES
-# ==============================================================================
-# Purpose: Excludes generated, local, and environment-specific files so version
-# control tracks only intentional source and project artifacts.
+# =======================================================================
+# Git Ignore
+# =======================================================================
+# Purpose: Prevent build artifacts, local config, and sensitive
+#          credentials from entering version control.
 # Docs: https://git-scm.com/docs/gitignore
-# ==============================================================================
+# =======================================================================
 
-# ==========================================
-# PACKAGE MANAGER DEPENDENCIES
-# ==========================================
-# Ignore installed Node dependencies that are reproducible from lockfiles
-/node_modules
-# Ignore Yarn Plug'n'Play manifest directory
-/.pnp
-# Ignore Yarn Plug'n'Play data files
+# ----------------------------------------------------------------------
+# Dependency Managers (Node)
+# ----------------------------------------------------------------------
+# Large binary folders should never be committed.
+node_modules/
+.pnp/
 .pnp.*
-# Ignore all Yarn internal metadata by default
+
+# Yarn 2+ Zero-Installs support
 .yarn/*
-# Keep Yarn patch files in version control
 !.yarn/patches
-# Keep Yarn plugin definitions in version control
 !.yarn/plugins
-# Keep Yarn release binaries in version control
 !.yarn/releases
-# Keep Yarn version declarations in version control
 !.yarn/versions
 
-# ==========================================
-# TEST OUTPUT
-# ==========================================
-# Ignore test coverage reports generated during CI and local runs
-/coverage
+# ----------------------------------------------------------------------
+# Php (Backend)
+# ----------------------------------------------------------------------
+# Composer dependencies
+vendor/
 
-# ==========================================
-# NEXT.JS BUILD ARTIFACTS
-# ==========================================
-# Ignore Next.js build output directory
-/.next/
-# Ignore static export output directory
-/out/
-
-# ==========================================
-# PRODUCTION GENERATED FILES
-# ==========================================
-# Ignore generic build output directory
-/build
-# Ignore generated robots file in public output
-/public/robots.txt
-# Ignore generated sitemap files in public output
-/public/sitemap*
-# Ignore generated local data assets
-/src/data/*
-
-# ==========================================
-# OPERATING SYSTEM & LOCAL MISC FILES
-# ==========================================
-# Ignore macOS finder metadata
-.DS_Store
-# Ignore local private key files
+# ----------------------------------------------------------------------
+# Secrets & Security
+# ----------------------------------------------------------------------
+# WARNING: Do not remove these unless you have an encryption layer.
+.env
+.env.*
+!.env.example
 *.pem
-# Ignore Windows explorer metadata
-Thumbs.db
-
-# ==========================================
-# DEBUG LOGS
-# ==========================================
-# Ignore npm debug logs
-npm-debug.log*
-# Ignore Yarn debug logs
-yarn-debug.log*
-# Ignore Yarn error logs
-yarn-error.log*
-# Ignore pnpm debug logs
-.pnpm-debug.log*
-
-# ==========================================
-# ENVIRONMENT FILES
-# ==========================================
-# Ignore all environment variable files by default
-.env*
-
-# ==========================================
-# DEPLOYMENT ARTIFACTS
-# ==========================================
-# Ignore Vercel local project metadata
 .vercel
-# Ignore root robots file when generated externally
-robots.txt
-# Ignore root sitemap files when generated externally
-*sitemap*.xml
 
-# ==========================================
-# TYPESCRIPT CACHES
-# ==========================================
-# Ignore incremental TypeScript build info cache files
+# ----------------------------------------------------------------------
+# Build & Compilation Output
+# ----------------------------------------------------------------------
+# Next.js / React
+.next/
+dist/
+build/
+
+# TypeScript
 *.tsbuildinfo
-# Ignore generated Next.js environment type declaration file
 next-env.d.ts
+
+# ----------------------------------------------------------------------
+# Styles (Sass/Css)
+# ----------------------------------------------------------------------
+# Ignore compiled CSS maps if you are committing the CSS separately,
+# or ignore the compiled CSS entirely if building in CI.
+# *.css.map
+# *.min.css
+
+# ----------------------------------------------------------------------
+# Testing & Debugging
+# ----------------------------------------------------------------------
+# Coverage reports
+coverage/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----------------------------------------------------------------------
+# Editor & Ide Settings
+# ----------------------------------------------------------------------
+# These are developer-specific, not project-specific.
+#.vscode/
+.idea/
+#*.swp
+#*.swo
+
+# ----------------------------------------------------------------------
+# System & Os Junk
+# ----------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ----------------------------------------------------------------------
+# Seo & Generated Data
+# ----------------------------------------------------------------------
+# Automatically generated files usually don't need version control
+# unless your deployment process requires it.
+/public/robots.txt
+/public/sitemap*
+*sitemap*.xml
+.env*.local
