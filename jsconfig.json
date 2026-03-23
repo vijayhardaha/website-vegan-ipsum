@@ -1,19 +1,30 @@
-{
-	// ==============================================================================
-	// JAVASCRIPT LANGUAGE SERVICE CONFIG
-	// ==============================================================================
-	// Purpose: Improves editor intelligence for JavaScript tooling and alias
-	// resolution in this Next.js project.
-	// Docs: https://code.visualstudio.com/docs/languages/jsconfig
-	// ==============================================================================
+// =======================================================================
+// Javascript Intelligence Config
+// =======================================================================
+// Purpose: Improves editor features (auto-imports, path alias resolution)
+//          for JavaScript files within the project.
+// Docs: https://code.visualstudio.com/docs/languages/jsconfig
+// =======================================================================
 
-	// --- Compiler & Editor Intelligence ---
-	"compilerOptions": {
-		// Allow importing JSON files as typed modules in JS tooling.
-		"resolveJsonModule": true,
-		// Use React automatic JSX transform behavior.
-		"jsx": "react-jsx",
-		// Map @/* imports to the src directory for consistent absolute imports.
-		"paths": { "@/*": ["./src/*"] }
-	}
+{
+  "compilerOptions": {
+    // ---- Editor & JSX ----
+    // Enable the modern React JSX transform so files don't need `import React`.
+    "jsx": "react-jsx",
+
+    // ---- Module resolution ----
+    // Allow importing JSON files directly: `import data from './data.json'`.
+    "resolveJsonModule": true,
+
+    // ---- Path aliases ----
+    // Base directory for non-relative imports (used by editor/tooling).
+    "baseUrl": ".",
+
+    // Map `@/` imports to `./src/` so `@/components/X` resolves to `src/components/X`.
+    "paths": { "@/*": ["./src/*"] }
+  },
+
+  // ---- Exclusions ----
+  // Files and folders excluded from JS language service and editor features
+  "exclude": ["node_modules", ".next", "out"]
 }
