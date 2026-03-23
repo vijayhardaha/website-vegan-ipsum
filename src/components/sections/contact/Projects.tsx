@@ -1,82 +1,78 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import SectionHeader from "@/components/composites/SectionHeader";
-import SmartLink from "@/components/composites/SmartLink";
-import Section from "@/components/layout/Section";
-import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
-import { IconName } from "@/constants/icons";
+import SectionHeader from '@/components/composites/SectionHeader';
+import SmartLink from '@/components/composites/SmartLink';
+import Section from '@/components/layout/Section';
+import Container from '@/components/primitives/Container';
+import Icon from '@/components/primitives/Icon';
+import type { IconName } from '@/constants/icons';
 
 /**
  * Represents the details of a card displayed in the component.
  */
 interface Card {
-	title: string;
-	icon: IconName;
-	link: string;
-	buttonText: string;
-	ariaLabel: string;
-	content: string;
+  title: string;
+  icon: IconName;
+  link: string;
+  buttonText: string;
+  ariaLabel: string;
+  content: string;
 }
 
 /**
  * An array of card details used to render the cards in the component.
  */
 const cards: Card[] = [
-	{
-		title: "NPM Package",
-		icon: "cube",
-		link: "https://www.npmjs.com/package/vegan-ipsum",
-		buttonText: "View on NPM",
-		ariaLabel: "View vegan-ipsum package on npm library",
-		content:
-			"Install vegan-ipsum via npm and generate plant-based placeholder content programmatically in your JavaScript projects.",
-	},
-	{
-		title: "NPM Package Repository",
-		icon: "laptop",
-		link: "https://github.com/vijayhardaha/node-vegan-ipsum",
-		buttonText: "View on GitHub",
-		ariaLabel: "View vegan-ipsum package source code on GitHub",
-		content:
-			"Browse the source code for the Node.js implementation of Vegan Ipsum, contribute, or fork the project.",
-	},
-	{
-		title: "VS Code Extension",
-		icon: "laptop",
-		link: "https://marketplace.visualstudio.com/items/?itemName=vijayhardaha.vegan-ipsum",
-		buttonText: "View Extension",
-		ariaLabel: "View vegan-ipsum extension on VS Code Marketplace",
-		content:
-			"Install the Vegan Ipsum extension for Visual Studio Code and generate placeholder content directly in your editor.",
-	},
-	{
-		title: "VS Code Extension Repository",
-		icon: "laptop",
-		link: "https://github.com/vijayhardaha/vscode-vegan-ipsum",
-		buttonText: "View on GitHub",
-		ariaLabel: "View vegan-ipsum VS Code extension source code on GitHub",
-		content:
-			"Explore the source code for the VS Code extension, report issues, or contribute improvements.",
-	},
-	{
-		title: "Website Repository",
-		icon: "globe",
-		link: "https://github.com/vijayhardaha/website-vegan-ipsum",
-		buttonText: "View on GitHub",
-		ariaLabel: "View vegan ipsum website source code on GitHub",
-		content:
-			"Check out the source code for the Vegan Ipsum website, suggest features, or submit pull requests.",
-	},
-	{
-		title: "API Repository",
-		icon: "bolt",
-		link: "https://github.com/vijayhardaha/website-vegan-ipsum",
-		buttonText: "View on GitHub",
-		ariaLabel: "View vegan ipsum API source code on GitHub",
-		content:
-			"Browse the API source code, understand the implementation, or contribute to its development.",
-	},
+  {
+    title: 'NPM Package',
+    icon: 'cube',
+    link: 'https://www.npmjs.com/package/vegan-ipsum',
+    buttonText: 'View on NPM',
+    ariaLabel: 'View vegan-ipsum package on npm library',
+    content:
+      'Install vegan-ipsum via npm and generate plant-based placeholder content programmatically in your JavaScript projects.',
+  },
+  {
+    title: 'NPM Package Repository',
+    icon: 'laptop',
+    link: 'https://github.com/vijayhardaha/node-vegan-ipsum',
+    buttonText: 'View on GitHub',
+    ariaLabel: 'View vegan-ipsum package source code on GitHub',
+    content: 'Browse the source code for the Node.js implementation of Vegan Ipsum, contribute, or fork the project.',
+  },
+  {
+    title: 'VS Code Extension',
+    icon: 'laptop',
+    link: 'https://marketplace.visualstudio.com/items/?itemName=vijayhardaha.vegan-ipsum',
+    buttonText: 'View Extension',
+    ariaLabel: 'View vegan-ipsum extension on VS Code Marketplace',
+    content:
+      'Install the Vegan Ipsum extension for Visual Studio Code and generate placeholder content directly in your editor.',
+  },
+  {
+    title: 'VS Code Extension Repository',
+    icon: 'laptop',
+    link: 'https://github.com/vijayhardaha/vscode-vegan-ipsum',
+    buttonText: 'View on GitHub',
+    ariaLabel: 'View vegan-ipsum VS Code extension source code on GitHub',
+    content: 'Explore the source code for the VS Code extension, report issues, or contribute improvements.',
+  },
+  {
+    title: 'Website Repository',
+    icon: 'globe',
+    link: 'https://github.com/vijayhardaha/website-vegan-ipsum',
+    buttonText: 'View on GitHub',
+    ariaLabel: 'View vegan ipsum website source code on GitHub',
+    content: 'Check out the source code for the Vegan Ipsum website, suggest features, or submit pull requests.',
+  },
+  {
+    title: 'API Repository',
+    icon: 'bolt',
+    link: 'https://github.com/vijayhardaha/website-vegan-ipsum',
+    buttonText: 'View on GitHub',
+    ariaLabel: 'View vegan ipsum API source code on GitHub',
+    content: 'Browse the API source code, understand the implementation, or contribute to its development.',
+  },
 ];
 
 /**
@@ -88,66 +84,54 @@ const cards: Card[] = [
  * @returns {JSX.Element} The rendered component.
  */
 export default function Projects(): JSX.Element {
-	return (
-		<Section
-			id="projects"
-			aria-label="Projects and tools related to Vegan Ipsum"
-		>
-			<Container>
-				<SectionHeader
-					heading={
-						<>
-							Vegan Ipsum{" "}
-							<span className="text-primary">
-								Ecosystem/Projects
-							</span>
-						</>
-					}
-					tagline="Open Source & Tooling"
-					icon="cube"
-				>
-					<p>
-						Explore the ecosystem of Vegan Ipsum projects that power
-						this ethical, plant-based placeholder text generator.
-						All repositories are actively maintained and
-						open-source, welcoming contributions from developers and
-						designers passionate about ethical technology.
-					</p>
+  return (
+    <Section id="projects" aria-label="Projects and tools related to Vegan Ipsum">
+      <Container>
+        <SectionHeader
+          heading={
+            <>
+              Vegan Ipsum <span className="text-primary">Ecosystem/Projects</span>
+            </>
+          }
+          tagline="Open Source & Tooling"
+          icon="cube"
+        >
+          <p>
+            Explore the ecosystem of Vegan Ipsum projects that power this ethical, plant-based placeholder text
+            generator. All repositories are actively maintained and open-source, welcoming contributions from developers
+            and designers passionate about ethical technology.
+          </p>
 
-					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cards.map((card, index: number) => (
-							<div
-								key={index}
-								className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
-							>
-								<div className="flex items-start gap-4">
-									<div className="bg-primary-muted text-primary inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
-										<Icon name={card.icon} />
-									</div>
-									<div>
-										<h3 className="text-primary-solid mb-2 text-lg">
-											{card.title}
-										</h3>
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+            {cards.map((card, index: number) => (
+              <div
+                key={index}
+                className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary-muted text-primary inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
+                    <Icon name={card.icon} />
+                  </div>
+                  <div>
+                    <h3 className="text-primary-solid mb-2 text-lg">{card.title}</h3>
 
-										<p className="text-foreground/80 mb-2 text-sm leading-relaxed">
-											{card.content}
-										</p>
+                    <p className="text-foreground/80 mb-2 text-sm leading-relaxed">{card.content}</p>
 
-										<SmartLink
-											className="text-primary text-sm font-medium"
-											href={card.link}
-											aria-label={card.ariaLabel}
-											hoverEffect="border"
-										>
-											{card.buttonText}
-										</SmartLink>
-									</div>
-								</div>
-							</div>
-						))}
-					</div>
-				</SectionHeader>
-			</Container>
-		</Section>
-	);
+                    <SmartLink
+                      className="text-primary text-sm font-medium"
+                      href={card.link}
+                      aria-label={card.ariaLabel}
+                      hoverEffect="border"
+                    >
+                      {card.buttonText}
+                    </SmartLink>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </SectionHeader>
+      </Container>
+    </Section>
+  );
 }

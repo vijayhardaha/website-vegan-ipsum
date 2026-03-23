@@ -1,4 +1,4 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
 /**
  * Safely stringify JSON-LD data by escaping the less-than character to prevent XSS vulnerabilities.
@@ -7,7 +7,7 @@ import type { JSX } from "react";
  * @returns {string} - The safely stringified JSON-LD data.
  */
 export function safeJsonLd(data: unknown): string {
-	return JSON.stringify(data).replace(/</g, "\\u003c");
+  return JSON.stringify(data).replace(/</g, '\\u003c');
 }
 
 /**
@@ -17,15 +17,10 @@ export function safeJsonLd(data: unknown): string {
  * @returns {JSX.Element} - A script tag containing the JSON-LD structured data.
  */
 export default function JsonLd({ data }: { data: object[] }): JSX.Element {
-	return (
-		<script
-			type="application/ld+json"
-			dangerouslySetInnerHTML={{
-				__html: safeJsonLd({
-					"@context": "https://schema.org",
-					"@graph": data,
-				}),
-			}}
-		/>
-	);
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: safeJsonLd({ '@context': 'https://schema.org', '@graph': data }) }}
+    />
+  );
 }

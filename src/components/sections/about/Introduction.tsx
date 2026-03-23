@@ -1,11 +1,11 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import SectionHeader from "@/components/composites/SectionHeader";
-import SmartLink from "@/components/composites/SmartLink";
-import Section from "@/components/layout/Section";
-import Container from "@/components/primitives/Container";
+import SectionHeader from '@/components/composites/SectionHeader';
+import SmartLink from '@/components/composites/SmartLink';
+import Section from '@/components/layout/Section';
+import Container from '@/components/primitives/Container';
 
 /**
  * This component serves as the introduction section for the website,
@@ -15,71 +15,44 @@ import Container from "@/components/primitives/Container";
  * @returns {JSX.Element} The rendered component.
  */
 export default function Introduction(): JSX.Element {
-	return (
-		<Section
-			id="what-is-vegan-ipsum"
-			aria-label="Introduction to Vegan Ipsum"
-		>
-			<Container>
-				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-					<div className="md:order-2">
-						<Image
-							src="/welcoming.svg"
-							alt="Men welcoming you to Vegan Ipsum Generator"
-							width={613}
-							height={701}
-						/>
-					</div>
-					<SectionHeader
-						heading={
-							<>
-								A Thoughtful{" "}
-								<span className="text-primary">
-									Introduction
-								</span>
-							</>
-						}
-						tagline="Identity"
-						icon="idCard"
-					>
-						<p>
-							Vegan Ipsum is a specialized placeholder text
-							generator crafted for developers, designers,
-							marketers, and content creators who prioritize
-							ethical, plant-based, and eco-conscious values in
-							their work.
-						</p>
-						<p>
-							Unlike traditional{" "}
-							<SmartLink
-								href="https://www.lipsum.com/"
-								aria-label="Visit standard Lorem Ipsum website"
-							>
-								Lorem Ipsum
-							</SmartLink>{" "}
-							generators, Vegan Ipsum produces filler text infused
-							with vegan-themed vocabulary and compassionate
-							language. It is perfectly tailored for projects
-							centered around sustainability, animal welfare, and
-							green living.
-						</p>
-						<p>
-							Easy to integrate and highly customizable, Vegan
-							Ipsum supports multiple formats and delivery
-							methods, from a web-based interface to{" "}
-							<SmartLink href="/json-api">REST APIs</SmartLink>,{" "}
-							<SmartLink href="/node-cli">
-								command-line tools
-							</SmartLink>
-							, and{" "}
-							<SmartLink href="/vscode-extension">
-								editor extensions
-							</SmartLink>
-							.
-						</p>
-					</SectionHeader>
-				</div>
-			</Container>
-		</Section>
-	);
+  return (
+    <Section id="what-is-vegan-ipsum" aria-label="Introduction to Vegan Ipsum">
+      <Container>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="md:order-2">
+            <Image src="/welcoming.svg" alt="Men welcoming you to Vegan Ipsum Generator" width={613} height={701} />
+          </div>
+          <SectionHeader
+            heading={
+              <>
+                A Thoughtful <span className="text-primary">Introduction</span>
+              </>
+            }
+            tagline="Identity"
+            icon="idCard"
+          >
+            <p>
+              Vegan Ipsum is a specialized placeholder text generator crafted for developers, designers, marketers, and
+              content creators who prioritize ethical, plant-based, and eco-conscious values in their work.
+            </p>
+            <p>
+              Unlike traditional{' '}
+              <SmartLink href="https://www.lipsum.com/" aria-label="Visit standard Lorem Ipsum website">
+                Lorem Ipsum
+              </SmartLink>{' '}
+              generators, Vegan Ipsum produces filler text infused with vegan-themed vocabulary and compassionate
+              language. It is perfectly tailored for projects centered around sustainability, animal welfare, and green
+              living.
+            </p>
+            <p>
+              Easy to integrate and highly customizable, Vegan Ipsum supports multiple formats and delivery methods,
+              from a web-based interface to <SmartLink href="/json-api">REST APIs</SmartLink>,{' '}
+              <SmartLink href="/node-cli">command-line tools</SmartLink>, and{' '}
+              <SmartLink href="/vscode-extension">editor extensions</SmartLink>.
+            </p>
+          </SectionHeader>
+        </div>
+      </Container>
+    </Section>
+  );
 }

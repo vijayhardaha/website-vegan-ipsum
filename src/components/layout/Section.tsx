@@ -1,15 +1,15 @@
-import type { HTMLAttributes, JSX, ReactNode } from "react";
+import type { HTMLAttributes, JSX, ReactNode } from 'react';
 
-import { cn } from "@/utils/classnames";
+import { cn } from '@/utils/classnames';
 
 /**
  * Props for the Section component
  */
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
-	/** Child elements to render inside the section */
-	children: ReactNode;
-	/** Additional CSS classes */
-	className?: string;
+  /** Child elements to render inside the section */
+  children: ReactNode;
+  /** Additional CSS classes */
+  className?: string;
 }
 
 /**
@@ -19,17 +19,10 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  * @param {SectionProps} props - The properties for the Section component, including children and className.
  * @returns {JSX.Element} The rendered component.
  */
-export default function Section({
-	children,
-	className,
-	...props
-}: SectionProps): JSX.Element {
-	return (
-		<section
-			className={cn("relative py-16 md:py-20", className)}
-			{...props}
-		>
-			{children}
-		</section>
-	);
+export default function Section({ children, className, ...props }: SectionProps): JSX.Element {
+  return (
+    <section className={cn('relative py-16 md:py-20', className)} {...props}>
+      {children}
+    </section>
+  );
 }

@@ -1,10 +1,10 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import PageTags from "@/components/composites/PageTags";
-import SmartLink from "@/components/composites/SmartLink";
-import Button from "@/components/primitives/Button";
-import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
+import PageTags from '@/components/composites/PageTags';
+import SmartLink from '@/components/composites/SmartLink';
+import Button from '@/components/primitives/Button';
+import Container from '@/components/primitives/Container';
+import Icon from '@/components/primitives/Icon';
 
 /**
  * Hero component for displaying the main introduction and call-to-action buttons.
@@ -12,66 +12,56 @@ import Icon from "@/components/primitives/Icon";
  * @returns {JSX.Element} The rendered Hero component.
  */
 export default function Hero(): JSX.Element {
-	return (
-		<section
-			id="hero"
-			className="from-background via-secondary-muted/15 to-primary-100/60 relative flex items-center justify-center bg-linear-to-br py-24 text-center md:min-h-[calc(100vh-68px)]"
-			aria-label="Section introducing the Vegan Ipsum Generator with a headline, description, and call-to-action buttons"
-		>
-			<div className="pointer-events-none absolute -top-25 -right-25 h-125 w-125 rounded-full bg-[#d4edcc] opacity-64 blur-[60px]"></div>
-			<div className="pointer-events-none absolute top-[30%] left-[10%] h-75 w-75 rounded-full bg-[#7bbf6a] opacity-36 blur-[60px]"></div>
-			<div className="pointer-events-none absolute -bottom-20 -left-20 h-87.5 w-87.5 rounded-full bg-[#c8e6b8] opacity-36 blur-[60px]"></div>
-			<Container>
-				<PageTags
-					tags={[
-						"🌱 Ethical & Cruelty-Free",
-						"🥗 Plant-Based Variety",
-						"💻 Developer Focused",
-						"🎁 100% Free",
-					]}
-					center={true}
-				/>
+  return (
+    <section
+      id="hero"
+      className="from-background via-secondary-muted/15 to-primary-100/60 relative flex items-center justify-center bg-linear-to-br py-24 text-center md:min-h-[calc(100vh-68px)]"
+      aria-label="Section introducing the Vegan Ipsum Generator with a headline, description, and call-to-action buttons"
+    >
+      <div className="pointer-events-none absolute -top-25 -right-25 h-125 w-125 rounded-full bg-[#d4edcc] opacity-64 blur-[60px]"></div>
+      <div className="pointer-events-none absolute top-[30%] left-[10%] h-75 w-75 rounded-full bg-[#7bbf6a] opacity-36 blur-[60px]"></div>
+      <div className="pointer-events-none absolute -bottom-20 -left-20 h-87.5 w-87.5 rounded-full bg-[#c8e6b8] opacity-36 blur-[60px]"></div>
+      <Container>
+        <PageTags
+          tags={['🌱 Ethical & Cruelty-Free', '🥗 Plant-Based Variety', '💻 Developer Focused', '🎁 100% Free']}
+          center={true}
+        />
 
-				<h1 className="text-primary-solid mb-5 text-5xl leading-tight font-bold md:text-6xl">
-					Ethical Placeholder Text for a{" "}
-					<span className="text-primary">Better World</span>
-				</h1>
+        <h1 className="text-primary-solid mb-5 text-5xl leading-tight font-bold md:text-6xl">
+          Ethical Placeholder Text for a <span className="text-primary">Better World</span>
+        </h1>
 
-				<p className="mx-auto mb-9 max-w-2xl text-lg leading-relaxed">
-					Generate cruelty-free, plant-based placeholder text for your
-					design and development projects. The ethical alternative to
-					standard filler text for compassionate creators.
-				</p>
+        <p className="mx-auto mb-9 max-w-2xl text-lg leading-relaxed">
+          Generate cruelty-free, plant-based placeholder text for your design and development projects. The ethical
+          alternative to standard filler text for compassionate creators.
+        </p>
 
-				<div className="flex flex-wrap justify-center gap-3.5">
-					<Button
-						asChild
-						aria-label="Navigate to the Vegan Ipsum Generator tool"
-						variant="primary"
-						size="xl"
-						className="hover:no-underline"
-					>
-						<SmartLink
-							href="#generate-vegan-ipsum"
-							scrollOffset={68}
-						>
-							Generate Ipsum
-						</SmartLink>
-					</Button>
+        <div className="flex flex-wrap justify-center gap-3.5">
+          <Button
+            asChild
+            aria-label="Navigate to the Vegan Ipsum Generator tool"
+            variant="primary"
+            size="xl"
+            className="hover:no-underline"
+          >
+            <SmartLink href="#generate-vegan-ipsum" scrollOffset={68}>
+              Generate Ipsum
+            </SmartLink>
+          </Button>
 
-					<Button
-						asChild
-						aria-label="View available integration methods"
-						variant="primary-outline"
-						size="xl"
-						className="hover:no-underline"
-					>
-						<SmartLink href="#methods" scrollOffset={68}>
-							Explore Methods <Icon name="arrowRight" />
-						</SmartLink>
-					</Button>
-				</div>
-			</Container>
-		</section>
-	);
+          <Button
+            asChild
+            aria-label="View available integration methods"
+            variant="primary-outline"
+            size="xl"
+            className="hover:no-underline"
+          >
+            <SmartLink href="#methods" scrollOffset={68}>
+              Explore Methods <Icon name="arrowRight" />
+            </SmartLink>
+          </Button>
+        </div>
+      </Container>
+    </section>
+  );
 }

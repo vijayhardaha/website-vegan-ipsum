@@ -1,14 +1,14 @@
-import type { JSX, ReactNode } from "react";
+import type { JSX, ReactNode } from 'react';
 
-import Footer from "@/components/composites/Footer";
-import Header from "@/components/composites/Header";
-import Main from "@/components/layout/Main";
+import Footer from '@/components/composites/Footer';
+import Header from '@/components/composites/Header';
+import Main from '@/components/layout/Main';
 
 /**
  * Props for the Layout component.
  */
 interface LayoutProps {
-	children: ReactNode;
+  children: ReactNode;
 }
 
 /**
@@ -19,11 +19,11 @@ interface LayoutProps {
  * @returns	{JSX.Element} The rendered layout component with header, main content, and footer.
  */
 export default function Layout({ children }: LayoutProps): JSX.Element {
-	return (
-		<div className="flex min-h-screen flex-col">
-			<Header />
-			<Main>{children}</Main>
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <Main>{children}</Main>
+      <Footer />
+    </div>
+  );
 }

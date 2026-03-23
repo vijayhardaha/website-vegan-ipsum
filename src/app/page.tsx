@@ -1,27 +1,27 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import JsonLd from "@/components/composites/JsonLd";
+import JsonLd from '@/components/composites/JsonLd';
 import {
-	Hero,
-	IpsumGenerator,
-	Methods,
-	Overview,
-	Benefits,
-	Audience,
-	UseCases,
-	Contact,
-} from "@/components/sections/home/";
-import { SITE_CONFIG } from "@/constants/seo";
-import { buildMetadata } from "@/utils/meta";
-import { generateMasterSchema } from "@/utils/schema";
+  Hero,
+  IpsumGenerator,
+  Methods,
+  Overview,
+  Benefits,
+  Audience,
+  UseCases,
+  Contact,
+} from '@/components/sections/home/';
+import { SITE_CONFIG } from '@/constants/seo';
+import { buildMetadata } from '@/utils/meta';
+import { generateMasterSchema } from '@/utils/schema';
 
 const title = SITE_CONFIG.title;
 const description = SITE_CONFIG.description;
 
 // Path for the page, used for metadata and schema generation
-const path = "/";
+const path = '/';
 
 // SEO metadata for the page.
 export const metadata: Metadata = buildMetadata({ title, description, path });
@@ -35,27 +35,27 @@ const schemaData = generateMasterSchema({ title, description, path });
  * @returns {JSX.Element} The rendered component.
  */
 function Home(): JSX.Element {
-	return (
-		<>
-			<JsonLd data={schemaData} />
+  return (
+    <>
+      <JsonLd data={schemaData} />
 
-			<Hero />
+      <Hero />
 
-			<IpsumGenerator />
+      <IpsumGenerator />
 
-			<Methods />
+      <Methods />
 
-			<Overview />
+      <Overview />
 
-			<Benefits />
+      <Benefits />
 
-			<Audience />
+      <Audience />
 
-			<UseCases />
+      <UseCases />
 
-			<Contact />
-		</>
-	);
+      <Contact />
+    </>
+  );
 }
 
 export default Home;

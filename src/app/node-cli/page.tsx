@@ -1,74 +1,68 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import JsonLd from "@/components/composites/JsonLd";
-import PageHeader from "@/components/composites/PageHeader";
-import {
-	Introduction,
-	Installation,
-	Usage,
-	Options,
-	Resources,
-} from "@/components/sections/node-cli";
-import { buildMetadata } from "@/utils/meta";
-import { generateMasterSchema } from "@/utils/schema";
+import JsonLd from '@/components/composites/JsonLd';
+import PageHeader from '@/components/composites/PageHeader';
+import { Introduction, Installation, Usage, Options, Resources } from '@/components/sections/node-cli';
+import { buildMetadata } from '@/utils/meta';
+import { generateMasterSchema } from '@/utils/schema';
 
-const title = "Vegan Ipsum CLI - Generate Ethical Placeholder Text in Terminal";
+const title = 'Vegan Ipsum CLI - Generate Ethical Placeholder Text in Terminal';
 const description =
-	"Generate plant-based placeholder text from your terminal with the Vegan Ipsum Node CLI. A lightweight, ethical tool for developers.";
+  'Generate plant-based placeholder text from your terminal with the Vegan Ipsum Node CLI. A lightweight, ethical tool for developers.';
 
 const pageTitle = (
-	<>
-		Vegan Ipsum <span className="text-primary">Node CLI</span>
-	</>
+  <>
+    Vegan Ipsum <span className="text-primary">Node CLI</span>
+  </>
 );
 const pageDescription =
-	"Speed up your workflow with the Vegan Ipsum Node CLI. Access cruelty-free, plant-based filler text instantly without ever leaving your shell, perfect for scripting, piping, and rapid prototyping.";
+  'Speed up your workflow with the Vegan Ipsum Node CLI. Access cruelty-free, plant-based filler text instantly without ever leaving your shell, perfect for scripting, piping, and rapid prototyping.';
 const pageTags = [
-	"⚡ Instant Command Access",
-	"🔗 Pipe-Friendly Output",
-	"📦 Global npm Install",
-	"⚙️ No Configuration Required",
+  '⚡ Instant Command Access',
+  '🔗 Pipe-Friendly Output',
+  '📦 Global npm Install',
+  '⚙️ No Configuration Required',
 ];
 
 // Path for the page, used for metadata and schema generation
-const path = "/node-cli";
+const path = '/node-cli';
 
 // SEO metadata for the page.
 export const metadata: Metadata = buildMetadata({ title, description, path });
 
 // Schema.org structured data.
 const schemaData = generateMasterSchema({
-	title,
-	description,
-	path,
-	pageType: "Software",
-	breadcrumbs: [{ name: "Vegan Ipsum Node CLI", path: path }],
-	softwareConfig: {
-		version: "1.0.4",
-		repositoryUrl: "https://github.com/vijayhardaha/node-vegan-ipsum",
-		installUrl: "https://www.npmjs.com/package/vegan-ipsum",
-		programmingLanguage: "TypeScript",
-		runtimePlatform: "Node.js",
-		keywords: [
-			"vegan ipsum cli",
-			"vegan ipsum command line tool",
-			"vegan ipsum node cli",
-			"vegan ipsum terminal tool",
-			"install vegan ipsum cli",
-			"npm vegan ipsum cli",
-			"node.js cli text generator",
-			"javascript command line tool",
-			"lorem ipsum cli alternative",
-			"plant-based lorem ipsum cli",
-			"ethical text generator cli",
-			"generate dummy text from terminal",
-			"npm global cli tool",
-			"node terminal text generator",
-			"developer cli text tool",
-		],
-	},
+  title,
+  description,
+  path,
+  pageType: 'Software',
+  breadcrumbs: [{ name: 'Vegan Ipsum Node CLI', path: path }],
+  softwareConfig: {
+    version: '1.0.4',
+    repositoryUrl: 'https://github.com/vijayhardaha/node-vegan-ipsum',
+    installUrl: 'https://www.npmjs.com/package/vegan-ipsum',
+    programmingLanguage: 'TypeScript',
+    runtimePlatform: 'Node.js',
+    keywords: [
+      'vegan ipsum cli',
+      'vegan ipsum command line tool',
+      'vegan ipsum node cli',
+      'vegan ipsum terminal tool',
+      'install vegan ipsum cli',
+      'npm vegan ipsum cli',
+      'node.js cli text generator',
+      'javascript command line tool',
+      'lorem ipsum cli alternative',
+      'plant-based lorem ipsum cli',
+      'ethical text generator cli',
+      'generate dummy text from terminal',
+      'npm global cli tool',
+      'node terminal text generator',
+      'developer cli text tool',
+    ],
+  },
 });
 
 /**
@@ -77,25 +71,21 @@ const schemaData = generateMasterSchema({
  * @returns {JSX.Element} The rendered component.
  */
 export default function NodeCliPage(): JSX.Element {
-	return (
-		<>
-			<JsonLd data={schemaData} />
+  return (
+    <>
+      <JsonLd data={schemaData} />
 
-			<PageHeader
-				title={pageTitle}
-				description={pageDescription}
-				tags={pageTags}
-			/>
+      <PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
-			<Introduction />
+      <Introduction />
 
-			<Installation />
+      <Installation />
 
-			<Usage />
+      <Usage />
 
-			<Options />
+      <Options />
 
-			<Resources />
-		</>
-	);
+      <Resources />
+    </>
+  );
 }

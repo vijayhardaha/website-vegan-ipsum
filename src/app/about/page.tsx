@@ -1,53 +1,47 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import JsonLd from "@/components/composites/JsonLd";
-import PageHeader from "@/components/composites/PageHeader";
+import JsonLd from '@/components/composites/JsonLd';
+import PageHeader from '@/components/composites/PageHeader';
 import {
-	Introduction,
-	Background,
-	CoreFeatures,
-	CustomizationOptions,
-	TechnicalOverview,
-	UseCases,
-	CTA,
-} from "@/components/sections/about";
-import { buildMetadata } from "@/utils/meta";
-import { generateMasterSchema } from "@/utils/schema";
+  Introduction,
+  Background,
+  CoreFeatures,
+  CustomizationOptions,
+  TechnicalOverview,
+  UseCases,
+  CTA,
+} from '@/components/sections/about';
+import { buildMetadata } from '@/utils/meta';
+import { generateMasterSchema } from '@/utils/schema';
 
-const title =
-	"About Vegan Ipsum - Mission Behind the Ethical Placeholder Generator";
+const title = 'About Vegan Ipsum - Mission Behind the Ethical Placeholder Generator';
 const description =
-	"Discover the story of Vegan Ipsum. Learn why we created a plant-based, cruelty-free alternative to traditional Lorem Ipsum for conscious designers and developers.";
+  'Discover the story of Vegan Ipsum. Learn why we created a plant-based, cruelty-free alternative to traditional Lorem Ipsum for conscious designers and developers.';
 
 const pageTitle = (
-	<>
-		The Mission Behind <span className="text-primary">Vegan Ipsum</span>
-	</>
+  <>
+    The Mission Behind <span className="text-primary">Vegan Ipsum</span>
+  </>
 );
 const pageDescription =
-	"We believe every part of the design process can reflect our values. Vegan Ipsum was built to replace outdated Latin with ethical, plant-based content that inspires conscious creation.";
-const pageTags = [
-	"🌿 Ethical Mission",
-	"💻 Open Source",
-	"🧭 Driven by Values",
-	"🚀 Made for Creators",
-];
+  'We believe every part of the design process can reflect our values. Vegan Ipsum was built to replace outdated Latin with ethical, plant-based content that inspires conscious creation.';
+const pageTags = ['🌿 Ethical Mission', '💻 Open Source', '🧭 Driven by Values', '🚀 Made for Creators'];
 
 // Path for the page, used for metadata and schema generation
-const path = "/about";
+const path = '/about';
 
 // SEO metadata for the page.
 export const metadata: Metadata = buildMetadata({ title, description, path });
 
 // Schema.org structured data.
 const schemaData = generateMasterSchema({
-	title,
-	description,
-	path,
-	pageType: "AboutPage",
-	breadcrumbs: [{ name: "About Vegan Ipsum", path: path }],
+  title,
+  description,
+  path,
+  pageType: 'AboutPage',
+  breadcrumbs: [{ name: 'About Vegan Ipsum', path: path }],
 });
 
 /**
@@ -56,29 +50,25 @@ const schemaData = generateMasterSchema({
  * @returns {JSX.Element} The rendered component.
  */
 export default function AboutPage(): JSX.Element {
-	return (
-		<>
-			<JsonLd data={schemaData} />
+  return (
+    <>
+      <JsonLd data={schemaData} />
 
-			<PageHeader
-				title={pageTitle}
-				description={pageDescription}
-				tags={pageTags}
-			/>
+      <PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
 
-			<Introduction />
+      <Introduction />
 
-			<Background />
+      <Background />
 
-			<CoreFeatures />
+      <CoreFeatures />
 
-			<CustomizationOptions />
+      <CustomizationOptions />
 
-			<TechnicalOverview />
+      <TechnicalOverview />
 
-			<UseCases />
+      <UseCases />
 
-			<CTA />
-		</>
-	);
+      <CTA />
+    </>
+  );
 }

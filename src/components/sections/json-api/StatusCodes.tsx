@@ -1,10 +1,10 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import SectionHeader from "@/components/composites/SectionHeader";
-import SmartLink from "@/components/composites/SmartLink";
-import Section from "@/components/layout/Section";
-import Container from "@/components/primitives/Container";
-import { cn } from "@/utils/classnames";
+import SectionHeader from '@/components/composites/SectionHeader';
+import SmartLink from '@/components/composites/SmartLink';
+import Section from '@/components/layout/Section';
+import Container from '@/components/primitives/Container';
+import { cn } from '@/utils/classnames';
 
 /**
  * This component provides an overview of the HTTP status codes returned by the Vegan Ipsum JSON API.
@@ -12,92 +12,83 @@ import { cn } from "@/utils/classnames";
  * @returns {JSX.Element} The rendered component.
  */
 export default function StatusCodes(): JSX.Element {
-	return (
-		<Section
-			id="status-codes"
-			aria-label="HTTP status codes returned by the Vegan Ipsum JSON API"
-			className="bg-secondary-muted"
-		>
-			<Container>
-				<SectionHeader
-					heading={
-						<>
-							HTTP Status{" "}
-							<span className="text-primary">Codes</span>
-						</>
-					}
-					tagline="Status Codes"
-					icon="checkCircle"
-				>
-					<p className="mb-8">
-						The API utilizes standard{" "}
-						<SmartLink
-							href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
-							aria-label="Learn about HTTP status codes"
-						>
-							HTTP status codes
-						</SmartLink>{" "}
-						to indicate the result of a request. Below are the most
-						common codes you may encounter when interacting with the
-						endpoint:
-					</p>
+  return (
+    <Section
+      id="status-codes"
+      aria-label="HTTP status codes returned by the Vegan Ipsum JSON API"
+      className="bg-secondary-muted"
+    >
+      <Container>
+        <SectionHeader
+          heading={
+            <>
+              HTTP Status <span className="text-primary">Codes</span>
+            </>
+          }
+          tagline="Status Codes"
+          icon="checkCircle"
+        >
+          <p className="mb-8">
+            The API utilizes standard{' '}
+            <SmartLink
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+              aria-label="Learn about HTTP status codes"
+            >
+              HTTP status codes
+            </SmartLink>{' '}
+            to indicate the result of a request. Below are the most common codes you may encounter when interacting with
+            the endpoint:
+          </p>
 
-					<ul className="space-y-4">
-						{[
-							{
-								statusCode: 200,
-								status: "OK",
-								description:
-									"Request was successful. The response contains the requested vegan ipsum text.",
-								class: "bg-green-100 text-green-500",
-							},
-							{
-								statusCode: 400,
-								status: "Bad Request",
-								description:
-									"Your request had invalid or missing parameters. Review the error message and try again.",
-								class: "bg-amber-100 text-amber-500",
-							},
-							{
-								statusCode: 404,
-								status: "Not Found",
-								description:
-									"The endpoint you tried to access does not exist. Check the URL and request method.",
-								class: "bg-red-100 text-red-500",
-							},
-							{
-								statusCode: 500,
-								status: "Internal Server Error",
-								description:
-									"Something went wrong on the server side. Try again later or contact support if the problem persists.",
-								class: "bg-purple-100 text-purple-500",
-							},
-						].map((code, index) => (
-							<li
-								key={index}
-								className="border-border flex items-start gap-4 rounded-3xl border bg-white p-4 transition-transform hover:translate-x-1"
-							>
-								<span
-									className={cn(
-										"inline-flex min-h-12 min-w-14 items-center justify-center rounded-3xl px-0 py-1 text-center text-sm font-bold",
-										code.class
-									)}
-								>
-									{code.statusCode}
-								</span>
-								<div>
-									<p className="text-primary-solid mb-0.5 text-base font-bold">
-										{code.status}
-									</p>
-									<p className="text-sm leading-relaxed">
-										{code.description}
-									</p>
-								</div>
-							</li>
-						))}
-					</ul>
-				</SectionHeader>
-			</Container>
-		</Section>
-	);
+          <ul className="space-y-4">
+            {[
+              {
+                statusCode: 200,
+                status: 'OK',
+                description: 'Request was successful. The response contains the requested vegan ipsum text.',
+                class: 'bg-green-100 text-green-500',
+              },
+              {
+                statusCode: 400,
+                status: 'Bad Request',
+                description: 'Your request had invalid or missing parameters. Review the error message and try again.',
+                class: 'bg-amber-100 text-amber-500',
+              },
+              {
+                statusCode: 404,
+                status: 'Not Found',
+                description: 'The endpoint you tried to access does not exist. Check the URL and request method.',
+                class: 'bg-red-100 text-red-500',
+              },
+              {
+                statusCode: 500,
+                status: 'Internal Server Error',
+                description:
+                  'Something went wrong on the server side. Try again later or contact support if the problem persists.',
+                class: 'bg-purple-100 text-purple-500',
+              },
+            ].map((code, index) => (
+              <li
+                key={index}
+                className="border-border flex items-start gap-4 rounded-3xl border bg-white p-4 transition-transform hover:translate-x-1"
+              >
+                <span
+                  className={cn(
+                    'inline-flex min-h-12 min-w-14 items-center justify-center rounded-3xl px-0 py-1 text-center text-sm font-bold',
+                    code.class
+                  )}
+                >
+                  {code.statusCode}
+                </span>
+                <div>
+                  <p className="text-primary-solid mb-0.5 text-base font-bold">{code.status}</p>
+                  <p className="text-sm leading-relaxed">{code.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </SectionHeader>
+      </Container>
+    </Section>
+  );
 }

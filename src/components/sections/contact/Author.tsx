@@ -1,50 +1,25 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import SectionHeader from "@/components/composites/SectionHeader";
-import Section from "@/components/layout/Section";
-import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
-import { IconName } from "@/constants/icons";
+import SectionHeader from '@/components/composites/SectionHeader';
+import Section from '@/components/layout/Section';
+import Container from '@/components/primitives/Container';
+import Icon from '@/components/primitives/Icon';
+import type { IconName } from '@/constants/icons';
 
 /**
  * Represents a link with an href and display text.
  */
-type SocialLink = {
-	icon: IconName;
-	href: string;
-	platform: string;
-	handle: string;
-};
+type SocialLink = { icon: IconName; href: string; platform: string; handle: string };
 
 /**
  * List of social/contact links for the author.
  * Each link includes an href (URL) and display text.
  */
 const socialLinks: SocialLink[] = [
-	{
-		icon: "faGithub",
-		href: "https://github.com/vijayhardaha",
-		platform: "GitHub",
-		handle: "@vijayhardaha",
-	},
-	{
-		icon: "faInstagram",
-		href: "https://instagram.com/vegan.vijay",
-		platform: "Instagram",
-		handle: "@vegan.vijay",
-	},
-	{
-		icon: "faXTwitter",
-		href: "https://x.com/vijayhardaha",
-		platform: "X (formerly Twitter)",
-		handle: "@vijayhardaha",
-	},
-	{
-		icon: "faBriefcase",
-		href: "https://pph.me/vijayhardaha",
-		platform: "PeoplePerHour",
-		handle: "@vijayhardaha",
-	},
+  { icon: 'faGithub', href: 'https://github.com/vijayhardaha', platform: 'GitHub', handle: '@vijayhardaha' },
+  { icon: 'faInstagram', href: 'https://instagram.com/vegan.vijay', platform: 'Instagram', handle: '@vegan.vijay' },
+  { icon: 'faXTwitter', href: 'https://x.com/vijayhardaha', platform: 'X (formerly Twitter)', handle: '@vijayhardaha' },
+  { icon: 'faBriefcase', href: 'https://pph.me/vijayhardaha', platform: 'PeoplePerHour', handle: '@vijayhardaha' },
 ];
 
 /**
@@ -54,64 +29,58 @@ const socialLinks: SocialLink[] = [
  * @returns {JSX.Element} The rendered component.
  */
 export default function Author(): JSX.Element {
-	return (
-		<Section
-			id="author"
-			className="bg-secondary-muted"
-			aria-label="Author information and contact details for Vegan Ipsum"
-		>
-			<Container>
-				<SectionHeader
-					heading={
-						<>
-							Get In <span className="text-primary">Touch</span>
-						</>
-					}
-					tagline="Author Contact Links"
-					icon="user"
-				>
-					<p>
-						Connect directly with the creator of Vegan Ipsum to
-						collaborate on new features, provide feedback, or
-						discuss potential partnerships. Whether you are a
-						developer, designer, content creator, or sustainability
-						advocate, all inquiries are welcome.
-					</p>
+  return (
+    <Section
+      id="author"
+      className="bg-secondary-muted"
+      aria-label="Author information and contact details for Vegan Ipsum"
+    >
+      <Container>
+        <SectionHeader
+          heading={
+            <>
+              Get In <span className="text-primary">Touch</span>
+            </>
+          }
+          tagline="Author Contact Links"
+          icon="user"
+        >
+          <p>
+            Connect directly with the creator of Vegan Ipsum to collaborate on new features, provide feedback, or
+            discuss potential partnerships. Whether you are a developer, designer, content creator, or sustainability
+            advocate, all inquiries are welcome.
+          </p>
 
-					<div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-						{socialLinks.map((social, index) => (
-							<a
-								key={index}
-								href={social.href}
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label={`Contact the author on ${social.platform}`}
-								className="group border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-3xl border bg-linear-to-br p-6 text-center shadow-md transition-all hover:shadow-lg"
-							>
-								<div className="text-secondary-dark mb-2 text-center text-3xl">
-									<Icon name={social.icon} />
-								</div>
+          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Contact the author on ${social.platform}`}
+                className="group border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-3xl border bg-linear-to-br p-6 text-center shadow-md transition-all hover:shadow-lg"
+              >
+                <div className="text-secondary-dark mb-2 text-center text-3xl">
+                  <Icon name={social.icon} />
+                </div>
 
-								<h3 className="text-primary-solid font-sans text-sm font-bold">
-									{social.platform}
-								</h3>
+                <h3 className="text-primary-solid font-sans text-sm font-bold">{social.platform}</h3>
 
-								<p className="text-secondary-dark group-hover:border-secondary-dark mt-2 inline-flex items-center gap-0.5 border-b-2 border-transparent text-sm">
-									{social.handle} <Icon name="arrowOutward" />
-								</p>
-							</a>
-						))}
-					</div>
+                <p className="text-secondary-dark group-hover:border-secondary-dark mt-2 inline-flex items-center gap-0.5 border-b-2 border-transparent text-sm">
+                  {social.handle} <Icon name="arrowOutward" />
+                </p>
+              </a>
+            ))}
+          </div>
 
-					<p>
-						For business inquiries, collaboration proposals, bug
-						reports, or general feedback, please reach out via the
-						channels above. Your input helps improve the project and
-						ensures Vegan Ipsum remains a valuable resource for the
-						ethical design and development community.
-					</p>
-				</SectionHeader>
-			</Container>
-		</Section>
-	);
+          <p>
+            For business inquiries, collaboration proposals, bug reports, or general feedback, please reach out via the
+            channels above. Your input helps improve the project and ensures Vegan Ipsum remains a valuable resource for
+            the ethical design and development community.
+          </p>
+        </SectionHeader>
+      </Container>
+    </Section>
+  );
 }

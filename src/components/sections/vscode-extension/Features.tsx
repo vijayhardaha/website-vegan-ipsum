@@ -1,60 +1,54 @@
-import type { JSX } from "react";
+import type { JSX } from 'react';
 
-import SectionHeader from "@/components/composites/SectionHeader";
-import Section from "@/components/layout/Section";
-import Container from "@/components/primitives/Container";
-import Icon from "@/components/primitives/Icon";
-import { IconName } from "@/constants/icons";
+import SectionHeader from '@/components/composites/SectionHeader';
+import Section from '@/components/layout/Section';
+import Container from '@/components/primitives/Container';
+import Icon from '@/components/primitives/Icon';
+import type { IconName } from '@/constants/icons';
 
 /**
  * Represents the details of a card item used in the component.
  */
 interface Card {
-	icon: IconName;
-	heading: string;
-	content: string;
+  icon: IconName;
+  heading: string;
+  content: string;
 }
 
 /**
  * An array of card details used to render the cards in the component.
  */
 const cards: Card[] = [
-	{
-		icon: "fcFlash",
-		heading: "Instant Generation",
-		content:
-			"Generate placeholder text without leaving your code editor, no context switching required.",
-	},
-	{
-		icon: "fcTodo",
-		heading: "Multiple Text Units",
-		content:
-			"Choose from words, sentences, or paragraphs to match your specific content needs.",
-	},
-	{
-		icon: "fcElectronics",
-		heading: "Command Palette Integration",
-		content:
-			"Simple, command-based interface that integrates naturally with VSCode workflows.",
-	},
-	{
-		icon: "fcNook",
-		heading: "Universal File Support",
-		content:
-			"Works in any text-based file format: HTML, CSS, JS, Markdown, JSON, and more.",
-	},
-	{
-		icon: "fcRun",
-		heading: "Lightweight & Fast",
-		content:
-			"Minimal footprint with no impact on your editor's performance or startup time.",
-	},
-	{
-		icon: "fcReading",
-		heading: "Ethical & Meaningful",
-		content:
-			"Perfect for ethically themed projects or adding a meaningful twist to placeholder content.",
-	},
+  {
+    icon: 'fcFlash',
+    heading: 'Instant Generation',
+    content: 'Generate placeholder text without leaving your code editor, no context switching required.',
+  },
+  {
+    icon: 'fcTodo',
+    heading: 'Multiple Text Units',
+    content: 'Choose from words, sentences, or paragraphs to match your specific content needs.',
+  },
+  {
+    icon: 'fcElectronics',
+    heading: 'Command Palette Integration',
+    content: 'Simple, command-based interface that integrates naturally with VSCode workflows.',
+  },
+  {
+    icon: 'fcNook',
+    heading: 'Universal File Support',
+    content: 'Works in any text-based file format: HTML, CSS, JS, Markdown, JSON, and more.',
+  },
+  {
+    icon: 'fcRun',
+    heading: 'Lightweight & Fast',
+    content: "Minimal footprint with no impact on your editor's performance or startup time.",
+  },
+  {
+    icon: 'fcReading',
+    heading: 'Ethical & Meaningful',
+    content: 'Perfect for ethically themed projects or adding a meaningful twist to placeholder content.',
+  },
 ];
 
 /**
@@ -63,51 +57,42 @@ const cards: Card[] = [
  * @returns {JSX.Element} The rendered component.
  */
 export default function Features(): JSX.Element {
-	return (
-		<Section
-			id="features"
-			aria-label="Features of the Vegan Ipsum VS Code Extension"
-			className="bg-secondary-muted"
-		>
-			<Container>
-				<SectionHeader
-					heading={
-						<>
-							Extension{" "}
-							<span className="text-primary">Capabilities</span>
-						</>
-					}
-					tagline="Features"
-					icon="award"
-				>
-					<p>
-						The <strong>Vegan Ipsum VS Code Extension</strong>{" "}
-						offers a robust set of features designed to streamline
-						your workflow. Here is why it is an essential tool for
-						developers and designers who value efficiency and
-						plant-based inspiration:
-					</p>
+  return (
+    <Section id="features" aria-label="Features of the Vegan Ipsum VS Code Extension" className="bg-secondary-muted">
+      <Container>
+        <SectionHeader
+          heading={
+            <>
+              Extension <span className="text-primary">Capabilities</span>
+            </>
+          }
+          tagline="Features"
+          icon="award"
+        >
+          <p>
+            The <strong>Vegan Ipsum VS Code Extension</strong> offers a robust set of features designed to streamline
+            your workflow. Here is why it is an essential tool for developers and designers who value efficiency and
+            plant-based inspiration:
+          </p>
 
-					<div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-						{cards.map((step, index) => (
-							<div
-								key={index}
-								className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
-							>
-								<h3 className="mb-2 flex items-center gap-2 text-lg">
-									<span className="relative top-0.5 text-xl">
-										<Icon name={step.icon} />
-									</span>{" "}
-									{step.heading}
-								</h3>
-								<p className="text-sm leading-relaxed">
-									{step.content}
-								</p>
-							</div>
-						))}
-					</div>
-				</SectionHeader>
-			</Container>
-		</Section>
-	);
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+            {cards.map((step, index) => (
+              <div
+                key={index}
+                className="border-border relative rounded-2xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
+              >
+                <h3 className="mb-2 flex items-center gap-2 text-lg">
+                  <span className="relative top-0.5 text-xl">
+                    <Icon name={step.icon} />
+                  </span>{' '}
+                  {step.heading}
+                </h3>
+                <p className="text-sm leading-relaxed">{step.content}</p>
+              </div>
+            ))}
+          </div>
+        </SectionHeader>
+      </Container>
+    </Section>
+  );
 }

@@ -1,13 +1,13 @@
-import type { InputHTMLAttributes, JSX } from "react";
+import type { InputHTMLAttributes, JSX } from 'react';
 
-import { cn } from "@/utils/classnames";
+import { cn } from '@/utils/classnames';
 
 /**
  * Props for the Input component.
  */
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-	className?: string;
-	type?: string;
+  className?: string;
+  type?: string;
 }
 
 /**
@@ -16,47 +16,43 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  * @param {InputProps} props - Component props
  * @returns {JSX.Element} Input component
  */
-export default function Input({
-	className,
-	type = "text",
-	...props
-}: InputProps): JSX.Element {
-	return (
-		<input
-			type={type}
-			autoComplete="off"
-			spellCheck="false"
-			data-slot="input"
-			className={cn(
-				// Core layout and sizing
-				"flex h-12 w-full min-w-0 px-3 py-1",
+export default function Input({ className, type = 'text', ...props }: InputProps): JSX.Element {
+  return (
+    <input
+      type={type}
+      autoComplete="off"
+      spellCheck="false"
+      data-slot="input"
+      className={cn(
+        // Core layout and sizing
+        'flex h-12 w-full min-w-0 px-3 py-1',
 
-				// Font and text
-				"rounded-3xl text-base",
+        // Font and text
+        'rounded-3xl text-base',
 
-				// Typography
-				"placeholder:text-muted-foreground/50 file:text-foreground",
+        // Typography
+        'placeholder:text-muted-foreground/50 file:text-foreground',
 
-				// Colors and borders
-				"border-input text-foreground bg-input/20 border",
-				"selection:bg-foreground selection:text-background",
+        // Colors and borders
+        'border-input text-foreground bg-input/20 border',
+        'selection:bg-foreground selection:text-background',
 
-				// Focus and validation states
-				"focus:border-input focus:ring-input focus:ring-2 focus:ring-offset-2",
-				"aria-invalid:border-destructive aria-invalid:ring-destructive/20",
+        // Focus and validation states
+        'focus:border-input focus:ring-input focus:ring-2 focus:ring-offset-2',
+        'aria-invalid:border-destructive aria-invalid:ring-destructive/20',
 
-				// Disabled states
-				"disabled:cursor-not-allowed disabled:opacity-50",
+        // Disabled states
+        'disabled:cursor-not-allowed disabled:opacity-50',
 
-				// Transitions and outline
-				"transition-[color,box-shadow] outline-none",
+        // Transitions and outline
+        'transition-[color,box-shadow] outline-none',
 
-				// Data output
-				"data-output:outline-none data-output:focus:ring-0 data-output:focus:outline-none",
-				"data-output:focus:border-input",
-				className
-			)}
-			{...props}
-		/>
-	);
+        // Data output
+        'data-output:outline-none data-output:focus:ring-0 data-output:focus:outline-none',
+        'data-output:focus:border-input',
+        className
+      )}
+      {...props}
+    />
+  );
 }
