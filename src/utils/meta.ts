@@ -1,5 +1,5 @@
-import { SITE_METADATA, SITE_CONFIG } from "@/constants/seo";
-import { getBaseUrl, safeCanonical } from "@/utils/seo";
+import { SITE_METADATA, SITE_CONFIG } from '@/constants/seo';
+import { getBaseUrl, safeCanonical } from '@/utils/seo';
 
 /**
  * Props for generating metadata, including title, description, and slug for URL construction.
@@ -8,10 +8,10 @@ import { getBaseUrl, safeCanonical } from "@/utils/seo";
  * const params: SeoProps = { title: 'About', description: 'About page', slug: 'about' };
  */
 export interface SeoProps {
-	title: string;
-	description: string;
-	path?: string;
-	postfix?: boolean;
+  title: string;
+  description: string;
+  path?: string;
+  postfix?: boolean;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -29,7 +29,7 @@ type AnyObject = Record<string, any>;
  * isPlainObject(null) // false
  */
 const isPlainObject = (value: AnyObject): value is AnyObject => {
-	return value !== null && typeof value === "object" && !Array.isArray(value);
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
 };
 
 /**
@@ -52,27 +52,24 @@ const isPlainObject = (value: AnyObject): value is AnyObject => {
  * // merged -> { a:1, b:2, nested: { x:1, y:2 }, list: [3] }
  */
 const mergeDeep = <T extends AnyObject>(target: T, source: AnyObject): T => {
-	const output = { ...target } as AnyObject;
+  const output = { ...target } as AnyObject;
 
-	if (isPlainObject(target) && isPlainObject(source)) {
-		Object.keys(source).forEach((key) => {
-			const targetValue = target[key];
-			const sourceValue = source[key];
+  if (isPlainObject(target) && isPlainObject(source)) {
+    Object.keys(source).forEach((key) => {
+      const targetValue = target[key];
+      const sourceValue = source[key];
 
-			if (Array.isArray(sourceValue)) {
-				output[key] = sourceValue;
-			} else if (
-				isPlainObject(sourceValue)
-				&& isPlainObject(targetValue)
-			) {
-				output[key] = mergeDeep(targetValue, sourceValue);
-			} else {
-				output[key] = sourceValue;
-			}
-		});
-	}
+      if (Array.isArray(sourceValue)) {
+        output[key] = sourceValue;
+      } else if (isPlainObject(sourceValue) && isPlainObject(targetValue)) {
+        output[key] = mergeDeep(targetValue, sourceValue);
+      } else {
+        output[key] = sourceValue;
+      }
+    });
+  }
 
-	return output as T;
+  return output as T;
 };
 
 /**
@@ -85,10 +82,10 @@ const mergeDeep = <T extends AnyObject>(target: T, source: AnyObject): T => {
  * @example
  * buildSeoTitle('About') // -> 'About - Vegan Ipsum'
  */
-const buildSeoTitle = (title: string = "", postfix: boolean): string => {
-	if (!title) return SITE_CONFIG.name;
-	if (!postfix) return title;
-	return [title, "|", SITE_CONFIG.name].join(" ");
+const buildSeoTitle = (title: string = '', postfix: boolean): string => {
+  if (!title) return SITE_CONFIG.name;
+  if (!postfix) return title;
+  return [title, '|', SITE_CONFIG.name].join(' ');
 };
 
 /**
@@ -103,26 +100,21 @@ const buildSeoTitle = (title: string = "", postfix: boolean): string => {
  * @example
  * const meta = buildMetadata({ title: 'Recipes', description: 'Vegan recipes', slug: 'recipes' });
  */
-export const buildMetadata = ({
-	title = "",
-	description = "",
-	path = "",
-	postfix = false,
-}: SeoProps) => {
-	const canonical = safeCanonical(path);
+export const buildMetadata = ({ title = '', description = '', path = '', postfix = false }: SeoProps) => {
+  const canonical = safeCanonical(path);
 
-	const titleAndDescription = {
-		title: buildSeoTitle(title, postfix),
-		description: description || SITE_CONFIG.description,
-	};
+  const titleAndDescription = {
+    title: buildSeoTitle(title, postfix),
+    description: description || SITE_CONFIG.description,
+  };
 
-	const newMetadata = mergeDeep(SITE_METADATA, {
-		...titleAndDescription,
-		metadataBase: new URL(getBaseUrl()),
-		alternates: { canonical: canonical },
-		openGraph: { ...titleAndDescription, url: canonical },
-		twitter: { ...titleAndDescription },
-	});
+  const newMetadata = mergeDeep(SITE_METADATA, {
+    ...titleAndDescription,
+    metadataBase: new URL(getBaseUrl()),
+    alternates: { canonical: canonical },
+    openGraph: { ...titleAndDescription, url: canonical },
+    twitter: { ...titleAndDescription },
+  });
 
-	return newMetadata;
+  return newMetadata;
 };

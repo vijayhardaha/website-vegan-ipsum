@@ -16,15 +16,15 @@
  * getBaseUrl() // -> 'http://localhost:3000'
  */
 export const getBaseUrl = (): string => {
-	const url =
-		process.env.VERCEL_PROJECT_PRODUCTION_URL
-		|| process.env.VERCEL_BRANCH_URL
-		|| process.env.VERCEL_URL
-		|| `http://localhost:${process.env.PORT || 3000}`;
+  const url =
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+    || process.env.VERCEL_BRANCH_URL
+    || process.env.VERCEL_URL
+    || `http://localhost:${process.env.PORT || 3000}`;
 
-	const cleaned = url.trim().replace(/\/+$/, "");
+  const cleaned = url.trim().replace(/\/+$/, '');
 
-	return /^https?:\/\//i.test(cleaned) ? cleaned : `https://${cleaned}`;
+  return /^https?:\/\//i.test(cleaned) ? cleaned : `https://${cleaned}`;
 };
 
 /**
@@ -43,8 +43,8 @@ export const getBaseUrl = (): string => {
  * safeCanonical("")           // ""
  * safeCanonical("/")          // ""
  */
-export const safeCanonical = (slug: string = ""): string => {
-	return slug.trim().replace(/^\/+/, "").replace(/\/+$/, "");
+export const safeCanonical = (slug: string = ''): string => {
+  return slug.trim().replace(/^\/+/, '').replace(/\/+$/, '');
 };
 
 /**
@@ -65,6 +65,6 @@ export const safeCanonical = (slug: string = ""): string => {
  * getCanonicalUrl("") 			// → "https://example.com"
  * getCanonicalUrl("/") 		// → "https://example.com"
  */
-export const getCanonicalUrl = (slug: string = ""): string => {
-	return [getBaseUrl(), safeCanonical(slug)].filter(Boolean).join("/");
+export const getCanonicalUrl = (slug: string = ''): string => {
+  return [getBaseUrl(), safeCanonical(slug)].filter(Boolean).join('/');
 };
