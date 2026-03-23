@@ -1,7 +1,5 @@
 import type { JSX } from 'react';
 
-import Link from 'next/link';
-
 import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
