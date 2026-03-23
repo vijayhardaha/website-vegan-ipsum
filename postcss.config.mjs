@@ -1,15 +1,26 @@
 /**
- * ==============================================================================
- * POSTCSS CONFIGURATION
- * ==============================================================================
- * Purpose: Registers PostCSS plugins used by the styling pipeline.
+ * ======================================================================
+ * Postcss Configuration
+ * ======================================================================
+ * Purpose: Configure PostCSS plugins used to transform project styles
+ *          (Tailwind, autoprefixer, etc.). Changes may require
+ *          restarting the dev server.
  * Docs: https://github.com/postcss/postcss/blob/main/docs/config.md
- * ==============================================================================
+ * ======================================================================
  */
 
-// --- Plugin Pipeline ---
-// Register Tailwind CSS PostCSS integration for utility class processing.
-const config = { plugins: ["@tailwindcss/postcss"] };
+/** @type {import('postcss-load-config').Config} */
+const config = {
+  // ---- PostCSS plugins ----
+  // List plugins in execution order. Tailwind should run before other
+  // processors that rely on generated utilities.
+  plugins: [
+    // Tailwind PostCSS plugin to transform utility classes
+    '@tailwindcss/postcss',
 
-// Export configuration for PostCSS consumers.
+    // Optional browser prefixing plugin (enable if targeting older browsers)
+    // "autoprefixer": {},
+  ],
+};
+
 export default config;
