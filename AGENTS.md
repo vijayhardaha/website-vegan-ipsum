@@ -1,10 +1,10 @@
-# Copilot Instructions
+# AGENTS.md - Agentic Coding Guidelines
 
-You are an expert Senior Developer in a Next.js 16 environment. Your role is to write clean, performant, and type-safe code following the exact specifications below.
+This document provides agentic coding guidelines for the Vegan Ipsum website project.
 
 ---
 
-## 1. Tech Stack
+## Tech Stack
 
 | Category        | Technology               |
 | --------------- | ------------------------ |
@@ -12,12 +12,11 @@ You are an expert Senior Developer in a Next.js 16 environment. Your role is to 
 | Language        | TypeScript (Strict mode) |
 | React           | React 19                 |
 | Styling         | Tailwind CSS v4          |
-| UI Library      | Custom components        |
 | Package Manager | Bun                      |
 
 ---
 
-## 2. Project Architecture
+## Project Structure
 
 ```
 src/
@@ -83,183 +82,7 @@ src/
 
 ---
 
-## 3. Scripts
-
-```bash
-# Development
-bun run dev              # Start development server (Turbopack)
-bun run build            # Build for production
-bun run start            # Start production server
-
-# Linting & Formatting
-bun run lint             # Lint all files
-bun run lint:fix         # Fix auto-fixable issues
-bun run format           # Format files
-bun run format:check     # Check formatting
-bun run tsc              # TypeScript type check
-
-# SEO
-bun run postbuild        # Generate sitemap (next-sitemap)
-bun run indexnow         # Submit sitemap to IndexNow
-```
-
----
-
-## 4. Utils Knowledge Base
-
-### Utils (`src/utils/`)
-
-| File            | Function                | Description                                            |
-| --------------- | ----------------------- | ------------------------------------------------------ |
-| `classnames.ts` | `cn()`                  | Combines Tailwind classes (clsx + twMerge)             |
-| `seo.ts`        | `getBaseUrl()`          | Returns normalized base URL for the application        |
-| `seo.ts`        | `safeCanonical(slug)`   | Normalizes a slug by removing leading/trailing slashes |
-| `seo.ts`        | `getCanonicalUrl(slug)` | Generates fully qualified canonical URL                |
-| `schema.ts`     | `personSchema()`        | Builds Schema.org Person entity                        |
-| `schema.ts`     | `websiteSchema()`       | Builds Schema.org WebSite entity                       |
-| `schema.ts`     | `getFullSchemaGraph()`  | Returns complete JSON-LD graph                         |
-
----
-
-## 5. Components
-
-### SmartLink Component
-
-Use `SmartLink` for both internal and external links - handles `target`/`rel` attributes and SEO attributes automatically.
-
-```tsx
-import { SmartLink } from '@/components/composites/SmartLink';
-
-// Internal link
-<SmartLink href="/about">About</SmartLink>
-
-// External link
-<SmartLink href="https://example.com" external>External</SmartLink>
-```
-
-### Button Component
-
-The Button component supports `asChild` prop for polymorphic rendering with the Slot pattern.
-
-```tsx
-import { Button } from '@/components/primitives/Button';
-
-// Standard button
-<Button variant="primary" size="md">Click me</Button>
-
-// As child (polymorphic)
-<Button asChild>
-  <Link href="/about">About</Link>
-</Button>
-```
-
----
-
-## 6. Coding Style
-
-### Naming Conventions
-
-| Type                | Convention           | Example        |
-| ------------------- | -------------------- | -------------- |
-| Components          | PascalCase           | `Button.tsx`   |
-| Functions/Variables | camelCase            | `fetchData`    |
-| Files               | kebab-case           | `api-utils.ts` |
-| Constants           | SCREAMING_SNAKE_CASE | `MAX_RETRIES`  |
-
-### Import Order
-
-1. React/Next.js built-ins
-2. External libraries
-3. Internal aliases (`@/`)
-4. Relative imports (`../`, `./`)
-
----
-
-## 7. Formatting (Prettier)
-
-Follow the project's Prettier configuration from `.prettierrc`.
-
-**Important**: Always format code blocks according to project rules.
-
----
-
-## 8. TypeScript Standards
-
-### Types vs Interfaces
-
-```typescript
-// Use interface for object shapes
-interface BlogPost {
-  id: string;
-  title: string;
-}
-
-// Use type for unions and tuples
-type Status = "draft" | "published";
-```
-
-### Strict Rules
-
-- **NO `any`**: Use `unknown` if uncertain
-- **Avoid `!`**: Use optional chaining `?.` or logical checks
-- **Explicit returns**: Always define return types for exported functions
-
----
-
-## 9. API Routes
-
-- Handle errors with try/catch
-- Return standardized responses using `NextResponse.json`
-- Check HTTP methods explicitly (GET, POST, etc.)
-
-```typescript
-// app/api/route.ts
-import { NextResponse } from "next/server";
-
-export async function GET() {
-  return NextResponse.json({ data: "success" });
-}
-```
-
----
-
-## 10. React Best Practices
-
-- **Components**: Functional components only
-- **Hooks**: Extract logic to custom hooks
-- **Props**: Destructure in function signature
-- **Memoization**: Use `useMemo` for expensive calculations
-
----
-
-## 11. JSDoc Documentation
-
-Add JSDoc comments for:
-
-- Exported functions and hooks
-- Complex utility functions
-- Types and interfaces
-
-Skip for:
-
-- Obvious props (`className`, `children`)
-- Simple interfaces
-
-```typescript
-/**
- * Fetches vegan ipsum text.
- *
- * @param paragraphs - Number of paragraphs to generate.
- * @returns The generated vegan ipsum text.
- */
-export async function generateIpsum(paragraphs: number): Promise<string> {
-  // implementation
-}
-```
-
----
-
-## 12. Commit Message Format
+## Commit Message Format
 
 - **Subject**: lowercase, max 50 characters
 - **Body**: sentence-case or lower-case, max 72 characters per line
@@ -271,15 +94,9 @@ fix: standardize react types in components
 Add react import for consistent type usage. Use React.JSX.Element for return types.
 ```
 
-### Rules
-
-- Subject line: lowercase only, max 50 characters
-- Body: sentence-case or lower-case, max 72 characters per line
-- Use conventional commits format (type: subject)
-
 ---
 
-## 13. Committing Changes
+## Committing Changes
 
 After completing a task:
 
@@ -302,3 +119,108 @@ git commit -m "type: subject
 ```
 
 5. Remove stale commits from git.md when changes are committed
+
+---
+
+## Available Commands
+
+```bash
+# Development
+bun run dev              # Start development server (Turbopack)
+bun run build            # Build for production
+bun run start            # Start production server
+
+# Linting & Formatting
+bun run lint             # Lint all files
+bun run lint:fix         # Fix auto-fixable issues
+bun run format           # Format files
+bun run format:check     # Check formatting
+bun run tsc              # TypeScript type check
+
+# SEO
+bun run postbuild        # Generate sitemap (next-sitemap)
+bun run indexnow         # Submit sitemap to IndexNow
+```
+
+---
+
+## Utils Knowledge Base
+
+### Utils (`src/utils/`)
+
+| File            | Function                | Description                                            |
+| --------------- | ----------------------- | ------------------------------------------------------ |
+| `classnames.ts` | `cn()`                  | Combines Tailwind classes (clsx + twMerge)             |
+| `seo.ts`        | `getBaseUrl()`          | Returns normalized base URL for the application        |
+| `seo.ts`        | `safeCanonical(slug)`   | Normalizes a slug by removing leading/trailing slashes |
+| `seo.ts`        | `getCanonicalUrl(slug)` | Generates fully qualified canonical URL                |
+| `schema.ts`     | `personSchema()`        | Builds Schema.org Person entity                        |
+| `schema.ts`     | `websiteSchema()`       | Builds Schema.org WebSite entity                       |
+| `schema.ts`     | `getFullSchemaGraph()`  | Returns complete JSON-LD graph                         |
+
+---
+
+## Coding Standards
+
+### Naming
+
+- Components: `PascalCase` (`Button.tsx`)
+- Functions: `camelCase` (`fetchData`)
+- Files: `kebab-case` (`api-utils.ts`)
+- Constants: `SCREAMING_SNAKE_CASE` (`MAX_RETRIES`)
+
+### Import Order
+
+1. React/Next.js built-ins
+2. External libraries
+3. Internal aliases (`@/`)
+4. Relative imports
+
+### TypeScript
+
+- Use `interface` for object shapes
+- Use `type` for unions and tuples
+- NO `any` - use `unknown` if uncertain
+- Avoid `!` - use optional chaining
+
+---
+
+## Components
+
+### SmartLink
+
+Use `SmartLink` for both internal and external links - handles `target`/`rel` attributes and SEO automatically.
+
+### Button
+
+Supports `asChild` prop for polymorphic rendering using `@radix-ui/react-slot`.
+
+---
+
+## API Standards
+
+- Use `NextResponse.json` for responses
+- Check HTTP methods explicitly
+- Handle errors with try/catch
+- Return proper status codes (200, 400, 405, etc.)
+
+---
+
+## Validation
+
+Validate all inputs from API requests and forms. Use Zod for schema validation.
+
+---
+
+## JSDoc Requirements
+
+Add JSDoc to:
+
+- Exported functions and hooks
+- Complex utility functions
+- Types and interfaces
+
+Skip for:
+
+- Obvious props (`className`, `children`)
+- Simple interfaces
