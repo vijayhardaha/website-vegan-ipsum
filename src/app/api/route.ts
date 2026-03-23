@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server';
 import { veganIpsum } from 'vegan-ipsum';
 
+/**
+ * Edge runtime configuration for faster response times.
+ */
+export const runtime = 'edge';
+
 // Types for query parameters
 type LoremUnit = 'paragraphs' | 'sentences' | 'words';
 type LoremFormat = 'plain' | 'html';
@@ -50,21 +55,6 @@ export async function GET(request: Request): Promise<NextResponse> {
   const count = parseInt(searchParams.get('count') || '3', 10);
   const units: LoremUnit = (searchParams.get('units') as LoremUnit) || 'paragraphs';
   const format: LoremFormat = (searchParams.get('format') as LoremFormat) || 'plain';
-
-  return generateIpsum(count, units, format);
-}
-
-/**
- * Handles POST requests to generate vegan ipsum text.
- *
- * @param {Request} request - The incoming HTTP request.
- * @returns {Promise<NextResponse>} A JSON response containing the generated text.
- */
-export async function POST(request: Request): Promise<NextResponse> {
-  const body = await request.json();
-  const count = parseInt(body.count || '3', 10);
-  const units: LoremUnit = body.units || 'paragraphs';
-  const format: LoremFormat = body.format || 'plain';
 
   return generateIpsum(count, units, format);
 }

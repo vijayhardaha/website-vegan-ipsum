@@ -35,11 +35,10 @@ export default function RequestMethods(): JSX.Element {
             >
               HTTP request methods
             </SmartLink>{' '}
-            to fetch vegan-themed placeholder text. Both <code>GET</code> and <code>POST</code> requests return the same
-            JSON response structure and accept identical parameters.
+            to fetch vegan-themed placeholder text using <code>GET</code> requests.
           </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mt-8">
             <div className="border-border rounded-3xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
               <div className="mb-3 flex items-center gap-3">
                 <span className="bg-primary-muted text-primary-dark rounded-2xl px-3 py-1 font-mono text-sm font-bold">
@@ -54,19 +53,6 @@ export default function RequestMethods(): JSX.Element {
                   cURL
                 </SmartLink>
                 .
-              </p>
-            </div>
-
-            <div className="border-border rounded-3xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-              <div className="mb-3 flex items-center gap-3">
-                <span className="bg-secondary-muted text-secondary-dark rounded-2xl px-3 py-1 font-mono text-sm font-bold">
-                  POST
-                </span>
-                <h3 className="text-lg">JSON Body</h3>
-              </div>
-              <p className="text-sm leading-relaxed">
-                Send parameters as a JSON object in the request body. Use this method for complex queries or when
-                integrating securely within client-server applications.
               </p>
             </div>
           </div>

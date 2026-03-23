@@ -10,7 +10,6 @@ import {
   RequestMethods,
   Parameters,
   GetRequestExample,
-  PostRequestExample,
   ResponseFormat,
   ErrorHandling,
   StatusCodes,
@@ -29,7 +28,7 @@ const pageTitle = (
 );
 const pageDescription =
   'Build dynamic, cruelty-free mockups with our lightweight REST API. Integrate plant-based placeholder text directly into your frontend or backend applications via simple JSON endpoints. This API provides paragraphs, sentences, or words in plain or HTML format.';
-const pageTags = ['🔓 No Auth Required', '🔁 GET & POST', '🧾 JSON Responses', '📝 Plain & HTML Formats'];
+const pageTags = ['🔓 No Auth Required', '🔁 GET Only', '🧾 JSON Responses', '📝 Plain & HTML Formats'];
 
 // Path for the page, used for metadata and schema generation
 const path = '/json-api';
@@ -75,8 +74,6 @@ export default function JsonAPIPage(): JSX.Element {
       <Parameters />
 
       <GetRequestExample />
-
-      <PostRequestExample />
 
       <ResponseFormat />
 

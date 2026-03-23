@@ -45,11 +45,7 @@ export default function Introduction(): JSX.Element {
             <SmartLink href="/json-api#get-request-example">
               <code>GET</code>
             </SmartLink>{' '}
-            requests for simple retrieval and{' '}
-            <SmartLink href="/json-api#post-request-example">
-              <code>POST</code>
-            </SmartLink>{' '}
-            requests for more complex payloads via{' '}
+            requests for fast and simple retrieval of content via{' '}
             <SmartLink
               href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
               aria-label="Learn about JSON format"
