@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { veganIpsum } from 'vegan-ipsum';
 
 /**
  * Edge runtime configuration for faster response times.
@@ -18,7 +17,7 @@ type LoremFormat = 'plain' | 'html';
  * @param {LoremFormat} format - The format of the output ('plain' or 'html').
  * @returns {NextResponse} A JSON response containing the generated text.
  */
-function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): NextResponse {
+async function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): Promise<NextResponse> {
   try {
     if (isNaN(count) || count < 1 || count > 100) {
       return NextResponse.json({ error: 'Invalid count. Please provide a number between 1 and 100.' }, { status: 400 });
@@ -30,6 +29,8 @@ function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): Ne
         { status: 400 }
       );
     }
+
+    const { veganIpsum } = await import('vegan-ipsum');
 
     const ipsumText = veganIpsum({ count, units, format });
 
