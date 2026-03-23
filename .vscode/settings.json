@@ -1,49 +1,26 @@
 {
-	// ==============================================================================
-	// VSCODE WORKSPACE SETTINGS
-	// ==============================================================================
-	// Purpose: Defines editor, linting, and spell-check behavior specific to this
-	// project workspace for consistent local developer experience.
-	// Docs: https://code.visualstudio.com/docs/getstarted/settings
-	// ==============================================================================
+  // ======================================================================
+  // VS Code Workspace Settings
+  // ======================================================================
+  // Purpose: Configure formatter, ESLint, and editor behavior for consistency
+  // Docs: https://code.visualstudio.com/docs/getstarted/settings
+  // ======================================================================
 
-	// ==========================================
-	// EDITOR FORMATTING BEHAVIOR
-	// ==========================================
-	// Use Prettier extension as the default formatter in this workspace.
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	// Keep automatic format-on-save disabled to avoid unintended bulk changes.
-	"editor.formatOnSave": false,
+  // ---- Formatting & Saving ----
+  // Use Prettier as the master formatter for this project
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 
-	// ==========================================
-	// SAVE-TIME CODE ACTIONS
-	// ==========================================
-	// Run ESLint auto-fixes only when explicitly requested on save.
-	"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
+  // We disable `formatOnSave` because ESLint code actions handle formatting
+  "editor.formatOnSave": false,
 
-	// ==========================================
-	// ESLINT LANGUAGE SCOPE
-	// ==========================================
-	// Enable ESLint validation for JavaScript and TypeScript source files.
-	"eslint.enable": true,
-	"eslint.format.enable": true,
-	"eslint.validate": [
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact"
-	],
+  "editor.codeActionsOnSave": {
+    // Automatically fix lint errors and trigger Prettier on every save
+    "source.fixAll.eslint": "explicit"
+  },
 
-	// ==========================================
-	// SPELL CHECK CUSTOM WORDS
-	// ==========================================
-	// Whitelist project-specific names and terms for cSpell.
-	"cSpell.words": [
-		"vijayhardaha",
-		"Vijay",
-		"Hardaha",
-		"codewars",
-		"stactoverflow",
-		"devto"
-	]
+  // ---- Linter Integration ----
+  // Allow ESLint to handle formatting (via Prettier plugin)
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
 }
