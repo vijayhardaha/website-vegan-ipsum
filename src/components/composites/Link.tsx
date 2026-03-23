@@ -3,7 +3,7 @@
 import { type MouseEvent } from 'react';
 import type { ComponentPropsWithoutRef, JSX } from 'react';
 
-import Link from 'next/link';
+import NextLink from 'next/link';
 
 import Icon from '@/components/primitives/Icon';
 import { cn } from '@/utils/classnames';
@@ -31,9 +31,9 @@ const scrollToElement = (elementId: string): void => {
 };
 
 /**
- * Props for the SmartLink component
+ * Props for the Link component
  */
-interface SmartLinkProps extends Omit<ComponentPropsWithoutRef<typeof Link>, 'href'> {
+interface LinkProps extends Omit<ComponentPropsWithoutRef<typeof NextLink>, 'href'> {
   /** The destination URL or hash anchor */
   href: string;
   /** Optional offset for hash links (useful for fixed headers) */
@@ -45,14 +45,14 @@ interface SmartLinkProps extends Omit<ComponentPropsWithoutRef<typeof Link>, 'hr
 }
 
 /**
- * SmartLink Component
+ * Link Component
  *
- * An intelligent Link component that automatically handles:
+ * An intelligent NextLink component that automatically handles:
  * - Hash links (#anchor) with smooth scroll behavior
  * - Internal links (/path) without external attributes
  * - External links (https://...) with proper security attributes
  */
-export default function SmartLink({
+export default function Link({
   href,
   className,
   'aria-label': ariaLabel,
@@ -62,13 +62,13 @@ export default function SmartLink({
   linkLine = true,
   hoverEffect = 'background',
   ...props
-}: SmartLinkProps): JSX.Element {
+}: LinkProps): JSX.Element {
   const linkType = getLinkType(href);
 
   // Dev-time accessibility warning for external links without an accessible name
   if (process.env.NODE_ENV !== 'production' && linkType === 'external' && !ariaLabel) {
     console.warn(
-      `[SmartLink] External link '${href}' does not have an accessible name (aria-label). Provide an aria-label or visible link text.`
+      `[Link] External link '${href}' does not have an accessible name (aria-label). Provide an aria-label or visible link text.`
     );
   }
 
@@ -139,7 +139,7 @@ export default function SmartLink({
   // Hash link with smooth scroll
   if (linkType === 'hash') {
     return (
-      <Link
+      <NextLink
         href={href}
         scroll={false}
         onClick={handleHashClick}
@@ -148,14 +148,14 @@ export default function SmartLink({
         {...props}
       >
         {children}
-      </Link>
+      </NextLink>
     );
   }
 
   // External link with security attributes
   if (linkType === 'external') {
     return (
-      <Link
+      <NextLink
         href={href}
         target="_blank"
         rel="noopener noreferrer"
@@ -166,14 +166,14 @@ export default function SmartLink({
       >
         <span className="leading-tight">{children}</span>
         {linkLine && <Icon name="arrowOutward" className="relative top-px text-inherit" />}
-      </Link>
+      </NextLink>
     );
   }
 
   // Internal link (default)
   return (
-    <Link href={href} className={cn(linkClasses, className)} aria-label={ariaLabel} onClick={onClick} {...props}>
+    <NextLink href={href} className={cn(linkClasses, className)} aria-label={ariaLabel} onClick={onClick} {...props}>
       {children}
-    </Link>
+    </NextLink>
   );
 }
