@@ -39,7 +39,7 @@ src/
 │   │   ├── JsonLd.tsx
 │   │   ├── PageHeader.tsx
 │   │   ├── PageTags.tsx
-│   │   └── SmartLink.tsx
+│   │   └── Link.tsx
 │   │
 │   ├── layout/           # Layout components
 │   │   ├── Layout.tsx
@@ -187,9 +187,9 @@ bun run indexnow         # Submit sitemap to IndexNow
 
 ## Components
 
-### SmartLink
+### Link
 
-Use `SmartLink` for both internal and external links - handles `target`/`rel` attributes and SEO automatically.
+Use `Link` for both internal and external links - handles `target`/`rel` attributes and SEO automatically.
 
 ### Button
 

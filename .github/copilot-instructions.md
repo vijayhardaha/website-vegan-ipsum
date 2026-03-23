@@ -40,7 +40,7 @@ src/
 │   │   ├── JsonLd.tsx
 │   │   ├── PageHeader.tsx
 │   │   ├── PageTags.tsx
-│   │   └── SmartLink.tsx
+│   │   └── Link.tsx
 │   │
 │   ├── layout/           # Layout components
 │   │   ├── Layout.tsx
@@ -123,18 +123,18 @@ bun run indexnow         # Submit sitemap to IndexNow
 
 ## 5. Components
 
-### SmartLink Component
+### Link Component
 
-Use `SmartLink` for both internal and external links - handles `target`/`rel` attributes and SEO attributes automatically.
+Use `Link` for both internal and external links - handles `target`/`rel` attributes and SEO attributes automatically.
 
 ```tsx
-import { SmartLink } from '@/components/composites/SmartLink';
+import { Link } from '@/components/composites/Link';
 
 // Internal link
-<SmartLink href="/about">About</SmartLink>
+<Link href="/about">About</Link>
 
 // External link
-<SmartLink href="https://example.com" external>External</SmartLink>
+<Link href="https://example.com" external>External</Link>
 ```
 
 ### Button Component
