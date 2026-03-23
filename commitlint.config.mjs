@@ -1,30 +1,33 @@
 /**
- * ==============================================================================
- * COMMITLINT CONFIGURATION
- * ==============================================================================
- * Purpose: Validates commit messages against Conventional Commit rules to keep
- * history readable and automation-friendly (release notes, changelog tooling).
- * Docs: https://commitlint.js.org/
- * ==============================================================================
+ * =======================================================================
+ * Commitlint Configuration
+ * =======================================================================
+ * Purpose: Enforce conventional commits and project commit style.
+ * Docs: https://commitlint.js.org/#/
+ * =======================================================================
  */
 
 /** @type {import('@commitlint/types').UserConfig} */
 const config = {
-	// --- Base Ruleset ---
-	// Extend the standard Conventional Commits preset
-	extends: ["@commitlint/config-conventional"],
+  // ---- Base Ruleset ----
+  // Use the conventional commits preset as the starting point
+  extends: ['@commitlint/config-conventional'],
 
-	// --- Commit Message Constraints ---
-	rules: {
-		// Keep commit headers concise for readable one-line history output
-		"header-max-length": [2, "always", 50],
+  // ---- Strict Standards ----
+  // Project-specific stricter rules layered on top of the base preset
+  rules: {
+    // Enforce a concise header to keep 'git log --oneline' clean
+    'header-max-length': [2, 'always', 50],
 
-		// Keep body lines terminal-friendly and easy to scan in reviews
-		"body-max-line-length": [2, "always", 72],
+    // Ensure the body doesn't wrap awkwardly in terminal views
+    'body-max-line-length': [2, 'always', 72],
 
-		// Enforce lowercase subjects for consistent style across contributors
-		"subject-case": [2, "always", ["lower-case"]],
-	},
+    // Allow mixed case for technical terms like useImageDrawer
+    'body-case': [2, 'always', ['sentence-case', 'lower-case']],
+
+    // Disable subject-case rule to allow camelCase identifiers
+    'subject-case': [0],
+  },
 };
 
 export default config;
