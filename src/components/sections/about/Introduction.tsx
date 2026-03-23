@@ -2,8 +2,8 @@ import type { JSX } from 'react';
 
 import Image from 'next/image';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -37,18 +37,18 @@ export default function Introduction(): JSX.Element {
             </p>
             <p>
               Unlike traditional{' '}
-              <SmartLink href="https://www.lipsum.com/" aria-label="Visit standard Lorem Ipsum website">
+              <Link href="https://www.lipsum.com/" aria-label="Visit standard Lorem Ipsum website">
                 Lorem Ipsum
-              </SmartLink>{' '}
+              </Link>{' '}
               generators, Vegan Ipsum produces filler text infused with vegan-themed vocabulary and compassionate
               language. It is perfectly tailored for projects centered around sustainability, animal welfare, and green
               living.
             </p>
             <p>
               Easy to integrate and highly customizable, Vegan Ipsum supports multiple formats and delivery methods,
-              from a web-based interface to <SmartLink href="/json-api">REST APIs</SmartLink>,{' '}
-              <SmartLink href="/node-cli">command-line tools</SmartLink>, and{' '}
-              <SmartLink href="/vscode-extension">editor extensions</SmartLink>.
+              from a web-based interface to <Link href="/json-api">REST APIs</Link>,{' '}
+              <Link href="/node-cli">command-line tools</Link>, and{' '}
+              <Link href="/vscode-extension">editor extensions</Link>.
             </p>
           </SectionHeader>
         </div>

@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -33,9 +33,9 @@ export default function Resources(): JSX.Element {
           <ul className="list-disc space-y-2 pl-8">
             <li>
               <strong>Automate Workflows:</strong> Integrate the CLI into shell scripts or{' '}
-              <SmartLink href="https://docs.github.com/en/actions" aria-label="Learn about GitHub Actions automation">
+              <Link href="https://docs.github.com/en/actions" aria-label="Learn about GitHub Actions automation">
                 CI/CD pipelines
-              </SmartLink>{' '}
+              </Link>{' '}
               to dynamically generate placeholder content during build processes.
             </li>
 
@@ -46,17 +46,17 @@ export default function Resources(): JSX.Element {
 
             <li>
               <strong>Advanced Processing:</strong> Pipe output directly into standard Unix tools like{' '}
-              <SmartLink href="https://www.gnu.org/software/grep/" aria-label="Visit GNU Grep documentation">
+              <Link href="https://www.gnu.org/software/grep/" aria-label="Visit GNU Grep documentation">
                 <code>grep</code>
-              </SmartLink>
+              </Link>
               ,{' '}
-              <SmartLink href="https://www.gnu.org/software/gawk/manual/" aria-label="Visit GNU Awk documentation">
+              <Link href="https://www.gnu.org/software/gawk/manual/" aria-label="Visit GNU Awk documentation">
                 <code>awk</code>
-              </SmartLink>
+              </Link>
               , or{' '}
-              <SmartLink href="https://www.gnu.org/software/sed/manual/" aria-label="Visit GNU Sed documentation">
+              <Link href="https://www.gnu.org/software/sed/manual/" aria-label="Visit GNU Sed documentation">
                 <code>sed</code>
-              </SmartLink>{' '}
+              </Link>{' '}
               for custom text filtering and manipulation.
             </li>
 
@@ -74,29 +74,29 @@ export default function Resources(): JSX.Element {
           <h3 className="mt-8 mb-2 text-lg">Additional Resources:</h3>
 
           <p>
-            For programmatic usage, refer to the <SmartLink href="/npm-package">Vegan Ipsum NPM Package</SmartLink>{' '}
-            documentation for detailed API references and implementation examples.
+            For programmatic usage, refer to the <Link href="/npm-package">Vegan Ipsum NPM Package</Link> documentation
+            for detailed API references and implementation examples.
           </p>
 
           <p>
             You can also visit the{' '}
-            <SmartLink
+            <Link
               href="https://www.npmjs.com/package/vegan-ipsum"
               aria-label="View vegan-ipsum package statistics and history on npm"
             >
               official npm package page
-            </SmartLink>{' '}
+            </Link>{' '}
             to analyze download statistics, review version history, and assess community feedback.
           </p>
 
           <p>
             To contribute to the project or report issues, please visit the{' '}
-            <SmartLink
+            <Link
               href="https://github.com/vijayhardaha/node-vegan-ipsum"
               aria-label="Visit the vegan-ipsum GitHub repository"
             >
               GitHub repository
-            </SmartLink>{' '}
+            </Link>{' '}
             to submit pull requests or open new issues.
           </p>
         </SectionHeader>

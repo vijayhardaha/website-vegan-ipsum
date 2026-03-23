@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
@@ -26,16 +26,16 @@ export default function Usage(): JSX.Element {
         >
           <p>
             After installation, you can import <code>vegan-ipsum</code> into your{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               aria-label="Learn more about JavaScript"
             >
               JavaScript
-            </SmartLink>{' '}
+            </Link>{' '}
             or{' '}
-            <SmartLink href="https://www.typescriptlang.org/docs/" aria-label="Learn more about TypeScript">
+            <Link href="https://www.typescriptlang.org/docs/" aria-label="Learn more about TypeScript">
               TypeScript
-            </SmartLink>{' '}
+            </Link>{' '}
             project to generate plant-based placeholder text programmatically.
           </p>
 
@@ -115,48 +115,42 @@ console.log(customText);`}
 
           <p>
             For comprehensive API documentation and advanced configuration options, visit the official{' '}
-            <SmartLink
-              href="https://www.npmjs.com/package/vegan-ipsum"
-              aria-label="View vegan-ipsum package details on npm"
-            >
+            <Link href="https://www.npmjs.com/package/vegan-ipsum" aria-label="View vegan-ipsum package details on npm">
               vegan-ipsum npm package page
-            </SmartLink>
+            </Link>
             . If you are new to open source, we recommend reading the{' '}
-            <SmartLink
+            <Link
               href="https://opensource.guide/how-to-contribute/"
               aria-label="Learn about contributing to open source projects"
             >
               contribution guidelines
-            </SmartLink>{' '}
+            </Link>{' '}
             before getting started.
           </p>
 
           <p>
             Developers are encouraged to explore the{' '}
-            <SmartLink
+            <Link
               href="https://github.com/vijayhardaha/node-vegan-ipsum"
               aria-label="View node-vegan-ipsum source code on GitHub"
             >
               GitHub repository
-            </SmartLink>{' '}
+            </Link>{' '}
             to inspect the source code. If you encounter any bugs or have suggestions for improvements, please{' '}
-            <SmartLink
+            <Link
               href="https://github.com/vijayhardaha/node-vegan-ipsum/issues/new"
               aria-label="Report an issue or bug"
             >
               report an issue
-            </SmartLink>{' '}
+            </Link>{' '}
             or{' '}
-            <SmartLink
-              href="https://github.com/vijayhardaha/node-vegan-ipsum/issues"
-              aria-label="Request a new feature"
-            >
+            <Link href="https://github.com/vijayhardaha/node-vegan-ipsum/issues" aria-label="Request a new feature">
               request a feature
-            </SmartLink>
+            </Link>
             . Community contributions via{' '}
-            <SmartLink href="https://github.com/vijayhardaha/node-vegan-ipsum/pulls" aria-label="Submit a pull request">
+            <Link href="https://github.com/vijayhardaha/node-vegan-ipsum/pulls" aria-label="Submit a pull request">
               pull requests
-            </SmartLink>{' '}
+            </Link>{' '}
             are also welcome.
           </p>
         </SectionHeader>

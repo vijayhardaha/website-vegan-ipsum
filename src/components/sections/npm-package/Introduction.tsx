@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -24,17 +24,14 @@ export default function Introduction(): JSX.Element {
           icon="jsSquare"
         >
           <p>
-            <SmartLink
-              href="https://www.npmjs.com/package/vegan-ipsum"
-              aria-label="View vegan-ipsum package details on npm"
-            >
+            <Link href="https://www.npmjs.com/package/vegan-ipsum" aria-label="View vegan-ipsum package details on npm">
               <code>vegan-ipsum</code>
-            </SmartLink>{' '}
+            </Link>{' '}
             is a lightweight, zero-dependency JavaScript library for generating unique, vegan-themed placeholder text.
             It serves as a cruelty-free alternative to traditional{' '}
-            <SmartLink href="https://www.lipsum.com/" aria-label="Visit Lorem Ipsum website">
+            <Link href="https://www.lipsum.com/" aria-label="Visit Lorem Ipsum website">
               Lorem Ipsum
-            </SmartLink>
+            </Link>
             , offering distinctive filler content for your layouts.
           </p>
 
@@ -42,28 +39,28 @@ export default function Introduction(): JSX.Element {
             Designed for developers, designers, and content creators, this package allows you to integrate ethically
             inspired, plant-based dummy text into your projects. It is an excellent choice for building vegan blogs,
             sustainability platforms, or{' '}
-            <SmartLink href="https://react.dev/" aria-label="Visit React official website">
+            <Link href="https://react.dev/" aria-label="Visit React official website">
               React
-            </SmartLink>{' '}
+            </Link>{' '}
             applications promoting compassionate living.
           </p>
 
           <p>
             The library is environment-agnostic and fully compatible with{' '}
-            <SmartLink href="https://nodejs.org/" aria-label="Visit Node.js official website">
+            <Link href="https://nodejs.org/" aria-label="Visit Node.js official website">
               Node.js
-            </SmartLink>
+            </Link>
             , modern browsers, and{' '}
-            <SmartLink href="https://reactnative.dev/" aria-label="Visit React Native official documentation">
+            <Link href="https://reactnative.dev/" aria-label="Visit React Native official documentation">
               React Native
-            </SmartLink>
+            </Link>
             , ensuring seamless integration across diverse{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               aria-label="Visit JavaScript documentation on MDN"
             >
               JavaScript
-            </SmartLink>{' '}
+            </Link>{' '}
             ecosystems.
           </p>
         </SectionHeader>

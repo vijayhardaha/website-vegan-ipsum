@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 
-import SmartLink from '@/components/composites/SmartLink';
+import Link from '@/components/composites/Link';
 import Section from '@/components/layout/Section';
 import Button from '@/components/primitives/Button';
 import Container from '@/components/primitives/Container';
@@ -25,13 +25,13 @@ export default function CTA(): JSX.Element {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button asChild variant="white" size="md">
-                <SmartLink href="/json-api">Try the API</SmartLink>
+                <Link href="/json-api">Try the API</Link>
               </Button>
               <Button asChild variant="secondary" size="md">
-                <SmartLink href="/npm-package">NPM Package</SmartLink>
+                <Link href="/npm-package">NPM Package</Link>
               </Button>
               <Button asChild variant="secondary-outline" size="md">
-                <SmartLink href="https://github.com/vijayhardaha/node-vegan-ipsum">View on GitHub</SmartLink>
+                <Link href="https://github.com/vijayhardaha/node-vegan-ipsum">View on GitHub</Link>
               </Button>
             </div>
           </div>

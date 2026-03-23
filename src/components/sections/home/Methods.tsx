@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
@@ -93,16 +93,16 @@ export default function Methods(): JSX.Element {
           <p>
             Instantly generate plant-based placeholder text tailored to your project requirements. Whether you prefer a
             simple web interface, a robust{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
               aria-label="Learn about HTTP requests"
             >
               JSON API
-            </SmartLink>
+            </Link>
             , or developer-focused tools like the{' '}
-            <SmartLink href="https://code.visualstudio.com/" aria-label="Visit Visual Studio Code website">
+            <Link href="https://code.visualstudio.com/" aria-label="Visit Visual Studio Code website">
               Visual Studio Code
-            </SmartLink>{' '}
+            </Link>{' '}
             Extension, Vegan Ipsum offers a flexible solution for every workflow.
           </p>
 
@@ -120,7 +120,7 @@ export default function Methods(): JSX.Element {
                     <h3 className="text-primary-solid mb-1 text-lg">{card.title}</h3>
                     <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{card.text}</p>
 
-                    <SmartLink
+                    <Link
                       href={card.link}
                       scrollOffset={68}
                       className="text-primary relative inline-flex items-center gap-0.5 text-sm font-medium"
@@ -129,7 +129,7 @@ export default function Methods(): JSX.Element {
                     >
                       {card.buttonText}
                       {card?.buttonIcon && <Icon name="arrowRight" />}
-                    </SmartLink>
+                    </Link>
                   </div>
                 </div>
               </div>

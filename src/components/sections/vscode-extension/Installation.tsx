@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
@@ -31,16 +31,16 @@ export default function Installation(): JSX.Element {
         >
           <p>
             You can integrate the{' '}
-            <SmartLink
+            <Link
               href="https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum"
               aria-label="View Vegan Ipsum extension details on the Visual Studio Marketplace"
             >
               Vegan Ipsum VS Code extension
-            </SmartLink>{' '}
+            </Link>{' '}
             into your{' '}
-            <SmartLink href="https://code.visualstudio.com/" aria-label="Download Visual Studio Code">
+            <Link href="https://code.visualstudio.com/" aria-label="Download Visual Studio Code">
               Visual Studio Code
-            </SmartLink>{' '}
+            </Link>{' '}
             setup in two ways: via the built-in Marketplace search or by using the command-line interface for a quick
             installation.
           </p>
@@ -94,12 +94,12 @@ export default function Installation(): JSX.Element {
 
               <p className="mb-4 text-sm leading-relaxed">
                 Open the{' '}
-                <SmartLink
+                <Link
                   href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
                   aria-label="Learn how to use the Command Palette"
                 >
                   Command Palette
-                </SmartLink>{' '}
+                </Link>{' '}
                 (<kbd className="kbd">Ctrl+Shift+P</kbd> or <kbd className="kbd">Cmd+Shift+P</kbd>) and run:
               </p>
 
@@ -112,12 +112,9 @@ export default function Installation(): JSX.Element {
 
               <InfoBox className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5">
                 This command triggers installation directly from the{' '}
-                <SmartLink
-                  href="https://marketplace.visualstudio.com/"
-                  aria-label="Visit the Visual Studio Marketplace"
-                >
+                <Link href="https://marketplace.visualstudio.com/" aria-label="Visit the Visual Studio Marketplace">
                   VS Code Marketplace
-                </SmartLink>{' '}
+                </Link>{' '}
                 without navigating away from your editor.
               </InfoBox>
             </div>

@@ -2,8 +2,8 @@ import type { JSX } from 'react';
 
 import Image from 'next/image';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -34,9 +34,9 @@ export default function Overview(): JSX.Element {
 
             <p>
               Unlike generic{' '}
-              <SmartLink href="https://www.lipsum.com/" aria-label="Visit standard Lorem Ipsum website">
+              <Link href="https://www.lipsum.com/" aria-label="Visit standard Lorem Ipsum website">
                 Lorem Ipsum
-              </SmartLink>{' '}
+              </Link>{' '}
               generators, this tool creates vegan-themed filler text that resonates with eco-conscious branding, making
               it ideal for websites, apps, presentations, and prototypes.
             </p>
@@ -61,9 +61,9 @@ export default function Overview(): JSX.Element {
                   &#10003;
                 </div>
                 <span>
-                  Seamlessly integrates via <SmartLink href="/json-api">API</SmartLink>,{' '}
-                  <SmartLink href="/node-cli">CLI</SmartLink>, <SmartLink href="/npm-package">NPM Package</SmartLink>,
-                  and <SmartLink href="/vscode-extension">VS Code Extension</SmartLink>
+                  Seamlessly integrates via <Link href="/json-api">API</Link>, <Link href="/node-cli">CLI</Link>,{' '}
+                  <Link href="/npm-package">NPM Package</Link>, and{' '}
+                  <Link href="/vscode-extension">VS Code Extension</Link>
                 </span>
               </li>
 
@@ -73,9 +73,9 @@ export default function Overview(): JSX.Element {
                 </div>
                 <span>
                   Fully open source and free to use under the{' '}
-                  <SmartLink href="https://opensource.org/licenses/MIT" aria-label="Learn about the MIT License">
+                  <Link href="https://opensource.org/licenses/MIT" aria-label="Learn about the MIT License">
                     MIT License
-                  </SmartLink>
+                  </Link>
                 </span>
               </li>
             </ul>

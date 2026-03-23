@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { LuAlignRight, LuX } from 'react-icons/lu';
 
-import SmartLink from '@/components/composites/SmartLink';
+import Link from '@/components/composites/Link';
 import Button from '@/components/primitives/Button';
 import { HEADER_NAV_LINKS, type NavLink } from '@/constants/navlinks';
 import { cn } from '@/utils/classnames';
@@ -68,7 +68,7 @@ export default function Header(): JSX.Element {
     <header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <div className="flex items-center justify-between gap-6">
-          <SmartLink href="/" aria-label="Navigate to homepage" hoverEffect="none">
+          <Link href="/" aria-label="Navigate to homepage" hoverEffect="none">
             <Image
               src="/logo.svg"
               alt="Vegan Ipsum Logo"
@@ -78,7 +78,7 @@ export default function Header(): JSX.Element {
               className="h-auto w-55 py-2"
             />
             <span className="sr-only">Vegan Ipsum</span>
-          </SmartLink>
+          </Link>
           <div className="ml-auto" ref={menuRef}>
             <Button
               size="icon"
@@ -103,7 +103,7 @@ export default function Header(): JSX.Element {
               <ul className="flex flex-col space-y-4 p-4 md:px-6 lg:flex-row lg:space-y-0 lg:space-x-5 lg:p-0">
                 {HEADER_NAV_LINKS.map((link: NavLink) => (
                   <li key={link.href}>
-                    <SmartLink
+                    <Link
                       href={link.href}
                       className={cn('inline-flex items-center text-sm font-semibold', 'hover:text-primary', {
                         'text-primary font-bold decoration-current': isActive(link.href),
@@ -114,7 +114,7 @@ export default function Header(): JSX.Element {
                       hoverEffect="border"
                     >
                       {link.label}
-                    </SmartLink>
+                    </Link>
                   </li>
                 ))}
               </ul>

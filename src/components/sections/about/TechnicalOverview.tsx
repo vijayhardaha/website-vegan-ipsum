@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
@@ -35,9 +35,9 @@ export default function TechnicalOverview(): JSX.Element {
               {[
                 <>
                   Written entirely in modern, strongly typed{' '}
-                  <SmartLink href="https://www.typescriptlang.org/" aria-label="Visit TypeScript official website">
+                  <Link href="https://www.typescriptlang.org/" aria-label="Visit TypeScript official website">
                     <strong>TypeScript</strong>
-                  </SmartLink>{' '}
+                  </Link>{' '}
                   to ensure code quality and maintainability.
                 </>,
                 <>
@@ -50,19 +50,19 @@ export default function TechnicalOverview(): JSX.Element {
                 </>,
                 <>
                   Supports both{' '}
-                  <SmartLink
+                  <Link
                     href="https://nodejs.org/api/modules.html#modules-commonjs-modules"
                     aria-label="Learn about CommonJS modules"
                   >
                     <strong>CommonJS</strong>
-                  </SmartLink>{' '}
+                  </Link>{' '}
                   and{' '}
-                  <SmartLink
+                  <Link
                     href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
                     aria-label="Learn about ECMAScript Modules"
                   >
                     <strong>ECMAScript Modules (ESM)</strong>
-                  </SmartLink>{' '}
+                  </Link>{' '}
                   to maximize compatibility across JavaScript environments.
                 </>,
                 <>

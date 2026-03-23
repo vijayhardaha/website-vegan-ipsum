@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
@@ -30,12 +30,12 @@ export default function BaseUrl(): JSX.Element {
         >
           <p className="mb-8">
             All API endpoints are relative to the following base URL. We strongly recommend using{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security"
               aria-label="Learn about HTTPS and Transport Layer Security"
             >
               HTTPS
-            </SmartLink>{' '}
+            </Link>{' '}
             for all requests to ensure security and data integrity.
           </p>
 

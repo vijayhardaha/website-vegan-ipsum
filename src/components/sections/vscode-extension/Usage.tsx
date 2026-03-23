@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import InfoBox from '@/components/primitives/InfoBox';
@@ -27,12 +27,12 @@ export default function Usage(): JSX.Element {
           <p>
             Once installed, generating vegan-themed placeholder text is an efficient process. You can trigger the
             generator directly from the{' '}
-            <SmartLink
+            <Link
               href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
               aria-label="Learn how to use the Command Palette"
             >
               Command Palette
-            </SmartLink>{' '}
+            </Link>{' '}
             or assign custom keyboard shortcuts for even faster access.
           </p>
 
@@ -71,24 +71,24 @@ export default function Usage(): JSX.Element {
 
           <InfoBox>
             This extension works across various text-based file types, including{' '}
-            <SmartLink href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="Learn more about HTML">
+            <Link href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="Learn more about HTML">
               HTML
-            </SmartLink>
+            </Link>
             ,{' '}
-            <SmartLink href="https://www.markdownguide.org/" aria-label="Learn more about Markdown">
+            <Link href="https://www.markdownguide.org/" aria-label="Learn more about Markdown">
               Markdown
-            </SmartLink>
+            </Link>
             ,{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
               aria-label="Learn more about JavaScript"
             >
               JavaScript
-            </SmartLink>
+            </Link>
             , and{' '}
-            <SmartLink href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" aria-label="Learn more about JSON">
+            <Link href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" aria-label="Learn more about JSON">
               JSON
-            </SmartLink>
+            </Link>
             , making it a versatile tool for diverse development workflows.
           </InfoBox>
         </SectionHeader>

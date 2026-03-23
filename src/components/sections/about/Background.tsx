@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -28,12 +28,12 @@ export default function Background(): JSX.Element {
           <p>
             The concept for Vegan Ipsum emerged from a desire to fill a niche that traditional Lorem Ipsum generators
             had long overlooked. While exploring resources like{' '}
-            <SmartLink
+            <Link
               href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/"
               aria-label="Ultimate List of Lorem Ipsum Generators"
             >
               loremipsum.io
-            </SmartLink>
+            </Link>
             , it became evident that many specialized communities had developed custom placeholder text to better
             reflect their unique identities.
           </p>

@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -29,12 +29,12 @@ export default function RequestMethods(): JSX.Element {
         >
           <p>
             The Vegan Ipsum API supports standard{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
               aria-label="Learn about HTTP request methods"
             >
               HTTP request methods
-            </SmartLink>{' '}
+            </Link>{' '}
             to fetch vegan-themed placeholder text using <code>GET</code> requests.
           </p>
 
@@ -49,9 +49,9 @@ export default function RequestMethods(): JSX.Element {
               <p className="text-sm leading-relaxed">
                 Send parameters as query strings appended to the URL. This method is ideal for quick requests and can be
                 easily tested via a browser address bar or command-line tools like{' '}
-                <SmartLink href="https://curl.se/" aria-label="Visit curl website">
+                <Link href="https://curl.se/" aria-label="Visit curl website">
                   cURL
-                </SmartLink>
+                </Link>
                 .
               </p>
             </div>

@@ -2,8 +2,8 @@ import type { JSX } from 'react';
 
 import Link from 'next/link';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
@@ -75,10 +75,9 @@ export default function CoreFeatures(): JSX.Element {
         >
           <p>
             Vegan Ipsum offers multiple integration methods designed to fit seamlessly into your development workflow.
-            Explore our suite of plant-based developer tools from a robust{' '}
-            <SmartLink href="/json-api">JSON API</SmartLink> and <SmartLink href="/npm-package">NPM package</SmartLink>{' '}
-            to our <SmartLink href="/vscode-extension">VS Code extension</SmartLink> and choose the solution that best
-            suits your project requirements.
+            Explore our suite of plant-based developer tools from a robust <Link href="/json-api">JSON API</Link> and{' '}
+            <Link href="/npm-package">NPM package</Link> to our <Link href="/vscode-extension">VS Code extension</Link>{' '}
+            and choose the solution that best suits your project requirements.
           </p>
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">

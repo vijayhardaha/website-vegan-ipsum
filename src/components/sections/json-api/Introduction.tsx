@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -34,24 +34,24 @@ export default function Introduction(): JSX.Element {
           </p>
           <p>
             The API returns content in both{' '}
-            <SmartLink href="/json-api#response-format">
+            <Link href="/json-api#response-format">
               <code>plain</code>
-            </SmartLink>{' '}
+            </Link>{' '}
             text and{' '}
-            <SmartLink href="/json-api#response-format">
+            <Link href="/json-api#response-format">
               <code>HTML</code>
-            </SmartLink>{' '}
+            </Link>{' '}
             formats, making it ready for immediate insertion into web pages or templates. It supports standard{' '}
-            <SmartLink href="/json-api#get-request-example">
+            <Link href="/json-api#get-request-example">
               <code>GET</code>
-            </SmartLink>{' '}
+            </Link>{' '}
             requests for fast and simple retrieval of content via{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
               aria-label="Learn about JSON format"
             >
               JSON
-            </SmartLink>
+            </Link>
             .
           </p>
         </SectionHeader>

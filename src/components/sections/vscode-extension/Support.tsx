@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -27,12 +27,12 @@ export default function Support(): JSX.Element {
             As an independently developed extension, user feedback is vital for prioritizing updates and resolving bugs.
             If you encounter any issues or have suggestions for new features, please help improve the tool by submitting
             an issue on the{' '}
-            <SmartLink
+            <Link
               href="https://github.com/vijayhardaha/vscode-vegan-ipsum/issues"
               aria-label="Vegan Ipsum VS Code Extension GitHub Issues Page"
             >
               GitHub repository
-            </SmartLink>
+            </Link>
             .
           </p>
         </SectionHeader>

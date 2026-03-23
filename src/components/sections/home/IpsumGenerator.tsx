@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Button from '@/components/primitives/Button';
 import Container from '@/components/primitives/Container';
@@ -79,12 +79,12 @@ export default function IpsumGenerator(): JSX.Element {
           <p>
             Instantly generate custom, plant-based placeholder text for your mockups and prototypes. Choose your
             preferred length and format to keep your{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
               aria-label="Learn about HTML for web design"
             >
               web design
-            </SmartLink>{' '}
+            </Link>{' '}
             projects fresh, ethical, and meaningful.
           </p>
 

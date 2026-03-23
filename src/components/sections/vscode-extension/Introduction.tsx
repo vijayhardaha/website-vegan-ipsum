@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 
@@ -26,9 +26,9 @@ export default function Introduction(): JSX.Element {
           <p>
             The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight, productivity-focused tool designed for
             developers and designers. It enables you to insert vegan-themed placeholder text directly into your{' '}
-            <SmartLink href="https://code.visualstudio.com/" aria-label="Visit Visual Studio Code official website">
+            <Link href="https://code.visualstudio.com/" aria-label="Visit Visual Studio Code official website">
               Visual Studio Code
-            </SmartLink>{' '}
+            </Link>{' '}
             editor without interrupting your workflow.
           </p>
 
@@ -36,23 +36,23 @@ export default function Introduction(): JSX.Element {
             Whether you are prototyping web layouts, building vegan blogs, or creating sustainable product mockups, this
             extension provides meaningful filler content instantly. It serves as a cruelty-free alternative to standard
             dummy text generators, right inside your{' '}
-            <SmartLink
+            <Link
               href="https://en.wikipedia.org/wiki/Integrated_development_environment"
               aria-label="Learn about Integrated Development Environments"
             >
               IDE
-            </SmartLink>
+            </Link>
             .
           </p>
 
           <p>
             The extension integrates seamlessly with the{' '}
-            <SmartLink
+            <Link
               href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
               aria-label="Learn how to use the VS Code Command Palette"
             >
               Command Palette
-            </SmartLink>{' '}
+            </Link>{' '}
             and supports multiple output formats, such as plain text and HTML, to suit various development requirements.
           </p>
         </SectionHeader>

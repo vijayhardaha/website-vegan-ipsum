@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import { cn } from '@/utils/classnames';
@@ -30,12 +30,12 @@ export default function StatusCodes(): JSX.Element {
         >
           <p className="mb-8">
             The API utilizes standard{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
               aria-label="Learn about HTTP status codes"
             >
               HTTP status codes
-            </SmartLink>{' '}
+            </Link>{' '}
             to indicate the result of a request. Below are the most common codes you may encounter when interacting with
             the endpoint:
           </p>

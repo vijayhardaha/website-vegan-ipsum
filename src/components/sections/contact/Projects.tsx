@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
@@ -117,14 +117,14 @@ export default function Projects(): JSX.Element {
 
                     <p className="text-foreground/80 mb-2 text-sm leading-relaxed">{card.content}</p>
 
-                    <SmartLink
+                    <Link
                       className="text-primary text-sm font-medium"
                       href={card.link}
                       aria-label={card.ariaLabel}
                       hoverEffect="border"
                     >
                       {card.buttonText}
-                    </SmartLink>
+                    </Link>
                   </div>
                 </div>
               </div>

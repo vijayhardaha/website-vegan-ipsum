@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import PageTags from '@/components/composites/PageTags';
-import SmartLink from '@/components/composites/SmartLink';
 import Button from '@/components/primitives/Button';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
@@ -44,9 +44,9 @@ export default function Hero(): JSX.Element {
             size="xl"
             className="hover:no-underline"
           >
-            <SmartLink href="#generate-vegan-ipsum" scrollOffset={68}>
+            <Link href="#generate-vegan-ipsum" scrollOffset={68}>
               Generate Ipsum
-            </SmartLink>
+            </Link>
           </Button>
 
           <Button
@@ -56,9 +56,9 @@ export default function Hero(): JSX.Element {
             size="xl"
             className="hover:no-underline"
           >
-            <SmartLink href="#methods" scrollOffset={68}>
+            <Link href="#methods" scrollOffset={68}>
               Explore Methods <Icon name="arrowRight" />
-            </SmartLink>
+            </Link>
           </Button>
         </div>
       </Container>

@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
@@ -35,12 +35,12 @@ export default function Options(): JSX.Element {
           <ul className="list-disc space-y-2 pl-8">
             <li>
               <code>--format html</code>: Wraps the generated output in HTML{' '}
-              <SmartLink
+              <Link
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"
                 aria-label="Learn more about the HTML paragraph tag on MDN"
               >
                 paragraph tags
-              </SmartLink>
+              </Link>
               , making it ready for immediate use in web prototyping.
             </li>
 

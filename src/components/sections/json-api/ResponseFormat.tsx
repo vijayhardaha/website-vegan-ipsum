@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
@@ -30,12 +30,12 @@ export default function ResponseFormat(): JSX.Element {
         >
           <p className="mb-8">
             A successful API request returns a{' '}
-            <SmartLink
+            <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
               aria-label="Learn about JSON"
             >
               JSON
-            </SmartLink>{' '}
+            </Link>{' '}
             object containing a single <code>text</code> property. This string holds your generated vegan ipsum content,
             formatted exactly as requested and ready for immediate integration.
           </p>

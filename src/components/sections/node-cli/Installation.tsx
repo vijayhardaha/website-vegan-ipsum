@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
@@ -39,27 +39,27 @@ export default function Installation(): JSX.Element {
 
           <p>
             Before proceeding, ensure you have{' '}
-            <SmartLink href="https://nodejs.org/" aria-label="Download Node.js">
+            <Link href="https://nodejs.org/" aria-label="Download Node.js">
               Node.js
-            </SmartLink>{' '}
+            </Link>{' '}
             and{' '}
-            <SmartLink
+            <Link
               href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
               aria-label="Learn about npm package manager"
             >
               npm
-            </SmartLink>{' '}
+            </Link>{' '}
             installed on your system.
           </p>
 
           <p>
             After the installation is complete, verify that the package is accessible in your{' '}
-            <SmartLink
+            <Link
               href="https://en.wikipedia.org/wiki/PATH_(variable)"
               aria-label="Learn about the PATH environment variable"
             >
               PATH
-            </SmartLink>{' '}
+            </Link>{' '}
             by running the help command:
           </p>
 

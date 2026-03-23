@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
@@ -77,16 +77,16 @@ export default function Features(): JSX.Element {
         >
           <p>
             Vegan Ipsum is designed to be simple, fast, and flexible. Whether you&apos;re building web apps,{' '}
-            <SmartLink href="https://nodejs.org/" aria-label="Visit Node.js official website">
+            <Link href="https://nodejs.org/" aria-label="Visit Node.js official website">
               Node.js
-            </SmartLink>{' '}
+            </Link>{' '}
             services, or{' '}
-            <SmartLink
+            <Link
               href="https://en.wikipedia.org/wiki/Command-line_interface"
               aria-label="Learn more about command-line interface tools"
             >
               CLI
-            </SmartLink>{' '}
+            </Link>{' '}
             tools, it gives you clean, customizable placeholder text without unnecessary complexity.
           </p>
 

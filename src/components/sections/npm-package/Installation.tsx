@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
+import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
@@ -30,20 +30,20 @@ export default function Installation(): JSX.Element {
         >
           <p>
             Install <code>vegan-ipsum</code> using your preferred{' '}
-            <SmartLink
+            <Link
               href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
               aria-label="Learn about package managers in Node.js"
             >
               package manager
-            </SmartLink>
+            </Link>
             . A local installation is recommended for application development, while a global installation allows you to
             utilize the library as a{' '}
-            <SmartLink
+            <Link
               href="https://en.wikipedia.org/wiki/Command-line_interface"
               aria-label="Learn more about command-line interfaces"
             >
               CLI tool
-            </SmartLink>{' '}
+            </Link>{' '}
             for quick text generation.
           </p>
 

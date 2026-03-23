@@ -3,8 +3,8 @@ import type { JSX } from 'react';
 import type { Metadata } from 'next';
 
 import JsonLd from '@/components/composites/JsonLd';
+import Link from '@/components/composites/Link';
 import PageHeader from '@/components/composites/PageHeader';
-import SmartLink from '@/components/composites/SmartLink';
 import Button from '@/components/primitives/Button';
 import { Introduction, Installation, Usage, Features, Support } from '@/components/sections/vscode-extension';
 import { buildMetadata } from '@/utils/meta';
@@ -68,20 +68,20 @@ export default function VSCodeExtensionPage(): JSX.Element {
       <PageHeader title={pageTitle} description={pageDescription} tags={pageTags}>
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <Button asChild size="lg" variant="primary">
-            <SmartLink
+            <Link
               href="https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum"
               aria-label="Install Vegan Ipsum VS Code Extension from the Visual Studio Marketplace"
             >
               Install Extension
-            </SmartLink>
+            </Link>
           </Button>
           <Button asChild size="lg" variant="white" className="border-secondary/60 border-2">
-            <SmartLink
+            <Link
               href="https://github.com/vijayhardaha/vscode-vegan-ipsum"
               aria-label="Vegan Ipsum VS Code Extension GitHub repository"
             >
               View Source
-            </SmartLink>
+            </Link>
           </Button>
         </div>
       </PageHeader>
