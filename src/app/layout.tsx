@@ -1,6 +1,7 @@
 import type { JSX, ReactNode } from 'react';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Inter, Geist_Mono, Playfair_Display } from 'next/font/google';
 
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }): JSX.E
           Skip to content
         </a>
         <Layout>{children}</Layout>
+        <Analytics />
       </body>
     </html>
   );
