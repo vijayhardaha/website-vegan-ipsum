@@ -301,4 +301,6 @@ git commit -m "type: subject
 - body point goes here"
 ```
 
-5. Remove stale commits from git.md when changes are committed
+5. **DO NOT run git commands directly** - only write to git.md
+6. **Wait for user to verify and commit**
+7. **DO NOT restore git.md after it's cleared** - clearing is intentional
