@@ -8,7 +8,7 @@ import { Introduction, Installation, Usage, Features } from '@/components/sectio
 import { buildMetadata } from '@/utils/meta';
 import { generateMasterSchema } from '@/utils/schema';
 
-const title = 'vegan-ipsum NPM Package - Ethical Lorem Ipsum Library';
+const title = 'Vegan Ipsum NPM Package - Ethical Lorem Ipsum Library';
 const description =
   'Integrate plant-based placeholder text into JS projects. A lightweight, zero-dependency NPM library for ethical developers. Install now.';
 

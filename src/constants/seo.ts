@@ -9,17 +9,20 @@ export const SITE_CONFIG = {
   url: 'https://veganipsum.vercel.app',
   description:
     'Generate ethical, plant-based placeholder text with Vegan Ipsum. The perfect Lorem Ipsum alternative for vegans and conscious designers. Try it for free!',
-  category: 'Web Development Tools',
+  category: 'Developer Tools',
+  classification: 'Vegan Lorem Ipsum Generator, Web Development Tool, Placeholder Text Generator',
   creator: {
     name: 'Vijay Hardaha',
     description:
       'Full-Stack Web Developer and full-time freelancer specializing in modern web applications and custom digital solutions. Experienced in WordPress and WooCommerce development, building high-performance websites and scalable e-commerce platforms.',
     jobTitle: 'Full-Stack Web Developer',
-    handle: '@vijayhardaha',
     handles: ['@vijayhardaha', '@vegan.vijay'],
     urls: {
+      gravatar: 'https://gravatar.com/vijayhardaha',
       pph: 'https://pph.me/vijayhardaha',
       github: 'https://github.com/vijayhardaha',
+      x: 'https://x.com/vijayhardaha',
+      twitter: 'https://twitter.com/vijayhardaha',
       instagram: 'https://instagram.com/vegan.vijay',
       facebook: 'https://facebook.com/vegan.vijay',
       linkedin: 'https://linkedin.com/in/vijayhardaha',
@@ -27,6 +30,7 @@ export const SITE_CONFIG = {
       devto: 'https://dev.to/vijayhardaha',
       stactoverflow: 'https://stackoverflow.com/users/11848895/vijay-hardaha',
       codewars: 'https://www.codewars.com/users/vijayhardaha',
+      freecodecamp: 'https://www.freecodecamp.org/vijayhardaha',
     },
   },
 };
@@ -74,10 +78,12 @@ export const SITE_METADATA: Metadata = {
   ...titleAndDescription,
   keywords: SEO_KEYWORDS,
   applicationName: SITE_CONFIG.name,
-  authors: [{ name: SITE_CONFIG.creator.name, url: 'https://instagram.com/vegan.vijay' }],
-  publisher: SITE_CONFIG.creator.name,
+  authors: [{ name: SITE_CONFIG.creator.name, url: SITE_CONFIG.creator.urls.gravatar }],
+  creator: SITE_CONFIG.creator.name,
+  publisher: SITE_CONFIG.name,
   robots: { index: true, follow: true },
   category: SITE_CONFIG.category,
+  classification: SITE_CONFIG.classification,
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },
@@ -98,6 +104,7 @@ export const SITE_METADATA: Metadata = {
     ...titleAndDescription,
     card: 'summary_large_image',
     images: ['/thumbnail.png'],
-    creator: SITE_CONFIG.creator.handle,
+    creator: SITE_CONFIG.creator.handles[0],
   },
+  other: { lang: 'en' },
 };
