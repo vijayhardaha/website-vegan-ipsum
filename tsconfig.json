@@ -1,67 +1,116 @@
+// =======================================================================
+// Typescript Configuration
+// =======================================================================
+// Purpose: Static type-checking and module resolution strategy for the
+//          repository, ensuring predictable behavior and strong typing
+//          across code.
+// Docs: https://www.typescriptlang.org/tsconfig
+// =======================================================================
+
 {
-	// ==============================================================================
-	// TYPESCRIPT PROJECT CONFIGURATION
-	// ==============================================================================
-	// Purpose: Defines TypeScript compiler behavior, module resolution, and project
-	// inclusion patterns for the Next.js application.
-	// Docs: https://www.typescriptlang.org/tsconfig
-	// ==============================================================================
+  "compilerOptions": {
+    // ----------------------------------------------------------------------
+    // Target & libs
+    // ----------------------------------------------------------------------
+    // Use modern ECMAScript features supported by current runtimes
+    "target": "ES2024",
 
-	// --- Compiler Behavior ---
-	"compilerOptions": {
-		// Allow JavaScript files to participate in type-checking and project graph.
-		"allowJs": true,
-		// Resolve non-relative imports from the repository root.
-		"baseUrl": ".",
-		// Ensure iterable semantics remain correct when transpiling lower targets.
-		"downlevelIteration": true,
-		// Improve CommonJS interop behavior for broader package compatibility.
-		"esModuleInterop": true,
-		// Prevent path casing mismatches across case-sensitive file systems.
-		"forceConsistentCasingInFileNames": true,
-		// Reuse project graph metadata for faster subsequent type-checks.
-		"incremental": true,
-		// Keep each file independently transpilation-safe for toolchain compatibility.
-		"isolatedModules": true,
-		// Use React automatic JSX runtime.
-		"jsx": "react-jsx",
-		// Include DOM and iterable typings for browser runtime APIs.
-		"lib": ["dom", "dom.iterable"],
-		// Emit modern ECMAScript module syntax for bundler optimization.
-		"module": "esnext",
-		// Use Node.js module resolution behavior.
-		"moduleResolution": "node",
-		// Disable JS output; this project relies on Next.js build pipeline.
-		"noEmit": true,
+    // Include DOM types and iterable helpers for browser-based code
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],
 
-		// --- Import Aliasing ---
-		// Define @/* alias to simplify imports from src.
-		"paths": { "@/*": ["./src/*"] },
+    // Use the modern React JSX transform
+    "jsx": "react-jsx",
 
-		// --- Framework Integration ---
-		// Enable Next.js TypeScript plugin enhancements.
-		"plugins": [{ "name": "next" }],
+    // ----------------------------------------------------------------------
+    // Module resolution
+    // ----------------------------------------------------------------------
+    // Use native ESM module syntax and Node-style resolution
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
 
-		// Allow importing JSON content as modules.
-		"resolveJsonModule": true,
-		// Skip .d.ts checking to improve build and editor performance.
-		"skipLibCheck": true,
-		// Enable full strict type-checking mode.
-		"strict": true,
-		// Target modern JavaScript runtime features.
-		"target": "ES2024"
-	},
+    // Allow importing .ts files directly for type-checking
+    "allowImportingTsExtensions": true,
 
-	// --- Project Scope ---
-	// Exclude dependency directories from project compilation context.
-	"exclude": ["node_modules"],
-	// Include source, configuration, type declarations, and generated Next.js types.
-	"include": [
-		"**/*.{js,jsx,ts,tsx,mjs,cjs}",
-		"*.config.mjs",
-		"next-env.d.ts",
-		"*.d.ts",
-		".next/types/**/*.ts",
-		".next/dev/types/**/*.ts"
-	]
+    // Base directory for non-relative imports used by tooling
+    "baseUrl": ".",
+
+    // Map `@/*` to `./src/*` for cleaner absolute imports
+    "paths": { "@/*": ["./src/*"] },
+
+    // Allow importing JSON files as modules
+    "resolveJsonModule": true,
+
+    // Allow default interop for CommonJS modules when consuming CJS packages
+    "esModuleInterop": true,
+
+    // ----------------------------------------------------------------------
+    // Compilation strategy
+    // ----------------------------------------------------------------------
+    // Preserve import/export syntax in output
+    "verbatimModuleSyntax": true,
+
+    // Speed up consecutive builds by enabling incremental compilation caching
+    "incremental": true,
+
+    // Do not emit JS during type-checking; Next.js handles build output
+    "noEmit": true,
+
+    // Required for tools like swc/esbuild used in Next.js
+    "isolatedModules": true,
+
+    // Allow mixed JS/TS code during gradual migration
+    "allowJs": true,
+
+    // ----------------------------------------------------------------------
+    // Type safety
+    // ----------------------------------------------------------------------
+    // Enable all strict type-checking options for safer code
+    "strict": true,
+
+    // Catch unused local variables and function parameters at compile time
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    // Ensure all code paths return a value or explicitly return nothing
+    "noImplicitReturns": true,
+
+    // Require explicit handling of switch case fallthrough
+    "noFallthroughCasesInSwitch": true,
+
+    // Use modern class field semantics for better compatibility
+    "useDefineForClassFields": true,
+
+    // Skip deep type checks inside node_modules for performance
+    "skipLibCheck": true,
+
+    // Avoid case-sensitivity issues across filesystems
+    "forceConsistentCasingInFileNames": true,
+
+    // ----------------------------------------------------------------------
+    // Plugins & extras
+    // ----------------------------------------------------------------------
+    "plugins": [{ "name": "next" }],
+    "downlevelIteration": true
+  },
+
+  // ---- Includes ----
+  // Files to include in the project type-checking scope
+  "include": [
+    ".next/dev/types/**/*.ts",
+    ".next/types/**/*.ts",
+    "*.config.mjs",
+    "*.config.ts",
+    "*.d.ts",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mjs",
+    "**/*.cjs",
+    "next-env.d.ts"
+  ],
+
+  // ---- Excludes ----
+  "exclude": ["node_modules"]
 }
