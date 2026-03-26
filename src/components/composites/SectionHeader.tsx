@@ -1,10 +1,52 @@
-import { useContext } from 'react';
+import { Children, isValidElement } from 'react';
 import type { JSX, ReactNode } from 'react';
 
-import { SectionContext } from '@/components/layout/Section';
 import Icon from '@/components/primitives/Icon';
 import { type IconName } from '@/constants/icons';
 import { cn } from '@/utils/classnames';
+
+/**
+ * Recursively extracts plain text from a React node tree.
+ *
+ * @param node - The React node to flatten into text.
+ * @returns The concatenated text content.
+ */
+function extractTextContent(node: ReactNode): string {
+  if (typeof node === 'string' || typeof node === 'number') {
+    return String(node);
+  }
+
+  if (!node || typeof node === 'boolean') {
+    return '';
+  }
+
+  if (Array.isArray(node)) {
+    return node.map(extractTextContent).join(' ');
+  }
+
+  if (isValidElement<{ children?: ReactNode }>(node)) {
+    return extractTextContent(node.props.children);
+  }
+
+  return Children.toArray(node).map(extractTextContent).join(' ');
+}
+
+/**
+ * Builds a stable heading id from rendered heading content.
+ *
+ * @param node - The heading React node.
+ * @returns A slug-like heading id, or `undefined` when no text is available.
+ */
+function toHeadingId(node: ReactNode): string | undefined {
+  const text = extractTextContent(node)
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  return text ? `${text}-heading` : undefined;
+}
 
 /**
  * Props for the SectionHeader component
@@ -46,8 +88,7 @@ export default function SectionHeader({
   headingId,
   children,
 }: SectionHeaderProps): JSX.Element {
-  const { sectionId } = useContext(SectionContext);
-  const resolvedHeadingId = headingId ?? (sectionId ? `${sectionId}-heading` : undefined);
+  const resolvedHeadingId = headingId ?? toHeadingId(heading);
 
   return (
     <div className={cn('', className)}>
