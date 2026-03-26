@@ -62,7 +62,7 @@ export default function VSCodeExtensionPage(): JSX.Element {
     <>
       <JsonLd data={schemaData} />
 
-      <PageHeader title={pageTitle} description={pageDescription} tags={pageTags}>
+      <PageHeader id="vscode-extension-header" title={pageTitle} description={pageDescription} tags={pageTags}>
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <Button asChild size="lg" variant="primary">
             <Link

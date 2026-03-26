@@ -58,7 +58,7 @@ export default function NpmPackagePage(): JSX.Element {
     <>
       <JsonLd data={schemaData} />
 
-      <PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+      <PageHeader id="npm-package-header" title={pageTitle} description={pageDescription} tags={pageTags} />
 
       <Introduction />
 

@@ -54,7 +54,7 @@ export default function AboutPage(): JSX.Element {
     <>
       <JsonLd data={schemaData} />
 
-      <PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+      <PageHeader id="about-header" title={pageTitle} description={pageDescription} tags={pageTags} />
 
       <Introduction />
 

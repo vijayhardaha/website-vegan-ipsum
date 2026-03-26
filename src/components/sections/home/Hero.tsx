@@ -27,7 +27,7 @@ export default function Hero(): JSX.Element {
           center={true}
         />
 
-        <h1 className="text-primary-solid mb-5 text-5xl leading-tight font-bold md:text-6xl">
+        <h1 id="hero-heading" className="text-primary-solid mb-5 text-5xl leading-tight font-bold md:text-6xl">
           Ethical Placeholder Text for a <span className="text-primary">Better World</span>
         </h1>
 

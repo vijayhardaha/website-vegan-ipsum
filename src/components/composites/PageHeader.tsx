@@ -10,6 +10,7 @@ import Container from '@/components/primitives/Container';
  * @property {string} [subtitle] - An optional subtitle providing additional context.
  */
 interface PageHeaderProps {
+  id: string;
   title: ReactNode;
   description?: string;
   tags?: string[];
@@ -22,9 +23,9 @@ interface PageHeaderProps {
  * @param {PageHeaderProps} props - The props for the component.
  * @returns {JSX.Element} The rendered PageHeader component.
  */
-export default function PageHeader({ title, description, tags, children }: PageHeaderProps): JSX.Element {
+export default function PageHeader({ id, title, description, tags, children }: PageHeaderProps): JSX.Element {
   return (
-    <section className="relative py-16 pb-6 md:py-24 md:pb-10">
+    <section id={id} className="relative py-16 pb-6 md:py-24 md:pb-10">
       <div className="pointer-events-none absolute -top-30 right-[8%] h-112.5 w-112.5 rounded-full bg-[#d4edcc] opacity-36 blur-[80px]"></div>
       <div className="pointer-events-none absolute bottom-12.5 left-[6%] h-95 w-95 rounded-full bg-[#c8e6b8] opacity-36 blur-[80px]"></div>
 
@@ -32,7 +33,9 @@ export default function PageHeader({ title, description, tags, children }: PageH
         <div className="relative">
           {tags && <PageTags tags={tags} />}
 
-          <h1 className="text-primary-solid mb-5 text-4xl md:text-6xl">{title}</h1>
+          <h1 id={`${id}-heading`} className="text-primary-solid mb-5 text-4xl md:text-6xl">
+            {title}
+          </h1>
 
           <p className="text-lg leading-relaxed md:text-xl">{description}</p>
 

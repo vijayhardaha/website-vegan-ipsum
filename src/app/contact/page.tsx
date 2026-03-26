@@ -46,7 +46,7 @@ export default function ContactPage(): JSX.Element {
     <>
       <JsonLd data={schemaData} />
 
-      <PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+      <PageHeader id="contact-header" title={pageTitle} description={pageDescription} tags={pageTags} />
 
       <Projects />
 

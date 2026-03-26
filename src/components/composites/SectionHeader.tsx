@@ -1,5 +1,7 @@
+import { useContext } from 'react';
 import type { JSX, ReactNode } from 'react';
 
+import { SectionContext } from '@/components/layout/Section';
 import Icon from '@/components/primitives/Icon';
 import { type IconName } from '@/constants/icons';
 import { cn } from '@/utils/classnames';
@@ -20,6 +22,8 @@ export interface SectionHeaderProps {
   taglineClassName?: string;
   /** Additional CSS classes for the heading */
   headingClassName?: string;
+  /** Optional heading id override */
+  headingId?: string;
   /** Children elements (typically paragraphs) */
   children: ReactNode;
 }
@@ -39,8 +43,12 @@ export default function SectionHeader({
   className,
   taglineClassName,
   headingClassName,
+  headingId,
   children,
 }: SectionHeaderProps): JSX.Element {
+  const { sectionId } = useContext(SectionContext);
+  const resolvedHeadingId = headingId ?? (sectionId ? `${sectionId}-heading` : undefined);
+
   return (
     <div className={cn('', className)}>
       {tagline && (
@@ -54,7 +62,9 @@ export default function SectionHeader({
         </p>
       )}
 
-      <h2 className={cn('mb-4 text-3xl md:text-4xl', headingClassName)}>{heading}</h2>
+      <h2 id={resolvedHeadingId} className={cn('mb-4 text-3xl md:text-4xl', headingClassName)}>
+        {heading}
+      </h2>
 
       <div className="space-y-4 md:space-y-6">{children}</div>
     </div>

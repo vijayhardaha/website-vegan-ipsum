@@ -67,7 +67,7 @@ export default function JsonAPIPage(): JSX.Element {
     <>
       <JsonLd data={schemaData} />
 
-      <PageHeader title={pageTitle} description={pageDescription} tags={pageTags} />
+      <PageHeader id="json-api-header" title={pageTitle} description={pageDescription} tags={pageTags} />
 
       <Introduction />
 

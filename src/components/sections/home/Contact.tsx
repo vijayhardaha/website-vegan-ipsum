@@ -18,6 +18,7 @@ import Icon from '@/components/primitives/Icon';
 export default function Contact(): JSX.Element {
   return (
     <Section
+      id="contact-cta"
       aria-label="Section encouraging users to get in touch for questions, contributions, or feedback"
       className="bg-secondary-muted py-20"
     >
