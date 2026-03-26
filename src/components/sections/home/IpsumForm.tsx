@@ -108,7 +108,6 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
       id="generate-vegan-ipsum-form"
       onSubmit={handleSubmit}
       className="flex flex-col flex-wrap gap-4 md:flex-row md:space-y-0"
-      aria-label="Vegan Ipsum Generator Form"
     >
       <div className="flex flex-1 items-center gap-4">
         <div className="flex-1 space-y-2">
@@ -127,7 +126,6 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
             step="1"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            aria-label="Number of units to generate"
             required
           />
         </div>
@@ -149,19 +147,12 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
               { label: 'Words', value: 'words' },
             ]}
             onValueChange={(value) => setSelectedType(value as 'paragraphs' | 'sentences' | 'words')}
-            aria-label="Select the type of units to generate (paragraphs, sentences, or words)"
             required
           />
         </div>
       </div>
 
-      <Button
-        type="submit"
-        aria-label="Generate Vegan Ipsum Text"
-        disabled={loading}
-        className="md:mt-6 md:w-50"
-        size="lg"
-      >
+      <Button type="submit" disabled={loading} className="md:mt-6 md:w-50" size="lg">
         {loading ? 'Generating Ipsum...' : 'Generate Ipsum'}
       </Button>
     </form>
