@@ -1,8 +1,8 @@
 import type { JSX } from 'react';
 
+import { JsonLd } from '@vijayhardaha/schema-builder/react';
 import type { Metadata } from 'next';
 
-import JsonLd from '@/components/composites/JsonLd';
 import PageHeader from '@/components/composites/PageHeader';
 import { Author, Projects } from '@/components/sections/contact';
 import { buildMetadata } from '@/utils/meta';
