@@ -5,7 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
-import { getCanonicalUrl } from '@/utils/seo';
+import { getPermaLink } from '@/utils/seo';
 
 /**
  * This component serves as the base URL section for the Vegan Ipsum JSON API documentation.
@@ -14,7 +14,7 @@ import { getCanonicalUrl } from '@/utils/seo';
  */
 export default function BaseUrl(): JSX.Element {
   // Base URL for the API
-  const API_BASE_URL = getCanonicalUrl('api');
+  const API_BASE_URL = getPermaLink('api');
 
   return (
     <Section id="base-url" aria-label="Base URL for the Vegan Ipsum JSON API" className="pt-8 md:pt-10">

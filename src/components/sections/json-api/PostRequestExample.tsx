@@ -5,7 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
-import { getCanonicalUrl } from '@/utils/seo';
+import { getPermaLink } from '@/utils/seo';
 
 /**
  * This component provides an example of how to make a POST request to the Vegan Ipsum JSON API.
@@ -14,7 +14,7 @@ import { getCanonicalUrl } from '@/utils/seo';
  */
 export default function PostRequestExample(): JSX.Element {
   // Base URL for the API
-  const API_BASE_URL = getCanonicalUrl('api');
+  const API_BASE_URL = getPermaLink('api');
   return (
     <Section id="post-request-example" aria-label="POST request example for the Vegan Ipsum JSON API">
       <Container>
