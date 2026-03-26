@@ -135,7 +135,9 @@
     @apply bg-secondary-200/50 rounded-sm px-1 py-px font-mono font-medium text-amber-600;
     font-size: 0.875em;
   }
+}
 
+@layer components {
   .table-container {
     @apply border-border overflow-hidden rounded-3xl border bg-white shadow-sm;
   }

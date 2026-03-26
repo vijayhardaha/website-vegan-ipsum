@@ -22,15 +22,19 @@ export const monoFont = Geist_Mono({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-mono',
+  display: 'swap',
+  preload: true,
 });
 
 /**
  * Heading font configuration for an elegant serif font.
  */
 export const headingFont = Playfair_Display({
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['700', '900'],
   subsets: ['latin'],
   variable: '--font-heading',
+  display: 'swap',
+  preload: true,
 });
 
 /**
