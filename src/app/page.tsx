@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
 
+import { webPageSchema } from '@vijayhardaha/schema-builder';
 import { JsonLd } from '@vijayhardaha/schema-builder/react';
 import type { Metadata } from 'next';
 
@@ -15,19 +16,19 @@ import {
 } from '@/components/sections/home/';
 import { SITE_CONFIG } from '@/constants/seo';
 import { buildMetadata } from '@/utils/meta';
-import { generateMasterSchema } from '@/utils/schema';
+import { globalSchema } from '@/utils/schema';
+import { siteUrl } from '@/utils/seo';
 
 const title = SITE_CONFIG.title;
 const description = SITE_CONFIG.description;
-
-// Path for the page, used for metadata and schema generation
 const path = '/';
+const rootUrl = siteUrl();
 
 // SEO metadata for the page.
 export const metadata: Metadata = buildMetadata({ title, description, path });
 
 // Schema.org structured data.
-const schemaData = generateMasterSchema({ title, description, path });
+const schemaData = [...globalSchema(), webPageSchema({ rootUrl, path }, { name: title, description })];
 
 /**
  * This component renders the home page.
