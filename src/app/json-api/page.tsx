@@ -41,16 +41,9 @@ const schemaData = generateMasterSchema({
   title,
   description,
   path,
-  pageType: 'Software',
-  isApp: true, // This ensures it uses WebApplication schema
+  isApi: true,
   breadcrumbs: [{ name: 'Vegan Ipsum JSON API', path: path }],
-  softwareConfig: {
-    applicationCategory: 'DeveloperApplication',
-    applicationSubCategory: 'API',
-    requirements: 'HTTP Client, Internet Access',
-    price: '0',
-    version: '1.0.0',
-  },
+  extraOptions: { requirements: 'HTTP Client, Internet Access', price: 0.0, version: '1.0.0' },
 });
 
 /**

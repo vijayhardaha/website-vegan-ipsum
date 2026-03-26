@@ -32,29 +32,12 @@ const schemaData = generateMasterSchema({
   title,
   description,
   path,
-  pageType: 'Software',
+  isSoftware: true,
   breadcrumbs: [{ name: 'Vegan Ipsum NPM Package', path: path }],
-  softwareConfig: {
+  extraOptions: {
     version: '1.0.4',
-    repositoryUrl: 'https://github.com/vijayhardaha/node-vegan-ipsum',
     installUrl: 'https://www.npmjs.com/package/vegan-ipsum',
-    programmingLanguage: 'TypeScript',
     runtimePlatform: 'Node.js',
-    keywords: [
-      'vegan-ipsum',
-      'lorem-ipsum',
-      'placeholder-text',
-      'plant-based',
-      'ethical-design',
-      'cruelty-free',
-      'lorem-ipsum-generator',
-      'dummy-text',
-      'developer-tools',
-      'filler-text',
-      'node-js',
-      'typescript',
-      'npm-package',
-    ],
   },
 });
 

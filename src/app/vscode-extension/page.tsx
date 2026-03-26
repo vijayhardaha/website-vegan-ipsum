@@ -34,9 +34,9 @@ const schemaData = generateMasterSchema({
   title,
   description,
   path,
-  pageType: 'Software',
-  isApp: true,
+  pageType: 'WebPage',
   breadcrumbs: [{ name: 'Vegan Ipsum VS Code Extension', path: path }],
+  isSoftware: true,
   softwareConfig: {
     type: 'SoftwareApplication',
     applicationCategory: 'DeveloperApplication',
@@ -44,14 +44,9 @@ const schemaData = generateMasterSchema({
     downloadUrl: 'https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum',
     installUrl: 'https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum',
     requirements: 'Visual Studio Code v1.80.0 or higher',
-    price: '0.00',
+    price: 0.0,
     version: '1.0.1',
-    linkSource: true,
-    sourceCodeConfigs: {
-      name: 'Vegan Ipsum VS Code Extension Source Code',
-      codeRepository: 'https://github.com/vijayhardaha/vscode-vegan-ipsum',
-      programmingLanguage: 'JavaScript',
-    },
+    sourceCode: 'https://github.com/vijayhardaha/vscode-vegan-ipsum',
   },
 });
 

@@ -37,31 +37,12 @@ const schemaData = generateMasterSchema({
   title,
   description,
   path,
-  pageType: 'Software',
+  isSoftware: true,
   breadcrumbs: [{ name: 'Vegan Ipsum Node CLI', path: path }],
-  softwareConfig: {
+  extraOptions: {
     version: '1.0.4',
-    repositoryUrl: 'https://github.com/vijayhardaha/node-vegan-ipsum',
     installUrl: 'https://www.npmjs.com/package/vegan-ipsum',
-    programmingLanguage: 'TypeScript',
     runtimePlatform: 'Node.js',
-    keywords: [
-      'vegan ipsum cli',
-      'vegan ipsum command line tool',
-      'vegan ipsum node cli',
-      'vegan ipsum terminal tool',
-      'install vegan ipsum cli',
-      'npm vegan ipsum cli',
-      'node.js cli text generator',
-      'javascript command line tool',
-      'lorem ipsum cli alternative',
-      'plant-based lorem ipsum cli',
-      'ethical text generator cli',
-      'generate dummy text from terminal',
-      'npm global cli tool',
-      'node terminal text generator',
-      'developer cli text tool',
-    ],
   },
 });
 
