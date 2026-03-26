@@ -1,5 +1,5 @@
 import { SITE_METADATA, SITE_CONFIG } from '@/constants/seo';
-import { siteUrl, cleanPath } from '@/utils/seo';
+import { siteUrl, getPermaLink } from '@/utils/seo';
 
 /**
  * Props for generating metadata, including title, description, and slug for URL construction.
@@ -101,7 +101,7 @@ const buildSeoTitle = (title: string = '', postfix: boolean): string => {
  * const meta = buildMetadata({ title: 'Recipes', description: 'Vegan recipes', slug: 'recipes' });
  */
 export const buildMetadata = ({ title = '', description = '', path = '', postfix = false }: SeoProps) => {
-  const canonical = cleanPath(path);
+  const canonical = getPermaLink(path);
 
   const titleAndDescription = {
     title: buildSeoTitle(title, postfix),
@@ -111,7 +111,7 @@ export const buildMetadata = ({ title = '', description = '', path = '', postfix
   const newMetadata = mergeDeep(SITE_METADATA, {
     ...titleAndDescription,
     metadataBase: new URL(siteUrl()),
-    alternates: { canonical: canonical },
+    alternates: { canonical },
     openGraph: { ...titleAndDescription, url: canonical },
     twitter: { ...titleAndDescription },
   });

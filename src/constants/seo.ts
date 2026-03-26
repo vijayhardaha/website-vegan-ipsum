@@ -1,3 +1,4 @@
+import { CREATOR, type CreatorConfig } from '@vijayhardaha/schema-builder';
 import type { Metadata } from 'next';
 
 /**
@@ -11,28 +12,7 @@ export const SITE_CONFIG = {
     'Generate ethical, plant-based placeholder text with Vegan Ipsum. The perfect Lorem Ipsum alternative for vegans and conscious designers. Try it for free!',
   category: 'Developer Tools',
   classification: 'Vegan Lorem Ipsum Generator, Web Development Tool, Placeholder Text Generator',
-  creator: {
-    name: 'Vijay Hardaha',
-    description:
-      'Full-Stack Web Developer and full-time freelancer specializing in modern web applications and custom digital solutions. Experienced in WordPress and WooCommerce development, building high-performance websites and scalable e-commerce platforms.',
-    jobTitle: 'Full-Stack Web Developer',
-    handles: ['@vijayhardaha', '@vegan.vijay'],
-    urls: {
-      gravatar: 'https://gravatar.com/vijayhardaha',
-      pph: 'https://pph.me/vijayhardaha',
-      github: 'https://github.com/vijayhardaha',
-      x: 'https://x.com/vijayhardaha',
-      twitter: 'https://twitter.com/vijayhardaha',
-      instagram: 'https://instagram.com/vegan.vijay',
-      facebook: 'https://facebook.com/vegan.vijay',
-      linkedin: 'https://linkedin.com/in/vijayhardaha',
-      wordpress: 'https://profiles.wordpress.org/vijayhardaha/',
-      devto: 'https://dev.to/vijayhardaha',
-      stactoverflow: 'https://stackoverflow.com/users/11848895/vijay-hardaha',
-      codewars: 'https://www.codewars.com/users/vijayhardaha',
-      freecodecamp: 'https://www.freecodecamp.org/vijayhardaha',
-    },
-  },
+  creator: CREATOR as CreatorConfig,
   organization: {
     name: 'Vegan Ipsum',
     description:
@@ -77,6 +57,18 @@ export const GOOGLE_ANALYTICS_ID = 'G-XR1TK565WJ';
 const titleAndDescription = { title: SITE_CONFIG.title, description: SITE_CONFIG.description };
 
 /**
+ * Default image metadata used for Open Graph and Twitter cards.
+ */
+const seoImage = {
+  url: '/thumbnail.png',
+  secureUrl: `/preview.png`,
+  alt: 'Vegan Ipsum Thumbnail',
+  width: 1200,
+  height: 630,
+  type: 'image/png',
+};
+
+/**
  * The main metadata object containing all SEO-related information for the website.
  */
 export const SITE_METADATA: Metadata = {
@@ -100,15 +92,16 @@ export const SITE_METADATA: Metadata = {
   verification: { google: GOOGLE_SITE_VERIFICATION },
   openGraph: {
     ...titleAndDescription,
-    images: [{ url: '/thumbnail.png', width: 512, height: 512 }],
+    images: seoImage,
     type: 'website',
     siteName: SITE_CONFIG.name,
     locale: 'en_US',
+    url: SITE_CONFIG.url,
   },
   twitter: {
     ...titleAndDescription,
     card: 'summary_large_image',
-    images: ['/thumbnail.png'],
+    images: seoImage,
     creator: SITE_CONFIG.creator.handles[0],
   },
   other: { lang: 'en' },
