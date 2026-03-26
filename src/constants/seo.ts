@@ -33,6 +33,11 @@ export const SITE_CONFIG = {
       freecodecamp: 'https://www.freecodecamp.org/vijayhardaha',
     },
   },
+  organization: {
+    name: 'Vegan Ipsum',
+    description:
+      'Vegan Ipsum is a creative utility platform offering vegan-themed placeholder text, developer tools, and content resources designed to make web projects more ethical, engaging, and unique.',
+  },
 };
 
 /**
