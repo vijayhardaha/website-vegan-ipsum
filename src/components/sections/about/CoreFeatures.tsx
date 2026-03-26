@@ -15,6 +15,7 @@ interface Card {
   href: string;
   icon: IconName;
   content: string;
+  ariaLabel: string;
 }
 
 /**
@@ -27,6 +28,7 @@ const cards: Card[] = [
     icon: 'cloud',
     content:
       'A robust RESTful endpoint allows you to dynamically fetch vegan-themed placeholder text for seamless integration with websites, mobile apps, and automation workflows.',
+    ariaLabel: 'REST JSON API — Explore the API documentation and integration options',
   },
   {
     title: 'NPM Package',
@@ -34,6 +36,7 @@ const cards: Card[] = [
     icon: 'npm',
     content:
       'Easily install vegan-ipsum in your JavaScript or TypeScript projects to generate customizable filler text programmatically, perfect for development environments and testing.',
+    ariaLabel: 'NPM Package — Explore package installation and programmatic usage',
   },
   {
     title: 'Node CLI Tool',
@@ -41,6 +44,7 @@ const cards: Card[] = [
     icon: 'terminal',
     content:
       'Command-line interface lets developers generate vegan ipsum content directly from their terminal or scripts, speeding up workflow without needing to leave the coding environment.',
+    ariaLabel: 'Node CLI Tool — Explore terminal usage and automation workflows',
   },
   {
     title: 'VS Code Extension',
@@ -48,6 +52,7 @@ const cards: Card[] = [
     icon: 'code',
     content:
       'Generate and insert vegan-themed placeholder text into your source files with a simple keyboard shortcut inside Visual Studio Code, streamlining the design and coding process.',
+    ariaLabel: 'VS Code Extension — Explore editor integration and shortcut-based usage',
   },
 ];
 
@@ -81,9 +86,10 @@ export default function CoreFeatures(): JSX.Element {
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {cards.map((card, index: number) => (
               <Link
+                role="link"
                 key={index}
                 href={card.href}
-                aria-label={card.title}
+                aria-label={card.ariaLabel}
                 className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
               >
                 <div className="flex items-start gap-4">

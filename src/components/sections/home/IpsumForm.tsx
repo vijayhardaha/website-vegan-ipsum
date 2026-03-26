@@ -153,13 +153,7 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
         </div>
       </div>
 
-      <Button
-        type="submit"
-        aria-label="Generating Vegan Ipsum text"
-        disabled={loading}
-        className="md:mt-6 md:w-50"
-        size="lg"
-      >
+      <Button type="submit" disabled={loading} className="md:mt-6 md:w-50" size="lg">
         {loading ? 'Generating Ipsum...' : 'Generate Ipsum'}
       </Button>
     </form>

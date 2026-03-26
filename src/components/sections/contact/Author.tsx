@@ -58,7 +58,7 @@ export default function Author(): JSX.Element {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Contact the author on ${social.platform}`}
+                aria-label={`${social.platform} ${social.handle} — Contact the author on ${social.platform}`}
                 className="group border-secondary/20 from-secondary-200/20 via-secondary-200/50 to-secondary-200 flex flex-col items-center rounded-3xl border bg-linear-to-br p-6 text-center shadow-md transition-all hover:shadow-lg"
               >
                 <div className="text-secondary-dark mb-2 text-center text-3xl">
