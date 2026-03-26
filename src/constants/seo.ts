@@ -60,7 +60,7 @@ const titleAndDescription = { title: SITE_CONFIG.title, description: SITE_CONFIG
  * Default image metadata used for Open Graph and Twitter cards.
  */
 const seoImage = {
-  url: '/thumbnail.png',
+  url: '/preview.png',
   secureUrl: `/preview.png`,
   alt: 'Vegan Ipsum Thumbnail',
   width: 1200,
