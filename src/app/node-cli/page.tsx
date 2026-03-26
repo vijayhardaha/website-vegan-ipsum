@@ -1,12 +1,14 @@
 import type { JSX } from 'react';
 
+import { webPageSchema, breadcrumbSchema, softwareAppSchema } from '@vijayhardaha/schema-builder';
 import { JsonLd } from '@vijayhardaha/schema-builder/react';
 import type { Metadata } from 'next';
 
 import PageHeader from '@/components/composites/PageHeader';
 import { Introduction, Installation, Usage, Options, Resources } from '@/components/sections/node-cli';
 import { buildMetadata } from '@/utils/meta';
-import { generateMasterSchema } from '@/utils/schema';
+import { globalSchema, buildBreadcrumbs } from '@/utils/schema';
+import { siteUrl } from '@/utils/seo';
 
 const title = 'Vegan Ipsum CLI - Generate Ethical Placeholder Text in Terminal';
 const description =
@@ -26,25 +28,30 @@ const pageTags = [
   '⚙️ No Configuration Required',
 ];
 
-// Path for the page, used for metadata and schema generation
 const path = '/node-cli';
+const rootUrl = siteUrl();
 
 // SEO metadata for the page.
 export const metadata: Metadata = buildMetadata({ title, description, path });
 
 // Schema.org structured data.
-const schemaData = generateMasterSchema({
-  title,
-  description,
-  path,
-  isSoftware: true,
-  breadcrumbs: [{ name: 'Vegan Ipsum Node CLI', path: path }],
-  extraOptions: {
-    version: '1.0.4',
-    installUrl: 'https://www.npmjs.com/package/vegan-ipsum',
-    runtimePlatform: 'Node.js',
-  },
-});
+const schemaData = [
+  ...globalSchema(),
+  webPageSchema({ rootUrl, path, breadcrumb: true }, { name: title, description }),
+  breadcrumbSchema({ rootUrl, items: buildBreadcrumbs(path, 'Vegan Ipsum Node CLI') }),
+  softwareAppSchema(
+    { rootUrl, path },
+    {
+      name: title,
+      description,
+      applicationCategory: 'DeveloperApplication',
+      applicationSubCategory: 'CLI',
+      softwareVersion: '1.0.4',
+      installUrl: 'https://www.npmjs.com/package/vegan-ipsum',
+      runtimePlatform: 'Node.js',
+    }
+  ),
+];
 
 /**
  * This component renders the Node CLI page.

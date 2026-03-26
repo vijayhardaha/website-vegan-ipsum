@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
 
+import { webPageSchema, breadcrumbSchema, softwareAppSchema } from '@vijayhardaha/schema-builder';
 import { JsonLd } from '@vijayhardaha/schema-builder/react';
 import type { Metadata } from 'next';
 
@@ -8,7 +9,8 @@ import PageHeader from '@/components/composites/PageHeader';
 import Button from '@/components/primitives/Button';
 import { Introduction, Installation, Usage, Features, Support } from '@/components/sections/vscode-extension';
 import { buildMetadata } from '@/utils/meta';
-import { generateMasterSchema } from '@/utils/schema';
+import { globalSchema, buildBreadcrumbs } from '@/utils/schema';
+import { siteUrl } from '@/utils/seo';
 
 const title = 'Vegan Ipsum VS Code Extension - Ethical Placeholder Text';
 const description =
@@ -23,32 +25,32 @@ const pageDescription =
   'Stop switching tabs to copy-paste. Bring the Vegan Ipsum library directly into your workflow with our lightweight VS Code extension. Learn how to install and use it efficiently without leaving your workspace.';
 const pageTags = ['⚡ Instant Commands', '🪶 Lightweight', '📜 MIT Licensed'];
 
-// Path for the page, used for metadata and schema generation
 const path = '/vscode-extension';
+const rootUrl = siteUrl();
 
 // SEO metadata for the page.
 export const metadata: Metadata = buildMetadata({ title, description, path });
 
 // Schema.org structured data.
-const schemaData = generateMasterSchema({
-  title,
-  description,
-  path,
-  pageType: 'WebPage',
-  breadcrumbs: [{ name: 'Vegan Ipsum VS Code Extension', path: path }],
-  isSoftware: true,
-  softwareConfig: {
-    type: 'SoftwareApplication',
-    applicationCategory: 'DeveloperApplication',
-    applicationSubCategory: 'IDE Extension',
-    downloadUrl: 'https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum',
-    installUrl: 'https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum',
-    requirements: 'Visual Studio Code v1.80.0 or higher',
-    price: 0.0,
-    version: '1.0.1',
-    sourceCode: 'https://github.com/vijayhardaha/vscode-vegan-ipsum',
-  },
-});
+const schemaData = [
+  ...globalSchema(),
+  webPageSchema({ rootUrl, path, breadcrumb: true }, { name: title, description }),
+  breadcrumbSchema({ rootUrl, items: buildBreadcrumbs(path, 'Vegan Ipsum VS Code Extension') }),
+  softwareAppSchema(
+    { rootUrl, path },
+    {
+      name: title,
+      description,
+      applicationCategory: 'DeveloperApplication',
+      applicationSubCategory: 'IDE Extension',
+      softwareVersion: '1.0.1',
+      downloadUrl: 'https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum',
+      installUrl: 'https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum',
+      softwareRequirements: 'Visual Studio Code v1.80.0 or higher',
+      isBasedOn: 'https://github.com/vijayhardaha/vscode-vegan-ipsum',
+    }
+  ),
+];
 
 /**
  * This component renders the VS Code Extension page.

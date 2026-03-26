@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
 
+import { webPageSchema, breadcrumbSchema, softwareAppSchema, webApiSchema } from '@vijayhardaha/schema-builder';
 import { JsonLd } from '@vijayhardaha/schema-builder/react';
 import type { Metadata } from 'next';
 
@@ -15,7 +16,8 @@ import {
   StatusCodes,
 } from '@/components/sections/json-api';
 import { buildMetadata } from '@/utils/meta';
-import { generateMasterSchema } from '@/utils/schema';
+import { globalSchema, buildBreadcrumbs } from '@/utils/schema';
+import { siteUrl } from '@/utils/seo';
 
 const title = 'Vegan Ipsum API - Free JSON Placeholder Text API';
 const description =
@@ -30,21 +32,30 @@ const pageDescription =
   'Build dynamic, cruelty-free mockups with our lightweight REST API. Integrate plant-based placeholder text directly into your frontend or backend applications via simple JSON endpoints. This API provides paragraphs, sentences, or words in plain or HTML format.';
 const pageTags = ['🔓 No Auth Required', '🔁 GET Only', '🧾 JSON Responses', '📝 Plain & HTML Formats'];
 
-// Path for the page, used for metadata and schema generation
 const path = '/json-api';
+const rootUrl = siteUrl();
 
 // SEO metadata for the page.
 export const metadata: Metadata = buildMetadata({ title, description, path });
 
 // Schema.org structured data.
-const schemaData = generateMasterSchema({
-  title,
-  description,
-  path,
-  isApi: true,
-  breadcrumbs: [{ name: 'Vegan Ipsum JSON API', path: path }],
-  extraOptions: { requirements: 'HTTP Client, Internet Access', price: 0.0, version: '1.0.0' },
-});
+const schemaData = [
+  ...globalSchema(),
+  webPageSchema({ rootUrl, path, breadcrumb: true }, { name: title, description }),
+  breadcrumbSchema({ rootUrl, items: buildBreadcrumbs(path, 'Vegan Ipsum JSON API') }),
+  softwareAppSchema(
+    { rootUrl, path },
+    {
+      name: title,
+      description,
+      applicationCategory: 'DeveloperApplication',
+      applicationSubCategory: 'API',
+      softwareVersion: '1.0.0',
+      softwareRequirements: 'HTTP Client, Internet Access',
+    }
+  ),
+  webApiSchema({ rootUrl, path }, { name: title, description }),
+];
 
 /**
  * This component renders the JSON API page.

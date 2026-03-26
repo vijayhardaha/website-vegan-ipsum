@@ -1,5 +1,6 @@
 import type { JSX } from 'react';
 
+import { aboutPageSchema, breadcrumbSchema } from '@vijayhardaha/schema-builder';
 import { JsonLd } from '@vijayhardaha/schema-builder/react';
 import type { Metadata } from 'next';
 
@@ -14,7 +15,8 @@ import {
   CTA,
 } from '@/components/sections/about';
 import { buildMetadata } from '@/utils/meta';
-import { generateMasterSchema } from '@/utils/schema';
+import { globalSchema, buildBreadcrumbs } from '@/utils/schema';
+import { siteUrl } from '@/utils/seo';
 
 const title = 'About Vegan Ipsum - Mission Behind the Ethical Placeholder Generator';
 const description =
@@ -29,20 +31,18 @@ const pageDescription =
   'We believe every part of the design process can reflect our values. Vegan Ipsum was built to replace outdated Latin with ethical, plant-based content that inspires conscious creation.';
 const pageTags = ['🌿 Ethical Mission', '💻 Open Source', '🧭 Driven by Values', '🚀 Made for Creators'];
 
-// Path for the page, used for metadata and schema generation
 const path = '/about';
+const rootUrl = siteUrl();
 
 // SEO metadata for the page.
 export const metadata: Metadata = buildMetadata({ title, description, path });
 
 // Schema.org structured data.
-const schemaData = generateMasterSchema({
-  title,
-  description,
-  path,
-  pageType: 'AboutPage',
-  breadcrumbs: [{ name: 'About Vegan Ipsum', path: path }],
-});
+const schemaData = [
+  ...globalSchema(),
+  aboutPageSchema({ rootUrl, path, breadcrumb: true }, { name: title, description }),
+  breadcrumbSchema({ rootUrl, items: buildBreadcrumbs(path, 'About Vegan Ipsum') }),
+];
 
 /**
  * This component renders the about page.
