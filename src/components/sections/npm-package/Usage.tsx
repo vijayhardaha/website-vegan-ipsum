@@ -115,7 +115,10 @@ console.log(customText);`}
 
           <p>
             For comprehensive API documentation and advanced configuration options, visit the official{' '}
-            <Link href="https://www.npmjs.com/package/vegan-ipsum" aria-label="vegan-ipsum npm package page — View package details on npm">
+            <Link
+              href="https://www.npmjs.com/package/vegan-ipsum"
+              aria-label="vegan-ipsum npm package page — View package details on npm"
+            >
               vegan-ipsum npm package page
             </Link>
             . If you are new to open source, we recommend reading the{' '}
@@ -144,11 +147,17 @@ console.log(customText);`}
               report an issue
             </Link>{' '}
             or{' '}
-            <Link href="https://github.com/vijayhardaha/node-vegan-ipsum/issues" aria-label="request a feature — Open GitHub issues to request a new feature">
+            <Link
+              href="https://github.com/vijayhardaha/node-vegan-ipsum/issues"
+              aria-label="request a feature — Open GitHub issues to request a new feature"
+            >
               request a feature
             </Link>
             . Community contributions via{' '}
-            <Link href="https://github.com/vijayhardaha/node-vegan-ipsum/pulls" aria-label="pull requests — Submit a pull request">
+            <Link
+              href="https://github.com/vijayhardaha/node-vegan-ipsum/pulls"
+              aria-label="pull requests — Submit a pull request"
+            >
               pull requests
             </Link>{' '}
             are also welcome.

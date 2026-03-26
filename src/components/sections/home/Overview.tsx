@@ -73,7 +73,10 @@ export default function Overview(): JSX.Element {
                 </div>
                 <span>
                   Fully open source and free to use under the{' '}
-                  <Link href="https://opensource.org/licenses/MIT" aria-label="MIT License — Learn about the MIT License">
+                  <Link
+                    href="https://opensource.org/licenses/MIT"
+                    aria-label="MIT License — Learn about the MIT License"
+                  >
                     MIT License
                   </Link>
                 </span>

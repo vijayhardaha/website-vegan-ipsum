@@ -112,7 +112,10 @@ export default function Installation(): JSX.Element {
 
               <InfoBox className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5">
                 This command triggers installation directly from the{' '}
-                <Link href="https://marketplace.visualstudio.com/" aria-label="VS Code Marketplace — Visit the Visual Studio Marketplace">
+                <Link
+                  href="https://marketplace.visualstudio.com/"
+                  aria-label="VS Code Marketplace — Visit the Visual Studio Marketplace"
+                >
                   VS Code Marketplace
                 </Link>{' '}
                 without navigating away from your editor.

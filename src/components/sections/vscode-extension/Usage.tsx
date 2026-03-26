@@ -86,7 +86,10 @@ export default function Usage(): JSX.Element {
               JavaScript
             </Link>
             , and{' '}
-            <Link href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" aria-label="JSON — Learn more about JSON">
+            <Link
+              href="https://developer.mozilla.org/en-US/docs/Glossary/JSON"
+              aria-label="JSON — Learn more about JSON"
+            >
               JSON
             </Link>
             , making it a versatile tool for diverse development workflows.

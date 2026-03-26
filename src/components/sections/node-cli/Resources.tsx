@@ -33,7 +33,10 @@ export default function Resources(): JSX.Element {
           <ul className="list-disc space-y-2 pl-8">
             <li>
               <strong>Automate Workflows:</strong> Integrate the CLI into shell scripts or{' '}
-              <Link href="https://docs.github.com/en/actions" aria-label="CI/CD pipelines — Learn about GitHub Actions automation">
+              <Link
+                href="https://docs.github.com/en/actions"
+                aria-label="CI/CD pipelines — Learn about GitHub Actions automation"
+              >
                 CI/CD pipelines
               </Link>{' '}
               to dynamically generate placeholder content during build processes.

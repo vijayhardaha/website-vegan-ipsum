@@ -24,7 +24,10 @@ export default function Introduction(): JSX.Element {
           icon="jsSquare"
         >
           <p>
-            <Link href="https://www.npmjs.com/package/vegan-ipsum" aria-label="vegan-ipsum — View package details on npm">
+            <Link
+              href="https://www.npmjs.com/package/vegan-ipsum"
+              aria-label="vegan-ipsum — View package details on npm"
+            >
               <code>vegan-ipsum</code>
             </Link>{' '}
             is a lightweight, zero-dependency JavaScript library for generating unique, vegan-themed placeholder text.
