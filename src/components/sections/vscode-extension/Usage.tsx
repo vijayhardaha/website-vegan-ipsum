@@ -29,7 +29,7 @@ export default function Usage(): JSX.Element {
             generator directly from the{' '}
             <Link
               href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
-              aria-label="Learn how to use the Command Palette"
+              aria-label="Command Palette — Learn how to use the Command Palette"
             >
               Command Palette
             </Link>{' '}
@@ -71,22 +71,22 @@ export default function Usage(): JSX.Element {
 
           <InfoBox>
             This extension works across various text-based file types, including{' '}
-            <Link href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="Learn more about HTML">
+            <Link href="https://developer.mozilla.org/en-US/docs/Web/HTML" aria-label="HTML — Learn more about HTML">
               HTML
             </Link>
             ,{' '}
-            <Link href="https://www.markdownguide.org/" aria-label="Learn more about Markdown">
+            <Link href="https://www.markdownguide.org/" aria-label="Markdown — Learn more about Markdown">
               Markdown
             </Link>
             ,{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
-              aria-label="Learn more about JavaScript"
+              aria-label="JavaScript — Learn more about JavaScript"
             >
               JavaScript
             </Link>
             , and{' '}
-            <Link href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" aria-label="Learn more about JSON">
+            <Link href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" aria-label="JSON — Learn more about JSON">
               JSON
             </Link>
             , making it a versatile tool for diverse development workflows.

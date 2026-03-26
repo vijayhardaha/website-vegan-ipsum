@@ -24,12 +24,12 @@ export default function Introduction(): JSX.Element {
           icon="jsSquare"
         >
           <p>
-            <Link href="https://www.npmjs.com/package/vegan-ipsum" aria-label="View vegan-ipsum package details on npm">
+            <Link href="https://www.npmjs.com/package/vegan-ipsum" aria-label="vegan-ipsum — View package details on npm">
               <code>vegan-ipsum</code>
             </Link>{' '}
             is a lightweight, zero-dependency JavaScript library for generating unique, vegan-themed placeholder text.
             It serves as a cruelty-free alternative to traditional{' '}
-            <Link href="https://www.lipsum.com/" aria-label="Visit Lorem Ipsum website">
+            <Link href="https://www.lipsum.com/" aria-label="Lorem Ipsum — Visit the Lorem Ipsum website">
               Lorem Ipsum
             </Link>
             , offering distinctive filler content for your layouts.
@@ -39,7 +39,7 @@ export default function Introduction(): JSX.Element {
             Designed for developers, designers, and content creators, this package allows you to integrate ethically
             inspired, plant-based dummy text into your projects. It is an excellent choice for building vegan blogs,
             sustainability platforms, or{' '}
-            <Link href="https://react.dev/" aria-label="Visit React official website">
+            <Link href="https://react.dev/" aria-label="React — Visit the official website">
               React
             </Link>{' '}
             applications promoting compassionate living.
@@ -47,17 +47,17 @@ export default function Introduction(): JSX.Element {
 
           <p>
             The library is environment-agnostic and fully compatible with{' '}
-            <Link href="https://nodejs.org/" aria-label="Visit Node.js official website">
+            <Link href="https://nodejs.org/" aria-label="Node.js — Visit the official website">
               Node.js
             </Link>
             , modern browsers, and{' '}
-            <Link href="https://reactnative.dev/" aria-label="Visit React Native official documentation">
+            <Link href="https://reactnative.dev/" aria-label="React Native — Visit the official documentation">
               React Native
             </Link>
             , ensuring seamless integration across diverse{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-              aria-label="Visit JavaScript documentation on MDN"
+              aria-label="JavaScript — Visit the MDN documentation"
             >
               JavaScript
             </Link>{' '}

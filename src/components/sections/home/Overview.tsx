@@ -34,7 +34,7 @@ export default function Overview(): JSX.Element {
 
             <p>
               Unlike generic{' '}
-              <Link href="https://www.lipsum.com/" aria-label="Visit standard Lorem Ipsum website">
+              <Link href="https://www.lipsum.com/" aria-label="Lorem Ipsum — Visit the standard Lorem Ipsum website">
                 Lorem Ipsum
               </Link>{' '}
               generators, this tool creates vegan-themed filler text that resonates with eco-conscious branding, making
@@ -73,7 +73,7 @@ export default function Overview(): JSX.Element {
                 </div>
                 <span>
                   Fully open source and free to use under the{' '}
-                  <Link href="https://opensource.org/licenses/MIT" aria-label="Learn about the MIT License">
+                  <Link href="https://opensource.org/licenses/MIT" aria-label="MIT License — Learn about the MIT License">
                     MIT License
                   </Link>
                 </span>

@@ -33,12 +33,12 @@ export default function Installation(): JSX.Element {
             You can integrate the{' '}
             <Link
               href="https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum"
-              aria-label="View Vegan Ipsum extension details on the Visual Studio Marketplace"
+              aria-label="Vegan Ipsum VS Code extension — View details on the Visual Studio Marketplace"
             >
               Vegan Ipsum VS Code extension
             </Link>{' '}
             into your{' '}
-            <Link href="https://code.visualstudio.com/" aria-label="Download Visual Studio Code">
+            <Link href="https://code.visualstudio.com/" aria-label="Visual Studio Code — Download the editor">
               Visual Studio Code
             </Link>{' '}
             setup in two ways: via the built-in Marketplace search or by using the command-line interface for a quick
@@ -96,7 +96,7 @@ export default function Installation(): JSX.Element {
                 Open the{' '}
                 <Link
                   href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
-                  aria-label="Learn how to use the Command Palette"
+                  aria-label="Command Palette — Learn how to use the Command Palette"
                 >
                   Command Palette
                 </Link>{' '}
@@ -112,7 +112,7 @@ export default function Installation(): JSX.Element {
 
               <InfoBox className="border-secondary/20 bg-secondary/10 text-secondary-dark mt-5">
                 This command triggers installation directly from the{' '}
-                <Link href="https://marketplace.visualstudio.com/" aria-label="Visit the Visual Studio Marketplace">
+                <Link href="https://marketplace.visualstudio.com/" aria-label="VS Code Marketplace — Visit the Visual Studio Marketplace">
                   VS Code Marketplace
                 </Link>{' '}
                 without navigating away from your editor.

@@ -32,7 +32,7 @@ export default function BaseUrl(): JSX.Element {
             All API endpoints are relative to the following base URL. We strongly recommend using{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security"
-              aria-label="Learn about HTTPS and Transport Layer Security"
+              aria-label="HTTPS — Learn about HTTPS and Transport Layer Security"
             >
               HTTPS
             </Link>{' '}

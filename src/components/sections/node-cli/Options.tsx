@@ -37,7 +37,7 @@ export default function Options(): JSX.Element {
               <code>--format html</code>: Wraps the generated output in HTML{' '}
               <Link
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"
-                aria-label="Learn more about the HTML paragraph tag on MDN"
+                aria-label="paragraph tags — Learn more about the HTML paragraph tag on MDN"
               >
                 paragraph tags
               </Link>

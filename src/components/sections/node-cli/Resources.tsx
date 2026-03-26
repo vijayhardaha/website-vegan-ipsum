@@ -33,7 +33,7 @@ export default function Resources(): JSX.Element {
           <ul className="list-disc space-y-2 pl-8">
             <li>
               <strong>Automate Workflows:</strong> Integrate the CLI into shell scripts or{' '}
-              <Link href="https://docs.github.com/en/actions" aria-label="Learn about GitHub Actions automation">
+              <Link href="https://docs.github.com/en/actions" aria-label="CI/CD pipelines — Learn about GitHub Actions automation">
                 CI/CD pipelines
               </Link>{' '}
               to dynamically generate placeholder content during build processes.
@@ -46,15 +46,15 @@ export default function Resources(): JSX.Element {
 
             <li>
               <strong>Advanced Processing:</strong> Pipe output directly into standard Unix tools like{' '}
-              <Link href="https://www.gnu.org/software/grep/" aria-label="Visit GNU Grep documentation">
+              <Link href="https://www.gnu.org/software/grep/" aria-label="grep — Visit the GNU Grep documentation">
                 <code>grep</code>
               </Link>
               ,{' '}
-              <Link href="https://www.gnu.org/software/gawk/manual/" aria-label="Visit GNU Awk documentation">
+              <Link href="https://www.gnu.org/software/gawk/manual/" aria-label="awk — Visit the GNU Awk documentation">
                 <code>awk</code>
               </Link>
               , or{' '}
-              <Link href="https://www.gnu.org/software/sed/manual/" aria-label="Visit GNU Sed documentation">
+              <Link href="https://www.gnu.org/software/sed/manual/" aria-label="sed — Visit the GNU Sed documentation">
                 <code>sed</code>
               </Link>{' '}
               for custom text filtering and manipulation.
@@ -82,7 +82,7 @@ export default function Resources(): JSX.Element {
             You can also visit the{' '}
             <Link
               href="https://www.npmjs.com/package/vegan-ipsum"
-              aria-label="View vegan-ipsum package statistics and history on npm"
+              aria-label="official npm package page — View vegan-ipsum package statistics and history on npm"
             >
               official npm package page
             </Link>{' '}
@@ -93,7 +93,7 @@ export default function Resources(): JSX.Element {
             To contribute to the project or report issues, please visit the{' '}
             <Link
               href="https://github.com/vijayhardaha/node-vegan-ipsum"
-              aria-label="Visit the vegan-ipsum GitHub repository"
+              aria-label="GitHub repository — Visit the vegan-ipsum GitHub repository"
             >
               GitHub repository
             </Link>{' '}

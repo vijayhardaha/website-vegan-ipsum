@@ -37,7 +37,7 @@ export default function Introduction(): JSX.Element {
             </p>
             <p>
               Unlike traditional{' '}
-              <Link href="https://www.lipsum.com/" aria-label="Visit standard Lorem Ipsum website">
+              <Link href="https://www.lipsum.com/" aria-label="Lorem Ipsum — Visit the standard Lorem Ipsum website">
                 Lorem Ipsum
               </Link>{' '}
               generators, Vegan Ipsum produces filler text infused with vegan-themed vocabulary and compassionate

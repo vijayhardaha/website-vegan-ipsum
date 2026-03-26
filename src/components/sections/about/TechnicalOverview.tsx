@@ -35,7 +35,7 @@ export default function TechnicalOverview(): JSX.Element {
               {[
                 <>
                   Written entirely in modern, strongly typed{' '}
-                  <Link href="https://www.typescriptlang.org/" aria-label="Visit TypeScript official website">
+                  <Link href="https://www.typescriptlang.org/" aria-label="TypeScript — Visit the official website">
                     <strong>TypeScript</strong>
                   </Link>{' '}
                   to ensure code quality and maintainability.
@@ -52,14 +52,14 @@ export default function TechnicalOverview(): JSX.Element {
                   Supports both{' '}
                   <Link
                     href="https://nodejs.org/api/modules.html#modules-commonjs-modules"
-                    aria-label="Learn about CommonJS modules"
+                    aria-label="CommonJS — Learn about CommonJS modules"
                   >
                     <strong>CommonJS</strong>
                   </Link>{' '}
                   and{' '}
                   <Link
                     href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
-                    aria-label="Learn about ECMAScript Modules"
+                    aria-label="ECMAScript Modules (ESM) — Learn about ECMAScript modules"
                   >
                     <strong>ECMAScript Modules (ESM)</strong>
                   </Link>{' '}

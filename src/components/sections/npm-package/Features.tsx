@@ -77,13 +77,13 @@ export default function Features(): JSX.Element {
         >
           <p>
             Vegan Ipsum is designed to be simple, fast, and flexible. Whether you&apos;re building web apps,{' '}
-            <Link href="https://nodejs.org/" aria-label="Visit Node.js official website">
+            <Link href="https://nodejs.org/" aria-label="Node.js — Visit the official website">
               Node.js
             </Link>{' '}
             services, or{' '}
             <Link
               href="https://en.wikipedia.org/wiki/Command-line_interface"
-              aria-label="Learn more about command-line interface tools"
+              aria-label="CLI — Learn more about command-line interface tools"
             >
               CLI
             </Link>{' '}

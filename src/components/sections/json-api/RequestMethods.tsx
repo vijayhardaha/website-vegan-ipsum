@@ -31,7 +31,7 @@ export default function RequestMethods(): JSX.Element {
             The Vegan Ipsum API supports standard{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
-              aria-label="Learn about HTTP request methods"
+              aria-label="HTTP request methods — Learn about HTTP request methods"
             >
               HTTP request methods
             </Link>{' '}
@@ -49,7 +49,7 @@ export default function RequestMethods(): JSX.Element {
               <p className="text-sm leading-relaxed">
                 Send parameters as query strings appended to the URL. This method is ideal for quick requests and can be
                 easily tested via a browser address bar or command-line tools like{' '}
-                <Link href="https://curl.se/" aria-label="Visit curl website">
+                <Link href="https://curl.se/" aria-label="cURL — Visit the website">
                   cURL
                 </Link>
                 .

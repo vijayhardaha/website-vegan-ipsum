@@ -31,7 +31,7 @@ export default function PostRequestExample(): JSX.Element {
             For <code>POST</code> requests, send parameters as a{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
-              aria-label="Learn about JSON format"
+              aria-label="JSON — Learn about JSON format"
             >
               JSON
             </Link>{' '}

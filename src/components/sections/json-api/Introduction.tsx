@@ -48,7 +48,7 @@ export default function Introduction(): JSX.Element {
             requests for fast and simple retrieval of content via{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
-              aria-label="Learn about JSON format"
+              aria-label="JSON — Learn about JSON format"
             >
               JSON
             </Link>

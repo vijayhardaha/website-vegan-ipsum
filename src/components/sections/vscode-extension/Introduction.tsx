@@ -26,7 +26,7 @@ export default function Introduction(): JSX.Element {
           <p>
             The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight, productivity-focused tool designed for
             developers and designers. It enables you to insert vegan-themed placeholder text directly into your{' '}
-            <Link href="https://code.visualstudio.com/" aria-label="Visit Visual Studio Code official website">
+            <Link href="https://code.visualstudio.com/" aria-label="Visual Studio Code — Visit the official website">
               Visual Studio Code
             </Link>{' '}
             editor without interrupting your workflow.
@@ -38,7 +38,7 @@ export default function Introduction(): JSX.Element {
             dummy text generators, right inside your{' '}
             <Link
               href="https://en.wikipedia.org/wiki/Integrated_development_environment"
-              aria-label="Learn about Integrated Development Environments"
+              aria-label="IDE — Learn about integrated development environments"
             >
               IDE
             </Link>
@@ -49,7 +49,7 @@ export default function Introduction(): JSX.Element {
             The extension integrates seamlessly with the{' '}
             <Link
               href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
-              aria-label="Learn how to use the VS Code Command Palette"
+              aria-label="Command Palette — Learn how to use the VS Code Command Palette"
             >
               Command Palette
             </Link>{' '}

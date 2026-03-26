@@ -30,7 +30,7 @@ export default function Background(): JSX.Element {
             had long overlooked. While exploring resources like{' '}
             <Link
               href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/"
-              aria-label="Ultimate List of Lorem Ipsum Generators"
+              aria-label="loremipsum.io — Ultimate List of Lorem Ipsum Generators"
             >
               loremipsum.io
             </Link>

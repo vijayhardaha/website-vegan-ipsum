@@ -67,7 +67,7 @@ export default function VSCodeExtensionPage(): JSX.Element {
           <Button asChild size="lg" variant="primary">
             <Link
               href="https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum"
-              aria-label="Install Vegan Ipsum VS Code Extension from the Visual Studio Marketplace"
+              aria-label="Install Extension — Install Vegan Ipsum VS Code Extension from the Visual Studio Marketplace"
             >
               Install Extension
             </Link>
@@ -75,7 +75,7 @@ export default function VSCodeExtensionPage(): JSX.Element {
           <Button asChild size="lg" variant="white" className="border-secondary/60 border-2">
             <Link
               href="https://github.com/vijayhardaha/vscode-vegan-ipsum"
-              aria-label="Vegan Ipsum VS Code Extension GitHub repository"
+              aria-label="View Source — Open the Vegan Ipsum VS Code Extension GitHub repository"
             >
               View Source
             </Link>

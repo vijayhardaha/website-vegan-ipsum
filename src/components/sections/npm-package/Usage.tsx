@@ -28,12 +28,12 @@ export default function Usage(): JSX.Element {
             After installation, you can import <code>vegan-ipsum</code> into your{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-              aria-label="Learn more about JavaScript"
+              aria-label="JavaScript — Learn more about JavaScript"
             >
               JavaScript
             </Link>{' '}
             or{' '}
-            <Link href="https://www.typescriptlang.org/docs/" aria-label="Learn more about TypeScript">
+            <Link href="https://www.typescriptlang.org/docs/" aria-label="TypeScript — Learn more about TypeScript">
               TypeScript
             </Link>{' '}
             project to generate plant-based placeholder text programmatically.
@@ -115,13 +115,13 @@ console.log(customText);`}
 
           <p>
             For comprehensive API documentation and advanced configuration options, visit the official{' '}
-            <Link href="https://www.npmjs.com/package/vegan-ipsum" aria-label="View vegan-ipsum package details on npm">
+            <Link href="https://www.npmjs.com/package/vegan-ipsum" aria-label="vegan-ipsum npm package page — View package details on npm">
               vegan-ipsum npm package page
             </Link>
             . If you are new to open source, we recommend reading the{' '}
             <Link
               href="https://opensource.guide/how-to-contribute/"
-              aria-label="Learn about contributing to open source projects"
+              aria-label="contribution guidelines — Learn about contributing to open source projects"
             >
               contribution guidelines
             </Link>{' '}
@@ -132,23 +132,23 @@ console.log(customText);`}
             Developers are encouraged to explore the{' '}
             <Link
               href="https://github.com/vijayhardaha/node-vegan-ipsum"
-              aria-label="View node-vegan-ipsum source code on GitHub"
+              aria-label="GitHub repository — View the node-vegan-ipsum source code on GitHub"
             >
               GitHub repository
             </Link>{' '}
             to inspect the source code. If you encounter any bugs or have suggestions for improvements, please{' '}
             <Link
               href="https://github.com/vijayhardaha/node-vegan-ipsum/issues/new"
-              aria-label="Report an issue or bug"
+              aria-label="report an issue — Report an issue or bug"
             >
               report an issue
             </Link>{' '}
             or{' '}
-            <Link href="https://github.com/vijayhardaha/node-vegan-ipsum/issues" aria-label="Request a new feature">
+            <Link href="https://github.com/vijayhardaha/node-vegan-ipsum/issues" aria-label="request a feature — Open GitHub issues to request a new feature">
               request a feature
             </Link>
             . Community contributions via{' '}
-            <Link href="https://github.com/vijayhardaha/node-vegan-ipsum/pulls" aria-label="Submit a pull request">
+            <Link href="https://github.com/vijayhardaha/node-vegan-ipsum/pulls" aria-label="pull requests — Submit a pull request">
               pull requests
             </Link>{' '}
             are also welcome.

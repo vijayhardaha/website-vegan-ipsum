@@ -25,7 +25,7 @@ export default function Introduction(): JSX.Element {
         >
           <p>
             The <strong>Vegan Ipsum CLI</strong> is a lightweight command-line utility built on{' '}
-            <Link href="https://nodejs.org/" aria-label="Visit Node.js official website">
+            <Link href="https://nodejs.org/" aria-label="Node.js — Visit the official website">
               Node.js
             </Link>
             . It enables developers and designers to generate vegan-themed placeholder text directly within the terminal
@@ -42,7 +42,7 @@ export default function Introduction(): JSX.Element {
             Beyond manual use, the CLI is highly effective for{' '}
             <Link
               href="https://docs.github.com/en/actions/get-started/continuous-integration"
-              aria-label="Learn about continuous integration on GitHub Docs"
+              aria-label="continuous integration — Learn about continuous integration on GitHub Docs"
             >
               continuous integration
             </Link>{' '}

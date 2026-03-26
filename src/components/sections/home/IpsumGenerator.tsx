@@ -81,7 +81,7 @@ export default function IpsumGenerator(): JSX.Element {
             preferred length and format to keep your{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
-              aria-label="Learn about HTML for web design"
+              aria-label="web design — Learn about HTML for web design"
             >
               web design
             </Link>{' '}

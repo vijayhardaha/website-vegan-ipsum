@@ -12,7 +12,7 @@ import Container from '@/components/primitives/Container';
  */
 export default function Support(): JSX.Element {
   return (
-    <Section id="support" aroia-label="Support and feedback for the Vegan Ipsum VS Code Extension">
+    <Section id="support" aria-label="Support and feedback for the Vegan Ipsum VS Code Extension">
       <Container>
         <SectionHeader
           heading={
@@ -29,7 +29,7 @@ export default function Support(): JSX.Element {
             an issue on the{' '}
             <Link
               href="https://github.com/vijayhardaha/vscode-vegan-ipsum/issues"
-              aria-label="Vegan Ipsum VS Code Extension GitHub Issues Page"
+              aria-label="GitHub repository — Open the Vegan Ipsum VS Code Extension issues page"
             >
               GitHub repository
             </Link>

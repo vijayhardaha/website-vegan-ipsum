@@ -32,7 +32,7 @@ export default function ResponseFormat(): JSX.Element {
             A successful API request returns a{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
-              aria-label="Learn about JSON"
+              aria-label="JSON — Learn about JSON"
             >
               JSON
             </Link>{' '}

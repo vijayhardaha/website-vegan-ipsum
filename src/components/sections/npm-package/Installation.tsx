@@ -32,7 +32,7 @@ export default function Installation(): JSX.Element {
             Install <code>vegan-ipsum</code> using your preferred{' '}
             <Link
               href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
-              aria-label="Learn about package managers in Node.js"
+              aria-label="package manager — Learn about package managers in Node.js"
             >
               package manager
             </Link>
@@ -40,7 +40,7 @@ export default function Installation(): JSX.Element {
             utilize the library as a{' '}
             <Link
               href="https://en.wikipedia.org/wiki/Command-line_interface"
-              aria-label="Learn more about command-line interfaces"
+              aria-label="CLI tool — Learn more about command-line interfaces"
             >
               CLI tool
             </Link>{' '}

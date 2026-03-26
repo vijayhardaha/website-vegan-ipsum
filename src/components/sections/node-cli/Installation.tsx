@@ -39,13 +39,13 @@ export default function Installation(): JSX.Element {
 
           <p>
             Before proceeding, ensure you have{' '}
-            <Link href="https://nodejs.org/" aria-label="Download Node.js">
+            <Link href="https://nodejs.org/" aria-label="Node.js — Download Node.js">
               Node.js
             </Link>{' '}
             and{' '}
             <Link
               href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
-              aria-label="Learn about npm package manager"
+              aria-label="npm — Learn about the npm package manager"
             >
               npm
             </Link>{' '}
@@ -56,7 +56,7 @@ export default function Installation(): JSX.Element {
             After the installation is complete, verify that the package is accessible in your{' '}
             <Link
               href="https://en.wikipedia.org/wiki/PATH_(variable)"
-              aria-label="Learn about the PATH environment variable"
+              aria-label="PATH — Learn about the PATH environment variable"
             >
               PATH
             </Link>{' '}

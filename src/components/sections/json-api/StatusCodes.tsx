@@ -32,7 +32,7 @@ export default function StatusCodes(): JSX.Element {
             The API utilizes standard{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
-              aria-label="Learn about HTTP status codes"
+              aria-label="HTTP status codes — Learn about HTTP status codes"
             >
               HTTP status codes
             </Link>{' '}

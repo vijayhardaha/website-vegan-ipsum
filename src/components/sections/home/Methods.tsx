@@ -29,7 +29,7 @@ const cards: Card[] = [
     text: 'Generate vegan-themed placeholder text instantly in your browser. No installation or setup required, just click and copy.',
     icon: 'globe',
     link: '#generate-vegan-ipsum',
-    ariaLabel: 'Use the Vegan Ipsum web interface',
+    ariaLabel: 'Use Now — Use the Vegan Ipsum web interface',
     buttonText: 'Use Now',
     buttonIcon: true,
   },
@@ -38,7 +38,7 @@ const cards: Card[] = [
     text: 'Integrate Vegan Ipsum directly into your applications or backend services using our RESTful API.',
     icon: 'cloud',
     link: '/json-api',
-    ariaLabel: 'View documentation for the Vegan Ipsum JSON API',
+    ariaLabel: 'View Docs — View documentation for the Vegan Ipsum JSON API',
     buttonText: 'View Docs',
     buttonIcon: true,
   },
@@ -47,7 +47,7 @@ const cards: Card[] = [
     text: 'Insert compassionate filler text without leaving your editor. The most efficient way to populate mockups.',
     icon: 'code',
     link: '/vscode-extension',
-    ariaLabel: 'Learn more about the Vegan Ipsum VS Code extension',
+    ariaLabel: 'Learn More — Learn more about the Vegan Ipsum VS Code extension',
     buttonText: 'Learn More',
     buttonIcon: true,
   },
@@ -56,7 +56,7 @@ const cards: Card[] = [
     text: 'Generate placeholder text from your terminal. Perfect for shell scripts, automation pipelines, and rapid prototyping.',
     icon: 'terminal',
     link: '/node-cli',
-    ariaLabel: 'View documentation for the Vegan Ipsum Node CLI tool',
+    ariaLabel: 'View Docs — View documentation for the Vegan Ipsum Node CLI tool',
     buttonText: 'View Docs',
     buttonIcon: true,
   },
@@ -65,7 +65,7 @@ const cards: Card[] = [
     text: 'Add programmatic text generation to any JavaScript or Node.js project with a single installation.',
     icon: 'npm',
     link: '/npm-package',
-    ariaLabel: 'Learn more about the Vegan Ipsum NPM package',
+    ariaLabel: 'Learn More — Learn more about the Vegan Ipsum NPM package',
     buttonText: 'Learn More',
     buttonIcon: true,
   },
@@ -74,7 +74,7 @@ const cards: Card[] = [
     text: "Vegan Ipsum is free, open, and community-driven. Contribute, fork, or build on top of it,  it's all yours.",
     icon: 'github',
     link: 'https://github.com/vijayhardaha/node-vegan-ipsum',
-    ariaLabel: 'View the Vegan Ipsum Node.js repository on GitHub',
+    ariaLabel: 'View on GitHub — View the Vegan Ipsum Node.js repository on GitHub',
     buttonText: 'View on GitHub',
   },
 ];
@@ -95,12 +95,12 @@ export default function Methods(): JSX.Element {
             simple web interface, a robust{' '}
             <Link
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
-              aria-label="Learn about HTTP requests"
+              aria-label="JSON API — Learn about HTTP requests"
             >
               JSON API
             </Link>
             , or developer-focused tools like the{' '}
-            <Link href="https://code.visualstudio.com/" aria-label="Visit Visual Studio Code website">
+            <Link href="https://code.visualstudio.com/" aria-label="Visual Studio Code — Visit the website">
               Visual Studio Code
             </Link>{' '}
             Extension, Vegan Ipsum offers a flexible solution for every workflow.
