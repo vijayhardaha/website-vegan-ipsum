@@ -36,7 +36,7 @@
         "@types/xml2js": "^0.4.14",
         "@typescript-eslint/eslint-plugin": "^8.56.0",
         "@typescript-eslint/parser": "^8.56.0",
-        "@vijayhardaha/schema-builder": "^1.0.0-rc.4",
+        "@vijayhardaha/schema-builder": "^1.0.0",
         "eslint": "^9.39.2",
         "eslint-config-next": "^15.5.12",
         "eslint-config-prettier": "^10.1.8",
@@ -390,7 +390,7 @@
 
     "@vercel/analytics": ["@vercel/analytics@2.0.1", "", { "peerDependencies": { "@remix-run/react": "^2", "@sveltejs/kit": "^1 || ^2", "next": ">= 13", "nuxt": ">= 3", "react": "^18 || ^19 || ^19.0.0-rc", "svelte": ">= 4", "vue": "^3", "vue-router": "^4" }, "optionalPeers": ["@remix-run/react", "@sveltejs/kit", "next", "nuxt", "react", "svelte", "vue", "vue-router"] }, "sha512-MTQG6V9qQrt1tsDeF+2Uoo5aPjqbVPys1xvnIftXSJYG2SrwXRHnqEvVoYID7BTruDz4lCd2Z7rM1BdkUehk2g=="],
 
-    "@vijayhardaha/schema-builder": ["@vijayhardaha/schema-builder@1.0.0-rc.4", "", { "dependencies": { "react": ">=19.0.0", "react-dom": ">=19.0.0" } }, "sha512-Ymx3eUr07xgEYEObzmb7JdL8c4GAmCFm9KT5G9XOO9TDk87Zj6pDIAgoGsoXlXZDmH295sVttDjXbsYi35Q3ww=="],
+    "@vijayhardaha/schema-builder": ["@vijayhardaha/schema-builder@1.0.0", "", { "dependencies": { "react": ">=19.0.0", "react-dom": ">=19.0.0" } }, "sha512-fDLrgRP+bNmpHM90wzJ2et10MfOc/O6RpXyh3BVOZBnd8+4T0ClP730d6trE2PMPfhdU6hjG20uhjiNZ0qtNGw=="],
 
     "acorn": ["acorn@8.16.0", "", { "bin": { "acorn": "bin/acorn" } }, "sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw=="],
 
