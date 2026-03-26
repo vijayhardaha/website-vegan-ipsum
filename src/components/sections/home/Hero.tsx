@@ -37,25 +37,13 @@ export default function Hero(): JSX.Element {
         </p>
 
         <div className="flex flex-wrap justify-center gap-3.5">
-          <Button
-            asChild
-            aria-label="Navigate to the Vegan Ipsum Generator tool"
-            variant="primary"
-            size="xl"
-            className="hover:no-underline"
-          >
+          <Button asChild variant="primary" size="xl" className="hover:no-underline">
             <Link href="#generate-vegan-ipsum" scrollOffset={68}>
               Generate Ipsum
             </Link>
           </Button>
 
-          <Button
-            asChild
-            aria-label="View available integration methods"
-            variant="primary-outline"
-            size="xl"
-            className="hover:no-underline"
-          >
+          <Button asChild variant="primary-outline" size="xl" className="hover:no-underline">
             <Link href="#methods" scrollOffset={68}>
               Explore Methods <Icon name="arrowRight" />
             </Link>
