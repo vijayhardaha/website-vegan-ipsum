@@ -36,7 +36,10 @@ export function globalSchema(): Record<string, unknown>[] {
 
   return [
     personSchema({ rootUrl }),
-    organizationSchema({ rootUrl }, { name: SITE_CONFIG.organization.name, foundingDate: '2025' }),
+    organizationSchema(
+      { rootUrl },
+      { name: SITE_CONFIG.organization.name, description: SITE_CONFIG.organization.description, foundingDate: '2025' }
+    ),
     websiteSchema({ rootUrl }, { name: SITE_CONFIG.name, description: SITE_CONFIG.description }),
   ];
 }
