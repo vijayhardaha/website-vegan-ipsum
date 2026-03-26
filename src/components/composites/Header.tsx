@@ -68,7 +68,7 @@ export default function Header(): JSX.Element {
     <header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <div className="flex items-center justify-between gap-6">
-          <Link href="/" aria-label="Navigate to homepage" hoverEffect="none">
+          <Link href="/" hoverEffect="none">
             <Image
               src="/logo.svg"
               alt="Vegan Ipsum Logo"

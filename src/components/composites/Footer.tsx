@@ -17,14 +17,14 @@ export default function Footer(): JSX.Element {
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <div className="space-y-6 text-xs leading-relaxed font-medium">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <Link href="/" aria-label="Navigate to homepage" className="text-xl font-black" hoverEffect="none">
+            <Link href="/" className="text-xl font-black" hoverEffect="none">
               <Image src="/logo-white.svg" alt="Vegan Ipsum Logo" width={213} height={32} className="h-auto w-45" />
               <span className="sr-only">Vegan Ipsum</span>
             </Link>
             <ul className="flex flex-wrap items-center justify-center gap-4" aria-label="Footer navigation links">
               {FOOTER_NAV_LINKS.map((link: NavLink) => (
                 <li key={link.href}>
-                  <Link href={link.href} aria-label={link.label} className="after:-bottom-1" hoverEffect="border">
+                  <Link href={link.href} className="after:-bottom-1" hoverEffect="border">
                     {link.label}
                   </Link>
                 </li>
