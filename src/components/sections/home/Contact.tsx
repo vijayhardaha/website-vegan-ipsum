@@ -39,7 +39,7 @@ export default function Contact(): JSX.Element {
             in making ethical design the standard, not the exception.
           </p>
 
-          <Button asChild variant="primary" size="lg" aria-label="Navigate to the Contact page">
+          <Button asChild variant="primary" size="lg">
             <Link href="/contact">
               Contact Us <Icon name="arrowRight" />
             </Link>
