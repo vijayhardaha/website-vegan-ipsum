@@ -1,0 +1,94 @@
+# Vegan Ipsum – LLM Context File
+
+## Project Overview
+Name: Vegan Ipsum
+Description: Plant-based, ethical placeholder text generator for designers, developers, and teams. Provides vegan-themed content for web projects, mockups, and prototypes.
+Website: https://veganipsum.vercel.app
+Category: Developer Tools
+Classification: Vegan Lorem Ipsum Generator, Placeholder Text Generator
+License: MIT License
+Copyright: 2025, Vijay Hardaha
+
+## Brand Identity
+Tagline: Ethical Placeholder Text for a Better World
+Mission: Replace outdated Latin filler text with ethical, plant-based content that inspires conscious creation
+Core Values: Ethical Branding, Conscious Design, Developer-First Tooling, Seamless Workflow
+
+## Target Audience
+- Ethical Startups: Consistent brand voice from prototype stage
+- Vegan Brands: Replace Latin filler with industry-relevant terminology
+- Sustainability Teams: Align internal tools with environmental mission
+- Creative Designers: Craft immersive, plant-based product previews
+
+## Author Information
+Name: Vijay Hardaha
+Social Links:
+  GitHub: https://github.com/vijayhardaha
+  X (Twitter): https://x.com/vijayhardaha
+  Instagram: https://instagram.com/vegan.vijay
+  PeoplePerHour: https://pph.me/vijayhardaha
+
+## Website Pages
+
+### Home (/)
+Title: Vegan Ipsum – Ethical & Plant-Based Lorem Ipsum Generator
+Description: Generate ethical, plant-based placeholder text with Vegan Ipsum. Perfect for vegans and conscious designers.
+Sections: Hero, Ipsum Generator, Methods, Overview, Benefits, Audience, Use Cases, Contact
+
+### About (/about)
+Title: About Vegan Ipsum – Mission Behind the Ethical Placeholder Generator
+Description: Discover the story behind Vegan Ipsum, a plant-based alternative to Lorem Ipsum.
+Sections: Introduction, Background, Core Features, Customization Options, Technical Overview, Use Cases, CTA
+
+### Contact (/contact)
+Title: Contact Vegan Ipsum – Creator Profile & Project Links
+Description: Connect with the creator and explore the Vegan Ipsum ecosystem.
+Sections: Projects, Author
+
+### JSON API (/json-api)
+Title: Vegan Ipsum API – Free JSON Placeholder Text API
+Description: High-performance REST API to fetch ethical, plant-based placeholder text.
+API:
+  Base URL: https://veganipsum.vercel.app/api
+  Authentication: None
+  Methods: GET only
+  Output Formats: JSON, Plain Text, HTML
+Sections: Introduction, Base URL, Request Methods, Parameters, GET Request Example, Response Format, Error Handling, Status Codes
+
+### Node CLI (/node-cli)
+Title: Vegan Ipsum CLI – Generate Ethical Placeholder Text in Terminal
+Description: Lightweight Node CLI for generating plant-based placeholder text.
+Sections: Introduction, Installation, Usage, Options, Resources
+NPM Package: https://www.npmjs.com/package/vegan-ipsum
+GitHub: https://github.com/vijayhardaha/node-vegan-ipsum
+Version: 1.0.4
+
+### NPM Package (/npm-package)
+Title: Vegan Ipsum NPM Package – Ethical Lorem Ipsum Library
+Description: Integrate plant-based placeholder text into JavaScript projects.
+Sections: Introduction, Installation, Usage, Features
+NPM Package: https://www.npmjs.com/package/vegan-ipsum
+GitHub: https://github.com/vijayhardaha/node-vegan-ipsum
+Version: 1.0.4
+
+### VS Code Extension (/vscode-extension)
+Title: Vegan Ipsum VS Code Extension – Ethical Placeholder Text
+Description: Generate plant-based placeholder text directly in VS Code.
+Sections: Introduction, Installation, Usage, Features, Support
+Marketplace: https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum
+GitHub: https://github.com/vijayhardaha/vscode-vegan-ipsum
+Version: 1.0.1
+Requirements: VS Code v1.80.0+
+
+## Ecosystem & Tools
+REST API: High-performance, no auth, GET-only, JSON endpoints
+Node CLI & NPM Package: Lightweight, zero dependencies, TypeScript-ready
+VS Code Extension: Insert Vegan Ipsum text directly in editor
+Website: Central hub for tools, documentation, and guides
+
+## Contact & Collaboration
+GitHub: https://github.com/vijayhardaha
+X (Twitter): https://x.com/vijayhardaha
+Instagram: https://instagram.com/vegan.vijay
+PeoplePerHour: https://pph.me/vijayhardaha
+Audience: Developers, designers, content creators, sustainability advocates
