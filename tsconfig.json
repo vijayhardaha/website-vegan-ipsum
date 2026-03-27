@@ -32,9 +32,6 @@
     // Allow importing .ts files directly for type-checking
     "allowImportingTsExtensions": true,
 
-    // Base directory for non-relative imports used by tooling
-    "baseUrl": ".",
-
     // Map `@/*` to `./src/*` for cleaner absolute imports
     "paths": { "@/*": ["./src/*"] },
 
@@ -90,8 +87,7 @@
     // ----------------------------------------------------------------------
     // Plugins & extras
     // ----------------------------------------------------------------------
-    "plugins": [{ "name": "next" }],
-    "downlevelIteration": true
+    "plugins": [{ "name": "next" }]
   },
 
   // ---- Includes ----
