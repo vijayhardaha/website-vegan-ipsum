@@ -13,6 +13,7 @@
 // Global Settings
 // ----------------------------------------------------------------------
 const siteDomain = 'https://veganipsum.vercel.app';
+const lastModified = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'); // Clean ISO format without milliseconds
 
 /** @type {import('next-sitemap').IConfig} */
 const config = {
@@ -31,13 +32,13 @@ const config = {
   // ---- Entry Transformation ----
   // Customizes each sitemap entry.
   // Here we clean up the 'lastmod' format for cleaner XML.
-  transform: async (config, path) => {
+  transform: (_config, path) => {
     return {
       loc: path,
-      changefreq: config.changefreq,
-      priority: config.priority,
+      changefreq: _config.changefreq,
+      priority: _config.priority,
       // Remove milliseconds to follow standard ISO 8601 strictly
-      lastmod: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
+      lastmod: lastModified,
     };
   },
 
