@@ -21,6 +21,7 @@ const config = {
   siteUrl: siteDomain,
   sitemapBaseFileName: 'sitemap',
   trailingSlash: false,
+  outDir: './public',
 
   // ---- Crawling Strategy ----
   changefreq: 'weekly',
