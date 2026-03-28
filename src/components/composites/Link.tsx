@@ -1,7 +1,6 @@
 'use client';
 
-import { type MouseEvent } from 'react';
-import type { ComponentPropsWithoutRef, JSX } from 'react';
+import type { MouseEvent, ComponentPropsWithoutRef, JSX } from 'react';
 
 import NextLink from 'next/link';
 

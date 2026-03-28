@@ -1,5 +1,4 @@
-import { forwardRef, type ReactNode } from 'react';
-import type { JSX, LabelHTMLAttributes } from 'react';
+import { forwardRef, type ReactNode, type JSX, type LabelHTMLAttributes } from 'react';
 
 import { cva } from 'class-variance-authority';
 

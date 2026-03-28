@@ -1,7 +1,6 @@
 'use client';
 
-import { type SubmitEvent, useCallback, useEffect, useRef, useState } from 'react';
-import type { JSX } from 'react';
+import { type SubmitEvent, type JSX, useCallback, useEffect, useRef, useState } from 'react';
 
 import Button from '@/components/primitives/Button';
 import Input from '@/components/primitives/Input';

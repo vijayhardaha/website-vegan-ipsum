@@ -1,5 +1,4 @@
-import { type ChangeEvent } from 'react';
-import type { JSX, ReactNode, SelectHTMLAttributes } from 'react';
+import { type ChangeEvent, type JSX, type ReactNode, type SelectHTMLAttributes } from 'react';
 
 import { cn } from '@/utils/classnames';
 
