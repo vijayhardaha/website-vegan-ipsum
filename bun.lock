@@ -36,7 +36,7 @@
         "@typescript-eslint/eslint-plugin": "^8.57.2",
         "@typescript-eslint/parser": "^8.57.2",
         "@vijayhardaha/dev-config": "^1.0.5",
-        "@vijayhardaha/schema-builder": "^1.0.0",
+        "@vijayhardaha/schema-builder": "^1.0.1",
         "eslint": "^9.39.2",
         "eslint-config-next": "^15.5.12",
         "eslint-config-prettier": "^10.1.8",
@@ -394,7 +394,7 @@
 
     "@vijayhardaha/dev-config": ["@vijayhardaha/dev-config@1.0.5", "", { "peerDependencies": { "@commitlint/cli": "^20", "@commitlint/config-conventional": "^20", "@eslint/compat": "^2", "@eslint/eslintrc": "^3", "@eslint/js": "^9", "@next/eslint-plugin-next": "^15", "@typescript-eslint/eslint-plugin": "^8", "@typescript-eslint/parser": "^8", "eslint": "^9", "eslint-config-next": "^15", "eslint-config-prettier": "^10", "eslint-import-resolver-typescript": "^4", "eslint-plugin-import": "^2", "eslint-plugin-jsx-a11y": "^6", "eslint-plugin-prettier": "^5", "eslint-plugin-react": "^7", "eslint-plugin-react-hooks": "^7", "globals": "^17", "prettier": "^3", "stylelint": "^17", "stylelint-config-property-sort-order-smacss": "^11", "stylelint-config-standard-scss": "^17", "stylelint-order": "^8", "typescript": "^5" }, "optionalPeers": ["@next/eslint-plugin-next", "@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "eslint-config-next", "eslint-import-resolver-typescript", "eslint-plugin-import", "eslint-plugin-jsx-a11y", "eslint-plugin-react", "eslint-plugin-react-hooks", "stylelint", "stylelint-config-property-sort-order-smacss", "stylelint-config-standard-scss", "stylelint-order"] }, "sha512-3aHBtvd+CVJ8gBG0pI2HXxF8Grcl6NoCPxcvbQ+LkR7GENmQ405qiADn0pELRMklPr5YJo4AYZSWGfMc6Z58YA=="],
 
-    "@vijayhardaha/schema-builder": ["@vijayhardaha/schema-builder@1.0.0", "", { "dependencies": { "react": ">=19.0.0", "react-dom": ">=19.0.0" } }, "sha512-fDLrgRP+bNmpHM90wzJ2et10MfOc/O6RpXyh3BVOZBnd8+4T0ClP730d6trE2PMPfhdU6hjG20uhjiNZ0qtNGw=="],
+    "@vijayhardaha/schema-builder": ["@vijayhardaha/schema-builder@1.0.1", "", { "dependencies": { "react": ">=19.0.0", "react-dom": ">=19.0.0" } }, "sha512-4T9+Hx1NP2IRN7ZOG4J22ZXbXlLxagolsQ1ND/fz8rJ9C7DtacFHIXEIniuW0Ur3QTYvhiTDpWP2LlorXMSAlQ=="],
 
     "acorn": ["acorn@8.16.0", "", { "bin": { "acorn": "bin/acorn" } }, "sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw=="],
 
