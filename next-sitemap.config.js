@@ -17,7 +17,7 @@ const siteDomain = 'https://veganipsum.vercel.app';
 /** @type {import('next-sitemap').IConfig} */
 const config = createSitemapConfig({
   siteUrl: siteDomain,
-  outDir: process.env === 'production' ? '/vercel/output/static' : './public',
+  outDir: process.env.NODE_ENV === 'production' ? '/vercel/output/static' : './public',
 });
 
 module.exports = config;
