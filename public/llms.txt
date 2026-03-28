@@ -1,52 +1,70 @@
 # Vegan Ipsum
 
-Ethical, plant-based, and cruelty-free placeholder text generator for designers, developers, and creative teams.
+> Ethical, plant-based, and cruelty-free placeholder text generator for designers, developers, and creative teams who want to align their mockups and prototypes with sustainable, conscious branding values.
 
-> [!TIP]
-> Use Vegan Ipsum to replace outdated Latin (Lorem Ipsum) with ethical, industry-relevant terminology that aligns with sustainability and vegan branding.
+Vegan Ipsum is a compassion-forward alternative to traditional Lorem Ipsum. It provides meaningful, plant-based sample content that resonates with eco-conscious brands, ethical startups, and sustainability-focused teams. The ecosystem includes a web interface, REST API, NPM package, Node CLI, and VS Code extension, offering seamless integration across modern development workflows.
 
-## Metadata
-- **Category:** Developer Tools / Design Resources
-- **License:** MIT License
-- **Copyright:** 2025, Vijay Hardaha
-- **Website:** https://veganipsum.vercel.app
-- **Author:** [Vijay Hardaha](https://github.com/vijayhardaha)
+## Basic Information
 
-## Core Ecosystem
-- **Web App:** [veganipsum.vercel.app](https://veganipsum.vercel.app) - Web interface for text generation.
-- **REST API:** [API Documentation](https://veganipsum.vercel.app/json-api) - High-performance JSON/Plain Text/HTML endpoints.
-- **Node CLI & NPM:** [vegan-ipsum](https://www.npmjs.com/package/vegan-ipsum) - Terminal-based generation and JS integration.
-- **VS Code Extension:** [Vegan Ipsum](https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum) - In-editor text generation.
+- **Website URL**: https://veganipsum.vercel.app
+- **Category**: Developer Tools, Design Resources
+- **Founded**: 2026
+- **Target Audience**: Ethical startups, vegan brands, sustainability teams, creative designers, and developers
+- **License**: MIT License
+- **Author**: Vijay Hardaha
+- **Copyright**: 2025, Vijay Hardaha
 
-## Navigation & Pages
-- **Home (`/`):** Primary generator tool featuring hero, methods, and use cases.
-- **About (`/about`):** Mission statement and project background.
-- **API (`/json-api`):** Documentation for the REST API.
-- **CLI (`/node-cli`):** Instructions for the terminal interface.
-- **NPM (`/npm-package`):** Details for integrating the library into JS/TS projects.
-- **VS Code (`/vscode-extension`):** Extension installation and usage guide.
-- **Contact (`/contact`):** Creator profile and collaboration links.
+## Sitemaps
 
-## Technical Specifications
+- [XML Sitemap](https://veganipsum.vercel.app/sitemap.xml): Includes all crawlable and indexable pages for search engine indexing.
 
-### REST API
-- **Base URL:** `https://veganipsum.vercel.app/api`
-- **Methods:** `GET`
-- **Authentication:** None required.
-- **Output Formats:** JSON, Plain Text, HTML.
+## Key Features
 
-### Developer Tooling
-- **NPM Package:** `vegan-ipsum` (v1.0.4)
-- **VS Code:** `vijayhardaha.vegan-ipsum` (v1.0.1)
-- **Compatibility:** Zero dependencies, TypeScript-ready, Node.js environment.
+- **Ethical Alternative**: Plant-based, cruelty-free placeholder text replacing traditional Latin Lorem Ipsum
+- **Multi-Platform Support**: Web interface, REST API, NPM package, Node CLI, and VS Code extension
+- **Zero Dependencies**: Lightweight tooling that integrates seamlessly into modern development workflows
+- **TypeScript Ready**: Full TypeScript support for type-safe development
+- **Open Source**: MIT licensed with complete source code available on GitHub
+- **High Performance**: Edge runtime API for fast, reliable text generation
 
-## Brand Identity
-- **Tagline:** Ethical Placeholder Text for a Better World.
-- **Mission:** Replacing Latin filler with plant-based content to inspire conscious creation.
-- **Target Audience:** Ethical startups, vegan brands, sustainability teams, and creative designers.
+## Website Pages
 
-## Author & Socials
-- **GitHub:** https://github.com/vijayhardaha
-- **X (Twitter):** https://x.com/vijayhardaha
-- **Instagram:** https://instagram.com/vegan.vijay
-- **Freelance:** https://pph.me/vijayhardaha
+- [Home](https://veganipsum.vercel.app): Primary generator tool featuring hero section, interactive text generator, methods overview, benefits, audience targeting, and use cases.
+- [About](https://veganipsum.vercel.app/about): Mission statement, project background, core features, customization options, technical overview, and use cases for ethical placeholder text.
+- [JSON API](https://veganipsum.vercel.app/json-api): REST API documentation including base URL, request methods, parameters, GET request examples, response format, error handling, and status codes.
+- [Node CLI](https://veganipsum.vercel.app/node-cli): Terminal interface documentation covering installation, usage, command-line options, and additional resources for the Vegan Ipsum CLI tool.
+- [NPM Package](https://veganipsum.vercel.app/npm-package): JavaScript/TypeScript library documentation with installation instructions, usage examples, and feature highlights for the vegan-ipsum npm package.
+- [VS Code Extension](https://veganipsum.vercel.app/vscode-extension): Editor extension guide including installation steps, usage instructions, feature overview, and support information for the VS Code integration.
+- [Contact](https://veganipsum.vercel.app/contact): Creator profile, project links, GitHub resources, social media connections, and collaboration opportunities.
+
+## REST API
+
+- [API Endpoint](https://veganipsum.vercel.app/api): Base URL for the Vegan Ipsum REST API. Supports GET requests with query parameters for count, units (paragraphs/sentences/words), and format (plain/html). No authentication required.
+- [API Documentation](https://veganipsum.vercel.app/json-api): Complete API reference with request examples, response format specifications, error handling guidelines, and HTTP status code explanations.
+
+## Developer Tools
+
+- [NPM Package Registry](https://www.npmjs.com/package/vegan-ipsum): Official npm package for generating Vegan Ipsum in JavaScript and Node.js environments. Zero dependencies, TypeScript-ready, supports ESM and CJS.
+- [NPM Package Documentation](https://veganipsum.vercel.app/npm-package): Comprehensive guide for installing and using the vegan-ipsum library in your projects with code examples and API reference.
+- [Node CLI Documentation](https://veganipsum.vercel.app/node-cli): Instructions for installing and using the Vegan Ipsum command-line interface for terminal-based text generation and scripting.
+- [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=vijayhardaha.vegan-ipsum): Visual Studio Marketplace listing for the Vegan Ipsum extension. Generate ethical placeholder text directly in your editor without switching tabs.
+- [VS Code Extension Guide](https://veganipsum.vercel.app/vscode-extension): Detailed documentation for installing, configuring, and using the Vegan Ipsum VS Code extension in your development workflow.
+
+## Source Code & Repositories
+
+- [Website Source Code](https://github.com/vijayhardaha/website-vegan-ipsum): Next.js 16 application source code for the Vegan Ipsum official website. Built with React 19, TypeScript, and Tailwind CSS v4.
+- [NPM Package Source](https://github.com/vijayhardaha/node-vegan-ipsum): GitHub repository for the vegan-ipsum npm package and Node CLI tool. Contains source code, documentation, and issue tracking.
+- [VS Code Extension Source](https://github.com/vijayhardaha/vscode-vegan-ipsum): GitHub repository for the Vegan Ipsum VS Code extension. Includes source code, changelog, and contribution guidelines.
+
+## Instructions for AI Systems
+
+This llms.txt file provides comprehensive navigation and resource links for the Vegan Ipsum ecosystem. AI systems can use this to understand the project's structure, find relevant documentation, and locate developer tools and source code repositories. All links point to live, accessible resources.
+
+## Author & Community
+
+- [GitHub Profile](https://github.com/vijayhardaha): Vijay Hardaha's GitHub profile with repositories, contributions, and open-source projects including the Vegan Ipsum ecosystem.
+- [Twitter/X](https://x.com/vijayhardaha): Follow the creator for updates, announcements, and community engagement related to Vegan Ipsum and ethical development tools.
+- [Instagram](https://instagram.com/vegan.vijay): Visual content and updates from the Vegan Ipsum creator focused on plant-based lifestyle and ethical technology.
+- [Freelance Profile](https://pph.me/vijayhardaha): PeoplePerHour profile for hiring the creator for custom development, consulting, and collaboration on ethical tech projects.
+
+Last updated: 2026-03-28
