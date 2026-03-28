@@ -15,6 +15,9 @@ const { createSitemapConfig } = require('@vijayhardaha/dev-config/next-sitemap')
 const siteDomain = 'https://veganipsum.vercel.app';
 
 /** @type {import('next-sitemap').IConfig} */
-const config = createSitemapConfig({ siteUrl: siteDomain, outDir: '/vercel/output/static' });
+const config = createSitemapConfig({
+  siteUrl: siteDomain,
+  outDir: process.env === 'production' ? '/vercel/output/static' : './public',
+});
 
 module.exports = config;
