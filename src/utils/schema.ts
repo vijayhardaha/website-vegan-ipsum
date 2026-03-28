@@ -38,8 +38,11 @@ export function globalSchema(): Record<string, unknown>[] {
     personSchema({ rootUrl }),
     organizationSchema(
       { rootUrl },
-      { name: SITE_CONFIG.organization.name, description: SITE_CONFIG.organization.description, foundingDate: '2025' }
+      { name: SITE_CONFIG.organization.name, description: SITE_CONFIG.organization.description, foundingDate: 2025 }
     ),
-    websiteSchema({ rootUrl }, { name: SITE_CONFIG.name, description: SITE_CONFIG.description }),
+    websiteSchema(
+      { rootUrl },
+      { name: SITE_CONFIG.name, alternateName: SITE_CONFIG.name, description: SITE_CONFIG.description }
+    ),
   ];
 }
