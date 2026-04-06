@@ -1,7 +1,21 @@
 {
   "name": "website-vegan-ipsum",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Official website for Vegan Ipsum — a compassion-forward placeholder text generator",
+  "license": "MIT",
+  "author": {
+    "name": "Vijay Hardaha",
+    "url": "https://github.com/vijayhardaha/"
+  },
+  "homepage": "https://github.com/vijayhardaha/website-vegan-ipsum.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijayhardaha/website-vegan-ipsum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vijayhardaha/website-vegan-ipsum/issues"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build && next-sitemap",
