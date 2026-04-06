@@ -1,4 +1,4 @@
-import { personSchema, organizationSchema, websiteSchema } from '@vijayhardaha/schema-builder';
+import { personSchema, organizationSchema, webSiteSchema } from '@vijayhardaha/schema-builder';
 
 import { SITE_CONFIG } from '@/constants/seo';
 import { siteUrl } from '@/utils/seo';
@@ -40,7 +40,7 @@ export function globalSchema(): Record<string, unknown>[] {
       { rootUrl },
       { name: SITE_CONFIG.organization.name, description: SITE_CONFIG.organization.description, foundingDate: 2025 }
     ),
-    websiteSchema(
+    webSiteSchema(
       { rootUrl },
       { name: SITE_CONFIG.name, alternateName: SITE_CONFIG.name, description: SITE_CONFIG.description }
     ),
