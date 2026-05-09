@@ -37,28 +37,36 @@ export default function IpsumGenerator(): JSX.Element {
 
   /**
    * Calculates the number of paragraphs in the generated text.
+   *
    * @param {string} text - The generated output text.
-   * @returns The paragraph count of the text.
+   *
+   * @returns {number} The paragraph count of the text.
    */
   const calculateParagraphs = (text: string): number => text.split('\n').filter((line) => line.trim() !== '').length;
 
   /**
    * Calculates the number of words in the generated text.
+   *
    * @param {string} text - The generated output text.
-   * @returns The word count of the text.
+   *
+   * @returns {number} The word count of the text.
    */
   const calculateWords = (text: string): number => text.split(/\s+/).filter((word) => word.trim() !== '').length;
 
   /**
    * Calculates the byte size of the generated text.
+   *
    * @param {string} text - The generated output text.
-   * @returns The byte size of the text.
+   *
+   * @returns {number} The byte size of the text.
    */
   const calculateBytes = (text: string): number => new TextEncoder().encode(text).length;
 
   /**
    * Calculates the summary of the generated output.
+   *
    * @param {string} text - The generated output text.
+   *
    * @returns {string} The summary message.
    */
   const getOutputSummary = (text: string): string =>

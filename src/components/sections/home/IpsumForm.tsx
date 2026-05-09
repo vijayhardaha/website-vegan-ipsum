@@ -23,6 +23,7 @@ type LoremType = 'paragraphs' | 'sentences' | 'words';
  * IpsumForm component for generating vegan ipsum text based on user input.
  *
  * @param {IpsumFormProps} props - The props for the component, including a function to set the generated output.
+ *
  * @returns {JSX.Element} The rendered component.
  */
 export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
@@ -79,15 +80,42 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
   );
 
   useEffect(() => {
-    // Call once on mount to generate initial ipsum.
-    void handleGenerate(selectedType, amount);
+    let cancelled = false;
 
-    // 6. CLEANUP FUNCTION
-    // This runs when the component unmounts.
+    const initGenerate = async () => {
+      const controller = new AbortController();
+      abortControllerRef.current = controller;
+      const signal = controller.signal;
+
+      try {
+        const response = await fetch(`/api?count=${Number(amount)}&units=${selectedType}&format=plain`, { signal });
+
+        if (!response.ok) {
+          throw new Error('Failed to generate text');
+        }
+
+        const data: { text: string } = await response.json();
+
+        if (!cancelled && !signal.aborted) {
+          setOutput(data.text);
+        }
+      } catch (error) {
+        if (error instanceof Error && error.name === 'AbortError') {
+          if (!cancelled) setOutput('Request cancelled.');
+          return;
+        }
+
+        console.error(error);
+        if (!cancelled) setOutput('Error generating text. Please try again.');
+      }
+    };
+
+    void initGenerate();
+
     return () => {
-      abortControllerRef.current?.abort(); // Abort any ongoing request when the component unmounts
-      abortControllerRef.current = null; // Clear the ref to prevent memory leaks
-      console.log('Component unmounted, ongoing request aborted if any.');
+      cancelled = true;
+      abortControllerRef.current?.abort();
+      abortControllerRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -95,7 +123,8 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
   /**
    * Handles the form submission event.
    * Prevents default behavior and triggers the text generation process.
-   * @param event - The form submission event
+   *
+   * @param {SubmitEvent<HTMLFormElement>} event - The form submission event
    */
   const handleSubmit = (event: SubmitEvent<HTMLFormElement>): void => {
     event.preventDefault();
