@@ -89,6 +89,7 @@ type ButtonProps = {
  * @param children - The content inside the button, which can be any valid ReactNode.
  * @param props - Additional props to be passed to the button element.
  * @param ref - A ref that will be forwarded to the button element.
+ *
  * @returns A styled button element or a child component with forwarded props and refs.
  */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -106,5 +107,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 // Set the display name for the Button component. This is useful for debugging and React DevTools.
 Button.displayName = 'Button';
 
-export { buttonVariants };
 export default Button;

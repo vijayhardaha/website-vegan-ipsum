@@ -42,6 +42,7 @@ const sizeClasses = {
  * Icon component for rendering SVG icons based on the provided name.
  *
  * @param {IconProps} props - The properties for the Icon component, including the name of the icon and additional SVG props.
+ *
  * @returns {JSX.Element} The rendered component.
  */
 export default function Icon({ name, className, size = undefined, ...props }: IconProps): JSX.Element {

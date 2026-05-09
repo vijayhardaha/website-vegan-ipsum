@@ -21,6 +21,7 @@ type AnyObject = Record<string, any>;
  * Determine whether a value is a plain object (not null and not an array).
  *
  * @param {AnyObject} value - Value to test.
+ *
  * @returns {value is AnyObject} True when the value is a plain object.
  *
  * @example
@@ -40,11 +41,12 @@ const isPlainObject = (value: AnyObject): value is AnyObject => {
  * - Plain nested objects are merged recursively.
  * - Primitive values from the source override the target.
  *
- * @template T - The target object type.
  * @param {T} target - The target object to merge into.
  * @param {AnyObject} source - The source object with values to merge.
+ *
  * @returns {T} A new object resulting from merging source into target.
  *
+ * @template T - The target object type.
  * @example
  * const base = { a: 1, nested: { x: 1 }, list: [1,2] };
  * const override = { b: 2, nested: { y: 2 }, list: [3] };
@@ -77,6 +79,7 @@ const mergeDeep = <T extends AnyObject>(target: T, source: AnyObject): T => {
  *
  * @param {string} title - The page-specific title.
  * @param {boolean} postfix - Whether to append the site name postfix.
+ *
  * @returns {string} The resulting SEO title, or the site default when title is empty.
  *
  * @example
@@ -92,10 +95,11 @@ const buildSeoTitle = (title: string = '', postfix: boolean): string => {
  * Generate a complete metadata object for SEO, Open Graph, and Twitter cards.
  *
  * @param {SeoProps} params - The parameters object containing optional title, description and slug.
- * @param {string} [params.title=""] - Page title to include in SEO metadata.
- * @param {string} [params.description=""] - Page description for SEO and social cards.
- * @param {string} [params.path=""] - URL slug to generate the canonical URL.
- * @returns A metadata object suitable for Next.js metadata and social sharing.
+ * @param {string} [params.title] - Page title to include in SEO metadata.
+ * @param {string} [params.description] - Page description for SEO and social cards.
+ * @param {string} [params.path] - URL slug to generate the canonical URL.
+ *
+ * @returns {Record<string, unknown>} A metadata object suitable for Next.js metadata and social sharing.
  *
  * @example
  * const meta = buildMetadata({ title: 'Recipes', description: 'Vegan recipes', slug: 'recipes' });

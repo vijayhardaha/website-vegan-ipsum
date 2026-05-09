@@ -21,6 +21,7 @@ export interface InfoBoxProps {
  * with built-in icon and optional label.
  *
  * @param {InfoBoxProps} props - Component properties
+ *
  * @returns {JSX.Element} - The rendered component
  */
 export default function InfoBox({ children, className = '' }: InfoBoxProps): JSX.Element {

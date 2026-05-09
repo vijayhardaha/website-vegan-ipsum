@@ -16,6 +16,7 @@ interface LayoutProps {
  * structure with a header, main content area, and footer.
  *
  * @param {ReactNode} children - React children elements to be rendered.
+ *
  * @returns	{JSX.Element} The rendered layout component with header, main content, and footer.
  */
 export default function Layout({ children }: LayoutProps): JSX.Element {

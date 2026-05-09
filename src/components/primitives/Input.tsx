@@ -14,6 +14,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  * Input component for text entry, file uploads, and other input types.
  *
  * @param {InputProps} props - Component props
+ *
  * @returns {JSX.Element} Input component
  */
 export default function Input({ className, type = 'text', ...props }: InputProps): JSX.Element {

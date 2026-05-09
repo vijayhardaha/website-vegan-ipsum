@@ -8,8 +8,9 @@ import { cn } from '@/utils/classnames';
 /**
  * Recursively extracts plain text from a React node tree.
  *
- * @param node - The React node to flatten into text.
- * @returns The concatenated text content.
+ * @param {ReactNode} node - The React node to flatten into text.
+ *
+ * @returns {string} The concatenated text content.
  */
 function extractTextContent(node: ReactNode): string {
   if (typeof node === 'string' || typeof node === 'number') {
@@ -34,8 +35,9 @@ function extractTextContent(node: ReactNode): string {
 /**
  * Builds a stable heading id from rendered heading content.
  *
- * @param node - The heading React node.
- * @returns A slug-like heading id, or `undefined` when no text is available.
+ * @param {ReactNode} node - The heading React node.
+ *
+ * @returns {string | undefined} A slug-like heading id, or `undefined` when no text is available.
  */
 function toHeadingId(node: ReactNode): string | undefined {
   const text = extractTextContent(node)
@@ -76,7 +78,8 @@ export interface SectionHeaderProps {
  * It is designed to provide a consistent layout and styling for section introductions throughout the application.
  *
  * @param {SectionHeaderProps} props - The properties for the SectionHeader component.
- * @return {JSX.Element} The rendered section header component.
+ *
+ * @returns {JSX.Element} The rendered section header component.
  */
 export default function SectionHeader({
   tagline,

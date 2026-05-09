@@ -60,6 +60,7 @@ export default function Header(): JSX.Element {
    * Determines if a given path is the active route.
    *
    * @param {string} path - The path to check against the current pathname.
+   *
    * @returns {boolean} `true` if the path matches the current pathname, otherwise `false`.
    */
   const isActive = (path: string): boolean => pathname === path;

@@ -17,6 +17,7 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  * providing consistent spacing and styling for different sections of the page.
  *
  * @param {SectionProps} props - The properties for the Section component, including children and className.
+ *
  * @returns {JSX.Element} The rendered component.
  */
 export default function Section({ children, className, ...props }: SectionProps): JSX.Element {

@@ -30,7 +30,7 @@ interface StyleProps {
  * Custom Prism style that overrides the default styles for code blocks and tokens.
  * This style is designed to match the design specifications for the code blocks in the project.
  */
-export const prismCustom = {
+const prismCustom = {
   ...style,
   // override container/pre styles
   'code[class*="language-"]': {
@@ -118,6 +118,7 @@ export const prismCustom = {
  * Reusable component for displaying code blocks with syntax highlighting.
  *
  * @param {CodeBlockProps} props - The props for the component.
+ *
  * @returns {JSX.Element} The CodeBlock component.
  */
 export default function CodeBlock({ label, children, className, ...props }: CodeBlockProps): JSX.Element {
@@ -137,7 +138,8 @@ export default function CodeBlock({ label, children, className, ...props }: Code
 
   /**
    * Handles copying the code block content to the clipboard and provides user feedback.
-   * @param text 	- The text content to be copied to the clipboard.
+   *
+   * @param {string} text - The text content to be copied to the clipboard.
    */
   const handleCopy = async (text: string): Promise<void> => {
     const canUseClipboard = typeof navigator !== 'undefined' && !!navigator.clipboard && window.isSecureContext;

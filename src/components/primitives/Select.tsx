@@ -31,6 +31,15 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
 /**
  * Select dropdown component matching the project's input/textarea styles.
  * Accepts an `options` array of `{ label, value }` and a controlled `value`.
+ *
+ * @param {SelectProps} props - The component props
+ * @param {string} [props.className] - Additional CSS classes for the select element
+ * @param {Options[]} [props.options] - Array of options to render
+ * @param {string} [props.value] - Controlled selected value
+ * @param {(value: string) => void} [props.onValueChange] - Callback that receives the selected value
+ * @param {ReactNode} [props.children] - Optional children (if not using options prop)
+ *
+ * @returns {JSX.Element} The rendered select component
  */
 export default function Select({
   className,

@@ -15,6 +15,7 @@ export interface BreadcrumbItem {
  *
  * @param {string} path - The page path (e.g., '/about').
  * @param {string} currentPage - The name of the current page.
+ *
  * @returns {BreadcrumbItem[]} Array of breadcrumb items.
  */
 export function buildBreadcrumbs(path: string, currentPage: string): BreadcrumbItem[] {
@@ -29,7 +30,7 @@ export function buildBreadcrumbs(path: string, currentPage: string): BreadcrumbI
  *
  * Includes Person, Organization, and WebSite schema.
  *
- * @returns {Array<AnyObject>} An array of schema objects for global use.
+ * @returns {Record<string, unknown>[]} An array of schema objects for global use.
  */
 export function globalSchema(): Record<string, unknown>[] {
   const rootUrl = siteUrl();

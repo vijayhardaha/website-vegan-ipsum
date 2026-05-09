@@ -21,6 +21,7 @@ interface PageHeaderProps {
  * A reusable page header component that displays a title and an optional subtitle.
  *
  * @param {PageHeaderProps} props - The props for the component.
+ *
  * @returns {JSX.Element} The rendered PageHeader component.
  */
 export default function PageHeader({ id, title, description, tags, children }: PageHeaderProps): JSX.Element {

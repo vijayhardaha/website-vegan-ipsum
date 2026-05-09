@@ -13,12 +13,12 @@ import '../styles/globals.css';
 /**
  * Sans font configuration for a clean and modern sans-serif font.
  */
-export const sansFont = Inter({ weight: ['400', '500', '600', '700'], variable: '--font-sans', subsets: ['latin'] });
+const sansFont = Inter({ weight: ['400', '500', '600', '700'], variable: '--font-sans', subsets: ['latin'] });
 
 /**
  * Mono font configuration for a clean monospaced font.
  */
-export const monoFont = Geist_Mono({
+const monoFont = Geist_Mono({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-mono',
@@ -29,7 +29,7 @@ export const monoFont = Geist_Mono({
 /**
  * Heading font configuration for an elegant serif font.
  */
-export const headingFont = Playfair_Display({
+const headingFont = Playfair_Display({
   weight: ['700', '900'],
   subsets: ['latin'],
   variable: '--font-heading',
@@ -46,6 +46,7 @@ export const metadata: Metadata = SITE_METADATA;
  * Root layout component that wraps the application.
  *
  * @param {ReactNode} children - React children elements to be rendered inside the layout.
+ *
  * @returns {JSX.Element} The root layout component with global styles and fonts applied.
  */
 export default function RootLayout({ children }: { children: ReactNode }): JSX.Element {

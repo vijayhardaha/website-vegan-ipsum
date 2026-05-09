@@ -14,6 +14,7 @@ interface ContainerProps {
  * A layout component that wraps its children in a container with consistent spacing.
  *
  * @param {ContainerProps} props - The props for the component.
+ *
  * @returns {JSX.Element} The rendered container component.
  */
 export default function Container({ children, className }: ContainerProps): JSX.Element {

@@ -24,6 +24,7 @@ const labelVariants = cva(
  * Label component for form elements with accessibility features
  *
  * @param {LabelProps} props - The properties for the Label component, including className, children, and htmlFor.
+ *
  * @returns {JSX.Element} The rendered component.
  */
 const Label = forwardRef<HTMLLabelElement, LabelProps>(

@@ -15,6 +15,7 @@ type LoremFormat = 'plain' | 'html';
  * @param {number} count - The number of units to generate (e.g., paragraphs, sentences, or words).
  * @param {LoremUnit} units - The type of units to generate ('paragraphs', 'sentences', or 'words').
  * @param {LoremFormat} format - The format of the output ('plain' or 'html').
+ *
  * @returns {NextResponse} A JSON response containing the generated text.
  */
 async function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): Promise<NextResponse> {
@@ -49,6 +50,7 @@ async function generateIpsum(count: number, units: LoremUnit, format: LoremForma
  * Handles GET requests to generate vegan ipsum text.
  *
  * @param {Request} request - The incoming HTTP request.
+ *
  * @returns {Promise<NextResponse>} A JSON response containing the generated text.
  */
 export async function GET(request: Request): Promise<NextResponse> {

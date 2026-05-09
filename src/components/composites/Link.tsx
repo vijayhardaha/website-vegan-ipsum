@@ -11,7 +11,8 @@ import { cn } from '@/utils/classnames';
  * Determines the type of link based on the href.
  *
  * @param {string} href - The link destination
- * @returns The link type: 'hash', 'internal', or 'external'
+ *
+ * @returns {'hash' | 'internal' | 'external'} The link type
  */
 const getLinkType = (href: string): 'hash' | 'internal' | 'external' => {
   if (href.startsWith('#')) return 'hash';
@@ -23,6 +24,8 @@ const getLinkType = (href: string): 'hash' | 'internal' | 'external' => {
  * Smoothly scrolls to an element with the given ID
  *
  * @param {string} elementId - The ID of the target element (without the # symbol)
+ *
+ * @returns {void}
  */
 const scrollToElement = (elementId: string): void => {
   const element = document.getElementById(elementId);
@@ -50,6 +53,14 @@ interface LinkProps extends Omit<ComponentPropsWithoutRef<typeof NextLink>, 'hre
  * - Hash links (#anchor) with smooth scroll behavior
  * - Internal links (/path) without external attributes
  * - External links (https://...) with proper security attributes
+ *
+ * @param {LinkProps} props - The component props
+ * @param {string} props.href - The destination URL or hash anchor
+ * @param {number} [props.scrollOffset] - Optional offset for hash links
+ * @param {boolean} [props.linkLine] - Whether to show external link icon
+ * @param {'none' | 'border' | 'background'} [props.hoverEffect] - Hover effect style
+ *
+ * @returns {JSX.Element} The rendered link component.
  */
 export default function Link({
   href,
@@ -73,6 +84,8 @@ export default function Link({
 
   /**
    * Handles click events for hash links
+   *
+   * @param {MouseEvent<HTMLAnchorElement>} e - The click event
    */
   const handleHashClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();

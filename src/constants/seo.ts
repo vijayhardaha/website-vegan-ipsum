@@ -23,7 +23,7 @@ export const SITE_CONFIG = {
 /**
  * The default metadata object used for SEO, Open Graph, and Twitter cards.
  */
-export const SEO_KEYWORDS = [
+const SEO_KEYWORDS = [
   'vegan ipsum',
   'veggie ipsum',
   'vegan ipsum generator',
@@ -48,7 +48,7 @@ export const SEO_KEYWORDS = [
 /**
  * Google Search Console verification code for the site
  */
-export const GOOGLE_SITE_VERIFICATION = '4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0';
+const GOOGLE_SITE_VERIFICATION = '4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0';
 export const GOOGLE_ANALYTICS_ID = 'G-XR1TK565WJ';
 
 /**
