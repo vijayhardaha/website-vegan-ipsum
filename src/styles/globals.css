@@ -60,7 +60,7 @@
 
 @theme inline {
   --font-sans: var(--font-sans);
-  --font-heading: var(--font-heading);
+  --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
 
   --color-primary-50: var(--primary-50);
@@ -120,7 +120,15 @@
   h2,
   h3,
   h4 {
-    @apply font-heading text-primary-solid leading-tight font-black;
+    @apply text-primary-solid font-sans leading-tight font-extrabold;
+    word-spacing: 0.075em;
+    letter-spacing: -0.028em;
+
+    em {
+      @apply font-serif font-medium italic;
+      word-spacing: -0.0675em;
+      letter-spacing: -0.018em;
+    }
   }
 
   h3,
