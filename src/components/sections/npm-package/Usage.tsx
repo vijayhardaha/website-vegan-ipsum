@@ -18,11 +18,11 @@ export default function Usage(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Library <span className="text-primary">Usage</span>
+              Library <em className="text-primary">Usage</em>
             </>
           }
           tagline="Programmatic Generation"
-          icon="code"
+          number={3}
         >
           <p>
             After installation, you can import <code>vegan-ipsum</code> into your{' '}

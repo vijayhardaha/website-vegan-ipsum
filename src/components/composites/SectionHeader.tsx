@@ -1,8 +1,6 @@
 import { Children, isValidElement } from 'react';
 import type { JSX, ReactNode } from 'react';
 
-import Icon from '@/components/primitives/Icon';
-import { type IconName } from '@/constants/icons';
 import { cn } from '@/utils/classnames';
 
 /**
@@ -13,22 +11,27 @@ import { cn } from '@/utils/classnames';
  * @returns {string} The concatenated text content.
  */
 function extractTextContent(node: ReactNode): string {
+  // Primitive types that can be directly converted to string
   if (typeof node === 'string' || typeof node === 'number') {
     return String(node);
   }
 
-  if (!node || typeof node === 'boolean') {
+  // Nullish or boolean values produce no text
+  if (node == null || typeof node === 'boolean') {
     return '';
   }
 
+  // Arrays — map each child recursively
   if (Array.isArray(node)) {
     return node.map(extractTextContent).join(' ');
   }
 
+  // React elements — recurse into their children
   if (isValidElement<{ children?: ReactNode }>(node)) {
     return extractTextContent(node.props.children);
   }
 
+  // Fallback for iterable containers
   return Children.toArray(node).map(extractTextContent).join(' ');
 }
 
@@ -58,8 +61,10 @@ export interface SectionHeaderProps {
   tagline?: ReactNode;
   /** The main heading text */
   heading: ReactNode;
-  /** Optional icon component to display before the tagline */
-  icon?: IconName;
+  /** Optional number displayed as "Rº NN" after the tagline. When omitted, the number suffix is hidden. */
+  number?: string | number;
+  /** Whether to show the decorative arrow line before the tagline. Defaults to `true`. */
+  arrow?: boolean;
   /** Additional CSS classes for the container */
   className?: string;
   /** Additional CSS classes for the tagline */
@@ -73,9 +78,8 @@ export interface SectionHeaderProps {
 }
 
 /**
- *
- * This component renders a section header with an optional tagline, heading, and content area.
- * It is designed to provide a consistent layout and styling for section introductions throughout the application.
+ * Renders a section header with an optional tagline, heading, and content area.
+ * Provides a consistent layout and styling for section introductions throughout the application.
  *
  * @param {SectionHeaderProps} props - The properties for the SectionHeader component.
  *
@@ -84,7 +88,8 @@ export interface SectionHeaderProps {
 export default function SectionHeader({
   tagline,
   heading,
-  icon = undefined,
+  number,
+  arrow = true,
   className,
   taglineClassName,
   headingClassName,
@@ -98,11 +103,14 @@ export default function SectionHeader({
       {tagline && (
         <p
           className={cn(
-            'text-primary mb-2 inline-flex items-center justify-center gap-1 text-xs font-bold tracking-wide uppercase',
+            'text-primary mb-2 inline-flex items-center gap-1 text-[11px] font-medium tracking-[.22em] uppercase',
+            'inline-flex items-center gap-3',
+            arrow && 'before:inline-block before:h-px before:w-[18px] before:bg-current before:content-[""]',
             taglineClassName
           )}
         >
-          {icon && <Icon name={icon as IconName} size={4} />} {tagline}
+          {tagline}
+          {number != null && <span className="ml-1">·&nbsp;&nbsp;Rº {String(number).padStart(2, '0')}</span>}
         </p>
       )}
 

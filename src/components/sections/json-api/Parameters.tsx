@@ -17,11 +17,11 @@ export default function Parameters(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Query <span className="text-primary">Parameters</span>
+              Query <em className="text-primary">Parameters</em>
             </>
           }
           tagline="Customization"
-          icon="sliders"
+          number={4}
         >
           <p>
             Customize the API output using the following request parameters. These options provide full control over the

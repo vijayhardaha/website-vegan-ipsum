@@ -22,11 +22,11 @@ export default function Installation(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Library <span className="text-primary">Installation</span>
+              Library <em className="text-primary">Installation</em>
             </>
           }
           tagline="Package Management"
-          icon="download"
+          number={2}
         >
           <p>
             Install <code>vegan-ipsum</code> using your preferred{' '}

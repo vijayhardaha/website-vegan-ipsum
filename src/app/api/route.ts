@@ -9,6 +9,38 @@ export const runtime = 'edge';
 type LoremUnit = 'paragraphs' | 'sentences' | 'words';
 type LoremFormat = 'plain' | 'html';
 
+const VALID_UNITS: LoremUnit[] = ['paragraphs', 'sentences', 'words'];
+
+/**
+ * Validates the count parameter.
+ *
+ * @param {number} count - The count value to validate.
+ *
+ * @returns {{ valid: true } | { valid: false; error: string }} Validation result.
+ */
+function validateCount(count: number): { valid: true } | { valid: false; error: string } {
+  if (isNaN(count) || count < 1 || count > 100) {
+    return { valid: false, error: 'Invalid count. Please provide a number between 1 and 100.' };
+  }
+
+  return { valid: true };
+}
+
+/**
+ * Validates the units parameter.
+ *
+ * @param {string} units - The unit type to validate.
+ *
+ * @returns {{ valid: true } | { valid: false; error: string }} Validation result.
+ */
+function validateUnits(units: string): { valid: true } | { valid: false; error: string } {
+  if (!VALID_UNITS.includes(units as LoremUnit)) {
+    return { valid: false, error: "Invalid units. Please use 'paragraphs', 'sentences', or 'words'." };
+  }
+
+  return { valid: true };
+}
+
 /**
  * Generates vegan ipsum text based on the provided parameters.
  *
@@ -16,19 +48,18 @@ type LoremFormat = 'plain' | 'html';
  * @param {LoremUnit} units - The type of units to generate ('paragraphs', 'sentences', or 'words').
  * @param {LoremFormat} format - The format of the output ('plain' or 'html').
  *
- * @returns {NextResponse} A JSON response containing the generated text.
+ * @returns {Promise<NextResponse>} A JSON response containing the generated text.
  */
 async function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): Promise<NextResponse> {
   try {
-    if (isNaN(count) || count < 1 || count > 100) {
-      return NextResponse.json({ error: 'Invalid count. Please provide a number between 1 and 100.' }, { status: 400 });
+    const countValidation = validateCount(count);
+    if (!countValidation.valid) {
+      return NextResponse.json({ error: countValidation.error }, { status: 400 });
     }
 
-    if (!['paragraphs', 'sentences', 'words'].includes(units)) {
-      return NextResponse.json(
-        { error: "Invalid units. Please use 'paragraphs', 'sentences', or 'words'." },
-        { status: 400 }
-      );
+    const unitsValidation = validateUnits(units);
+    if (!unitsValidation.valid) {
+      return NextResponse.json({ error: unitsValidation.error }, { status: 400 });
     }
 
     const { veganIpsum } = await import('vegan-ipsum');

@@ -16,7 +16,7 @@ const description =
 
 const pageTitle = (
   <>
-    Vegan Ipsum <span className="text-primary">Node CLI</span>
+    Vegan Ipsum <em className="text-primary">Node CLI</em>
   </>
 );
 const pageDescription =

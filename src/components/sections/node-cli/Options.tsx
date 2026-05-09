@@ -22,11 +22,11 @@ export default function Options(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Options & <span className="text-primary">Flags</span>
+              Options & <em className="text-primary">Flags</em>
             </>
           }
           tagline="CLI Parameters"
-          icon="toggleOn"
+          number={4}
         >
           <p>
             Customize your workflow using the following optional flags. These options allow you to modify the output

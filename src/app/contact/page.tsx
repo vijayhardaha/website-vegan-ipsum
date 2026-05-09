@@ -16,7 +16,7 @@ const description =
 
 const pageTitle = (
   <>
-    Connect with the Creator of a <span className="text-primary">Vegan Ipsum Ecosystem</span>
+    Connect with the Creator of a <em className="text-primary">Vegan Ipsum Ecosystem</em>
   </>
 );
 const pageDescription =

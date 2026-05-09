@@ -63,11 +63,11 @@ export default function Features(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Extension <span className="text-primary">Capabilities</span>
+              Extension <em className="text-primary">Capabilities</em>
             </>
           }
           tagline="Features"
-          icon="award"
+          number={4}
         >
           <p>
             The <strong>Vegan Ipsum VS Code Extension</strong> offers a robust set of features designed to streamline

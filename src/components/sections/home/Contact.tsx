@@ -26,11 +26,11 @@ export default function Contact(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Let&apos;s build something <span className="text-primary">meaningful together</span>
+              Let&apos;s build something <em className="text-primary">meaningful together</em>
             </>
           }
           tagline="Contact"
-          icon="handShake"
+          arrow={false}
           className="mx-auto max-w-xl text-center"
           headingClassName="mx-auto max-w-lg"
         >

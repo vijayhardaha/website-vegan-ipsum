@@ -22,11 +22,11 @@ export default function BaseUrl(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              API <span className="text-primary">Base URL</span>
+              API <em className="text-primary">Base URL</em>
             </>
           }
           tagline="Root Endpoint"
-          icon="link"
+          number={2}
         >
           <p className="mb-8">
             All API endpoints are relative to the following base URL. We strongly recommend using{' '}

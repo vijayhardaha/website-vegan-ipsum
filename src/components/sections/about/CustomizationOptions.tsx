@@ -22,11 +22,11 @@ export default function CustomizationOptions(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Customization <span className="text-primary">Options</span>
+              Customization <em className="text-primary">Options</em>
             </>
           }
           tagline="Settings"
-          icon="sliders"
+          number={4}
         >
           <p>
             Vegan Ipsum is designed with flexibility in mind, allowing users to tailor the output to meet the specific

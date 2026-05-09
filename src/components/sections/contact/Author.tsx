@@ -39,11 +39,11 @@ export default function Author(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Get In <span className="text-primary">Touch</span>
+              Get In <em className="text-primary">Touch</em>
             </>
           }
           tagline="Author Contact Links"
-          icon="user"
+          number={2}
         >
           <p>
             Connect directly with the creator of Vegan Ipsum to collaborate on new features, provide feedback, or

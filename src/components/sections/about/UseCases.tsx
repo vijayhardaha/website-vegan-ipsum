@@ -62,11 +62,11 @@ export default function UseCases(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Explore Real-World <span className="text-primary">Use Cases</span>
+              Explore Real-World <em className="text-primary">Use Cases</em>
             </>
           }
           tagline="Practicality"
-          icon="laptop"
+          number={6}
         >
           <p>
             From design mockups to educational applications, Vegan Ipsum integrates seamlessly into a wide range of

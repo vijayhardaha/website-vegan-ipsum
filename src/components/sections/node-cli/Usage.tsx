@@ -17,11 +17,11 @@ export default function Usage(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Basic <span className="text-primary">Usage</span>
+              Basic <em className="text-primary">Usage</em>
             </>
           }
           tagline="Command Structure"
-          icon="laptop"
+          number={3}
         >
           <p className="mb-8">
             The CLI features an intuitive syntax for rapid text generation. Simply specify the desired quantity followed

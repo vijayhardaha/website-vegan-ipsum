@@ -52,7 +52,15 @@ export default function UseCases(): JSX.Element {
   return (
     <Section id="when-to-use" aria-label="When to Use Vegan Ipsum?">
       <Container>
-        <SectionHeader heading="When to Use Vegan Ipsum?" tagline="Use Cases" icon="calendarCheck">
+        <SectionHeader
+          heading={
+            <>
+              When to Use <em>Vegan Ipsum?</em>
+            </>
+          }
+          tagline="Use Cases"
+          number={6}
+        >
           <p>
             Vegan Ipsum is the ideal filler text for wireframes, mockups, and live prototypes. Use it whenever you need
             placeholder content that reflects a compassionate and ethical design approach.

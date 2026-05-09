@@ -17,11 +17,11 @@ export default function Introduction(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Vegan Ipsum <span className="text-primary">CLI</span>
+              Vegan Ipsum <em className="text-primary">CLI</em>
             </>
           }
           tagline="Introduction"
-          icon="terminal"
+          number={1}
         >
           <p>
             The <strong>Vegan Ipsum CLI</strong> is a lightweight command-line utility built on{' '}

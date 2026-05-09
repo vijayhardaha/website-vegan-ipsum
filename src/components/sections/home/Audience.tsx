@@ -57,9 +57,13 @@ export default function Audience(): JSX.Element {
     >
       <Container>
         <SectionHeader
-          heading="Who Can Use Vegan Ipsum?"
+          heading={
+            <>
+              Who Can Use <em>Vegan Ipsum?</em>
+            </>
+          }
           tagline="Audience"
-          icon="users"
+          number={5}
           headingClassName="text-primary-foreground"
           taglineClassName="text-primary-muted/70"
         >

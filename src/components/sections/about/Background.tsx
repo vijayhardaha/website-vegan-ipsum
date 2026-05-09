@@ -19,11 +19,11 @@ export default function Background(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Background and <span className="text-primary">Inspiration</span>
+              Background and <em className="text-primary">Inspiration</em>
             </>
           }
           tagline="Origin Story"
-          icon="history"
+          number={2}
         >
           <p>
             The concept for Vegan Ipsum emerged from a desire to fill a niche that traditional Lorem Ipsum generators

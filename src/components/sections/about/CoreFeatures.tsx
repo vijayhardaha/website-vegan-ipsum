@@ -70,11 +70,11 @@ export default function CoreFeatures(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Core <span className="text-primary">Features</span>
+              Core <em className="text-primary">Features</em>
             </>
           }
           tagline="Ecosystem"
-          icon="cube"
+          number={3}
         >
           <p>
             Vegan Ipsum offers multiple integration methods designed to fit seamlessly into your development workflow.

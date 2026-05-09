@@ -24,7 +24,7 @@ const description =
 
 const pageTitle = (
   <>
-    The Mission Behind <span className="text-primary">Vegan Ipsum</span>
+    The Mission Behind <em className="text-primary">Vegan Ipsum</em>
   </>
 );
 const pageDescription =

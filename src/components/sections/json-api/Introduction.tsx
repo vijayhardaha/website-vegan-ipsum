@@ -17,11 +17,11 @@ export default function Introduction(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Vegan Ipsum <span className="text-primary">JSON API</span>
+              Vegan Ipsum <em className="text-primary">JSON API</em>
             </>
           }
           tagline="Introduction"
-          icon="cloud"
+          number={1}
         >
           <p>
             The <strong>Vegan Ipsum JSON API</strong> is a high-performance web service designed to help developers

@@ -17,11 +17,11 @@ export default function Support(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Support & <span className="text-primary">Feedback</span>
+              Support & <em className="text-primary">Feedback</em>
             </>
           }
           tagline="Found a Bug?"
-          icon="bug"
+          number={5}
         >
           <p>
             As an independently developed extension, user feedback is vital for prioritizing updates and resolving bugs.

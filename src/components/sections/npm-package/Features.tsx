@@ -69,11 +69,11 @@ export default function Features(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Why Choose <span className="text-primary">Vegan Ipsum?</span>
+              Why Choose <em className="text-primary">Vegan Ipsum?</em>
             </>
           }
           tagline="Features"
-          icon="award"
+          number={4}
         >
           <p>
             Vegan Ipsum is designed to be simple, fast, and flexible. Whether you&apos;re building web apps,{' '}

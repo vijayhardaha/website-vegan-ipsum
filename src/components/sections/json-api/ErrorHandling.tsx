@@ -18,11 +18,11 @@ export default function ErrorHandling(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Error <span className="text-primary">Handling</span>
+              Error <em className="text-primary">Handling</em>
             </>
           }
           tagline="Bad Request"
-          icon="exclamation"
+          number={7}
         >
           <p className="mb-8">
             If a request contains invalid parameters or values outside the allowed ranges, the API returns a{' '}

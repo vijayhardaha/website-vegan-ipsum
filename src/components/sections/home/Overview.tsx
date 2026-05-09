@@ -25,7 +25,15 @@ export default function Overview(): JSX.Element {
           <div>
             <Image src="/welcoming.svg" alt="Men welcoming you to Vegan Ipsum Generator" width={613} height={701} />
           </div>
-          <SectionHeader heading="What is Vegan Ipsum?" tagline="Overview" icon="questionCircle">
+          <SectionHeader
+            heading={
+              <>
+                What is <em className="text-primary">Vegan Ipsum?</em>
+              </>
+            }
+            tagline="Overview"
+            number={3}
+          >
             <p>
               The Vegan Ipsum Generator is a powerful, free tool designed for ethical web designers, developers, and
               content creators. It produces plant-based placeholder text for projects that prioritize cruelty-free and

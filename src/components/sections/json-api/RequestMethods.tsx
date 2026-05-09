@@ -21,11 +21,11 @@ export default function RequestMethods(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Request <span className="text-primary">Methods</span>
+              Request <em className="text-primary">Methods</em>
             </>
           }
           tagline="HTTP Protocol"
-          icon="exchange"
+          number={3}
         >
           <p>
             The Vegan Ipsum API supports standard{' '}

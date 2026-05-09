@@ -22,11 +22,11 @@ export default function ResponseFormat(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Response <span className="text-primary">Format</span>
+              Response <em className="text-primary">Format</em>
             </>
           }
           tagline="JSON Output"
-          icon="fileCode"
+          number={6}
         >
           <p className="mb-8">
             A successful API request returns a{' '}

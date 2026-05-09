@@ -89,7 +89,15 @@ export default function Methods(): JSX.Element {
   return (
     <Section id="methods" aria-label="Methods to Use Vegan Ipsum" className="bg-secondary-muted">
       <Container>
-        <SectionHeader heading="Use It Your Way" tagline="Methods" icon="route">
+        <SectionHeader
+          heading={
+            <>
+              Use It <em>Your Way</em>
+            </>
+          }
+          tagline="Methods"
+          number={2}
+        >
           <p>
             Instantly generate plant-based placeholder text tailored to your project requirements. Whether you prefer a
             simple web interface, a robust{' '}

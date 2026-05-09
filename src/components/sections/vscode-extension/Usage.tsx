@@ -18,11 +18,11 @@ export default function Usage(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              How to <span className="text-primary">Use</span>
+              How to <em className="text-primary">Use</em>
             </>
           }
           tagline="Usage"
-          icon="keyboard"
+          number={3}
         >
           <p>
             Once installed, generating vegan-themed placeholder text is an efficient process. You can trigger the

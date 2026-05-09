@@ -3,7 +3,7 @@ import type { JSX, ReactNode } from 'react';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
-import { Inter, Geist_Mono, Playfair_Display } from 'next/font/google';
+import { Inter_Tight, JetBrains_Mono, Playfair_Display } from 'next/font/google';
 
 import Layout from '@/components/layout/Layout';
 import { GOOGLE_ANALYTICS_ID, SITE_METADATA } from '@/constants/seo';
@@ -13,12 +13,18 @@ import '../styles/globals.css';
 /**
  * Sans font configuration for a clean and modern sans-serif font.
  */
-const sansFont = Inter({ weight: ['400', '500', '600', '700'], variable: '--font-sans', subsets: ['latin'] });
+const sansFont = Inter_Tight({
+  style: ['normal', 'italic'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-sans',
+  subsets: ['latin'],
+});
 
 /**
  * Mono font configuration for a clean monospaced font.
  */
-const monoFont = Geist_Mono({
+const monoFont = JetBrains_Mono({
+  style: ['normal'],
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-mono',
@@ -30,9 +36,10 @@ const monoFont = Geist_Mono({
  * Heading font configuration for an elegant serif font.
  */
 const headingFont = Playfair_Display({
-  weight: ['700', '900'],
+  style: ['normal', 'italic'],
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-heading',
+  variable: '--font-serif',
   display: 'swap',
   preload: true,
 });

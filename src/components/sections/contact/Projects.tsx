@@ -90,11 +90,11 @@ export default function Projects(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Vegan Ipsum <span className="text-primary">Ecosystem/Projects</span>
+              Vegan Ipsum <em className="text-primary">Ecosystem/Projects</em>
             </>
           }
           tagline="Open Source & Tooling"
-          icon="cube"
+          number={1}
         >
           <p>
             Explore the ecosystem of Vegan Ipsum projects that power this ethical, plant-based placeholder text

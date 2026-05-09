@@ -17,11 +17,11 @@ export default function Introduction(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Vegan Ipsum <span className="text-primary">VS Code Extension</span>
+              Vegan Ipsum <em className="text-primary">VS Code Extension</em>
             </>
           }
           tagline="Overview"
-          icon="externalLink"
+          number={1}
         >
           <p>
             The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight, productivity-focused tool designed for

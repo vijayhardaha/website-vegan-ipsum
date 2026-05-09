@@ -1,6 +1,7 @@
 'use client';
 
 import type { MouseEvent, ComponentPropsWithoutRef, JSX } from 'react';
+import { useCallback } from 'react';
 
 import NextLink from 'next/link';
 
@@ -21,16 +22,65 @@ const getLinkType = (href: string): 'hash' | 'internal' | 'external' => {
 };
 
 /**
- * Smoothly scrolls to an element with the given ID
+ * Scrolls the viewport to an element with the given ID, optionally applying a vertical offset.
  *
- * @param {string} elementId - The ID of the target element (without the # symbol)
- *
- * @returns {void}
+ * @param {string} elementId - The ID of the target element (without the # symbol).
+ * @param {number} [scrollOffset] - Optional pixel offset from the top (useful for fixed headers).
  */
-const scrollToElement = (elementId: string): void => {
+function scrollToElement(elementId: string, scrollOffset?: number): void {
   const element = document.getElementById(elementId);
-  element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-};
+  if (!element) return;
+
+  if (scrollOffset !== undefined) {
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - scrollOffset;
+    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+  } else {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+/**
+ * Builds Tailwind class arrays for the link's hover effect.
+ *
+ * @param {'none' | 'border' | 'background'} hoverEffect - The desired hover effect style.
+ *
+ * @returns {{ linkClasses: string[] }} Object containing the assembled class array.
+ */
+function buildLinkClasses(hoverEffect: 'none' | 'border' | 'background'): string[] {
+  const baseClasses = ['relative', 'transition-colors duration-200'];
+
+  switch (hoverEffect) {
+    case 'background': {
+      return [
+        ...baseClasses,
+        'border-b-2 border-current',
+        'after:absolute after:left-0 after:bottom-0 after:h-full after:w-full',
+        'after:origin-bottom after:scale-y-0',
+        'after:bg-secondary-muted',
+        'after:transition-transform after:duration-300',
+        'hover:after:scale-y-100',
+        'after:-z-10',
+        'hover:text-amber-600',
+      ];
+    }
+    case 'border': {
+      return [
+        ...baseClasses,
+        'after:absolute after:left-0 after:-bottom-0',
+        'after:block after:h-0.5 after:w-full',
+        'after:origin-left after:scale-x-0',
+        'after:bg-current',
+        'after:transition-transform after:duration-300',
+        'hover:after:scale-x-100',
+      ];
+    }
+    default: {
+      // 'none' — no decorative effect
+      return baseClasses;
+    }
+  }
+}
 
 /**
  * Props for the Link component
@@ -87,66 +137,17 @@ export default function Link({
    *
    * @param {MouseEvent<HTMLAnchorElement>} e - The click event
    */
-  const handleHashClick = (e: MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const elementId = href.replace('#', '');
+  const handleHashClick = useCallback(
+    (e: MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      const elementId = href.replace('#', '');
+      scrollToElement(elementId, scrollOffset);
+      onClick?.(e);
+    },
+    [href, scrollOffset, onClick]
+  );
 
-    if (scrollOffset !== undefined) {
-      // Custom scroll with offset
-      const element = document.getElementById(elementId);
-      if (element) {
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - scrollOffset;
-
-        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-      }
-    } else {
-      // Default smooth scroll
-      scrollToElement(elementId);
-    }
-
-    // Call custom onClick if provided
-    onClick?.(e);
-  };
-
-  // Build classes based on hoverEffect union: 'none' | 'border' | 'bg' (default 'bg')
-  const baseClasses = ['relative', 'transition-colors duration-200'];
-  let effectClasses: string[] = [];
-  let defaultLinkClasses = '';
-  let hoverTextClass = '';
-
-  if (hoverEffect === 'background') {
-    // default bottom border plus black overlay filling from bottom to top on hover
-    defaultLinkClasses = 'border-b-2 border-current';
-    effectClasses = [
-      'after:absolute after:left-0 after:bottom-0 after:h-full after:w-full',
-      'after:origin-bottom after:scale-y-0',
-      'after:bg-secondary-muted',
-      'after:transition-transform after:duration-300',
-      'hover:after:scale-y-100',
-      'after:-z-10',
-    ];
-    hoverTextClass = 'hover:text-amber-600';
-  } else if (hoverEffect === 'border') {
-    // no default border; show left-to-right border animation on hover
-    defaultLinkClasses = '';
-    effectClasses = [
-      'after:absolute after:left-0 after:-bottom-0',
-      'after:block after:h-0.5 after:w-full',
-      'after:origin-left after:scale-x-0',
-      'after:bg-current',
-      'after:transition-transform after:duration-300',
-      'hover:after:scale-x-100',
-    ];
-    hoverTextClass = '';
-  } else {
-    // 'none' - no decorative effect
-    defaultLinkClasses = '';
-    effectClasses = [];
-    hoverTextClass = '';
-  }
-
-  const linkClasses = [...baseClasses, defaultLinkClasses, ...effectClasses, hoverTextClass];
+  const linkClasses = buildLinkClasses(hoverEffect);
 
   // Hash link with smooth scroll
   if (linkType === 'hash') {

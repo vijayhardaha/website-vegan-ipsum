@@ -17,11 +17,11 @@ export default function Resources(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Tips, Best Practices & <span className="text-primary">Resources</span>
+              Tips, Best Practices & <em className="text-primary">Resources</em>
             </>
           }
           tagline="Workflow Optimization"
-          icon="lightBulb"
+          number={5}
         >
           <p>
             Optimize your development workflow by leveraging the full potential of the Vegan Ipsum CLI. The strategies

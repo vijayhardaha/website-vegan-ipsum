@@ -10,6 +10,7 @@ import Button from '@/components/primitives/Button';
 import Container from '@/components/primitives/Container';
 import IpsumForm from '@/components/sections/home/IpsumForm';
 import { cn } from '@/utils/classnames';
+import { calculateParagraphs, getOutputSummary } from '@/utils/text-stats';
 
 /**
  * IpsumGenerator component for displaying the main introduction and call-to-action buttons.
@@ -35,54 +36,17 @@ export default function IpsumGenerator(): JSX.Element {
     );
   };
 
-  /**
-   * Calculates the number of paragraphs in the generated text.
-   *
-   * @param {string} text - The generated output text.
-   *
-   * @returns {number} The paragraph count of the text.
-   */
-  const calculateParagraphs = (text: string): number => text.split('\n').filter((line) => line.trim() !== '').length;
-
-  /**
-   * Calculates the number of words in the generated text.
-   *
-   * @param {string} text - The generated output text.
-   *
-   * @returns {number} The word count of the text.
-   */
-  const calculateWords = (text: string): number => text.split(/\s+/).filter((word) => word.trim() !== '').length;
-
-  /**
-   * Calculates the byte size of the generated text.
-   *
-   * @param {string} text - The generated output text.
-   *
-   * @returns {number} The byte size of the text.
-   */
-  const calculateBytes = (text: string): number => new TextEncoder().encode(text).length;
-
-  /**
-   * Calculates the summary of the generated output.
-   *
-   * @param {string} text - The generated output text.
-   *
-   * @returns {string} The summary message.
-   */
-  const getOutputSummary = (text: string): string =>
-    `${calculateParagraphs(text)} paragraphs • ${calculateWords(text)} words • ${calculateBytes(text)} bytes`;
-
   return (
     <Section id="generate-vegan-ipsum" aria-label="Online Vegan Ipsum Generator Tool">
       <Container>
         <SectionHeader
           heading={
             <>
-              Generate <span className="text-primary">Vegan Ipsum</span>
+              Generate <em className="text-primary">Vegan Ipsum</em>
             </>
           }
           tagline="Generator"
-          icon="leaf"
+          number={1}
         >
           <p>
             Instantly generate custom, plant-based placeholder text for your mockups and prototypes. Choose your
@@ -105,10 +69,10 @@ export default function IpsumGenerator(): JSX.Element {
               <div className="mt-8 space-y-4" data-nosnippet>
                 <div className="flex items-start justify-between gap-12">
                   <div className="space-y-0.5">
-                    <h2 id="output" className="mb-1 text-xl font-bold">
+                    <h2 id="output" className="mb-1 text-xl font-semibold">
                       Output:
                     </h2>
-                    <p className="text-muted-foreground text-xs font-semibold">{getOutputSummary(output)}</p>
+                    <p className="text-muted-foreground font-mono text-xs font-medium">{getOutputSummary(output)}</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <Button
@@ -125,7 +89,7 @@ export default function IpsumGenerator(): JSX.Element {
 
                 <div
                   className={cn(
-                    'bg-input/20 border-border space-y-4 rounded-3xl border p-6',
+                    'bg-input/20 border-border space-y-4 rounded-3xl border p-6 font-mono text-sm',
                     calculateParagraphs(output) > 4 && 'max-h-96 overflow-y-auto'
                   )}
                   aria-live="polite"

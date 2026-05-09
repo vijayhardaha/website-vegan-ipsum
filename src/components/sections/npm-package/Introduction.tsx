@@ -17,11 +17,11 @@ export default function Introduction(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Vegan Ipsum <span className="text-primary">JavaScript Library</span>
+              Vegan Ipsum <em className="text-primary">JavaScript Library</em>
             </>
           }
           tagline="Introduction"
-          icon="jsSquare"
+          number={1}
         >
           <p>
             <Link

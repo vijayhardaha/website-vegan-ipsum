@@ -23,11 +23,11 @@ export default function Installation(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              Extension <span className="text-primary">Setup Guide</span>
+              Extension <em className="text-primary">Setup Guide</em>
             </>
           }
           tagline="Installation"
-          icon="download"
+          number={2}
         >
           <p>
             You can integrate the{' '}

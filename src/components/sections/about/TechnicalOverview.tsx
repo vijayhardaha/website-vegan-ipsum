@@ -21,11 +21,11 @@ export default function TechnicalOverview(): JSX.Element {
           <SectionHeader
             heading={
               <>
-                Technical <span className="text-primary">Overview</span>
+                Technical <em className="text-primary">Overview</em>
               </>
             }
             tagline="Architecture"
-            icon="cogs"
+            number={5}
           >
             <p>
               Built with modern web standards and best practices to ensure reliability, performance, and long-term
@@ -99,7 +99,7 @@ export default function TechnicalOverview(): JSX.Element {
                     className="bg-secondary/15 border-secondary/15 rounded-3xl border px-4 py-3 backdrop-blur-md"
                   >
                     <p className="text-secondary mb-1.5 text-sm">{item.text1}</p>
-                    <p className="font-heading text-secondary-dark text-lg font-bold">{item.text2}</p>
+                    <p className="text-secondary-dark font-serif text-lg font-bold">{item.text2}</p>
                   </div>
                 ))}
               </div>

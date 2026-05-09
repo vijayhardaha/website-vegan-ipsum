@@ -22,11 +22,11 @@ export default function Installation(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              CLI <span className="text-primary">Installation</span>
+              CLI <em className="text-primary">Installation</em>
             </>
           }
           tagline="Global Setup"
-          icon="download"
+          number={2}
         >
           <p className="mb-8">
             Install <code>vegan-ipsum</code> globally to access the command-line interface from any directory. This

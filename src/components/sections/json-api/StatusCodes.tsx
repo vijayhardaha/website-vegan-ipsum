@@ -22,11 +22,11 @@ export default function StatusCodes(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              HTTP Status <span className="text-primary">Codes</span>
+              HTTP <em className="text-primary">Status Codes</em>
             </>
           }
           tagline="Status Codes"
-          icon="checkCircle"
+          number={8}
         >
           <p className="mb-8">
             The API utilizes standard{' '}

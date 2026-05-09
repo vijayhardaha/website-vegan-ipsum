@@ -25,7 +25,7 @@ const description =
 
 const pageTitle = (
   <>
-    Fetch Ethical placeholder text via the <span className="text-primary">Vegan Ipsum API</span>
+    Fetch Ethical placeholder text via the <em className="text-primary">Vegan Ipsum API</em>
   </>
 );
 const pageDescription =

@@ -6,6 +6,8 @@ import Button from '@/components/primitives/Button';
 import Input from '@/components/primitives/Input';
 import Label from '@/components/primitives/Label';
 import Select from '@/components/primitives/Select';
+import { fetchIpsum } from '@/utils/ipsum';
+import type { LoremType } from '@/utils/ipsum';
 
 /**
  * Props for the IpsumForm component.
@@ -15,9 +17,23 @@ interface IpsumFormProps {
 }
 
 /**
- * Type definition for the different types of units that can be generated (paragraphs, sentences, or words).
+ * Ensures a fetch error message is set on output only when the component isn't cancelled.
+ *
+ * @param {boolean} cancelled - Whether the effect has been cleaned up.
+ * @param {(output: string) => void} setOutput - Output setter.
+ * @param {unknown} error - The caught error.
  */
-type LoremType = 'paragraphs' | 'sentences' | 'words';
+function handleFetchError(cancelled: boolean, setOutput: (output: string) => void, error: unknown): void {
+  if (cancelled) return;
+
+  if (error instanceof Error && error.name === 'AbortError') {
+    setOutput('Request cancelled.');
+    return;
+  }
+
+  console.error(error);
+  setOutput('Error generating text. Please try again.');
+}
 
 /**
  * IpsumForm component for generating vegan ipsum text based on user input.
@@ -51,27 +67,14 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
       setLoading(true); // Set loading state
 
       try {
-        const response = await fetch(`/api?count=${Number(amount)}&units=${type}&format=plain`, { signal });
-
-        if (!response.ok) {
-          throw new Error('Failed to generate text');
-        }
-
-        const data: { text: string } = await response.json();
+        const text = await fetchIpsum(type, amount, signal);
 
         // Only update state if this specific request wasn't aborted
         if (!signal.aborted) {
-          setOutput(data.text);
+          setOutput(text);
         }
       } catch (error) {
-        if (error instanceof Error && error.name === 'AbortError') {
-          console.log('Request successfully stopped by user');
-          setOutput('Request cancelled.'); // Optional: Show cancellation message
-          return;
-        }
-
-        console.error(error);
-        setOutput('Error generating text. Please try again.');
+        handleFetchError(false, setOutput, error);
       } finally {
         setLoading(false);
       }
@@ -88,25 +91,13 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
       const signal = controller.signal;
 
       try {
-        const response = await fetch(`/api?count=${Number(amount)}&units=${selectedType}&format=plain`, { signal });
-
-        if (!response.ok) {
-          throw new Error('Failed to generate text');
-        }
-
-        const data: { text: string } = await response.json();
+        const text = await fetchIpsum(selectedType, amount, signal);
 
         if (!cancelled && !signal.aborted) {
-          setOutput(data.text);
+          setOutput(text);
         }
       } catch (error) {
-        if (error instanceof Error && error.name === 'AbortError') {
-          if (!cancelled) setOutput('Request cancelled.');
-          return;
-        }
-
-        console.error(error);
-        if (!cancelled) setOutput('Error generating text. Please try again.');
+        handleFetchError(cancelled, setOutput, error);
       }
     };
 

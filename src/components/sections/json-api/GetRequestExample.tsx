@@ -25,11 +25,11 @@ export default function GetRequestExample(): JSX.Element {
         <SectionHeader
           heading={
             <>
-              GET Request <span className="text-primary">Example</span>
+              GET Request <em className="text-primary">Example</em>
             </>
           }
           tagline="Query Strings"
-          icon="terminal"
+          number={5}
         >
           <p className="mb-8">
             When using <code>GET</code> requests, parameters are appended to the URL as query strings. The following

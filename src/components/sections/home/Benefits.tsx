@@ -18,7 +18,15 @@ export default function Benefits(): JSX.Element {
       className="bg-secondary-muted"
     >
       <Container>
-        <SectionHeader heading="Why Choose Vegan Ipsum?" tagline="Benefits" icon="checkCircle">
+        <SectionHeader
+          heading={
+            <>
+              Why Choose <em>Vegan Ipsum?</em>
+            </>
+          }
+          tagline="Benefits"
+          number={4}
+        >
           <p>
             The Vegan Ipsum Generator provides a purposeful alternative to generic filler text by reflecting ethical,
             cruelty-free, and sustainable design principles. This tool elevates your projects with plant-based themes
@@ -28,7 +36,7 @@ export default function Benefits(): JSX.Element {
 
           <h3 className="text-lg">Key Benefits:</h3>
 
-          <ul className="list-disc space-y-4 pl-8">
+          <ul className="list-disc space-y-2 pl-8">
             {[
               {
                 title: 'Authentic Brand Alignment',
@@ -51,9 +59,9 @@ export default function Benefits(): JSX.Element {
                 text: 'Engages eco-conscious communities through consistent plant-based themes in your mockups and prototypes.',
               },
             ].map((list, index) => (
-              <li key={index} className="mb-4">
+              <li key={index}>
                 <span>
-                  <strong className="text-primary-dark font-bold">{list.title}</strong>: {list.text}
+                  <strong className="text-primary-dark font-semibold">{list.title}</strong>: {list.text}
                 </span>
               </li>
             ))}
