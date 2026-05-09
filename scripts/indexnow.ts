@@ -24,6 +24,54 @@ const SITEMAP_PATH = path.resolve(process.cwd(), 'public', 'sitemap-0.xml');
 const CHUNK_SIZE = 100;
 
 /**
+ * Reads the sitemap file from disk.
+ *
+ * @param {string} sitemapPath - Absolute path to the sitemap XML file.
+ *
+ * @returns {Promise<string>} The raw sitemap XML content.
+ */
+async function readSitemapFile(sitemapPath: string): Promise<string> {
+  return await fs.readFile(sitemapPath, 'utf8');
+}
+
+/**
+ * Parses a sitemap XML string into an array of URL strings.
+ *
+ * @param {string} xmlContent - The raw sitemap XML content.
+ *
+ * @returns {string[]} Extracted URL strings from the sitemap.
+ */
+async function parseSitemapUrls(xmlContent: string): Promise<string[]> {
+  const parsed: { urlset?: { url?: Array<{ loc?: string[] }> } } = await xml2js.parseStringPromise(xmlContent);
+
+  const urls = parsed.urlset?.url?.map((entry) => entry.loc?.[0]).filter(Boolean) as string[] | undefined;
+
+  return urls ?? [];
+}
+
+/**
+ * Submits a chunk of URLs to the IndexNow API.
+ *
+ * @param {string[]} urlChunk - Array of URLs to submit.
+ *
+ * @returns {Promise<{ ok: boolean; message: string }>} Result of the submission.
+ */
+async function submitIndexNowChunk(urlChunk: string[]): Promise<{ ok: boolean; message: string }> {
+  const response = await fetch('https://api.indexnow.org/indexnow', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ host: new URL(SITE_URL).host, key: KEY, keyLocation: KEY_LOCATION, urlList: urlChunk }),
+  });
+
+  if (response.ok) {
+    return { ok: true, message: `Submitted ${urlChunk.length} URLs` };
+  }
+
+  const errorText = await response.text();
+  return { ok: false, message: `Failed: ${errorText}` };
+}
+
+/**
  * Submits sitemap URLs to IndexNow in chunks for faster search engine indexing.
  *
  * @returns {Promise<void>} Resolves when all URL chunks have been processed.
@@ -34,28 +82,22 @@ async function main(): Promise<void> {
   // Read the sitemap file produced by the site build.
   let sitemapContent: string;
   try {
-    sitemapContent = await fs.readFile(SITEMAP_PATH, 'utf8');
+    sitemapContent = await readSitemapFile(SITEMAP_PATH);
   } catch {
-    // If sitemap is missing, fail early with an explanatory message.
     spinner.fail('Sitemap file not found: ' + SITEMAP_PATH);
     process.exit(1);
   }
 
-  // Parse the sitemap XML into a JS object structure.
-  let parsed: { urlset?: { url?: Array<{ loc?: string[] }> } };
+  // Parse the sitemap XML into a list of URLs.
+  let urls: string[];
   try {
-    parsed = await xml2js.parseStringPromise(sitemapContent);
+    urls = await parseSitemapUrls(sitemapContent);
   } catch {
-    // Parsing failure likely indicates a malformed sitemap file.
     spinner.fail('Failed to parse sitemap XML');
     process.exit(1);
   }
 
-  // Extract URL strings from the parsed sitemap entries.
-  const urls = parsed.urlset?.url?.map((entry) => entry.loc?.[0]).filter(Boolean) as string[] | undefined;
-
-  if (!urls || urls.length === 0) {
-    // Nothing to submit — exit gracefully.
+  if (urls.length === 0) {
     spinner.warn('No URLs found in sitemap');
     process.exit(0);
   }
@@ -67,24 +109,12 @@ async function main(): Promise<void> {
     const chunk = urls.slice(i, i + CHUNK_SIZE);
     spinner.start('Submitting URLs ' + (i + 1) + ' to ' + Math.min(i + CHUNK_SIZE, urls.length));
 
-    try {
-      // POST to IndexNow with the required payload fields.
-      const response = await fetch('https://api.indexnow.org/indexnow', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ host: new URL(SITE_URL).host, key: KEY, keyLocation: KEY_LOCATION, urlList: chunk }),
-      });
+    const result = await submitIndexNowChunk(chunk);
 
-      if (response.ok) {
-        spinner.succeed('Submitted ' + chunk.length + ' URLs');
-      } else {
-        // Capture server error text to aid debugging.
-        const errorText = await response.text();
-        spinner.fail('Failed: ' + errorText);
-      }
-    } catch (error) {
-      // Network or runtime error — report and continue with remaining chunks.
-      spinner.fail('Network error: ' + (error as Error).message);
+    if (result.ok) {
+      spinner.succeed(result.message);
+    } else {
+      spinner.fail(result.message);
     }
   }
 
