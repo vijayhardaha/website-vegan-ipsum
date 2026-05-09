@@ -106,9 +106,11 @@ export default function Header(): JSX.Element {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className={cn('inline-flex items-center text-sm font-semibold', 'hover:text-primary', {
-                        'text-primary font-bold decoration-current': isActive(link.href),
-                      })}
+                      className={cn(
+                        'inline-flex items-center text-xs font-semibold tracking-wide uppercase',
+                        'hover:text-primary',
+                        { 'text-primary decoration-current': isActive(link.href) }
+                      )}
                       aria-label={link.label}
                       aria-current={isActive(link.href) ? 'page' : undefined}
                       onClick={() => setIsMobileMenuOpen(false)}
