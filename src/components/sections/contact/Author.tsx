@@ -8,7 +8,13 @@ import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
- * Represents a link with an href and display text.
+ * Social media link item for author contact section.
+ *
+ * @type {SocialLink}
+ * @property {IconName} icon - Icon for the social platform
+ * @property {string} href - URL to the social profile
+ * @property {string} platform - Platform name (e.g., GitHub, Twitter)
+ * @property {string} handle - User handle on the platform
  */
 type SocialLink = { icon: IconName; href: string; platform: string; handle: string };
 

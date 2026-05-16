@@ -3,8 +3,12 @@ import { type ChangeEvent, type JSX, type ReactNode, type SelectHTMLAttributes }
 import { cn } from '@/utils/classnames';
 
 /**
- * Defines the shape of an option item for the Select component,
- * including a label, value, and optional disabled state.
+ * Option item for the Select component.
+ *
+ * @type {Options}
+ * @property {string} label - Option display label
+ * @property {string} value - Option underlying value
+ * @property {boolean} [disabled] - Whether option is disabled
  */
 interface Options {
   label: string;
@@ -13,18 +17,20 @@ interface Options {
 }
 
 /**
- * Props for the Select component, extending standard select attributes and adding custom options and value handling.
+ * Props for the Select component.
+ *
+ * @type {SelectProps}
+ * @property {string} [className] - Additional CSS classes for the select element
+ * @property {Options[]} [options] - Array of options to render (label/value pairs). If omitted, children are rendered.
+ * @property {string} [value] - Controlled selected value
+ * @property {(value: string) => void} [onValueChange] - Callback that receives the selected value
+ * @property {ReactNode} [children] - Optional children (if not using options prop)
  */
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  /** Additional CSS classes for the select element. */
   className?: string;
-  /** Array of options to render (label/value pairs). If omitted, children are rendered. */
   options?: Options[];
-  /** Controlled selected value */
   value?: string;
-  /** Callback that receives the selected value */
   onValueChange?: (value: string) => void;
-  /** Optional children (if not using options prop) */
   children?: ReactNode;
 }
 

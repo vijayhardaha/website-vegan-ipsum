@@ -68,7 +68,14 @@ const buttonVariants = cva(
 );
 
 /**
- * Button component with various styles and sizes.
+ * Button component props.
+ *
+ * @type {ButtonProps}
+ * @property {string} [className] - Additional CSS classes
+ * @property {'primary' | 'primary-outline' | 'secondary' | 'secondary-outline' | 'white' | 'white-outline' | 'link'} [variant] - Button style variant
+ * @property {'md' | 'sm' | 'lg' | 'xl' | 'icon'} [size] - Button size
+ * @property {boolean} [asChild] - If true, renders as child component using Slot
+ * @property {ReactNode} children - Allow any valid ReactNode (string, ReactElement, etc.)
  */
 type ButtonProps = {
   className?: string;

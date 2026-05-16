@@ -83,16 +83,18 @@ function buildLinkClasses(hoverEffect: 'none' | 'border' | 'background'): string
 }
 
 /**
- * Props for the Link component
+ * Props for the Link component.
+ *
+ * @type {LinkProps}
+ * @property {string} href - The destination URL or hash anchor
+ * @property {number} [scrollOffset] - Optional offset for hash links (useful for fixed headers)
+ * @property {boolean} [linkLine] - Optional prop to control external link icon display
+ * @property {'none' | 'border' | 'background'} [hoverEffect] - Optional prop to control hover effect style
  */
 interface LinkProps extends Omit<ComponentPropsWithoutRef<typeof NextLink>, 'href'> {
-  /** The destination URL or hash anchor */
   href: string;
-  /** Optional offset for hash links (useful for fixed headers) */
   scrollOffset?: number;
-  /* Optional prop to control external link icon display */
   linkLine?: boolean;
-  /* Optional prop to control hover effect style: 'none' | 'border' | 'background' */
   hoverEffect?: 'none' | 'border' | 'background';
 }
 

@@ -4,6 +4,10 @@ import { cn } from '@/utils/classnames';
 
 /**
  * Props for the Container component.
+ *
+ * @type {ContainerProps}
+ * @property {ReactNode} children - Children to wrap in the container
+ * @property {string} [className] - Additional CSS classes
  */
 interface ContainerProps {
   children: ReactNode;

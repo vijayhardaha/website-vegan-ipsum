@@ -5,12 +5,14 @@ import { RiFileList2Line } from 'react-icons/ri';
 import { cn } from '@/utils/classnames';
 
 /**
- * Props definition for InfoBox component
+ * Props for the InfoBox component.
+ *
+ * @type {InfoBoxProps}
+ * @property {ReactNode} children - Main content rendered inside the info box
+ * @property {string} [className] - Optional additional CSS classes to extend or override styles
  */
 export interface InfoBoxProps {
-  // Main content rendered inside the info box
   children: ReactNode;
-  // Optional additional CSS classes to extend or override styles
   className?: string;
 }
 

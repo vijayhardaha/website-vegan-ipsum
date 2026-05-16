@@ -6,6 +6,11 @@ import { cn } from '@/utils/classnames';
 
 /**
  * Props for the Label component.
+ *
+ * @type {LabelProps}
+ * @property {string} [className] - Additional CSS classes
+ * @property {ReactNode} children - Label content
+ * @property {string} htmlFor - ID of the associated input element
  */
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   className?: string;

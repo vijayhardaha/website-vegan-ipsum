@@ -9,7 +9,12 @@ import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
- * Represents the details of a card item used in the component.
+ * Feature card item for NPM Package.
+ *
+ * @type {Card}
+ * @property {IconName} icon - Icon for the feature
+ * @property {string} heading - Feature title
+ * @property {string} content - Feature description
  */
 interface Card {
   icon: IconName;

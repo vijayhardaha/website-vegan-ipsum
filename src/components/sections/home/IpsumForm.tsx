@@ -11,6 +11,9 @@ import type { LoremType } from '@/utils/ipsum';
 
 /**
  * Props for the IpsumForm component.
+ *
+ * @type {IpsumFormProps}
+ * @property {(output: string) => void} setOutput - Function to set the generated output
  */
 interface IpsumFormProps {
   setOutput: (output: string) => void;

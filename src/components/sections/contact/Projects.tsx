@@ -9,7 +9,15 @@ import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
- * Represents the details of a card displayed in the component.
+ * Project card item for contact page.
+ *
+ * @type {Card}
+ * @property {string} title - Project title
+ * @property {IconName} icon - Icon representing the project
+ * @property {string} link - URL to project details
+ * @property {string} buttonText - Button label
+ * @property {string} ariaLabel - Accessible label for the button
+ * @property {string} content - Project description
  */
 interface Card {
   title: string;

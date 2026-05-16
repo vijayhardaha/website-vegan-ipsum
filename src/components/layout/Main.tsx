@@ -2,6 +2,9 @@ import type { JSX, ReactNode } from 'react';
 
 /**
  * Props for the Main component.
+ *
+ * @type {MainProps}
+ * @property {ReactNode} children - The content to render inside main
  */
 interface MainProps {
   children: ReactNode;

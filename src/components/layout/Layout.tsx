@@ -6,6 +6,9 @@ import Main from '@/components/layout/Main';
 
 /**
  * Props for the Layout component.
+ *
+ * @type {LayoutProps}
+ * @property {ReactNode} children - React children elements to render
  */
 interface LayoutProps {
   children: ReactNode;

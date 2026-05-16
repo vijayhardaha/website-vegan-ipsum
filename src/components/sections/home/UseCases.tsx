@@ -8,7 +8,12 @@ import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
- * Represents the details of a card displayed in the component.
+ * Use case card item for home page.
+ *
+ * @type {Card}
+ * @property {string} title - Use case title
+ * @property {string} text - Use case description
+ * @property {IconName} icon - Icon for the use case
  */
 interface Card {
   title: string;

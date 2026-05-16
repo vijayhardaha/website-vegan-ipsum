@@ -7,8 +7,12 @@ import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 /**
  * Props for the PageHeader component.
  *
- * @property {string} title - The main title of the page.
- * @property {string} [subtitle] - An optional subtitle providing additional context.
+ * @type {PageHeaderProps}
+ * @property {string} id - Element ID
+ * @property {ReactNode} title - The main title of the page.
+ * @property {string} [description] - Optional short description
+ * @property {string[]} [tags] - Optional list of tags
+ * @property {ReactNode} [children] - Optional additional content
  */
 interface PageHeaderProps {
   id: string;

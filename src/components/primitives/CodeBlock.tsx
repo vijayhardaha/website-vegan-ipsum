@@ -10,17 +10,25 @@ import { cn } from '@/utils/classnames';
 
 /**
  * Props for the CodeBlock component.
+ *
+ * @type {CodeBlockProps}
+ * @property {string} label - Label for the code block
+ * @property {string} children - Code content
+ * @property {string} [className] - Additional CSS classes
+ * @property {unknown} [key] - Index signature for additional props
  */
 interface CodeBlockProps {
   label: string;
   children: string;
   className?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 /**
  * Props for the CodeBlock component with custom styles.
+ *
+ * @type {StyleProps}
+ * @property {CSSProperties} [key] - Index signature for style properties
  */
 interface StyleProps {
   [key: string]: CSSProperties;

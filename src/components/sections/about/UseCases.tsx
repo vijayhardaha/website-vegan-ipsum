@@ -6,7 +6,11 @@ import Container from '@/components/primitives/Container';
 import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
- * Represents the details of card items used in the component.
+ * Use case card item for about page.
+ *
+ * @type {Card}
+ * @property {string} title - Use case title
+ * @property {string} content - Use case description
  */
 interface Card {
   title: string;

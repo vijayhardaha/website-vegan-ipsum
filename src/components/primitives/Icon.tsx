@@ -5,6 +5,11 @@ import { cn } from '@/utils/classnames';
 
 /**
  * Props for the Icon component.
+ *
+ * @type {IconProps}
+ * @property {IconName} name - Name of the icon to render
+ * @property {string} [className] - Additional CSS classes
+ * @property {number | string} [size] - Icon size (number or string)
  */
 interface IconProps extends SVGProps<SVGSVGElement> {
   name: IconName;

@@ -4,6 +4,10 @@ import { cn } from '@/utils/classnames';
 
 /**
  * Props for the Input component.
+ *
+ * @type {InputProps}
+ * @property {string} [className] - Additional CSS classes
+ * @property {string} [type] - Input type attribute
  */
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;

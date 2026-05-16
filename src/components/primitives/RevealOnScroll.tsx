@@ -7,13 +7,17 @@ import { motion, useInView } from 'framer-motion';
 
 import { cn } from '@/utils/classnames';
 
-/* RevealOnScroll component props */
+/**
+ * Props for the RevealOnScroll scroll animation component.
+ *
+ * @type {RevealOnScrollProps}
+ * @property {ReactNode} children - Content to animate on enter
+ * @property {number} [delay] - Animation delay in seconds
+ * @property {string} [className] - Additional class names to apply
+ */
 interface RevealOnScrollProps {
-  /** Content to animate on enter. */
   children: ReactNode;
-  /** Animation delay in seconds. */
   delay?: number;
-  /** Additional class names to apply. */
   className?: string;
 }
 
@@ -35,9 +39,9 @@ export default function RevealOnScroll({ children, delay = 0.1, className }: Rev
     <motion.div
       ref={ref}
       className={cn(className)}
-      initial={{ opacity: 0, y: 75 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 75 }}
-      transition={{ duration: 0.5, delay }}
+      initial={{ opacity: 0, y: 35 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
+      transition={{ duration: 0.35, delay }}
     >
       {children}
     </motion.div>
