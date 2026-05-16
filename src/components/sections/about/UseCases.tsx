@@ -3,6 +3,7 @@ import type { JSX } from 'react';
 import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * Represents the details of card items used in the component.
@@ -68,22 +69,23 @@ export default function UseCases(): JSX.Element {
           tagline="Practicality"
           number={6}
         >
-          <p>
-            From design mockups to educational applications, Vegan Ipsum integrates seamlessly into a wide range of
-            ethical and eco-conscious projects.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              From design mockups to educational applications, Vegan Ipsum integrates seamlessly into a wide range of
+              ethical and eco-conscious projects.
+            </p>
+          </RevealOnScroll>
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {cards.map((card, index: number) => (
-              <div
-                key={index}
-                className="border-border flex gap-4 rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
-              >
-                <div>
-                  <h3 className="text-primary-solid mb-1 text-xl font-bold">{card.title}</h3>
-                  <p className="text-sm leading-relaxed">{card.content}</p>
+              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+                <div className="border-border flex gap-4 rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8">
+                  <div>
+                    <h3 className="text-primary-solid mb-1 text-xl font-bold">{card.title}</h3>
+                    <p className="text-sm leading-relaxed">{card.content}</p>
+                  </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </SectionHeader>

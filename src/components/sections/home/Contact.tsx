@@ -7,6 +7,7 @@ import Section from '@/components/layout/Section';
 import Button from '@/components/primitives/Button';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component renders a call-to-action section
@@ -34,17 +35,19 @@ export default function Contact(): JSX.Element {
           className="mx-auto max-w-xl text-center"
           headingClassName="mx-auto max-w-lg"
         >
-          <p className="mb-8">
-            We are building more than just a tool; we are cultivating a community of conscious creators. Whether you
-            want to contribute code, suggest features, or connect with like-minded builders, your voice matters. Join us
-            in making ethical design the standard, not the exception.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p className="mb-8">
+              We are building more than just a tool; we are cultivating a community of conscious creators. Whether you
+              want to contribute code, suggest features, or connect with like-minded builders, your voice matters. Join
+              us in making ethical design the standard, not the exception.
+            </p>
 
-          <Button asChild variant="primary" size="lg">
-            <Link href="/contact">
-              Contact Us <Icon name="arrowRight" />
-            </Link>
-          </Button>
+            <Button asChild variant="primary" size="lg">
+              <Link href="/contact">
+                Contact Us <Icon name="arrowRight" />
+              </Link>
+            </Button>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

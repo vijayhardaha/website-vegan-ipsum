@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
@@ -26,7 +27,7 @@ interface Card {
 const cards: Card[] = [
   {
     title: 'Web Interface',
-    text: 'Generate vegan-themed placeholder text instantly in your browser. No installation or setup required, just click and copy.',
+    text: 'Generate vegan placeholder text in your browser. No installation required, just click and copy.',
     icon: 'globe',
     link: '#generate-vegan-ipsum',
     ariaLabel: 'Use Now — Use the Vegan Ipsum web interface',
@@ -53,7 +54,7 @@ const cards: Card[] = [
   },
   {
     title: 'Node CLI Tool',
-    text: 'Generate placeholder text from your terminal. Perfect for shell scripts, automation pipelines, and rapid prototyping.',
+    text: 'Generate placeholder text from your terminal. Shell scripts, automation pipelines, and rapid prototyping.',
     icon: 'terminal',
     link: '/node-cli',
     ariaLabel: 'View Docs — View documentation for the Vegan Ipsum Node CLI tool',
@@ -98,49 +99,50 @@ export default function Methods(): JSX.Element {
           tagline="Methods"
           number={2}
         >
-          <p>
-            Instantly generate plant-based placeholder text tailored to your project requirements. Whether you prefer a
-            simple web interface, a robust{' '}
-            <Link
-              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
-              aria-label="JSON API — Learn about HTTP requests"
-            >
-              JSON API
-            </Link>
-            , or developer-focused tools like the{' '}
-            <Link href="https://code.visualstudio.com/" aria-label="Visual Studio Code — Visit the website">
-              Visual Studio Code
-            </Link>{' '}
-            Extension, Vegan Ipsum offers a flexible solution for every workflow.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              Instantly generate plant-based placeholder text tailored to your project requirements. Whether you prefer
+              a simple web interface, a robust{' '}
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+                aria-label="JSON API — Learn about HTTP requests"
+              >
+                JSON API
+              </Link>
+              , or developer-focused tools like the{' '}
+              <Link href="https://code.visualstudio.com/" aria-label="Visual Studio Code — Visit the website">
+                Visual Studio Code
+              </Link>{' '}
+              Extension, Vegan Ipsum offers a flexible solution for every workflow.
+            </p>
+          </RevealOnScroll>
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {cards.map((card, index: number) => (
-              <div
-                key={index}
-                className="border-border relative overflow-hidden rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary-muted text-primary mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
-                    <Icon name={card.icon} />
-                  </div>
-                  <div>
-                    <h3 className="text-primary-solid mb-1 text-lg">{card.title}</h3>
-                    <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{card.text}</p>
+              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+                <div className="border-border relative overflow-hidden rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary-muted text-primary mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
+                      <Icon name={card.icon} />
+                    </div>
+                    <div>
+                      <h3 className="text-primary-solid mb-1 text-lg">{card.title}</h3>
+                      <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{card.text}</p>
 
-                    <Link
-                      href={card.link}
-                      scrollOffset={68}
-                      className="text-primary relative inline-flex items-center gap-0.5 text-sm font-medium"
-                      aria-label={card.ariaLabel}
-                      hoverEffect="border"
-                    >
-                      {card.buttonText}
-                      {card?.buttonIcon && <Icon name="arrowRight" />}
-                    </Link>
+                      <Link
+                        href={card.link}
+                        scrollOffset={68}
+                        className="text-primary relative inline-flex items-center gap-0.5 text-sm font-medium"
+                        aria-label={card.ariaLabel}
+                        hoverEffect="border"
+                      >
+                        {card.buttonText}
+                        {card?.buttonIcon && <Icon name="arrowRight" />}
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </SectionHeader>

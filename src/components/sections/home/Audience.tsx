@@ -4,6 +4,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
@@ -67,26 +68,27 @@ export default function Audience(): JSX.Element {
           headingClassName="text-primary-foreground"
           taglineClassName="text-primary-muted/70"
         >
-          <p>
-            Vegan Ipsum is ideal for designers, developers, and content creators who want their work to reflect ethical
-            values. Build your projects with placeholder text that aligns with a sustainable and compassionate
-            lifestyle.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              Vegan Ipsum is ideal for designers, developers, and content creators who want their work to reflect
+              ethical values. Build your projects with placeholder text that aligns with a sustainable and compassionate
+              lifestyle.
+            </p>
+          </RevealOnScroll>
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {cards.map((card, index: number) => (
-              <div
-                key={index}
-                className="border-primary-muted/20 bg-primary-muted/10 hover:bg-primary-muted/20 relative flex items-start gap-4 rounded-3xl border p-6 backdrop-blur-md transition-all hover:shadow-lg md:p-8"
-              >
-                <span className="text-primary-foreground mb-4 block shrink-0 text-4xl">
-                  <Icon name={card.icon} />
-                </span>
-                <div>
-                  <h3 className="text-primary-foreground mb-2 text-lg font-bold">{card.title}</h3>
-                  <p className="text-sm leading-relaxed">{card.text}</p>
+              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+                <div className="border-primary-muted/20 bg-primary-muted/10 hover:bg-primary-muted/20 relative flex items-start gap-4 rounded-3xl border p-6 backdrop-blur-md transition-all hover:shadow-lg md:p-8">
+                  <span className="text-primary-foreground mb-4 block shrink-0 text-4xl">
+                    <Icon name={card.icon} />
+                  </span>
+                  <div>
+                    <h3 className="text-primary-foreground mb-2 text-lg font-bold">{card.title}</h3>
+                    <p className="text-sm leading-relaxed">{card.text}</p>
+                  </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </SectionHeader>

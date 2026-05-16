@@ -4,6 +4,7 @@ import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component renders the support section of the VS Code Extension page.
@@ -23,18 +24,20 @@ export default function Support(): JSX.Element {
           tagline="Found a Bug?"
           number={5}
         >
-          <p>
-            As an independently developed extension, user feedback is vital for prioritizing updates and resolving bugs.
-            If you encounter any issues or have suggestions for new features, please help improve the tool by submitting
-            an issue on the{' '}
-            <Link
-              href="https://github.com/vijayhardaha/vscode-vegan-ipsum/issues"
-              aria-label="GitHub repository — Open the Vegan Ipsum VS Code Extension issues page"
-            >
-              GitHub repository
-            </Link>
-            .
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              As an independently developed extension, user feedback is vital for prioritizing updates and resolving
+              bugs. If you encounter any issues or have suggestions for new features, please help improve the tool by
+              submitting an issue on the{' '}
+              <Link
+                href="https://github.com/vijayhardaha/vscode-vegan-ipsum/issues"
+                aria-label="GitHub repository — Open the Vegan Ipsum VS Code Extension issues page"
+              >
+                GitHub repository
+              </Link>
+              .
+            </p>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

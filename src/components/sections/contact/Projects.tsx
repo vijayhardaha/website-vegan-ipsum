@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
@@ -96,38 +97,39 @@ export default function Projects(): JSX.Element {
           tagline="Open Source & Tooling"
           number={1}
         >
-          <p>
-            Explore the ecosystem of Vegan Ipsum projects that power this ethical, plant-based placeholder text
-            generator. All repositories are actively maintained and open-source, welcoming contributions from developers
-            and designers passionate about ethical technology.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              Explore the ecosystem of Vegan Ipsum projects that power this ethical, plant-based placeholder text
+              generator. All repositories are actively maintained and open-source, welcoming contributions from
+              developers and designers passionate about ethical technology.
+            </p>
+          </RevealOnScroll>
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {cards.map((card, index: number) => (
-              <div
-                key={index}
-                className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary-muted text-primary inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
-                    <Icon name={card.icon} />
-                  </div>
-                  <div>
-                    <h3 className="text-primary-solid mb-2 text-lg">{card.title}</h3>
+              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+                <div className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary-muted text-primary inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
+                      <Icon name={card.icon} />
+                    </div>
+                    <div>
+                      <h3 className="text-primary-solid mb-2 text-lg">{card.title}</h3>
 
-                    <p className="text-foreground/80 mb-2 text-sm leading-relaxed">{card.content}</p>
+                      <p className="text-foreground/80 mb-2 text-sm leading-relaxed">{card.content}</p>
 
-                    <Link
-                      className="text-primary text-sm font-medium"
-                      href={card.link}
-                      aria-label={card.ariaLabel}
-                      hoverEffect="border"
-                    >
-                      {card.buttonText}
-                    </Link>
+                      <Link
+                        className="text-primary text-sm font-medium"
+                        href={card.link}
+                        aria-label={card.ariaLabel}
+                        hoverEffect="border"
+                      >
+                        {card.buttonText}
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </SectionHeader>

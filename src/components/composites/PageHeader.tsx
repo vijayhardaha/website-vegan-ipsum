@@ -2,6 +2,7 @@ import type { ReactNode, JSX } from 'react';
 
 import PageTags from '@/components/composites/PageTags';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * Props for the PageHeader component.
@@ -32,15 +33,23 @@ export default function PageHeader({ id, title, description, tags, children }: P
 
       <Container>
         <div className="relative">
-          {tags && <PageTags tags={tags} />}
+          {tags && (
+            <RevealOnScroll delay={0}>
+              <PageTags tags={tags} />
+            </RevealOnScroll>
+          )}
 
-          <h1 id={`${id}-heading`} className="text-primary-solid mb-5 text-4xl md:text-6xl">
-            {title}
-          </h1>
+          <RevealOnScroll delay={0.1}>
+            <h1 id={`${id}-heading`} className="text-primary-solid mb-5 text-4xl md:text-6xl">
+              {title}
+            </h1>
+          </RevealOnScroll>
 
-          <p className="text-lg leading-relaxed md:text-xl">{description}</p>
+          <RevealOnScroll delay={0.2}>
+            <p className="text-lg leading-relaxed md:text-xl">{description}</p>
+          </RevealOnScroll>
 
-          {children}
+          {children && <RevealOnScroll delay={0.3}>{children}</RevealOnScroll>}
         </div>
       </Container>
     </section>

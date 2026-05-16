@@ -4,6 +4,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
@@ -31,7 +32,7 @@ const cards: Card[] = [
   },
   {
     title: 'Development Workflows',
-    text: 'When integrating via API, CLI, or VS Code extension to automate fast, ethical placeholder text generation.',
+    text: 'When integrating via API, CLI, or VS Code extension to automate fast, ethical placeholder text generation in your workflow.',
     icon: 'fcProcess',
   },
   {
@@ -61,25 +62,26 @@ export default function UseCases(): JSX.Element {
           tagline="Use Cases"
           number={6}
         >
-          <p>
-            Vegan Ipsum is the ideal filler text for wireframes, mockups, and live prototypes. Use it whenever you need
-            placeholder content that reflects a compassionate and ethical design approach.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              Vegan Ipsum is the ideal filler text for wireframes, mockups, and live prototypes. Use it whenever you
+              need placeholder content that reflects a compassionate and ethical design approach.
+            </p>
+          </RevealOnScroll>
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {cards.map((card, index: number) => (
-              <div
-                key={index}
-                className="border-border relative flex gap-4 overflow-hidden rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8"
-              >
-                <span className="bg-secondary-100/70 flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl text-3xl">
-                  <Icon name={card.icon} />
-                </span>
-                <div>
-                  <h3 className="text-primary-solid mb-1 text-lg font-bold">{card.title}</h3>
-                  <p className="text-sm leading-relaxed">{card.text}</p>
+              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+                <div className="border-border relative flex gap-4 overflow-hidden rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8">
+                  <span className="bg-secondary-100/70 flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl text-3xl">
+                    <Icon name={card.icon} />
+                  </span>
+                  <div>
+                    <h3 className="text-primary-solid mb-1 text-lg font-bold">{card.title}</h3>
+                    <p className="text-sm leading-relaxed">{card.text}</p>
+                  </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </SectionHeader>

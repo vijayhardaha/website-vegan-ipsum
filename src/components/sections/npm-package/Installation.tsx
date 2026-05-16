@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component renders the installation section for the NPM Package page.
@@ -28,48 +29,59 @@ export default function Installation(): JSX.Element {
           tagline="Package Management"
           number={2}
         >
-          <p>
-            Install <code>vegan-ipsum</code> using your preferred{' '}
-            <Link
-              href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
-              aria-label="package manager — Learn about package managers in Node.js"
-            >
-              package manager
-            </Link>
-            . A local installation is recommended for application development, while a global installation allows you to
-            utilize the library as a{' '}
-            <Link
-              href="https://en.wikipedia.org/wiki/Command-line_interface"
-              aria-label="CLI tool — Learn more about command-line interfaces"
-            >
-              CLI tool
-            </Link>{' '}
-            for quick text generation.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              Install <code>vegan-ipsum</code> using your preferred{' '}
+              <Link
+                href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
+                aria-label="package manager — Learn about package managers in Node.js"
+              >
+                package manager
+              </Link>
+              . A local installation is recommended for application development, while a global installation allows you
+              to utilize the library as a{' '}
+              <Link
+                href="https://en.wikipedia.org/wiki/Command-line_interface"
+                aria-label="CLI tool — Learn more about command-line interfaces"
+              >
+                CLI tool
+              </Link>{' '}
+              for quick text generation.
+            </p>
+          </RevealOnScroll>
 
-          <h3 className="mt-8 mb-2 text-lg">Local Installation</h3>
-          <p>
-            Adds <code>vegan-ipsum</code> to your project&apos;s dependencies.
-          </p>
+          <RevealOnScroll delay={0.1}>
+            <h3 className="mt-8 mb-2 text-lg">Local Installation</h3>
+            <p>
+              Adds <code>vegan-ipsum</code> to your project&apos;s dependencies.
+            </p>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.1}>
+            <CodeBlock label="npm" language="bash">
+              npm install vegan-ipsum
+            </CodeBlock>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.1}>
+            <CodeBlock label="Yarn" language="bash">
+              yarn add vegan-ipsum
+            </CodeBlock>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.1}>
+            <CodeBlock label="pnpm" language="bash">
+              pnpm add vegan-ipsum
+            </CodeBlock>
+          </RevealOnScroll>
 
-          <CodeBlock label="npm" language="bash">
-            npm install vegan-ipsum
-          </CodeBlock>
+          <RevealOnScroll delay={0.1}>
+            <h3 className="mt-12 mb-2 text-lg">Global Installation</h3>
+            <p>Installs the package globally so you can use it from the command line anywhere on your system.</p>
+          </RevealOnScroll>
 
-          <CodeBlock label="Yarn" language="bash">
-            yarn add vegan-ipsum
-          </CodeBlock>
-
-          <CodeBlock label="pnpm" language="bash">
-            pnpm add vegan-ipsum
-          </CodeBlock>
-
-          <h3 className="mt-12 mb-2 text-lg">Global Installation</h3>
-          <p>Installs the package globally so you can use it from the command line anywhere on your system.</p>
-
-          <CodeBlock label="npm (global)" language="bash">
-            npm install -g vegan-ipsum
-          </CodeBlock>
+          <RevealOnScroll delay={0.1}>
+            <CodeBlock label="npm (global)" language="bash">
+              npm install -g vegan-ipsum
+            </CodeBlock>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

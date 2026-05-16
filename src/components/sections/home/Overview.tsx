@@ -6,6 +6,7 @@ import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component provides an introduction to the Vegan Ipsum
@@ -22,75 +23,79 @@ export default function Overview(): JSX.Element {
     >
       <Container>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
-            <Image src="/welcoming.svg" alt="Men welcoming you to Vegan Ipsum Generator" width={613} height={701} />
-          </div>
-          <SectionHeader
-            heading={
-              <>
-                What is <em className="text-primary">Vegan Ipsum?</em>
-              </>
-            }
-            tagline="Overview"
-            number={3}
-          >
-            <p>
-              The Vegan Ipsum Generator is a powerful, free tool designed for ethical web designers, developers, and
-              content creators. It produces plant-based placeholder text for projects that prioritize cruelty-free and
-              sustainable values.
-            </p>
+          <RevealOnScroll delay={0}>
+            <div>
+              <Image src="/welcoming.svg" alt="Men welcoming you to Vegan Ipsum Generator" width={613} height={701} />
+            </div>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.1}>
+            <SectionHeader
+              heading={
+                <>
+                  What is <em className="text-primary">Vegan Ipsum?</em>
+                </>
+              }
+              tagline="Overview"
+              number={3}
+            >
+              <p>
+                The Vegan Ipsum Generator is a powerful, free tool designed for ethical web designers, developers, and
+                content creators. It produces plant-based placeholder text for projects that prioritize cruelty-free and
+                sustainable values.
+              </p>
 
-            <p>
-              Unlike generic{' '}
-              <Link href="https://www.lipsum.com/" aria-label="Lorem Ipsum — Visit the standard Lorem Ipsum website">
-                Lorem Ipsum
-              </Link>{' '}
-              generators, this tool creates vegan-themed filler text that resonates with eco-conscious branding, making
-              it ideal for websites, apps, presentations, and prototypes.
-            </p>
+              <p>
+                Unlike generic{' '}
+                <Link href="https://www.lipsum.com/" aria-label="Lorem Ipsum — Visit the standard Lorem Ipsum website">
+                  Lorem Ipsum
+                </Link>{' '}
+                generators, this tool creates vegan-themed filler text that resonates with eco-conscious branding,
+                making it ideal for websites, apps, presentations, and prototypes.
+              </p>
 
-            <ul className="space-y-4">
-              <li className="flex items-start gap-2">
-                <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
-                  &#10003;
-                </div>
-                <span>Plant-based vocabulary woven into every generated sentence</span>
-              </li>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-2">
+                  <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+                    &#10003;
+                  </div>
+                  <span>Plant-based vocabulary woven into every generated sentence</span>
+                </li>
 
-              <li className="flex items-start gap-2">
-                <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
-                  &#10003;
-                </div>
-                <span>Resonates with sustainability-focused brands and audiences</span>
-              </li>
+                <li className="flex items-start gap-2">
+                  <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+                    &#10003;
+                  </div>
+                  <span>Resonates with sustainability-focused brands and audiences</span>
+                </li>
 
-              <li className="flex items-start gap-2">
-                <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
-                  &#10003;
-                </div>
-                <span>
-                  Seamlessly integrates via <Link href="/json-api">API</Link>, <Link href="/node-cli">CLI</Link>,{' '}
-                  <Link href="/npm-package">NPM Package</Link>, and{' '}
-                  <Link href="/vscode-extension">VS Code Extension</Link>
-                </span>
-              </li>
+                <li className="flex items-start gap-2">
+                  <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+                    &#10003;
+                  </div>
+                  <span>
+                    Seamlessly integrates via <Link href="/json-api">API</Link>, <Link href="/node-cli">CLI</Link>,{' '}
+                    <Link href="/npm-package">NPM Package</Link>, and{' '}
+                    <Link href="/vscode-extension">VS Code Extension</Link>
+                  </span>
+                </li>
 
-              <li className="flex items-start gap-2">
-                <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
-                  &#10003;
-                </div>
-                <span>
-                  Fully open source and free to use under the{' '}
-                  <Link
-                    href="https://opensource.org/licenses/MIT"
-                    aria-label="MIT License — Learn about the MIT License"
-                  >
-                    MIT License
-                  </Link>
-                </span>
-              </li>
-            </ul>
-          </SectionHeader>
+                <li className="flex items-start gap-2">
+                  <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+                    &#10003;
+                  </div>
+                  <span>
+                    Fully open source and free to use under the{' '}
+                    <Link
+                      href="https://opensource.org/licenses/MIT"
+                      aria-label="MIT License — Learn about the MIT License"
+                    >
+                      MIT License
+                    </Link>
+                  </span>
+                </li>
+              </ul>
+            </SectionHeader>
+          </RevealOnScroll>
         </div>
       </Container>
     </Section>

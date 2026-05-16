@@ -4,6 +4,7 @@ import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import { cn } from '@/utils/classnames';
 
 /**
@@ -28,17 +29,19 @@ export default function StatusCodes(): JSX.Element {
           tagline="Status Codes"
           number={8}
         >
-          <p className="mb-8">
-            The API utilizes standard{' '}
-            <Link
-              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
-              aria-label="HTTP status codes — Learn about HTTP status codes"
-            >
-              HTTP status codes
-            </Link>{' '}
-            to indicate the result of a request. Below are the most common codes you may encounter when interacting with
-            the endpoint:
-          </p>
+          <RevealOnScroll delay={0}>
+            <p className="mb-8">
+              The API utilizes standard{' '}
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+                aria-label="HTTP status codes — Learn about HTTP status codes"
+              >
+                HTTP status codes
+              </Link>{' '}
+              to indicate the result of a request. Below are the most common codes you may encounter when interacting
+              with the endpoint:
+            </p>
+          </RevealOnScroll>
 
           <ul className="space-y-4">
             {[
@@ -68,23 +71,22 @@ export default function StatusCodes(): JSX.Element {
                 class: 'bg-purple-100 text-purple-500',
               },
             ].map((code, index) => (
-              <li
-                key={index}
-                className="border-border flex items-start gap-4 rounded-3xl border bg-white p-4 transition-transform hover:translate-x-1"
-              >
-                <span
-                  className={cn(
-                    'inline-flex min-h-12 min-w-14 items-center justify-center rounded-3xl px-0 py-1 text-center text-sm font-bold',
-                    code.class
-                  )}
-                >
-                  {code.statusCode}
-                </span>
-                <div>
-                  <p className="text-primary-solid mb-0.5 text-base font-bold">{code.status}</p>
-                  <p className="text-sm leading-relaxed">{code.description}</p>
-                </div>
-              </li>
+              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+                <li className="border-border flex items-start gap-4 rounded-3xl border bg-white p-4 transition-transform hover:translate-x-1">
+                  <span
+                    className={cn(
+                      'inline-flex min-h-12 min-w-14 items-center justify-center rounded-3xl px-0 py-1 text-center text-sm font-bold',
+                      code.class
+                    )}
+                  >
+                    {code.statusCode}
+                  </span>
+                  <div>
+                    <p className="text-primary-solid mb-0.5 text-base font-bold">{code.status}</p>
+                    <p className="text-sm leading-relaxed">{code.description}</p>
+                  </div>
+                </li>
+              </RevealOnScroll>
             ))}
           </ul>
         </SectionHeader>

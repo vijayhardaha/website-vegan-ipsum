@@ -4,6 +4,7 @@ import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component represents the background and inspiration section
@@ -25,28 +26,30 @@ export default function Background(): JSX.Element {
           tagline="Origin Story"
           number={2}
         >
-          <p>
-            The concept for Vegan Ipsum emerged from a desire to fill a niche that traditional Lorem Ipsum generators
-            had long overlooked. While exploring resources like{' '}
-            <Link
-              href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/"
-              aria-label="loremipsum.io — Ultimate List of Lorem Ipsum Generators"
-            >
-              loremipsum.io
-            </Link>
-            , it became evident that many specialized communities had developed custom placeholder text to better
-            reflect their unique identities.
-          </p>
-          <p>
-            However, despite the global rise of veganism and plant-based lifestyles, there was a lack of a dedicated,
-            well-maintained placeholder text generator for the ethical design community.
-          </p>
-          <p>
-            This gap inspired the creation of Vegan Ipsum, a project designed to provide ethical developers and
-            designers with a cruelty-free alternative that aligns with their values. Since its launch, Vegan Ipsum has
-            evolved into a versatile suite of tools, empowering creators to build sustainable brands with meaningful,
-            value-driven content.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              The concept for Vegan Ipsum emerged from a desire to fill a niche that traditional Lorem Ipsum generators
+              had long overlooked. While exploring resources like{' '}
+              <Link
+                href="https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/"
+                aria-label="loremipsum.io — Ultimate List of Lorem Ipsum Generators"
+              >
+                loremipsum.io
+              </Link>
+              , it became evident that many specialized communities had developed custom placeholder text to better
+              reflect their unique identities.
+            </p>
+            <p>
+              However, despite the global rise of veganism and plant-based lifestyles, there was a lack of a dedicated,
+              well-maintained placeholder text generator for the ethical design community.
+            </p>
+            <p>
+              This gap inspired the creation of Vegan Ipsum, a project designed to provide ethical developers and
+              designers with a cruelty-free alternative that aligns with their values. Since its launch, Vegan Ipsum has
+              evolved into a versatile suite of tools, empowering creators to build sustainable brands with meaningful,
+              value-driven content.
+            </p>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

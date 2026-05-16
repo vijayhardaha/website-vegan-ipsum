@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component renders the options and flags section for the Node CLI page.
@@ -28,37 +29,44 @@ export default function Options(): JSX.Element {
           tagline="CLI Parameters"
           number={4}
         >
-          <p>
-            Customize your workflow using the following optional flags. These options allow you to modify the output
-            format, streamline copy-paste actions, and access command documentation.
-          </p>
-          <ul className="list-disc space-y-2 pl-8">
-            <li>
-              <code>--format html</code>: Wraps the generated output in HTML{' '}
-              <Link
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"
-                aria-label="paragraph tags — Learn more about the HTML paragraph tag on MDN"
-              >
-                paragraph tags
-              </Link>
-              , making it ready for immediate use in web prototyping.
-            </li>
+          <RevealOnScroll delay={0}>
+            <p>
+              Customize your workflow using the following optional flags. These options allow you to modify the output
+              format, streamline copy-paste actions, and access command documentation.
+            </p>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.1}>
+            <ul className="list-disc space-y-2 pl-8">
+              <li>
+                <code>--format html</code>: Wraps the generated output in HTML{' '}
+                <Link
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"
+                  aria-label="paragraph tags — Learn more about the HTML paragraph tag on MDN"
+                >
+                  paragraph tags
+                </Link>
+                , making it ready for immediate use in web prototyping.
+              </li>
 
-            <li>
-              <code>--copy</code>: Automatically sends the generated text to your system clipboard, streamlining your
-              workflow by eliminating manual copying.
-            </li>
+              <li>
+                <code>--copy</code>: Automatically sends the generated text to your system clipboard, streamlining your
+                workflow by eliminating manual copying.
+              </li>
 
-            <li>
-              <code>--help</code>: Displays comprehensive usage instructions and a complete list of available commands.
-            </li>
-          </ul>
-          <h3 className="mt-8 mb-2 text-lg">Examples:</h3>
-          <CodeBlock label="CLI Examples" language="bash">
-            {`vegan-ipsum 2 paragraphs --format html
+              <li>
+                <code>--help</code>: Displays comprehensive usage instructions and a complete list of available
+                commands.
+              </li>
+            </ul>
+          </RevealOnScroll>
+          <RevealOnScroll delay={0.2}>
+            <h3 className="mt-8 mb-2 text-lg">Examples:</h3>
+            <CodeBlock label="CLI Examples" language="bash">
+              {`vegan-ipsum 2 paragraphs --format html
 vegan-ipsum 2 paragraphs --copy
 vegan-ipsum --help`}
-          </CodeBlock>
+            </CodeBlock>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

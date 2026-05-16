@@ -3,6 +3,7 @@ import type { JSX } from 'react';
 import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component provides an introduction to the Vegan Ipsum
@@ -27,45 +28,49 @@ export default function Benefits(): JSX.Element {
           tagline="Benefits"
           number={4}
         >
-          <p>
-            The Vegan Ipsum Generator provides a purposeful alternative to generic filler text by reflecting ethical,
-            cruelty-free, and sustainable design principles. This tool elevates your projects with plant-based themes
-            and compassionate language that resonates with conscious audiences while maintaining professional
-            readability and clarity.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              The Vegan Ipsum Generator provides a purposeful alternative to generic filler text by reflecting ethical,
+              cruelty-free, and sustainable design principles. This tool elevates your projects with plant-based themes
+              and compassionate language that resonates with conscious audiences while maintaining professional
+              readability and clarity.
+            </p>
+          </RevealOnScroll>
 
-          <h3 className="text-lg">Key Benefits:</h3>
+          <RevealOnScroll delay={0.1}>
+            <h3 className="mb-4 text-lg">Key Benefits:</h3>
 
-          <ul className="list-disc space-y-2 pl-8">
-            {[
-              {
-                title: 'Authentic Brand Alignment',
-                text: 'Ensures your placeholder text reflects your vegan values and ethical commitment from the earliest design stages.',
-              },
-              {
-                title: 'Enhanced Storytelling',
-                text: 'Provides sustainability-focused content that creates an emotional connection with vegan and eco-conscious audiences.',
-              },
-              {
-                title: 'Meaningful Differentiation',
-                text: 'Replaces standard Lorem Ipsum with mission-aligned alternatives that help your projects stand out.',
-              },
-              {
-                title: 'Professional Quality',
-                text: 'Maintains high readability and design standards while promoting compassionate messaging.',
-              },
-              {
-                title: 'Audience Connection',
-                text: 'Engages eco-conscious communities through consistent plant-based themes in your mockups and prototypes.',
-              },
-            ].map((list, index) => (
-              <li key={index}>
-                <span>
-                  <strong className="text-primary-dark font-semibold">{list.title}</strong>: {list.text}
-                </span>
-              </li>
-            ))}
-          </ul>
+            <ul className="list-disc space-y-2 pl-8">
+              {[
+                {
+                  title: 'Authentic Brand Alignment',
+                  text: 'Ensures your placeholder text reflects your vegan values and ethical commitment from the earliest design stages.',
+                },
+                {
+                  title: 'Enhanced Storytelling',
+                  text: 'Provides sustainability-focused content that creates an emotional connection with vegan and eco-conscious audiences.',
+                },
+                {
+                  title: 'Meaningful Differentiation',
+                  text: 'Replaces standard Lorem Ipsum with mission-aligned alternatives that help your projects stand out.',
+                },
+                {
+                  title: 'Professional Quality',
+                  text: 'Maintains high readability and design standards while promoting compassionate messaging.',
+                },
+                {
+                  title: 'Audience Connection',
+                  text: 'Engages eco-conscious communities through consistent plant-based themes in your mockups and prototypes.',
+                },
+              ].map((list, index) => (
+                <li key={index}>
+                  <span>
+                    <strong className="text-primary-dark font-semibold">{list.title}</strong>: {list.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

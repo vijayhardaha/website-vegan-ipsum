@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
 /**
@@ -75,35 +76,36 @@ export default function Features(): JSX.Element {
           tagline="Features"
           number={4}
         >
-          <p>
-            Vegan Ipsum is designed to be simple, fast, and flexible. Whether you&apos;re building web apps,{' '}
-            <Link href="https://nodejs.org/" aria-label="Node.js — Visit the official website">
-              Node.js
-            </Link>{' '}
-            services, or{' '}
-            <Link
-              href="https://en.wikipedia.org/wiki/Command-line_interface"
-              aria-label="CLI — Learn more about command-line interface tools"
-            >
-              CLI
-            </Link>{' '}
-            tools, it gives you clean, customizable placeholder text without unnecessary complexity.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              Vegan Ipsum is designed to be simple, fast, and flexible. Whether you&apos;re building web apps,{' '}
+              <Link href="https://nodejs.org/" aria-label="Node.js — Visit the official website">
+                Node.js
+              </Link>{' '}
+              services, or{' '}
+              <Link
+                href="https://en.wikipedia.org/wiki/Command-line_interface"
+                aria-label="CLI — Learn more about command-line interface tools"
+              >
+                CLI
+              </Link>{' '}
+              tools, it gives you clean, customizable placeholder text without unnecessary complexity.
+            </p>
+          </RevealOnScroll>
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {cards.map((feature, index) => (
-              <div
-                key={index}
-                className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
-              >
-                <h3 className="mb-2 flex items-center gap-2 text-lg">
-                  <span className="relative top-0.5 text-xl">
-                    <Icon name={feature.icon} />
-                  </span>{' '}
-                  {feature.heading}
-                </h3>
-                <p className="text-sm leading-relaxed">{feature.content}</p>
-              </div>
+              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+                <div className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8">
+                  <h3 className="mb-2 flex items-center gap-2 text-lg">
+                    <span className="relative top-0.5 text-xl">
+                      <Icon name={feature.icon} />
+                    </span>{' '}
+                    {feature.heading}
+                  </h3>
+                  <p className="text-sm leading-relaxed">{feature.content}</p>
+                </div>
+              </RevealOnScroll>
             ))}
           </div>
         </SectionHeader>

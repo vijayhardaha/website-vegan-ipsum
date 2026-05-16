@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import Icon from '@/components/primitives/Icon';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import { type IconName } from '@/constants/icons';
 
 /**
@@ -76,32 +77,36 @@ export default function CoreFeatures(): JSX.Element {
           tagline="Ecosystem"
           number={3}
         >
-          <p>
-            Vegan Ipsum offers multiple integration methods designed to fit seamlessly into your development workflow.
-            Explore our suite of plant-based developer tools from a robust <Link href="/json-api">JSON API</Link> and{' '}
-            <Link href="/npm-package">NPM package</Link> to our <Link href="/vscode-extension">VS Code extension</Link>{' '}
-            and choose the solution that best suits your project requirements.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              Vegan Ipsum offers multiple integration methods designed to fit seamlessly into your development workflow.
+              Explore our suite of plant-based developer tools from a robust <Link href="/json-api">JSON API</Link> and{' '}
+              <Link href="/npm-package">NPM package</Link> to our{' '}
+              <Link href="/vscode-extension">VS Code extension</Link> and choose the solution that best suits your
+              project requirements.
+            </p>
+          </RevealOnScroll>
 
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {cards.map((card, index: number) => (
-              <Link
-                role="link"
-                key={index}
-                href={card.href}
-                aria-label={card.ariaLabel}
-                className="border-border relative rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary-muted text-primary inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
-                    <Icon name={card.icon} />
+              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+                <Link
+                  role="link"
+                  href={card.href}
+                  aria-label={card.ariaLabel}
+                  className="border-border relative block rounded-3xl border bg-white p-6 shadow-md transition-shadow hover:shadow-lg md:p-8"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary-muted text-primary inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
+                      <Icon name={card.icon} />
+                    </div>
+                    <div>
+                      <h3 className="text-primary-solid mb-2 text-xl">{card.title}</h3>
+                      <p className="text-foreground/80 text-sm leading-relaxed">{card.content}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-primary-solid mb-2 text-xl">{card.title}</h3>
-                    <p className="text-foreground/80 text-sm leading-relaxed">{card.content}</p>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </RevealOnScroll>
             ))}
           </div>
         </SectionHeader>

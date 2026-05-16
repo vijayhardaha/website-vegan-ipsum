@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component describes the response format of the Vegan Ipsum JSON API.
@@ -28,29 +29,35 @@ export default function ResponseFormat(): JSX.Element {
           tagline="JSON Output"
           number={6}
         >
-          <p className="mb-8">
-            A successful API request returns a{' '}
-            <Link
-              href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
-              aria-label="JSON — Learn about JSON"
-            >
-              JSON
-            </Link>{' '}
-            object containing a single <code>text</code> property. This string holds your generated vegan ipsum content,
-            formatted exactly as requested and ready for immediate integration.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p className="mb-8">
+              A successful API request returns a{' '}
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON"
+                aria-label="JSON — Learn about JSON"
+              >
+                JSON
+              </Link>{' '}
+              object containing a single <code>text</code> property. This string holds your generated vegan ipsum
+              content, formatted exactly as requested and ready for immediate integration.
+            </p>
+          </RevealOnScroll>
 
-          <CodeBlock label="JSON Response · 200 OK" language="json">
-            {`{
+          <RevealOnScroll delay={0.1}>
+            <CodeBlock label="JSON Response · 200 OK" language="json">
+              {`{
   "text": "Cucumber asparagus lentils smoothie harmony kind eggplant pancake laborum non brussels beetroot pepper plant sustain. Nostrud lettuce cillum cucumber celery positivity reprehenderit turmeric laboris chard voluptate eu comfort. Minim vegan-burger nutrients shallot ad humility okra."
 }`}
-          </CodeBlock>
+            </CodeBlock>
+          </RevealOnScroll>
 
-          <p>
-            The response strictly adheres to the parameters defined in your request, including the
-            <code>count</code>, <code>units</code>, and <code>format</code>, ensuring the output fits seamlessly into
-            your application&apos;s layout.
-          </p>
+          <RevealOnScroll delay={0.2}>
+            <p>
+              The response strictly adheres to the parameters defined in your request, including the
+              <code>count</code>, <code>units</code>, and <code>format</code>, ensuring the output fits seamlessly into
+              your application&apos;s layout.
+            </p>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

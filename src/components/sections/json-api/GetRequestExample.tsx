@@ -4,6 +4,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import { getPermaLink } from '@/utils/seo';
 
 /**
@@ -31,27 +32,35 @@ export default function GetRequestExample(): JSX.Element {
           tagline="Query Strings"
           number={5}
         >
-          <p className="mb-8">
-            When using <code>GET</code> requests, parameters are appended to the URL as query strings. The following
-            examples demonstrate how to fetch specific amounts and formats of plant-based placeholder text using
-            standard tools and libraries.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p className="mb-8">
+              When using <code>GET</code> requests, parameters are appended to the URL as query strings. The following
+              examples demonstrate how to fetch specific amounts and formats of plant-based placeholder text using
+              standard tools and libraries.
+            </p>
+          </RevealOnScroll>
 
-          <CodeBlock label="Browser / URL" language="bash">
-            {`# Retrieve 2 paragraphs of plain text
+          <RevealOnScroll delay={0.1}>
+            <CodeBlock label="Browser / URL" language="bash">
+              {`# Retrieve 2 paragraphs of plain text
 ${API_BASE_URL}?count=2&units=paragraphs&format=plain`}
-          </CodeBlock>
+            </CodeBlock>
+          </RevealOnScroll>
 
-          <CodeBlock
-            label="cURL"
-            language="bash"
-          >{`curl "${API_BASE_URL}?count=3&units=sentences&format=html"`}</CodeBlock>
+          <RevealOnScroll delay={0.2}>
+            <CodeBlock
+              label="cURL"
+              language="bash"
+            >{`curl "${API_BASE_URL}?count=3&units=sentences&format=html"`}</CodeBlock>
+          </RevealOnScroll>
 
-          <CodeBlock label="JavaScript (fetch)" language="javascript">
-            {`const res = await fetch('${API_BASE_URL}?count=3&units=sentences&format=plain');
+          <RevealOnScroll delay={0.3}>
+            <CodeBlock label="JavaScript (fetch)" language="javascript">
+              {`const res = await fetch('${API_BASE_URL}?count=3&units=sentences&format=plain');
 const data = await res.json();
 console.log(data.text);`}
-          </CodeBlock>
+            </CodeBlock>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

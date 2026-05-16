@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component renders the installation section for the Node CLI page.
@@ -28,44 +29,52 @@ export default function Installation(): JSX.Element {
           tagline="Global Setup"
           number={2}
         >
-          <p className="mb-8">
-            Install <code>vegan-ipsum</code> globally to access the command-line interface from any directory. This
-            ensures that generating plant-based placeholder text is always just a few keystrokes away.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p className="mb-8">
+              Install <code>vegan-ipsum</code> globally to access the command-line interface from any directory. This
+              ensures that generating plant-based placeholder text is always just a few keystrokes away.
+            </p>
+          </RevealOnScroll>
 
-          <CodeBlock label="Global Install (npm)" language="bash">
-            npm install -g vegan-ipsum
-          </CodeBlock>
+          <RevealOnScroll delay={0.1}>
+            <CodeBlock label="Global Install (npm)" language="bash">
+              npm install -g vegan-ipsum
+            </CodeBlock>
+          </RevealOnScroll>
 
-          <p>
-            Before proceeding, ensure you have{' '}
-            <Link href="https://nodejs.org/" aria-label="Node.js — Download Node.js">
-              Node.js
-            </Link>{' '}
-            and{' '}
-            <Link
-              href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
-              aria-label="npm — Learn about the npm package manager"
-            >
-              npm
-            </Link>{' '}
-            installed on your system.
-          </p>
+          <RevealOnScroll delay={0.2}>
+            <p>
+              Before proceeding, ensure you have{' '}
+              <Link href="https://nodejs.org/" aria-label="Node.js — Download Node.js">
+                Node.js
+              </Link>{' '}
+              and{' '}
+              <Link
+                href="https://nodejs.org/en/learn/getting-started/an-introduction-to-the-npm-package-manager"
+                aria-label="npm — Learn about the npm package manager"
+              >
+                npm
+              </Link>{' '}
+              installed on your system.
+            </p>
 
-          <p>
-            After the installation is complete, verify that the package is accessible in your{' '}
-            <Link
-              href="https://en.wikipedia.org/wiki/PATH_(variable)"
-              aria-label="PATH — Learn about the PATH environment variable"
-            >
-              PATH
-            </Link>{' '}
-            by running the help command:
-          </p>
+            <p>
+              After the installation is complete, verify that the package is accessible in your{' '}
+              <Link
+                href="https://en.wikipedia.org/wiki/PATH_(variable)"
+                aria-label="PATH — Learn about the PATH environment variable"
+              >
+                PATH
+              </Link>{' '}
+              by running the help command:
+            </p>
+          </RevealOnScroll>
 
-          <CodeBlock label="Verify Installation" language="bash">
-            vegan-ipsum --help
-          </CodeBlock>
+          <RevealOnScroll delay={0.3}>
+            <CodeBlock label="Verify Installation" language="bash">
+              vegan-ipsum --help
+            </CodeBlock>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

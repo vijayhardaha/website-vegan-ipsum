@@ -5,6 +5,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import { getPermaLink } from '@/utils/seo';
 
 /**
@@ -28,20 +29,24 @@ export default function BaseUrl(): JSX.Element {
           tagline="Root Endpoint"
           number={2}
         >
-          <p className="mb-8">
-            All API endpoints are relative to the following base URL. We strongly recommend using{' '}
-            <Link
-              href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security"
-              aria-label="HTTPS — Learn about HTTPS and Transport Layer Security"
-            >
-              HTTPS
-            </Link>{' '}
-            for all requests to ensure security and data integrity.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p className="mb-8">
+              All API endpoints are relative to the following base URL. We strongly recommend using{' '}
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security"
+                aria-label="HTTPS — Learn about HTTPS and Transport Layer Security"
+              >
+                HTTPS
+              </Link>{' '}
+              for all requests to ensure security and data integrity.
+            </p>
+          </RevealOnScroll>
 
-          <CodeBlock label="Base URL" language="text">
-            {API_BASE_URL}
-          </CodeBlock>
+          <RevealOnScroll delay={0.1}>
+            <CodeBlock label="Base URL" language="text">
+              {API_BASE_URL}
+            </CodeBlock>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

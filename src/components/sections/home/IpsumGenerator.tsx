@@ -8,6 +8,7 @@ import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Button from '@/components/primitives/Button';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import IpsumForm from '@/components/sections/home/IpsumForm';
 import { cn } from '@/utils/classnames';
 import { calculateParagraphs, getOutputSummary } from '@/utils/text-stats';
@@ -48,60 +49,64 @@ export default function IpsumGenerator(): JSX.Element {
           tagline="Generator"
           number={1}
         >
-          <p>
-            Instantly generate custom, plant-based placeholder text for your mockups and prototypes. Choose your
-            preferred length and format to keep your{' '}
-            <Link
-              href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
-              aria-label="web design — Learn about HTML for web design"
-            >
-              web design
-            </Link>{' '}
-            projects fresh, ethical, and meaningful.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              Instantly generate custom, plant-based placeholder text for your mockups and prototypes. Choose your
+              preferred length and format to keep your{' '}
+              <Link
+                href="https://developer.mozilla.org/en-US/docs/Learn/HTML"
+                aria-label="web design — Learn about HTML for web design"
+              >
+                web design
+              </Link>{' '}
+              projects fresh, ethical, and meaningful.
+            </p>
+          </RevealOnScroll>
 
-          <div className="border-border mt-8 rounded-3xl border bg-white p-6 md:p-8">
-            {/* Generator Form */}
-            <IpsumForm setOutput={setOutput} />
+          <RevealOnScroll delay={0.1}>
+            <div className="border-border mt-8 rounded-3xl border bg-white p-6 md:p-8">
+              {/* Generator Form */}
+              <IpsumForm setOutput={setOutput} />
 
-            {/* Display Form Output */}
-            {output && (
-              <div className="mt-8 space-y-4" data-nosnippet>
-                <div className="flex items-start justify-between gap-12">
-                  <div className="space-y-0.5">
-                    <h2 id="output" className="mb-1 text-xl font-semibold">
-                      Output:
-                    </h2>
-                    <p className="text-muted-foreground font-mono text-xs font-medium">{getOutputSummary(output)}</p>
+              {/* Display Form Output */}
+              {output && (
+                <div className="mt-8 space-y-4" data-nosnippet>
+                  <div className="flex items-start justify-between gap-12">
+                    <div className="space-y-0.5">
+                      <h2 id="output" className="mb-1 text-xl font-semibold">
+                        Output:
+                      </h2>
+                      <p className="text-muted-foreground font-mono text-xs font-medium">{getOutputSummary(output)}</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Button
+                        size="sm"
+                        variant="secondary"
+                        onClick={handleCopyToClipboard}
+                        className="min-w-20"
+                        aria-label={copied ? 'Text copied to clipboard' : 'Copy text to clipboard'}
+                      >
+                        {copied ? 'Copied!' : 'Copy'}
+                      </Button>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      onClick={handleCopyToClipboard}
-                      className="min-w-20"
-                      aria-label={copied ? 'Text copied to clipboard' : 'Copy text to clipboard'}
-                    >
-                      {copied ? 'Copied!' : 'Copy'}
-                    </Button>
+
+                  <div
+                    className={cn(
+                      'bg-input/20 border-border space-y-4 rounded-3xl border p-6 font-mono text-sm',
+                      calculateParagraphs(output) > 4 && 'max-h-96 overflow-y-auto'
+                    )}
+                    aria-live="polite"
+                    aria-atomic="true"
+                  >
+                    {output.split('\n').map((line, index) => (
+                      <p key={index}>{line}</p>
+                    ))}
                   </div>
                 </div>
-
-                <div
-                  className={cn(
-                    'bg-input/20 border-border space-y-4 rounded-3xl border p-6 font-mono text-sm',
-                    calculateParagraphs(output) > 4 && 'max-h-96 overflow-y-auto'
-                  )}
-                  aria-live="polite"
-                  aria-atomic="true"
-                >
-                  {output.split('\n').map((line, index) => (
-                    <p key={index}>{line}</p>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>

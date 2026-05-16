@@ -4,6 +4,7 @@ import Link from '@/components/composites/Link';
 import SectionHeader from '@/components/composites/SectionHeader';
 import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
+import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
 /**
  * This component renders the introduction section for the VS Code Extension page.
@@ -23,38 +24,41 @@ export default function Introduction(): JSX.Element {
           tagline="Overview"
           number={1}
         >
-          <p>
-            The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight, productivity-focused tool designed for
-            developers and designers. It enables you to insert vegan-themed placeholder text directly into your{' '}
-            <Link href="https://code.visualstudio.com/" aria-label="Visual Studio Code — Visit the official website">
-              Visual Studio Code
-            </Link>{' '}
-            editor without interrupting your workflow.
-          </p>
+          <RevealOnScroll delay={0}>
+            <p>
+              The <strong>Vegan Ipsum VS Code Extension</strong> is a lightweight, productivity-focused tool designed
+              for developers and designers. It enables you to insert vegan-themed placeholder text directly into your{' '}
+              <Link href="https://code.visualstudio.com/" aria-label="Visual Studio Code — Visit the official website">
+                Visual Studio Code
+              </Link>{' '}
+              editor without interrupting your workflow.
+            </p>
 
-          <p>
-            Whether you are prototyping web layouts, building vegan blogs, or creating sustainable product mockups, this
-            extension provides meaningful filler content instantly. It serves as a cruelty-free alternative to standard
-            dummy text generators, right inside your{' '}
-            <Link
-              href="https://en.wikipedia.org/wiki/Integrated_development_environment"
-              aria-label="IDE — Learn about integrated development environments"
-            >
-              IDE
-            </Link>
-            .
-          </p>
+            <p>
+              Whether you are prototyping web layouts, building vegan blogs, or creating sustainable product mockups,
+              this extension provides meaningful filler content instantly. It serves as a cruelty-free alternative to
+              standard dummy text generators, right inside your{' '}
+              <Link
+                href="https://en.wikipedia.org/wiki/Integrated_development_environment"
+                aria-label="IDE — Learn about integrated development environments"
+              >
+                IDE
+              </Link>
+              .
+            </p>
 
-          <p>
-            The extension integrates seamlessly with the{' '}
-            <Link
-              href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
-              aria-label="Command Palette — Learn how to use the VS Code Command Palette"
-            >
-              Command Palette
-            </Link>{' '}
-            and supports multiple output formats, such as plain text and HTML, to suit various development requirements.
-          </p>
+            <p>
+              The extension integrates seamlessly with the{' '}
+              <Link
+                href="https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette"
+                aria-label="Command Palette — Learn how to use the VS Code Command Palette"
+              >
+                Command Palette
+              </Link>{' '}
+              and supports multiple output formats, such as plain text and HTML, to suit various development
+              requirements.
+            </p>
+          </RevealOnScroll>
         </SectionHeader>
       </Container>
     </Section>
