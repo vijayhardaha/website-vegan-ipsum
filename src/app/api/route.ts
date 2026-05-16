@@ -5,8 +5,18 @@ import { NextResponse } from 'next/server';
  */
 export const runtime = 'edge';
 
-// Types for query parameters
+/**
+ * Unit type for lorem generation.
+ *
+ * @type {LoremUnit}
+ */
 type LoremUnit = 'paragraphs' | 'sentences' | 'words';
+
+/**
+ * Output format for lorem text.
+ *
+ * @type {LoremFormat}
+ */
 type LoremFormat = 'plain' | 'html';
 
 const VALID_UNITS: LoremUnit[] = ['paragraphs', 'sentences', 'words'];

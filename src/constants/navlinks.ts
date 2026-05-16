@@ -1,7 +1,7 @@
 /**
- * Defines the structure of a navigation link and the arrays of
- * links for the header and footer of the website.
+ * Navigation link structure for header and footer.
  *
+ * @type {NavLink}
  * @property {string} label - The display text for the link.
  * @property {string} href - The URL the link points to.
  */
