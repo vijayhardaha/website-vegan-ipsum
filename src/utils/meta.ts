@@ -2,10 +2,13 @@ import { SITE_METADATA, SITE_CONFIG } from '@/constants/seo';
 import { siteUrl, getPermaLink } from '@/utils/seo';
 
 /**
- * Props for generating metadata, including title, description, and slug for URL construction.
+ * Props for generating metadata, including title, description, and path for SEO.
  *
- * @example
- * const params: SeoProps = { title: 'About', description: 'About page', slug: 'about' };
+ * @type {SeoProps}
+ * @property {string} title - Page title
+ * @property {string} description - Page description
+ * @property {string} [path] - URL slug to generate the canonical URL
+ * @property {boolean} [postfix] - Whether to append the site name postfix
  */
 export interface SeoProps {
   title: string;
@@ -14,6 +17,11 @@ export interface SeoProps {
   postfix?: boolean;
 }
 
+/**
+ * A generic object type with string keys and any values.
+ *
+ * @type {AnyObject}
+ */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyObject = Record<string, any>;
 

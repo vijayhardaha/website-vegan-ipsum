@@ -3,6 +3,13 @@ import { personSchema, organizationSchema, webSiteSchema } from '@vijayhardaha/s
 import { SITE_CONFIG } from '@/constants/seo';
 import { siteUrl } from '@/utils/seo';
 
+/**
+ * Breadcrumb item structure.
+ *
+ * @type {BreadcrumbItem}
+ * @property {string} name - Name of the page or breadcrumb label
+ * @property {string} path - URL path for the breadcrumb link
+ */
 export interface BreadcrumbItem {
   name: string;
   path: string;
