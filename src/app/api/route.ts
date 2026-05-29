@@ -56,24 +56,27 @@ function validateUnits(units: string): { valid: true } | { valid: false; error: 
  *
  * @param {number} count - The number of units to generate (e.g., paragraphs, sentences, or words).
  * @param {LoremUnit} units - The type of units to generate ('paragraphs', 'sentences', or 'words').
- * @param {LoremFormat} format - The format of the output ('plain' or 'html').
  *
  * @returns {Promise<NextResponse>} A JSON response containing the generated text.
  */
+function validateParams(count: number, units: LoremUnit): string | null {
+  const countValidation = validateCount(count);
+  if (!countValidation.valid) return countValidation.error;
+
+  const unitsValidation = validateUnits(units);
+  if (!unitsValidation.valid) return unitsValidation.error;
+
+  return null;
+}
+
 async function generateIpsum(count: number, units: LoremUnit, format: LoremFormat): Promise<NextResponse> {
+  const validationError = validateParams(count, units);
+  if (validationError) {
+    return NextResponse.json({ error: validationError }, { status: 400 });
+  }
+
   try {
-    const countValidation = validateCount(count);
-    if (!countValidation.valid) {
-      return NextResponse.json({ error: countValidation.error }, { status: 400 });
-    }
-
-    const unitsValidation = validateUnits(units);
-    if (!unitsValidation.valid) {
-      return NextResponse.json({ error: unitsValidation.error }, { status: 400 });
-    }
-
     const { veganIpsum } = await import('vegan-ipsum');
-
     const ipsumText = veganIpsum({ count, units, format });
 
     return NextResponse.json({ text: ipsumText });
