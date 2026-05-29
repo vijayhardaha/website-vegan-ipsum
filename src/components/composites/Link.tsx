@@ -114,6 +114,7 @@ interface LinkProps extends Omit<ComponentPropsWithoutRef<typeof NextLink>, 'hre
  *
  * @returns {JSX.Element} The rendered link component.
  */
+// fallow-ignore-next-line complexity
 export default function Link({
   href,
   className,
@@ -151,44 +152,50 @@ export default function Link({
 
   const linkClasses = buildLinkClasses(hoverEffect);
 
-  // Hash link with smooth scroll
-  if (linkType === 'hash') {
-    return (
-      <NextLink
-        href={href}
-        scroll={false}
-        onClick={handleHashClick}
-        className={cn(linkClasses, className)}
-        aria-label={ariaLabel}
-        {...props}
-      >
-        {children}
-      </NextLink>
-    );
-  }
+  const renderHashLink = (): JSX.Element => (
+    <NextLink
+      href={href}
+      scroll={false}
+      onClick={handleHashClick}
+      className={cn(linkClasses, className)}
+      aria-label={ariaLabel}
+      {...props}
+    >
+      {children}
+    </NextLink>
+  );
 
-  // External link with security attributes
-  if (linkType === 'external') {
-    return (
-      <NextLink
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={cn(linkClasses, 'relative inline-flex items-center gap-px', className)}
-        aria-label={ariaLabel}
-        onClick={onClick}
-        {...props}
-      >
-        <span className="leading-tight">{children}</span>
-        {linkLine && <Icon name="arrowOutward" className="relative top-px text-inherit" />}
-      </NextLink>
-    );
-  }
+  const renderExternalLink = (): JSX.Element => (
+    <NextLink
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(linkClasses, 'relative inline-flex items-center gap-px', className)}
+      aria-label={ariaLabel}
+      onClick={onClick}
+      {...props}
+    >
+      <span className="leading-tight">{children}</span>
+      {linkLine && <Icon name="arrowOutward" className="relative top-px text-inherit" />}
+    </NextLink>
+  );
 
-  // Internal link (default)
-  return (
+  const renderInternalLink = (): JSX.Element => (
     <NextLink href={href} className={cn(linkClasses, className)} aria-label={ariaLabel} onClick={onClick} {...props}>
       {children}
     </NextLink>
   );
+
+  // Hash link with smooth scroll
+  if (linkType === 'hash') {
+    return renderHashLink();
+  }
+
+  // External link with security attributes
+  if (linkType === 'external') {
+    return renderExternalLink();
+  }
+
+  // Internal link (default)
+  return renderInternalLink();
 }
