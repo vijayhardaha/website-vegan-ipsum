@@ -22,7 +22,7 @@ export interface SeoProps {
  *
  * @type {AnyObject}
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 type AnyObject = Record<string, any>;
 
 /**
