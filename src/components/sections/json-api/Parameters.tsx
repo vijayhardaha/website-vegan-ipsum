@@ -6,6 +6,79 @@ import Container from '@/components/primitives/Container';
 import InfoBox from '@/components/primitives/InfoBox';
 import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
+const QUERY_PARAMS = [
+  {
+    name: 'count',
+    type: 'number',
+    required: 'No',
+    default: '3',
+    description: (
+      <>
+        The number of units to generate. Accepts an integer between <code>1</code> and <code>100</code>.
+      </>
+    ),
+  },
+  {
+    name: 'units',
+    type: 'string',
+    required: 'No',
+    default: 'paragraphs',
+    description: (
+      <>
+        The type of text unit. Accepted values are <code>paragraphs</code>, <code>sentences</code>, or{' '}
+        <code>words</code>.
+      </>
+    ),
+  },
+  {
+    name: 'format',
+    type: 'string',
+    required: 'No',
+    default: 'plain',
+    description: (
+      <>
+        The output format. Use <code>plain</code> for raw text strings or <code>html</code> to wrap paragraphs in{' '}
+        <code>&lt;p&gt;</code> tags.
+      </>
+    ),
+  },
+];
+
+function ParamsTable(): JSX.Element {
+  return (
+    <div className="table-container mt-8">
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {QUERY_PARAMS.map((param) => (
+            <tr key={param.name}>
+              <td>
+                <code>{param.name}</code>
+              </td>
+              <td>
+                <code>{param.type}</code>
+              </td>
+              <td>{param.required}</td>
+              <td>
+                <code>{param.default}</code>
+              </td>
+              <td>{param.description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 /**
  * This component renders the "Parameters" section of the Vegan Ipsum JSON API documentation.
  *
@@ -32,68 +105,7 @@ export default function Parameters(): JSX.Element {
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.1}>
-            <div className="table-container mt-8">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Required</th>
-                    <th>Default</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <code>count</code>
-                    </td>
-                    <td>
-                      <code>number</code>
-                    </td>
-                    <td>No</td>
-                    <td>
-                      <code>3</code>
-                    </td>
-                    <td>
-                      The number of units to generate. Accepts an integer between <code>1</code> and <code>100</code>.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <code>units</code>
-                    </td>
-                    <td>
-                      <code>string</code>
-                    </td>
-                    <td>No</td>
-                    <td>
-                      <code>paragraphs</code>
-                    </td>
-                    <td>
-                      The type of text unit. Accepted values are <code>paragraphs</code>, <code>sentences</code>, or{' '}
-                      <code>words</code>.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <code>format</code>
-                    </td>
-                    <td>
-                      <code>string</code>
-                    </td>
-                    <td>No</td>
-                    <td>
-                      <code>plain</code>
-                    </td>
-                    <td>
-                      The output format. Use <code>plain</code> for raw text strings or <code>html</code> to wrap
-                      paragraphs in <code>&lt;p&gt;</code> tags.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <ParamsTable />
           </RevealOnScroll>
 
           <RevealOnScroll delay={0.2}>
