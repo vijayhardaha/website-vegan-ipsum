@@ -1,6 +1,6 @@
 'use client';
 
-import { type SubmitEvent, type JSX, useCallback, useEffect, useRef, useState } from 'react';
+import { type JSX, useCallback, useEffect, useRef, useState, type ChangeEvent, type SubmitEvent } from 'react';
 
 import Button from '@/components/primitives/Button';
 import Input from '@/components/primitives/Input';
@@ -38,6 +38,122 @@ function handleFetchError(cancelled: boolean, setOutput: (output: string) => voi
   setOutput('Error generating text. Please try again.');
 }
 
+function useIpsumFetch(setOutput: (output: string) => void) {
+  const [loading, setLoading] = useState<boolean>(false);
+  const abortControllerRef = useRef<AbortController | null>(null);
+
+  const handleGenerate = useCallback(
+    async (type: LoremType, amt: string): Promise<void> => {
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+
+      const controller = new AbortController();
+      abortControllerRef.current = controller;
+      const signal = controller.signal;
+
+      setLoading(true);
+
+      try {
+        const text = await fetchIpsum(type, amt, signal);
+
+        if (!signal.aborted) {
+          setOutput(text);
+        }
+      } catch (error) {
+        handleFetchError(false, setOutput, error);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [setOutput]
+  );
+
+  return { loading, abortControllerRef, setLoading, handleGenerate };
+}
+
+/**
+ * Props for the FormInput component.
+ *
+ * @type {FormInputProps}
+ * @property {string} amount - Current amount value.
+ * @property {(e: ChangeEvent<HTMLInputElement>) => void} onAmountChange - Change handler.
+ */
+interface FormInputProps {
+  amount: string;
+  onAmountChange: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+/**
+ * Renders the number of units input field.
+ *
+ * @param {FormInputProps} props - The component props.
+ *
+ * @returns {JSX.Element} The rendered input field.
+ */
+function FormInput({ amount, onAmountChange }: FormInputProps): JSX.Element {
+  return (
+    <div className="flex-1 space-y-2">
+      <Label htmlFor="form-amount" className="text-secondary-800 mb-2 block text-xs font-bold tracking-wide uppercase">
+        Number of units
+      </Label>
+      <Input
+        id="form-amount"
+        className="w-full"
+        type="number"
+        min="1"
+        max="30"
+        step="1"
+        value={amount}
+        onChange={onAmountChange}
+        aria-label="Number of units"
+        required
+      />
+    </div>
+  );
+}
+
+/**
+ * Props for the FormSelect component.
+ *
+ * @type {FormSelectProps}
+ * @property {LoremType} selectedType - Currently selected type.
+ * @property {(value: LoremType) => void} onTypeChange - Type change callback.
+ */
+interface FormSelectProps {
+  selectedType: LoremType;
+  onTypeChange: (value: LoremType) => void;
+}
+
+/**
+ * Renders the generate-as type select dropdown.
+ *
+ * @param {FormSelectProps} props - The component props.
+ *
+ * @returns {JSX.Element} The rendered select dropdown.
+ */
+function FormSelect({ selectedType, onTypeChange }: FormSelectProps): JSX.Element {
+  return (
+    <div className="flex-1 space-y-2">
+      <Label htmlFor="form-type" className="text-secondary-800 mb-2 block text-xs font-bold tracking-wide uppercase">
+        Generate As
+      </Label>
+      <Select
+        id="form-type"
+        className="w-full"
+        value={selectedType}
+        options={[
+          { label: 'Paragraphs', value: 'paragraphs' },
+          { label: 'Sentences', value: 'sentences' },
+          { label: 'Words', value: 'words' },
+        ]}
+        onValueChange={(value) => onTypeChange(value as LoremType)}
+        required
+      />
+    </div>
+  );
+}
+
 /**
  * IpsumForm component for generating vegan ipsum text based on user input.
  *
@@ -48,49 +164,15 @@ function handleFetchError(cancelled: boolean, setOutput: (output: string) => voi
 export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
   const [selectedType, setSelectedType] = useState<LoremType>('paragraphs');
   const [amount, setAmount] = useState<string>('3');
-  const [loading, setLoading] = useState<boolean>(false);
 
-  // Ref to store the AbortController across renders
-  const abortControllerRef = useRef<AbortController | null>(null);
-
-  /**
-   * Handles the generation of vegan ipsum text by making an API call.
-   * Updates the output or sets an error message in case of failure.
-   */
-  const handleGenerate = useCallback(
-    async (type: LoremType, amount: string): Promise<void> => {
-      if (abortControllerRef.current) {
-        abortControllerRef.current.abort(); // Abort any ongoing request
-      }
-
-      const controller = new AbortController();
-      abortControllerRef.current = controller;
-      const signal = controller.signal;
-
-      setLoading(true); // Set loading state
-
-      try {
-        const text = await fetchIpsum(type, amount, signal);
-
-        // Only update state if this specific request wasn't aborted
-        if (!signal.aborted) {
-          setOutput(text);
-        }
-      } catch (error) {
-        handleFetchError(false, setOutput, error);
-      } finally {
-        setLoading(false);
-      }
-    },
-    [setOutput, setLoading]
-  );
+  const { loading, handleGenerate } = useIpsumFetch(setOutput);
 
   useEffect(() => {
     let cancelled = false;
 
     const initGenerate = async () => {
       const controller = new AbortController();
-      abortControllerRef.current = controller;
+
       const signal = controller.signal;
 
       try {
@@ -108,8 +190,6 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
 
     return () => {
       cancelled = true;
-      abortControllerRef.current?.abort();
-      abortControllerRef.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -118,7 +198,7 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
    * Handles the form submission event.
    * Prevents default behavior and triggers the text generation process.
    *
-   * @param {SubmitEvent<HTMLFormElement>} event - The form submission event
+   * @param {SubmitEvent} event - The form submission event
    */
   const handleSubmit = (event: SubmitEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -132,47 +212,8 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
       className="flex flex-col flex-wrap gap-4 md:flex-row md:space-y-0"
     >
       <div className="flex flex-1 items-center gap-4">
-        <div className="flex-1 space-y-2">
-          <Label
-            htmlFor="form-amount"
-            className="text-secondary-800 mb-2 block text-xs font-bold tracking-wide uppercase"
-          >
-            Number of units
-          </Label>
-          <Input
-            id="form-amount"
-            className="w-full"
-            type="number"
-            min="1"
-            max="30"
-            step="1"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-            aria-label="Number of units"
-            required
-          />
-        </div>
-
-        <div className="flex-1 space-y-2">
-          <Label
-            htmlFor="form-type"
-            className="text-secondary-800 mb-2 block text-xs font-bold tracking-wide uppercase"
-          >
-            Generate As
-          </Label>
-          <Select
-            id="form-type"
-            className="w-full"
-            value={selectedType}
-            options={[
-              { label: 'Paragraphs', value: 'paragraphs' },
-              { label: 'Sentences', value: 'sentences' },
-              { label: 'Words', value: 'words' },
-            ]}
-            onValueChange={(value) => setSelectedType(value as 'paragraphs' | 'sentences' | 'words')}
-            required
-          />
-        </div>
+        <FormInput amount={amount} onAmountChange={(e) => setAmount(e.target.value)} />
+        <FormSelect selectedType={selectedType} onTypeChange={setSelectedType} />
       </div>
 
       <Button type="submit" disabled={loading} className="md:mt-6 md:w-50" size="lg">
