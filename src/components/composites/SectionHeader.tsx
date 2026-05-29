@@ -10,6 +10,7 @@ import { cn } from '@/utils/classnames';
  *
  * @returns {string} The concatenated text content.
  */
+// fallow-ignore-next-line complexity
 function extractTextContent(node: ReactNode): string {
   // Primitive types that can be directly converted to string
   if (typeof node === 'string' || typeof node === 'number') {
@@ -78,10 +79,60 @@ export interface SectionHeaderProps {
 }
 
 /**
+ * Props for the TaglineBlock component.
+ *
+ * @type {TaglineBlockProps}
+ * @property {ReactNode} tagline - Tagline text.
+ * @property {string | number} [number] - Optional number suffix.
+ * @property {boolean} arrow - Whether to show decorative arrow.
+ * @property {string} [taglineClassName] - Additional classes.
+ */
+interface TaglineBlockProps {
+  tagline: ReactNode;
+  number?: string | number;
+  arrow: boolean;
+  taglineClassName?: string;
+}
+
+/**
+ * Renders the tagline with optional number suffix and decorative arrow.
+ *
+ * @param {TaglineBlockProps} props - The component props.
+ *
+ * @returns {JSX.Element | null} The rendered tagline element.
+ */
+function TaglineBlock({ tagline, number, arrow, taglineClassName }: TaglineBlockProps): JSX.Element | null {
+  if (!tagline) return null;
+
+  return (
+    <p
+      className={cn(
+        'text-primary mb-2 inline-flex items-center gap-1 text-[11px] font-medium tracking-[.22em] uppercase',
+        'inline-flex items-center gap-3',
+        arrow && 'before:inline-block before:h-px before:w-4.5 before:bg-current before:content-[""]',
+        taglineClassName
+      )}
+    >
+      {tagline}
+      {number != null && <span className="ml-1">·&nbsp;&nbsp;Rº {String(number).padStart(2, '0')}</span>}
+    </p>
+  );
+}
+
+/**
  * Renders a section header with an optional tagline, heading, and content area.
  * Provides a consistent layout and styling for section introductions throughout the application.
  *
- * @param {SectionHeaderProps} props - The properties for the SectionHeader component.
+ * @param {object} props - The properties for the SectionHeader component.
+ * @param {ReactNode} [props.tagline] - Tagline text displayed above the heading.
+ * @param {ReactNode} props.heading - Main heading text.
+ * @param {string | number} [props.number] - Optional number displayed as "Rº NN".
+ * @param {boolean} [props.arrow] - Whether to show decorative arrow before tagline.
+ * @param {string} [props.className] - Additional CSS classes for container.
+ * @param {string} [props.taglineClassName] - Additional CSS classes for tagline.
+ * @param {string} [props.headingClassName] - Additional CSS classes for heading.
+ * @param {string} [props.headingId] - Optional heading id override.
+ * @param {ReactNode} props.children - Children elements (typically paragraphs).
  *
  * @returns {JSX.Element} The rendered section header component.
  */
@@ -100,19 +151,7 @@ export default function SectionHeader({
 
   return (
     <div className={cn('', className)}>
-      {tagline && (
-        <p
-          className={cn(
-            'text-primary mb-2 inline-flex items-center gap-1 text-[11px] font-medium tracking-[.22em] uppercase',
-            'inline-flex items-center gap-3',
-            arrow && 'before:inline-block before:h-px before:w-[18px] before:bg-current before:content-[""]',
-            taglineClassName
-          )}
-        >
-          {tagline}
-          {number != null && <span className="ml-1">·&nbsp;&nbsp;Rº {String(number).padStart(2, '0')}</span>}
-        </p>
-      )}
+      <TaglineBlock tagline={tagline} number={number} arrow={arrow} taglineClassName={taglineClassName} />
 
       <h2 id={resolvedHeadingId} className={cn('mb-4 text-3xl md:text-4xl', headingClassName)}>
         {heading}
