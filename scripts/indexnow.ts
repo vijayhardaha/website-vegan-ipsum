@@ -74,8 +74,26 @@ async function submitIndexNowChunk(urlChunk: string[]): Promise<{ ok: boolean; m
 /**
  * Submits sitemap URLs to IndexNow in chunks for faster search engine indexing.
  *
+ * @param {string[]} urls - Array of URLs to submit.
+ * @param {ReturnType<typeof ora>} spinner - Loading spinner for progress indication.
+ *
  * @returns {Promise<void>} Resolves when all URL chunks have been processed.
  */
+async function submitChunks(urls: string[], spinner: ReturnType<typeof ora>): Promise<void> {
+  for (let i = 0; i < urls.length; i += CHUNK_SIZE) {
+    const chunk = urls.slice(i, i + CHUNK_SIZE);
+    spinner.start('Submitting URLs ' + (i + 1) + ' to ' + Math.min(i + CHUNK_SIZE, urls.length));
+
+    const result = await submitIndexNowChunk(chunk);
+
+    if (result.ok) {
+      spinner.succeed(result.message);
+    } else {
+      spinner.fail(result.message);
+    }
+  }
+}
+
 async function main(): Promise<void> {
   const spinner = ora('Reading sitemap...').start();
 
@@ -105,18 +123,7 @@ async function main(): Promise<void> {
   spinner.succeed('Found ' + urls.length + ' URLs');
 
   // Submit URLs in chunks to avoid overly large payloads.
-  for (let i = 0; i < urls.length; i += CHUNK_SIZE) {
-    const chunk = urls.slice(i, i + CHUNK_SIZE);
-    spinner.start('Submitting URLs ' + (i + 1) + ' to ' + Math.min(i + CHUNK_SIZE, urls.length));
-
-    const result = await submitIndexNowChunk(chunk);
-
-    if (result.ok) {
-      spinner.succeed(result.message);
-    } else {
-      spinner.fail(result.message);
-    }
-  }
+  await submitChunks(urls, spinner);
 
   // Final status message.
   ora('All URLs processed!').succeed();
