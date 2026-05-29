@@ -12,23 +12,11 @@ import Button from '@/components/primitives/Button';
 import { HEADER_NAV_LINKS, type NavLink } from '@/constants/navlinks';
 import { cn } from '@/utils/classnames';
 
-/**
- * Header component for the website.
- * Displays the website's logo and a navigation menu with links.
- *
- * @returns {JSX.Element} The rendered header component.
- */
-export default function Header(): JSX.Element {
-  const pathname: string = usePathname();
+function useMobileMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
-  /**
-   * Effect hook to handle clicks outside the menu.
-   * Closes the mobile menu if a click occurs outside of it.
-   * Cleans up the event listener on component unmount.
-   */
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -42,28 +30,75 @@ export default function Header(): JSX.Element {
     };
   }, []);
 
-  // Manage focus when mobile menu opens/closes to improve keyboard UX
   useEffect(() => {
     if (isMobileMenuOpen) {
-      // Focus the first focusable element inside the menu (if any)
       const firstFocusable = menuRef.current?.querySelector(
         "a, button, input, select, textarea, [tabindex]:not([tabindex='-1'])"
       ) as HTMLElement | null;
       firstFocusable?.focus();
     } else {
-      // Return focus to the toggle button when the menu closes
       toggleButtonRef.current?.focus();
     }
   }, [isMobileMenuOpen]);
 
-  /**
-   * Determines if a given path is the active route.
-   *
-   * @param {string} path - The path to check against the current pathname.
-   *
-   * @returns {boolean} `true` if the path matches the current pathname, otherwise `false`.
-   */
+  return { isMobileMenuOpen, setIsMobileMenuOpen, menuRef, toggleButtonRef };
+}
+
+/**
+ * Props for the NavLinks component.
+ *
+ * @type {NavLinksProps}
+ * @property {string} pathname - Current pathname for active state.
+ * @property {() => void} onLinkClick - Callback when a nav link is clicked.
+ */
+interface NavLinksProps {
+  pathname: string;
+  onLinkClick: () => void;
+}
+
+/**
+ * Renders the navigation links list.
+ *
+ * @param {NavLinksProps} props - The component props.
+ *
+ * @returns {JSX.Element} The rendered navigation list.
+ */
+function NavLinks({ pathname, onLinkClick }: NavLinksProps): JSX.Element {
   const isActive = (path: string): boolean => pathname === path;
+
+  return (
+    <ul className="flex flex-col space-y-4 p-4 md:px-6 lg:flex-row lg:space-y-0 lg:space-x-5 lg:p-0">
+      {HEADER_NAV_LINKS.map((link: NavLink) => (
+        <li key={link.href}>
+          <Link
+            href={link.href}
+            className={cn(
+              'inline-flex items-center text-xs font-semibold tracking-wide uppercase',
+              'hover:text-primary',
+              { 'text-primary decoration-current': isActive(link.href) }
+            )}
+            aria-label={link.label}
+            aria-current={isActive(link.href) ? 'page' : undefined}
+            onClick={onLinkClick}
+            hoverEffect="border"
+          >
+            {link.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/**
+ * Header component for the website.
+ * Displays the website's logo and a navigation menu with links.
+ *
+ * @returns {JSX.Element} The rendered header component.
+ */
+export default function Header(): JSX.Element {
+  const pathname: string = usePathname();
+  const { isMobileMenuOpen, setIsMobileMenuOpen, menuRef, toggleButtonRef } = useMobileMenu();
 
   return (
     <header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
@@ -101,26 +136,7 @@ export default function Header(): JSX.Element {
                 isMobileMenuOpen ? 'block' : 'hidden'
               )}
             >
-              <ul className="flex flex-col space-y-4 p-4 md:px-6 lg:flex-row lg:space-y-0 lg:space-x-5 lg:p-0">
-                {HEADER_NAV_LINKS.map((link: NavLink) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        'inline-flex items-center text-xs font-semibold tracking-wide uppercase',
-                        'hover:text-primary',
-                        { 'text-primary decoration-current': isActive(link.href) }
-                      )}
-                      aria-label={link.label}
-                      aria-current={isActive(link.href) ? 'page' : undefined}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      hoverEffect="border"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <NavLinks pathname={pathname} onLinkClick={() => setIsMobileMenuOpen(false)} />
             </nav>
           </div>
         </div>
