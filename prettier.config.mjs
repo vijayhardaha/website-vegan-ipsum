@@ -9,13 +9,6 @@
  * ======================================================================
  */
 
-import defaultConfig from '@vijayhardaha/dev-config/prettier';
-
-const config = {
-  ...defaultConfig,
-
-  // ---- Plugins ----
-  plugins: [...(defaultConfig.plugins || []), 'prettier-plugin-tailwindcss'],
-};
+import config from '@vijayhardaha/dev-config/prettier';
 
 export default config;
