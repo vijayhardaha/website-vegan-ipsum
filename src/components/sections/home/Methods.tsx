@@ -8,18 +8,6 @@ import Icon from '@/components/primitives/Icon';
 import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 import type { IconName } from '@/constants/icons';
 
-/**
- * Method card item for home page.
- *
- * @type {Card}
- * @property {string} title - Method title
- * @property {string} text - Method description
- * @property {IconName} icon - Icon for the method
- * @property {string} link - Destination URL
- * @property {string} ariaLabel - Accessible label for the link
- * @property {string} buttonText - Text on the action button
- * @property {boolean} [buttonIcon] - Whether to show an icon on the button
- */
 interface Card {
   title: string;
   text: string;
@@ -30,10 +18,7 @@ interface Card {
   buttonIcon?: boolean;
 }
 
-/**
- * An array of card details used to render the cards in the component.
- */
-const cards: Card[] = [
+const CARDS: Card[] = [
   {
     title: 'Web Interface',
     text: 'Generate vegan placeholder text in your browser. No installation required, just click and copy.',
@@ -90,6 +75,63 @@ const cards: Card[] = [
 ];
 
 /**
+ * Props for the MethodCard component.
+ *
+ * @type {MethodCardProps}
+ * @property {Card} card - The card data to display.
+ * @property {number} index - Card index for scroll animation delay.
+ */
+interface MethodCardProps {
+  card: Card;
+  index: number;
+}
+
+/**
+ * Renders a single method card with icon, title, description, and link.
+ *
+ * @param {MethodCardProps} props - The component props.
+ *
+ * @returns {JSX.Element} The rendered method card.
+ */
+function MethodCard({ card, index }: MethodCardProps): JSX.Element {
+  return (
+    <RevealOnScroll delay={0.1 + index * 0.05}>
+      <div className="border-border relative overflow-hidden rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8">
+        <div className="flex items-start gap-4">
+          <div className="bg-primary-muted text-primary mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
+            <Icon name={card.icon} />
+          </div>
+          <div>
+            <h3 className="text-primary-solid mb-1 text-lg">{card.title}</h3>
+            <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{card.text}</p>
+            <Link
+              href={card.link}
+              scrollOffset={68}
+              className="text-primary relative inline-flex items-center gap-0.5 text-sm font-medium"
+              aria-label={card.ariaLabel}
+              hoverEffect="border"
+            >
+              {card.buttonText}
+              {card?.buttonIcon && <Icon name="arrowRight" />}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </RevealOnScroll>
+  );
+}
+
+function MethodGrid(): JSX.Element {
+  return (
+    <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+      {CARDS.map((card, index) => (
+        <MethodCard key={index} card={card} index={index} />
+      ))}
+    </div>
+  );
+}
+
+/**
  * This component displays various ways to use the
  * Vegan Ipsum generator, including a web interface, API, and developer tools.
  *
@@ -126,34 +168,7 @@ export default function Methods(): JSX.Element {
             </p>
           </RevealOnScroll>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {cards.map((card, index: number) => (
-              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
-                <div className="border-border relative overflow-hidden rounded-3xl border bg-white p-6 shadow-md transition-all hover:shadow-lg md:p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary-muted text-primary mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-3xl text-3xl">
-                      <Icon name={card.icon} />
-                    </div>
-                    <div>
-                      <h3 className="text-primary-solid mb-1 text-lg">{card.title}</h3>
-                      <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{card.text}</p>
-
-                      <Link
-                        href={card.link}
-                        scrollOffset={68}
-                        className="text-primary relative inline-flex items-center gap-0.5 text-sm font-medium"
-                        aria-label={card.ariaLabel}
-                        hoverEffect="border"
-                      >
-                        {card.buttonText}
-                        {card?.buttonIcon && <Icon name="arrowRight" />}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
+          <MethodGrid />
         </SectionHeader>
       </Container>
     </Section>
