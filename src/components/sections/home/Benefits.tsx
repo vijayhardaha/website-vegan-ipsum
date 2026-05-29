@@ -5,6 +5,43 @@ import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
+const BENEFITS_LIST = [
+  {
+    title: 'Authentic Brand Alignment',
+    text: 'Ensures your placeholder text reflects your vegan values and ethical commitment from the earliest design stages.',
+  },
+  {
+    title: 'Enhanced Storytelling',
+    text: 'Provides sustainability-focused content that creates an emotional connection with vegan and eco-conscious audiences.',
+  },
+  {
+    title: 'Meaningful Differentiation',
+    text: 'Replaces standard Lorem Ipsum with mission-aligned alternatives that help your projects stand out.',
+  },
+  {
+    title: 'Professional Quality',
+    text: 'Maintains high readability and design standards while promoting compassionate messaging.',
+  },
+  {
+    title: 'Audience Connection',
+    text: 'Engages eco-conscious communities through consistent plant-based themes in your mockups and prototypes.',
+  },
+];
+
+function BenefitsList(): JSX.Element {
+  return (
+    <ul className="list-disc space-y-2 pl-8">
+      {BENEFITS_LIST.map((item, index) => (
+        <li key={index}>
+          <span>
+            <strong className="text-primary-dark font-semibold">{item.title}</strong>: {item.text}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 /**
  * This component provides an introduction to the Vegan Ipsum
  * Generator, explaining what it is and its purpose.
@@ -39,37 +76,7 @@ export default function Benefits(): JSX.Element {
 
           <RevealOnScroll delay={0.1}>
             <h3 className="mb-4 text-lg">Key Benefits:</h3>
-
-            <ul className="list-disc space-y-2 pl-8">
-              {[
-                {
-                  title: 'Authentic Brand Alignment',
-                  text: 'Ensures your placeholder text reflects your vegan values and ethical commitment from the earliest design stages.',
-                },
-                {
-                  title: 'Enhanced Storytelling',
-                  text: 'Provides sustainability-focused content that creates an emotional connection with vegan and eco-conscious audiences.',
-                },
-                {
-                  title: 'Meaningful Differentiation',
-                  text: 'Replaces standard Lorem Ipsum with mission-aligned alternatives that help your projects stand out.',
-                },
-                {
-                  title: 'Professional Quality',
-                  text: 'Maintains high readability and design standards while promoting compassionate messaging.',
-                },
-                {
-                  title: 'Audience Connection',
-                  text: 'Engages eco-conscious communities through consistent plant-based themes in your mockups and prototypes.',
-                },
-              ].map((list, index) => (
-                <li key={index}>
-                  <span>
-                    <strong className="text-primary-dark font-semibold">{list.title}</strong>: {list.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <BenefitsList />
           </RevealOnScroll>
         </SectionHeader>
       </Container>
