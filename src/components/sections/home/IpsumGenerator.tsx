@@ -14,6 +14,69 @@ import { cn } from '@/utils/classnames';
 import { calculateParagraphs, getOutputSummary } from '@/utils/text-stats';
 
 /**
+ * Props for the OutputDisplay component.
+ *
+ * @type {OutputDisplayProps}
+ * @property {string} output - The generated text output.
+ * @property {boolean} copied - Whether text was copied.
+ * @property {() => void} onCopy - Copy handler callback.
+ */
+interface OutputDisplayProps {
+  output: string;
+  copied: boolean;
+  onCopy: () => void;
+}
+
+/**
+ * Displays the generated output with copy functionality.
+ *
+ * @param {OutputDisplayProps} props - The component props.
+ *
+ * @returns {JSX.Element | null} The rendered output display or null if empty.
+ */
+// fallow-ignore-next-line complexity
+function OutputDisplay({ output, copied, onCopy }: OutputDisplayProps): JSX.Element | null {
+  if (!output) return null;
+
+  return (
+    <div className="mt-8 space-y-4" data-nosnippet>
+      <div className="flex items-start justify-between gap-12">
+        <div className="space-y-0.5">
+          <h2 id="output" className="mb-1 text-xl font-semibold">
+            Output:
+          </h2>
+          <p className="text-muted-foreground font-mono text-xs font-medium">{getOutputSummary(output)}</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button
+            size="sm"
+            variant="secondary"
+            onClick={onCopy}
+            className="min-w-20"
+            aria-label={copied ? 'Text copied to clipboard' : 'Copy text to clipboard'}
+          >
+            {copied ? 'Copied!' : 'Copy'}
+          </Button>
+        </div>
+      </div>
+
+      <div
+        className={cn(
+          'bg-input/20 border-border space-y-4 rounded-3xl border p-6 font-mono text-sm',
+          calculateParagraphs(output) > 4 && 'max-h-96 overflow-y-auto'
+        )}
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {output.split('\n').map((line, index) => (
+          <p key={index}>{line}</p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/**
  * IpsumGenerator component for displaying the main introduction and call-to-action buttons.
  *
  * @returns {JSX.Element} The rendered IpsumGenerator component.
@@ -65,46 +128,8 @@ export default function IpsumGenerator(): JSX.Element {
 
           <RevealOnScroll delay={0.1}>
             <div className="border-border mt-8 rounded-3xl border bg-white p-6 md:p-8">
-              {/* Generator Form */}
               <IpsumForm setOutput={setOutput} />
-
-              {/* Display Form Output */}
-              {output && (
-                <div className="mt-8 space-y-4" data-nosnippet>
-                  <div className="flex items-start justify-between gap-12">
-                    <div className="space-y-0.5">
-                      <h2 id="output" className="mb-1 text-xl font-semibold">
-                        Output:
-                      </h2>
-                      <p className="text-muted-foreground font-mono text-xs font-medium">{getOutputSummary(output)}</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Button
-                        size="sm"
-                        variant="secondary"
-                        onClick={handleCopyToClipboard}
-                        className="min-w-20"
-                        aria-label={copied ? 'Text copied to clipboard' : 'Copy text to clipboard'}
-                      >
-                        {copied ? 'Copied!' : 'Copy'}
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div
-                    className={cn(
-                      'bg-input/20 border-border space-y-4 rounded-3xl border p-6 font-mono text-sm',
-                      calculateParagraphs(output) > 4 && 'max-h-96 overflow-y-auto'
-                    )}
-                    aria-live="polite"
-                    aria-atomic="true"
-                  >
-                    {output.split('\n').map((line, index) => (
-                      <p key={index}>{line}</p>
-                    ))}
-                  </div>
-                </div>
-              )}
+              <OutputDisplay output={output} copied={copied} onCopy={handleCopyToClipboard} />
             </div>
           </RevealOnScroll>
         </SectionHeader>
