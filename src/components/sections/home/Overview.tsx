@@ -8,6 +8,28 @@ import Section from '@/components/layout/Section';
 import Container from '@/components/primitives/Container';
 import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
+const OVERVIEW_FEATURES = [
+  'Plant-based vocabulary woven into every generated sentence',
+  'Resonates with sustainability-focused brands and audiences',
+  'Seamlessly integrates via API, CLI, NPM Package, and VS Code Extension',
+  'Fully open source and free to use under the MIT License',
+];
+
+function FeatureBullets(): JSX.Element {
+  return (
+    <ul className="space-y-4">
+      {OVERVIEW_FEATURES.map((text, i) => (
+        <li key={i} className="flex items-start gap-2">
+          <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+            &#10003;
+          </div>
+          <span>{text}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 /**
  * This component provides an introduction to the Vegan Ipsum
  * Generator, explaining what it is and its purpose.
@@ -53,47 +75,7 @@ export default function Overview(): JSX.Element {
                 making it ideal for websites, apps, presentations, and prototypes.
               </p>
 
-              <ul className="space-y-4">
-                <li className="flex items-start gap-2">
-                  <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
-                    &#10003;
-                  </div>
-                  <span>Plant-based vocabulary woven into every generated sentence</span>
-                </li>
-
-                <li className="flex items-start gap-2">
-                  <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
-                    &#10003;
-                  </div>
-                  <span>Resonates with sustainability-focused brands and audiences</span>
-                </li>
-
-                <li className="flex items-start gap-2">
-                  <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
-                    &#10003;
-                  </div>
-                  <span>
-                    Seamlessly integrates via <Link href="/json-api">API</Link>, <Link href="/node-cli">CLI</Link>,{' '}
-                    <Link href="/npm-package">NPM Package</Link>, and{' '}
-                    <Link href="/vscode-extension">VS Code Extension</Link>
-                  </span>
-                </li>
-
-                <li className="flex items-start gap-2">
-                  <div className="bg-primary-muted text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-sm font-bold">
-                    &#10003;
-                  </div>
-                  <span>
-                    Fully open source and free to use under the{' '}
-                    <Link
-                      href="https://opensource.org/licenses/MIT"
-                      aria-label="MIT License — Learn about the MIT License"
-                    >
-                      MIT License
-                    </Link>
-                  </span>
-                </li>
-              </ul>
+              <FeatureBullets />
             </SectionHeader>
           </RevealOnScroll>
         </div>
