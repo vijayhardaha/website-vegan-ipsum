@@ -7,6 +7,49 @@ import CodeBlock from '@/components/primitives/CodeBlock';
 import Container from '@/components/primitives/Container';
 import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
+const LOCAL_PACKAGES = [
+  { label: 'npm', command: 'npm install vegan-ipsum' },
+  { label: 'Yarn', command: 'yarn add vegan-ipsum' },
+  { label: 'pnpm', command: 'pnpm add vegan-ipsum' },
+];
+
+function LocalSection(): JSX.Element {
+  return (
+    <>
+      <RevealOnScroll delay={0.1}>
+        <h3 className="mt-8 mb-2 text-lg">Local Installation</h3>
+        <p>
+          Adds <code>vegan-ipsum</code> to your project&apos;s dependencies.
+        </p>
+      </RevealOnScroll>
+      {LOCAL_PACKAGES.map((pkg, i) => (
+        <RevealOnScroll key={i} delay={0.1}>
+          <CodeBlock label={pkg.label} language="bash">
+            {pkg.command}
+          </CodeBlock>
+        </RevealOnScroll>
+      ))}
+    </>
+  );
+}
+
+function GlobalSection(): JSX.Element {
+  return (
+    <>
+      <RevealOnScroll delay={0.1}>
+        <h3 className="mt-12 mb-2 text-lg">Global Installation</h3>
+        <p>Installs the package globally so you can use it from the command line anywhere on your system.</p>
+      </RevealOnScroll>
+
+      <RevealOnScroll delay={0.1}>
+        <CodeBlock label="npm (global)" language="bash">
+          npm install -g vegan-ipsum
+        </CodeBlock>
+      </RevealOnScroll>
+    </>
+  );
+}
+
 /**
  * This component renders the installation section for the NPM Package page.
  *
@@ -50,38 +93,8 @@ export default function Installation(): JSX.Element {
             </p>
           </RevealOnScroll>
 
-          <RevealOnScroll delay={0.1}>
-            <h3 className="mt-8 mb-2 text-lg">Local Installation</h3>
-            <p>
-              Adds <code>vegan-ipsum</code> to your project&apos;s dependencies.
-            </p>
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.1}>
-            <CodeBlock label="npm" language="bash">
-              npm install vegan-ipsum
-            </CodeBlock>
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.1}>
-            <CodeBlock label="Yarn" language="bash">
-              yarn add vegan-ipsum
-            </CodeBlock>
-          </RevealOnScroll>
-          <RevealOnScroll delay={0.1}>
-            <CodeBlock label="pnpm" language="bash">
-              pnpm add vegan-ipsum
-            </CodeBlock>
-          </RevealOnScroll>
-
-          <RevealOnScroll delay={0.1}>
-            <h3 className="mt-12 mb-2 text-lg">Global Installation</h3>
-            <p>Installs the package globally so you can use it from the command line anywhere on your system.</p>
-          </RevealOnScroll>
-
-          <RevealOnScroll delay={0.1}>
-            <CodeBlock label="npm (global)" language="bash">
-              npm install -g vegan-ipsum
-            </CodeBlock>
-          </RevealOnScroll>
+          <LocalSection />
+          <GlobalSection />
         </SectionHeader>
       </Container>
     </Section>
