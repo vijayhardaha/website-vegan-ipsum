@@ -36,8 +36,8 @@
         "@types/xml2js": "^0.4.14",
         "@typescript-eslint/eslint-plugin": "^8.60.0",
         "@typescript-eslint/parser": "^8.60.0",
-        "@vijayhardaha/dev-config": "^2.0.1",
-        "@vijayhardaha/schema-builder": "^1.0.5",
+        "@vijayhardaha/dev-config": "^2.0.3",
+        "@vijayhardaha/schema-builder": "^1.0.6",
         "eslint": "^10.4.0",
         "eslint-config-next": "^16.2.6",
         "eslint-plugin-import-x": "^4.16.2",
@@ -398,9 +398,9 @@
 
     "@vercel/analytics": ["@vercel/analytics@2.0.1", "", { "peerDependencies": { "@remix-run/react": "^2", "@sveltejs/kit": "^1 || ^2", "next": ">= 13", "nuxt": ">= 3", "react": "^18 || ^19 || ^19.0.0-rc", "svelte": ">= 4", "vue": "^3", "vue-router": "^4" }, "optionalPeers": ["@remix-run/react", "@sveltejs/kit", "next", "nuxt", "react", "svelte", "vue", "vue-router"] }, "sha512-MTQG6V9qQrt1tsDeF+2Uoo5aPjqbVPys1xvnIftXSJYG2SrwXRHnqEvVoYID7BTruDz4lCd2Z7rM1BdkUehk2g=="],
 
-    "@vijayhardaha/dev-config": ["@vijayhardaha/dev-config@2.0.1", "", { "peerDependencies": { "@commitlint/cli": "*", "@commitlint/config-conventional": "*", "@commitlint/types": "*", "@eslint/compat": ">=2", "@next/eslint-plugin-next": "*", "@prettier/plugin-xml": ">=3", "@typescript-eslint/eslint-plugin": ">=8", "@typescript-eslint/parser": ">=8", "eslint": ">=10", "eslint-config-next": "*", "eslint-plugin-import-x": ">=4", "eslint-plugin-jsdoc": ">=62", "eslint-plugin-jsx-a11y": "*", "eslint-plugin-prettier": ">=5", "eslint-plugin-react": "*", "eslint-plugin-react-hooks": "*", "globals": ">=17", "husky": ">=9", "next-sitemap": "*", "prettier": "^3.8.3", "stylelint": "*", "stylelint-config-property-sort-order-smacss": "*", "stylelint-config-standard-scss": "*", "stylelint-order": "*", "typescript": ">=6", "typescript-eslint": ">=8" }, "optionalPeers": ["@commitlint/cli", "@commitlint/config-conventional", "@commitlint/types", "@next/eslint-plugin-next", "eslint-config-next", "eslint-plugin-jsx-a11y", "eslint-plugin-react", "eslint-plugin-react-hooks", "next-sitemap", "stylelint", "stylelint-config-property-sort-order-smacss", "stylelint-config-standard-scss", "stylelint-order"] }, "sha512-vix/KHgHBAFiBQkdRnsrhKEuExUx7ZFVi+45PKxaLIY62C0srccYk2GIBoVhv9M2GAodQTLhUyUP5dMJ/NmYTQ=="],
+    "@vijayhardaha/dev-config": ["@vijayhardaha/dev-config@2.0.3", "", { "peerDependencies": { "@commitlint/cli": "*", "@commitlint/config-conventional": "*", "@commitlint/types": "*", "@eslint/compat": ">=2", "@next/eslint-plugin-next": "*", "@prettier/plugin-xml": ">=3", "@typescript-eslint/eslint-plugin": ">=8", "@typescript-eslint/parser": ">=8", "eslint": ">=10", "eslint-config-next": "*", "eslint-plugin-import-x": ">=4", "eslint-plugin-jsdoc": ">=62", "eslint-plugin-jsx-a11y": "*", "eslint-plugin-prettier": ">=5", "eslint-plugin-react": "*", "eslint-plugin-react-hooks": "*", "globals": ">=17", "husky": ">=9", "next-sitemap": "*", "prettier": "^3.8.3", "stylelint": "*", "stylelint-config-property-sort-order-smacss": "*", "stylelint-config-standard-scss": "*", "stylelint-order": "*", "typescript": ">=6", "typescript-eslint": ">=8" }, "optionalPeers": ["@commitlint/cli", "@commitlint/config-conventional", "@commitlint/types", "@next/eslint-plugin-next", "eslint-config-next", "eslint-plugin-jsx-a11y", "eslint-plugin-react", "eslint-plugin-react-hooks", "next-sitemap", "stylelint", "stylelint-config-property-sort-order-smacss", "stylelint-config-standard-scss", "stylelint-order"] }, "sha512-5ZA2cX0b5OFm7IBhQtY0ynfp9WwB/5Wb25qj2UOehQJ8KJMK1tD6K05J13prG9a6TG6Ox2OlUP3SB3B9FL3zdw=="],
 
-    "@vijayhardaha/schema-builder": ["@vijayhardaha/schema-builder@1.0.5", "", { "dependencies": { "react": ">=19.2.6", "react-dom": ">=19.2.6" } }, "sha512-/6yoQpsNXJbX5PaPCq0UP1ElLbfFRhnTLvBaIsngEOfucC0OsLKdNy8Y0UvCsI+KowrBYl3h0IMNpn+SixnYCA=="],
+    "@vijayhardaha/schema-builder": ["@vijayhardaha/schema-builder@1.0.6", "", { "dependencies": { "react": "^19.2.6", "react-dom": "^19.2.6" } }, "sha512-lrx1ZfctYQ7OdQA3dUH4ekZIrd/hzpxoTYGVIywTfnZYqhaF6Li5qahkHK68vT0QJGZUPePKCJL3nNSpPnMPWw=="],
 
     "@xml-tools/parser": ["@xml-tools/parser@1.0.11", "", { "dependencies": { "chevrotain": "7.1.1" } }, "sha512-aKqQ077XnR+oQtHJlrAflaZaL7qZsulWc/i/ZEooar5JiWj1eLt0+Wg28cpa+XLney107wXqneC+oG1IZvxkTA=="],
 
