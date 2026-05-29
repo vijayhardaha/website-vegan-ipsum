@@ -7,6 +7,47 @@ import Container from '@/components/primitives/Container';
 import InfoBox from '@/components/primitives/InfoBox';
 import RevealOnScroll from '@/components/primitives/RevealOnScroll';
 
+const USAGE_STEPS = [
+  {
+    heading: 'Open Command Palette',
+    content: (
+      <>
+        Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Win/Linux) or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>{' '}
+        (macOS)
+      </>
+    ),
+  },
+  {
+    heading: 'Search Vegan Ipsum',
+    content: <>Type to see all available commands for the extension quickly and effortlessly, right away</>,
+  },
+  {
+    heading: 'Select Command',
+    content: <>Choose paragraph, sentence, or word command based on your needs instantly and efficiently</>,
+  },
+  { heading: 'Text Inserted!', content: <>Vegan ipsum appears at your cursor position instantly, right now</> },
+];
+
+function UsageSteps(): JSX.Element {
+  return (
+    <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+      {USAGE_STEPS.map((step, index) => (
+        <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
+          <div className="border-border flex items-start gap-4 rounded-2xl border bg-white p-7 shadow-md">
+            <div className="bg-primary-muted/80 text-primary-dark border-green-mid mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-bold">
+              {index + 1}
+            </div>
+            <div>
+              <h3 className="mb-2 text-lg">{step.heading}</h3>
+              <p className="text-sm leading-relaxed">{step.content}</p>
+            </div>
+          </div>
+        </RevealOnScroll>
+      ))}
+    </div>
+  );
+}
+
 /**
  * This component renders the usage section for the VS Code Extension page.
  *
@@ -39,43 +80,7 @@ export default function Usage(): JSX.Element {
             </p>
           </RevealOnScroll>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {[
-              {
-                heading: 'Open Command Palette',
-                content: (
-                  <>
-                    Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Win/Linux) or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+
-                    <kbd>P</kbd> (macOS)
-                  </>
-                ),
-              },
-              {
-                heading: 'Search Vegan Ipsum',
-                content: <>Type to see all available commands for the extension quickly and effortlessly, right away</>,
-              },
-              {
-                heading: 'Select Command',
-                content: <>Choose paragraph, sentence, or word command based on your needs instantly and efficiently</>,
-              },
-              {
-                heading: 'Text Inserted!',
-                content: <>Vegan ipsum appears at your cursor position instantly, right now</>,
-              },
-            ].map((step, index) => (
-              <RevealOnScroll key={index} delay={0.1 + index * 0.05}>
-                <div className="border-border flex items-start gap-4 rounded-2xl border bg-white p-7 shadow-md">
-                  <div className="bg-primary-muted/80 text-primary-dark border-green-mid mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-bold">
-                    {index + 1}
-                  </div>
-                  <div>
-                    <h3 className="mb-2 text-lg">{step.heading}</h3>
-                    <p className="text-sm leading-relaxed">{step.content}</p>
-                  </div>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
+          <UsageSteps />
 
           <RevealOnScroll delay={0.4}>
             <InfoBox>
