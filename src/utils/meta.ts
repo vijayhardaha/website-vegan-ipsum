@@ -49,12 +49,13 @@ const isPlainObject = (value: AnyObject): value is AnyObject => {
  * - Plain nested objects are merged recursively.
  * - Primitive values from the source override the target.
  *
+ * @template T - The target object type.
+ *
  * @param {T} target - The target object to merge into.
  * @param {AnyObject} source - The source object with values to merge.
  *
  * @returns {T} A new object resulting from merging source into target.
  *
- * @template T - The target object type.
  * @example
  * const base = { a: 1, nested: { x: 1 }, list: [1,2] };
  * const override = { b: 2, nested: { y: 2 }, list: [3] };
