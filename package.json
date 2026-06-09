@@ -1,13 +1,22 @@
 {
   "name": "website-vegan-ipsum",
   "version": "1.0.0",
-  "private": true,
   "description": "Official website for Vegan Ipsum — a compassion-forward placeholder text generator",
-  "license": "MIT",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build && next-sitemap",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write --log-level error .",
+    "format:check": "prettier --check .",
+    "tsc": "tsc --noEmit",
+    "prepare": "husky"
+  },
   "author": {
     "name": "Vijay Hardaha",
     "url": "https://github.com/vijayhardaha/"
   },
+  "license": "MIT",
   "homepage": "https://github.com/vijayhardaha/veganipsum.vercel.app.git",
   "repository": {
     "type": "git",
@@ -16,22 +25,11 @@
   "bugs": {
     "url": "https://github.com/vijayhardaha/veganipsum.vercel.app/issues"
   },
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build && next-sitemap",
-    "start": "next start",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "format": "prettier --write --log-level error .",
-    "format:check": "prettier --check --log-level error .",
-    "indexnow": "next-sitemap && bun run scripts/indexnow.ts",
-    "tsc": "tsc --noEmit",
-    "prepare": "husky"
-  },
   "dependencies": {
     "@next/third-parties": "^16.2.7",
-    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-slot": "^1.2.5",
     "@vercel/analytics": "^2.0.1",
+    "@vijayhardaha/schema-builder": "^1.0.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.40.0",
@@ -57,26 +55,22 @@
     "@types/react-dom": "^19",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/xml2js": "^0.4.14",
-    "@vijayhardaha/dev-config": "^2.0.4",
-    "@vijayhardaha/schema-builder": "^1.0.6",
+    "@vijayhardaha/dev-config": "^2.1.0",
     "eslint": "^10.4.1",
     "eslint-config-next": "^16.2.7",
     "eslint-plugin-import-x": "^4.16.2",
-    "eslint-plugin-jsdoc": "^63.0.1",
+    "eslint-plugin-jsdoc": "^63.0.2",
     "eslint-plugin-prettier": "^5.5.6",
     "globals": "^17.6.0",
     "husky": "^9.1.7",
     "next-sitemap": "^4.2.3",
-    "ora": "^9.4.0",
     "postcss-load-config": "^6.0.1",
-    "prettier": "^3.8.3",
+    "prettier": "^3.8.4",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.1",
-    "xml2js": "^0.6.2"
+    "typescript-eslint": "^8.61.0"
   },
   "trustedDependencies": [
-    "sharp",
     "tailwindcss-corner-shape",
     "unrs-resolver"
   ]
