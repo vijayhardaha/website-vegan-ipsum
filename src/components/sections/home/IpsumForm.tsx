@@ -61,7 +61,7 @@ function useIpsumFetch(setOutput: (output: string) => void) {
           setOutput(text);
         }
       } catch (error) {
-        handleFetchError(false, setOutput, error);
+        handleFetchError(signal.aborted, setOutput, error);
       } finally {
         setLoading(false);
       }
@@ -200,7 +200,7 @@ export default function IpsumForm({ setOutput }: IpsumFormProps): JSX.Element {
    *
    * @param {SubmitEvent} event - The form submission event
    */
-  const handleSubmit = (event: SubmitEvent<HTMLFormElement>): void => {
+  const handleSubmit = (event: SubmitEvent): void => {
     event.preventDefault();
     handleGenerate(selectedType, amount);
   };
