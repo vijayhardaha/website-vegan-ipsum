@@ -4,8 +4,12 @@ import type { JSX, ReactNode } from 'react';
 import { useRef } from 'react';
 
 import { motion, useInView } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 
 import { cn } from '@/utils/classnames';
+
+/* Animation variants for the reveal-on-scroll effect */
+const REVEAL_VARIANTS: Variants = { hidden: { opacity: 0, y: 35 }, visible: { opacity: 1, y: 0 } };
 
 /**
  * Props for the RevealOnScroll scroll animation component.
@@ -39,8 +43,9 @@ export default function RevealOnScroll({ children, delay = 0.1, className }: Rev
     <motion.div
       ref={ref}
       className={cn(className)}
-      initial={{ opacity: 0, y: 35 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }}
+      variants={REVEAL_VARIANTS}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
       transition={{ duration: 0.35, delay }}
     >
       {children}
