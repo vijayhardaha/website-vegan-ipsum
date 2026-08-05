@@ -39,7 +39,6 @@ src/
 │   ├── composites/       # Higher-level composed components
 │   │   ├── Footer.tsx
 │   │   ├── Header.tsx
-│   │   ├── JsonLd.tsx
 │   │   ├── PageHeader.tsx
 │   │   ├── PageTags.tsx
 │   │   └── Link.tsx
