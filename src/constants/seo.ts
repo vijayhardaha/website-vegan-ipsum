@@ -21,31 +21,6 @@ export const SITE_CONFIG = {
 };
 
 /**
- * The default metadata object used for SEO, Open Graph, and Twitter cards.
- */
-const SEO_KEYWORDS = [
-  'vegan ipsum',
-  'veggie ipsum',
-  'vegan ipsum generator',
-  'vegan lorem ipsum',
-  'vegan placeholder text',
-  'best lorem ipsum for ethical designers',
-  'cruelty-free placeholder text',
-  'dummy text for vegan projects',
-  'ethical lorem ipsum',
-  'free cruelty-free lorem ipsum tool',
-  'generate vegan placeholder text online',
-  'lorem ipsum alternative',
-  'placeholder text for sustainable brands',
-  'plant-based lorem ipsum',
-  'vegan content filler',
-  'vegan copy generator',
-  'vegan ipsum for web developers',
-  'vegan placeholder text generator',
-  'vegan web design tools',
-];
-
-/**
  * Google Search Console verification code for the site
  */
 const GOOGLE_SITE_VERIFICATION = '4CyrCxZi9TWgvS-GzB1QUhgEl0bKoIzT36368e_vlx0';
@@ -73,7 +48,6 @@ const seoImage = {
  */
 export const SITE_METADATA: Metadata = {
   ...titleAndDescription,
-  keywords: SEO_KEYWORDS,
   applicationName: SITE_CONFIG.name,
   authors: [{ name: SITE_CONFIG.creator.name, url: SITE_CONFIG.creator.urls.gravatar }],
   creator: SITE_CONFIG.creator.name,
