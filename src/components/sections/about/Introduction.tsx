@@ -22,7 +22,14 @@ export default function Introduction(): JSX.Element {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <RevealOnScroll delay={0}>
             <div className="md:order-2">
-              <Image src="/welcoming.svg" alt="Men welcoming you to Vegan Ipsum Generator" width={613} height={701} />
+              <Image
+                src="/welcoming.svg"
+                alt="Men welcoming you to Vegan Ipsum Generator"
+                width={613}
+                height={701}
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
           </RevealOnScroll>
           <SectionHeader
