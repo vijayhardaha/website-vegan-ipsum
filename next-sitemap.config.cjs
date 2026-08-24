@@ -11,7 +11,9 @@
 
 const { createSitemapConfig } = require('@vijayhardaha/dev-config/next-sitemap');
 
-const siteDomain = 'https://veganipsum.vercel.app';
+// Canonical site domain — driven by NEXT_PUBLIC_SITE_URL so the sitemap stays
+// in sync with metadataBase/canonical URLs; falls back to the production URL.
+const siteDomain = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://veganipsum.vercel.app').replace(/\/+$/, '');
 
 /** @type {import('next-sitemap').IConfig} */
 const config = createSitemapConfig({

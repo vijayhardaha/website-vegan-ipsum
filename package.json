@@ -2,9 +2,10 @@
   "name": "website-vegan-ipsum",
   "version": "1.0.0",
   "description": "Official website for Vegan Ipsum — a compassion-forward placeholder text generator",
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next-sitemap",
+    "build": "next build && next-sitemap --config next-sitemap.config.cjs",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write --log-level error .",
@@ -34,6 +35,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^13.1.1",
     "next": "^16.3.2",
+    "nextjs-toploader": "^3.9.17",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-icons": "^5.7.0",
@@ -67,7 +69,7 @@
     "postcss-load-config": "^6.0.1",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "typescript": "^7.0.2",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.67.0"
   },
   "trustedDependencies": [
