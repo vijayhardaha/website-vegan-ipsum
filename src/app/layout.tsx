@@ -4,6 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Inter_Tight, JetBrains_Mono, Playfair_Display } from 'next/font/google';
+import NextTopLoader from 'nextjs-toploader';
 
 import Layout from '@/components/layout/Layout';
 import { GOOGLE_ANALYTICS_ID, SITE_METADATA } from '@/constants/seo';
@@ -63,6 +64,8 @@ export default function RootLayout({ children }: { children: ReactNode }): JSX.E
       <body
         className={`${sansFont.variable} ${monoFont.variable} ${headingFont.variable} text-foreground bg-background font-base font-sans leading-relaxed font-normal antialiased`}
       >
+        {/* TopLoader uses the primary-solid token (see styles/globals.css) */}
+        <NextTopLoader color="var(--primary-solid)" height={3} showSpinner={false} />
         <a
           href="#main"
           className="bg-primary sr-only absolute top-4 left-4 z-50 rounded-md px-3 py-2 text-sm font-medium text-white focus:not-sr-only"
