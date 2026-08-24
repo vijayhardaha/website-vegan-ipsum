@@ -128,8 +128,13 @@ export default function Link({
 }: LinkProps): JSX.Element {
   const linkType = getLinkType(href);
 
-  // Dev-time accessibility warning for external links without an accessible name
-  if (process.env.NODE_ENV !== 'production' && linkType === 'external' && !ariaLabel) {
+  // check: if external link has no accessible name (no aria-label and no visible plain text)
+  if (
+    process.env.NODE_ENV !== 'production'
+    && linkType === 'external'
+    && !ariaLabel
+    && !(typeof children === 'string' && children.trim().length > 0)
+  ) {
     console.warn(
       `[Link] External link '${href}' does not have an accessible name (aria-label). Provide an aria-label or visible link text.`
     );
