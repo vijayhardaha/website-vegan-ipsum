@@ -55,7 +55,7 @@
     "@types/react-dom": "^19",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/xml2js": "^0.4.14",
-    "@vijayhardaha/dev-config": "^2.3.1",
+    "@vijayhardaha/dev-config": "^2.4.2",
     "eslint": "^10.9.0",
     "eslint-config-next": "^16.3.2",
     "eslint-plugin-import-x": "^4.17.1",
@@ -67,13 +67,11 @@
     "postcss-load-config": "^6.0.1",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "typescript": "^7.0.2",
     "typescript-eslint": "^8.67.0"
   },
   "trustedDependencies": [
     "tailwindcss-corner-shape",
     "unrs-resolver"
-  ],
-  "peerDependencies": {
-    "typescript": "6.0.3"
-  }
+  ]
 }
