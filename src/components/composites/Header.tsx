@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { LuAlignRight, LuX } from 'react-icons/lu';
 
 import Link from '@/components/composites/Link';
+import ScrollProgress from '@/components/composites/ScrollProgress';
 import Button from '@/components/primitives/Button';
 import { HEADER_NAV_LINKS, type NavLink } from '@/constants/navlinks';
 import { cn } from '@/utils/classnames';
@@ -101,46 +102,49 @@ export default function Header(): JSX.Element {
   const { isMobileMenuOpen, setIsMobileMenuOpen, menuRef, toggleButtonRef } = useMobileMenu();
 
   return (
-    <header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
-      <div className="mx-auto max-w-5xl px-4 md:px-6">
-        <div className="flex items-center justify-between gap-6">
-          <Link href="/" hoverEffect="none">
-            <Image
-              src="/logo.svg"
-              alt="Vegan Ipsum Logo"
-              width={213}
-              height={32}
-              priority
-              className="h-auto w-55 py-2"
-            />
-            <span className="sr-only">Vegan Ipsum</span>
-          </Link>
-          <div className="ml-auto" ref={menuRef}>
-            <Button
-              size="icon"
-              variant="primary-outline"
-              className="text-2xl lg:hidden"
-              ref={toggleButtonRef}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={isMobileMenuOpen}
-              aria-controls="main-menu"
-            >
-              {isMobileMenuOpen ? <LuX /> : <LuAlignRight />}
-            </Button>
-            <nav
-              id="main-menu"
-              aria-label="Main navigation"
-              className={cn(
-                'bg-background border-border absolute top-full left-0 w-full border-t shadow-md lg:static lg:block lg:border-none lg:bg-transparent lg:shadow-none',
-                isMobileMenuOpen ? 'block' : 'hidden'
-              )}
-            >
-              <NavLinks pathname={pathname} onLinkClick={() => setIsMobileMenuOpen(false)} />
-            </nav>
+    <>
+      <ScrollProgress />
+      <header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <div className="flex items-center justify-between gap-6">
+            <Link href="/" hoverEffect="none">
+              <Image
+                src="/logo.svg"
+                alt="Vegan Ipsum Logo"
+                width={213}
+                height={32}
+                priority
+                className="h-auto w-55 py-2"
+              />
+              <span className="sr-only">Vegan Ipsum</span>
+            </Link>
+            <div className="ml-auto" ref={menuRef}>
+              <Button
+                size="icon"
+                variant="primary-outline"
+                className="text-2xl lg:hidden"
+                ref={toggleButtonRef}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="main-menu"
+              >
+                {isMobileMenuOpen ? <LuX /> : <LuAlignRight />}
+              </Button>
+              <nav
+                id="main-menu"
+                aria-label="Main navigation"
+                className={cn(
+                  'bg-background border-border absolute top-full left-0 w-full border-t shadow-md lg:static lg:block lg:border-none lg:bg-transparent lg:shadow-none',
+                  isMobileMenuOpen ? 'block' : 'hidden'
+                )}
+              >
+                <NavLinks pathname={pathname} onLinkClick={() => setIsMobileMenuOpen(false)} />
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
