@@ -25,15 +25,33 @@
     "*.config.mjs",
     "*.config.ts",
     "*.d.ts",
+    "**/*.cjs",
     "**/*.js",
     "**/*.jsx",
+    "**/*.mjs",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.mjs",
-    "**/*.cjs",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "next.config.ts"
   ],
 
   // ---- Excludes ----
-  "exclude": ["node_modules", "coverage", "dist", "build"]
+  "exclude": [
+    ".cache",
+    ".git",
+    ".husky",
+    ".idea",
+    ".next",
+    ".tmp",
+    ".vercel",
+    ".vscode",
+    "build",
+    "coverage",
+    "dist",
+    "docs",
+    "node_modules",
+    "public",
+    "temp",
+    "tmp"
+  ]
 }
