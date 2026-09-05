@@ -29,6 +29,7 @@ export default function Introduction(): JSX.Element {
                 height={701}
                 loading="eager"
                 fetchPriority="high"
+                unoptimized
               />
             </div>
           </RevealOnScroll>

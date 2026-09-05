@@ -43,7 +43,7 @@ export default function Contact(): JSX.Element {
             </p>
 
             <Button asChild variant="primary" size="lg">
-              <Link href="/contact">
+              <Link href="/contact" prefetch={false}>
                 Contact Us <Icon name="arrowRight" />
               </Link>
             </Button>

@@ -73,6 +73,7 @@ function NavLinks({ pathname, onLinkClick }: NavLinksProps): JSX.Element {
         <li key={link.href}>
           <Link
             href={link.href}
+            prefetch={true}
             className={cn(
               'inline-flex items-center text-xs font-semibold tracking-wide uppercase',
               'hover:text-primary',
@@ -107,13 +108,14 @@ export default function Header(): JSX.Element {
       <header className="text-foreground bg-background/85 border-border sticky top-0 z-100 border-b py-3 backdrop-blur-md">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="flex items-center justify-between gap-6">
-            <Link href="/" hoverEffect="none">
+            <Link href="/" hoverEffect="none" prefetch={true}>
               <Image
                 src="/logo.svg"
                 alt="Vegan Ipsum Logo"
                 width={213}
                 height={32}
                 priority
+                unoptimized
                 className="h-auto w-55 py-2"
               />
               <span className="sr-only">Vegan Ipsum</span>

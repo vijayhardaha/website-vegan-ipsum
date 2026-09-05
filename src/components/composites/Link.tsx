@@ -90,6 +90,7 @@ function buildLinkClasses(hoverEffect: 'none' | 'border' | 'background'): string
  * @property {number} [scrollOffset] - Optional offset for hash links (useful for fixed headers)
  * @property {boolean} [linkLine] - Optional prop to control external link icon display
  * @property {'none' | 'border' | 'background'} [hoverEffect] - Optional prop to control hover effect style
+ * @property {boolean} [prefetch] - Prefetch internal route on viewport enter, defaults to false to save compute
  */
 interface LinkProps extends Omit<ComponentPropsWithoutRef<typeof NextLink>, 'href'> {
   href: string;
@@ -124,6 +125,7 @@ export default function Link({
   onClick = undefined,
   linkLine = true,
   hoverEffect = 'background',
+  prefetch = false,
   ...props
 }: LinkProps): JSX.Element {
   const linkType = getLinkType(href);
@@ -161,6 +163,7 @@ export default function Link({
     <NextLink
       href={href}
       scroll={false}
+      prefetch={false}
       onClick={handleHashClick}
       className={cn(linkClasses, className)}
       aria-label={ariaLabel}
@@ -175,6 +178,7 @@ export default function Link({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      prefetch={false}
       className={cn(linkClasses, 'relative inline-flex items-center gap-px', className)}
       aria-label={ariaLabel}
       onClick={onClick}
@@ -186,7 +190,14 @@ export default function Link({
   );
 
   const renderInternalLink = (): JSX.Element => (
-    <NextLink href={href} className={cn(linkClasses, className)} aria-label={ariaLabel} onClick={onClick} {...props}>
+    <NextLink
+      href={href}
+      prefetch={prefetch}
+      className={cn(linkClasses, className)}
+      aria-label={ariaLabel}
+      onClick={onClick}
+      {...props}
+    >
       {children}
     </NextLink>
   );

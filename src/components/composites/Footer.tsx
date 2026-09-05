@@ -18,7 +18,14 @@ export default function Footer(): JSX.Element {
         <div className="space-y-6 text-xs leading-relaxed font-medium">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <Link href="/" className="text-xl font-black" hoverEffect="none">
-              <Image src="/logo-white.svg" alt="Vegan Ipsum Logo" width={213} height={32} className="h-auto w-45" />
+              <Image
+                src="/logo-white.svg"
+                alt="Vegan Ipsum Logo"
+                width={213}
+                height={32}
+                className="h-auto w-45"
+                unoptimized
+              />
               <span className="sr-only">Vegan Ipsum</span>
             </Link>
             <ul className="flex flex-wrap items-center justify-center gap-4" aria-label="Footer navigation links">
